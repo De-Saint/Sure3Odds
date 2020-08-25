@@ -1,0 +1,88 @@
+page-profile {
+    .scroll-content{
+        padding:0px!important;
+    }
+    .imgs{
+        padding:$content-padding;
+        position: relative;
+        img{
+            display: block;  
+            border-radius: $control-radius; 
+            width:100%;
+        }
+        .imgProfile{
+            @extend .imgBg;
+            width:110px;
+            height:110px;
+            border-radius:50%;  
+            margin:-55px auto 0px;
+            position: absolute;
+            left:0px;
+            right:0px;
+        }
+        .button{
+            height:34px;
+            width:34px;
+            background:color($colors,color2);
+            border-radius:50%;
+            opacity:0;
+            transition: opacity 1s; 
+            .icon{
+                font-size:1.6rem;    
+            } 
+            &.coverCamera{
+                @include position($content-padding*2,$content-padding*2,auto,auto);  
+            }   
+            &.profileCamera{
+                @include position(auto,0px,0px,auto);  
+            }  
+            &.show{
+                opacity:1;
+            }                   
+        }
+    }   
+    .nameAndMail{
+        padding:$content-padding;
+        margin-top:48px;
+        text-align: center;
+        h5{
+            margin:0px;
+        }    
+        p{
+            margin:0px;
+            font-weight:500;  
+        }
+    }  
+    .otherForm{
+        @extend .signForm;
+        margin:$content-padding;
+        border-radius:$control-radius;
+        @extend %outerShadow;
+        width: calc( 100% - #{$content-padding}*2)!important;
+        padding:$content-padding;
+        .item{
+            transition: height 1s;   
+            .text-input{
+                color: color($colors,dark);
+                opacity:.8; 
+                font-weight:500;   
+            }
+            .label{
+                color: color($colors,dark);   
+                font-weight:bold;
+            }
+
+            &.show{
+                height:0px!important;      
+                transition: height 1s;  
+                margin-bottom:0px!important;      
+            }
+            &.item-input-disabled{
+                border-bottom:none!important;
+            }
+        }
+        .button{
+            margin-top:$content-padding*2!important;     
+        }
+    }    
+}              

@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle icon-only>
+      <ion-icon class="goal-menu" ></ion-icon>
+    </button>
+    <ion-title>Profile</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only  (click)="global.callSearch($event)">
+        <ion-icon name="md-search"></ion-icon>
+      </button>
+      <button ion-button icon-only navPush="NotificationPage">
+        <ion-icon name="md-notifications"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="imgs">
+    <button ion-button icon-only class="coverCamera" [ngClass]="{'show':flag==false}"  (click)="selectImage(1)">
+      <ion-icon name="md-camera"></ion-icon>
+    </button>
+    <img src="{{img1}}"/>
+    <div class="imgProfile" [ngStyle]="{'background-image':'url(' + img2 + ')'}">
+      <button ion-button icon-only class="profileCamera"  [ngClass]="{'show':flag==false}"  (click)="selectImage(2)">
+        <ion-icon name="md-camera"></ion-icon>
+      </button>
+    </div>
+  </div>
+
+  <!-- name and email -->
+  <div class="nameAndMail" >
+    <h5 ion-text color="dark">{{firstName}} {{lastName}}</h5>
+    <p ion-text color="dark">{{email}}</p>
+  </div>
+  
+  <!-- other information -->
+  <div class="otherForm">
+    <ion-list>
+
+      <!-- appear when click update -->
+      <ion-item class="halfItem" float-left [ngClass]="{'show': flag==true}">
+        <ion-label stacked>First Name</ion-label>
+        <ion-input disabled="{{flag}}" type="text" [(ngModel)]="firstName" ></ion-input>
+      </ion-item>
+      <!-- appear when click update -->
+      <ion-item class="halfItem"  float-left  [ngClass]="{'show': flag==true}">
+          <ion-label stacked>Last Name</ion-label>
+        <ion-input disabled="{{flag}}" type="text" [(ngModel)]="lastName"></ion-input>
+      </ion-item>
+      <!-- appear when click update -->
+      <ion-item [ngClass]="{'show': flag==true}">
+        <ion-label stacked>E-mail</ion-label>
+        <ion-input disabled="{{flag}}" type="email" [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <!-- ==================================== -->
+
+      <ion-item >
+        <ion-label stacked>Phone Number</ion-label>
+        <ion-input disabled="{{flag}}" type="tel" [(ngModel)]="phoneNumber"  id="elemtId"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Password</ion-label>
+        <ion-input disabled="{{flag}}" type="password" [(ngModel)]="passowrd"></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label stacked>Address</ion-label>
+        <ion-input disabled="{{flag}}" type="text" [(ngModel)]="address"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button block color="color2" (click)="update()">Update</button>
+  </div>
+</ion-content>

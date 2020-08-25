@@ -1,0 +1,44 @@
+page-sign-up {
+    .header{
+        width:$toolbar-md-height;
+        left: auto;
+        .toolbar-background{
+            background:none;
+        }
+    }
+    .scroll-content{
+        margin-top:0px!important;
+    }
+    .backBtn{
+        width:$control-height;
+        background: none;
+        box-shadow:none;
+        &.activated{
+            background:none;
+        }
+    }
+    .item.item-select .label {
+      font-weight: 500;
+      color: #fff;
+  }
+  .item.item-select .select .select-icon .select-icon-inner {
+    position: initial;
+    margin: 0px !important;
+    color: #fff !important;
+}
+.item.item-select {
+  min-height: 44px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  padding: 0px 0px;
+  border-radius: 4px;
+}
+.item.item-select .select-text {
+  color: #fff;
+  padding: 0px 8px;
+}
+.mr-2{
+  margin-right: 0.4em;
+}
+}

@@ -1,0 +1,128 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #0f5656,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #fff,
+  dark:       #000,
+  color1:     #0f5656,
+  color2:     #3B7A57,
+  color3:     #888ba7,
+  color4:     #949494,
+  color5:     #efefee,
+);
+
+$content-padding:8px;
+$content-margin:$content-padding;
+$control-height:44px;
+$control-radius:4px;
+$grid-padding-width:$content-padding ;
+
+// sidemenu
+$menu-width:300px;
+$menu-small-width:$menu-width;
+// App  Variables
+$mainFont:1.3rem;
+ $appFonts:(h4:$mainFont + .1,h5:$mainFont,p:$mainFont - .1);
+ @each $head , $fontSize in $appFonts {
+    #{$head}{
+      font-size:$fontSize!important;
+    }
+ }
+
+
+// toolbar variables
+$toolbar-md-height:50px;
+$toolbar-md-title-font-size:$mainFont + .1;
+$toolbar-md-title-text-color:color($colors,light);
+$header-background:color($colors,color1);
+$toolbar-md-button-border-radius:0px;
+
+// input variables
+$text-input-placeholder-color:color($colors,color3);
+$text-input-md-show-focus-highlight:false;
+
+// button variables
+$button-md-font-size:1.3rem;
+$button-md-border-radius:$control-radius;
+$button-md-height:$control-height;
+
+// range variables
+$range-md-padding-vertical:0px;
+$range-md-padding-horizontal:0px;
+$range-md-slider-height:10px;
+$range-md-hit-width:0px;
+$range-md-knob-width:0px;
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+
+@import "../assets/css/bs.min.scss";
