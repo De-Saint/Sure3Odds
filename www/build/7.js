@@ -1,6 +1,6 @@
 webpackJsonp([7],{
 
-/***/ 432:
+/***/ 433:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TeamsStatsPageModule", function() { return TeamsStatsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__teams_stats__ = __webpack_require__(470);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__teams_stats__ = __webpack_require__(471);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var TeamsStatsPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 470:
+/***/ 471:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -75,7 +75,7 @@ var TeamsStatsPage = /** @class */ (function () {
     }
     TeamsStatsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-teams-stats',template:/*ion-inline-start:"/Users/mac/Desktop/Sure/i3/with template/Sure3Odds/src/pages/teams-stats/teams-stats.html"*/'\n<ion-header>\n  <ion-navbar>\n    <ion-title>Average Rating</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content >\n  <ion-list >\n    <ion-item class="thumbnailItem" *ngFor="let item of teams">\n      <ion-thumbnail item-left>\n        <!-- Team image -->\n        <img src="{{item.img}}"/>\n      </ion-thumbnail>\n      <!-- team Name -->\n      <h5 ion-text color="dark">{{item.team}}</h5>\n      <!-- note -->\n      <p ion-text color="dark">{{item.note}}</p>\n      <!-- rating Number -->\n      <span ion-text color="color1" class="rateNum" item-right>{{item.num}}</span>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Desktop/Sure/i3/with template/Sure3Odds/src/pages/teams-stats/teams-stats.html"*/,
+            selector: 'page-teams-stats',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/teams-stats/teams-stats.html"*/'\n<ion-header>\n  <ion-navbar>\n    <ion-title>Average Rating</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content >\n  <ion-list >\n    <ion-item class="thumbnailItem" *ngFor="let item of teams">\n      <ion-thumbnail item-left>\n        <!-- Team image -->\n        <img src="{{item.img}}"/>\n      </ion-thumbnail>\n      <!-- team Name -->\n      <h5 ion-text color="dark">{{item.team}}</h5>\n      <!-- note -->\n      <p ion-text color="dark">{{item.note}}</p>\n      <!-- rating Number -->\n      <span ion-text color="color1" class="rateNum" item-right>{{item.num}}</span>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/teams-stats/teams-stats.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
     ], TeamsStatsPage);

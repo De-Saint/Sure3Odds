@@ -1,6 +1,6 @@
 webpackJsonp([4],{
 
-/***/ 435:
+/***/ 436:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TopNewsPageModule", function() { return TopNewsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__top_news__ = __webpack_require__(472);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__top_news__ = __webpack_require__(473);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var TopNewsPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 472:
+/***/ 473:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -86,7 +86,7 @@ var TopNewsPage = /** @class */ (function () {
     };
     TopNewsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-top-news',template:/*ion-inline-start:"/Users/mac/Desktop/Sure/i3/with template/Sure3Odds/src/pages/top-news/top-news.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu" ></ion-icon>\n    </button>\n    <ion-title>Top News</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only  (click)="global.callSearch($event)">\n        <ion-icon name="md-search"></ion-icon>\n      </button>\n      <button ion-button icon-only navPush="NotificationPage">\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-card class="newsCard" *ngFor="let item of lastNews" navPush="TopNewsDetailsPage">\n    <!-- if images in this slide equaled in height please remove class="imgResponsive" from img Tag -->\n    <img class="imgResponsive" src="{{item.img}}"/>\n    <div class="container" text-left>\n      <h4 ion-text color="light">{{item.title}}</h4>\n      <p ion-text color="light">{{item.subTitle}}</p>\n\n      <ion-grid no-padding class="gridFooter">\n        <ion-row>\n          <ion-col col padding-right>\n            <p ion-text color="light">4 HOURS AGO</p>\n          </ion-col>\n          <!-- users like number -->\n          <ion-col col-auto padding-right>\n            <ion-item (click)="like($event,item)">\n              <ion-icon  item-left color="color2" [name]="item.clickLike ? \'ios-heart\' : \'ios-heart-outline\'" ></ion-icon>\n              <p ion-text color="light">{{item.numLike}}</p>\n            </ion-item>\n          </ion-col>  \n\n          <!-- user Comment number -->\n          <ion-col col-auto>\n            <ion-item>\n              <ion-icon name="md-text" color="color2" item-left></ion-icon>\n              <p ion-text color="light">160</p>\n            </ion-item>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </div>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Desktop/Sure/i3/with template/Sure3Odds/src/pages/top-news/top-news.html"*/,
+            selector: 'page-top-news',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/top-news/top-news.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu" ></ion-icon>\n    </button>\n    <ion-title>Top News</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only  (click)="global.callSearch($event)">\n        <ion-icon name="md-search"></ion-icon>\n      </button>\n      <button ion-button icon-only navPush="NotificationPage">\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-card class="newsCard" *ngFor="let item of lastNews" navPush="TopNewsDetailsPage">\n    <!-- if images in this slide equaled in height please remove class="imgResponsive" from img Tag -->\n    <img class="imgResponsive" src="{{item.img}}"/>\n    <div class="container" text-left>\n      <h4 ion-text color="light">{{item.title}}</h4>\n      <p ion-text color="light">{{item.subTitle}}</p>\n\n      <ion-grid no-padding class="gridFooter">\n        <ion-row>\n          <ion-col col padding-right>\n            <p ion-text color="light">4 HOURS AGO</p>\n          </ion-col>\n          <!-- users like number -->\n          <ion-col col-auto padding-right>\n            <ion-item (click)="like($event,item)">\n              <ion-icon  item-left color="color2" [name]="item.clickLike ? \'ios-heart\' : \'ios-heart-outline\'" ></ion-icon>\n              <p ion-text color="light">{{item.numLike}}</p>\n            </ion-item>\n          </ion-col>  \n\n          <!-- user Comment number -->\n          <ion-col col-auto>\n            <ion-item>\n              <ion-icon name="md-text" color="color2" item-left></ion-icon>\n              <p ion-text color="light">160</p>\n            </ion-item>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </div>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/top-news/top-news.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
     ], TopNewsPage);

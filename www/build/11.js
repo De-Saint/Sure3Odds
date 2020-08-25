@@ -1,6 +1,6 @@
 webpackJsonp([11],{
 
-/***/ 427:
+/***/ 428:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingPageModule", function() { return SettingPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting__ = __webpack_require__(465);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting__ = __webpack_require__(466);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var SettingPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 465:
+/***/ 466:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -76,7 +76,7 @@ var SettingPage = /** @class */ (function () {
     };
     SettingPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-setting',template:/*ion-inline-start:"/Users/mac/Desktop/Sure/i3/with template/Sure3Odds/src/pages/setting/setting.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu" ></ion-icon>\n    </button>\n    <ion-title>Settings</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="global.callSearch($event)">\n        <ion-icon name="md-search"></ion-icon>\n      </button>\n      <button ion-button icon-only navPush="NotificationPage">\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>  \n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n<ion-content >\n  <div class="appForm" padding>\n    <ion-item>\n      <ion-label>App Language</ion-label>\n        <ion-select interface="popover" placeholder="App Language" [(ngModel)]="language">\n          <ion-option value="en">English</ion-option>\n          <ion-option value="fr">French</ion-option>\n        </ion-select>\n    </ion-item>\n  </div>\n  <div class="static_notify">\n    <ion-item>\n      <ion-label>Notification</ion-label>\n      <ion-checkbox [(ngModel)]="notification"></ion-checkbox>\n    </ion-item>\n    <ion-item>\n      <ion-label>Animation avilability</ion-label>\n      <ion-checkbox (ionChange)="animateApp($event)"  checked="{{action}}" [(ngModel)]="action"></ion-checkbox>\n    </ion-item> \n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Desktop/Sure/i3/with template/Sure3Odds/src/pages/setting/setting.html"*/,
+            selector: 'page-setting',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting/setting.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu" ></ion-icon>\n    </button>\n    <ion-title>Settings</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="global.callSearch($event)">\n        <ion-icon name="md-search"></ion-icon>\n      </button>\n      <button ion-button icon-only navPush="NotificationPage">\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>  \n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n<ion-content >\n  <div class="appForm" padding>\n    <ion-item>\n      <ion-label>App Language</ion-label>\n        <ion-select interface="popover" placeholder="App Language" [(ngModel)]="language">\n          <ion-option value="en">English</ion-option>\n          <ion-option value="fr">French</ion-option>\n        </ion-select>\n    </ion-item>\n  </div>\n  <div class="static_notify">\n    <ion-item>\n      <ion-label>Notification</ion-label>\n      <ion-checkbox [(ngModel)]="notification"></ion-checkbox>\n    </ion-item>\n    <ion-item>\n      <ion-label>Animation avilability</ion-label>\n      <ion-checkbox (ionChange)="animateApp($event)"  checked="{{action}}" [(ngModel)]="action"></ion-checkbox>\n    </ion-item> \n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting/setting.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__app_app_component__["a" /* MyApp */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_global__["a" /* Global */]])
     ], SettingPage);
