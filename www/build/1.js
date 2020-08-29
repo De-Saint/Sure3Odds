@@ -1,14 +1,15 @@
 webpackJsonp([1],{
 
-/***/ 430:
+/***/ 413:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignUpPageModule", function() { return SignUpPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AndroidSubscriptionPageModule", function() { return AndroidSubscriptionPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sign_up__ = __webpack_require__(468);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__android_subscription__ = __webpack_require__(448);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular4_paystack__ = __webpack_require__(449);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +19,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SignUpPageModule = /** @class */ (function () {
-    function SignUpPageModule() {
+
+var AndroidSubscriptionPageModule = /** @class */ (function () {
+    function AndroidSubscriptionPageModule() {
     }
-    SignUpPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+    AndroidSubscriptionPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__sign_up__["a" /* SignUpPage */],
+                __WEBPACK_IMPORTED_MODULE_2__android_subscription__["a" /* AndroidSubscriptionPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__sign_up__["a" /* SignUpPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__android_subscription__["a" /* AndroidSubscriptionPage */]),
+                __WEBPACK_IMPORTED_MODULE_3_angular4_paystack__["a" /* Angular4PaystackModule */]
             ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NO_ERRORS_SCHEMA */]]
         })
-    ], SignUpPageModule);
-    return SignUpPageModule;
+    ], AndroidSubscriptionPageModule);
+    return AndroidSubscriptionPageModule;
 }());
 
-//# sourceMappingURL=sign-up.module.js.map
+//# sourceMappingURL=android-subscription.module.js.map
 
 /***/ }),
 
-/***/ 439:
+/***/ 448:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TermsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AndroidSubscriptionPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(247);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(18);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -54,75 +59,836 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
+
+var AndroidSubscriptionPage = /** @class */ (function () {
+    function AndroidSubscriptionPage(loadingCtrl, navCtrl, auth, navParams) {
+        this.loadingCtrl = loadingCtrl;
+        this.navCtrl = navCtrl;
+        this.auth = auth;
+        this.navParams = navParams;
+        this.newuser = new __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["b" /* NewUser */]("", "", "", "", "", "", "", "", "");
+        this.public_key = 'pk_test_9c32fd37430710c4b34c9376c8133c7925e899a7'; //Put your paystack Test or Live Key here
+        this.channels = ['card']; //Paystack Payment Methods
+        this.random_id = Math.floor(Date.now() / 1000); //Line to generate reference number
+        this.newuser = navParams.get("newuser");
+        console.log(this.newuser);
+    }
+    AndroidSubscriptionPage.prototype.ionViewDidLoad = function () {
+    };
+    AndroidSubscriptionPage.prototype.ngOnInit = function () {
+        this.getPlantypes();
+    };
+    AndroidSubscriptionPage.prototype.onPlantTypeSelect = function ($event, plan) {
+        this.pay_amount = plan.amount;
+    };
+    AndroidSubscriptionPage.prototype.getPlantypes = function () {
+        var _this = this;
+        this.auth.getAllPlantypes().subscribe(function (result) {
+            _this.plantypes = result;
+            _this.plantypelist = _this.plantypes.data;
+            console.log(_this.plantypelist);
+        });
+    };
+    AndroidSubscriptionPage.prototype.Pay = function (pay_amount) {
+        this.loadmsg = "Please Wait ...";
+        this.pay_amount = this.CalculatePercentage(pay_amount);
+    };
+    AndroidSubscriptionPage.prototype.paymentInit = function () {
+    };
+    AndroidSubscriptionPage.prototype.CalculatePercentage = function (userAmt) {
+        var addedPerc = (parseInt(userAmt) * 0.02);
+        var newAmt = parseInt(userAmt) + addedPerc;
+        if (parseInt(userAmt) >= 2500) {
+            newAmt = parseInt(userAmt) + 100;
+        }
+        return newAmt;
+    };
+    //Callback function on successful payment
+    AndroidSubscriptionPage.prototype.paymentDone = function (ref) {
+        console.log(ref); //ref contains the response from paystack after successful payment
+        var loading = this.loadingCtrl.create({
+            content: 'Processing Payment...'
+        });
+        loading.present();
+        // this.datalink.MobilePayment(String(this.UserID), String(this.payForm.value.amount), String(ref.reference), String(ref.transaction), "ValidationFees").subscribe(result => {
+        // if (result === "success") {
+        //   this.auth.showToast("Your Payment was Successful. Check your Messages for details");
+        //   // this.onValidateLogin(this.email, this.password, loading);
+        // } else {
+        //   loading.dismiss().catch(() => { });
+        //   // this.auth.showToast("Please contact the WM Mobile Support if your card had been debited")
+        // }
+        // }, err => {
+        //   loading.dismiss().catch(() => { });
+        //   // this.auth.showToast("We could not connect to the WM Server. Please check your network connection. Contact the WM Mobile Support if your card had been debited.")
+        // });
+    };
+    //Event triggered if User cancel the payment
+    AndroidSubscriptionPage.prototype.paymentCancel = function () {
+        this.auth.showToast("You cancelled the payment!");
+    };
+    AndroidSubscriptionPage.prototype.onPay = function () {
+        var amount = 2222; //this.payForm.value.amount;
+        console.log(amount);
+        if (isNaN(amount) || "" === String(amount)) {
+            this.auth.showToast("Please Enter The Cash Amount");
+            return false;
+        }
+        else if (String(amount).length < 3) {
+            this.auth.showToast("Minimum amount is #100.00");
+            return false;
+        }
+        else {
+            this.loadmsg = "Please Wait ...";
+            this.amountToPay = this.CalculatePercentage(amount);
+        }
+    };
+    AndroidSubscriptionPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
+            selector: 'page-android-subscription',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/android-subscription/android-subscription.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Subscription</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="sign" style="background-image:url(\'assets/imgs/welcome3.jpg\')">\n  <div class="signForm">\n    <img src="assets/imgs/appicon.png" style="width: 8em; height: 8em;" />\n    <ion-list>\n      <ion-item>\n        <ion-icon name="briefcase" item-left color="light"></ion-icon>\n        <ion-label color="light">\n          Select a plan per month\n        </ion-label>\n        <ion-select [(ngModel)]="newuser.plantype.id" name="plantype" id="plantype" class="">\n          <ion-option *ngFor="let plan of plantypelist" value="{{ plan.id }}"\n            (ionSelect)="onPlantTypeSelect($event, plan)">{{ plan.name}} - {{ plan.amount  | currency: \'NGN\': \'1.2-2\'}}\n          </ion-option>\n        </ion-select>\n      </ion-item>\n    </ion-list>\n    <!-- <button ion-button block type="submit" color="color2" (click)="Pay(\'AndroidSubscriptionPage\')">PAY\n      {{pay_amount  | currency: \'NGN\': \'1.2-2\'}}</button> -->\n      \n        <button ion-button block color="color2" angular4-paystack type="submit" \n          [key]="public_key" \n          (paymentInit)="paymentInit()" \n          [email]="newuser.email" \n          [amount]="pay_amount * 100" [ref]="random_id"\n          [channels]="channels"\n          (close)="paymentCancel()" \n          (callback)="paymentDone($event)" \n          (click)="onPay(pay_amount)"\n          [metadata]="{ \n            custom_fields: \n            [ {\n              display_name: \'Customer Name\', \n              variable_name: \'Customer Name\', \n              value: newuser.firstname} ,\n            {\n              display_name: \'Payment Type\', \n              variable_name: \'Payment Type\', \n              value: \'Registration\' \n            }] \n          }"\n        > PAY  {{pay_amount  | currency: \'NGN\': \'1.2-2\'}}\n        </button>\n    <p ion-text color="light" navPush="SignInPage">Don\'t want to continue ? Login</p>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/android-subscription/android-subscription.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["n" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["p" /* NavController */], __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["q" /* NavParams */]])
+    ], AndroidSubscriptionPage);
+    return AndroidSubscriptionPage;
+}());
+
+//# sourceMappingURL=android-subscription.js.map
+
+/***/ }),
+
+/***/ 449:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export Angular4PaystackComponent */
+/* unused harmony export Angular4PaystackDirective */
+/* unused harmony export Angular4PaystackEmbed */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Angular4PaystackModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(44);
+
+
 
 
 /**
- * Generated class for the TermsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-var TermsPage = /** @class */ (function () {
-    function TermsPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
+/**
+ * @record
+ */
+function MyWindow() { }
+if (false) {
+    /** @type {?} */
+    MyWindow.prototype.PaystackPop;
+}
+var Angular4PaystackComponent = /** @class */ (function () {
+    function Angular4PaystackComponent() {
+        this.paymentInit = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* EventEmitter */]();
+        this.close = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* EventEmitter */]();
+        this.callback = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* EventEmitter */]();
+        this.isPaying = false;
     }
-    TermsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad TermsPage');
+    /**
+     * @return {?}
+     */
+    Angular4PaystackComponent.prototype.pay = /**
+     * @return {?}
+     */
+    function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var payment;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __generator */])(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!this.checkInput()) {
+                            return [2 /*return*/];
+                        }
+                        return [4 /*yield*/, this.loadScript()];
+                    case 1:
+                        _a.sent();
+                        this.setUp();
+                        if (this.isPaying) {
+                            return [2 /*return*/];
+                        }
+                        if (this.paymentInit.observers.length) {
+                            this.paymentInit.emit();
+                        }
+                        payment = window.PaystackPop.setup(this.paystackOptions);
+                        payment.openIframe();
+                        this.isPaying = true;
+                        return [2 /*return*/];
+                }
+            });
+        });
     };
-    TermsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-terms',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/terms/terms.html"*/'<ion-header>\n  <!-- <ion-navbar>\n    <ion-title>Terms</ion-title>\n  </ion-navbar> -->\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Terms</ion-title>\n\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n  <ion-card-content>\n    <div>\n      <h3 class="text-center">Introduction</h3>\n      <ol>\n        <li>\n          By viewing or using Predictions and Betting tips on Sure3Odds Mobile App or any of our affiliate sites, pages,\n          accounts\n          and/or signing up on the Mobile App, you agree to be bound by and to comply with our\n          <ul>\n            <li>\n              Terms and Conditions;\n            </li>\n            <li>\n              Privacy Policy;\n            </li>\n            <li>\n              Rules applicable to our betting or gaming products.\n            </li>\n          </ul>\n          Please read the Terms carefully and if you do not accept the Terms, do not use the Mobile App. The Terms shall\n          apply to all\n          Sure3Odds.com sites and affiliate accounts (Sure3Odds Blog,; Sure3Odds.com/blog, Sure3Odds Forum;\n          Sure3Odds.com/forum,\n          Sure3Odds Facebook and twitter accounts respectively; www.facebook.com/Sure3Odds and twitter.com/Sure3Odds).\n        </li>\n        <li>\n          There would be the need to change the Terms and our conditions from time to time for a number of reasons\n          (including complying\n          with applicable laws and regulations, and regulatory requirements as well as we deem fit in order to satisfy\n          our users). As changes would be made, you are therefore advised to review the Terms on a regular basis. All\n          major\n          updates on the Terms and conditions and their dates of effect would be posted on the site. Should you have any\n          issues or should any change made be unacceptable, please you are thereby advised to close your account with us\n          and desist to play by our Odds and predictions. However signing up to Sure3Odds as well as playing by our\n          Odds indicate an agreement with our Terms and Conditions and our policies.\n        </li>\n        <li>\n          Please note that references used such as "you", "your" or the "user" refers to any person using this Mobile\n          App or the services\n          of Sure3Odds.com and/or any of our affiliate sites as well as all signed up persons while “we” “our” and\n          “Sure3Odds Mobile App”\n          refers to Sure3Odds and its management.\n        </li>\n        <li>\n          Please beware that right and access to Sure3Odds Mobile App as well as all our affiliates (Sure3Odds.com,\n          Sure3Odds.com/blog,\n          Sure3Odds.com/forum, www.facebook.com/Sure3Odds, twitter.com/Sure3Odds) may be illegal in certain countries.\n          You are therefore responsible for determining whether your access and use of the Mobile App is not prohibited\n          and\n          is compliant with applicable laws, regulations and abiding policies in your jurisdiction.\n        </li>\n        <li>\n          Sure3Odds is committed to providing excellent user service. By providing excellent service we ensure that we\n          give a reasonable\n          guarantee on our predictions and ensure that risks are reduced to their lowest minimum. As part of our\n          commitment,\n          Sure3Odds is committed to supporting responsible gambling. We advise that all users are 18+. Although\n          Sure3Odds\n          will use its reasonable endeavours to enforce its responsible gambling policies. We refuse to accept any\n          responsibility\n          or liability if any user uses the Sure3Odds Mobile App and its affiliate site with the intention of\n          deliberately avoiding\n          the relevant measures, laws, policies and regulations in place.\n        </li>\n      </ol>\n    </div>\n    <div >\n      <h3 class="text-center">Your Sure3Odds Account</h3>\n      <ol>\n        <li>\n          Application\n          <ol>\n            <li>\n              All users must be over 18+ years to sign up with Sure3Odds Mobile App. Sure3Odds reserves the right to ask\n              for proof of age from any\n              user and suspend their account until satisfactory documentation is provided. Sure3Odds takes its\n              responsibilities\n              in respect of under age and responsible gambling very seriously.\n            </li>\n            <li>\n              Please note that Sure3Odds does not request for users information on\n              the verifications of accounts. NOTE: We only make requests for such information to confirm subscription\n              payments\n              on our Basic and Premium plan packages\n            </li>\n            <li>\n              By accepting the Terms and signing up to use the Mobile App and Predictions you hereby agree that we shall\n              be entitled to conduct\n              identification, credit and verification checks periodically that are required by applicable laws and\n              regulations\n              and relevant regulatory authorities for use of the Mobile App and our Services generally. Also by signing\n              up\n              you agree to provide all such information as we require in connection with such verification checks. We\n              shall\n              be entitled to suspend or restrict accounts of users in any manner that we may deem in our absolute\n              discretion\n              to be appropriate, until the relevant checks are completed to our satisfaction.\n            </li>\n\n            <li>\n              Users may open only one account. <strong>Information accessed by you on the Mobile App (including results,\n                predictions, and odds) is\n                for your personal use only and the distribution or commercial exploitation of such information is\n                strictly\n                prohibited.</strong> Should we identify any user with more than one account or users reposting and\n              sharing exclusive\n              information explicitly, we reserve the right to treat any such accounts as one joint account or expressly\n              delete such accounts where necessary.\n            </li>\n            <li>\n              Users are advised to keep accounts up to date to ensure that continue to receive emails, notifications and\n              also make themselves\n              eligible to partake in promos.\n            </li>\n          </ol>\n        </li>\n        <li>\n          Account Details\n          <ol class="neg-marginleft">\n            <li>\n              Sure3Odds allows all its users to choose their own email and password combination. Users must keep this\n              information confidential\n              as you are responsible for all activities on the account.\n            </li>\n            <li>\n              Once an account has been upgraded to a plan, subscription begins( whether or not you make use of odds\n              provided, Do not have\n              access to your account, forgot password).\n            </li>\n            <li>\n              If, at any time, you feel a third party is aware of your email and/or password you should change it\n              immediately. Making use of the "forgot my password" option.\n            </li>\n            <li>\n              Your Current Subscription status will always be displayed on the dashboard of users accounts.\n            </li>\n          </ol>\n        </li>\n        <li>\n          Personal Details\n          <ol class="neg-marginleft">\n            <li>\n              By signing up, users have entrusted us with their emails and subscription details, we are therefore\n              obligated to protect\n              the information of our users.\n            </li>\n          </ol>\n        </li>\n      </ol>\n    </div>\n    <div >\n      <h3 class="text-center">Predictions And Odds</h3>\n      <ol>\n        <li>\n          Odds and Accumulations\n          <ol>\n            <li>\n              We provide predictions at its best and guarantee our clients a reasonable guarantee on our predictions\n              by ensuring we reduce\n              risks to their lowest possible minimum.\n            </li>\n            <li>\n              We are therefore not responsible for failing outcomes of matches as all predictions and match analysis\n              end before the match\n              is played and final outcomes are decided on the pitch. Information on the Mobile App should not be\n              relied upon\n              absolutely when placing bets and making odds. Bets are ultimately made at users own risk and discretion.\n            </li>\n            <li>\n              We are also not responsible for users’ individual discretional accumulations as we provide accumulations\n              in our daily predictions,\n              Sure3Odds VIP and Sure3Odds VVIP categories and take the Risk.\n            </li>\n          </ol>\n        </li>\n      </ol>\n    </div>\n    <div >\n      <h3 class="text-center">Our Liability</h3>\n      <ol>\n        <li>\n          Sure3Odds does not accept any liability for any damages, liabilities or losses which are deemed or alleged\n          to have arisen\n          out of or in connection with services, odds and predictions on the Mobile App or its affiliates\n\n        </li>\n        <li>\n          While Sure3Odds endeavours to ensure that the information on the Mobile App is correct, Sure3Odds does not\n          warrant the accuracy\n          or completeness of the information and material on the Mobile App. The Mobile App may contain typographical\n          errors\n          or other inaccuracies, or information that is out of date. Sure3Odds is under no obligation to update such\n          material.\n          The information and material on the Mobile App is provided “as is”, without any conditions, warranties or\n          other\n          terms of any kind. Accordingly, to the maximum extent permitted by law, Sure3Odds provides you with the\n          Mobile App\n          on the basis that Sure3Odds excludes all representations, express or implied warranties, conditions and\n          other\n          terms which but for these terms and conditions might have effect in relation to the Mobile App.\n        </li>\n      </ol>\n    </div>\n    <div class="">\n      <h3 class="text-center">Others</h3>\n      <ol>\n        <li>\n          Sure3Odds actively monitors traffic to and from the Mobile App. Sure3Odds reserves the right in its sole\n          discretion to block\n          access where evidence indicative of automated, robotic or programmed activities are found.\n        </li>\n        <li>\n          Sure3Odds reserves the right to restrict access to all or certain parts of the Mobile App at its discretion.\n        </li>\n        <li>\n          Sure3Odds may alter or amend the products offered via the Mobile App at any time and for any reason.\n        </li>\n        <li>\n          From time to time, all or part of the Mobile App may be unavailable for use by you because of our\n          maintenance of the Mobile App\n          and alteration or amendment of any of the Mobile App categories. We will ensure that proper notice is given\n          prior\n          to the unavailability of such parts.\n        </li>\n      </ol>\n    </div>\n\n    <div class="">\n      Signed <br />\n      <strong>Sure3Odds Management</strong>\n    </div>\n  </ion-card-content>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/terms/terms.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */]])
-    ], TermsPage);
-    return TermsPage;
+    /**
+     * @return {?}
+     */
+    Angular4PaystackComponent.prototype.checkInput = /**
+     * @return {?}
+     */
+    function () {
+        if (!this.key) {
+            return console.error('ANGULAR-PAYSTACK: Paystack key cannot be empty');
+        }
+        if (!this.email) {
+            return console.error('ANGULAR-PAYSTACK: Paystack email cannot be empty');
+        }
+        if (!this.amount) {
+            return console.error('ANGULAR-PAYSTACK: Paystack amount cannot be empty');
+        }
+        if (!this.ref) {
+            return console.error('ANGULAR-PAYSTACK: Paystack ref cannot be empty');
+        }
+        if (!this.callback.observers.length) {
+            return console.error("ANGULAR-PAYSTACK: Insert a callback output like so (callback)='PaymentComplete($event)' to check payment status");
+        }
+        return true;
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackComponent.prototype.setUp = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        this.paystackOptions = {
+            key: this.key,
+            email: this.email,
+            amount: this.amount,
+            ref: this.ref,
+            metadata: this.metadata || {},
+            currency: this.currency || 'NGN',
+            plan: this.plan || '',
+            channels: this.channels,
+            quantity: this.quantity || '',
+            subaccount: this.subaccount || '',
+            transaction_charge: this.transaction_charge || 0,
+            bearer: this.bearer || '',
+            callback: (/**
+             * @param {?} res
+             * @return {?}
+             */
+            function (res) {
+                _this.isPaying = false;
+                _this.callback.emit(res);
+            }),
+            onClose: (/**
+             * @return {?}
+             */
+            function () {
+                _this.isPaying = false;
+                _this.close.emit();
+            }),
+        };
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackComponent.prototype.loadScript = /**
+     * @return {?}
+     */
+    function () {
+        return new Promise((/**
+         * @param {?} resolve
+         * @return {?}
+         */
+        function (resolve) {
+            if (window.PaystackPop && typeof window.PaystackPop.setup === 'function') {
+                resolve();
+                return;
+            }
+            /** @type {?} */
+            var script = window.document.createElement('script');
+            window.document.head.appendChild(script);
+            /** @type {?} */
+            var onLoadFunc = (/**
+             * @return {?}
+             */
+            function () {
+                script.removeEventListener('load', onLoadFunc);
+                resolve();
+            });
+            script.addEventListener('load', onLoadFunc);
+            script.setAttribute('src', 'https://js.paystack.co/v1/inline.js');
+        }));
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackComponent.prototype.ngOnChanges = /**
+     * @return {?}
+     */
+    function () {
+        this.setUp();
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackComponent.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+        if (this.text) {
+            console.error('Paystack Text input is deprecated. Add text into textnode like so <angular4-paystack>Pay With Paystack</angular4-paystack>');
+        }
+    };
+    Angular4PaystackComponent.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */], args: [{
+                    selector: 'angular4-paystack',
+                    template: "<button [ngClass]=\"class\" [ngStyle]=\"style\" (click)=\"pay()\">{{text}}<ng-content></ng-content></button>"
+                }] }
+    ];
+    /** @nocollapse */
+    Angular4PaystackComponent.ctorParameters = function () { return []; };
+    Angular4PaystackComponent.propDecorators = {
+        text: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        key: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        email: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        amount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        metadata: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        ref: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        currency: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        plan: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        quantity: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        channels: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        subaccount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        transaction_charge: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        bearer: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        class: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        style: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        paymentInit: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* Output */] }],
+        close: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* Output */] }],
+        callback: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* Output */] }]
+    };
+    return Angular4PaystackComponent;
+}());
+if (false) {
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.text;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.key;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.email;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.amount;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.metadata;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.ref;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.currency;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.plan;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.quantity;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.channels;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.subaccount;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.transaction_charge;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.bearer;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.class;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.style;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.paymentInit;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.close;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.callback;
+    /**
+     * @type {?}
+     * @private
+     */
+    Angular4PaystackComponent.prototype.paystackOptions;
+    /**
+     * @type {?}
+     * @private
+     */
+    Angular4PaystackComponent.prototype.isPaying;
+}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * @record
+ */
+function MyWindow$1() { }
+if (false) {
+    /** @type {?} */
+    MyWindow$1.prototype.PaystackPop;
+}
+var Angular4PaystackDirective = /** @class */ (function () {
+    function Angular4PaystackDirective() {
+        this.close = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* EventEmitter */]();
+        this.callback = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* EventEmitter */]();
+        this.isPaying = false;
+        this.setUp();
+    }
+    /**
+     * @return {?}
+     */
+    Angular4PaystackDirective.prototype.pay = /**
+     * @return {?}
+     */
+    function () {
+        this.setUp();
+        if (!this.checkInput()) {
+            return;
+        }
+        /** @type {?} */
+        var payment = window.PaystackPop.setup(this.paystackOptions);
+        payment.openIframe();
+        this.isPaying = true;
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackDirective.prototype.checkInput = /**
+     * @return {?}
+     */
+    function () {
+        if (!this.key) {
+            return console.error('ANGULAR-PAYSTACK: Paystack key cannot be empty');
+        }
+        if (!this.email) {
+            return console.error('ANGULAR-PAYSTACK: Paystack email cannot be empty');
+        }
+        if (!this.amount) {
+            return console.error('ANGULAR-PAYSTACK: Paystack amount cannot be empty');
+        }
+        if (!this.ref) {
+            return console.error('ANGULAR-PAYSTACK: Paystack ref cannot be empty');
+        }
+        if (!this.callback.observers.length) {
+            return console.error("ANGULAR-PAYSTACK: Insert a callback output like so (callback)='PaymentComplete($event)' to check payment status");
+        }
+        return true;
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackDirective.prototype.setUp = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        this.paystackOptions = {
+            key: this.key,
+            email: this.email,
+            amount: this.amount,
+            ref: this.ref,
+            metadata: this.metadata || {},
+            currency: this.currency || 'NGN',
+            plan: this.plan || '',
+            quantity: this.quantity || '',
+            subaccount: this.subaccount || '',
+            channels: this.channels,
+            transaction_charge: this.transaction_charge || 0,
+            bearer: this.bearer || '',
+            callback: (/**
+             * @param {?} res
+             * @return {?}
+             */
+            function (res) {
+                _this.isPaying = false;
+                _this.callback.emit(res);
+            }),
+            onClose: (/**
+             * @return {?}
+             */
+            function () {
+                _this.isPaying = false;
+                _this.close.emit();
+            })
+        };
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackDirective.prototype.loadScript = /**
+     * @return {?}
+     */
+    function () {
+        return new Promise((/**
+         * @param {?} resolve
+         * @return {?}
+         */
+        function (resolve) {
+            if (window.PaystackPop && typeof window.PaystackPop.setup === 'function') {
+                resolve();
+                return;
+            }
+            /** @type {?} */
+            var script = window.document.createElement('script');
+            window.document.head.appendChild(script);
+            /** @type {?} */
+            var onLoadFunc = (/**
+             * @return {?}
+             */
+            function () {
+                script.removeEventListener('load', onLoadFunc);
+                resolve();
+            });
+            script.addEventListener('load', onLoadFunc);
+            script.setAttribute('src', 'https://js.paystack.co/v1/inline.js');
+        }));
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackDirective.prototype.buttonClick = /**
+     * @return {?}
+     */
+    function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __generator */])(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (this.isPaying) {
+                            return [2 /*return*/];
+                        }
+                        return [4 /*yield*/, this.loadScript()];
+                    case 1:
+                        _a.sent();
+                        this.pay();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    Angular4PaystackDirective.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["t" /* Directive */], args: [{
+                    selector: '[angular4-paystack]',
+                },] }
+    ];
+    /** @nocollapse */
+    Angular4PaystackDirective.ctorParameters = function () { return []; };
+    Angular4PaystackDirective.propDecorators = {
+        text: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        key: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        email: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        amount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        metadata: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        ref: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        currency: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        plan: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        quantity: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        subaccount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        channels: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        transaction_charge: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        bearer: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        class: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        style: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        close: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* Output */] }],
+        callback: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* Output */] }],
+        buttonClick: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["z" /* HostListener */], args: ['click',] }]
+    };
+    return Angular4PaystackDirective;
+}());
+if (false) {
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.text;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.key;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.email;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.amount;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.metadata;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.ref;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.currency;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.plan;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.quantity;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.subaccount;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.channels;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.transaction_charge;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.bearer;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.class;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.style;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.close;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.callback;
+    /**
+     * @type {?}
+     * @private
+     */
+    Angular4PaystackDirective.prototype.paystackOptions;
+    /**
+     * @type {?}
+     * @private
+     */
+    Angular4PaystackDirective.prototype.isPaying;
+}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * @record
+ */
+function MyWindow$2() { }
+if (false) {
+    /** @type {?} */
+    MyWindow$2.prototype.PaystackPop;
+}
+var Angular4PaystackEmbed = /** @class */ (function () {
+    function Angular4PaystackEmbed() {
+        this.paymentInit = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* EventEmitter */]();
+        this.close = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* EventEmitter */]();
+        this.callback = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* EventEmitter */]();
+    }
+    /**
+     * @return {?}
+     */
+    Angular4PaystackEmbed.prototype.pay = /**
+     * @return {?}
+     */
+    function () {
+        if (!this.checkInput()) {
+            return;
+        }
+        this.setUp();
+        if (this.paymentInit.observers.length) {
+            this.paymentInit.emit();
+        }
+        window.PaystackPop.setup(this.paystackOptions);
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackEmbed.prototype.checkInput = /**
+     * @return {?}
+     */
+    function () {
+        if (!this.key) {
+            return console.error('ANGULAR-PAYSTACK: Paystack key cannot be empty');
+        }
+        if (!this.email) {
+            return console.error('ANGULAR-PAYSTACK: Paystack email cannot be empty');
+        }
+        if (!this.amount) {
+            return console.error('ANGULAR-PAYSTACK: Paystack amount cannot be empty');
+        }
+        if (!this.ref) {
+            return console.error('ANGULAR-PAYSTACK: Paystack ref cannot be empty');
+        }
+        if (!this.callback.observers.length) {
+            return console.error("\n        ANGULAR-PAYSTACK: Insert a callback output like so (callback)='PaymentComplete($event)' to check payment status\n      ");
+        }
+        return true;
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackEmbed.prototype.setUp = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        this.paystackOptions = {
+            container: 'paystackEmbedContainer',
+            key: this.key,
+            email: this.email,
+            amount: this.amount,
+            ref: this.ref,
+            metadata: this.metadata || {},
+            currency: this.currency || 'NGN',
+            plan: this.plan || '',
+            quantity: this.quantity || '',
+            subaccount: this.subaccount || '',
+            channels: this.channels,
+            transaction_charge: this.transaction_charge || 0,
+            bearer: this.bearer || '',
+            callback: (/**
+             * @param {?} res
+             * @return {?}
+             */
+            function (res) { return _this.callback.emit(res); }),
+            onClose: (/**
+             * @return {?}
+             */
+            function () { return _this.close && _this.close.emit(); }),
+        };
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackEmbed.prototype.loadScript = /**
+     * @return {?}
+     */
+    function () {
+        return new Promise((/**
+         * @param {?} resolve
+         * @return {?}
+         */
+        function (resolve) {
+            if (window.PaystackPop && typeof window.PaystackPop.setup === 'function') {
+                resolve();
+                return;
+            }
+            /** @type {?} */
+            var script = window.document.createElement('script');
+            window.document.head.appendChild(script);
+            /** @type {?} */
+            var onLoadFunc = (/**
+             * @return {?}
+             */
+            function () {
+                script.removeEventListener('load', onLoadFunc);
+                resolve();
+            });
+            script.addEventListener('load', onLoadFunc);
+            script.setAttribute('src', 'https://js.paystack.co/v1/inline.js');
+        }));
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackEmbed.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __generator */])(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.loadScript()];
+                    case 1:
+                        _a.sent();
+                        if (this.text) {
+                            console.error('ANGULAR-PAYSTACK: Paystack Text input is deprecated. Use this instead <angular4-paystack>Pay With Paystack</angular4-paystack>');
+                        }
+                        this.pay();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    Angular4PaystackEmbed.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */], args: [{
+                    selector: 'angular4-paystack-embed',
+                    changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["j" /* ChangeDetectionStrategy */].OnPush,
+                    template: "<div id=\"paystackEmbedContainer\"></div>"
+                }] }
+    ];
+    /** @nocollapse */
+    Angular4PaystackEmbed.ctorParameters = function () { return []; };
+    Angular4PaystackEmbed.propDecorators = {
+        text: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        key: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        email: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        amount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        metadata: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        channels: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        ref: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        currency: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        plan: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        quantity: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        subaccount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        transaction_charge: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        bearer: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
+        paymentInit: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* Output */] }],
+        close: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* Output */] }],
+        callback: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* Output */] }]
+    };
+    return Angular4PaystackEmbed;
+}());
+if (false) {
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.text;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.key;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.email;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.amount;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.metadata;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.channels;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.ref;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.currency;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.plan;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.quantity;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.subaccount;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.transaction_charge;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.bearer;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.paymentInit;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.close;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.callback;
+    /**
+     * @type {?}
+     * @private
+     */
+    Angular4PaystackEmbed.prototype.paystackOptions;
+}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+var Angular4PaystackModule = /** @class */ (function () {
+    function Angular4PaystackModule() {
+    }
+    Angular4PaystackModule.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["K" /* NgModule */], args: [{
+                    imports: [__WEBPACK_IMPORTED_MODULE_2__angular_common__["b" /* CommonModule */]],
+                    exports: [Angular4PaystackComponent, Angular4PaystackDirective, Angular4PaystackEmbed],
+                    declarations: [Angular4PaystackComponent, Angular4PaystackDirective, Angular4PaystackEmbed],
+                    providers: [],
+                },] }
+    ];
+    return Angular4PaystackModule;
 }());
 
-//# sourceMappingURL=terms.js.map
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
 
-/***/ }),
-
-/***/ 468:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignUpPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__terms_terms__ = __webpack_require__(439);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
 
 
+//# sourceMappingURL=angular4-paystack.js.map
 
-var SignUpPage = /** @class */ (function () {
-    function SignUpPage(navCtrl) {
-        this.navCtrl = navCtrl;
-    }
-    SignUpPage.prototype.rootPage = function (page) {
-        this.navCtrl.setRoot(page);
-    };
-    SignUpPage.prototype.ShowTerms = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_0__terms_terms__["a" /* TermsPage */]);
-    };
-    SignUpPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-sign-up',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/sign-up/sign-up.html"*/'<ion-header>\n  <ion-navbar>\n  </ion-navbar>\n</ion-header>\n<ion-content  class="sign" style="background-image:url(\'assets/imgs/welcome3.jpg\')" >\n  <div class="signForm">\n    <img src="assets/imgs/appicon.png" style="width: 8em; height: 8em;"/>\n    <ion-list>\n      <ion-item class="halfItem" float-left>\n        <ion-icon name="md-person" item-left color="light"></ion-icon>\n        <ion-input type="text" placeholder="First Name"></ion-input>\n      </ion-item>\n      <ion-item class="halfItem"  float-left>\n        <ion-icon name="md-person" item-left color="light"></ion-icon>\n        <ion-input type="text" placeholder="Last Name"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-icon name="md-mail" item-left color="light"></ion-icon>\n        <ion-input type="email" placeholder="E-mail"></ion-input>\n      </ion-item>\n\n      <ion-item >\n        <ion-icon name="call" item-left color="light"></ion-icon>\n        <ion-input type="tel" placeholder="Phone"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-icon name="md-lock" item-left color="light"></ion-icon>\n        <ion-input type="password" placeholder="Password"></ion-input>\n      </ion-item>\n\n      <!-- <ion-item>\n        <ion-icon name="briefcase" item-left color="light"></ion-icon>\n        <ion-label color="light">\n          Select a plan per month\n        </ion-label>\n        <ion-select>\n          <ion-option color="color2" class="" value="1">VVIP - &#8358;6900</ion-option>\n          <ion-option class="" value="2">VIP - &#8358;3500</ion-option>\n        </ion-select>\n      </ion-item> -->\n      <p ion-text color="light" navPush="TermsPage" >I have read and agreed to the Terms And Conditions</p>\n    </ion-list>\n    <button ion-button block color="color2" (click)="rootPage(\'HomePage\')">CREATE ACCOUNT</button>\n    <p ion-text color="light" navPush="SignInPage" >Already have an account ? Login</p>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/sign-up/sign-up.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["o" /* NavController */]])
-    ], SignUpPage);
-    return SignUpPage;
-}());
-
-//# sourceMappingURL=sign-up.js.map
 
 /***/ })
 

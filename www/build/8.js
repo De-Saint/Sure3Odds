@@ -1,14 +1,14 @@
 webpackJsonp([8],{
 
-/***/ 431:
+/***/ 437:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TeamPageModule", function() { return TeamPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__team__ = __webpack_require__(469);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__team__ = __webpack_require__(475);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -22,7 +22,7 @@ var TeamPageModule = /** @class */ (function () {
     function TeamPageModule() {
     }
     TeamPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_2__team__["a" /* TeamPage */],
             ],
@@ -38,14 +38,14 @@ var TeamPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 469:
+/***/ 475:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TeamPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global__ = __webpack_require__(242);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global__ = __webpack_require__(246);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -175,10 +175,10 @@ var TeamPage = /** @class */ (function () {
         this.favoriteTeam = (this.favoriteTeam != true) ? true : false;
     };
     TeamPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'page-team',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/team/team.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu" ></ion-icon>\n    </button>\n    <ion-title>Arsenal</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only  (click)="global.callSearch($event)">\n        <ion-icon name="md-search"></ion-icon>\n      </button>\n      <button ion-button icon-only (click)="addFavoriteTeam()">\n        <ion-icon [name]="favoriteTeam ? \'ios-heart\' : \'ios-heart-outline\'" ></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n  <ion-toolbar class="scrollingBar">\n    <ion-scroll scrollX="true" scrollY="false" >\n      <p *ngFor="let title of itemInBar ; let i=index" (click)="changeTab(i,title)" [ngClass]="{active: activeBtn == i}" >\n          {{title}}\n      </p>\n    </ion-scroll>\n  </ion-toolbar>\n\n</ion-header>\n\n<ion-content [ngSwitch]=\'tit\' >\n\n  <!-- Team Matches -->\n  <div class="teamMatchs" *ngSwitchCase="\'MATCHES\'">\n    <ion-list >\n      <ion-item class="thumbnailItem" *ngFor="let item of teams" navPush="MatchDetailsPage">\n        <ion-thumbnail item-left>\n          <!-- Team image -->\n          <img src="{{item.img}}" navPush="TeamPage"/>\n        </ion-thumbnail>\n        <ion-grid no-padding>\n          <ion-row>\n            <ion-col col-6>\n              <!-- team Name -->\n              <h5 ion-text color="dark" navPush="TeamPage">{{item.team}}</h5>\n              <!-- League Name -->\n              <p ion-text color="dark">{{item.league}}</p>\n            </ion-col>\n            <ion-col col-6>\n              <p ion-text color="dark">Dec 13,2017</p>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n        <!-- Time -->\n        <div class="matchTime" item-right  *ngIf="item.result==\'\'">\n          <span ion-text color="color1">{{item.time}}</span>\n          <p ion-text color="color2">Next Match</p>\n        </div>\n        <!-- Time -->\n        <div class="matchResult" item-right *ngIf="item.result!=\'\'">\n            <span ion-text color="color1"  >{{item.result}}</span>\n          <p ion-text color="color2">Full Time</p>\n        </div>\n      </ion-item>\n    </ion-list>\n  </div>\n\n  <!--Team news -->\n  <div *ngSwitchCase="\'NEWS\'" padding>\n    <ion-card class="newsCard" *ngFor="let item of lastNews" navPush="TopNewsDetailsPage">\n      <!-- if images in this slide equaled in height please remove class="imgResponsive" from img Tag -->\n      <img class="imgResponsive" src="{{item.img}}"/>\n      <div class="container" text-left>\n        <h4 ion-text color="light">{{item.title}}</h4>\n        <p ion-text color="light">{{item.subTitle}}</p>\n  \n        <ion-grid no-padding class="gridFooter">\n          <ion-row>\n            <ion-col col padding-right>\n              <p ion-text color="light">4 HOURS AGO</p>\n            </ion-col>\n            <!-- users like number -->\n            <ion-col col-auto padding-right>\n              <ion-item (click)="like($event,item)">\n                <ion-icon  item-left color="color2" [name]="item.clickLike ? \'ios-heart\' : \'ios-heart-outline\'" ></ion-icon>\n                <p ion-text color="light">{{item.numLike}}</p>\n              </ion-item>\n            </ion-col>\n  \n            <!-- user Comment number -->\n            <ion-col col-auto>\n              <ion-item>\n                <ion-icon name="md-text" color="color2" item-left></ion-icon>\n                <p ion-text color="light">160</p>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </div>\n    </ion-card>\n  </div>\n\n  <!-- Team Stats -->\n  <div *ngSwitchCase="\'STATS\'" class="leagueStats">\n    <ion-list *ngFor="let item of teamStats">\n      <ion-list-header>\n        <h5 ion-text color="color2">{{item.title}}</h5>\n      </ion-list-header>\n\n      <ion-item class="thumbnailItem">\n        <ion-thumbnail item-left>\n          <!-- Team image -->\n          <img src="{{item.img}}"/>\n        </ion-thumbnail>\n        <!-- team Name -->\n        <h5 ion-text color="dark">{{item.team}}</h5>\n        <!-- note -->\n        <p ion-text color="dark">{{item.note}}</p>\n        <!-- goals or rating Number -->\n        <span ion-text color="color1" class="rateNum" item-right>{{item.num}}</span>\n      </ion-item>\n    </ion-list>\n  </div>\n\n  <!--Team Squad  -->\n  <div class="squad" *ngSwitchCase="\'SQUAD\'">\n    <ion-list *ngFor="let x of teamSquad">\n      <ion-list-header>\n        <h5 ion-text color="color2">{{x.title}}</h5>\n      </ion-list-header>\n      <ion-item class="avatarItem"  margin-bottom *ngFor="let item of x.items">\n        <ion-avatar item-left>\n          <img src="{{item.img}}">\n        </ion-avatar>\n        <h5 ion-text color="dark">{{item.name}}</h5> \n      </ion-item>\n    </ion-list>\n  </div>\n  <!--Team photos -->\n  <div *ngSwitchCase="\'PHOTOS\'" padding>\n    <ion-list class="lastPhotos">\n      <ion-item class="photoItem" *ngFor="let item of photos" navPush="PhotosDetailsPage">  \n        <!-- if you want this image reponsive in large screen please remove class="imgResponsive" from img Tag  -->\n        <img src="{{item.img}}" class="imgResponsive"/>\n        <ion-grid>\n          <ion-row>\n            <ion-col col-auto>\n              <h4 ion-text color="dark">{{item.title}}</h4>\n            </ion-col>\n            <ion-col col>\n              <p ion-text color="color2">200 photos</p>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-item>\n    </ion-list>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/team/team.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
     ], TeamPage);
     return TeamPage;
 }());

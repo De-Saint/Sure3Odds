@@ -8,40 +8,29 @@
     <ion-list>
       <ion-item class="halfItem" float-left>
         <ion-icon name="md-person" item-left color="light"></ion-icon>
-        <ion-input type="text" placeholder="First Name"></ion-input>
+        <ion-input type="text" [(ngModel)]="newuser.firstname" name="firstname" id="firstname"  placeholder="First Name"></ion-input>
       </ion-item>
       <ion-item class="halfItem"  float-left>
         <ion-icon name="md-person" item-left color="light"></ion-icon>
-        <ion-input type="text" placeholder="Last Name"></ion-input>
+        <ion-input type="text" [(ngModel)]="newuser.lastname" name="lastname" id="lastname" placeholder="Last Name"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-icon name="md-mail" item-left color="light"></ion-icon>
-        <ion-input type="email" placeholder="E-mail"></ion-input>
+        <ion-input type="email" [(ngModel)]="newuser.email" name="email" id="email"  placeholder="E-mail"></ion-input>
       </ion-item>
 
       <ion-item >
         <ion-icon name="call" item-left color="light"></ion-icon>
-        <ion-input type="tel" placeholder="Phone"></ion-input>
+        <ion-input type="tel" [(ngModel)]="newuser.phone" name="phone" id="phone" placeholder="Phone"></ion-input>
       </ion-item>
       <ion-item>
         <ion-icon name="md-lock" item-left color="light"></ion-icon>
-        <ion-input type="password" placeholder="Password"></ion-input>
+        <ion-input type="password"  [(ngModel)]="newuser.password" name="password" id="password" placeholder="Password"></ion-input>
       </ion-item>
-
-      <!-- <ion-item>
-        <ion-icon name="briefcase" item-left color="light"></ion-icon>
-        <ion-label color="light">
-          Select a plan per month
-        </ion-label>
-        <ion-select>
-          <ion-option color="color2" class="" value="1">VVIP - &#8358;6900</ion-option>
-          <ion-option class="" value="2">VIP - &#8358;3500</ion-option>
-        </ion-select>
-      </ion-item> -->
-      <p ion-text color="light" navPush="TermsPage" >I have read and agreed to the Terms And Conditions</p>
+      <p ion-text color="light" navPush="TermsPage" >I have read and agreed to the <span ion-text color="secondary">Terms And Conditions</span></p>
     </ion-list>
-    <button ion-button block color="color2" (click)="rootPage('HomePage')">CREATE ACCOUNT</button>
-    <p ion-text color="light" navPush="SignInPage" >Already have an account ? Login</p>
+    <button ion-button block type="submit" color="color2" (click)="createAccount('AndroidSubscriptionPage')">CREATE ACCOUNT</button>
+   <p ion-text color="light" navPush="SignInPage" >Already have an account ? Login</p>
   </div>
 </ion-content>

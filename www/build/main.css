@@ -48762,6 +48762,31 @@ page-all-matches .list .list-header img {
   background: #3B7A57;
 }
 
+page-android-subscription .item.item-select .label {
+  font-weight: 500;
+  color: #fff;
+}
+
+page-android-subscription .item.item-select .select .select-icon .select-icon-inner {
+  position: initial;
+  margin: 0px !important;
+  color: #fff !important;
+}
+
+page-android-subscription .item.item-select {
+  min-height: 44px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  padding: 0px 0px;
+  border-radius: 4px;
+}
+
+page-android-subscription .item.item-select .select-text {
+  color: #fff;
+  padding: 0px 8px;
+}
+
 page-home .slides {
   height: auto;
 }
@@ -49469,31 +49494,6 @@ page-sign-up .backBtn {
 
 page-sign-up .backBtn.activated {
   background: none;
-}
-
-page-sign-up .item.item-select .label {
-  font-weight: 500;
-  color: #fff;
-}
-
-page-sign-up .item.item-select .select .select-icon .select-icon-inner {
-  position: initial;
-  margin: 0px !important;
-  color: #fff !important;
-}
-
-page-sign-up .item.item-select {
-  min-height: 44px;
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  padding: 0px 0px;
-  border-radius: 4px;
-}
-
-page-sign-up .item.item-select .select-text {
-  color: #fff;
-  padding: 0px 8px;
 }
 
 page-sign-up .mr-2 {

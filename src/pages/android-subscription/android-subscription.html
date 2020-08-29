@@ -1,0 +1,54 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Subscription</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="sign" style="background-image:url('assets/imgs/welcome3.jpg')">
+  <div class="signForm">
+    <img src="assets/imgs/appicon.png" style="width: 8em; height: 8em;" />
+    <ion-list>
+      <ion-item>
+        <ion-icon name="briefcase" item-left color="light"></ion-icon>
+        <ion-label color="light">
+          Select a plan per month
+        </ion-label>
+        <ion-select [(ngModel)]="newuser.plantype.id" name="plantype" id="plantype" class="">
+          <ion-option *ngFor="let plan of plantypelist" value="{{ plan.id }}"
+            (ionSelect)="onPlantTypeSelect($event, plan)">{{ plan.name}} - {{ plan.amount  | currency: 'NGN': '1.2-2'}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <!-- <button ion-button block type="submit" color="color2" (click)="Pay('AndroidSubscriptionPage')">PAY
+      {{pay_amount  | currency: 'NGN': '1.2-2'}}</button> -->
+      
+        <button ion-button block color="color2" angular4-paystack type="submit" 
+          [key]="public_key" 
+          (paymentInit)="paymentInit()" 
+          [email]="newuser.email" 
+          [amount]="pay_amount * 100" [ref]="random_id"
+          [channels]="channels"
+          (close)="paymentCancel()" 
+          (callback)="paymentDone($event)" 
+          (click)="onPay(pay_amount)"
+          [metadata]="{ 
+            custom_fields: 
+            [ {
+              display_name: 'Customer Name', 
+              variable_name: 'Customer Name', 
+              value: newuser.firstname} ,
+            {
+              display_name: 'Payment Type', 
+              variable_name: 'Payment Type', 
+              value: 'Registration' 
+            }] 
+          }"
+        > PAY  {{pay_amount  | currency: 'NGN': '1.2-2'}}
+        </button>
+    <p ion-text color="light" navPush="SignInPage">Don't want to continue ? Login</p>
+  </div>
+</ion-content>
