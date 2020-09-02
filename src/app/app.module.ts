@@ -3,49 +3,50 @@ import { RequestInterceptorProvider } from './../providers/request-interceptor/r
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { Camera } from '@ionic-native/camera'; 
+import { Camera } from '@ionic-native/camera';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
-import { MyApp } from './app.component';
-
+import { Sure3Odds } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Global } from '../providers/global';
 import { AuthenicationProvider } from '../providers/authenication/authenication';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
+import { GamesProvider } from '../providers/games/games';
+
 var config = {
   backButtonText: '',
   backButtonIcon: 'md-arrow-back',
   iconMode: 'md',
-  mode:'md',
+  mode: 'md',
   modalEnter: 'modal-slide-in',
   modalLeave: 'modal-slide-out',
   pageTransition: 'md',
 };
 @NgModule({
   declarations: [
-    MyApp,
-    
+    Sure3Odds,
+
   ],
   imports: [
-    BrowserModule,IonicImageViewerModule,
+    BrowserModule, IonicImageViewerModule,
     HttpClientModule,
     IonicStorageModule.forRoot(),
-    IonicModule.forRoot(MyApp,config),
+    IonicModule.forRoot(Sure3Odds, config),
   ],
   bootstrap: [IonicApp],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   entryComponents: [
-    MyApp,
-    
+    Sure3Odds,
   ],
   providers: [
     StatusBar,
-    SplashScreen,Camera,Global,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthenicationProvider,    
+    SplashScreen, Camera, Global,
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    AuthenicationProvider, GamesProvider,
     { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptorProvider, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptorProvider, multi: true },
+
   ]
 })
-export class AppModule {}
+export class AppModule { }

@@ -1,15 +1,15 @@
 webpackJsonp([1],{
 
-/***/ 413:
+/***/ 698:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AndroidSubscriptionPageModule", function() { return AndroidSubscriptionPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__android_subscription__ = __webpack_require__(448);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular4_paystack__ = __webpack_require__(449);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__android_subscription__ = __webpack_require__(738);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular4_paystack__ = __webpack_require__(739);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -29,7 +29,7 @@ var AndroidSubscriptionPageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__android_subscription__["a" /* AndroidSubscriptionPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__android_subscription__["a" /* AndroidSubscriptionPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__android_subscription__["a" /* AndroidSubscriptionPage */]),
                 __WEBPACK_IMPORTED_MODULE_3_angular4_paystack__["a" /* Angular4PaystackModule */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NO_ERRORS_SCHEMA */]]
@@ -42,14 +42,14 @@ var AndroidSubscriptionPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 448:
+/***/ 738:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AndroidSubscriptionPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(247);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -68,8 +68,8 @@ var AndroidSubscriptionPage = /** @class */ (function () {
         this.navCtrl = navCtrl;
         this.auth = auth;
         this.navParams = navParams;
-        this.newuser = new __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["b" /* NewUser */]("", "", "", "", "", "", "", "", "");
-        this.public_key = 'pk_test_9c32fd37430710c4b34c9376c8133c7925e899a7'; //Put your paystack Test or Live Key here
+        this.newuser = new __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["b" /* NewUser */]("", "", "", "", "", "", "", { id: "" }, "");
+        this.public_key = 'pk_test_b3685f824518679567d6356e2636fc184878e833'; //Put your paystack Test or Live Key here
         this.channels = ['card']; //Paystack Payment Methods
         this.random_id = Math.floor(Date.now() / 1000); //Line to generate reference number
         this.newuser = navParams.get("newuser");
@@ -91,8 +91,8 @@ var AndroidSubscriptionPage = /** @class */ (function () {
             console.log(_this.plantypelist);
         });
     };
-    AndroidSubscriptionPage.prototype.Pay = function (pay_amount) {
-        this.loadmsg = "Please Wait ...";
+    AndroidSubscriptionPage.prototype.onPay = function (pay_amount) {
+        this.auth.showToast("Please Wait ...");
         this.pay_amount = this.CalculatePercentage(pay_amount);
     };
     AndroidSubscriptionPage.prototype.paymentInit = function () {
@@ -107,50 +107,40 @@ var AndroidSubscriptionPage = /** @class */ (function () {
     };
     //Callback function on successful payment
     AndroidSubscriptionPage.prototype.paymentDone = function (ref) {
-        console.log(ref); //ref contains the response from paystack after successful payment
-        var loading = this.loadingCtrl.create({
-            content: 'Processing Payment...'
-        });
-        loading.present();
-        // this.datalink.MobilePayment(String(this.UserID), String(this.payForm.value.amount), String(ref.reference), String(ref.transaction), "ValidationFees").subscribe(result => {
-        // if (result === "success") {
-        //   this.auth.showToast("Your Payment was Successful. Check your Messages for details");
-        //   // this.onValidateLogin(this.email, this.password, loading);
-        // } else {
-        //   loading.dismiss().catch(() => { });
-        //   // this.auth.showToast("Please contact the WM Mobile Support if your card had been debited")
-        // }
-        // }, err => {
-        //   loading.dismiss().catch(() => { });
-        //   // this.auth.showToast("We could not connect to the WM Server. Please check your network connection. Contact the WM Mobile Support if your card had been debited.")
-        // });
+        if (ref.status === "success") {
+            console.log(ref); //ref contains the response from paystack after successful payment
+            var loading_1 = this.loadingCtrl.create({
+                content: 'Please wait...'
+            });
+            loading_1.present();
+            this.newuser.platform = "Android";
+            this.newuser.referencecode = String(ref.reference);
+            console.log(this.newuser);
+            this.auth.createNewUser(this.newuser).subscribe(function (result) {
+                // this.plantypes = result;
+                loading_1.dismiss().catch(function () { });
+                // this.plantypelist = this.plantypes.data;
+                console.log(result);
+            }, function (err) {
+                loading_1.dismiss().catch(function () { });
+                console.log(JSON.stringify(err));
+                // this.auth.showToast(JSON.stringify(err))
+            });
+        }
+        else {
+            this.auth.showToast("Please, the payment was not successful.");
+        }
     };
     //Event triggered if User cancel the payment
     AndroidSubscriptionPage.prototype.paymentCancel = function () {
         this.auth.showToast("You cancelled the payment!");
     };
-    AndroidSubscriptionPage.prototype.onPay = function () {
-        var amount = 2222; //this.payForm.value.amount;
-        console.log(amount);
-        if (isNaN(amount) || "" === String(amount)) {
-            this.auth.showToast("Please Enter The Cash Amount");
-            return false;
-        }
-        else if (String(amount).length < 3) {
-            this.auth.showToast("Minimum amount is #100.00");
-            return false;
-        }
-        else {
-            this.loadmsg = "Please Wait ...";
-            this.amountToPay = this.CalculatePercentage(amount);
-        }
-    };
     AndroidSubscriptionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
             selector: 'page-android-subscription',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/android-subscription/android-subscription.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Subscription</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="sign" style="background-image:url(\'assets/imgs/welcome3.jpg\')">\n  <div class="signForm">\n    <img src="assets/imgs/appicon.png" style="width: 8em; height: 8em;" />\n    <ion-list>\n      <ion-item>\n        <ion-icon name="briefcase" item-left color="light"></ion-icon>\n        <ion-label color="light">\n          Select a plan per month\n        </ion-label>\n        <ion-select [(ngModel)]="newuser.plantype.id" name="plantype" id="plantype" class="">\n          <ion-option *ngFor="let plan of plantypelist" value="{{ plan.id }}"\n            (ionSelect)="onPlantTypeSelect($event, plan)">{{ plan.name}} - {{ plan.amount  | currency: \'NGN\': \'1.2-2\'}}\n          </ion-option>\n        </ion-select>\n      </ion-item>\n    </ion-list>\n    <!-- <button ion-button block type="submit" color="color2" (click)="Pay(\'AndroidSubscriptionPage\')">PAY\n      {{pay_amount  | currency: \'NGN\': \'1.2-2\'}}</button> -->\n      \n        <button ion-button block color="color2" angular4-paystack type="submit" \n          [key]="public_key" \n          (paymentInit)="paymentInit()" \n          [email]="newuser.email" \n          [amount]="pay_amount * 100" [ref]="random_id"\n          [channels]="channels"\n          (close)="paymentCancel()" \n          (callback)="paymentDone($event)" \n          (click)="onPay(pay_amount)"\n          [metadata]="{ \n            custom_fields: \n            [ {\n              display_name: \'Customer Name\', \n              variable_name: \'Customer Name\', \n              value: newuser.firstname} ,\n            {\n              display_name: \'Payment Type\', \n              variable_name: \'Payment Type\', \n              value: \'Registration\' \n            }] \n          }"\n        > PAY  {{pay_amount  | currency: \'NGN\': \'1.2-2\'}}\n        </button>\n    <p ion-text color="light" navPush="SignInPage">Don\'t want to continue ? Login</p>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/android-subscription/android-subscription.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["n" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["p" /* NavController */], __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["q" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["o" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["s" /* NavParams */]])
     ], AndroidSubscriptionPage);
     return AndroidSubscriptionPage;
 }());
@@ -159,7 +149,7 @@ var AndroidSubscriptionPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 449:
+/***/ 739:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -167,9 +157,9 @@ var AndroidSubscriptionPage = /** @class */ (function () {
 /* unused harmony export Angular4PaystackDirective */
 /* unused harmony export Angular4PaystackEmbed */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Angular4PaystackModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(45);
 
 
 

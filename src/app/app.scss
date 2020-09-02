@@ -800,21 +800,18 @@ ion-menu{
                     margin:0px;
                 }
                 .icon{
-                    font-size:1.9rem;
+                    font-size:1.2rem;
                     min-width:0px;
                     min-height:0px;
-                    width:18px;
+                    width:10px;
                     text-align: center;
                 }
             }
             .item-block{
                 height:34px;
+                margin-left: 0.3em !important;
                 .label{
                     font-size:$mainFont - .2!important;
-                }
-                img{
-                    object-fit:contain;
-                    width:18px;
                 }
             }
         }
@@ -912,4 +909,10 @@ ion-menu{
     .search_Pop{
         top:20px;
     }
+}
+
+.item > ion-icon, .item-inner > ion-icon {
+    min-height: 1.9rem !important;
+    font-size: 1.9rem !important;
+    line-height: 1 !important;
 }

@@ -1,14 +1,14 @@
 webpackJsonp([9],{
 
-/***/ 436:
+/***/ 723:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignUpPageModule", function() { return SignUpPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sign_up__ = __webpack_require__(474);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sign_up__ = __webpack_require__(766);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -27,7 +27,7 @@ var SignUpPageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__sign_up__["a" /* SignUpPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__sign_up__["a" /* SignUpPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__sign_up__["a" /* SignUpPage */]),
             ],
         })
     ], SignUpPageModule);
@@ -38,14 +38,14 @@ var SignUpPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 474:
+/***/ 766:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignUpPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(247);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -63,8 +63,7 @@ var SignUpPage = /** @class */ (function () {
         this.navCtrl = navCtrl;
         this.platform = platform;
         this.auth = auth;
-        this.newuser = new __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["b" /* NewUser */]("", "", "", "", "", "", "", "", "");
-        // this.newuser.
+        this.newuser = new __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["b" /* NewUser */]("", "", "", "", "", "", "", { id: "" }, "");
     }
     SignUpPage.prototype.createAccount = function (page) {
         if (this.newuser.firstname == "" || this.newuser.firstname == undefined || this.newuser.firstname == null) {
@@ -100,10 +99,10 @@ var SignUpPage = /** @class */ (function () {
     };
     SignUpPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
-            selector: 'page-sign-up',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/sign-up/sign-up.html"*/'<ion-header>\n  <ion-navbar>\n  </ion-navbar>\n</ion-header>\n<ion-content  class="sign" style="background-image:url(\'assets/imgs/welcome3.jpg\')" >\n  <div class="signForm">\n    <img src="assets/imgs/appicon.png" style="width: 8em; height: 8em;"/>\n    <ion-list>\n      <ion-item class="halfItem" float-left>\n        <ion-icon name="md-person" item-left color="light"></ion-icon>\n        <ion-input type="text" [(ngModel)]="newuser.firstname" name="firstname" id="firstname"  placeholder="First Name"></ion-input>\n      </ion-item>\n      <ion-item class="halfItem"  float-left>\n        <ion-icon name="md-person" item-left color="light"></ion-icon>\n        <ion-input type="text" [(ngModel)]="newuser.lastname" name="lastname" id="lastname" placeholder="Last Name"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-icon name="md-mail" item-left color="light"></ion-icon>\n        <ion-input type="email" [(ngModel)]="newuser.email" name="email" id="email"  placeholder="E-mail"></ion-input>\n      </ion-item>\n\n      <ion-item >\n        <ion-icon name="call" item-left color="light"></ion-icon>\n        <ion-input type="tel" [(ngModel)]="newuser.phone" name="phone" id="phone" placeholder="Phone"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-icon name="md-lock" item-left color="light"></ion-icon>\n        <ion-input type="password"  [(ngModel)]="newuser.password" name="password" id="password" placeholder="Password"></ion-input>\n      </ion-item>\n      <p ion-text color="light" navPush="TermsPage" >I have read and agreed to the <span ion-text color="secondary">Terms And Conditions</span></p>\n    </ion-list>\n    <button ion-button block type="submit" color="color2" (click)="createAccount(\'AndroidSubscriptionPage\')">CREATE ACCOUNT</button>\n   <p ion-text color="light" navPush="SignInPage" >Already have an account ? Login</p>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/sign-up/sign-up.html"*/,
+            selector: 'page-sign-up',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/sign-up/sign-up.html"*/'<ion-header>\n  <ion-navbar>\n  </ion-navbar>\n</ion-header>\n<ion-content  class="sign" style="background-image:url(\'assets/imgs/welcome3.jpg\')" >\n  <div class="signForm">\n    <img src="assets/imgs/appicon.png" style="width: 8em; height: 8em;"/>\n    <p ion-text color="light">Sure3Odds</p>\n    <ion-list>\n      <ion-item class="halfItem" float-left>\n        <ion-icon name="md-person" item-left color="light"></ion-icon>\n        <ion-input type="text" [(ngModel)]="newuser.firstname" name="firstname" id="firstname"  placeholder="First Name"></ion-input>\n      </ion-item>\n      <ion-item class="halfItem"  float-left>\n        <ion-icon name="md-person" item-left color="light"></ion-icon>\n        <ion-input type="text" [(ngModel)]="newuser.lastname" name="lastname" id="lastname" placeholder="Last Name"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-icon name="md-mail" item-left color="light"></ion-icon>\n        <ion-input type="email" [(ngModel)]="newuser.email" name="email" id="email"  placeholder="E-mail"></ion-input>\n      </ion-item>\n\n      <ion-item >\n        <ion-icon name="call" item-left color="light"></ion-icon>\n        <ion-input type="tel" [(ngModel)]="newuser.phone" name="phone" id="phone" placeholder="Phone"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-icon name="md-lock" item-left color="light"></ion-icon>\n        <ion-input type="password"  [(ngModel)]="newuser.password" name="password" id="password" placeholder="Password"></ion-input>\n      </ion-item>\n      <p ion-text color="light" navPush="TermsPage" >I have read and agreed to the <span ion-text color="secondary">Terms And Conditions</span></p>\n    </ion-list>\n    <button ion-button block type="submit" color="color2" (click)="createAccount(\'AndroidSubscriptionPage\')">CREATE ACCOUNT</button>\n   <p ion-text color="light" navPush="SignInPage" >Already have an account ? Login</p>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/sign-up/sign-up.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["p" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["s" /* Platform */], __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["r" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["u" /* Platform */], __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */]])
     ], SignUpPage);
     return SignUpPage;
 }());

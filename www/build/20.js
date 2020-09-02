@@ -1,14 +1,14 @@
 webpackJsonp([20],{
 
-/***/ 424:
+/***/ 712:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OldFreeTipsPageModule", function() { return OldFreeTipsPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__old_free_tips__ = __webpack_require__(460);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OldGamesPageModule", function() { return OldGamesPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__old_games__ = __webpack_require__(753);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var OldFreeTipsPageModule = /** @class */ (function () {
-    function OldFreeTipsPageModule() {
+var OldGamesPageModule = /** @class */ (function () {
+    function OldGamesPageModule() {
     }
-    OldFreeTipsPageModule = __decorate([
+    OldGamesPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__old_free_tips__["a" /* OldFreeTipsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__old_games__["a" /* OldGamesPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__old_free_tips__["a" /* OldFreeTipsPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__old_games__["a" /* OldGamesPage */]),
             ],
         })
-    ], OldFreeTipsPageModule);
-    return OldFreeTipsPageModule;
+    ], OldGamesPageModule);
+    return OldGamesPageModule;
 }());
 
-//# sourceMappingURL=old-free-tips.module.js.map
+//# sourceMappingURL=old-games.module.js.map
 
 /***/ }),
 
-/***/ 460:
+/***/ 753:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OldFreeTipsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OldGamesPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -57,29 +57,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the OldFreeTipsPage page.
+ * Generated class for the OldGamesPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var OldFreeTipsPage = /** @class */ (function () {
-    function OldFreeTipsPage(navCtrl, navParams) {
+var OldGamesPage = /** @class */ (function () {
+    function OldGamesPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    OldFreeTipsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad OldFreeTipsPage');
+    OldGamesPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad OldGamesPage');
     };
-    OldFreeTipsPage = __decorate([
+    OldGamesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-old-free-tips',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/old-free-tips/old-free-tips.html"*/'<!--\n  Generated template for the OldFreeTipsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>oldFreeTips</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/old-free-tips/old-free-tips.html"*/,
+            selector: 'page-old-games',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/old-games/old-games.html"*/'<!--\n  Generated template for the OldGamesPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>oldGames</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/old-games/old-games.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavParams */]])
-    ], OldFreeTipsPage);
-    return OldFreeTipsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavParams */]])
+    ], OldGamesPage);
+    return OldGamesPage;
 }());
 
-//# sourceMappingURL=old-free-tips.js.map
+//# sourceMappingURL=old-games.js.map
 
 /***/ })
 

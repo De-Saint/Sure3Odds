@@ -1,64 +1,65 @@
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
 import { Component, OnInit } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
-import { FormGroup, FormBuilder } from '@angular/forms';
-declare var jQuery:any;
+import { IonicPage, NavController, Events } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 @IonicPage()
 @Component({
   selector: 'page-sign-in',
   templateUrl: 'sign-in.html',
 })
-export class SignInPage  implements OnInit{
-  loginForm: FormGroup;
+export class SignInPage implements OnInit {
   submitted = false;
   error: string;
   respData: any;
-  constructor(private navCtrl: NavController, 
-    private auth: AuthenicationProvider,
-    private formBuilder: FormBuilder) {
-  }
-ngOnInit():void{
-  this.loginForm = this.formBuilder.group({
-    email: [''],
-    password: ['']
-  });
-}
+  passwordType: string = 'password';
+  passwordIcon: string = 'eye-off';
 
-  rootPage(page){
-   
+  HAS_LOGGED_IN = 'hasLoggedIn';
+  login: { email?: string, password?: string } = {};
+  constructor(private navCtrl: NavController,
+    private storage: Storage, private events: Events,
+    private auth: AuthenicationProvider) {
   }
-  get f() {
-    return this.loginForm.controls;
+  ngOnInit(): void {
+
   }
 
-  onSubmit(page) {
+  onLogin(form, page) {
     this.submitted = true;
-    // stop here if form is invalid
-    if (this.loginForm.invalid) {
-      return;
-    } else {
-      this.auth.login(this.f.email.value, this.f.password.value)
+    if (form.valid) {
+      this.auth.login(this.login.email, this.login.password)
         .subscribe(resp => {
           this.respData = resp;
-          console.log(this.respData.statusCode);
           if (this.respData.statusCode === 200) {
-            this.navCtrl.setRoot(page);
-          }else{
+           this.gotoHomePage(this.respData.data, page);
+          } else {
             this.error = this.respData.description;
-            jQuery('.success-alert').removeClass('d-none');
-            jQuery('.success-alert').addClass('alert alert-danger');
-            jQuery('.success-alert').html(this.respData.description).fadeIn(1200);
-            jQuery(".success-alert").fadeTo(2000, 500).slideUp(500, function () {
-              jQuery(".success-alert").slideUp(500);
-            });
+            this.auth.showToast(this.error);
           }
-
         }, error => {
           this.error = error;
         });
+
     }
   }
 
- 
+  hideShowPassword() {
+    this.passwordType = this.passwordType === 'text' ? 'password' : 'text';
+    this.passwordIcon = this.passwordIcon === 'eye-off' ? 'eye' : 'eye-off';
+  }
+
+private gotoHomePage(data, page){
+  this.navCtrl.setRoot(page).then(() => {
+    this.storage.ready().then(() => {
+      this.storage.set("hasSeenLogin", true);
+      const name = this.auth.currentUserDataValue.name;
+      const type = this.auth.currentUserDataValue.user_type;
+      this.auth.showToast("Welcome " + name);
+      this.events.publish('user:login', type, name);
+    });
+  });
 }
+
+}
+

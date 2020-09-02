@@ -85,11 +85,8 @@ export class AndroidSubscriptionPage implements OnInit {
     }
 
   }
-
   //Event triggered if User cancel the payment
   paymentCancel() {
     this.auth.showToast("You cancelled the payment!");
   }
-
-
 }

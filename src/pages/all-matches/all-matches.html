@@ -16,7 +16,6 @@
   </ion-navbar>
 
   <ion-toolbar class="calendarToolbar">
-    <!-- Calendar  -->
     <ion-grid class="calendar">
       <ion-row>
         <ion-col col-auto>
@@ -47,7 +46,37 @@
 <ion-content>
 
    <!-- matches list -->
-  <ion-list margin-top *ngFor="let item of matches">
+   <ion-list margin-top *ngFor="let game of gamelist">
+    <ion-list-header>
+      {{game.title}}
+      <ion-icon name="football" color="color1" item-left></ion-icon>
+    </ion-list-header>
+    <!-- match item  -->
+     <ion-item class="matchItem" *ngFor="let match of game.items"> 
+      <ion-grid>
+        <ion-row>
+          <ion-col col>
+            <ion-item navPush="TeamPage">
+              <img src="assets/imgs/appicon.png" item-right/>
+              <p text-right>{{match.hometeam.name}}</p>
+            </ion-item>
+          </ion-col>
+          <ion-col col-auto>
+            <span ion-text color="color1">{{match.matchTime}}</span>
+            <p ion-text color="color2">{{match.odds}}</p>
+          </ion-col>
+          <ion-col col>
+            <ion-item navPush="TeamPage">
+              <img src="assets/imgs/appicon.png" item-left/>
+              <p text-left>{{match.awayteam.name}}</p>
+            </ion-item>
+          </ion-col> 
+        </ion-row> 
+       </ion-grid>
+     </ion-item> 
+  </ion-list>
+   <!-- matches list -->
+   <ion-list margin-top *ngFor="let item of matches">
     <ion-list-header>
       {{item.title}}
       <ion-icon name="md-star" color="color1" item-left *ngIf="item.title=='Favorites'"></ion-icon>

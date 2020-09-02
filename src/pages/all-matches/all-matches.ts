@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Global } from './../../providers/global';
+import { GamesProvider } from './../../providers/games/games';
+import { Component, OnInit } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
-import { Global } from '../../providers/global';
 
 
 @IonicPage()
@@ -8,12 +9,9 @@ import { Global } from '../../providers/global';
   selector: 'page-all-matches',
   templateUrl: 'all-matches.html',
 })
-export class AllMatchesPage {
-
-  constructor(public navCtrl: NavController, private global: Global) {
-    this.getDaysInMonth(this.month_num, this.year);
-    this.isGroupShown(3);
-  }
+export class AllMatchesPage implements OnInit {
+gamesresp:any;
+gamelist:any;
 
   matches = [
     {
@@ -48,6 +46,33 @@ export class AllMatchesPage {
   year = this.myDate.getFullYear();
   month_num = this.myDate.getMonth();
   month_name = this.monthNames[this.month_num];
+  // click day
+  shownGroup;
+  constructor(public navCtrl: NavController, private globalProvider: Global,  private gamesProvider: GamesProvider) {
+    this.getDaysInMonth(this.month_num, this.year);
+    var date = new Date(this.year, this.month_num);
+    var a = new Date(date);
+    var day_num = a.getDate();
+    this.shownGroup = day_num ;
+
+    this.isGroupShown(this.shownGroup);
+  
+  }
+
+  ngOnInit(): void {
+    this.GetGames();
+  }
+
+  getDaysInMonth(month, year) {
+    // Since no month has fewer than 28 days
+    var date = new Date(year, month);
+    while (date.getMonth() === month) {
+      var a = new Date(date);
+      var day_num = a.getDate();
+      this.days.push({ name: this.days_name[a.getDay()], day_num: day_num });
+      date.setDate(date.getDate() + 1);
+    }
+  }
 
   // increase and decrease month function
   change_month(type) {
@@ -71,24 +96,30 @@ export class AllMatchesPage {
     this.days = [];
     this.getDaysInMonth(this.month_num, this.year);
   }
-
-  getDaysInMonth(month, year) {
-    // Since no month has fewer than 28 days
-    var date = new Date(year, month);
-    while (date.getMonth() === month) {
-      var a = new Date(date);
-      var day_num = a.getDate();
-      this.days.push({ name: this.days_name[a.getDay()], day_num: day_num });
-      date.setDate(date.getDate() + 1);
-    }
-  }
-
-  // click day
-  shownGroup = 3;
   toggleGroup(group) {
+    console.log(group);
     this.shownGroup = group;
   };
   isGroupShown(group) {
     return this.shownGroup === group;
   };
+
+
+  GetGames() {//myDate
+    const currentdate = this.globalProvider.getDate();
+    this.gamesProvider.GetGames(currentdate)
+    .subscribe(resp => {
+      this.gamesresp = resp;
+      if (this.gamesresp.statusCode === 200) {
+        this.gamelist = this.gamesresp.data;
+        console.log(this.gamelist);
+      } else {
+        // this.error = this.gamesresp.description;
+        console.log(this.gamesresp.description);
+      }
+    }, error => {
+      // this.error = error;
+      console.log(JSON.stringify(error));
+    });
+  }
 }

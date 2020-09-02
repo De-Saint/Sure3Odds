@@ -1,14 +1,14 @@
 webpackJsonp([26],{
 
-/***/ 418:
+/***/ 706:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageModule", function() { return HomePageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(454);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MatchDetailsPageModule", function() { return MatchDetailsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__match_details__ = __webpack_require__(747);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var HomePageModule = /** @class */ (function () {
-    function HomePageModule() {
+var MatchDetailsPageModule = /** @class */ (function () {
+    function MatchDetailsPageModule() {
     }
-    HomePageModule = __decorate([
+    MatchDetailsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_2__match_details__["a" /* MatchDetailsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__match_details__["a" /* MatchDetailsPage */]),
             ],
         })
-    ], HomePageModule);
-    return HomePageModule;
+    ], MatchDetailsPageModule);
+    return MatchDetailsPageModule;
 }());
 
-//# sourceMappingURL=home.module.js.map
+//# sourceMappingURL=match-details.module.js.map
 
 /***/ }),
 
-/***/ 454:
+/***/ 747:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global__ = __webpack_require__(246);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MatchDetailsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global__ = __webpack_require__(353);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,43 +58,44 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var HomePage = /** @class */ (function () {
-    function HomePage(navCtrl, global) {
+var MatchDetailsPage = /** @class */ (function () {
+    function MatchDetailsPage(navCtrl, global) {
         this.navCtrl = navCtrl;
         this.global = global;
-        this.lastNews = [
-            { img: 'assets/imgs/news2.png', title: 'Real Madrid want to win Club World Cup', subTitle: 'is simply dummy text of the printing and typesetting industry.' },
-            { img: 'assets/imgs/news1.png', title: 'Real Madrid want to win Club World Cup', subTitle: 'is simply dummy text of the printing and typesetting industry.' },
-            { img: 'assets/imgs/news3.png', title: 'Real Madrid want to win Club World Cup', subTitle: 'is simply dummy text of the printing and typesetting industry.' }
+        this.tab = 'stats';
+        this.statsPercentage = [
+            { title: 'Ball Possession', team1: '71%', team2: '29%' },
         ];
-        this.matches = [
-            { firstTeamImg: 'assets/imgs/teams/real_madrid.png', firstTeamName: 'Real Madrid', time: '19:30', secondTeamImg: 'assets/imgs/teams/granada.png', secondTeamName: 'Garnada' },
-            { firstTeamImg: 'assets/imgs/teams/barcelona.png', firstTeamName: 'Barcelona', time: '22:30', secondTeamImg: 'assets/imgs/teams/villarreal.png', secondTeamName: 'Villarreal' },
+        this.statsNum = [
+            { title: 'Total Shots', team1: 23, team2: 12, team1P: '75%', team2P: '25%' },
+            { title: 'Accurate Passes', team1: 629, team2: 236, team1P: '80%', team2P: '20%' },
+            { title: 'Fouls', team1: 8, team2: 9, team1P: '49%', team2P: '51%' },
+            { title: 'Corners', team1: 7, team2: 2, team1P: '90%', team2P: '10%' },
+            { title: 'Offside', team1: 2, team2: 4, team1P: '25%', team2P: '75%' },
         ];
-        this.clickLike = false;
-        this.numLike = 200;
+        this.highlights = [
+            { time: '84', img: 'ball', content: 'is simply dummy text of the printing ', team: 'team1', content2: '' },
+            { time: '84', img: 'flag', content: 'is simply dummy text of the printing ', team: 'team2', content2: '' },
+            { time: '84', img: 'red-card', content: 'Player Name', team: 'team1', content2: '' },
+            { time: '84', img: 'ball', content: 'is simply dummy text of the printing ', team: 'team2', content2: '' },
+            { time: '84', img: 'yellow-card', content: 'Player Name', team: 'team1', content2: '' },
+            { time: '82', img: 'exchange', content: 'Player Name', team: 'team1', content2: 'Player Name' },
+            { time: '84', img: 'ball', content: 'is simply dummy text of the printing ', team: 'team2', content2: '' },
+            { time: '78', img: 'exchange', content: 'Player Name', team: 'team2', content2: 'Player Name' },
+            { time: '74', img: 'yellow-card', content: 'Player Name', team: 'team1', content2: '' },
+            { time: '84', img: 'yellow-card', content: 'Player Name', team: 'team1', content2: '' },
+        ];
     }
-    HomePage.prototype.like = function ($event) {
-        $event.stopPropagation();
-        if (this.clickLike != true) {
-            this.numLike = this.numLike + 1;
-            this.clickLike = true;
-        }
-        else {
-            this.numLike = this.numLike - 1;
-            this.clickLike = false;
-        }
-    };
-    HomePage = __decorate([
+    MatchDetailsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/home/home.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu" ></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="global.callSearch($event)">\n        <ion-icon name="md-search"></ion-icon>\n      </button>\n      <button ion-button icon-only navPush="NotificationPage">\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n  <ion-slides>\n    <ion-slide *ngFor="let item of lastNews" navPush="TopNewsDetailsPage">\n      <ion-card class="newsCard">\n        <!-- if images in this slide equaled in height please remove class="imgResponsive" from img Tag -->\n        <img class="imgResponsive" src="{{item.img}}"/>\n        <div class="container" text-left>\n          <h4 ion-text color="light">{{item.title}}</h4>\n          <p ion-text color="light">{{item.subTitle}}</p>\n        </div>\n      </ion-card>\n    </ion-slide>\n  </ion-slides>\n\n  <div padding>\n    <!-- top news -->\n    <div class="topNews">\n      <ion-item navPush="TopNewsDetailsPage">\n        <ion-thumbnail item-left>\n          <img src="assets/imgs/t1.png"/>\n        </ion-thumbnail>\n        <div>\n          <h5 ion-text color="dark">Real Madrid want to win Club World Cup</h5>\n          <p ion-text color="color4" class="subtitle"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s</p>\n        </div>\n\n        <ion-grid no-padding class="gridFooter">\n          <ion-row>\n            <ion-col col padding-right>\n              <p ion-text color="color4">4 HOURS AGO</p>\n            </ion-col>\n            <!-- users like number -->\n            <ion-col col-auto padding-right>\n              <ion-item (click)="like($event)">\n                <ion-icon  item-left color="color2" [name]="clickLike ? \'ios-heart\' : \'ios-heart-outline\'" ></ion-icon>\n                <p ion-text color="color4">{{numLike}}</p>\n              </ion-item>\n            </ion-col>\n\n            <!-- user Comment number -->\n            <ion-col col-auto>\n                <ion-item>\n                  <ion-icon name="md-text" color="color2" item-left></ion-icon>\n                  <p ion-text color="color4">160</p>\n                </ion-item>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-item>\n      <button ion-button clear icon-right float-right class="viewAllBtn" navPush="TopNewsPage">\n        All News\n        <ion-icon class="goal-arrow-right"></ion-icon>\n      </button>\n    </div>\n\n    <!-- matches list -->\n    <ion-list margin-top>\n      <ion-list-header>\n        <button ion-button block clear icon-right float-right class="viewAllBtn"  navPush="AllMatchesPage">\n          All Matches\n          <ion-icon class="goal-arrow-right"></ion-icon>\n        </button>\n      </ion-list-header>\n      <!-- match item  -->\n      <ion-item class="matchItem" *ngFor="let item of matches">\n        <ion-grid>\n          <ion-row>\n            <!-- first team -->\n            <ion-col col>\n              <ion-item navPush="TeamPage">\n                <img src="{{item.firstTeamImg}}" item-right/>\n                <p text-right>{{item.firstTeamName}}</p>\n              </ion-item>\n            </ion-col>\n            <!-- match time -->\n            <ion-col col-auto>\n              <span ion-text color="color1">{{item.time}}</span>\n              <p ion-text color="color2">Next Match</p>\n            </ion-col>\n            <!-- second team -->\n            <ion-col col>\n              <ion-item navPush="TeamPage">\n                <img src="{{item.secondTeamImg}}" item-left/>\n                <p text-left>{{item.secondTeamName}}</p>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-item>\n    </ion-list>\n\n    <!-- last photos -->\n    <ion-list class="lastPhotos" margin-top>\n      <ion-list-header>\n        <button ion-button block clear icon-right float-right class="viewAllBtn" navPush="PhotosPage">\n          Photos\n          <ion-icon class="goal-arrow-right"></ion-icon>\n        </button>\n      </ion-list-header>\n      <ion-item class="photoItem" navPush="PhotosDetailsPage" >\n        <!-- if you want this image reponsive in large screen please remove class="imgResponsive" from img Tag  -->\n        <img src="assets/imgs/p001.png" class="imgResponsive"/>\n        <ion-grid>\n          <ion-row>\n            <ion-col col-auto>\n              <h4 ion-text color="dark">2018 World Cup</h4>\n            </ion-col>\n            <ion-col col>\n              <p ion-text color="color2">200 photos</p>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-item>\n    </ion-list>\n\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/home/home.html"*/,
+            selector: 'page-match-details',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/match-details/match-details.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Matches</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only  (click)="global.callSearch($event)">\n        <ion-icon name="md-search"></ion-icon>\n      </button>\n      <button ion-button icon-only navPush="NotificationPage">\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n  <ion-toolbar class="matchResultBar">\n    <!-- match item  -->\n    <ion-item class="matchResult">\n      <ion-grid>\n        <ion-row>\n          <!-- first team -->\n          <ion-col col>\n            <ion-item navPush="TeamPage">\n              <img src="assets/imgs/teams/arsenal.png"/>\n              <p>Arsenal</p>\n            </ion-item>\n          </ion-col>\n          <!-- match time -->\n          <ion-col col-auto>\n            <div class="result">\n              <span ion-text color="color1">3</span>\n              <span ion-text color="color1">-</span>\n              <span ion-text color="color1">1</span>\n            </div>\n            <p ion-text color="color2">Full Time</p>\n          </ion-col>\n          <!-- second team -->\n          <ion-col col>\n            <ion-item navPush="TeamPage">\n              <img src="assets/imgs/teams/bate_borisov.png"/>\n              <p>BATE Borisov</p>\n            </ion-item>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </ion-item>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content [ngSwitch]=\'tab\'>\n  <!-- tabs -->\n  <ion-segment [(ngModel)]="tab">\n    <ion-segment-button value="stats">STATS</ion-segment-button>\n    <ion-segment-button value="goals">GOALS</ion-segment-button>\n    <ion-segment-button value="timeline">TIMELINE</ion-segment-button>\n  </ion-segment>\n\n  <!-- match stats -->\n  <div class="matchStats" margin-top *ngSwitchCase="\'stats\'">\n    <h5 ion-text color="color2">BEST AVERAGE RATING</h5>\n    <ion-list>\n      <!-- state with percentage -->\n      <ion-item *ngFor="let item of statsPercentage">\n        <ion-grid>\n          <ion-row>\n            <ion-col col-auto text-left>\n              <p ion-text color="color1" no-margin>{{item.team1}}</p>\n            </ion-col>\n            <ion-col col text-center>\n              <p ion-text color="dark" no-margin >{{item.title}}</p>\n            </ion-col>\n            <ion-col col-auto text-right>\n              <p ion-text color="color1" no-margin>{{item.team2}}</p>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-6>\n              <div class="progressBar" progress-right>\n                <span class="container"></span>\n                <span class="progressActive" [ngStyle]="{\'width\': + item.team1}" active-from-right></span>\n              </div>\n            </ion-col>\n            <ion-col col-6>\n              <div class="progressBar" >\n                <span class="container"></span>\n                <span class="progressActive" [ngStyle]="{\'width\': + item.team2}" active-from-left></span>\n              </div>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-item>\n\n      <!-- state with number -->\n      <ion-item *ngFor="let item of statsNum">\n        <ion-grid>\n          <ion-row>\n            <ion-col col-auto text-left>\n              <p ion-text color="color1" no-margin>{{item.team1}}</p>\n            </ion-col>\n            <ion-col col text-center>\n              <p ion-text color="dark" no-margin >{{item.title}}</p>\n            </ion-col>\n            <ion-col col-auto text-right>\n              <p ion-text color="color1" no-margin>{{item.team2}}</p>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-6>\n              <div class="progressBar" progress-right>\n                <span class="container"></span>\n                <span class="progressActive" [ngStyle]="{\'width\': + item.team1P}" active-from-right></span>\n              </div>\n            </ion-col>\n            <ion-col col-6>\n              <div class="progressBar" >\n                <span class="container"></span>\n                <span class="progressActive" [ngStyle]="{\'width\': + item.team2P}" active-from-left></span>\n              </div>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-item>\n    </ion-list>\n  </div>\n  \n  <!-- goals -->\n  <div class="goals" *ngSwitchCase="\'goals\'" padding>\n    <ion-list>\n      <!-- first team goals -->\n      <ion-item  margin-bottom>\n        <ion-avatar item-left>\n          <img src="assets/imgs/player1.png">\n        </ion-avatar>\n        <span ion-text color="color1">11\'</span>\n        <p ion-text color="dark">Player Name</p>\n        <img src="assets/imgs/referee/ball.png"/>  \n      </ion-item>\n  <!-- ================================================= -->\n      <!-- second team goals -->\n      <ion-item class="secondTeam" margin-bottom >\n        <ion-avatar item-right>\n          <img src="assets/imgs/player2.png">\n        </ion-avatar>\n        <span ion-text color="color1">20\'</span>\n        <p ion-text color="dark">Player Name</p>\n        <img src="assets/imgs/referee/ball.png"/>\n      </ion-item>\n\n  <!-- ================================================= -->\n      <!-- first team goals -->\n      <ion-item  margin-bottom>\n          <ion-avatar item-left>\n            <img src="assets/imgs/player1.png">\n          </ion-avatar>\n          <span ion-text color="color1">23\'</span>\n          <p ion-text color="dark">Player Name</p>\n          <img src="assets/imgs/referee/ball.png"/>\n        </ion-item>\n\n      <!-- first team goals -->\n      <ion-item  margin-bottom>\n          <ion-avatar item-left>\n            <img src="assets/imgs/player1.png">\n          </ion-avatar>\n          <span ion-text color="color1">34\'</span>\n          <p ion-text color="dark">Player Name</p>\n          <img src="assets/imgs/referee/ball.png"/>\n        </ion-item>\n\n    </ion-list>\n  </div>\n\n  <div  *ngSwitchCase="\'timeline\'"> \n    <h4  margin ion-text color="color2">Man of the match</h4>\n    <ion-item class="avatarItem">\n      <ion-avatar item-left>\n        <img src="assets/imgs/player2.png"/>\n      </ion-avatar>\n      <h5 ion-text color="dark">Player Name</h5>\n      <p ion-text color="dark">Arsenal</p>\n      <span ion-text color="color1" class="rateNum" item-right>6</span>\n    </ion-item>\n    <!-- highlights -->\n    <ion-list class="timeLine_list">\n        <ion-item [ngClass]="{\'team2\':item.team ==\'team2\'}" *ngFor="let item of highlights">\n          <ion-grid>\n            <ion-row>\n              <ion-col col-auto>\n                <p ion-text color="color1">{{item.time}}\'</p>\n              </ion-col>\n              <ion-col col-auto>\n                <img src="assets/imgs/referee/{{item.img}}.png">\n              </ion-col>\n              <ion-col col>\n                <!-- for exchange player -->\n                <p ion-text color="color1" *ngIf="item.content2!=\'\'">{{item.content}}</p>\n                <p ion-text color="color2" *ngIf="item.content2!=\'\'">{{item.content2}}</p>\n\n                <!-- for other -->\n                <p ion-text color="dark" *ngIf="item.content2==\'\'">{{item.content}}</p>\n              </ion-col>\n            </ion-row>\n          </ion-grid>\n        </ion-item>\n      </ion-list>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/match-details/match-details.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
-    ], HomePage);
-    return HomePage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
+    ], MatchDetailsPage);
+    return MatchDetailsPage;
 }());
 
-//# sourceMappingURL=home.js.map
+//# sourceMappingURL=match-details.js.map
 
 /***/ })
 

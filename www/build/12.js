@@ -1,14 +1,14 @@
 webpackJsonp([12],{
 
-/***/ 433:
+/***/ 721:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SelectLeaguePageModule", function() { return SelectLeaguePageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__select_league__ = __webpack_require__(471);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__select_league__ = __webpack_require__(764);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -27,7 +27,7 @@ var SelectLeaguePageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__select_league__["a" /* SelectLeaguePage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__select_league__["a" /* SelectLeaguePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__select_league__["a" /* SelectLeaguePage */]),
             ],
         })
     ], SelectLeaguePageModule);
@@ -38,14 +38,14 @@ var SelectLeaguePageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 471:
+/***/ 764:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SelectLeaguePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global__ = __webpack_require__(246);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global__ = __webpack_require__(353);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -100,7 +100,7 @@ var SelectLeaguePage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'page-select-league',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/select-league/select-league.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu" ></ion-icon>\n    </button>\n    <ion-title>Select League</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only  (click)="global.callSearch($event)">\n        <ion-icon name="md-search"></ion-icon>\n      </button>\n      <button ion-button icon-only navPush="NotificationPage">\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n  <!-- favorites list -->\n  <ion-list class="favoriteLeagues" *ngIf="favorites.length > 0">\n    <ion-list-header> \n      <ion-icon name="md-star" color="color1" item-left></ion-icon>\n      <h4 ion-text color="dark">Favorites</h4>\n    </ion-list-header>\n    <!-- league item  -->\n    <ion-item *ngFor="let item of favorites" navPush="LeagueDetailsPage">\n      <img item-left src="{{item.img}}"/>\n      <p ion-text color="dark">{{item.name}}</p>\n      <ion-icon name="md-star" color="color2" item-right (click)="removeLeague(item ,$event)"></ion-icon>\n    </ion-item>  \n  </ion-list>\n\n  <!-- Leagues list -->\n  <ion-list class="favoriteLeagues" margin-top>\n    <ion-list-header> \n      <ion-icon name="md-star" color="color4" item-left></ion-icon>\n      <h4 ion-text color="dark">Staff Picks</h4>\n    </ion-list-header>\n    <!-- league item  -->\n    <ion-item *ngFor="let item of leagues"  navPush="LeagueDetailsPage" >\n      <img item-left src="{{item.img}}"/>\n      <p ion-text color="dark">{{item.name}}</p>\n      <ion-icon name="md-star" color="color4" item-right (click)="selectLeague(item,$event)"></ion-icon>\n    </ion-item>  \n  </ion-list>\n</ion-content>  \n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/select-league/select-league.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
     ], SelectLeaguePage);
     return SelectLeaguePage;
 }());

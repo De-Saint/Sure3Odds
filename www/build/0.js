@@ -1,14 +1,14 @@
 webpackJsonp([0],{
 
-/***/ 431:
+/***/ 718:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfilePageModule", function() { return ProfilePageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile__ = __webpack_require__(467);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile__ = __webpack_require__(759);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -27,7 +27,7 @@ var ProfilePageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__profile__["a" /* ProfilePage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__profile__["a" /* ProfilePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__profile__["a" /* ProfilePage */]),
             ],
         })
     ], ProfilePageModule);
@@ -38,7 +38,7 @@ var ProfilePageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 444:
+/***/ 732:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10918,18 +10918,18 @@ return jQuery;
 
 /***/ }),
 
-/***/ 467:
+/***/ 759:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__ = __webpack_require__(249);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_global__ = __webpack_require__(246);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_jquery__ = __webpack_require__(444);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__ = __webpack_require__(356);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_global__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_jquery__ = __webpack_require__(732);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_intl_tel_input__ = __webpack_require__(468);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_intl_tel_input__ = __webpack_require__(760);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_intl_tel_input___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_intl_tel_input__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -11029,7 +11029,7 @@ var ProfilePage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'page-profile',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/profile/profile.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu" ></ion-icon>\n    </button>\n    <ion-title>Profile</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only  (click)="global.callSearch($event)">\n        <ion-icon name="md-search"></ion-icon>\n      </button>\n      <button ion-button icon-only navPush="NotificationPage">\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <div class="imgs">\n    <button ion-button icon-only class="coverCamera" [ngClass]="{\'show\':flag==false}"  (click)="selectImage(1)">\n      <ion-icon name="md-camera"></ion-icon>\n    </button>\n    <img src="{{img1}}"/>\n    <div class="imgProfile" [ngStyle]="{\'background-image\':\'url(\' + img2 + \')\'}">\n      <button ion-button icon-only class="profileCamera"  [ngClass]="{\'show\':flag==false}"  (click)="selectImage(2)">\n        <ion-icon name="md-camera"></ion-icon>\n      </button>\n    </div>\n  </div>\n\n  <!-- name and email -->\n  <div class="nameAndMail" >\n    <h5 ion-text color="dark">{{firstName}} {{lastName}}</h5>\n    <p ion-text color="dark">{{email}}</p>\n  </div>\n  \n  <!-- other information -->\n  <div class="otherForm">\n    <ion-list>\n\n      <!-- appear when click update -->\n      <ion-item class="halfItem" float-left [ngClass]="{\'show\': flag==true}">\n        <ion-label stacked>First Name</ion-label>\n        <ion-input disabled="{{flag}}" type="text" [(ngModel)]="firstName" ></ion-input>\n      </ion-item>\n      <!-- appear when click update -->\n      <ion-item class="halfItem"  float-left  [ngClass]="{\'show\': flag==true}">\n          <ion-label stacked>Last Name</ion-label>\n        <ion-input disabled="{{flag}}" type="text" [(ngModel)]="lastName"></ion-input>\n      </ion-item>\n      <!-- appear when click update -->\n      <ion-item [ngClass]="{\'show\': flag==true}">\n        <ion-label stacked>E-mail</ion-label>\n        <ion-input disabled="{{flag}}" type="email" [(ngModel)]="email"></ion-input>\n      </ion-item>\n      <!-- ==================================== -->\n\n      <ion-item >\n        <ion-label stacked>Phone Number</ion-label>\n        <ion-input disabled="{{flag}}" type="tel" [(ngModel)]="phoneNumber"  id="elemtId"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-label stacked>Password</ion-label>\n        <ion-input disabled="{{flag}}" type="password" [(ngModel)]="passowrd"></ion-input>\n      </ion-item>\n\n      <ion-item >\n        <ion-label stacked>Address</ion-label>\n        <ion-input disabled="{{flag}}" type="text" [(ngModel)]="address"></ion-input>\n      </ion-item>\n    </ion-list>\n    <button ion-button block color="color2" (click)="update()">Update</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/profile/profile.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_3__providers_global__["a" /* Global */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_3__providers_global__["a" /* Global */]])
     ], ProfilePage);
     return ProfilePage;
 }());
@@ -11038,18 +11038,18 @@ var ProfilePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 468:
+/***/ 760:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
  * Exposing intl-tel-input as a component
  */
-module.exports = __webpack_require__(469);
+module.exports = __webpack_require__(761);
 
 
 /***/ }),
 
-/***/ 469:
+/***/ 761:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -11061,7 +11061,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
 // wrap in UMD - see https://github.com/umdjs/umd/blob/master/jqueryPluginCommonjs.js
 (function(factory) {
     if (true) {
-        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(444) ], __WEBPACK_AMD_DEFINE_RESULT__ = (function($) {
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(732) ], __WEBPACK_AMD_DEFINE_RESULT__ = (function($) {
             factory($, window, document);
         }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));

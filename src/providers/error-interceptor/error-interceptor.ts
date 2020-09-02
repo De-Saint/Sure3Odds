@@ -1,17 +1,25 @@
-import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+import { AuthenicationProvider } from './../authenication/authenication';
+import { HttpRequest, HttpHandler, HttpErrorResponse, HttpEvent } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { retry, catchError } from 'rxjs/operators';
+import { _throw } from 'rxjs/observable/throw';
 
-/*
-  Generated class for the ErrorInterceptorProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class ErrorInterceptorProvider {
 
-  constructor(public http: HttpClient) {
-    console.log('Hello ErrorInterceptorProvider Provider');
+  constructor(public auth: AuthenicationProvider) { }
+  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    return next.handle(request).pipe(retry(1),
+      catchError(this.handleError)
+    );
+  }
+  handleError(error: HttpErrorResponse) {
+    console.log(error.error.message);
+    if (parseInt(error.error.status) === 401 || error.error.status === 500) {
+      this.auth.logout();
+    }
+    return _throw(error);
   }
 
 }

@@ -1,14 +1,14 @@
 webpackJsonp([22],{
 
-/***/ 422:
+/***/ 709:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewPredictionPageModule", function() { return NewPredictionPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__new_prediction__ = __webpack_require__(458);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotificationPageModule", function() { return NotificationPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__notification__ = __webpack_require__(750);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var NewPredictionPageModule = /** @class */ (function () {
-    function NewPredictionPageModule() {
+var NotificationPageModule = /** @class */ (function () {
+    function NotificationPageModule() {
     }
-    NewPredictionPageModule = __decorate([
+    NotificationPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__new_prediction__["a" /* NewPredictionPage */],
+                __WEBPACK_IMPORTED_MODULE_2__notification__["a" /* NotificationPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__new_prediction__["a" /* NewPredictionPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__notification__["a" /* NotificationPage */]),
             ],
         })
-    ], NewPredictionPageModule);
-    return NewPredictionPageModule;
+    ], NotificationPageModule);
+    return NotificationPageModule;
 }());
 
-//# sourceMappingURL=new-prediction.module.js.map
+//# sourceMappingURL=notification.module.js.map
 
 /***/ }),
 
-/***/ 458:
+/***/ 750:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewPredictionPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotificationPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global__ = __webpack_require__(353);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,30 +57,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/**
- * Generated class for the NewPredictionPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var NewPredictionPage = /** @class */ (function () {
-    function NewPredictionPage(navCtrl, navParams) {
+
+var NotificationPage = /** @class */ (function () {
+    function NotificationPage(navCtrl, global) {
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
+        this.global = global;
+        this.notifications = [
+            { title: 'Transfer Talk', content: 'Arsenal eyeing move for serie a defender amidstrumours of hector bellerin exit' },
+            { title: 'Transfer Talk', content: 'Arsenal eyeing move for serie a defender amidstrumours of hector bellerin exit' },
+        ];
     }
-    NewPredictionPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad NewPredictionPage');
-    };
-    NewPredictionPage = __decorate([
+    NotificationPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-new-prediction',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/new-prediction/new-prediction.html"*/'<!--\n  Generated template for the NewPredictionPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>newPrediction</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/new-prediction/new-prediction.html"*/,
+            selector: 'page-notification',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/notification/notification.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu" ></ion-icon>\n    </button>\n    <ion-title>Notification</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only  (click)="global.callSearch($event)">\n        <ion-icon name="md-search"></ion-icon>\n      </button>\n      <button ion-button icon-only>\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n  <ion-list>\n    <ion-item *ngFor="let item of notifications">\n      <ion-grid no-padding>\n        <ion-row>\n          <ion-col col padding-right>\n            <h5 ion-text color="dark">{{item.title}}</h5>\n          </ion-col>\n          <ion-col col-auto>\n            <p ion-text color="dark">30M Ago</p>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n      <p ion-text color="dark">{{item.content}}</p>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/notification/notification.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavParams */]])
-    ], NewPredictionPage);
-    return NewPredictionPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
+    ], NotificationPage);
+    return NotificationPage;
 }());
 
-//# sourceMappingURL=new-prediction.js.map
+//# sourceMappingURL=notification.js.map
 
 /***/ })
 

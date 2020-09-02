@@ -6307,7 +6307,7 @@ button[disabled],
 .button-md {
   border-radius: 4px;
   overflow: hidden;
-  height: 44px;
+  height: 40px;
   font-size: 1.3rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -11633,165 +11633,165 @@ ion-app [no-margin] .scroll-content {
 }
 
 ion-app.ios [padding] {
-  padding: 8px;
+  padding: 4px;
 }
 
 ion-app.ios [padding-top] {
-  padding-top: 8px;
+  padding-top: 4px;
 }
 
 ion-app.ios [padding-left] {
-  padding-left: 8px;
+  padding-left: 4px;
 }
 
 ion-app.ios [padding-right] {
-  padding-right: 8px;
+  padding-right: 4px;
 }
 
 ion-app.ios [padding-bottom] {
-  padding-bottom: 8px;
+  padding-bottom: 4px;
 }
 
 ion-app.ios [padding-vertical] {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 ion-app.ios [padding-horizontal] {
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 ion-app.ios [padding] .scroll-content {
-  padding: 8px;
+  padding: 4px;
 }
 
 @media screen and (orientation: landscape) {
   ion-app.ios [padding] .scroll-content {
-    padding-left: calc(constant(safe-area-inset-left) + 8px);
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding: 8px calc(env(safe-area-inset-right) + 8px) 8px calc(env(safe-area-inset-left) + 8px);
+    padding-left: calc(constant(safe-area-inset-left) + 4px);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding: 4px calc(env(safe-area-inset-right) + 4px) 4px calc(env(safe-area-inset-left) + 4px);
   }
 }
 
 ion-app.ios [padding-top] .scroll-content {
-  padding-top: 8px;
+  padding-top: 4px;
 }
 
 @media screen and (orientation: landscape) {
   ion-app.ios [padding-top] .scroll-content {
-    padding-top: 8px;
-    padding-top: 8px;
+    padding-top: 4px;
+    padding-top: 4px;
   }
 }
 
 ion-app.ios [padding-left] .scroll-content {
-  padding-left: 8px;
+  padding-left: 4px;
 }
 
 @media screen and (orientation: landscape) {
   ion-app.ios [padding-left] .scroll-content {
-    padding-left: calc(constant(safe-area-inset-left) + 8px);
-    padding-left: calc(env(safe-area-inset-left) + 8px);
+    padding-left: calc(constant(safe-area-inset-left) + 4px);
+    padding-left: calc(env(safe-area-inset-left) + 4px);
   }
 }
 
 ion-app.ios [padding-right] .scroll-content {
-  padding-right: 8px;
+  padding-right: 4px;
 }
 
 @media screen and (orientation: landscape) {
   ion-app.ios [padding-right] .scroll-content {
-    padding-right: calc(constant(safe-area-inset-right) + 8px);
-    padding-right: calc(env(safe-area-inset-right) + 8px);
+    padding-right: calc(constant(safe-area-inset-right) + 4px);
+    padding-right: calc(env(safe-area-inset-right) + 4px);
   }
 }
 
 ion-app.ios [padding-bottom] .scroll-content {
-  padding-bottom: 8px;
+  padding-bottom: 4px;
 }
 
 @media screen and (orientation: landscape) {
   ion-app.ios [padding-bottom] .scroll-content {
-    padding-bottom: 8px;
-    padding-bottom: 8px;
+    padding-bottom: 4px;
+    padding-bottom: 4px;
   }
 }
 
 ion-app.ios [padding-vertical] .scroll-content {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 @media screen and (orientation: landscape) {
   ion-app.ios [padding-vertical] .scroll-content {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
   }
 }
 
 ion-app.ios [padding-horizontal] .scroll-content {
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 @media screen and (orientation: landscape) {
   ion-app.ios [padding-horizontal] .scroll-content {
-    padding-left: calc(constant(safe-area-inset-left) + 8px);
-    padding-right: calc(constant(safe-area-inset-right) + 8px);
-    padding-left: calc(env(safe-area-inset-left) + 8px);
-    padding-right: calc(env(safe-area-inset-right) + 8px);
+    padding-left: calc(constant(safe-area-inset-left) + 4px);
+    padding-right: calc(constant(safe-area-inset-right) + 4px);
+    padding-left: calc(env(safe-area-inset-left) + 4px);
+    padding-right: calc(env(safe-area-inset-right) + 4px);
   }
 }
 
 ion-app.ios [margin],
 ion-app.ios [margin] .scroll-content {
-  margin: 8px;
+  margin: 4px;
 }
 
 ion-app.ios [margin-top],
 ion-app.ios [margin-top] .scroll-content {
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 ion-app.ios [margin-left],
 ion-app.ios [margin-left] .scroll-content {
-  margin-left: 8px;
+  margin-left: 4px;
 }
 
 ion-app.ios [margin-start],
 ion-app.ios [margin-start] .scroll-content {
-  margin-left: 8px;
+  margin-left: 4px;
 }
 
 ion-app.ios [margin-right],
 ion-app.ios [margin-right] .scroll-content {
-  margin-right: 8px;
+  margin-right: 4px;
 }
 
 ion-app.ios [margin-end],
 ion-app.ios [margin-end] .scroll-content {
-  margin-right: 8px;
+  margin-right: 4px;
 }
 
 ion-app.ios [margin-bottom],
 ion-app.ios [margin-bottom] .scroll-content {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 ion-app.ios [margin-vertical],
 ion-app.ios [margin-vertical] .scroll-content {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 ion-app.ios [margin-horizontal],
 ion-app.ios [margin-horizontal] .scroll-content {
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 
 .content-ios:not([no-bounce]) > .scroll-content::before,
@@ -11829,165 +11829,165 @@ ion-app.ios [margin-horizontal] .scroll-content {
 }
 
 ion-app.md [padding] {
-  padding: 8px;
+  padding: 4px;
 }
 
 ion-app.md [padding-top] {
-  padding-top: 8px;
+  padding-top: 4px;
 }
 
 ion-app.md [padding-left] {
-  padding-left: 8px;
+  padding-left: 4px;
 }
 
 ion-app.md [padding-right] {
-  padding-right: 8px;
+  padding-right: 4px;
 }
 
 ion-app.md [padding-bottom] {
-  padding-bottom: 8px;
+  padding-bottom: 4px;
 }
 
 ion-app.md [padding-vertical] {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 ion-app.md [padding-horizontal] {
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 ion-app.md [padding] .scroll-content {
-  padding: 8px;
+  padding: 4px;
 }
 
 @media screen and (orientation: landscape) {
   ion-app.md [padding] .scroll-content {
-    padding-left: calc(constant(safe-area-inset-left) + 8px);
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding: 8px calc(env(safe-area-inset-right) + 8px) 8px calc(env(safe-area-inset-left) + 8px);
+    padding-left: calc(constant(safe-area-inset-left) + 4px);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding: 4px calc(env(safe-area-inset-right) + 4px) 4px calc(env(safe-area-inset-left) + 4px);
   }
 }
 
 ion-app.md [padding-top] .scroll-content {
-  padding-top: 8px;
+  padding-top: 4px;
 }
 
 @media screen and (orientation: landscape) {
   ion-app.md [padding-top] .scroll-content {
-    padding-top: 8px;
-    padding-top: 8px;
+    padding-top: 4px;
+    padding-top: 4px;
   }
 }
 
 ion-app.md [padding-left] .scroll-content {
-  padding-left: 8px;
+  padding-left: 4px;
 }
 
 @media screen and (orientation: landscape) {
   ion-app.md [padding-left] .scroll-content {
-    padding-left: calc(constant(safe-area-inset-left) + 8px);
-    padding-left: calc(env(safe-area-inset-left) + 8px);
+    padding-left: calc(constant(safe-area-inset-left) + 4px);
+    padding-left: calc(env(safe-area-inset-left) + 4px);
   }
 }
 
 ion-app.md [padding-right] .scroll-content {
-  padding-right: 8px;
+  padding-right: 4px;
 }
 
 @media screen and (orientation: landscape) {
   ion-app.md [padding-right] .scroll-content {
-    padding-right: calc(constant(safe-area-inset-right) + 8px);
-    padding-right: calc(env(safe-area-inset-right) + 8px);
+    padding-right: calc(constant(safe-area-inset-right) + 4px);
+    padding-right: calc(env(safe-area-inset-right) + 4px);
   }
 }
 
 ion-app.md [padding-bottom] .scroll-content {
-  padding-bottom: 8px;
+  padding-bottom: 4px;
 }
 
 @media screen and (orientation: landscape) {
   ion-app.md [padding-bottom] .scroll-content {
-    padding-bottom: 8px;
-    padding-bottom: 8px;
+    padding-bottom: 4px;
+    padding-bottom: 4px;
   }
 }
 
 ion-app.md [padding-vertical] .scroll-content {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 @media screen and (orientation: landscape) {
   ion-app.md [padding-vertical] .scroll-content {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
   }
 }
 
 ion-app.md [padding-horizontal] .scroll-content {
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 @media screen and (orientation: landscape) {
   ion-app.md [padding-horizontal] .scroll-content {
-    padding-left: calc(constant(safe-area-inset-left) + 8px);
-    padding-right: calc(constant(safe-area-inset-right) + 8px);
-    padding-left: calc(env(safe-area-inset-left) + 8px);
-    padding-right: calc(env(safe-area-inset-right) + 8px);
+    padding-left: calc(constant(safe-area-inset-left) + 4px);
+    padding-right: calc(constant(safe-area-inset-right) + 4px);
+    padding-left: calc(env(safe-area-inset-left) + 4px);
+    padding-right: calc(env(safe-area-inset-right) + 4px);
   }
 }
 
 ion-app.md [margin],
 ion-app.md [margin] .scroll-content {
-  margin: 8px;
+  margin: 4px;
 }
 
 ion-app.md [margin-top],
 ion-app.md [margin-top] .scroll-content {
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 ion-app.md [margin-left],
 ion-app.md [margin-left] .scroll-content {
-  margin-left: 8px;
+  margin-left: 4px;
 }
 
 ion-app.md [margin-start],
 ion-app.md [margin-start] .scroll-content {
-  margin-left: 8px;
+  margin-left: 4px;
 }
 
 ion-app.md [margin-right],
 ion-app.md [margin-right] .scroll-content {
-  margin-right: 8px;
+  margin-right: 4px;
 }
 
 ion-app.md [margin-end],
 ion-app.md [margin-end] .scroll-content {
-  margin-right: 8px;
+  margin-right: 4px;
 }
 
 ion-app.md [margin-bottom],
 ion-app.md [margin-bottom] .scroll-content {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 ion-app.md [margin-vertical],
 ion-app.md [margin-vertical] .scroll-content {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 ion-app.md [margin-horizontal],
 ion-app.md [margin-horizontal] .scroll-content {
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 
 .content-wp {
@@ -12000,165 +12000,165 @@ ion-app.md [margin-horizontal] .scroll-content {
 }
 
 ion-app.wp [padding] {
-  padding: 8px;
+  padding: 4px;
 }
 
 ion-app.wp [padding-top] {
-  padding-top: 8px;
+  padding-top: 4px;
 }
 
 ion-app.wp [padding-left] {
-  padding-left: 8px;
+  padding-left: 4px;
 }
 
 ion-app.wp [padding-right] {
-  padding-right: 8px;
+  padding-right: 4px;
 }
 
 ion-app.wp [padding-bottom] {
-  padding-bottom: 8px;
+  padding-bottom: 4px;
 }
 
 ion-app.wp [padding-vertical] {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 ion-app.wp [padding-horizontal] {
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 ion-app.wp [padding] .scroll-content {
-  padding: 8px;
+  padding: 4px;
 }
 
 @media screen and (orientation: landscape) {
   ion-app.wp [padding] .scroll-content {
-    padding-left: calc(constant(safe-area-inset-left) + 8px);
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding: 8px calc(env(safe-area-inset-right) + 8px) 8px calc(env(safe-area-inset-left) + 8px);
+    padding-left: calc(constant(safe-area-inset-left) + 4px);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding: 4px calc(env(safe-area-inset-right) + 4px) 4px calc(env(safe-area-inset-left) + 4px);
   }
 }
 
 ion-app.wp [padding-top] .scroll-content {
-  padding-top: 8px;
+  padding-top: 4px;
 }
 
 @media screen and (orientation: landscape) {
   ion-app.wp [padding-top] .scroll-content {
-    padding-top: 8px;
-    padding-top: 8px;
+    padding-top: 4px;
+    padding-top: 4px;
   }
 }
 
 ion-app.wp [padding-left] .scroll-content {
-  padding-left: 8px;
+  padding-left: 4px;
 }
 
 @media screen and (orientation: landscape) {
   ion-app.wp [padding-left] .scroll-content {
-    padding-left: calc(constant(safe-area-inset-left) + 8px);
-    padding-left: calc(env(safe-area-inset-left) + 8px);
+    padding-left: calc(constant(safe-area-inset-left) + 4px);
+    padding-left: calc(env(safe-area-inset-left) + 4px);
   }
 }
 
 ion-app.wp [padding-right] .scroll-content {
-  padding-right: 8px;
+  padding-right: 4px;
 }
 
 @media screen and (orientation: landscape) {
   ion-app.wp [padding-right] .scroll-content {
-    padding-right: calc(constant(safe-area-inset-right) + 8px);
-    padding-right: calc(env(safe-area-inset-right) + 8px);
+    padding-right: calc(constant(safe-area-inset-right) + 4px);
+    padding-right: calc(env(safe-area-inset-right) + 4px);
   }
 }
 
 ion-app.wp [padding-bottom] .scroll-content {
-  padding-bottom: 8px;
+  padding-bottom: 4px;
 }
 
 @media screen and (orientation: landscape) {
   ion-app.wp [padding-bottom] .scroll-content {
-    padding-bottom: 8px;
-    padding-bottom: 8px;
+    padding-bottom: 4px;
+    padding-bottom: 4px;
   }
 }
 
 ion-app.wp [padding-vertical] .scroll-content {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 @media screen and (orientation: landscape) {
   ion-app.wp [padding-vertical] .scroll-content {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
   }
 }
 
 ion-app.wp [padding-horizontal] .scroll-content {
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 @media screen and (orientation: landscape) {
   ion-app.wp [padding-horizontal] .scroll-content {
-    padding-left: calc(constant(safe-area-inset-left) + 8px);
-    padding-right: calc(constant(safe-area-inset-right) + 8px);
-    padding-left: calc(env(safe-area-inset-left) + 8px);
-    padding-right: calc(env(safe-area-inset-right) + 8px);
+    padding-left: calc(constant(safe-area-inset-left) + 4px);
+    padding-right: calc(constant(safe-area-inset-right) + 4px);
+    padding-left: calc(env(safe-area-inset-left) + 4px);
+    padding-right: calc(env(safe-area-inset-right) + 4px);
   }
 }
 
 ion-app.wp [margin],
 ion-app.wp [margin] .scroll-content {
-  margin: 8px;
+  margin: 4px;
 }
 
 ion-app.wp [margin-top],
 ion-app.wp [margin-top] .scroll-content {
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 ion-app.wp [margin-left],
 ion-app.wp [margin-left] .scroll-content {
-  margin-left: 8px;
+  margin-left: 4px;
 }
 
 ion-app.wp [margin-start],
 ion-app.wp [margin-start] .scroll-content {
-  margin-left: 8px;
+  margin-left: 4px;
 }
 
 ion-app.wp [margin-right],
 ion-app.wp [margin-right] .scroll-content {
-  margin-right: 8px;
+  margin-right: 4px;
 }
 
 ion-app.wp [margin-end],
 ion-app.wp [margin-end] .scroll-content {
-  margin-right: 8px;
+  margin-right: 4px;
 }
 
 ion-app.wp [margin-bottom],
 ion-app.wp [margin-bottom] .scroll-content {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 ion-app.wp [margin-vertical],
 ion-app.wp [margin-vertical] .scroll-content {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 ion-app.wp [margin-horizontal],
 ion-app.wp [margin-horizontal] .scroll-content {
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 
 ion-datetime {
@@ -12841,7 +12841,7 @@ ion-fab-list[side=right] {
 }
 
 .grid {
-  padding: 4px;
+  padding: 2px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -12984,7 +12984,7 @@ ion-fab-list[side=right] {
 }
 
 .col {
-  padding: 4px;
+  padding: 2px;
   position: relative;
   width: 100%;
   margin: 0;
@@ -13030,366 +13030,366 @@ ion-fab-list[side=right] {
 }
 
 [col-1] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-1] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-1] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-1] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-1] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-2] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-2] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-2] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-2] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-2] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-3] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-3] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-3] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-3] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-3] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-4] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-4] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-4] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-4] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-4] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-5] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-5] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-5] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-5] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-5] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-6] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-6] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-6] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-6] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-6] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-7] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-7] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-7] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-7] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-7] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-8] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-8] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-8] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-8] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-8] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-9] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-9] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-9] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-9] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-9] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-10] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-10] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-10] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-10] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-10] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-11] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-11] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-11] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-11] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-11] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-12] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-12] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-12] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-12] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-12] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
@@ -13669,366 +13669,366 @@ ion-fab-list[side=right] {
 }
 
 [col-sm-1] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-sm-1] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-sm-1] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-sm-1] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-sm-1] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-sm-2] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-sm-2] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-sm-2] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-sm-2] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-sm-2] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-sm-3] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-sm-3] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-sm-3] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-sm-3] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-sm-3] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-sm-4] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-sm-4] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-sm-4] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-sm-4] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-sm-4] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-sm-5] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-sm-5] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-sm-5] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-sm-5] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-sm-5] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-sm-6] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-sm-6] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-sm-6] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-sm-6] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-sm-6] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-sm-7] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-sm-7] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-sm-7] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-sm-7] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-sm-7] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-sm-8] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-sm-8] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-sm-8] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-sm-8] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-sm-8] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-sm-9] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-sm-9] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-sm-9] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-sm-9] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-sm-9] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-sm-10] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-sm-10] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-sm-10] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-sm-10] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-sm-10] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-sm-11] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-sm-11] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-sm-11] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-sm-11] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-sm-11] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-sm-12] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-sm-12] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-sm-12] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-sm-12] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-sm-12] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-sm] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-sm] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-sm] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-sm] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-sm] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
@@ -14263,366 +14263,366 @@ ion-fab-list[side=right] {
 }
 
 [col-md-1] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-md-1] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-md-1] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-md-1] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-md-1] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-md-2] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-md-2] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-md-2] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-md-2] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-md-2] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-md-3] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-md-3] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-md-3] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-md-3] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-md-3] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-md-4] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-md-4] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-md-4] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-md-4] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-md-4] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-md-5] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-md-5] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-md-5] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-md-5] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-md-5] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-md-6] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-md-6] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-md-6] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-md-6] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-md-6] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-md-7] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-md-7] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-md-7] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-md-7] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-md-7] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-md-8] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-md-8] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-md-8] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-md-8] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-md-8] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-md-9] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-md-9] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-md-9] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-md-9] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-md-9] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-md-10] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-md-10] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-md-10] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-md-10] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-md-10] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-md-11] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-md-11] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-md-11] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-md-11] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-md-11] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-md-12] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-md-12] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-md-12] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-md-12] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-md-12] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-md] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-md] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-md] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-md] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-md] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
@@ -14857,366 +14857,366 @@ ion-fab-list[side=right] {
 }
 
 [col-lg-1] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-lg-1] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-lg-1] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-lg-1] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-lg-1] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-lg-2] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-lg-2] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-lg-2] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-lg-2] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-lg-2] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-lg-3] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-lg-3] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-lg-3] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-lg-3] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-lg-3] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-lg-4] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-lg-4] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-lg-4] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-lg-4] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-lg-4] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-lg-5] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-lg-5] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-lg-5] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-lg-5] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-lg-5] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-lg-6] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-lg-6] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-lg-6] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-lg-6] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-lg-6] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-lg-7] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-lg-7] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-lg-7] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-lg-7] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-lg-7] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-lg-8] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-lg-8] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-lg-8] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-lg-8] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-lg-8] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-lg-9] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-lg-9] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-lg-9] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-lg-9] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-lg-9] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-lg-10] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-lg-10] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-lg-10] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-lg-10] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-lg-10] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-lg-11] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-lg-11] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-lg-11] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-lg-11] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-lg-11] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-lg-12] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-lg-12] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-lg-12] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-lg-12] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-lg-12] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-lg] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-lg] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-lg] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-lg] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-lg] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
@@ -15451,366 +15451,366 @@ ion-fab-list[side=right] {
 }
 
 [col-xl-1] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-xl-1] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-xl-1] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-xl-1] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-xl-1] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-xl-2] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-xl-2] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-xl-2] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-xl-2] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-xl-2] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-xl-3] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-xl-3] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-xl-3] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-xl-3] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-xl-3] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-xl-4] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-xl-4] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-xl-4] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-xl-4] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-xl-4] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-xl-5] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-xl-5] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-xl-5] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-xl-5] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-xl-5] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-xl-6] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-xl-6] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-xl-6] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-xl-6] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-xl-6] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-xl-7] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-xl-7] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-xl-7] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-xl-7] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-xl-7] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-xl-8] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-xl-8] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-xl-8] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-xl-8] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-xl-8] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-xl-9] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-xl-9] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-xl-9] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-xl-9] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-xl-9] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-xl-10] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-xl-10] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-xl-10] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-xl-10] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-xl-10] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-xl-11] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-xl-11] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-xl-11] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-xl-11] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-xl-11] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-xl-12] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-xl-12] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-xl-12] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-xl-12] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-xl-12] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 [col-xl] {
-  padding: 4px;
+  padding: 2px;
 }
 
 @media (min-width: 576px) {
   [col-xl] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 768px) {
   [col-xl] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 992px) {
   [col-xl] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
 @media (min-width: 1200px) {
   [col-xl] {
-    padding: 4px;
+    padding: 2px;
   }
 }
 
@@ -19066,7 +19066,7 @@ ion-loading {
 }
 
 .loading-ios .loading-spinner + .loading-content {
-  margin-left: 8px;
+  margin-left: 4px;
 }
 
 .loading-ios .spinner-ios line,
@@ -19102,7 +19102,7 @@ ion-loading {
 }
 
 .loading-md .loading-spinner + .loading-content {
-  margin-left: 8px;
+  margin-left: 4px;
 }
 
 .loading-md .spinner-ios line,
@@ -19136,7 +19136,7 @@ ion-loading {
 }
 
 .loading-wp .loading-spinner + .loading-content {
-  margin-left: 8px;
+  margin-left: 4px;
 }
 
 .loading-wp .spinner-ios line,
@@ -39741,7 +39741,7 @@ ion-navbar.toolbar {
 .ios ion-menu > .menu-inner > ion-content.statusbar-padding:first-child[padding-top] .scroll-content,
 .ios ion-menu > .menu-inner > ion-header > ion-content.statusbar-padding:first-child[padding] .scroll-content,
 .ios ion-menu > .menu-inner > ion-header > ion-content.statusbar-padding:first-child[padding-top] .scroll-content {
-  padding-top: calc(8px + 20px);
+  padding-top: calc(4px + 20px);
   padding-top: constant(safe-area-inset-top);
   padding-top: env(safe-area-inset-top);
 }
@@ -39787,7 +39787,7 @@ ion-navbar.toolbar {
   }
   .ios .modal-wrapper > .ion-page > ion-header > ion-content.statusbar-padding:first-child[padding] .scroll-content,
   .ios .modal-wrapper > .ion-page > ion-header > ion-content.statusbar-padding:first-child[padding-top] .scroll-content {
-    padding-top: calc(8px + 20px);
+    padding-top: calc(4px + 20px);
     padding-top: constant(safe-area-inset-top);
     padding-top: env(safe-area-inset-top);
   }
@@ -39858,7 +39858,7 @@ ion-navbar.toolbar {
 .md ion-menu > .menu-inner > ion-content.statusbar-padding:first-child[padding-top] .scroll-content,
 .md ion-menu > .menu-inner > ion-header > ion-content.statusbar-padding:first-child[padding] .scroll-content,
 .md ion-menu > .menu-inner > ion-header > ion-content.statusbar-padding:first-child[padding-top] .scroll-content {
-  padding-top: calc(8px + 20px);
+  padding-top: calc(4px + 20px);
   padding-top: constant(safe-area-inset-top);
   padding-top: env(safe-area-inset-top);
 }
@@ -39879,7 +39879,7 @@ ion-navbar.toolbar {
   }
   .md .modal-wrapper > .ion-page > ion-header > ion-content.statusbar-padding:first-child[padding] .scroll-content,
   .md .modal-wrapper > .ion-page > ion-header > ion-content.statusbar-padding:first-child[padding-top] .scroll-content {
-    padding-top: calc(8px + 20px);
+    padding-top: calc(4px + 20px);
     padding-top: constant(safe-area-inset-top);
     padding-top: env(safe-area-inset-top);
   }
@@ -39938,7 +39938,7 @@ ion-navbar.toolbar {
 .wp ion-menu > .menu-inner > ion-content.statusbar-padding:first-child[padding-top] .scroll-content,
 .wp ion-menu > .menu-inner > ion-header > ion-content.statusbar-padding:first-child[padding] .scroll-content,
 .wp ion-menu > .menu-inner > ion-header > ion-content.statusbar-padding:first-child[padding-top] .scroll-content {
-  padding-top: calc(8px + 20px);
+  padding-top: calc(4px + 20px);
   padding-top: constant(safe-area-inset-top);
   padding-top: env(safe-area-inset-top);
 }
@@ -39959,7 +39959,7 @@ ion-navbar.toolbar {
   }
   .wp .modal-wrapper > .ion-page > ion-header > ion-content.statusbar-padding:first-child[padding] .scroll-content,
   .wp .modal-wrapper > .ion-page > ion-header > ion-content.statusbar-padding:first-child[padding-top] .scroll-content {
-    padding-top: calc(8px + 20px);
+    padding-top: calc(4px + 20px);
     padding-top: constant(safe-area-inset-top);
     padding-top: env(safe-area-inset-top);
   }
@@ -40048,47 +40048,47 @@ image-viewer.ion-page img {
 }
 
 [padding] {
-  padding: 8px !important;
+  padding: 4px !important;
 }
 
 [padding] .scroll-content {
-  padding: 8px !important;
+  padding: 4px !important;
 }
 
 [padding-right] {
-  padding-right: 8px !important;
+  padding-right: 4px !important;
 }
 
 [padding-left] {
-  padding-left: 8px !important;
+  padding-left: 4px !important;
 }
 
 [padding-horizontal] {
-  padding-right: 8px !important;
-  padding-left: 8px !important;
+  padding-right: 4px !important;
+  padding-left: 4px !important;
 }
 
 [padding-vertical] {
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
 }
 
 [margin-left], [item-end], [item-right] {
-  margin: 0px 0px 0px 8px !important;
+  margin: 0px 0px 0px 4px !important;
 }
 
 [margin-right], [item-start], [item-left] {
-  margin: 0px 8px 0px 0px !important;
+  margin: 0px 4px 0px 0px !important;
 }
 
 [margin-horizontal] {
-  margin-right: 8px !important;
-  margin-left: 8px !important;
+  margin-right: 4px !important;
+  margin-left: 4px !important;
 }
 
 [margin-vertical] {
-  margin-top: 8px !important;
-  margin-bottom: 8px !important;
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
 }
 
 [active-from-right] {
@@ -40158,11 +40158,11 @@ ion-badge {
 }
 
 .header .toolbar {
-  padding: 4px;
+  padding: 2px;
 }
 
 .header .toolbar-title {
-  padding: 0px 4px;
+  padding: 0px 2px;
   font-weight: 400;
 }
 
@@ -40181,8 +40181,8 @@ ion-badge {
 
 .header .bar-button {
   margin: 0px;
-  height: 42px;
-  width: 42px;
+  height: 46px;
+  width: 46px;
 }
 
 .header .bar-button ion-icon {
@@ -40207,7 +40207,7 @@ ion-badge {
 }
 
 .card .card-content {
-  padding: 8px;
+  padding: 4px;
 }
 
 .card .card-content .card-title {
@@ -40223,7 +40223,7 @@ ion-badge {
 .card.newsCard {
   position: relative;
   overflow: hidden;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .card.newsCard:last-of-type {
@@ -40258,7 +40258,7 @@ ion-badge {
   right: 0px;
   left: 0px;
   bottom: 0px;
-  padding: 0px 16px;
+  padding: 0px 8px;
   z-index: 1;
 }
 
@@ -40288,7 +40288,7 @@ ion-badge {
 }
 
 .topNews .item {
-  padding: 8px 8px 0px;
+  padding: 4px 4px 0px;
   -webkit-align-content: space-between;
   -ms-flex-line-pack: justify;
   align-content: space-between;
@@ -40403,7 +40403,7 @@ ion-badge {
 
 .viewAllBtn {
   color: #000;
-  padding: 0px 8px;
+  padding: 0px 4px;
   opacity: 1;
   max-width: 100%;
 }
@@ -40470,7 +40470,7 @@ ion-badge {
 
 .item.matchItem {
   height: 60px;
-  padding: 0px 8px;
+  padding: 0px 4px;
 }
 
 .item.matchItem > .item-inner {
@@ -40599,8 +40599,8 @@ ion-badge {
 
 .item.avatarItem, .item.thumbnailItem {
   border-radius: 4px;
-  padding: 8px;
-  width: calc(100% - 8px*2);
+  padding: 4px;
+  width: calc(100% - 4px*2);
 }
 
 .item.avatarItem ion-avatar img, .item.thumbnailItem ion-avatar img {
@@ -40644,21 +40644,21 @@ ion-badge {
 }
 
 .item.halfItem {
-  width: calc(50% - 8px/2);
+  width: calc(50% - 4px/2);
 }
 
 .item.halfItem:nth-child(1) {
-  margin-right: 4px;
+  margin-right: 2px;
 }
 
 .item.halfItem:nth-child(2) {
-  margin-left: 4px !important;
+  margin-left: 2px !important;
 }
 
 .item.item-select {
-  min-height: 44px;
+  min-height: 40px;
   border: 1px solid #0f5656;
-  padding: 0px 8px;
+  padding: 0px 4px;
   border-radius: 4px;
 }
 
@@ -40669,7 +40669,7 @@ ion-badge {
 
 .item.item-select .select-text {
   color: #000;
-  padding: 0px 8px;
+  padding: 0px 4px;
 }
 
 .item.item-select .select-text.select-placeholder {
@@ -40715,19 +40715,19 @@ ion-badge {
 }
 
 .select-popover .popover-content {
-  left: 8px !important;
-  right: 8px !important;
+  left: 4px !important;
+  right: 4px !important;
   border-radius: 4px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
-  padding: 0px 8px;
+  padding: 0px 4px;
   background: #fff !important;
   width: auto;
   top: 104px !important;
 }
 
 .select-popover .popover-content .list {
-  padding: 8px 0px;
+  padding: 4px 0px;
 }
 
 .select-popover .popover-content .list .item {
@@ -40742,7 +40742,7 @@ ion-badge {
 
 .select-popover .popover-content .list .item .input-wrapper {
   direction: ltr;
-  padding: 0px 8px;
+  padding: 0px 4px;
 }
 
 .select-popover .popover-content .list .item .radio {
@@ -40795,14 +40795,14 @@ ion-badge {
 
 .header .scrollingBar .scroll-x {
   white-space: nowrap;
-  height: 44px;
+  height: 40px;
 }
 
 .header .scrollingBar .scroll-x p, .header .scrollingBar .scroll-x .select-popover .popover-content .list .item .label, .select-popover .popover-content .list .item .header .scrollingBar .scroll-x .label {
   margin: 0px;
   display: inline-block;
-  height: 44px;
-  line-height: 44px;
+  height: 40px;
+  line-height: 40px;
   min-width: 30%;
   text-align: center;
   padding: 0 5px;
@@ -40820,8 +40820,8 @@ ion-badge {
   line-height: 20px;
   display: block;
   overflow: hidden;
-  padding: 0px 8px;
-  margin: 8px 0px 0px !important;
+  padding: 0px 4px;
+  margin: 4px 0px 0px !important;
 }
 
 .tabelList .item.list-header .label {
@@ -40837,8 +40837,8 @@ ion-badge {
   padding: 0px;
   border-radius: 4px;
   overflow: hidden;
-  margin: 8px;
-  width: calc(100% - 8px*2);
+  margin: 4px;
+  width: calc(100% - 4px*2);
 }
 
 .tabelList .item.item-block .grid .col {
@@ -40875,7 +40875,7 @@ ion-badge {
 }
 
 .tabelList .item.item-block .grid .row {
-  height: 44px;
+  height: 40px;
   padding: 0px 4px;
 }
 
@@ -40896,7 +40896,7 @@ ion-badge {
 }
 
 .leagueMatches {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .leagueMatches .item.list-header {
@@ -40905,7 +40905,7 @@ ion-badge {
   line-height: 40px;
   display: block;
   overflow: hidden;
-  padding: 0px 8px;
+  padding: 0px 4px;
   margin: 0px !important;
 }
 
@@ -40915,21 +40915,21 @@ ion-badge {
 }
 
 .leagueMatches .allMatches {
-  width: calc(100% - 8px*2);
-  margin: 0px 8px;
+  width: calc(100% - 4px*2);
+  margin: 0px 4px;
   border-radius: 4px;
   overflow: hidden;
 }
 
 .leagueStats .list {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   display: inline-block;
   width: 100%;
 }
 
 .leagueStats .list .item {
-  width: calc(100% - 8px*2);
-  margin: 8px;
+  width: calc(100% - 4px*2);
+  margin: 4px;
 }
 
 .leagueStats .list .item.list-header {
@@ -40937,7 +40937,7 @@ ion-badge {
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
-  margin-bottom: 8px !important;
+  margin-bottom: 4px !important;
 }
 
 .leagueStats .list .item.list-header h5 {
@@ -40975,12 +40975,12 @@ ion-badge {
 }
 
 .segment {
-  margin-top: 2px;
+  margin-top: 1px;
 }
 
 .segment .segment-button {
-  height: 44px;
-  line-height: 44px;
+  height: 40px;
+  line-height: 40px;
   border: none;
   color: #000;
   border-radius: 0px;
@@ -41031,7 +41031,7 @@ ion-menu .menu-inner .content {
 }
 
 ion-menu .menu-inner .content .scroll-content {
-  padding: 0px 8px;
+  padding: 0px 4px;
 }
 
 ion-menu .menu-inner .content .scroll-content .list {
@@ -41043,13 +41043,13 @@ ion-menu .menu-inner .content .scroll-content .list:last-of-type {
 }
 
 ion-menu .menu-inner .mainMenuList .item {
-  height: 44px;
-  padding: 0px 8px;
+  height: 40px;
+  padding: 0px 4px;
 }
 
 ion-menu .menu-inner .leagueList .list-header {
   margin: 0px !important;
-  height: 44px;
+  height: 40px;
 }
 
 ion-menu .menu-inner .leagueList .list-header .item-inner {
@@ -41057,25 +41057,20 @@ ion-menu .menu-inner .leagueList .list-header .item-inner {
 }
 
 ion-menu .menu-inner .leagueList .list-header .icon {
-  font-size: 1.9rem;
+  font-size: 1.2rem;
   min-width: 0px;
   min-height: 0px;
-  width: 18px;
+  width: 10px;
   text-align: center;
 }
 
 ion-menu .menu-inner .leagueList .item-block {
   height: 34px;
+  margin-left: 0.3em !important;
 }
 
 ion-menu .menu-inner .leagueList .item-block .label {
   font-size: 1.1rem !important;
-}
-
-ion-menu .menu-inner .leagueList .item-block img {
-  -o-object-fit: contain;
-  object-fit: contain;
-  width: 18px;
 }
 
 .action-sheet-wrapper {
@@ -41086,9 +41081,9 @@ ion-menu .menu-inner .leagueList .item-block img {
   background-color: #0f5656;
   color: #fff;
   font-size: 1.3rem;
-  padding: 0px 8px;
-  height: 44px;
-  line-height: 44px;
+  padding: 0px 4px;
+  height: 40px;
+  line-height: 40px;
 }
 
 .action-sheet-wrapper .action-sheet-cancel {
@@ -41132,23 +41127,23 @@ ion-menu .menu-inner .leagueList .item-block img {
   font-size: 1.3rem;
   min-height: 0px;
   font-weight: 500;
-  height: 44px;
+  height: 40px;
 }
 
 [dir="rtl"] [padding-right] {
-  padding-right: 0px 0px 0px 8px !important;
+  padding-right: 0px 0px 0px 4px !important;
 }
 
 [dir="rtl"] [padding-left] {
-  padding-left: 0px 8px 0px 0px !important;
+  padding-left: 0px 4px 0px 0px !important;
 }
 
 [dir="rtl"] [margin-left], [dir="rtl"] [item-end], [dir="rtl"] [item-right] {
-  margin: 0px 8px 0px 0px !important;
+  margin: 0px 4px 0px 0px !important;
 }
 
 [dir="rtl"] [margin-right], [dir="rtl"] [item-start], [dir="rtl"] [item-left] {
-  margin: 0px 0px 0px 8px !important;
+  margin: 0px 0px 0px 4px !important;
 }
 
 [dir="rtl"] [text-left] {
@@ -41181,6 +41176,13 @@ ion-menu .menu-inner .leagueList .item-block img {
 
 .platform-ios .search_Pop {
   top: 20px;
+}
+
+.item > ion-icon,
+.item-inner > ion-icon {
+  min-height: 1.9rem !important;
+  font-size: 1.9rem !important;
+  line-height: 1 !important;
 }
 
 @font-face {
@@ -48594,7 +48596,7 @@ ion-menu .menu-inner .leagueList .item-block img {
 }
 
 page-all-matches .fixed-content {
-  height: 44px;
+  height: 40px;
   background: #0b4040;
 }
 
@@ -48604,8 +48606,8 @@ page-all-matches .matchItem {
 
 page-all-matches .list {
   display: block;
-  width: calc(100% - 8px*2);
-  margin: 8px;
+  width: calc(100% - 4px*2);
+  margin: 4px;
   border-radius: 4px;
   overflow: hidden;
 }
@@ -48613,8 +48615,8 @@ page-all-matches .list {
 page-all-matches .list .list-header {
   background-color: #efefee;
   margin-top: 0px !important;
-  height: 44px;
-  padding: 0px 8px;
+  height: 40px;
+  padding: 0px 4px;
 }
 
 page-all-matches .list .list-header .item-inner {
@@ -48655,11 +48657,11 @@ page-all-matches .list .list-header img {
 }
 
 .calendarToolbar .calendar.grid {
-  padding: 0px 4px;
+  padding: 0px 2px;
 }
 
 .calendarToolbar .calendar.grid .col {
-  padding: 0px 4px;
+  padding: 0px 2px;
   overflow: hidden;
 }
 
@@ -48797,7 +48799,7 @@ page-home .slides .card.newsCard {
 }
 
 page-home .slides .card.newsCard .container {
-  padding-bottom: 16px;
+  padding-bottom: 8px;
 }
 
 page-home .topNews .gridFooter p, page-home .topNews .gridFooter .select-popover .popover-content .list .item .label, .select-popover .popover-content .list .item page-home .topNews .gridFooter .label {
@@ -48818,8 +48820,8 @@ page-home .list .list-header {
 }
 
 page-home .list .list-header .button {
-  padding: 0px 8px;
-  height: 44px;
+  padding: 0px 4px;
+  height: 40px;
 }
 
 page-home .list .list-header .button .button-inner {
@@ -48831,11 +48833,11 @@ page-home .list .list-header .button .button-inner {
 
 page-league-details .photoItem {
   border-radius: 4px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 page-match-details .header .toolbar.matchResultBar {
-  padding: 16px 4px;
+  padding: 8px 2px;
 }
 
 page-match-details .header .toolbar.matchResultBar .toolbar-background {
@@ -48848,7 +48850,7 @@ page-match-details .header .matchResult {
 
 page-match-details .header .matchResult p, page-match-details .header .matchResult .select-popover .popover-content .list .item .label, .select-popover .popover-content .list .item page-match-details .header .matchResult .label {
   margin: 0px;
-  margin-top: 8px;
+  margin-top: 4px;
   font-weight: 400;
   max-width: 100%;
 }
@@ -48885,7 +48887,7 @@ page-match-details .header .matchResult .col .item .label img {
 
 page-match-details .header .matchResult .col .item .label p, page-match-details .header .matchResult .col .select-popover .popover-content .list .item .label .label, .select-popover .popover-content .list page-match-details .header .matchResult .col .item .label .label {
   color: #fff;
-  margin-top: 8px;
+  margin-top: 4px;
   font-weight: 400;
   max-width: 100%;
 }
@@ -48897,14 +48899,14 @@ page-match-details .header .matchResult .col[col-auto] .result span {
 
 page-match-details .matchStats h5 {
   margin: 0px;
-  padding: 0px 8px;
+  padding: 0px 4px;
 }
 
 page-match-details .matchStats .list {
   border-radius: 4px;
   display: inline-block;
-  width: calc(100% - 8px*2);
-  margin: 8px;
+  width: calc(100% - 4px*2);
+  margin: 4px;
 }
 
 page-match-details .matchStats .list .col p, page-match-details .matchStats .select-popover .popover-content .list .col .item .label, .select-popover .popover-content page-match-details .matchStats .list .col .item .label, page-match-details .matchStats .select-popover .popover-content .list .item .col .label, .select-popover .popover-content page-match-details .matchStats .list .item .col .label {
@@ -48970,7 +48972,7 @@ page-match-details .goals .item .label span {
 }
 
 page-match-details .goals .item .label p, page-match-details .goals .select-popover .popover-content .list .item .label .label, .select-popover .popover-content .list page-match-details .goals .item .label .label {
-  margin: 0px 8px;
+  margin: 0px 4px;
 }
 
 page-match-details .goals .item .label img {
@@ -48988,14 +48990,14 @@ page-match-details .goals .item.secondTeam .label {
 }
 
 page-match-details .timeLine_list {
-  margin: 8px;
+  margin: 4px;
   border-radius: 4px;
   display: inline-block;
-  width: calc(100% - 8px*2);
+  width: calc(100% - 4px*2);
 }
 
 page-match-details .timeLine_list .item {
-  padding: 4px;
+  padding: 2px;
 }
 
 page-match-details .timeLine_list .item.item-block {
@@ -49007,7 +49009,7 @@ page-match-details .timeLine_list .item .grid {
 }
 
 page-match-details .timeLine_list .item .grid .col {
-  padding: 4px;
+  padding: 2px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -49041,7 +49043,7 @@ page-match-details .timeLine_list .item.team2 {
 }
 
 page-match-details .avatarItem, page-match-details .item.thumbnailItem {
-  margin: 8px;
+  margin: 4px;
 }
 
 page-notification .list .grid h5 {
@@ -49072,9 +49074,9 @@ page-notification .list .grid .col[col-auto] {
 }
 
 page-notification .list .item {
-  padding: 8px;
+  padding: 4px;
   border-radius: 4px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 page-notification .list .item p, page-notification .select-popover .popover-content .list .item .label, .select-popover .popover-content page-notification .list .item .label {
@@ -49084,18 +49086,18 @@ page-notification .list .item p, page-notification .select-popover .popover-cont
 
 page-photos .photoItem {
   border-radius: 4px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 page-photos-details .list {
-  padding: 4px;
+  padding: 2px;
   display: inline-block;
   width: 100%;
 }
 
 page-photos-details .list .item {
-  padding: 4px;
-  height: 208px;
+  padding: 2px;
+  height: 204px;
 }
 
 page-photos-details .list .item .label {
@@ -49117,9 +49119,9 @@ page-photos-details .list .item:nth-child(6n+2), page-photos-details .list .item
 }
 
 page-players-stats .list {
-  margin: 8px;
+  margin: 4px;
   border-radius: 4px;
-  padding: 0px 8px;
+  padding: 0px 4px;
 }
 
 page-players-stats .list .item.item-block {
@@ -49137,7 +49139,7 @@ page-profile .scroll-content {
 }
 
 page-profile .imgs {
-  padding: 8px;
+  padding: 4px;
   position: relative;
 }
 
@@ -49173,8 +49175,8 @@ page-profile .imgs .button .icon {
 
 page-profile .imgs .button.coverCamera {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 8px;
+  right: 8px;
   left: auto;
   bottom: auto;
 }
@@ -49192,7 +49194,7 @@ page-profile .imgs .button.show {
 }
 
 page-profile .nameAndMail {
-  padding: 8px;
+  padding: 4px;
   margin-top: 48px;
   text-align: center;
 }
@@ -49207,10 +49209,10 @@ page-profile .nameAndMail p, page-profile .nameAndMail .select-popover .popover-
 }
 
 page-profile .otherForm {
-  margin: 8px;
+  margin: 4px;
   border-radius: 4px;
-  width: calc( 100% - 8px*2) !important;
-  padding: 8px;
+  width: calc( 100% - 4px*2) !important;
+  padding: 4px;
 }
 
 page-profile .otherForm .item {
@@ -49241,7 +49243,7 @@ page-profile .otherForm .item.item-input-disabled {
 }
 
 page-profile .otherForm .button {
-  margin-top: 16px !important;
+  margin-top: 8px !important;
 }
 
 .search_Pop .popover-content {
@@ -49264,12 +49266,12 @@ page-profile .otherForm .button {
 }
 
 .search_Pop .searchbar .searchbar-input {
-  padding: 0px 44px;
+  padding: 0px 40px;
   height: 50px;
 }
 
 .search_Pop .searchbar .searchbar-search-icon {
-  width: 44px;
+  width: 40px;
   height: 50px;
   background-size: 30px;
   background-position: center center;
@@ -49308,9 +49310,9 @@ page-select-league .favoriteLeagues [item-right] {
 }
 
 page-select-league .favoriteLeagues .list-header {
-  height: 44px;
+  height: 40px;
   background-color: #efefee;
-  padding: 0px 16px;
+  padding: 0px 8px;
   margin: 0px !important;
 }
 
@@ -49323,22 +49325,22 @@ page-select-league .favoriteLeagues .list-header h4, page-select-league .favorit
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 44px;
-  line-height: 44px;
+  height: 40px;
+  line-height: 40px;
   display: block;
   font-weight: 500;
 }
 
 page-select-league .favoriteLeagues .item .item-inner .label {
-  padding: 0px 8px;
+  padding: 0px 4px;
 }
 
 page-select-league .favoriteLeagues .item.item-block {
-  padding: 0px 8px;
-  height: 44px;
+  padding: 0px 4px;
+  height: 40px;
   border-bottom: 1px solid #949494;
-  margin: 0px 8px;
-  width: calc(100% - 8px*2);
+  margin: 0px 4px;
+  width: calc(100% - 4px*2);
 }
 
 page-select-league .favoriteLeagues .item.item-block:last-of-type {
@@ -49351,7 +49353,7 @@ page-select-league .favoriteLeagues .item.item-block p, page-select-league .favo
 }
 
 page-setting .static_notify {
-  padding: 4px !important;
+  padding: 2px !important;
 }
 
 page-setting .static_notify .item {
@@ -49360,13 +49362,13 @@ page-setting .static_notify .item {
 
 page-setting .static_notify .item.item-checkbox {
   margin: 0px;
-  padding: 4px;
+  padding: 2px;
   direction: rtl;
   min-height: 34px;
 }
 
 page-setting .static_notify .item.item-checkbox .checkbox {
-  margin: 0px 4px;
+  margin: 0px 2px;
 }
 
 page-setting .static_notify .item.item-checkbox .checkbox .checkbox-icon {
@@ -49391,7 +49393,7 @@ page-setting .static_notify .item.item-checkbox .checkbox .checkbox-icon.checkbo
 }
 
 page-setting .static_notify .item.item-checkbox .label {
-  padding: 0px 4px;
+  padding: 0px 2px;
   font-size: 1.2rem;
   direction: ltr;
   color: #000;
@@ -49399,19 +49401,19 @@ page-setting .static_notify .item.item-checkbox .label {
 }
 
 page-setting .static_notify .item .checkbox {
-  margin: 0px 8px !important;
+  margin: 0px 4px !important;
 }
 
 .sign .scroll-content {
-  padding: 16px !important;
+  padding: 8px !important;
   background: rgba(15, 86, 86, 0.7);
   text-align: center;
 }
 
 .sign .scroll-content p, .sign .scroll-content .select-popover .popover-content .list .item .label, .select-popover .popover-content .list .item .sign .scroll-content .label {
   white-space: normal;
-  max-height: 44px;
-  line-height: 44px;
+  max-height: 40px;
+  line-height: 40px;
   display: block;
   overflow: hidden;
   margin: 0px;
@@ -49451,9 +49453,9 @@ page-setting .static_notify .item .checkbox {
 }
 
 .signForm .item, page-profile .otherForm .item {
-  height: 44px;
+  height: 40px;
   border-bottom: 2px solid #888ba7 !important;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .signForm .item .icon[item-left], page-profile .otherForm .item .icon[item-left] {
@@ -49486,7 +49488,7 @@ page-sign-up .scroll-content {
 }
 
 page-sign-up .backBtn {
-  width: 44px;
+  width: 40px;
   background: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -49502,16 +49504,16 @@ page-sign-up .mr-2 {
 
 page-team .photoItem {
   border-radius: 4px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 page-team .teamMatchs .item.thumbnailItem {
-  padding: 16px 8px;
-  margin: 8px;
+  padding: 8px 4px;
+  margin: 4px;
 }
 
 page-team .teamMatchs .item.thumbnailItem:last-of-type {
-  margin-bottom: 8px !important;
+  margin-bottom: 4px !important;
 }
 
 page-team .teamMatchs .item.thumbnailItem ion-thumbnail img {
@@ -49573,16 +49575,16 @@ page-team .teamMatchs .item.thumbnailItem .matchTime p, page-team .teamMatchs .s
 }
 
 page-team .squad {
-  margin: 8px;
-  width: calc(100% - 8px*2);
+  margin: 4px;
+  width: calc(100% - 4px*2);
   border-radius: 4px;
 }
 
 page-team .squad .list {
   display: inline-block;
-  padding: 8px 0px;
-  margin: 0px 8px;
-  width: calc(100% - 8px*2);
+  padding: 4px 0px;
+  margin: 0px 4px;
+  width: calc(100% - 4px*2);
   border-bottom: 1px solid #949494;
 }
 
@@ -49591,7 +49593,7 @@ page-team .squad .list:last-of-type {
 }
 
 page-team .squad .item.list-header {
-  margin: 0px 0px 8px !important;
+  margin: 0px 0px 4px !important;
 }
 
 page-team .squad .item.list-header h5 {
@@ -49610,11 +49612,11 @@ page-team .squad .item.avatarItem, page-team .squad .item.thumbnailItem {
 }
 
 page-teams-stats .list .item {
-  margin: 8px;
+  margin: 4px;
 }
 
 page-teams-stats .list .item.item-block:last-of-type {
-  margin-bottom: 8px !important;
+  margin-bottom: 4px !important;
 }
 
 page-terms ol, page-terms ul, page-terms dl {
@@ -49628,12 +49630,12 @@ page-top-news-details .card img {
 }
 
 .commentsList {
-  padding: 8px;
+  padding: 4px;
   border-radius: 4px;
 }
 
 .commentsList .list-header .label {
-  margin: 0px 0px 8px !important;
+  margin: 0px 0px 4px !important;
   line-height: 18px;
 }
 
@@ -49719,7 +49721,7 @@ page-top-news-details .card img {
 .commentsList .item.item-block.writComment .input {
   background: #3B7A57;
   border-radius: 8px;
-  padding: 0px 8px;
+  padding: 0px 4px;
 }
 
 .commentsList .item.item-block.writComment .input .text-input {

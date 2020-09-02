@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
-import { MyApp } from '../../app/app.component';
+import { Sure3Odds } from '../../app/app.component';
 import { Global } from '../../providers/global';
 @IonicPage()
 @Component({
@@ -10,7 +10,7 @@ import { Global } from '../../providers/global';
 export class SettingPage {
   public action = false;
   language='en';
-  constructor(public _myApp:MyApp,public navCtrl: NavController,private global:Global) {
+  constructor(public _myApp:Sure3Odds,public navCtrl: NavController,private global:Global) {
     this.action = this._myApp.animateVarible;
     console.log(this.action);
   } 
