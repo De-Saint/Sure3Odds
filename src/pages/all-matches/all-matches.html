@@ -6,9 +6,9 @@
     </button>
     <ion-title>All Matches</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only (click)="global.callSearch($event)">
+      <!-- <button ion-button icon-only (click)="global.callSearch($event)">
         <ion-icon name="md-search"></ion-icon>
-      </button>
+      </button> -->
       <button ion-button icon-only navPush="NotificationPage">
         <ion-icon name="md-notifications"></ion-icon>
       </button>
@@ -57,17 +57,20 @@
         <ion-row>
           <ion-col col>
             <ion-item navPush="TeamPage">
-              <img src="assets/imgs/appicon.png" item-right/>
+              <img src="{{match.hometeam.imageurl}}" item-right  *ngIf="match.hometeam.imageurl"/>
+              <img src="assets/imgs/appicon.png"  item-right  *ngIf="!match.hometeam.imageurl"/>
               <p text-right>{{match.hometeam.name}}</p>
             </ion-item>
           </ion-col>
           <ion-col col-auto>
             <span ion-text color="color1">{{match.matchTime}}</span>
-            <p ion-text color="color2">{{match.odds}}</p>
+            <p ion-text color="color2" ><b>{{match.odds}}</b></p>
+            <p ion-text color="color2" ><b>{{match.selection.name}}</b></p>
           </ion-col>
           <ion-col col>
             <ion-item navPush="TeamPage">
-              <img src="assets/imgs/appicon.png" item-left/>
+              <img src="{{match.awayteam.imageurl}}" item-left *ngIf="match.awayteam.imageurl"/>
+              <img src="assets/imgs/appicon.png" item-left *ngIf="!match.awayteam.imageurl"/>
               <p text-left>{{match.awayteam.name}}</p>
             </ion-item>
           </ion-col> 
@@ -76,37 +79,4 @@
      </ion-item> 
   </ion-list>
    <!-- matches list -->
-   <ion-list margin-top *ngFor="let item of matches">
-    <ion-list-header>
-      {{item.title}}
-      <ion-icon name="md-star" color="color1" item-left *ngIf="item.title=='Favorites'"></ion-icon>
-      <img src="assets/imgs/league/global3.png" item-left *ngIf="item.title!='Favorites'"/>
-    </ion-list-header>
-    <!-- match item  -->
-    <ion-item class="matchItem" *ngFor="let match of item.items">
-      <ion-grid>
-        <ion-row>
-          <!-- first team -->
-          <ion-col col>
-            <ion-item navPush="TeamPage">
-              <img src="{{match.firstTeamImg}}" item-right/>
-              <p text-right>{{match.firstTeamName}}</p>
-            </ion-item>
-          </ion-col>
-          <!-- match time -->
-          <ion-col col-auto>
-            <span ion-text color="color1">{{match.time}}</span>
-            <p ion-text color="color2">Next Match</p>
-          </ion-col>
-          <!-- second team -->
-          <ion-col col>
-            <ion-item navPush="TeamPage">
-              <img src="{{match.secondTeamImg}}" item-left/>
-              <p text-left>{{match.secondTeamName}}</p>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-item>
-  </ion-list>
 </ion-content>
