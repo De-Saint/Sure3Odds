@@ -26,38 +26,37 @@ export class Sure3Odds {
   pages: Array<{ title: string, component: any }>;
   version = "1.0.0";
 
-  loggedInAdminPages: PageInterface[]  = [
+  loggedInAdminPages: PageInterface[] = [
     { icon: 'football', color: 'light', title: 'All Games', component: 'AllMatchesPage' },
     { icon: 'person', color: 'light', title: 'My Profile', component: 'ProfilePage' },
-    { icon: 'people', color: 'light', title: 'Advisers', component: 'AdvisersPage' },
-    { icon: 'football', color: 'light', title: 'Adviser Predictions', component: 'PredictionsPage' },
+    { icon: 'people', color: 'light', title: 'Sub-Admins', component: 'AdvisersPage' },
+    { icon: 'football', color: 'light', title: 'Sub-Admin Predictions', component: 'PredictionsPage' },
     { icon: 'people', color: 'light', title: 'Members', component: 'UsersPage' },
     { icon: 'card', color: 'light', title: 'Payments', component: 'PaymentsPage' },
     { icon: 'podium', color: 'light', title: 'Reports', component: 'ReportsPage' },
     { icon: 'build', color: 'light', title: 'Settings', component: 'SettingPage' }
   ];
 
-  loggedInAdviserPages : PageInterface[]= [
+  loggedInAdviserPages: PageInterface[] = [
     { icon: 'football', color: 'light', title: 'All Games', component: 'AllMatchesPage' },
     { icon: 'person', color: 'light', title: 'My Profile', component: 'ProfilePage' },
-    { icon: 'people', color: 'light', title: 'Members', component: 'AdviserMembersPage' },
     { icon: 'football', color: 'light', title: 'My Predictions', component: 'PredictionsPage' },
   ];
 
-  loggedInMemberPages : PageInterface[] = [
+  loggedInMemberPages: PageInterface[] = [
     { icon: 'football', color: 'light', title: 'My Games', component: 'AllMatchesPage' },
-    { icon: 'person', color: 'light', title: 'My Profile', component: 'ProfilePage' },
-    { icon: 'people', color: 'light', title: 'My Advisers', component: 'MemberAdvisersPage' }
-    
+    { icon: 'person', color: 'light', title: 'My Profile', component: 'ProfilePage' }
   ];
-  otherPages : PageInterface[] =  [
+
+  otherPages: PageInterface[] = [
     { icon: 'help-circle', color: 'light', title: 'Help', component: 'HelpPage' },
-    { icon: 'at', color: 'light', title: 'Contact Us',component: 'TeamPage' },//ContactPage
-    { icon: 'briefcase', color: 'light', title: 'Terms',component: 'TermsPage' },
+    { icon: 'at', color: 'light', title: 'Contact Us', component: 'TeamPage' },//ContactPage
+    { icon: 'briefcase', color: 'light', title: 'Terms', component: 'TermsPage' },
     { icon: 'log-out', color: 'danger', title: 'Logout', component: 'SignInPage' }
   ]
 
   public animateVarible: boolean = false;
+  
   constructor(public storage: Storage,
     public platform: Platform,
     public events: Events,
@@ -131,7 +130,7 @@ export class Sure3Odds {
     this.LogOutFunction(page);
   }
   LogOutFunction(page) {
-    if (page === 'SignInPage') { 
+    if (page === 'SignInPage') {
       this.events.publish('user:logout');
       this.nav.setRoot(page);
       this.auth.logout();

@@ -51,7 +51,7 @@ var map = {
 		38
 	],
 	"../pages/add-user/add-user.module": [
-		726,
+		699,
 		37
 	],
 	"../pages/adviser-members/adviser-members.module": [
@@ -63,47 +63,47 @@ var map = {
 		35
 	],
 	"../pages/all-matches/all-matches.module": [
-		698,
+		696,
 		34
 	],
 	"../pages/android-subscription/android-subscription.module": [
-		696,
+		697,
 		1
 	],
 	"../pages/assign-adviser/assign-adviser.module": [
-		697,
+		698,
 		33
 	],
 	"../pages/contact/contact.module": [
-		699,
+		700,
 		32
 	],
 	"../pages/free-tips/free-tips.module": [
-		700,
+		701,
 		31
 	],
 	"../pages/guide/guide.module": [
-		701,
+		702,
 		30
 	],
 	"../pages/help/help.module": [
-		702,
+		704,
 		29
 	],
 	"../pages/home/home.module": [
-		703,
+		705,
 		28
 	],
 	"../pages/league-details/league-details.module": [
-		704,
+		703,
 		27
 	],
 	"../pages/match-details/match-details.module": [
-		705,
+		706,
 		26
 	],
 	"../pages/member-advisers/member-advisers.module": [
-		706,
+		707,
 		25
 	],
 	"../pages/new-game/new-game.module": [
@@ -111,95 +111,95 @@ var map = {
 		24
 	],
 	"../pages/new-prediction/new-prediction.module": [
-		707,
+		709,
 		23
 	],
 	"../pages/notification/notification.module": [
-		709,
+		710,
 		22
 	],
 	"../pages/old-free-tips/old-free-tips.module": [
-		710,
+		711,
 		21
 	],
 	"../pages/old-games/old-games.module": [
-		711,
+		712,
 		20
 	],
 	"../pages/payments/payments.module": [
-		712,
+		713,
 		19
 	],
 	"../pages/photos-details/photos-details.module": [
-		713,
+		714,
 		18
 	],
 	"../pages/photos/photos.module": [
-		714,
+		715,
 		17
 	],
 	"../pages/players-stats/players-stats.module": [
-		718,
+		716,
 		16
 	],
 	"../pages/predictions/predictions.module": [
-		715,
+		718,
 		15
 	],
 	"../pages/profile/profile.module": [
-		716,
+		717,
 		0
 	],
 	"../pages/reports/reports.module": [
-		717,
+		719,
 		14
 	],
 	"../pages/search-pop/search-pop.module": [
-		719,
+		720,
 		13
 	],
 	"../pages/select-league/select-league.module": [
-		720,
+		721,
 		12
 	],
 	"../pages/setting/setting.module": [
-		721,
+		722,
 		11
 	],
 	"../pages/sign-in/sign-in.module": [
-		722,
+		723,
 		10
 	],
 	"../pages/sign-up/sign-up.module": [
-		723,
+		724,
 		9
 	],
 	"../pages/team/team.module": [
-		724,
+		725,
 		8
 	],
 	"../pages/teams-stats/teams-stats.module": [
-		725,
+		731,
 		7
 	],
 	"../pages/terms/terms.module": [
-		727,
+		729,
 		6
 	],
 	"../pages/top-news-details/top-news-details.module": [
-		729,
+		726,
 		5
 	],
 	"../pages/top-news/top-news.module": [
-		728,
+		727,
 		4
 	],
 	"../pages/user-details/user-details.module": [
-		730,
+		728,
 		3
 	],
 	"../pages/users/users.module": [
-		731,
+		730,
 		2
 	]
 };
@@ -359,8 +359,8 @@ var Sure3Odds = /** @class */ (function () {
         this.loggedInAdminPages = [
             { icon: 'football', color: 'light', title: 'All Games', component: 'AllMatchesPage' },
             { icon: 'person', color: 'light', title: 'My Profile', component: 'ProfilePage' },
-            { icon: 'people', color: 'light', title: 'Advisers', component: 'AdvisersPage' },
-            { icon: 'football', color: 'light', title: 'Adviser Predictions', component: 'PredictionsPage' },
+            { icon: 'people', color: 'light', title: 'Sub-Admins', component: 'AdvisersPage' },
+            { icon: 'football', color: 'light', title: 'Sub-Admin Predictions', component: 'PredictionsPage' },
             { icon: 'people', color: 'light', title: 'Members', component: 'UsersPage' },
             { icon: 'card', color: 'light', title: 'Payments', component: 'PaymentsPage' },
             { icon: 'podium', color: 'light', title: 'Reports', component: 'ReportsPage' },
@@ -369,13 +369,11 @@ var Sure3Odds = /** @class */ (function () {
         this.loggedInAdviserPages = [
             { icon: 'football', color: 'light', title: 'All Games', component: 'AllMatchesPage' },
             { icon: 'person', color: 'light', title: 'My Profile', component: 'ProfilePage' },
-            { icon: 'people', color: 'light', title: 'Members', component: 'AdviserMembersPage' },
             { icon: 'football', color: 'light', title: 'My Predictions', component: 'PredictionsPage' },
         ];
         this.loggedInMemberPages = [
             { icon: 'football', color: 'light', title: 'My Games', component: 'AllMatchesPage' },
-            { icon: 'person', color: 'light', title: 'My Profile', component: 'ProfilePage' },
-            { icon: 'people', color: 'light', title: 'My Advisers', component: 'MemberAdvisersPage' }
+            { icon: 'person', color: 'light', title: 'My Profile', component: 'ProfilePage' }
         ];
         this.otherPages = [
             { icon: 'help-circle', color: 'light', title: 'Help', component: 'HelpPage' },
@@ -457,20 +455,15 @@ var Sure3Odds = /** @class */ (function () {
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_10" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["q" /* Nav */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["q" /* Nav */])
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["q" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["q" /* Nav */]) === "function" && _a || Object)
     ], Sure3Odds.prototype, "nav", void 0);
     Sure3Odds = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/app/app.html"*/'<ion-menu id="loggedInMemberPages" [content]="content" swipeEnabled="false">\n  <ion-header>\n    <ion-toolbar>\n      <ion-item>\n        <ion-avatar item-left>\n          <img src="assets/imgs/appicon.png">\n        </ion-avatar>\n        <h5 ion-text color="light">{{Userfullname}}</h5>\n        <p ion-text color="light">{{usertype}}</p>\n        <p ion-text color="light" style="margin-top: 1em;">{{version}}</p>\n      </ion-item>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <!-- admin list -->\n    <ion-list class="mainMenuList">\n      <ion-item menuClose *ngFor="let p of loggedInMemberPages" (click)="openPage(p.component)">\n        <ion-icon color="light" name="{{p.icon}}" item-left></ion-icon>\n        <ion-label> {{p.title}} </ion-label>\n      </ion-item>\n    </ion-list>\n    <!-- leagues list -->\n    <ion-list class="leagueList">\n      <ion-item menuClose *ngFor="let item of otherPages" (click)="openPage(item.component)">\n        <ion-icon color="{{item.color}}" name="{{item.icon}}" item-left></ion-icon>\n        <ion-label> {{item.title}} </ion-label>\n      </ion-item>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<ion-menu id="loggedInAdviserMenu" [content]="content" swipeEnabled="false">\n  <ion-header>\n    <ion-toolbar>\n      <ion-item>\n        <ion-avatar item-left>\n          <img src="assets/imgs/appicon.png">\n        </ion-avatar>\n        <h5 ion-text color="light">{{Userfullname}}</h5>\n        <p ion-text color="light">{{usertype}}</p>\n        <p ion-text color="light" style="margin-top: 1em;">{{version}}</p>\n      </ion-item>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <!-- admin list -->\n    <ion-list class="mainMenuList">\n      <ion-item menuClose *ngFor="let p of loggedInAdviserPages" (click)="openPage(p.component)">\n        <ion-icon color="{{p.color}}" name="{{p.icon}}" item-left></ion-icon>\n        <ion-label> {{p.title}} </ion-label>\n      </ion-item>\n    </ion-list>\n\n    <!-- leagues list -->\n    <ion-list class="leagueList">\n      <ion-item menuClose *ngFor="let item of otherPages" (click)="openPage(item.component)">\n        <ion-icon color="{{item.color}}" name="{{item.icon}}" item-left></ion-icon>\n        <ion-label> {{item.title}} </ion-label>\n      </ion-item>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n<ion-menu id="loggedInAdminMenu" [content]="content" swipeEnabled="false">\n  <ion-header>\n    <ion-toolbar>\n      <ion-item>\n        <ion-avatar item-left>\n          <img src="assets/imgs/appicon.png">\n        </ion-avatar>\n        <h5 ion-text color="light">{{Userfullname}}</h5>\n        <p ion-text color="light">{{usertype}}</p>\n        <p ion-text color="light" style="margin-top: 1em;">{{version}}</p>\n      </ion-item>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <!-- admin list -->\n    <ion-list class="mainMenuList">\n      <ion-item menuClose *ngFor="let p of loggedInAdminPages" (click)="openPage(p.component)">\n        <ion-icon color="{{p.color}}" name="{{p.icon}}" item-left></ion-icon>\n        <ion-label> {{p.title}} </ion-label>\n      </ion-item>\n    </ion-list>\n\n    <!-- leagues list -->\n    <ion-list class="leagueList">\n      <ion-item menuClose *ngFor="let item of otherPages" (click)="openPage(item.component)">\n        <ion-icon color="{{item.color}}" name="{{item.icon}}" item-left></ion-icon>\n        <ion-label> {{item.title}} </ion-label>\n      </ion-item>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content [class.animateApp]="animateVarible==true" swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5__ionic_storage__["b" /* Storage */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["u" /* Platform */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* Events */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["p" /* MenuController */],
-            __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__["a" /* StatusBar */],
-            __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */],
-            __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__ionic_storage__["b" /* Storage */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["u" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["u" /* Platform */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* Events */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["p" /* MenuController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["p" /* MenuController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _h || Object])
     ], Sure3Odds);
     return Sure3Odds;
+    var _a, _b, _c, _d, _e, _f, _g, _h;
 }());
 
 //# sourceMappingURL=app.component.js.map
@@ -558,42 +551,42 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/add-adviser/add-adviser.module#AddAdviserPageModule', name: 'AddAdviserPage', segment: 'add-adviser', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/adviser-members/adviser-members.module#AdviserMembersPageModule', name: 'AdviserMembersPage', segment: 'adviser-members', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/advisers/advisers.module#AdvisersPageModule', name: 'AdvisersPage', segment: 'advisers', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/all-matches/all-matches.module#AllMatchesPageModule', name: 'AllMatchesPage', segment: 'all-matches', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/android-subscription/android-subscription.module#AndroidSubscriptionPageModule', name: 'AndroidSubscriptionPage', segment: 'android-subscription', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/assign-adviser/assign-adviser.module#AssignAdviserPageModule', name: 'AssignAdviserPage', segment: 'assign-adviser', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/all-matches/all-matches.module#AllMatchesPageModule', name: 'AllMatchesPage', segment: 'all-matches', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/add-user/add-user.module#AddUserPageModule', name: 'AddUserPage', segment: 'add-user', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/contact/contact.module#ContactPageModule', name: 'ContactPage', segment: 'contact', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/free-tips/free-tips.module#FreeTipsPageModule', name: 'FreeTipsPage', segment: 'free-tips', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/guide/guide.module#GuidePageModule', name: 'GuidePage', segment: 'guide', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/league-details/league-details.module#LeagueDetailsPageModule', name: 'LeagueDetailsPage', segment: 'league-details', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/help/help.module#HelpPageModule', name: 'HelpPage', segment: 'help', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/league-details/league-details.module#LeagueDetailsPageModule', name: 'LeagueDetailsPage', segment: 'league-details', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/match-details/match-details.module#MatchDetailsPageModule', name: 'MatchDetailsPage', segment: 'match-details', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/member-advisers/member-advisers.module#MemberAdvisersPageModule', name: 'MemberAdvisersPage', segment: 'member-advisers', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/new-prediction/new-prediction.module#NewPredictionPageModule', name: 'NewPredictionPage', segment: 'new-prediction', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/new-game/new-game.module#NewGamePageModule', name: 'NewGamePage', segment: 'new-game', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/new-prediction/new-prediction.module#NewPredictionPageModule', name: 'NewPredictionPage', segment: 'new-prediction', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/notification/notification.module#NotificationPageModule', name: 'NotificationPage', segment: 'notification', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/old-free-tips/old-free-tips.module#OldFreeTipsPageModule', name: 'OldFreeTipsPage', segment: 'old-free-tips', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/old-games/old-games.module#OldGamesPageModule', name: 'OldGamesPage', segment: 'old-games', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/payments/payments.module#PaymentsPageModule', name: 'PaymentsPage', segment: 'payments', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/photos-details/photos-details.module#PhotosDetailsPageModule', name: 'PhotosDetailsPage', segment: 'photos-details', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/photos/photos.module#PhotosPageModule', name: 'PhotosPage', segment: 'photos', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/predictions/predictions.module#PredictionsPageModule', name: 'PredictionsPage', segment: 'predictions', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/reports/reports.module#ReportsPageModule', name: 'ReportsPage', segment: 'reports', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/players-stats/players-stats.module#PlayersStatsPageModule', name: 'PlayersStatsPage', segment: 'players-stats', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/predictions/predictions.module#PredictionsPageModule', name: 'PredictionsPage', segment: 'predictions', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/reports/reports.module#ReportsPageModule', name: 'ReportsPage', segment: 'reports', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/search-pop/search-pop.module#SearchPopPageModule', name: 'SearchPopPage', segment: 'search-pop', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/select-league/select-league.module#SelectLeaguePageModule', name: 'SelectLeaguePage', segment: 'select-league', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/setting/setting.module#SettingPageModule', name: 'SettingPage', segment: 'setting', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sign-in/sign-in.module#SignInPageModule', name: 'SignInPage', segment: 'sign-in', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sign-up/sign-up.module#SignUpPageModule', name: 'SignUpPage', segment: 'sign-up', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/team/team.module#TeamPageModule', name: 'TeamPage', segment: 'team', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/teams-stats/teams-stats.module#TeamsStatsPageModule', name: 'TeamsStatsPage', segment: 'teams-stats', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/add-user/add-user.module#AddUserPageModule', name: 'AddUserPage', segment: 'add-user', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/terms/terms.module#TermsPageModule', name: 'TermsPage', segment: 'terms', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/top-news/top-news.module#TopNewsPageModule', name: 'TopNewsPage', segment: 'top-news', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/top-news-details/top-news-details.module#TopNewsDetailsPageModule', name: 'TopNewsDetailsPage', segment: 'top-news-details', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/top-news/top-news.module#TopNewsPageModule', name: 'TopNewsPage', segment: 'top-news', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/user-details/user-details.module#UserDetailsPageModule', name: 'UserDetailsPage', segment: 'user-details', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/users/users.module#UsersPageModule', name: 'UsersPage', segment: 'users', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/terms/terms.module#TermsPageModule', name: 'TermsPage', segment: 'terms', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/users/users.module#UsersPageModule', name: 'UsersPage', segment: 'users', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/teams-stats/teams-stats.module#TeamsStatsPageModule', name: 'TeamsStatsPage', segment: 'teams-stats', priority: 'low', defaultHistory: [] }
                     ]
                 }),
             ],
