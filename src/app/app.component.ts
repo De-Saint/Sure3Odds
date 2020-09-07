@@ -41,6 +41,7 @@ export class Sure3Odds {
     { icon: 'football', color: 'light', title: 'All Games', component: 'AllMatchesPage' },
     { icon: 'person', color: 'light', title: 'My Profile', component: 'ProfilePage' },
     { icon: 'football', color: 'light', title: 'My Predictions', component: 'PredictionsPage' },
+    { icon: 'build', color: 'light', title: 'Settings', component: 'SettingPage' }
   ];
 
   loggedInMemberPages: PageInterface[] = [
@@ -97,6 +98,7 @@ export class Sure3Odds {
     });
 
     this.events.subscribe('user:logout', () => {
+      this.nav.setRoot('SignInPage');
       this.enableMenu(false, "");
       this.auth.logout();
     });

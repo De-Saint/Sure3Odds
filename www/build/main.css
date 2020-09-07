@@ -40115,7 +40115,7 @@ image-viewer.ion-page img {
   margin: 0px !important;
 }
 
-.imgBg, page-profile .imgs .imgProfile, .sign {
+.imgBg, page-match-details .imgs .imgProfile, page-profile .imgs .imgProfile, .sign {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -40148,7 +40148,7 @@ ion-badge {
   overflow: hidden;
 }
 
-.card, .topNews, .tabelList .item.item-block .grid, .leagueMatches .allMatches, .leagueStats .list .item.item-block, page-all-matches .list, page-home .list, page-league-details .photoItem, page-match-details .matchStats .list, page-match-details .timeLine_list, page-match-details .avatarItem, page-match-details .item.thumbnailItem, page-notification .list .item, page-photos .photoItem, page-players-stats .list, page-profile .otherForm, page-select-league .favoriteLeagues, page-team .photoItem, page-team .teamMatchs .item.thumbnailItem, page-team .squad, page-teams-stats .list .item, .commentsList {
+.card, .topNews, .tabelList .item.item-block .grid, .leagueMatches .allMatches, .leagueStats .list .item.item-block, page-all-matches .list, page-home .list, page-league-details .photoItem, page-match-details .timeLine_list, page-match-details .avatarItem, page-match-details .item.thumbnailItem, page-notification .list .item, page-photos .photoItem, page-players-stats .list, page-profile .otherForm, page-select-league .favoriteLeagues, page-team .photoItem, page-team .teamMatchs .item.thumbnailItem, page-team .squad, page-teams-stats .list .item, .commentsList {
   -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.29);
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.29);
 }
@@ -48989,6 +48989,31 @@ page-match-details .goals .item.secondTeam .label {
   justify-content: flex-end;
 }
 
+page-match-details .goals .progressBar {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 8px;
+}
+
+page-match-details .goals .progressBar .container {
+  display: inline-block;
+  height: 3px;
+  width: 100%;
+  background: #949494;
+}
+
+page-match-details .goals .progressBar .progressActive {
+  display: inline-block;
+  height: 100%;
+}
+
 page-match-details .timeLine_list {
   margin: 4px;
   border-radius: 4px;
@@ -49044,6 +49069,38 @@ page-match-details .timeLine_list .item.team2 {
 
 page-match-details .avatarItem, page-match-details .item.thumbnailItem {
   margin: 4px;
+}
+
+page-match-details .imgs {
+  padding: 4px;
+  position: relative;
+}
+
+page-match-details .imgs img {
+  display: block;
+  border-radius: 4px;
+  width: 100%;
+}
+
+page-match-details .imgs .imgProfile {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: -10px auto 0px;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+}
+
+page-match-details .nameAndMail {
+  padding: 4px;
+  margin-top: 48px;
+  text-align: center;
+}
+
+page-match-details .nameAndMail p, page-match-details .nameAndMail .select-popover .popover-content .list .item .label, .select-popover .popover-content .list .item page-match-details .nameAndMail .label {
+  margin: 0px;
+  font-weight: 500;
 }
 
 page-notification .list .grid h5 {

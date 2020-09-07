@@ -1,3 +1,4 @@
+import { ResponseType } from './../interface/response';
 import { environment } from './../../environments/environment';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -35,7 +36,6 @@ export class Token {
 }
 @Injectable()
 export class AuthenicationProvider {
-  respData: any;
   HAS_LOGGED_IN = 'hasLoggedIn';
 
   private currentUserSubject: BehaviorSubject<Token>;
@@ -65,7 +65,13 @@ export class AuthenicationProvider {
   public get currentUserDataValue(): User {
     return this.currentUserDataSubject.value;
   }
-
+  hasLoggedIn(){
+    return this.storage.ready().then(() => {
+      return this.storage.get(this.HAS_LOGGED_IN).then((value) => {
+        return value === true;
+      });
+    });
+  }
 
   showToast(message: string) {
     let toast = this.toastCtrl.create({
@@ -79,49 +85,38 @@ export class AuthenicationProvider {
     });
     toast.present(toast);
   }
-  login(email, password) {
+
+  login(email, password): Observable<ResponseType> {
     const params = new HttpParams()
       .set('email', email)
       .set('password', password);
-    return this.http.post(`${environment.apiUrl}/users/member/authenticate`, params)
-      .pipe(map(resp => {
-        this.respData = resp;
-        if (this.respData.statusCode === 200) {
-          sessionStorage.setItem('currentUser', JSON.stringify(this.respData.data));
-          this.currentUserSubject.next(this.respData.data);
-          const decoded = helper.decodeToken(this.respData.data.token);
+    return this.http.post<ResponseType>(`${environment.apiUrl}/users/member/authenticate`, params)
+    .pipe(map(res => {
+      if(res.statusCode === 200){
+        sessionStorage.setItem('currentUser', JSON.stringify(res.data));
+          this.currentUserSubject.next(res.data);
+          const decoded = helper.decodeToken(res.data.token);
           sessionStorage.setItem('userData', JSON.stringify(decoded));
           this.currentUserDataSubject.next(decoded);
-        }
-        return resp;
-      }));
+      }
+      return res;
+    }))
+    
   }
 
-
-
-
-
-  getAllPlantypes() {
-    return this.http.get(`${environment.apiUrl}/payments/plantype/getall`)
+  getAllPlantypes() : Observable<ResponseType>{
+    return this.http.get<ResponseType>(`${environment.apiUrl}/payments/plantype/getall`)
       .pipe(map(resp => {
         return resp;
       }));
   }
-  createNewUser(user) {
+  createNewUser(user) : Observable<ResponseType>{
     console.log(user);
-    return this.http.post(`${environment.apiUrl}/users/members/create`, user)
+    return this.http.post<ResponseType>(`${environment.apiUrl}/users/members/create`, user)
       .pipe(map(resp => {
         return resp;
       }));
   }
-  hasLoggedIn() {
-    return this.storage.ready().then(() => {
-      return this.storage.get(this.HAS_LOGGED_IN).then((value) => {
-        return value === true;
-      });
-    });
-  }
-
 
   public logout() {
     sessionStorage.removeItem('currentUser');

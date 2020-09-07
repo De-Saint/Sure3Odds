@@ -1,38 +1,73 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { GamesProvider, Votes } from './../../providers/games/games';
+import { Component, OnInit } from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Global } from '../../providers/global';
+import { AuthenicationProvider } from '../../providers/authenication/authenication';
 @IonicPage()
 @Component({
   selector: 'page-match-details',
   templateUrl: 'match-details.html',
 })
-export class MatchDetailsPage {
-  tab='stats';
-  constructor(public navCtrl: NavController,private global:Global) {
+
+
+
+
+export class MatchDetailsPage implements OnInit {
+  tab = 'stats';
+  match: any;
+  votes: any;
+  img;
+  vote: Votes = new Votes("", "", { id: "" }, "", "", "");
+
+
+ 
+  img2 = "assets/imgs/appicon.png";
+  constructor(public navCtrl: NavController, private authProvider: AuthenicationProvider, private gameProvider: GamesProvider, private global: Global, private navParams: NavParams) {
+    this.match = this.navParams.data;
+    console.log(this.match);
 
   }
 
-  statsPercentage=[
-    {title:'Ball Possession',team1:'71%',team2:'29%'},
-  ]
-  statsNum=[
-    {title:'Total Shots',team1:23,team2:12,team1P:'75%',team2P:'25%'},
-    {title:'Accurate Passes',team1:629,team2:236,team1P:'80%',team2P:'20%'},
-    {title:'Fouls',team1:8,team2:9,team1P:'49%',team2P:'51%'},
-    {title:'Corners',team1:7,team2:2,team1P:'90%',team2P:'10%'},
-    {title:'Offside',team1:2,team2:4,team1P:'25%',team2P:'75%'},
-  ] 
-  highlights=[ 
-    {time:'84',img:'ball',content:'is simply dummy text of the printing ',team:'team1',content2:''},   
-    {time:'84',img:'flag',content:'is simply dummy text of the printing ',team:'team2',content2:''},   
-    {time:'84',img:'red-card',content:'Player Name',team:'team1',content2:''},  
-    {time:'84',img:'ball',content:'is simply dummy text of the printing ',team:'team2',content2:''},  
-    {time:'84',img:'yellow-card',content:'Player Name',team:'team1',content2:''},   
-    {time:'82',img:'exchange',content:'Player Name',team:'team1',content2:'Player Name'},  
-    {time:'84',img:'ball',content:'is simply dummy text of the printing ',team:'team2',content2:''},   
-    {time:'78',img:'exchange',content:'Player Name',team:'team2',content2:'Player Name'},   
-    {time:'74',img:'yellow-card',content:'Player Name',team:'team1',content2:''},   
-    {time:'84',img:'yellow-card',content:'Player Name',team:'team1',content2:''},   
-  ]; 
-}  
-  
+
+  ngOnInit(): void {
+    this.GetGameVotes();
+  }
+
+  GetGameVotes() {
+    this.gameProvider.GetGameVotes(this.match.id).subscribe(result => {
+      this.votes = result.data;
+    })
+  }
+
+  highlights = [
+    { time: '84', img: 'ball', content: 'is simply dummy text of the printing ', team: 'team1', content2: '' },
+    { time: '84', img: 'flag', content: 'is simply dummy text of the printing ', team: 'team2', content2: '' },
+    { time: '84', img: 'red-card', content: 'Player Name', team: 'team1', content2: '' },
+    { time: '84', img: 'ball', content: 'is simply dummy text of the printing ', team: 'team2', content2: '' },
+    { time: '84', img: 'yellow-card', content: 'Player Name', team: 'team1', content2: '' },
+    { time: '82', img: 'exchange', content: 'Player Name', team: 'team1', content2: 'Player Name' },
+    { time: '84', img: 'ball', content: 'is simply dummy text of the printing ', team: 'team2', content2: '' },
+    { time: '78', img: 'exchange', content: 'Player Name', team: 'team2', content2: 'Player Name' },
+    { time: '74', img: 'yellow-card', content: 'Player Name', team: 'team1', content2: '' },
+    { time: '84', img: 'yellow-card', content: 'Player Name', team: 'team1', content2: '' },
+  ];
+
+  onVote(uservote, homevote, drawvote, awayvote, match) {
+    this.vote.userVote = uservote;//1
+    this.vote.homeVote = homevote;
+    this.vote.drawVote = drawvote;
+    this.vote.awayVote = awayvote;
+    this.vote.game.id = match.id;
+    console.log(this.vote);
+    this.gameProvider.createVote(this.vote).subscribe(res => {
+      if(res.statusCode === 200){
+        this.GetGameVotes();
+      }else{
+        this.authProvider.showToast(res.description);
+      } 
+    }, error => {
+      this.authProvider.showToast(error.error.description);
+    });
+  }
+
+}

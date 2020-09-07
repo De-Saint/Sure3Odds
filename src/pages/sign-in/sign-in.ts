@@ -10,8 +10,6 @@ import { Storage } from '@ionic/storage';
 })
 export class SignInPage implements OnInit {
   submitted = false;
-  error: string;
-  respData: any;
   passwordType: string = 'password';
   passwordIcon: string = 'eye-off';
 
@@ -30,15 +28,14 @@ export class SignInPage implements OnInit {
     if (form.valid) {
       this.auth.login(this.login.email, this.login.password)
         .subscribe(resp => {
-          this.respData = resp;
-          if (this.respData.statusCode === 200) {
-           this.gotoHomePage(this.respData.data, page);
+          if (resp.statusCode === 200) {
+           this.gotoHomePage(resp.data, page);
           } else {
-            this.error = this.respData.description;
-            this.auth.showToast(this.error);
+            this.auth.showToast(resp.description);
           }
         }, error => {
-          this.error = error;
+          console.log(error);
+          // this.auth.showToast(error.error.message);
         });
 
     }

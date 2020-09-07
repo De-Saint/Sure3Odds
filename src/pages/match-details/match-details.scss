@@ -59,7 +59,7 @@ page-match-details {
             border-radius:$control-radius;
             display:inline-block;
             width:calc(100% - #{$content-padding}*2);
-            @extend %outerShadow;
+            // @extend %outerShadow;
             margin:$content-padding;
             .col{
                 p{
@@ -117,6 +117,22 @@ page-match-details {
                }
             }
         }
+        .progressBar{
+            position: relative;
+            display: flex;
+            align-items: center;
+            height:8px;
+            .container{
+                display:inline-block;
+                height:3px;
+                width:100%;
+                background:color($colors,color4);
+            }
+            .progressActive{
+                display:inline-block;
+                height:100%;
+            }
+        }  
     }  
     .timeLine_list{
         margin:$content-padding;
@@ -157,6 +173,38 @@ page-match-details {
         margin:$content-padding;
         @extend %outerShadow;
     }
+
+    .imgs{
+        padding:$content-padding;
+        position: relative;
+        img{
+            display: block;  
+            border-radius: $control-radius; 
+            width:100%;
+        }
+        .imgProfile{
+            @extend .imgBg;
+            width:60px;
+            height:60px;
+            border-radius:50%;  
+            margin:-10px auto 0px;
+            position: absolute;
+            left:0px;
+            right:0px;
+        }
+       
+    }  
+    
+    .nameAndMail{
+        padding:$content-padding;
+        margin-top:48px;
+        text-align: center;
+         
+        p{
+            margin:0px;
+            font-weight:500;  
+        }
+    }  
 }
 
 

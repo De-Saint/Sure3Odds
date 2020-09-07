@@ -12,31 +12,7 @@ import { IonicPage, NavController } from 'ionic-angular';
 export class AllMatchesPage implements OnInit {
 gamesresp:any;
 gamelist:any;
-
-  matches = [
-    {
-      title: 'Favorites',
-      items: [
-        { firstTeamImg: 'assets/imgs/teams/real_madrid.png', firstTeamName: 'Real Madrid', time: '19:30', secondTeamImg: 'assets/imgs/teams/granada.png', secondTeamName: 'Garnada' },
-        { firstTeamImg: 'assets/imgs/teams/barcelona.png', firstTeamName: 'Barcelona', time: '22:30', secondTeamImg: 'assets/imgs/teams/villarreal.png', secondTeamName: 'Villarreal FC' },
-      ]
-    },
-    {
-      title: 'INT - Champions League',
-      items: [
-        { firstTeamImg: 'assets/imgs/teams/liverpool.png', firstTeamName: 'Liverpool', time: '19:30', secondTeamImg: 'assets/imgs/teams/spartak_moscow.png', secondTeamName: 'Spartak Moscow' },
-        { firstTeamImg: 'assets/imgs/teams/maribor.png', firstTeamName: 'Maribor', time: '22:30', secondTeamImg: 'assets/imgs/teams/sevilla.png', secondTeamName: 'Sevilla' },
-      ]
-    },
-    {
-      title: 'INT - Fifa Club World Club',
-      items: [
-        { firstTeamImg: 'assets/imgs/teams/real_madrid.png', firstTeamName: 'Real Madrid', time: '19:30', secondTeamImg: 'assets/imgs/teams/granada.png', secondTeamName: 'Garnada' },
-        { firstTeamImg: 'assets/imgs/teams/barcelona.png', firstTeamName: 'Barcelona', time: '22:30', secondTeamImg: 'assets/imgs/teams/villarreal.png', secondTeamName: 'Villarreal' },
-      ]
-    },
-  ]
-
+match: Object;
   // calender Function
   monthNames = ["January", "February", "March", "April", "May", "June", "July",
     "August", "September", "October", "November", "December"];
@@ -47,16 +23,11 @@ gamelist:any;
   month_num = this.myDate.getMonth();
   month_name = this.monthNames[this.month_num];
   // click day
-  shownGroup;
+  shownGroup = 3;
   constructor(public navCtrl: NavController, private globalProvider: Global,  private gamesProvider: GamesProvider) {
     this.getDaysInMonth(this.month_num, this.year);
-    var date = new Date(this.year, this.month_num);
-    var a = new Date(date);
-    var day_num = a.getDate();
-    this.shownGroup = day_num ;
-
-    this.isGroupShown(this.shownGroup);
-  
+    this.isGroupShown(3);
+    
   }
 
   ngOnInit(): void {
@@ -121,5 +92,9 @@ gamelist:any;
       // this.error = error;
       console.log(JSON.stringify(error));
     });
+  }
+
+  GotoMatchDetails(page){
+    this.navCtrl.push(page)
   }
 }

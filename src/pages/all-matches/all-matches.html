@@ -54,9 +54,9 @@
     <!-- match item  -->
      <ion-item class="matchItem" *ngFor="let match of game.items"> 
       <ion-grid>
-        <ion-row>
+        <ion-row navPush="MatchDetailsPage" [navParams]="match">
           <ion-col col>
-            <ion-item navPush="TeamPage">
+            <ion-item >
               <img src="{{match.hometeam.imageurl}}" item-right  *ngIf="match.hometeam.imageurl"/>
               <img src="assets/imgs/appicon.png"  item-right  *ngIf="!match.hometeam.imageurl"/>
               <p text-right>{{match.hometeam.name}}</p>
@@ -68,7 +68,7 @@
             <p ion-text color="color2" ><b>{{match.selection.name}}</b></p>
           </ion-col>
           <ion-col col>
-            <ion-item navPush="TeamPage">
+            <ion-item >
               <img src="{{match.awayteam.imageurl}}" item-left *ngIf="match.awayteam.imageurl"/>
               <img src="assets/imgs/appicon.png" item-left *ngIf="!match.awayteam.imageurl"/>
               <p text-left>{{match.awayteam.name}}</p>

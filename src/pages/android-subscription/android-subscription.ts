@@ -1,6 +1,7 @@
 import { NewUser, AuthenicationProvider } from './../../providers/authenication/authenication';
 import { Component, OnInit } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, Events } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 @IonicPage()
 @Component({
@@ -8,16 +9,17 @@ import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-an
   templateUrl: 'android-subscription.html',
 })
 export class AndroidSubscriptionPage implements OnInit {
-  newuser: NewUser = new NewUser("", "", "", "", "", "", "", {id:""}, "");
-  plantypes: any;
+  newuser: NewUser = new NewUser("", "", "", "", "", "", "", { id: "" }, "");
   plantypelist: any;
   public public_key = 'pk_test_b3685f824518679567d6356e2636fc184878e833'; //Put your paystack Test or Live Key here
   public channels = ['card']; //Paystack Payment Methods
   public random_id = Math.floor(Date.now() / 1000); //Line to generate reference number
 
   pay_amount: any;
-  constructor(public loadingCtrl: LoadingController,
-    public navCtrl: NavController, public auth: AuthenicationProvider, public navParams: NavParams) {
+  constructor(private loadingCtrl: LoadingController,
+    private events: Events,
+    private storage: Storage,
+    private navCtrl: NavController, private auth: AuthenicationProvider, public navParams: NavParams) {
     this.newuser = navParams.get("newuser");
     console.log(this.newuser);
   }
@@ -36,8 +38,7 @@ export class AndroidSubscriptionPage implements OnInit {
   }
   getPlantypes() {
     this.auth.getAllPlantypes().subscribe(result => {
-      this.plantypes = result;
-      this.plantypelist = this.plantypes.data;
+      this.plantypelist = result.data;
       console.log(this.plantypelist);
     })
   }
@@ -69,17 +70,24 @@ export class AndroidSubscriptionPage implements OnInit {
       loading.present();
       this.newuser.platform = "Android";
       this.newuser.referencecode = String(ref.reference);
-      console.log(this.newuser); 
-      this.auth.createNewUser(this.newuser).subscribe(result => {
-        // this.plantypes = result;
-        loading.dismiss().catch(() => { });
-        // this.plantypelist = this.plantypes.data;
-        console.log(result);
-      }, err => {
+      console.log(this.newuser);
+      this.auth.createNewUser(this.newuser).subscribe(resp => {
+        if (resp.statusCode === 200) {
+          this.auth.login(this.newuser.email, this.newuser.password).subscribe(res => {
+            loading.dismiss().catch(() => { });
+            this.gotoHomePage(resp.data, 'AllMatchesPage');
+          }, error => {
+            loading.dismiss().catch(() => { });
+            this.auth.showToast(error.error.message);
+          })
+        } else {
           loading.dismiss().catch(() => { });
-          console.log(JSON.stringify(err))
-          // this.auth.showToast(JSON.stringify(err))
-        })
+          this.auth.showToast(resp.description);
+        }
+      }, error => {
+        loading.dismiss().catch(() => { });
+        this.auth.showToast(error.error.message);
+      })
     } else {
       this.auth.showToast("Please, the payment was not successful.");
     }
@@ -88,5 +96,17 @@ export class AndroidSubscriptionPage implements OnInit {
   //Event triggered if User cancel the payment
   paymentCancel() {
     this.auth.showToast("You cancelled the payment!");
+  }
+
+  private gotoHomePage(data, page) {
+    this.navCtrl.setRoot(page).then(() => {
+      this.storage.ready().then(() => {
+        this.storage.set("hasSeenLogin", true);
+        const name = this.auth.currentUserDataValue.name;
+        const type = this.auth.currentUserDataValue.user_type;
+        this.auth.showToast("Welcome " + name);
+        this.events.publish('user:login', type, name);
+      });
+    });
   }
 }
