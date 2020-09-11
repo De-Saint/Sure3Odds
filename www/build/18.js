@@ -1,15 +1,14 @@
 webpackJsonp([18],{
 
-/***/ 712:
+/***/ 723:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PhotosDetailsPageModule", function() { return PhotosDetailsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingCountryPageModule", function() { return SettingCountryPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__photos_details__ = __webpack_require__(751);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_img_viewer__ = __webpack_require__(355);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_country__ = __webpack_require__(773);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -19,35 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var PhotosDetailsPageModule = /** @class */ (function () {
-    function PhotosDetailsPageModule() {
+var SettingCountryPageModule = /** @class */ (function () {
+    function SettingCountryPageModule() {
     }
-    PhotosDetailsPageModule = __decorate([
+    SettingCountryPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__photos_details__["a" /* PhotosDetailsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__setting_country__["a" /* SettingCountryPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__photos_details__["a" /* PhotosDetailsPage */]), __WEBPACK_IMPORTED_MODULE_3_ionic_img_viewer__["a" /* IonicImageViewerModule */]
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_country__["a" /* SettingCountryPage */]),
             ],
         })
-    ], PhotosDetailsPageModule);
-    return PhotosDetailsPageModule;
+    ], SettingCountryPageModule);
+    return SettingCountryPageModule;
 }());
 
-//# sourceMappingURL=photos-details.module.js.map
+//# sourceMappingURL=setting-country.module.js.map
 
 /***/ }),
 
-/***/ 751:
+/***/ 773:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PhotosDetailsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingCountryPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global__ = __webpack_require__(353);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,35 +56,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-var PhotosDetailsPage = /** @class */ (function () {
-    function PhotosDetailsPage(navCtrl, global) {
+/**
+ * Generated class for the SettingCountryPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var SettingCountryPage = /** @class */ (function () {
+    function SettingCountryPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
-        this.global = global;
-        this.photos = [
-            "assets/imgs/photos/p1.png",
-            "assets/imgs/photos/p2.png",
-            "assets/imgs/photos/p3.png",
-            "assets/imgs/photos/p4.png",
-            "assets/imgs/photos/p5.png",
-            "assets/imgs/photos/p3.png",
-            "assets/imgs/photos/p1.png",
-            "assets/imgs/photos/p2.png",
-            "assets/imgs/photos/p3.png",
-            "assets/imgs/photos/p4.png",
-            "assets/imgs/photos/p5.png",
-        ];
+        this.navParams = navParams;
     }
-    PhotosDetailsPage = __decorate([
+    SettingCountryPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad SettingCountryPage');
+    };
+    SettingCountryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-photos-details',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/photos-details/photos-details.html"*/'\n<ion-header>\n  <ion-navbar>\n    <ion-title>photos</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only  (click)="global.callSearch($event)">\n        <ion-icon name="md-search"></ion-icon>\n      </button>\n      <button ion-button icon-only navPush="NotificationPage">\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header> \n<ion-content>\n  <ion-list>\n    <ion-item *ngFor="let item of photos" float-left>\n      <img src="{{item}}" imageViewer="{{item}}"/>\n    </ion-item>\n  </ion-list>\n</ion-content>\n  '/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/photos-details/photos-details.html"*/,
+            selector: 'page-setting-country',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-country/setting-country.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Manage Countries</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only navPush="NotificationPage">\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-country/setting-country.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
-    ], PhotosDetailsPage);
-    return PhotosDetailsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* NavParams */]])
+    ], SettingCountryPage);
+    return SettingCountryPage;
 }());
 
-//# sourceMappingURL=photos-details.js.map
+//# sourceMappingURL=setting-country.js.map
 
 /***/ })
 

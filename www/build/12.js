@@ -1,14 +1,14 @@
 webpackJsonp([12],{
 
-/***/ 719:
+/***/ 728:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SelectLeaguePageModule", function() { return SelectLeaguePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignUpPageModule", function() { return SignUpPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__select_league__ = __webpack_require__(760);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sign_up__ = __webpack_require__(778);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SelectLeaguePageModule = /** @class */ (function () {
-    function SelectLeaguePageModule() {
+var SignUpPageModule = /** @class */ (function () {
+    function SignUpPageModule() {
     }
-    SelectLeaguePageModule = __decorate([
+    SignUpPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__select_league__["a" /* SelectLeaguePage */],
+                __WEBPACK_IMPORTED_MODULE_2__sign_up__["a" /* SignUpPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__select_league__["a" /* SelectLeaguePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__sign_up__["a" /* SignUpPage */]),
             ],
         })
-    ], SelectLeaguePageModule);
-    return SelectLeaguePageModule;
+    ], SignUpPageModule);
+    return SignUpPageModule;
 }());
 
-//# sourceMappingURL=select-league.module.js.map
+//# sourceMappingURL=sign-up.module.js.map
 
 /***/ }),
 
-/***/ 760:
+/***/ 778:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SelectLeaguePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global__ = __webpack_require__(353);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignUpPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,54 +58,56 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var SelectLeaguePage = /** @class */ (function () {
-    function SelectLeaguePage(navCtrl, global) {
+var SignUpPage = /** @class */ (function () {
+    function SignUpPage(navCtrl, platform, auth) {
         this.navCtrl = navCtrl;
-        this.global = global;
-        this.favorites = [
-            { img: 'assets/imgs/league/global2.png', name: 'Eroupa League' },
-            { img: 'assets/imgs/league/global2.png', name: 'INT - Champions League' },
-            { img: 'assets/imgs/league/global2.png', name: 'INT - FIFA Club World Cup' },
-        ];
-        this.leagues = [
-            { img: 'assets/imgs/league/la_liga.png', name: 'La Liga' },
-            { img: 'assets/imgs/league/premier_league.png', name: 'Premier League' },
-            { img: 'assets/imgs/league/portuguese_league.png', name: 'Portuguese League' },
-            { img: 'assets/imgs/league/french_league.png', name: 'French League' },
-            { img: 'assets/imgs/league/africa_qualifiers.png', name: 'Africa qualifiers' },
-            { img: 'assets/imgs/league/la_liga.png', name: 'La Liga' },
-            { img: 'assets/imgs/league/premier_league.png', name: 'Premier League' },
-            { img: 'assets/imgs/league/portuguese_league.png', name: 'Portuguese League' },
-            { img: 'assets/imgs/league/french_league.png', name: 'French League' },
-            { img: 'assets/imgs/league/africa_qualifiers.png', name: 'Africa qualifiers' },
-        ];
+        this.platform = platform;
+        this.auth = auth;
+        this.newuser = new __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["b" /* NewUser */]("", "", "", "", "", "", "", { id: "" }, "");
     }
-    SelectLeaguePage.prototype.selectLeague = function (item, $event) {
-        $event.stopPropagation();
-        var index = this.leagues.indexOf(item);
-        if (index > -1) {
-            this.leagues.splice(index, 1);
+    SignUpPage.prototype.createAccount = function (page) {
+        if (this.newuser.firstname == "" || this.newuser.firstname == undefined || this.newuser.firstname == null) {
+            this.auth.showToast("Firstname is empty");
+            return false;
         }
-        this.favorites.push(item);
-    };
-    SelectLeaguePage.prototype.removeLeague = function (item, $event) {
-        $event.stopPropagation();
-        var index = this.favorites.indexOf(item);
-        if (index > -1) {
-            this.favorites.splice(index, 1);
+        else if (this.newuser.lastname == "" || this.newuser.lastname == undefined || this.newuser.lastname == null) {
+            this.auth.showToast("Lastname is empty");
+            return false;
         }
-        this.leagues.push(item);
+        else if (this.newuser.email == "" || this.newuser.email == undefined || this.newuser.email == null) {
+            this.auth.showToast("Email is empty");
+            return false;
+        }
+        else if (this.newuser.phone == "" || this.newuser.phone == undefined || this.newuser.phone == null) {
+            this.auth.showToast("Phone number is empty");
+            return false;
+        }
+        else if (this.newuser.password == "" || this.newuser.password == undefined || this.newuser.password == null) {
+            this.auth.showToast("Password is empty");
+            return false;
+        }
+        else {
+            // if (this.platform.is('android')) {
+            //   console.log(this.user);
+            //   this.navCtrl.push(AndroidsubscriptionPage, { newUser: this.user });
+            // } else if (this.platform.is("ios")) {
+            // } else {
+            // }
+            console.log(this.newuser);
+            this.navCtrl.push(page, { newuser: this.newuser });
+        }
     };
-    SelectLeaguePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-select-league',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/select-league/select-league.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu" ></ion-icon>\n    </button>\n    <ion-title>Select League</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only  (click)="global.callSearch($event)">\n        <ion-icon name="md-search"></ion-icon>\n      </button>\n      <button ion-button icon-only navPush="NotificationPage">\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n  <!-- favorites list -->\n  <ion-list class="favoriteLeagues" *ngIf="favorites.length > 0">\n    <ion-list-header> \n      <ion-icon name="md-star" color="color1" item-left></ion-icon>\n      <h4 ion-text color="dark">Favorites</h4>\n    </ion-list-header>\n    <!-- league item  -->\n    <ion-item *ngFor="let item of favorites" navPush="LeagueDetailsPage">\n      <img item-left src="{{item.img}}"/>\n      <p ion-text color="dark">{{item.name}}</p>\n      <ion-icon name="md-star" color="color2" item-right (click)="removeLeague(item ,$event)"></ion-icon>\n    </ion-item>  \n  </ion-list>\n\n  <!-- Leagues list -->\n  <ion-list class="favoriteLeagues" margin-top>\n    <ion-list-header> \n      <ion-icon name="md-star" color="color4" item-left></ion-icon>\n      <h4 ion-text color="dark">Staff Picks</h4>\n    </ion-list-header>\n    <!-- league item  -->\n    <ion-item *ngFor="let item of leagues"  navPush="LeagueDetailsPage" >\n      <img item-left src="{{item.img}}"/>\n      <p ion-text color="dark">{{item.name}}</p>\n      <ion-icon name="md-star" color="color4" item-right (click)="selectLeague(item,$event)"></ion-icon>\n    </ion-item>  \n  </ion-list>\n</ion-content>  \n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/select-league/select-league.html"*/,
+    SignUpPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
+            selector: 'page-sign-up',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/sign-up/sign-up.html"*/'<ion-header>\n  <ion-navbar>\n  </ion-navbar>\n</ion-header>\n<ion-content  class="sign" style="background-image:url(\'assets/imgs/welcome3.jpg\')" >\n  <div class="signForm">\n    <img src="assets/imgs/appicon.png" style="width: 8em; height: 8em;"/>\n    <p ion-text color="light">Sure3Odds</p>\n    <ion-list>\n      <ion-item class="halfItem" float-left>\n        <ion-icon name="md-person" item-left color="light"></ion-icon>\n        <ion-input type="text" [(ngModel)]="newuser.firstname" name="firstname" id="firstname"  placeholder="First Name"></ion-input>\n      </ion-item>\n      <ion-item class="halfItem"  float-left>\n        <ion-icon name="md-person" item-left color="light"></ion-icon>\n        <ion-input type="text" [(ngModel)]="newuser.lastname" name="lastname" id="lastname" placeholder="Last Name"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-icon name="md-mail" item-left color="light"></ion-icon>\n        <ion-input type="email" [(ngModel)]="newuser.email" name="email" id="email"  placeholder="E-mail"></ion-input>\n      </ion-item>\n\n      <ion-item >\n        <ion-icon name="call" item-left color="light"></ion-icon>\n        <ion-input type="tel" [(ngModel)]="newuser.phone" name="phone" id="phone" placeholder="Phone"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-icon name="md-lock" item-left color="light"></ion-icon>\n        <ion-input type="password"  [(ngModel)]="newuser.password" name="password" id="password" placeholder="Password"></ion-input>\n      </ion-item>\n      <p ion-text color="light" navPush="TermsPage" >I have read and agreed to the <span ion-text color="secondary">Terms And Conditions</span></p>\n    </ion-list>\n    <button ion-button block type="submit" color="color2" (click)="createAccount(\'AndroidSubscriptionPage\')">CREATE ACCOUNT</button>\n   <p ion-text color="light" navPush="SignInPage" >Already have an account ? Login</p>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/sign-up/sign-up.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
-    ], SelectLeaguePage);
-    return SelectLeaguePage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["t" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["w" /* Platform */], __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */]])
+    ], SignUpPage);
+    return SignUpPage;
 }());
 
-//# sourceMappingURL=select-league.js.map
+//# sourceMappingURL=sign-up.js.map
 
 /***/ })
 

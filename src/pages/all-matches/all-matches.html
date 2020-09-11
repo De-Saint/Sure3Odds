@@ -54,7 +54,7 @@
     <!-- match item  -->
      <ion-item class="matchItem" *ngFor="let match of game.items"> 
       <ion-grid>
-        <ion-row navPush="MatchDetailsPage" [navParams]="match">
+        <ion-row navPush="MatchPage" [navParams]="match">
           <ion-col col>
             <ion-item >
               <img src="{{match.hometeam.imageurl}}" item-right  *ngIf="match.hometeam.imageurl"/>

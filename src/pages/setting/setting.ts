@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
-import { Sure3Odds } from '../../app/app.component';
 import { Global } from '../../providers/global';
 @IonicPage()
 @Component({
@@ -8,22 +7,14 @@ import { Global } from '../../providers/global';
   templateUrl: 'setting.html',
 })
 export class SettingPage {
-  public action = false;
-  language='en';
-  constructor(public _myApp:Sure3Odds,public navCtrl: NavController,private global:Global) {
-    this.action = this._myApp.animateVarible;
-    console.log(this.action);
+  tab1Root = 'SettingCountryPage';
+  tab2Root = 'SettingLeaguesPage';
+  tab3Root = 'SettingTeamsPage';
+  tab4Root = 'SettingSelectionsPage';
+  constructor(public navCtrl: NavController,private global:Global) {
+    
   } 
 
-
-
-
-  // animate Function variable animateVarible in app.component
-  public checkbox;
-  animateApp(e:any){ 
-    this._myApp.animateVarible = e.checked;
-    this.action = this._myApp.animateVarible;
-  }
 
 
 }

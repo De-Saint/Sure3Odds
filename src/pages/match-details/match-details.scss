@@ -49,7 +49,7 @@ page-match-details {
             }
         }
     }
-
+   
     .matchStats{
         h5{
             margin:0px;
@@ -136,7 +136,7 @@ page-match-details {
     }  
     .timeLine_list{
         margin:$content-padding;
-        @extend %outerShadow;
+        // @extend %outerShadow;
         border-radius:$control-radius;
         display:inline-block;
         width:calc(100% - #{$content-padding}*2);
@@ -204,7 +204,9 @@ page-match-details {
             margin:0px;
             font-weight:500;  
         }
-    }  
+    } 
+   
+    
 }
 
 

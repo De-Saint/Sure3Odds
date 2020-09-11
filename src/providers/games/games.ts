@@ -5,17 +5,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { ResponseType } from '../interface/response';
 
-export class Votes {
 
-  constructor(
-    public awayVote: string,
-    public drawVote: string,
-    public game: {id},
-    public homeVote: string,
-    public id: string,
-    public userVote: string
-  ) { }
-}
 @Injectable()
 export class GamesProvider {
 
@@ -40,10 +30,22 @@ export class GamesProvider {
       }));
   }
   createVote(vote): Observable<ResponseType> {
-    return this.http.post<ResponseType>(`${environment.apiUrl}//games/vote/create`, vote).pipe(
+    return this.http.post<ResponseType>(`${environment.apiUrl}/games/vote/create`, vote).pipe(
       map((resp: any) => {
         return resp;
       }));
   }
+  GetGameComments(id): Observable<ResponseType> {
+    return this.http.get<ResponseType>(`${environment.apiUrl}/games/comment/get_game_comments/${id}`)
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
 
+  createComment(comments): Observable<ResponseType> {
+    return this.http.post<ResponseType>(`${environment.apiUrl}/games/comment/create`, comments).pipe(
+      map((resp: any) => {
+        return resp;
+      }));
+  }
 }

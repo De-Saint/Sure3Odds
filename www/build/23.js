@@ -1,14 +1,14 @@
 webpackJsonp([23],{
 
-/***/ 707:
+/***/ 789:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewPredictionPageModule", function() { return NewPredictionPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PredictionSubAdminPageModule", function() { return PredictionSubAdminPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__new_prediction__ = __webpack_require__(746);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__prediction_sub_admin__ = __webpack_require__(790);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var NewPredictionPageModule = /** @class */ (function () {
-    function NewPredictionPageModule() {
+var PredictionSubAdminPageModule = /** @class */ (function () {
+    function PredictionSubAdminPageModule() {
     }
-    NewPredictionPageModule = __decorate([
+    PredictionSubAdminPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__new_prediction__["a" /* NewPredictionPage */],
+                __WEBPACK_IMPORTED_MODULE_2__prediction_sub_admin__["a" /* PredictionSubAdminPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__new_prediction__["a" /* NewPredictionPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__prediction_sub_admin__["a" /* PredictionSubAdminPage */]),
             ],
         })
-    ], NewPredictionPageModule);
-    return NewPredictionPageModule;
+    ], PredictionSubAdminPageModule);
+    return PredictionSubAdminPageModule;
 }());
 
-//# sourceMappingURL=new-prediction.module.js.map
+//# sourceMappingURL=prediction-sub-admin.module.js.map
 
 /***/ }),
 
-/***/ 746:
+/***/ 790:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewPredictionPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PredictionSubAdminPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -57,29 +57,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the NewPredictionPage page.
+ * Generated class for the PredictionSubAdminPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var NewPredictionPage = /** @class */ (function () {
-    function NewPredictionPage(navCtrl, navParams) {
+var PredictionSubAdminPage = /** @class */ (function () {
+    function PredictionSubAdminPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    NewPredictionPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad NewPredictionPage');
+    PredictionSubAdminPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad PredictionSubAdminPage');
     };
-    NewPredictionPage = __decorate([
+    PredictionSubAdminPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-new-prediction',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/new-prediction/new-prediction.html"*/'<!--\n  Generated template for the NewPredictionPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>newPrediction</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/new-prediction/new-prediction.html"*/,
+            selector: 'page-prediction-sub-admin',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/prediction-sub-admin/prediction-sub-admin.html"*/'<!--\n  Generated template for the PredictionSubAdminPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>PredictionSubAdmin</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/prediction-sub-admin/prediction-sub-admin.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavParams */]])
-    ], NewPredictionPage);
-    return NewPredictionPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* NavParams */]])
+    ], PredictionSubAdminPage);
+    return PredictionSubAdminPage;
 }());
 
-//# sourceMappingURL=new-prediction.js.map
+//# sourceMappingURL=prediction-sub-admin.js.map
 
 /***/ })
 

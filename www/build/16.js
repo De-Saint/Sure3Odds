@@ -1,14 +1,14 @@
 webpackJsonp([16],{
 
-/***/ 714:
+/***/ 725:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PlayersStatsPageModule", function() { return PlayersStatsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingSelectionsPageModule", function() { return SettingSelectionsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__players_stats__ = __webpack_require__(753);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_selections__ = __webpack_require__(775);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var PlayersStatsPageModule = /** @class */ (function () {
-    function PlayersStatsPageModule() {
+var SettingSelectionsPageModule = /** @class */ (function () {
+    function SettingSelectionsPageModule() {
     }
-    PlayersStatsPageModule = __decorate([
+    SettingSelectionsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__players_stats__["a" /* PlayersStatsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__setting_selections__["a" /* SettingSelectionsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__players_stats__["a" /* PlayersStatsPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_selections__["a" /* SettingSelectionsPage */]),
             ],
         })
-    ], PlayersStatsPageModule);
-    return PlayersStatsPageModule;
+    ], SettingSelectionsPageModule);
+    return SettingSelectionsPageModule;
 }());
 
-//# sourceMappingURL=players-stats.module.js.map
+//# sourceMappingURL=setting-selections.module.js.map
 
 /***/ }),
 
-/***/ 753:
+/***/ 775:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlayersStatsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingSelectionsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global__ = __webpack_require__(353);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -57,36 +56,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-var PlayersStatsPage = /** @class */ (function () {
-    function PlayersStatsPage(navCtrl, global) {
+/**
+ * Generated class for the SettingSelectionsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var SettingSelectionsPage = /** @class */ (function () {
+    function SettingSelectionsPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
-        this.global = global;
-        this.players = [
-            { img: 'assets/imgs/player1.png', name: 'Player Name', team: 'Arsenal', num: '10' },
-            { img: 'assets/imgs/player2.png', name: 'Player Name', team: 'Arsenal', num: '7' },
-            { img: 'assets/imgs/player1.png', name: 'Player Name', team: 'Arsenal', num: '7' },
-            { img: 'assets/imgs/player2.png', name: 'Player Name', team: 'Arsenal', num: '7' },
-            { img: 'assets/imgs/player1.png', name: 'Player Name', team: 'Arsenal', num: '6' },
-            { img: 'assets/imgs/player2.png', name: 'Player Name', team: 'Arsenal', num: '6' },
-            { img: 'assets/imgs/player2.png', name: 'Player Name', team: 'Arsenal', num: '6' },
-            { img: 'assets/imgs/player1.png', name: 'Player Name', team: 'Arsenal', num: '5' },
-            { img: 'assets/imgs/player2.png', name: 'Player Name', team: 'Arsenal', num: '4' },
-            { img: 'assets/imgs/player2.png', name: 'Player Name', team: 'Arsenal', num: '4' },
-            { img: 'assets/imgs/player1.png', name: 'Player Name', team: 'Arsenal', num: '4' },
-            { img: 'assets/imgs/player2.png', name: 'Player Name', team: 'Arsenal', num: '4' },
-        ];
+        this.navParams = navParams;
     }
-    PlayersStatsPage = __decorate([
+    SettingSelectionsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad SettingSelectionsPage');
+    };
+    SettingSelectionsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-players-stats',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/players-stats/players-stats.html"*/'\n<ion-header>\n  <ion-navbar>\n    <ion-title>Goals</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-item class="avatarItem" *ngFor="let item of players">\n      <ion-avatar item-left>\n        <!-- player image -->\n        <img src="{{item.img}}"/>\n      </ion-avatar>\n      <!-- player Name -->\n      <h5 ion-text color="dark">{{item.name}}</h5>\n      <!-- player Team -->\n      <p ion-text color="dark">{{item.team}}</p>\n      <!-- goals , assists or rating Number -->\n      <span ion-text color="color1" class="rateNum" item-right>{{item.num}}</span>\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/players-stats/players-stats.html"*/,
+            selector: 'page-setting-selections',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-selections/setting-selections.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Manage Selections</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only navPush="NotificationPage">\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-selections/setting-selections.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
-    ], PlayersStatsPage);
-    return PlayersStatsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* NavParams */]])
+    ], SettingSelectionsPage);
+    return SettingSelectionsPage;
 }());
 
-//# sourceMappingURL=players-stats.js.map
+//# sourceMappingURL=setting-selections.js.map
 
 /***/ })
 

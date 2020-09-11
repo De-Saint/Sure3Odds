@@ -1,6 +1,8 @@
 <ion-header>
-
   <ion-navbar>
+    <button ion-button menuToggle icon-only>
+      <ion-icon class="goal-menu"></ion-icon>
+    </button>
     <ion-title>Match Details</ion-title>
     <ion-buttons end>
       <button ion-button icon-only navPush="NotificationPage">
@@ -50,17 +52,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [ngSwitch]='tab'>
-  <!-- tabs -->
-  <ion-segment [(ngModel)]="tab">
-    <ion-segment-button value="stats">DETAILS</ion-segment-button>
-    <ion-segment-button value="goals">VOTES</ion-segment-button>
-    <ion-segment-button value="timeline">COMMENTS</ion-segment-button>
-  </ion-segment>
-
+<ion-content>
   <!-- match stats -->
-  <div class="matchStats" margin-top *ngSwitchCase="'stats'">
-    <h5 ion-text text-center color="color2">Match Details</h5>
+  <div class="matchStats" margin-top>
+ 
     <ion-list>
       <!-- state with percentage -->
       <ion-item margin-top style="margin-bottom: 0.5em;">
@@ -135,7 +130,6 @@
           </ion-row>
         </ion-grid>
       </ion-item>
-
       <ion-item style="margin-bottom: 0.5em;">
         <ion-grid>
           <ion-row>
@@ -184,173 +178,6 @@
           </ion-row>
         </ion-grid>
 
-      </ion-item>
-    </ion-list>
-  </div>
-
-  <!-- goals -->
-  <div class="goals" *ngSwitchCase="'goals'" padding>
-    <h5 ion-text text-center color="color2">Match Votes</h5>
-    <ion-list>
-      <h5 ion-text text-center color="color2">Current Votes</h5>
-      <ion-grid style="margin-bottom: 0.5em;">
-        <ion-row>
-          <ion-col col-auto text-left style="width: 10em;">
-            <p ion-text color="color1" no-margin><b>{{match.hometeam.name}} Votes</b></p>
-          </ion-col>
-          <ion-col col text-center>
-            <p ion-text color="dark" no-margin><b>Draw Votes</b></p>
-          </ion-col>
-          <ion-col col-auto text-right style="width: 10em;">
-            <p ion-text color="color1" no-margin><b>{{match.awayteam.name}} Votes</b></p>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-auto text-left>
-            <p ion-text color="dark" no-margin>{{votes.HomeVotes}}</p>
-          </ion-col>
-          <ion-col col text-center>
-            <p ion-text color="dark" no-margin>{{votes.DrawVotes}}</p>
-          </ion-col>
-          <ion-col col-auto text-right>
-            <p ion-text color="dark" no-margin>{{votes.AwayVotes}}</p>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-      <hr>
-
-      <div class="imgs" *ngIf="votes.UserVote">
-        <div class="imgProfile" [ngStyle]="{'background-image':'url(' + img2 + ')'}">
-
-        </div>
-      </div>
-      <div class="nameAndMail" *ngIf="votes.UserVote">
-        <h5 ion-text color="dark">{{votes.UserVote.user.lastname}} {{votes.UserVote.user.firstname}}</h5>
-        <p ion-text color="dark" *ngIf="votes.UserVote.userVote === 1">{{votes.UserVote.game.hometeam.name}}:
-          <i>Wins</i></p>
-        <p ion-text color="dark" *ngIf="votes.UserVote.userVote === 2">{{votes.UserVote.game.awayteam.name}}:
-          <i>Wins</i></p>
-        <p ion-text color="dark" *ngIf="votes.UserVote.userVote === 3">Draw Match</p>
-      </div>
-      <hr>
-      <h5 ion-text text-center color="color2"  *ngIf="!votes.UserVote">Who do you think is going to win?</h5>
-      <h5 ion-text text-center color="color2"  *ngIf="votes.UserVote">You have voted.</h5>
-      <div style="margin-bottom: 0.5em;" text-center margin-top ion-text color="danger" *ngIf="!votes.UserVote">
-        You have not voted.
-      </div>
-      <ion-item margin-top style="margin-bottom: 0.5em;">
-        <ion-grid>
-          <ion-row>
-            <ion-col col text-center>
-              <p ion-text ion-button *ngIf="votes.UserVote" disabled="true" small outline color="color1" (click)="onVote(1, 1, 0, 0, match)" no-margin> <b>Vote - {{match.hometeam.name}}</b></p>
-              <p ion-text ion-button *ngIf="!votes.UserVote" small outline color="color1" (click)="onVote(1, 1, 0, 0, match)" no-margin> <b>Vote - {{match.hometeam.name}}</b></p>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col col-5>
-              <div class="progressBar" progress-right>
-                <span class="container"></span>
-              </div>
-            </ion-col>
-            <ion-col col-2 text-center>
-              <p ion-text color="dark" no-margin>Home Win</p>
-            </ion-col>
-            <ion-col col-5>
-              <div class="progressBar">
-                <span class="container"></span>
-              </div>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-item>
-
-      <ion-item style="margin-bottom: 0.5em;">
-        <ion-grid>
-          <ion-row>
-            <ion-col col text-center>
-               <p ion-text ion-button *ngIf="votes.UserVote" disabled="true" small outline color="color1" (click)="onVote(3,0,1,0,  match)" no-margin><b>Vote - X</b>
-               <p ion-text ion-button *ngIf="!votes.UserVote" small outline color="color1" (click)="onVote(3,0,1,0,  match)" no-margin><b>Vote - X</b>
-            </p>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col col-5>
-              <div class="progressBar" progress-right>
-                <span class="container"></span>
-              </div>
-            </ion-col>
-            <ion-col col-2 text-center>
-              <p ion-text color="dark" no-margin>Draw</p>
-            </ion-col>
-            <ion-col col-5>
-              <div class="progressBar">
-                <span class="container"></span>
-              </div>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-item>
-      <ion-item style="margin-bottom: 0.5em;">
-        <ion-grid>
-          <ion-row>
-            <ion-col col text-center>
-              <p ion-text ion-button *ngIf="votes.UserVote" disabled="true" small outline color="color1"  (click)="onVote(2,0,0,1, match)" no-margin> <b>Vote - {{match.awayteam.name}}</b></p>
-              <p ion-text ion-button *ngIf="!votes.UserVote" small outline color="color1"  (click)="onVote(2,0,0,1, match)" no-margin> <b>Vote - {{match.awayteam.name}}</b></p>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col col-5>
-              <div class="progressBar" progress-right>
-                <span class="container"></span>
-              </div>
-            </ion-col>
-            <ion-col col-2 text-center>
-              <p ion-text color="dark" no-margin>Away Win</p>
-            </ion-col>
-            <ion-col col-5>
-              <div class="progressBar">
-                <span class="container"></span>
-              </div>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-item>
-
-     
-    </ion-list>
-  </div>
-
-  <div *ngSwitchCase="'timeline'">
-    <h4 margin ion-text color="color2">Man of the match</h4>
-    <ion-item class="avatarItem">
-      <ion-avatar item-left>
-        <img src="assets/imgs/player2.png" />
-      </ion-avatar>
-      <h5 ion-text color="dark">Player Name</h5>
-      <p ion-text color="dark">Arsenal</p>
-      <span ion-text color="color1" class="rateNum" item-right>6</span>
-    </ion-item>
-    <!-- highlights -->
-    <ion-list class="timeLine_list">
-      <ion-item [ngClass]="{'team2':item.team =='team2'}" *ngFor="let item of highlights">
-        <ion-grid>
-          <ion-row>
-            <ion-col col-auto>
-              <p ion-text color="color1">{{item.time}}'</p>
-            </ion-col>
-            <ion-col col-auto>
-              <img src="assets/imgs/referee/{{item.img}}.png">
-            </ion-col>
-            <ion-col col>
-              <!-- for exchange player -->
-              <p ion-text color="color1" *ngIf="item.content2!=''">{{item.content}}</p>
-              <p ion-text color="color2" *ngIf="item.content2!=''">{{item.content2}}</p>
-
-              <!-- for other -->
-              <p ion-text color="dark" *ngIf="item.content2==''">{{item.content}}</p>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
       </ion-item>
     </ion-list>
   </div>

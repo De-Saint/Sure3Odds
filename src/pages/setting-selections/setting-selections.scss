@@ -1,0 +1,52 @@
+page-setting-selections {
+    .header{
+        .toolbar{
+            &.matchResultBar{
+                padding:$content-padding*2 $content-padding/2;
+                .toolbar-background{
+                    background: darken(color($colors,color1),5%);
+                }
+            }
+        }
+        .matchResult{
+            height:auto;
+            p{
+                margin:0px;
+                margin-top:$content-padding;
+                font-weight:400;
+                max-width:100%;
+            }
+            .grid{
+                max-width:440px;
+            }
+            .col{
+                .item{
+                    .label{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        img{
+                            height:44px;
+                            object-fit: contain;
+                        }
+                        p{
+                            color:color($colors,light);
+                            margin-top:$content-padding;
+                            font-weight:400;
+                            max-width:100%;
+                        }
+                    }
+                }
+                &[col-auto]{
+                    .result{
+                        span{
+                            color: color($colors,light);
+                            font-size:3rem!important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

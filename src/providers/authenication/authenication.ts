@@ -29,7 +29,8 @@ export class NewUser {
 export class User {
   name: string;
   user_type: string
-  token: string;
+  jti: number;
+
 }
 export class Token {
   token: string;

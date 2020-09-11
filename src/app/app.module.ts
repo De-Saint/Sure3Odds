@@ -21,12 +21,12 @@ var config = {
   mode: 'md',
   modalEnter: 'modal-slide-in',
   modalLeave: 'modal-slide-out',
+  tabsPlacement: 'top',
   pageTransition: 'md',
 };
 @NgModule({
   declarations: [
     Sure3Odds,
-
   ],
   imports: [
     BrowserModule, IonicImageViewerModule,

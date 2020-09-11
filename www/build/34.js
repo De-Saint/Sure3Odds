@@ -1,14 +1,14 @@
 webpackJsonp([34],{
 
-/***/ 695:
+/***/ 707:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdvisersPageModule", function() { return AdvisersPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MatchPageModule", function() { return MatchPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__advisers__ = __webpack_require__(733);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__match__ = __webpack_require__(755);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AdvisersPageModule = /** @class */ (function () {
-    function AdvisersPageModule() {
+var MatchPageModule = /** @class */ (function () {
+    function MatchPageModule() {
     }
-    AdvisersPageModule = __decorate([
+    MatchPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__advisers__["a" /* AdvisersPage */],
+                __WEBPACK_IMPORTED_MODULE_2__match__["a" /* MatchPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__advisers__["a" /* AdvisersPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__match__["a" /* MatchPage */]),
             ],
         })
-    ], AdvisersPageModule);
-    return AdvisersPageModule;
+    ], MatchPageModule);
+    return MatchPageModule;
 }());
 
-//# sourceMappingURL=advisers.module.js.map
+//# sourceMappingURL=match.module.js.map
 
 /***/ }),
 
-/***/ 733:
+/***/ 755:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdvisersPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MatchPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -56,30 +56,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/**
- * Generated class for the AdvisersPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var AdvisersPage = /** @class */ (function () {
-    function AdvisersPage(navCtrl, navParams) {
+
+var MatchPage = /** @class */ (function () {
+    function MatchPage(app, navCtrl, navParams) {
+        this.app = app;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.tab1Root = 'MatchDetailsPage';
+        this.tab2Root = 'MatchVotesPage';
+        this.tab3Root = 'MatchCommentsPage';
+        this.match = this.navParams.data;
     }
-    AdvisersPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad AdvisersPage');
-    };
-    AdvisersPage = __decorate([
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])('myTabs'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["y" /* Tabs */])
+    ], MatchPage.prototype, "tabRef", void 0);
+    MatchPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-advisers',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/advisers/advisers.html"*/'<!--\n  Generated template for the AdvisersPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Advisers</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/advisers/advisers.html"*/,
+            selector: 'page-match',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/match/match.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" [rootParams]="match" tabTitle="Details" ></ion-tab>\n  <ion-tab [root]="tab2Root" [rootParams]="match" tabTitle="Votes" ></ion-tab>\n  <ion-tab [root]="tab3Root" [rootParams]="match" tabTitle="Comments"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/match/match.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavParams */]])
-    ], AdvisersPage);
-    return AdvisersPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* App */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* NavParams */]])
+    ], MatchPage);
+    return MatchPage;
 }());
 
-//# sourceMappingURL=advisers.js.map
+//# sourceMappingURL=match.js.map
 
 /***/ })
 
