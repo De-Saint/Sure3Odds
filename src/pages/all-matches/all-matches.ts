@@ -1,8 +1,8 @@
+import { AuthenicationProvider } from './../../providers/authenication/authenication';
 import { Global } from './../../providers/global';
 import { GamesProvider } from './../../providers/games/games';
 import { Component, OnInit } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
-
 
 @IonicPage()
 @Component({
@@ -10,9 +10,8 @@ import { IonicPage, NavController } from 'ionic-angular';
   templateUrl: 'all-matches.html',
 })
 export class AllMatchesPage implements OnInit {
-gamesresp:any;
-gamelist:any;
-match: Object;
+  gamelist: any;
+  match: Object;
   // calender Function
   monthNames = ["January", "February", "March", "April", "May", "June", "July",
     "August", "September", "October", "November", "December"];
@@ -23,15 +22,22 @@ match: Object;
   month_num = this.myDate.getMonth();
   month_name = this.monthNames[this.month_num];
   // click day
-  shownGroup = 3;
-  constructor(public navCtrl: NavController, private globalProvider: Global,  private gamesProvider: GamesProvider) {
+  currentDate:any;
+  shownGroup : any;
+  constructor(public navCtrl: NavController, private globalProvider: Global,
+    private authProvider: AuthenicationProvider,
+     private gamesProvider: GamesProvider) {
     this.getDaysInMonth(this.month_num, this.year);
-    this.isGroupShown(3);
-    
+    this.currentDate = this.myDate;
   }
 
   ngOnInit(): void {
-    this.GetGames();
+    const currentdate = this.globalProvider.getDate();
+    this.GetGames(currentdate);
+    var date = this.myDate.getDate();
+    var today = date - 1;
+    this.isGroupShown(today);
+    this.shownGroup = today;
   }
 
   getDaysInMonth(month, year) {
@@ -40,7 +46,7 @@ match: Object;
     while (date.getMonth() === month) {
       var a = new Date(date);
       var day_num = a.getDate();
-      this.days.push({ name: this.days_name[a.getDay()], day_num: day_num });
+      this.days.push({ name: this.days_name[a.getDay()], day_num: day_num, month: month + 1, year: year });
       date.setDate(date.getDate() + 1);
     }
   }
@@ -68,33 +74,39 @@ match: Object;
     this.getDaysInMonth(this.month_num, this.year);
   }
   toggleGroup(group) {
-    console.log(group);
     this.shownGroup = group;
-  };
-  isGroupShown(group) {
+  }
+  private isGroupShown(group) {
     return this.shownGroup === group;
-  };
-
-
-  GetGames() {//myDate
-    const currentdate = this.globalProvider.getDate();
-    this.gamesProvider.GetGames(currentdate)
-    .subscribe(resp => {
-      this.gamesresp = resp;
-      if (this.gamesresp.statusCode === 200) {
-        this.gamelist = this.gamesresp.data;
-        console.log(this.gamelist);
-      } else {
-        // this.error = this.gamesresp.description;
-        console.log(this.gamesresp.description);
-      }
-    }, error => {
-      // this.error = error;
-      console.log(JSON.stringify(error));
-    });
   }
 
-  GotoMatchDetails(page){
+
+  onClick(day):void {
+    this.shownGroup = null;
+    var date = this.gamesProvider.computeOldMatchDate(day);
+    this.GetGames(date);
+    this.month_name = this.monthNames[this.month_num];
+    this.days = [];
+    this.getDaysInMonth(this.month_num, this.year);
+  }
+
+  GetGames(currentdate) {
+    this.gamesProvider.GetGames(currentdate)
+      .subscribe(resp => {
+        if (resp.statusCode === 200) {
+          this.gamelist = resp.data;
+        } else {
+          console.log(resp.description);
+        }
+      }, error => {
+        console.log(JSON.stringify(error));
+        this.authProvider.showToast(error.error.description);
+      });
+  }
+
+  GotoMatchDetails(page) {
     this.navCtrl.push(page)
   }
+
+
 }

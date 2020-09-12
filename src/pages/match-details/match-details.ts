@@ -13,7 +13,7 @@ import { AuthenicationProvider } from '../../providers/authenication/authenicati
 
 export class MatchDetailsPage implements OnInit {
   @ViewChild(Content) contentArea: Content;
-  @ViewChild(List, {read: ElementRef}) chatList: ElementRef;
+  @ViewChild(List, { read: ElementRef }) chatList: ElementRef;
   tab = 'stats';
   match: any;
   votes: any;
@@ -32,23 +32,18 @@ export class MatchDetailsPage implements OnInit {
     console.log(this.match);
 
   }
-  ionViewDidLoad(){
+  ionViewDidLoad() {
 
     this.mutationObserver = new MutationObserver((mutations) => {
-        this.contentArea.scrollToBottom();
+      this.contentArea.scrollToBottom();
     });
 
     this.mutationObserver.observe(this.chatList.nativeElement, {
-        childList: true
+      childList: true
     });
-
-}
-  ionViewDidEnter() {
-    // this.ScrollToBottom();
-   
-   
   }
-  onClick(){
+
+  onClick() {
     this.contentArea.scrollToBottom(500);
   }
 
@@ -103,7 +98,7 @@ export class MatchDetailsPage implements OnInit {
       this.gameProvider.createComment(this.comment).subscribe(res => {
         if (res.statusCode === 200) {
           this.GetGameComments();
-  
+
           // this.content.scrollToBottom();
         } else {
           this.authProvider.showToast(res.description);

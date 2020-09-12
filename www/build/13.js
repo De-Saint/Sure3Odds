@@ -1,6 +1,6 @@
 webpackJsonp([13],{
 
-/***/ 736:
+/***/ 729:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignInPageModule", function() { return SignInPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sign_in__ = __webpack_require__(786);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sign_in__ = __webpack_require__(781);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var SignInPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 786:
+/***/ 781:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -110,7 +110,7 @@ var SignInPage = /** @class */ (function () {
     };
     SignInPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
-            selector: 'page-sign-in',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/sign-in/sign-in.html"*/'<ion-content class="sign" style="background-image:url(\'assets/imgs/welcome3.jpg\')">\n\n  <form #loginForm="ngForm">\n    <div class="signForm">\n      <img src="assets/imgs/appicon.png" style="width: 8em; height: 8em;" />\n      <p ion-text color="light">Sure3Odds</p>\n      <ion-list>\n        <ion-item>\n          <ion-icon name="md-mail" item-left color="light"></ion-icon>\n          <ion-input type="email" [(ngModel)]="login.email" name="email" required placeholder="E-mail"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-icon name="md-lock" item-left color="light"></ion-icon>\n          <ion-input [type]="passwordType" clearOnEdit="false" type="password" [(ngModel)]="login.password" name="password" required placeholder="Password"></ion-input>\n          <ion-icon name="eye-off" item-right color="light" style="font-size: large; margin-top: 0.5em !important;" [name]="passwordIcon" class="passwordIcon" (click)=\'hideShowPassword()\'></ion-icon>\n        </ion-item>\n      </ion-list>\n      <button class="" ion-button block color="color2" (click)="onLogin(loginForm, \'AllMatchesPage\')" type="submit">LOGIN</button>\n      <p ion-text color="light" navPush="SignUpPage">No account yet ? Create one</p>\n      <p ion-text color="light">Bet responsively 18+ || <span ion-text color="light" navPush="FreeTipsPage">Free Tips ||</span></p>\n    </div>\n  </form>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/sign-in/sign-in.html"*/,
+            selector: 'page-sign-in',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/sign-in/sign-in.html"*/'<ion-content class="sign" style="background-image:url(\'assets/imgs/welcome3.jpg\')">\n\n  <form #loginForm="ngForm">\n    <div class="signForm">\n      <img src="assets/imgs/appicon.png" style="width: 8em; height: 8em;" />\n      <p ion-text color="light">Sure3Odds</p>\n      <ion-list>\n        <ion-item>\n          <ion-icon name="md-mail" item-left color="light"></ion-icon>\n          <ion-input type="email" [(ngModel)]="login.email" name="email" required placeholder="E-mail"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-icon name="md-lock" item-left color="light"></ion-icon>\n          <ion-input [type]="passwordType" clearOnEdit="false" type="password" [(ngModel)]="login.password"\n            name="password" required placeholder="Password"></ion-input>\n          <ion-icon name="eye-off" item-right color="light" style="font-size: large; margin-top: 0.5em !important;"\n            [name]="passwordIcon" class="passwordIcon" (click)=\'hideShowPassword()\'></ion-icon>\n        </ion-item>\n      </ion-list>\n      <button class="" ion-button block color="color2" (click)="onLogin(loginForm, \'AllMatchesPage\')"\n        type="submit">LOGIN</button>\n      <p ion-text color="light" navPush="SignUpPage">No account yet ? Create one</p>\n      <p ion-text color="light">Bet responsively 18+ || <span ion-text color="light" navPush="FreeTipsPage">Free Tips\n          ||</span></p>\n    </div>\n  </form>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/sign-in/sign-in.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["t" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* Events */],

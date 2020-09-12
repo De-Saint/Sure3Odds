@@ -8,45 +8,56 @@ page-setting-country {
                 }
             }
         }
-        .matchResult{
-            height:auto;
-            p{
-                margin:0px;
-                margin-top:$content-padding;
-                font-weight:400;
-                max-width:100%;
-            }
-            .grid{
-                max-width:440px;
-            }
-            .col{
-                .item{
-                    .label{
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        img{
-                            height:44px;
-                            object-fit: contain;
-                        }
+       
+    }
+    .photoItem{
+        border-radius:$control-radius;
+        @extend %outerShadow;
+        margin-bottom:$content-padding;
+    }
+    .teamMatchs{
+        .item{
+            &.thumbnailItem{
+                padding:$content-padding*2 $content-padding;
+                margin:$content-padding;
+                @extend %outerShadow;
+                &:last-of-type{
+                    margin-bottom:$content-padding!important;
+                }
+                ion-thumbnail{
+                    img{
+                        width:30px;
+                        height:30px;
+                    }
+                }
+                .col{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    &:last-of-type{
+                        text-align: center;
                         p{
-                            color:color($colors,light);
-                            margin-top:$content-padding;
-                            font-weight:400;
-                            max-width:100%;
+                            @include whiteNormal(32px,2);
                         }
                     }
                 }
-                &[col-auto]{
-                    .result{
-                        span{
-                            color: color($colors,light);
-                            font-size:3rem!important;
-                        }
+                
+                .matchTime,.matchResult{
+                    text-align: center;
+                    width:60px; 
+                    span{
+                        font-size:1.6rem;
+                        font-weight:500;
+                        @include whiteNormal(20px,1);
+                    }
+                    p{
+                        font-size:.8rem!important;
+                        @include whiteNormal(15px,1);
+                        margin:0px;
                     }
                 }
             }
         }
     }
+
 }

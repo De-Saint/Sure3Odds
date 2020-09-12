@@ -13,15 +13,23 @@ export class GamesProvider {
 
   }
 
-  GetGames(matchDate: Date): Observable<ResponseType> {
-    console.log(matchDate);
+  GetGames(matchDate): Observable<ResponseType> {
     const params = new HttpParams().set("matchDate", String(matchDate));
     return this.http.get<ResponseType>(`${environment.apiUrl}/games/game/get_by_userid`, { params })
       .pipe(map(resp => {
         return resp;
       }));
   }
-
+  computeOldMatchDate(group) {
+    if (group.day_num < 10) {
+      group.day_num = '0' + group.day_num
+    }
+    if (group.month < 10) {
+      group.month = '0' + group.month
+    }
+    var date = group.year + '-' + group.month + '-' + group.day_num;
+    return date;
+  }
 
   GetGameVotes(id): Observable<ResponseType> {
     return this.http.get<ResponseType>(`${environment.apiUrl}/games/vote/get_game_votes/${id}`)
@@ -45,6 +53,28 @@ export class GamesProvider {
   createComment(comments): Observable<ResponseType> {
     return this.http.post<ResponseType>(`${environment.apiUrl}/games/comment/create`, comments).pipe(
       map((resp: any) => {
+        return resp;
+      }));
+  }
+
+  GetCountries(pageNo, pageSize): Observable<ResponseType> {
+    const params = new HttpParams()
+      .set('pageNo', pageNo)
+      .set('pageSize', pageSize);
+    return this.http.get<ResponseType>(`${environment.apiUrl}/games/country/get_all`, {params:params})
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
+  GetLeagues(): Observable<ResponseType> {
+    return this.http.get<ResponseType>(`${environment.apiUrl}/games/league/getall`)
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
+  GetTeams(): Observable<ResponseType> {
+    return this.http.get<ResponseType>(`${environment.apiUrl}/games/team/getall`)
+      .pipe(map(resp => {
         return resp;
       }));
   }

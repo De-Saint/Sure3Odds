@@ -13,5 +13,28 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-searchbar [(ngModel)]="searchTerm" (ionCancel)="onCancel($event)" [showCancelButton]="true"
+  (ionClear)="onClear($event)" (ionInput)="onSearch()">
+</ion-searchbar>
+<div class="leagueStats">
+  <ion-list *ngFor="let team of teams">
+    <ion-item class="thumbnailItem">
+      <ion-thumbnail item-left>
+        <img src="{{team.imageurl}}" *ngIf="team.imageurl" />
+        <img src="assets/imgs/appicon.png" *ngIf="!team.imageurl" />
+      </ion-thumbnail>
+      <!-- team Name -->
+      <h5 ion-text padding-left margin-left color="dark">{{team.name}}</h5>
+      <!-- note -->
+      <p ion-text color="dark">{{team.league.name}}</p>
+      <!-- goals or rating Number -->
+      <span ion-text color="color1" class="" item-right>{{team.country.name}}</span>
+    </ion-item>
+  </ion-list>
+</div>
+
+<div class="" *ngIf="error">
+  <p ion-text text-center color="color2">No result found!</p> 
+ </div>
 
 </ion-content>

@@ -36,11 +36,12 @@
       <ion-scroll scrollX="true" scrollY="false" >
         <div class="day" *ngFor="let day of days ; let i=index" (click)="toggleGroup(i)" [ngClass]="{'active': isGroupShown(i)}" >
           <p>{{day.name}}</p>
-          <button ion-button clear>{{day.day_num}} </button>
+          <button ion-button clear (click)="onClick(day)">{{day.day_num}} </button>
         </div>
       </ion-scroll>
     </div>
 
+    <p ion-text text-center no-margin color="light"><b>{{currentDate |  date:'mediumDate'}}</b></p>
   </ion-toolbar>
 </ion-header>
 <ion-content>
@@ -52,7 +53,8 @@
       <ion-icon name="football" color="color1" item-left></ion-icon>
     </ion-list-header>
     <!-- match item  -->
-     <ion-item class="matchItem" *ngFor="let match of game.items"> 
+    <div class="" *ngIf="game.items">
+      <ion-item class="matchItem" *ngFor="let match of game.items"> 
       <ion-grid>
         <ion-row navPush="MatchPage" [navParams]="match">
           <ion-col col>
@@ -77,6 +79,11 @@
         </ion-row> 
        </ion-grid>
      </ion-item> 
+    </div>
+    <div class="" *ngIf="game.msg">
+     <p ion-text text-center color="color2">{{game.msg}}</p> 
+    </div>
+     
   </ion-list>
    <!-- matches list -->
 </ion-content>

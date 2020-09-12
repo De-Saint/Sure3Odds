@@ -40148,7 +40148,7 @@ ion-badge {
   overflow: hidden;
 }
 
-.card, .topNews, .tabelList .item.item-block .grid, .leagueMatches .allMatches, .leagueStats .list .item.item-block, page-all-matches .list, page-home .list, page-league-details .photoItem, page-match-comments .avatarItem, page-match-comments .item.thumbnailItem, page-match-details .avatarItem, page-match-details .item.thumbnailItem, page-match-votes .avatarItem, page-match-votes .item.thumbnailItem, page-notification .list .item, page-photos .photoItem, page-players-stats .list, page-profile .otherForm, page-select-league .favoriteLeagues, page-team .photoItem, page-team .teamMatchs .item.thumbnailItem, page-team .squad, page-teams-stats .list .item, .commentsList {
+.card, .topNews, .tabelList .item.item-block .grid, .leagueMatches .allMatches, .leagueStats .list .item.item-block, page-all-matches .list, page-home .list, page-league-details .photoItem, page-match-comments .avatarItem, page-match-comments .item.thumbnailItem, page-match-details .avatarItem, page-match-details .item.thumbnailItem, page-match-votes .avatarItem, page-match-votes .item.thumbnailItem, page-notification .list .item, page-photos .photoItem, page-players-stats .list, page-profile .otherForm, page-select-league .favoriteLeagues, page-setting-country .photoItem, page-setting-country .teamMatchs .item.thumbnailItem, page-setting-leagues .photoItem, page-setting-leagues .teamMatchs .item.thumbnailItem, page-setting-leagues .squad, page-setting-teams .photoItem, page-setting-teams .teamMatchs .item.thumbnailItem, page-team .photoItem, page-team .teamMatchs .item.thumbnailItem, page-team .squad, page-teams-stats .list .item, .commentsList {
   -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.29);
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.29);
 }
@@ -49967,22 +49967,26 @@ page-setting-country .header .toolbar.matchResultBar .toolbar-background {
   background: #0b4040;
 }
 
-page-setting-country .header .matchResult {
-  height: auto;
+page-setting-country .photoItem {
+  border-radius: 4px;
+  margin-bottom: 4px;
 }
 
-page-setting-country .header .matchResult p, page-setting-country .header .matchResult .select-popover .popover-content .list .item .label, .select-popover .popover-content .list .item page-setting-country .header .matchResult .label {
-  margin: 0px;
-  margin-top: 4px;
-  font-weight: 400;
-  max-width: 100%;
+page-setting-country .teamMatchs .item.thumbnailItem {
+  padding: 8px 4px;
+  margin: 4px;
 }
 
-page-setting-country .header .matchResult .grid {
-  max-width: 440px;
+page-setting-country .teamMatchs .item.thumbnailItem:last-of-type {
+  margin-bottom: 4px !important;
 }
 
-page-setting-country .header .matchResult .col .item .label {
+page-setting-country .teamMatchs .item.thumbnailItem ion-thumbnail img {
+  width: 30px;
+  height: 30px;
+}
+
+page-setting-country .teamMatchs .item.thumbnailItem .col {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -49996,28 +50000,43 @@ page-setting-country .header .matchResult .col .item .label {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
-page-setting-country .header .matchResult .col .item .label img {
-  height: 44px;
-  -o-object-fit: contain;
-  object-fit: contain;
+page-setting-country .teamMatchs .item.thumbnailItem .col:last-of-type {
+  text-align: center;
 }
 
-page-setting-country .header .matchResult .col .item .label p, page-setting-country .header .matchResult .col .select-popover .popover-content .list .item .label .label, .select-popover .popover-content .list page-setting-country .header .matchResult .col .item .label .label {
-  color: #fff;
-  margin-top: 4px;
-  font-weight: 400;
-  max-width: 100%;
+page-setting-country .teamMatchs .item.thumbnailItem .col:last-of-type p, page-setting-country .teamMatchs .select-popover .popover-content .list .item.thumbnailItem .col:last-of-type .label, .select-popover .popover-content .list page-setting-country .teamMatchs .item.thumbnailItem .col:last-of-type .label {
+  white-space: normal;
+  max-height: 32px;
+  line-height: 16px;
+  display: block;
+  overflow: hidden;
 }
 
-page-setting-country .header .matchResult .col[col-auto] .result span {
-  color: #fff;
-  font-size: 3rem !important;
+page-setting-country .teamMatchs .item.thumbnailItem .matchTime, page-setting-country .teamMatchs .item.thumbnailItem .matchResult {
+  text-align: center;
+  width: 60px;
+}
+
+page-setting-country .teamMatchs .item.thumbnailItem .matchTime span, page-setting-country .teamMatchs .item.thumbnailItem .matchResult span {
+  font-size: 1.6rem;
+  font-weight: 500;
+  white-space: normal;
+  max-height: 20px;
+  line-height: 20px;
+  display: block;
+  overflow: hidden;
+}
+
+page-setting-country .teamMatchs .item.thumbnailItem .matchTime p, page-setting-country .teamMatchs .select-popover .popover-content .list .item.thumbnailItem .matchTime .label, .select-popover .popover-content .list page-setting-country .teamMatchs .item.thumbnailItem .matchTime .label, page-setting-country .teamMatchs .item.thumbnailItem .matchResult p, page-setting-country .teamMatchs .select-popover .popover-content .list .item.thumbnailItem .matchResult .label, .select-popover .popover-content .list page-setting-country .teamMatchs .item.thumbnailItem .matchResult .label {
+  font-size: 0.8rem !important;
+  white-space: normal;
+  max-height: 15px;
+  line-height: 15px;
+  display: block;
+  overflow: hidden;
+  margin: 0px;
 }
 
 page-setting-leagues .header .toolbar.matchResultBar {
@@ -50028,22 +50047,26 @@ page-setting-leagues .header .toolbar.matchResultBar .toolbar-background {
   background: #0b4040;
 }
 
-page-setting-leagues .header .matchResult {
-  height: auto;
+page-setting-leagues .photoItem {
+  border-radius: 4px;
+  margin-bottom: 4px;
 }
 
-page-setting-leagues .header .matchResult p, page-setting-leagues .header .matchResult .select-popover .popover-content .list .item .label, .select-popover .popover-content .list .item page-setting-leagues .header .matchResult .label {
-  margin: 0px;
-  margin-top: 4px;
-  font-weight: 400;
-  max-width: 100%;
+page-setting-leagues .teamMatchs .item.thumbnailItem {
+  padding: 8px 4px;
+  margin: 4px;
 }
 
-page-setting-leagues .header .matchResult .grid {
-  max-width: 440px;
+page-setting-leagues .teamMatchs .item.thumbnailItem:last-of-type {
+  margin-bottom: 4px !important;
 }
 
-page-setting-leagues .header .matchResult .col .item .label {
+page-setting-leagues .teamMatchs .item.thumbnailItem ion-thumbnail img {
+  width: 30px;
+  height: 30px;
+}
+
+page-setting-leagues .teamMatchs .item.thumbnailItem .col {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -50057,28 +50080,80 @@ page-setting-leagues .header .matchResult .col .item .label {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
-page-setting-leagues .header .matchResult .col .item .label img {
-  height: 44px;
-  -o-object-fit: contain;
-  object-fit: contain;
+page-setting-leagues .teamMatchs .item.thumbnailItem .col:last-of-type {
+  text-align: center;
 }
 
-page-setting-leagues .header .matchResult .col .item .label p, page-setting-leagues .header .matchResult .col .select-popover .popover-content .list .item .label .label, .select-popover .popover-content .list page-setting-leagues .header .matchResult .col .item .label .label {
-  color: #fff;
-  margin-top: 4px;
-  font-weight: 400;
-  max-width: 100%;
+page-setting-leagues .teamMatchs .item.thumbnailItem .col:last-of-type p, page-setting-leagues .teamMatchs .select-popover .popover-content .list .item.thumbnailItem .col:last-of-type .label, .select-popover .popover-content .list page-setting-leagues .teamMatchs .item.thumbnailItem .col:last-of-type .label {
+  white-space: normal;
+  max-height: 32px;
+  line-height: 16px;
+  display: block;
+  overflow: hidden;
 }
 
-page-setting-leagues .header .matchResult .col[col-auto] .result span {
-  color: #fff;
-  font-size: 3rem !important;
+page-setting-leagues .teamMatchs .item.thumbnailItem .matchTime, page-setting-leagues .teamMatchs .item.thumbnailItem .matchResult {
+  text-align: center;
+  width: 60px;
+}
+
+page-setting-leagues .teamMatchs .item.thumbnailItem .matchTime span, page-setting-leagues .teamMatchs .item.thumbnailItem .matchResult span {
+  font-size: 1.6rem;
+  font-weight: 500;
+  white-space: normal;
+  max-height: 20px;
+  line-height: 20px;
+  display: block;
+  overflow: hidden;
+}
+
+page-setting-leagues .teamMatchs .item.thumbnailItem .matchTime p, page-setting-leagues .teamMatchs .select-popover .popover-content .list .item.thumbnailItem .matchTime .label, .select-popover .popover-content .list page-setting-leagues .teamMatchs .item.thumbnailItem .matchTime .label, page-setting-leagues .teamMatchs .item.thumbnailItem .matchResult p, page-setting-leagues .teamMatchs .select-popover .popover-content .list .item.thumbnailItem .matchResult .label, .select-popover .popover-content .list page-setting-leagues .teamMatchs .item.thumbnailItem .matchResult .label {
+  font-size: 0.8rem !important;
+  white-space: normal;
+  max-height: 15px;
+  line-height: 15px;
+  display: block;
+  overflow: hidden;
+  margin: 0px;
+}
+
+page-setting-leagues .squad {
+  margin: 4px;
+  width: calc(100% - 4px*2);
+  border-radius: 4px;
+}
+
+page-setting-leagues .squad .list {
+  display: inline-block;
+  padding: 4px 0px;
+  margin: 0px 4px;
+  width: calc(100% - 4px*2);
+  border-bottom: 1px solid #949494;
+}
+
+page-setting-leagues .squad .list:last-of-type {
+  border-bottom: none;
+}
+
+page-setting-leagues .squad .item.list-header {
+  margin: 0px 0px 4px !important;
+}
+
+page-setting-leagues .squad .item.list-header h5 {
+  margin: 0px;
+  font-weight: 500;
+  white-space: normal;
+  max-height: 20px;
+  line-height: 20px;
+  display: block;
+  overflow: hidden;
+}
+
+page-setting-leagues .squad .item.avatarItem, page-setting-leagues .squad .item.thumbnailItem {
+  padding: 0px;
+  width: 100%;
 }
 
 page-setting-selections .header .toolbar.matchResultBar {
@@ -50150,22 +50225,26 @@ page-setting-teams .header .toolbar.matchResultBar .toolbar-background {
   background: #0b4040;
 }
 
-page-setting-teams .header .matchResult {
-  height: auto;
+page-setting-teams .photoItem {
+  border-radius: 4px;
+  margin-bottom: 4px;
 }
 
-page-setting-teams .header .matchResult p, page-setting-teams .header .matchResult .select-popover .popover-content .list .item .label, .select-popover .popover-content .list .item page-setting-teams .header .matchResult .label {
-  margin: 0px;
-  margin-top: 4px;
-  font-weight: 400;
-  max-width: 100%;
+page-setting-teams .teamMatchs .item.thumbnailItem {
+  padding: 8px 4px;
+  margin: 4px;
 }
 
-page-setting-teams .header .matchResult .grid {
-  max-width: 440px;
+page-setting-teams .teamMatchs .item.thumbnailItem:last-of-type {
+  margin-bottom: 4px !important;
 }
 
-page-setting-teams .header .matchResult .col .item .label {
+page-setting-teams .teamMatchs .item.thumbnailItem ion-thumbnail img {
+  width: 30px;
+  height: 30px;
+}
+
+page-setting-teams .teamMatchs .item.thumbnailItem .col {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -50179,28 +50258,43 @@ page-setting-teams .header .matchResult .col .item .label {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
-page-setting-teams .header .matchResult .col .item .label img {
-  height: 44px;
-  -o-object-fit: contain;
-  object-fit: contain;
+page-setting-teams .teamMatchs .item.thumbnailItem .col:last-of-type {
+  text-align: center;
 }
 
-page-setting-teams .header .matchResult .col .item .label p, page-setting-teams .header .matchResult .col .select-popover .popover-content .list .item .label .label, .select-popover .popover-content .list page-setting-teams .header .matchResult .col .item .label .label {
-  color: #fff;
-  margin-top: 4px;
-  font-weight: 400;
-  max-width: 100%;
+page-setting-teams .teamMatchs .item.thumbnailItem .col:last-of-type p, page-setting-teams .teamMatchs .select-popover .popover-content .list .item.thumbnailItem .col:last-of-type .label, .select-popover .popover-content .list page-setting-teams .teamMatchs .item.thumbnailItem .col:last-of-type .label {
+  white-space: normal;
+  max-height: 32px;
+  line-height: 16px;
+  display: block;
+  overflow: hidden;
 }
 
-page-setting-teams .header .matchResult .col[col-auto] .result span {
-  color: #fff;
-  font-size: 3rem !important;
+page-setting-teams .teamMatchs .item.thumbnailItem .matchTime, page-setting-teams .teamMatchs .item.thumbnailItem .matchResult {
+  text-align: center;
+  width: 60px;
+}
+
+page-setting-teams .teamMatchs .item.thumbnailItem .matchTime span, page-setting-teams .teamMatchs .item.thumbnailItem .matchResult span {
+  font-size: 1.6rem;
+  font-weight: 500;
+  white-space: normal;
+  max-height: 20px;
+  line-height: 20px;
+  display: block;
+  overflow: hidden;
+}
+
+page-setting-teams .teamMatchs .item.thumbnailItem .matchTime p, page-setting-teams .teamMatchs .select-popover .popover-content .list .item.thumbnailItem .matchTime .label, .select-popover .popover-content .list page-setting-teams .teamMatchs .item.thumbnailItem .matchTime .label, page-setting-teams .teamMatchs .item.thumbnailItem .matchResult p, page-setting-teams .teamMatchs .select-popover .popover-content .list .item.thumbnailItem .matchResult .label, .select-popover .popover-content .list page-setting-teams .teamMatchs .item.thumbnailItem .matchResult .label {
+  font-size: 0.8rem !important;
+  white-space: normal;
+  max-height: 15px;
+  line-height: 15px;
+  display: block;
+  overflow: hidden;
+  margin: 0px;
 }
 
 .sign .scroll-content {

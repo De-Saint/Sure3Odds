@@ -15,5 +15,32 @@
 
 
 <ion-content padding>
+  <ion-searchbar [(ngModel)]="searchTerm" (ionCancel)="onCancel($event)" [showCancelButton]="true"
+    (ionClear)="onClear($event)" (ionInput)="onSearch()">
+  </ion-searchbar>
+  <div class="leagueStats" *ngIf="!error">
+    <ion-list *ngFor="let country of countries">
+      <ion-item class="thumbnailItem">
+        <ion-thumbnail item-left>
+ 
+          <img src="{{country.imageurl}}" *ngIf="country.imageurl" />
+          <img src="assets/imgs/appicon.png" *ngIf="!country.imageurl" />
+        </ion-thumbnail>
+        <!-- team Name -->
+        <h5 ion-text padding-left margin-left color="dark">{{country.name}}</h5>
+        <!-- note -->
+        <!-- <p ion-text color="dark">{{item.note}}</p> -->
+        <!-- goals or rating Number -->
+        <!-- <span ion-text color="color1" class="rateNum" item-right>{{item.num}}</span> -->
+      </ion-item>
+    </ion-list>
 
+  </div>
+
+  <div class="" *ngIf="error">
+    <p ion-text text-center color="color2">No result found!</p> 
+   </div>
+<ion-infinite-scroll (ionInfinite)="scrollInfinite($event)" *ngIf="currentPage < totalPage">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>
