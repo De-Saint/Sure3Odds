@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Edit League</ion-title>
+    <ion-buttons end >
+      <button ion-button icon-only (click)="onDelete()">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div class="imgs">
+    <button ion-button icon-only class="coverCamera" [ngClass]="{'show':flag==false}"  (click)="selectImage(1)">
+      <ion-icon name="md-camera"></ion-icon>
+    </button>
+    <img src="{{img1}}"/>
+    <div class="imgProfile" [ngStyle]="{'background-image':'url(' + img2 + ')'}">
+      <button ion-button icon-only class="profileCamera"  [ngClass]="{'show':flag==false}"  (click)="selectImage(2)">
+        <ion-icon name="md-camera"></ion-icon>
+      </button>
+    </div>
+  </div>
+  <div class="otherForm">
+    
+    <ion-list>
+      <ion-item >
+        <ion-label stacked>Country Name</ion-label>
+        <ion-input disabled type="text" [(ngModel)]="league.country.name"  ></ion-input>
+        <ion-input hidden type="text" [(ngModel)]="league.country.id"  ></ion-input>
+      </ion-item>
+      <!-- appear when click update -->
+      <ion-item class="thumbnailItem" >
+        <ion-thumbnail item-left padding-top padding-bottom>
+          <img src="{{league.imageurl}}" *ngIf="league.imageurl" />
+          <img src="assets/imgs/appicon.png" *ngIf="!league.imageurl" />
+        </ion-thumbnail>
+        <!-- <ion-label stacked>League Name</ion-label>
+        <ion-input  type="text" [(ngModel)]="league.name"  ></ion-input>
+        <ion-input hidden type="text" [(ngModel)]="league.id"  ></ion-input> -->
+      </ion-item>
+
+      <ion-item >
+        <ion-label stacked>League Name</ion-label>
+        <ion-input  type="text" [(ngModel)]="league.name"  ></ion-input>
+        <ion-input hidden type="text" [(ngModel)]="league.id"  ></ion-input>
+      </ion-item>
+      <!-- ==================================== -->
+    </ion-list>
+    <button ion-button block color="color2" (click)="onSubmit(league)">Submit</button>
+  </div>
+</ion-content>

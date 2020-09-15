@@ -1,7 +1,7 @@
 import { GamesProvider } from './../../providers/games/games';
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
-import { Component, OnInit } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, Content } from 'ionic-angular';
 
 
 
@@ -10,7 +10,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-setting-country',
   templateUrl: 'setting-country.html',
 })
-export class SettingCountryPage implements OnInit {
+export class SettingCountryPage {
+  @ViewChild(Content) content: Content;
   countries: any;
   originalcountries: any;
   searchTerm: string;
@@ -19,6 +20,7 @@ export class SettingCountryPage implements OnInit {
   totalPage = 0;
   perPage = 0;
   totalData = 0;
+  nocountries : string;
 
   constructor(public navCtrl: NavController,
     private authProvider: AuthenicationProvider,
@@ -26,11 +28,12 @@ export class SettingCountryPage implements OnInit {
     public navParams: NavParams) {
   }
 
-  ngOnInit(): void {
+
+  ionViewWillEnter(){
     this.GetCountries();
   }
   GetCountries() {//myDate
-    this.gamesProvider.GetCountries(0, 10)
+    this.gamesProvider.GetCountries(0, 20)
       .subscribe(resp => {
         if (resp.statusCode === 200) {
           this.countries = resp.data.content;
@@ -41,37 +44,41 @@ export class SettingCountryPage implements OnInit {
           this.originalcountries = this.countries;
           console.log(this.currentPage, this.totalPage, this.totalData,
             this.perPage);
+            this.nocountries = 'countries';
         } else {
           console.log(resp.description);
         }
       }, error => {
         console.log(JSON.stringify(error));
+        this.error = 'none';
         this.authProvider.showToast(error.error.description);
       });
   }
 
   onSearch() {
-    let term = this.searchTerm;
-    if (term.trim() === '' || term.trim().length < 0) {
-      if (this.countries.length === 0) {
-        this.error = "No result found."
-      } else {
-        this.countries = this.originalcountries;
-      }
+    let searchvalue = this.searchTerm;
+    if (searchvalue.trim() === '') {
+      this.countries = this.originalcountries
     } else {
-      //to search an already popolated arraylist
-      this.countries = [];
-      if (this.originalcountries) {
-        this.countries = this.originalcountries.filter((country) => {
-          if (country.name.toLocaleLowerCase().indexOf(term.toLowerCase()) > -1) {
-            return true;
+      if (searchvalue.length >= 3) {
+        this.gamesProvider.SearchCountries(searchvalue, 0, 20)
+        .subscribe(resp => {
+          console.log(resp);
+          if (resp.statusCode === 200) {
+            this.countries = resp.data.content;
+            this.currentPage = resp.data.number;
+            this.totalPage = resp.data.totalPages;
+            this.totalData = resp.data.totalElements;
+            this.perPage = resp.data.size;
+            console.log(this.currentPage, this.totalPage, this.totalData,
+              this.perPage);
           } else {
-            if (this.countries.length === 0) {
-              this.countries = [];
-              this.error = "No result found."
-            }
-            return false;
+            console.log(resp.description);
           }
+        }, error => {
+          console.log(JSON.stringify(error));
+          this.error = 'none';
+          this.authProvider.showToast(error.error.description);
         });
       }
     }
@@ -79,12 +86,11 @@ export class SettingCountryPage implements OnInit {
   onClear(ev) {
     this.searchTerm = "";
     this.countries = this.originalcountries;
-    this.error = '';
   }
   onCancel(ev) {
     this.searchTerm = "";
     this.countries = this.originalcountries;
-    this.error = '';
+
   }
 
   scrollInfinite(event) {
@@ -99,18 +105,23 @@ export class SettingCountryPage implements OnInit {
             this.perPage = resp.data.size;
             console.log(this.currentPage, this.totalPage, this.totalData,
               this.perPage);
+              this.nocountries = 'countries';
             for (let i = 0; i < resp.data.content.length; i++) {
               this.countries.push(resp.data.content[i]);
             }
           } else {
             console.log(resp.description);
           }
-          // To complete scrolling event
           event.complete();
         }, error => {
-          console.log("Error in loading data.")
+          console.log("End of the countries.");
+          this.nocountries = 'none';
           event.complete();
         })
     }, 1000);
+  }
+
+  onGotoTop() {
+    this.content.scrollToTop();
   }
 }

@@ -1,14 +1,14 @@
 webpackJsonp([16],{
 
-/***/ 725:
+/***/ 731:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingSelectionsPageModule", function() { return SettingSelectionsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingPageModule", function() { return SettingPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_selections__ = __webpack_require__(777);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting__ = __webpack_require__(788);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SettingSelectionsPageModule = /** @class */ (function () {
-    function SettingSelectionsPageModule() {
+var SettingPageModule = /** @class */ (function () {
+    function SettingPageModule() {
     }
-    SettingSelectionsPageModule = __decorate([
+    SettingPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__setting_selections__["a" /* SettingSelectionsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__setting__["a" /* SettingPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_selections__["a" /* SettingSelectionsPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__setting__["a" /* SettingPage */]),
             ],
         })
-    ], SettingSelectionsPageModule);
-    return SettingSelectionsPageModule;
+    ], SettingPageModule);
+    return SettingPageModule;
 }());
 
-//# sourceMappingURL=setting-selections.module.js.map
+//# sourceMappingURL=setting.module.js.map
 
 /***/ }),
 
-/***/ 777:
+/***/ 788:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingSelectionsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global__ = __webpack_require__(353);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,30 +57,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/**
- * Generated class for the SettingSelectionsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var SettingSelectionsPage = /** @class */ (function () {
-    function SettingSelectionsPage(navCtrl, navParams) {
+
+var SettingPage = /** @class */ (function () {
+    function SettingPage(navCtrl, global) {
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
+        this.global = global;
+        this.tab1Root = 'SettingCountryPage';
+        this.tab2Root = 'SettingLeaguesPage';
+        this.tab3Root = 'SettingTeamsPage';
+        this.tab4Root = 'SettingSelectionsPage';
     }
-    SettingSelectionsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad SettingSelectionsPage');
-    };
-    SettingSelectionsPage = __decorate([
+    SettingPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-setting-selections',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-selections/setting-selections.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Manage Selections</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only navPush="NotificationPage">\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-selections/setting-selections.html"*/,
+            selector: 'page-setting',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting/setting.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root"  tabTitle="Countries" ></ion-tab>\n  <ion-tab [root]="tab2Root"  tabTitle="Leagues" ></ion-tab>\n  <ion-tab [root]="tab3Root"  tabTitle="Teams"></ion-tab>\n  <ion-tab [root]="tab4Root"  tabTitle="Selections"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting/setting.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* NavParams */]])
-    ], SettingSelectionsPage);
-    return SettingSelectionsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
+    ], SettingPage);
+    return SettingPage;
 }());
 
-//# sourceMappingURL=setting-selections.js.map
+//# sourceMappingURL=setting.js.map
 
 /***/ })
 

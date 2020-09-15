@@ -1,14 +1,14 @@
 webpackJsonp([19],{
 
-/***/ 722:
+/***/ 727:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SelectLeaguePageModule", function() { return SelectLeaguePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingLeaguesPageModule", function() { return SettingLeaguesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__select_league__ = __webpack_require__(774);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_leagues__ = __webpack_require__(783);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SelectLeaguePageModule = /** @class */ (function () {
-    function SelectLeaguePageModule() {
+var SettingLeaguesPageModule = /** @class */ (function () {
+    function SettingLeaguesPageModule() {
     }
-    SelectLeaguePageModule = __decorate([
+    SettingLeaguesPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__select_league__["a" /* SelectLeaguePage */],
+                __WEBPACK_IMPORTED_MODULE_2__setting_leagues__["a" /* SettingLeaguesPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__select_league__["a" /* SelectLeaguePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_leagues__["a" /* SettingLeaguesPage */]),
             ],
         })
-    ], SelectLeaguePageModule);
-    return SelectLeaguePageModule;
+    ], SettingLeaguesPageModule);
+    return SettingLeaguesPageModule;
 }());
 
-//# sourceMappingURL=select-league.module.js.map
+//# sourceMappingURL=setting-leagues.module.js.map
 
 /***/ }),
 
-/***/ 774:
+/***/ 783:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SelectLeaguePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global__ = __webpack_require__(353);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingLeaguesPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_games_games__ = __webpack_require__(354);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,54 +59,132 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var SelectLeaguePage = /** @class */ (function () {
-    function SelectLeaguePage(navCtrl, global) {
+
+var SettingLeaguesPage = /** @class */ (function () {
+    function SettingLeaguesPage(navCtrl, authProvider, gamesProvider, navParams) {
         this.navCtrl = navCtrl;
-        this.global = global;
-        this.favorites = [
-            { img: 'assets/imgs/league/global2.png', name: 'Eroupa League' },
-            { img: 'assets/imgs/league/global2.png', name: 'INT - Champions League' },
-            { img: 'assets/imgs/league/global2.png', name: 'INT - FIFA Club World Cup' },
-        ];
-        this.leagues = [
-            { img: 'assets/imgs/league/la_liga.png', name: 'La Liga' },
-            { img: 'assets/imgs/league/premier_league.png', name: 'Premier League' },
-            { img: 'assets/imgs/league/portuguese_league.png', name: 'Portuguese League' },
-            { img: 'assets/imgs/league/french_league.png', name: 'French League' },
-            { img: 'assets/imgs/league/africa_qualifiers.png', name: 'Africa qualifiers' },
-            { img: 'assets/imgs/league/la_liga.png', name: 'La Liga' },
-            { img: 'assets/imgs/league/premier_league.png', name: 'Premier League' },
-            { img: 'assets/imgs/league/portuguese_league.png', name: 'Portuguese League' },
-            { img: 'assets/imgs/league/french_league.png', name: 'French League' },
-            { img: 'assets/imgs/league/africa_qualifiers.png', name: 'Africa qualifiers' },
-        ];
+        this.authProvider = authProvider;
+        this.gamesProvider = gamesProvider;
+        this.navParams = navParams;
+        this.currentPage = 1;
+        this.totalPage = 0;
+        this.perPage = 0;
+        this.totalData = 0;
     }
-    SelectLeaguePage.prototype.selectLeague = function (item, $event) {
-        $event.stopPropagation();
-        var index = this.leagues.indexOf(item);
-        if (index > -1) {
-            this.leagues.splice(index, 1);
-        }
-        this.favorites.push(item);
+    SettingLeaguesPage.prototype.ionViewWillEnter = function () {
+        this.GetLeagues();
     };
-    SelectLeaguePage.prototype.removeLeague = function (item, $event) {
-        $event.stopPropagation();
-        var index = this.favorites.indexOf(item);
-        if (index > -1) {
-            this.favorites.splice(index, 1);
-        }
-        this.leagues.push(item);
+    SettingLeaguesPage.prototype.GetLeagues = function () {
+        var _this = this;
+        this.gamesProvider.GetLeagues(0, 50)
+            .subscribe(function (resp) {
+            console.log(resp);
+            if (resp.statusCode === 200) {
+                _this.leagues = resp.data.content;
+                _this.originalleagues = _this.leagues;
+                _this.currentPage = resp.data.number;
+                _this.totalPage = resp.data.totalPages;
+                _this.totalData = resp.data.totalElements;
+                _this.perPage = resp.data.size;
+                console.log(_this.currentPage, _this.totalPage, _this.totalData, _this.perPage);
+                _this.noleagues = 'leagues';
+                console.log(_this.leagues);
+            }
+            else {
+                console.log(resp.description);
+            }
+        }, function (error) {
+            console.log(JSON.stringify(error));
+            _this.error = 'none';
+            _this.authProvider.showToast(error.error.description);
+        });
     };
-    SelectLeaguePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-select-league',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/select-league/select-league.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu" ></ion-icon>\n    </button>\n    <ion-title>Select League</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only  (click)="global.callSearch($event)">\n        <ion-icon name="md-search"></ion-icon>\n      </button>\n      <button ion-button icon-only navPush="NotificationPage">\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n  <!-- favorites list -->\n  <ion-list class="favoriteLeagues" *ngIf="favorites.length > 0">\n    <ion-list-header> \n      <ion-icon name="md-star" color="color1" item-left></ion-icon>\n      <h4 ion-text color="dark">Favorites</h4>\n    </ion-list-header>\n    <!-- league item  -->\n    <ion-item *ngFor="let item of favorites" navPush="LeagueDetailsPage">\n      <img item-left src="{{item.img}}"/>\n      <p ion-text color="dark">{{item.name}}</p>\n      <ion-icon name="md-star" color="color2" item-right (click)="removeLeague(item ,$event)"></ion-icon>\n    </ion-item>  \n  </ion-list>\n\n  <!-- Leagues list -->\n  <ion-list class="favoriteLeagues" margin-top>\n    <ion-list-header> \n      <ion-icon name="md-star" color="color4" item-left></ion-icon>\n      <h4 ion-text color="dark">Staff Picks</h4>\n    </ion-list-header>\n    <!-- league item  -->\n    <ion-item *ngFor="let item of leagues"  navPush="LeagueDetailsPage" >\n      <img item-left src="{{item.img}}"/>\n      <p ion-text color="dark">{{item.name}}</p>\n      <ion-icon name="md-star" color="color4" item-right (click)="selectLeague(item,$event)"></ion-icon>\n    </ion-item>  \n  </ion-list>\n</ion-content>  \n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/select-league/select-league.html"*/,
+    SettingLeaguesPage.prototype.onSearch = function () {
+        var _this = this;
+        var searchvalue = this.searchTerm;
+        if (searchvalue.trim() === '') {
+            this.leagues = this.originalleagues;
+        }
+        else {
+            if (searchvalue.length >= 3) {
+                this.gamesProvider.SearchLeagues(searchvalue, 0, 50)
+                    .subscribe(function (resp) {
+                    console.log(resp);
+                    if (resp.statusCode === 200) {
+                        _this.leagues = resp.data.content;
+                        _this.currentPage = resp.data.number;
+                        _this.totalPage = resp.data.totalPages;
+                        _this.totalData = resp.data.totalElements;
+                        _this.perPage = resp.data.size;
+                        console.log(_this.currentPage, _this.totalPage, _this.totalData, _this.perPage);
+                    }
+                    else {
+                        console.log(resp.description);
+                    }
+                }, function (error) {
+                    console.log(JSON.stringify(error));
+                    _this.error = 'none';
+                    _this.authProvider.showToast(error.error.description);
+                });
+            }
+        }
+    };
+    SettingLeaguesPage.prototype.onClear = function (ev) {
+        this.searchTerm = "";
+        this.leagues = this.originalleagues;
+    };
+    SettingLeaguesPage.prototype.onCancel = function (ev) {
+        this.searchTerm = "";
+        this.leagues = this.originalleagues;
+    };
+    SettingLeaguesPage.prototype.scrollInfinite = function (event) {
+        var _this = this;
+        this.currentPage += 1;
+        setTimeout(function () {
+            _this.gamesProvider.GetLeagues(_this.currentPage, _this.perPage)
+                .subscribe(function (resp) {
+                if (resp.statusCode === 200) {
+                    _this.currentPage = resp.data.number;
+                    _this.totalPage = resp.data.totalPages;
+                    _this.totalData = resp.data.totalElements;
+                    _this.perPage = resp.data.size;
+                    console.log(_this.currentPage, _this.totalPage, _this.totalData, _this.perPage);
+                    _this.noleagues = 'league';
+                    for (var i = 0; i < resp.data.content.length; i++) {
+                        _this.leagues.push(resp.data.content[i]);
+                    }
+                }
+                else {
+                    console.log(resp.description);
+                }
+                event.complete();
+            }, function (error) {
+                console.log("End of the countries.");
+                _this.noleagues = 'none';
+                event.complete();
+            });
+        }, 1000);
+    };
+    SettingLeaguesPage.prototype.onGotoTop = function () {
+        this.content.scrollToTop();
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["_10" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["e" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["e" /* Content */])
+    ], SettingLeaguesPage.prototype, "content", void 0);
+    SettingLeaguesPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["n" /* Component */])({
+            selector: 'page-setting-leagues',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-leagues/setting-leagues.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Leagues</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only navPush="SettingLeagueAddPage">\n        <ion-icon name="add-circle"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-searchbar [(ngModel)]="searchTerm" (ionCancel)="onCancel($event)" [showCancelButton]="true"\n    (ionClear)="onClear($event)" (ionInput)="onSearch()">\n  </ion-searchbar>\n  <div class="leagueStats">\n    <ion-list *ngFor="let league of leagues">\n      <ion-item class="thumbnailItem" navPush="SettingLeagueEditPage" [navParams]="league">\n        <ion-thumbnail item-left>\n\n          <img src="{{league.imageurl}}" *ngIf="league.imageurl" />\n          <img src="assets/imgs/appicon.png" *ngIf="!league.imageurl" />\n        </ion-thumbnail>\n        <!-- team Name -->\n        <h5 ion-text padding-left margin-left color="dark">{{league.name}}</h5>\n        <!-- note -->\n        <!-- <p ion-text color="dark">{{item.note}}</p> -->\n        <!-- goals or rating Number -->\n        <span ion-text color="color1" class="" small item-right>{{league.country.name}}</span>\n      </ion-item>\n    </ion-list>\n  </div>\n\n  <div class="" *ngIf="error">\n    <p ion-text text-center color="color2">No result found!</p>\n  </div>\n  <div text-center margin-top margin-bottonm *ngIf="noleagues === \'none\'" (click)="onGotoTop()">\n    <button ion-button small color="color2">Back to Top</button>\n  </div>\n  <ion-infinite-scroll (ionInfinite)="scrollInfinite($event)" *ngIf="currentPage < totalPage">\n    <ion-infinite-scroll-content  loadingSpinner="bubbles"\n    loadingText="Loading page {{currentPage}} of {{totalPage}}"></ion-infinite-scroll-content>\n  </ion-infinite-scroll>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-leagues/setting-leagues.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
-    ], SelectLeaguePage);
-    return SelectLeaguePage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["t" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */],
+            __WEBPACK_IMPORTED_MODULE_0__providers_games_games__["a" /* GamesProvider */],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["u" /* NavParams */]])
+    ], SettingLeaguesPage);
+    return SettingLeaguesPage;
 }());
 
-//# sourceMappingURL=select-league.js.map
+//# sourceMappingURL=setting-leagues.js.map
 
 /***/ })
 

@@ -1,14 +1,14 @@
 webpackJsonp([26],{
 
-/***/ 726:
+/***/ 718:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PhotosPageModule", function() { return PhotosPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PredictionSubAdminPageModule", function() { return PredictionSubAdminPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__photos__ = __webpack_require__(778);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__prediction_sub_admin__ = __webpack_require__(771);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var PhotosPageModule = /** @class */ (function () {
-    function PhotosPageModule() {
+var PredictionSubAdminPageModule = /** @class */ (function () {
+    function PredictionSubAdminPageModule() {
     }
-    PhotosPageModule = __decorate([
+    PredictionSubAdminPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__photos__["a" /* PhotosPage */],
+                __WEBPACK_IMPORTED_MODULE_2__prediction_sub_admin__["a" /* PredictionSubAdminPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__photos__["a" /* PhotosPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__prediction_sub_admin__["a" /* PredictionSubAdminPage */]),
             ],
         })
-    ], PhotosPageModule);
-    return PhotosPageModule;
+    ], PredictionSubAdminPageModule);
+    return PredictionSubAdminPageModule;
 }());
 
-//# sourceMappingURL=photos.module.js.map
+//# sourceMappingURL=prediction-sub-admin.module.js.map
 
 /***/ }),
 
-/***/ 778:
+/***/ 771:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PhotosPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PredictionSubAdminPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global__ = __webpack_require__(353);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -57,30 +56,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-var PhotosPage = /** @class */ (function () {
-    function PhotosPage(navCtrl, global) {
+/**
+ * Generated class for the PredictionSubAdminPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var PredictionSubAdminPage = /** @class */ (function () {
+    function PredictionSubAdminPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
-        this.global = global;
-        this.photos = [
-            { img: 'assets/imgs/p001.png', title: '2018 World Cup' },
-            { img: 'assets/imgs/p002.png', title: '2018 World Cup' },
-            { img: 'assets/imgs/p003.png', title: '2018 World Cup' },
-            { img: 'assets/imgs/p001.png', title: '2018 World Cup' },
-            { img: 'assets/imgs/p002.png', title: '2018 World Cup' },
-            { img: 'assets/imgs/p003.png', title: '2018 World Cup' },
-        ];
+        this.navParams = navParams;
     }
-    PhotosPage = __decorate([
+    PredictionSubAdminPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad PredictionSubAdminPage');
+    };
+    PredictionSubAdminPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-photos',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/photos/photos.html"*/'\n<ion-header>\n  <ion-navbar>\n    <ion-title>Photos</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only  (click)="global.callSearch($event)">\n        <ion-icon name="md-search"></ion-icon>\n      </button>\n      <button ion-button icon-only navPush="NotificationPage">\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header> \n<ion-content padding>\n  <ion-list class="lastPhotos">\n    <ion-item class="photoItem" *ngFor="let item of photos" navPush="PhotosDetailsPage">\n      <!-- if you want this image reponsive in large screen please remove class="imgResponsive" from img Tag  -->\n      <img src="{{item.img}}" class="imgResponsive"/>\n      <ion-grid>\n        <ion-row>\n          <ion-col col-auto>\n            <h4 ion-text color="dark">{{item.title}}</h4>\n          </ion-col>\n          <ion-col col>\n            <p ion-text color="color2">200 photos</p>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/photos/photos.html"*/,
+            selector: 'page-prediction-sub-admin',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/prediction-sub-admin/prediction-sub-admin.html"*/'<!--\n  Generated template for the PredictionSubAdminPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>PredictionSubAdmin</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/prediction-sub-admin/prediction-sub-admin.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
-    ], PhotosPage);
-    return PhotosPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* NavParams */]])
+    ], PredictionSubAdminPage);
+    return PredictionSubAdminPage;
 }());
 
-//# sourceMappingURL=photos.js.map
+//# sourceMappingURL=prediction-sub-admin.js.map
 
 /***/ })
 

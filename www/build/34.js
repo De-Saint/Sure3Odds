@@ -1,14 +1,14 @@
 webpackJsonp([34],{
 
-/***/ 708:
+/***/ 710:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MatchPageModule", function() { return MatchPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotificationPageModule", function() { return NotificationPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__match__ = __webpack_require__(758);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__notification__ = __webpack_require__(763);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MatchPageModule = /** @class */ (function () {
-    function MatchPageModule() {
+var NotificationPageModule = /** @class */ (function () {
+    function NotificationPageModule() {
     }
-    MatchPageModule = __decorate([
+    NotificationPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__match__["a" /* MatchPage */],
+                __WEBPACK_IMPORTED_MODULE_2__notification__["a" /* NotificationPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__match__["a" /* MatchPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__notification__["a" /* NotificationPage */]),
             ],
         })
-    ], MatchPageModule);
-    return MatchPageModule;
+    ], NotificationPageModule);
+    return NotificationPageModule;
 }());
 
-//# sourceMappingURL=match.module.js.map
+//# sourceMappingURL=notification.module.js.map
 
 /***/ }),
 
-/***/ 758:
+/***/ 763:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MatchPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotificationPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global__ = __webpack_require__(353);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,25 +57,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var MatchPage = /** @class */ (function () {
-    function MatchPage(navCtrl, navParams) {
+
+var NotificationPage = /** @class */ (function () {
+    function NotificationPage(navCtrl, global) {
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.tab1Root = 'MatchDetailsPage';
-        this.tab2Root = 'MatchVotesPage';
-        this.tab3Root = 'MatchCommentsPage';
-        this.match = this.navParams.data;
+        this.global = global;
+        this.notifications = [
+            { title: 'Transfer Talk', content: 'Arsenal eyeing move for serie a defender amidstrumours of hector bellerin exit' },
+            { title: 'Transfer Talk', content: 'Arsenal eyeing move for serie a defender amidstrumours of hector bellerin exit' },
+        ];
     }
-    MatchPage = __decorate([
+    NotificationPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-match',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/match/match.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" [rootParams]="match" tabTitle="Details" ></ion-tab>\n  <ion-tab [root]="tab2Root" [rootParams]="match" tabTitle="Votes" ></ion-tab>\n  <ion-tab [root]="tab3Root" [rootParams]="match" tabTitle="Comments"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/match/match.html"*/,
+            selector: 'page-notification',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/notification/notification.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu" ></ion-icon>\n    </button>\n    <ion-title>Notification</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only  (click)="global.callSearch($event)">\n        <ion-icon name="md-search"></ion-icon>\n      </button>\n      <button ion-button icon-only>\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n  <ion-list>\n    <ion-item *ngFor="let item of notifications">\n      <ion-grid no-padding>\n        <ion-row>\n          <ion-col col padding-right>\n            <h5 ion-text color="dark">{{item.title}}</h5>\n          </ion-col>\n          <ion-col col-auto>\n            <p ion-text color="dark">30M Ago</p>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n      <p ion-text color="dark">{{item.content}}</p>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/notification/notification.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* NavParams */]])
-    ], MatchPage);
-    return MatchPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
+    ], NotificationPage);
+    return NotificationPage;
 }());
 
-//# sourceMappingURL=match.js.map
+//# sourceMappingURL=notification.js.map
 
 /***/ })
 

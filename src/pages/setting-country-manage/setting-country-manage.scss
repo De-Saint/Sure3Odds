@@ -1,0 +1,34 @@
+page-setting-country-manage {
+    .otherForm{
+        @extend .signForm;
+        margin:$content-padding;
+        border-radius:$control-radius;
+        // @extend %outerShadow;
+        width: calc( 100% - #{$content-padding}*2)!important;
+        padding:8px !important;
+        .item{
+            transition: height 1s;   
+            .text-input{
+                color: color($colors,dark);
+                opacity:.8; 
+                font-weight:500;   
+            }
+            .label{
+                color: color($colors,dark);   
+                font-weight:bold;
+            }
+
+            &.show{
+                height:0px!important;      
+                transition: height 1s;  
+                margin-bottom:0px!important;      
+            }
+            &.item-input-disabled{
+                border-bottom:none!important;
+            }
+        }
+        .button{
+            margin-top:$content-padding*2!important;     
+        }
+    }  
+}

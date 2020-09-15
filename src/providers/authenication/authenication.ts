@@ -126,6 +126,5 @@ export class AuthenicationProvider {
     this.currentUserDataSubject.next(null);
     this.storage.remove(TOKEN_KEY);
     this.storage.remove("hasSeenLogin");
-
   }
 }

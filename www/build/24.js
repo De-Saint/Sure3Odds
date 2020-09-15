@@ -1,14 +1,14 @@
 webpackJsonp([24],{
 
-/***/ 716:
+/***/ 721:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PredictionAdminPageModule", function() { return PredictionAdminPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReportsPageModule", function() { return ReportsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__prediction_admin__ = __webpack_require__(766);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reports__ = __webpack_require__(776);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var PredictionAdminPageModule = /** @class */ (function () {
-    function PredictionAdminPageModule() {
+var ReportsPageModule = /** @class */ (function () {
+    function ReportsPageModule() {
     }
-    PredictionAdminPageModule = __decorate([
+    ReportsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__prediction_admin__["a" /* PredictionAdminPage */],
+                __WEBPACK_IMPORTED_MODULE_2__reports__["a" /* ReportsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__prediction_admin__["a" /* PredictionAdminPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__reports__["a" /* ReportsPage */]),
             ],
         })
-    ], PredictionAdminPageModule);
-    return PredictionAdminPageModule;
+    ], ReportsPageModule);
+    return ReportsPageModule;
 }());
 
-//# sourceMappingURL=prediction-admin.module.js.map
+//# sourceMappingURL=reports.module.js.map
 
 /***/ }),
 
-/***/ 766:
+/***/ 776:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PredictionAdminPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReportsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -57,29 +57,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the PredictionAdminPage page.
+ * Generated class for the ReportsPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var PredictionAdminPage = /** @class */ (function () {
-    function PredictionAdminPage(navCtrl, navParams) {
+var ReportsPage = /** @class */ (function () {
+    function ReportsPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    PredictionAdminPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad PredictionAdminPage');
+    ReportsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ReportsPage');
     };
-    PredictionAdminPage = __decorate([
+    ReportsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-prediction-admin',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/prediction-admin/prediction-admin.html"*/'<!--\n  Generated template for the PredictionAdminPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>PredictionAdmin</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/prediction-admin/prediction-admin.html"*/,
+            selector: 'page-reports',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/reports/reports.html"*/'<!--\n  Generated template for the ReportsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Reports</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/reports/reports.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* NavParams */]])
-    ], PredictionAdminPage);
-    return PredictionAdminPage;
+    ], ReportsPage);
+    return ReportsPage;
 }());
 
-//# sourceMappingURL=prediction-admin.js.map
+//# sourceMappingURL=reports.js.map
 
 /***/ })
 

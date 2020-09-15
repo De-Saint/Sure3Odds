@@ -40115,13 +40115,13 @@ image-viewer.ion-page img {
   margin: 0px !important;
 }
 
-.imgBg, page-match-comments .imgs .imgProfile, page-match-details .imgs .imgProfile, page-match-votes .imgs .imgProfile, page-profile .imgs .imgProfile, .sign {
+.imgBg, page-match-comments .imgs .imgProfile, page-match-details .imgs .imgProfile, page-match-votes .imgs .imgProfile, page-profile .imgs .imgProfile, page-setting-league-edit .imgs .imgProfile, .sign {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-.item .label, .item.item-select .label, .item.item-select .select-text, .search_Pop .searchbar .searchbar-input, .signForm .item .text-input, page-profile .otherForm .item .text-input, .commentsList .item.item-block.writComment .input .text-input {
+.item .label, .item.item-select .label, .item.item-select .select-text, .search_Pop .searchbar .searchbar-input, .signForm .item .text-input, page-profile .otherForm .item .text-input, page-setting-country-manage .otherForm .item .text-input, page-setting-league-edit .otherForm .item .text-input, .commentsList .item.item-block.writComment .input .text-input {
   color: #fff;
   font-size: 1.2rem !important;
   font-weight: 400;
@@ -43769,7 +43769,7 @@ ion-menu .menu-inner .leagueList .item-block .label {
   backface-visibility: hidden;
 }
 
-.animateApp .fadeInUp, .animateApp page-home .slides, .animateApp .matchStats, .animateApp page-profile .scroll-content, .animateApp page-top-news-details .scroll-content, .animateApp .sign .signForm, .animateApp .sign page-profile .otherForm, page-profile .animateApp .sign .otherForm, .animateApp page-setting .scroll-content {
+.animateApp .fadeInUp, .animateApp page-home .slides, .animateApp .matchStats, .animateApp page-profile .scroll-content, .animateApp page-top-news-details .scroll-content, .animateApp .sign .signForm, .animateApp .sign page-profile .otherForm, page-profile .animateApp .sign .otherForm, .animateApp .sign page-setting-country-manage .otherForm, page-setting-country-manage .animateApp .sign .otherForm, .animateApp .sign page-setting-league-edit .otherForm, page-setting-league-edit .animateApp .sign .otherForm, .animateApp page-setting .scroll-content {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
   -webkit-animation-iteration-count: 1;
@@ -50039,6 +50039,151 @@ page-setting-country .teamMatchs .item.thumbnailItem .matchTime p, page-setting-
   margin: 0px;
 }
 
+page-setting-country-manage .otherForm {
+  margin: 4px;
+  border-radius: 4px;
+  width: calc( 100% - 4px*2) !important;
+  padding: 8px !important;
+}
+
+page-setting-country-manage .otherForm .item {
+  -webkit-transition: height 1s;
+  transition: height 1s;
+}
+
+page-setting-country-manage .otherForm .item .text-input {
+  color: #000;
+  opacity: .8;
+  font-weight: 500;
+}
+
+page-setting-country-manage .otherForm .item .label {
+  color: #000;
+  font-weight: bold;
+}
+
+page-setting-country-manage .otherForm .item.show {
+  height: 0px !important;
+  -webkit-transition: height 1s;
+  transition: height 1s;
+  margin-bottom: 0px !important;
+}
+
+page-setting-country-manage .otherForm .item.item-input-disabled {
+  border-bottom: none !important;
+}
+
+page-setting-country-manage .otherForm .button {
+  margin-top: 8px !important;
+}
+
+page-setting-league-edit .imgs {
+  padding: 4px;
+  position: relative;
+}
+
+page-setting-league-edit .imgs img {
+  display: block;
+  border-radius: 4px;
+  width: 100%;
+}
+
+page-setting-league-edit .imgs .imgProfile {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin: -55px auto 0px;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+}
+
+page-setting-league-edit .imgs .button {
+  height: 34px;
+  width: 34px;
+  background: #3B7A57;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+page-setting-league-edit .imgs .button .icon {
+  font-size: 1.6rem;
+}
+
+page-setting-league-edit .imgs .button.coverCamera {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  left: auto;
+  bottom: auto;
+}
+
+page-setting-league-edit .imgs .button.profileCamera {
+  position: absolute;
+  top: auto;
+  right: 0px;
+  left: auto;
+  bottom: 0px;
+}
+
+page-setting-league-edit .imgs .button.show {
+  opacity: 1;
+}
+
+page-setting-league-edit .nameAndMail {
+  padding: 4px;
+  text-align: center;
+}
+
+page-setting-league-edit .nameAndMail h5 {
+  margin: 0px;
+}
+
+page-setting-league-edit .nameAndMail p, page-setting-league-edit .nameAndMail .select-popover .popover-content .list .item .label, .select-popover .popover-content .list .item page-setting-league-edit .nameAndMail .label {
+  margin: 0px;
+  font-weight: 500;
+}
+
+page-setting-league-edit .otherForm {
+  margin: 4px;
+  border-radius: 4px;
+  width: calc( 100% - 4px*2) !important;
+  padding: 9px !important;
+}
+
+page-setting-league-edit .otherForm .item {
+  -webkit-transition: height 1s;
+  transition: height 1s;
+}
+
+page-setting-league-edit .otherForm .item .text-input {
+  color: #000;
+  opacity: .8;
+  font-weight: 500;
+}
+
+page-setting-league-edit .otherForm .item .label {
+  color: #000;
+  font-weight: bold;
+}
+
+page-setting-league-edit .otherForm .item.show {
+  height: 0px !important;
+  -webkit-transition: height 1s;
+  transition: height 1s;
+  margin-bottom: 0px !important;
+}
+
+page-setting-league-edit .otherForm .item.item-input-disabled {
+  border-bottom: none !important;
+}
+
+page-setting-league-edit .otherForm .button {
+  margin-top: 8px !important;
+}
+
 page-setting-leagues .header .toolbar.matchResultBar {
   padding: 8px 2px;
 }
@@ -50314,56 +50459,56 @@ page-setting-teams .teamMatchs .item.thumbnailItem .matchTime p, page-setting-te
   font-weight: 500;
 }
 
-.signForm, page-profile .otherForm {
+.signForm, page-profile .otherForm, page-setting-country-manage .otherForm, page-setting-league-edit .otherForm {
   display: inline-block;
   width: 100%;
 }
 
-.signForm img, page-profile .otherForm img {
+.signForm img, page-profile .otherForm img, page-setting-country-manage .otherForm img, page-setting-league-edit .otherForm img {
   width: 70%;
   max-width: 400px;
   margin: 12% 0px 20%;
 }
 
-.signForm ::-webkit-input-placeholder, page-profile .otherForm ::-webkit-input-placeholder {
+.signForm ::-webkit-input-placeholder, page-profile .otherForm ::-webkit-input-placeholder, page-setting-country-manage .otherForm ::-webkit-input-placeholder, page-setting-league-edit .otherForm ::-webkit-input-placeholder {
   font-weight: bold;
 }
 
-.signForm ::-webkit-textarea-placeholder, page-profile .otherForm ::-webkit-textarea-placeholder {
+.signForm ::-webkit-textarea-placeholder, page-profile .otherForm ::-webkit-textarea-placeholder, page-setting-country-manage .otherForm ::-webkit-textarea-placeholder, page-setting-league-edit .otherForm ::-webkit-textarea-placeholder {
   font-weight: bold;
 }
 
-.signForm :-moz-placeholder, page-profile .otherForm :-moz-placeholder {
+.signForm :-moz-placeholder, page-profile .otherForm :-moz-placeholder, page-setting-country-manage .otherForm :-moz-placeholder, page-setting-league-edit .otherForm :-moz-placeholder {
   font-weight: bold;
 }
 
-.signForm ::-moz-placeholder, page-profile .otherForm ::-moz-placeholder {
+.signForm ::-moz-placeholder, page-profile .otherForm ::-moz-placeholder, page-setting-country-manage .otherForm ::-moz-placeholder, page-setting-league-edit .otherForm ::-moz-placeholder {
   font-weight: bold;
 }
 
-.signForm :-ms-input-placeholder, page-profile .otherForm :-ms-input-placeholder {
+.signForm :-ms-input-placeholder, page-profile .otherForm :-ms-input-placeholder, page-setting-country-manage .otherForm :-ms-input-placeholder, page-setting-league-edit .otherForm :-ms-input-placeholder {
   font-weight: bold;
 }
 
-.signForm .item, page-profile .otherForm .item {
+.signForm .item, page-profile .otherForm .item, page-setting-country-manage .otherForm .item, page-setting-league-edit .otherForm .item {
   height: 40px;
   border-bottom: 2px solid #888ba7 !important;
   margin-bottom: 8px;
 }
 
-.signForm .item .icon[item-left], page-profile .otherForm .item .icon[item-left] {
+.signForm .item .icon[item-left], page-profile .otherForm .item .icon[item-left], page-setting-country-manage .otherForm .item .icon[item-left], page-setting-league-edit .otherForm .item .icon[item-left] {
   font-size: 1.65rem;
   min-height: 0px;
   width: 22px;
   text-align: center;
 }
 
-.signForm .item .text-input, page-profile .otherForm .item .text-input {
+.signForm .item .text-input, page-profile .otherForm .item .text-input, page-setting-country-manage .otherForm .item .text-input, page-setting-league-edit .otherForm .item .text-input {
   margin: 0px;
   width: 100%;
 }
 
-.signForm .button, page-profile .otherForm .button {
+.signForm .button, page-profile .otherForm .button, page-setting-country-manage .otherForm .button, page-setting-league-edit .otherForm .button {
   margin-top: 40px;
 }
 

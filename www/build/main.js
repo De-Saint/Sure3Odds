@@ -1,4 +1,4 @@
-webpackJsonp([46],{
+webpackJsonp([49],{
 
 /***/ 168:
 /***/ (function(module, exports) {
@@ -23,19 +23,19 @@ webpackEmptyAsyncContext.id = 168;
 var map = {
 	"../pages/add-adviser/add-adviser.module": [
 		693,
-		45
+		48
 	],
 	"../pages/add-user/add-user.module": [
 		694,
-		44
+		47
 	],
 	"../pages/advisers/advisers.module": [
-		696,
-		43
+		695,
+		46
 	],
 	"../pages/all-matches/all-matches.module": [
-		695,
-		42
+		696,
+		45
 	],
 	"../pages/android-subscription/android-subscription.module": [
 		697,
@@ -43,167 +43,179 @@ var map = {
 	],
 	"../pages/assign-adviser/assign-adviser.module": [
 		698,
-		41
+		44
 	],
 	"../pages/contact/contact.module": [
 		699,
-		40
+		43
 	],
 	"../pages/free-tips/free-tips.module": [
 		700,
-		39
+		42
 	],
 	"../pages/guide/guide.module": [
 		701,
-		38
+		41
 	],
 	"../pages/help/help.module": [
 		702,
-		37
+		40
 	],
 	"../pages/home/home.module": [
 		703,
-		36
+		39
 	],
 	"../pages/league-details/league-details.module": [
 		704,
-		35
+		38
 	],
 	"../pages/match-comments/match-comments.module": [
 		705,
-		4
+		6
 	],
 	"../pages/match-details/match-details.module": [
-		706,
+		738,
 		1
 	],
 	"../pages/match-votes/match-votes.module": [
-		707,
+		706,
 		3
 	],
 	"../pages/match/match.module": [
-		708,
-		34
+		707,
+		37
 	],
 	"../pages/new-game/new-game.module": [
-		709,
-		33
+		708,
+		36
 	],
 	"../pages/new-prediction/new-prediction.module": [
-		710,
-		32
+		709,
+		35
 	],
 	"../pages/notification/notification.module": [
-		711,
-		31
+		710,
+		34
 	],
 	"../pages/old-free-tips/old-free-tips.module": [
-		712,
-		30
+		711,
+		33
 	],
 	"../pages/old-games/old-games.module": [
-		714,
-		29
+		712,
+		32
 	],
 	"../pages/payments/payments.module": [
-		738,
-		28
+		713,
+		31
 	],
 	"../pages/photos-details/photos-details.module": [
-		713,
-		27
+		714,
+		30
 	],
 	"../pages/photos/photos.module": [
-		726,
-		26
+		715,
+		29
 	],
 	"../pages/players-stats/players-stats.module": [
-		715,
-		25
+		716,
+		28
 	],
 	"../pages/prediction-admin/prediction-admin.module": [
-		716,
-		24
+		717,
+		27
 	],
 	"../pages/prediction-sub-admin/prediction-sub-admin.module": [
-		717,
-		23
+		718,
+		26
 	],
 	"../pages/predictions/predictions.module": [
-		718,
-		22
+		720,
+		25
 	],
 	"../pages/profile/profile.module": [
 		719,
 		0
 	],
 	"../pages/reports/reports.module": [
-		720,
-		21
+		721,
+		24
 	],
 	"../pages/search-pop/search-pop.module": [
-		721,
-		20
+		722,
+		23
 	],
 	"../pages/select-league/select-league.module": [
-		722,
-		19
+		723,
+		22
+	],
+	"../pages/setting-country-manage/setting-country-manage.module": [
+		729,
+		5
 	],
 	"../pages/setting-country/setting-country.module": [
-		723,
-		18
+		724,
+		21
+	],
+	"../pages/setting-league-add/setting-league-add.module": [
+		725,
+		20
+	],
+	"../pages/setting-league-edit/setting-league-edit.module": [
+		726,
+		4
 	],
 	"../pages/setting-leagues/setting-leagues.module": [
-		724,
-		17
+		727,
+		19
 	],
 	"../pages/setting-selections/setting-selections.module": [
-		725,
-		16
+		728,
+		18
 	],
 	"../pages/setting-teams/setting-teams.module": [
-		727,
-		15
+		730,
+		17
 	],
 	"../pages/setting/setting.module": [
-		728,
-		14
+		731,
+		16
 	],
 	"../pages/sign-in/sign-in.module": [
-		729,
-		13
+		732,
+		15
 	],
 	"../pages/sign-up/sign-up.module": [
-		730,
-		12
+		733,
+		14
 	],
 	"../pages/team/team.module": [
-		731,
-		11
+		734,
+		13
 	],
 	"../pages/teams-stats/teams-stats.module": [
-		732,
-		10
+		735,
+		12
 	],
 	"../pages/terms/terms.module": [
-		733,
-		9
+		736,
+		11
 	],
 	"../pages/top-news-details/top-news-details.module": [
-		734,
-		8
+		737,
+		10
 	],
 	"../pages/top-news/top-news.module": [
-		735,
-		7
+		739,
+		9
 	],
 	"../pages/user-details/user-details.module": [
-		737,
-		6
+		740,
+		8
 	],
 	"../pages/users/users.module": [
-		736,
-		5
+		741,
+		7
 	]
 };
 function webpackAsyncContext(req) {
@@ -371,13 +383,16 @@ var GamesProvider = /** @class */ (function () {
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpParams */]()
             .set('pageNo', pageNo)
             .set('pageSize', pageSize);
-        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/country/get_all", { params: params })
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/country/getall", { params: params })
             .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
             return resp;
         }));
     };
-    GamesProvider.prototype.GetLeagues = function () {
-        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/league/getall")
+    GamesProvider.prototype.GetLeagues = function (pageNo, pageSize) {
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpParams */]()
+            .set('pageNo', pageNo)
+            .set('pageSize', pageSize);
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/league/getall", { params: params })
             .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
             return resp;
         }));
@@ -388,12 +403,58 @@ var GamesProvider = /** @class */ (function () {
             return resp;
         }));
     };
+    GamesProvider.prototype.SearchCountries = function (searchValue, pageNo, pageSize) {
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpParams */]()
+            .set('searchValue', searchValue)
+            .set('pageNo', pageNo)
+            .set('pageSize', pageSize);
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/country/search", { params: params })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.createCountry = function (country) {
+        return this.http.post(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/country/create", country).pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.updateCountry = function (country) {
+        return this.http.put(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/country/update", country).pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.deleteCountry = function (id) {
+        return this.http.delete(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/country/delete/" + id)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.SearchLeagues = function (searchValue, pageNo, pageSize) {
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpParams */]()
+            .set('searchValue', searchValue)
+            .set('pageNo', pageNo)
+            .set('pageSize', pageSize);
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/league/search", { params: params })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.deleteLeague = function (id) {
+        return this.http.delete(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/league/delete/" + id)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.updateLeague = function (league) {
+        return this.http.put(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/league/update", league).pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
     GamesProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["B" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */]])
     ], GamesProvider);
     return GamesProvider;
-    var _a;
 }());
 
 //# sourceMappingURL=games.js.map
@@ -481,8 +542,8 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../pages/add-adviser/add-adviser.module#AddAdviserPageModule', name: 'AddAdviserPage', segment: 'add-adviser', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/add-user/add-user.module#AddUserPageModule', name: 'AddUserPage', segment: 'add-user', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/all-matches/all-matches.module#AllMatchesPageModule', name: 'AllMatchesPage', segment: 'all-matches', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/advisers/advisers.module#AdvisersPageModule', name: 'AdvisersPage', segment: 'advisers', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/all-matches/all-matches.module#AllMatchesPageModule', name: 'AllMatchesPage', segment: 'all-matches', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/android-subscription/android-subscription.module#AndroidSubscriptionPageModule', name: 'AndroidSubscriptionPage', segment: 'android-subscription', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/assign-adviser/assign-adviser.module#AssignAdviserPageModule', name: 'AssignAdviserPage', segment: 'assign-adviser', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/contact/contact.module#ContactPageModule', name: 'ContactPage', segment: 'contact', priority: 'low', defaultHistory: [] },
@@ -492,27 +553,30 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/league-details/league-details.module#LeagueDetailsPageModule', name: 'LeagueDetailsPage', segment: 'league-details', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/match-comments/match-comments.module#MatchCommentsPageModule', name: 'MatchCommentsPage', segment: 'match-comments', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/match-details/match-details.module#MatchDetailsPageModule', name: 'MatchDetailsPage', segment: 'match-details', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/match-votes/match-votes.module#MatchVotesPageModule', name: 'MatchVotesPage', segment: 'match-votes', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/match/match.module#MatchPageModule', name: 'MatchPage', segment: 'match', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/new-game/new-game.module#NewGamePageModule', name: 'NewGamePage', segment: 'new-game', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/new-prediction/new-prediction.module#NewPredictionPageModule', name: 'NewPredictionPage', segment: 'new-prediction', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/notification/notification.module#NotificationPageModule', name: 'NotificationPage', segment: 'notification', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/old-free-tips/old-free-tips.module#OldFreeTipsPageModule', name: 'OldFreeTipsPage', segment: 'old-free-tips', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/photos-details/photos-details.module#PhotosDetailsPageModule', name: 'PhotosDetailsPage', segment: 'photos-details', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/old-games/old-games.module#OldGamesPageModule', name: 'OldGamesPage', segment: 'old-games', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/payments/payments.module#PaymentsPageModule', name: 'PaymentsPage', segment: 'payments', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/photos-details/photos-details.module#PhotosDetailsPageModule', name: 'PhotosDetailsPage', segment: 'photos-details', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/photos/photos.module#PhotosPageModule', name: 'PhotosPage', segment: 'photos', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/players-stats/players-stats.module#PlayersStatsPageModule', name: 'PlayersStatsPage', segment: 'players-stats', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/prediction-admin/prediction-admin.module#PredictionAdminPageModule', name: 'PredictionAdminPage', segment: 'prediction-admin', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/prediction-sub-admin/prediction-sub-admin.module#PredictionSubAdminPageModule', name: 'PredictionSubAdminPage', segment: 'prediction-sub-admin', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/predictions/predictions.module#PredictionsPageModule', name: 'PredictionsPage', segment: 'predictions', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/predictions/predictions.module#PredictionsPageModule', name: 'PredictionsPage', segment: 'predictions', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/reports/reports.module#ReportsPageModule', name: 'ReportsPage', segment: 'reports', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/search-pop/search-pop.module#SearchPopPageModule', name: 'SearchPopPage', segment: 'search-pop', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/select-league/select-league.module#SelectLeaguePageModule', name: 'SelectLeaguePage', segment: 'select-league', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/setting-country/setting-country.module#SettingCountryPageModule', name: 'SettingCountryPage', segment: 'setting-country', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/setting-league-add/setting-league-add.module#SettingLeagueAddPageModule', name: 'SettingLeagueAddPage', segment: 'setting-league-add', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/setting-league-edit/setting-league-edit.module#SettingLeagueEditPageModule', name: 'SettingLeagueEditPage', segment: 'setting-league-edit', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/setting-leagues/setting-leagues.module#SettingLeaguesPageModule', name: 'SettingLeaguesPage', segment: 'setting-leagues', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/setting-selections/setting-selections.module#SettingSelectionsPageModule', name: 'SettingSelectionsPage', segment: 'setting-selections', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/photos/photos.module#PhotosPageModule', name: 'PhotosPage', segment: 'photos', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/setting-country-manage/setting-country-manage.module#SettingCountryManagePageModule', name: 'SettingCountryManagePage', segment: 'setting-country-manage', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/setting-teams/setting-teams.module#SettingTeamsPageModule', name: 'SettingTeamsPage', segment: 'setting-teams', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/setting/setting.module#SettingPageModule', name: 'SettingPage', segment: 'setting', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sign-in/sign-in.module#SignInPageModule', name: 'SignInPage', segment: 'sign-in', priority: 'low', defaultHistory: [] },
@@ -521,10 +585,10 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/teams-stats/teams-stats.module#TeamsStatsPageModule', name: 'TeamsStatsPage', segment: 'teams-stats', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/terms/terms.module#TermsPageModule', name: 'TermsPage', segment: 'terms', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/top-news-details/top-news-details.module#TopNewsDetailsPageModule', name: 'TopNewsDetailsPage', segment: 'top-news-details', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/match-details/match-details.module#MatchDetailsPageModule', name: 'MatchDetailsPage', segment: 'match-details', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/top-news/top-news.module#TopNewsPageModule', name: 'TopNewsPage', segment: 'top-news', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/users/users.module#UsersPageModule', name: 'UsersPage', segment: 'users', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/user-details/user-details.module#UserDetailsPageModule', name: 'UserDetailsPage', segment: 'user-details', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/payments/payments.module#PaymentsPageModule', name: 'PaymentsPage', segment: 'payments', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/users/users.module#UsersPageModule', name: 'UsersPage', segment: 'users', priority: 'low', defaultHistory: [] }
                     ]
                 }),
             ],

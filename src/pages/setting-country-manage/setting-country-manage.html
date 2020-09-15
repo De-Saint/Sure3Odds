@@ -1,0 +1,30 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Manage Country</ion-title>
+    <ion-buttons end *ngIf="countries.name">
+      <button ion-button icon-only (click)="onDelete()">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="otherForm">
+    <ion-list>
+
+     
+      <!-- appear when click update -->
+      <ion-item >
+        <ion-label stacked>Name</ion-label>
+        <ion-input  type="text" [(ngModel)]="country.name"  ></ion-input>
+        <ion-input hidden type="text" [(ngModel)]="country.id"  ></ion-input>
+      </ion-item>
+      <!-- ==================================== -->
+    </ion-list>
+    <button ion-button block color="color2" (click)="onSubmit(country)">Submit</button>
+  </div>
+</ion-content>

@@ -1,14 +1,14 @@
 webpackJsonp([41],{
 
-/***/ 698:
+/***/ 701:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AssignAdviserPageModule", function() { return AssignAdviserPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GuidePageModule", function() { return GuidePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__assign_adviser__ = __webpack_require__(748);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__guide__ = __webpack_require__(754);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AssignAdviserPageModule = /** @class */ (function () {
-    function AssignAdviserPageModule() {
+var GuidePageModule = /** @class */ (function () {
+    function GuidePageModule() {
     }
-    AssignAdviserPageModule = __decorate([
+    GuidePageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__assign_adviser__["a" /* AssignAdviserPage */],
+                __WEBPACK_IMPORTED_MODULE_2__guide__["a" /* GuidePage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__assign_adviser__["a" /* AssignAdviserPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__guide__["a" /* GuidePage */]),
             ],
         })
-    ], AssignAdviserPageModule);
-    return AssignAdviserPageModule;
+    ], GuidePageModule);
+    return GuidePageModule;
 }());
 
-//# sourceMappingURL=assign-adviser.module.js.map
+//# sourceMappingURL=guide.module.js.map
 
 /***/ }),
 
-/***/ 748:
+/***/ 754:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AssignAdviserPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GuidePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -57,29 +57,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the AssignAdviserPage page.
+ * Generated class for the GuidePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var AssignAdviserPage = /** @class */ (function () {
-    function AssignAdviserPage(navCtrl, navParams) {
+var GuidePage = /** @class */ (function () {
+    function GuidePage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    AssignAdviserPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad AssignAdviserPage');
+    GuidePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad GuidePage');
     };
-    AssignAdviserPage = __decorate([
+    GuidePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-assign-adviser',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/assign-adviser/assign-adviser.html"*/'<!--\n  Generated template for the AssignAdviserPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>assignAdviser</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/assign-adviser/assign-adviser.html"*/,
+            selector: 'page-guide',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/guide/guide.html"*/'<!--\n  Generated template for the GuidePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>guide</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/guide/guide.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* NavParams */]])
-    ], AssignAdviserPage);
-    return AssignAdviserPage;
+    ], GuidePage);
+    return GuidePage;
 }());
 
-//# sourceMappingURL=assign-adviser.js.map
+//# sourceMappingURL=guide.js.map
 
 /***/ })
 

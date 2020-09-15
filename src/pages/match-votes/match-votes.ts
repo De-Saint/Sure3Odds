@@ -12,7 +12,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'match-votes.html',
 })
 export class MatchVotesPage {
- 
   match: any;
   votes: any;
   img;

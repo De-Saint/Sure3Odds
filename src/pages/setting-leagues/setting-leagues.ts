@@ -1,7 +1,7 @@
 import { GamesProvider } from './../../providers/games/games';
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, Content } from 'ionic-angular';
 
 
 @IonicPage()
@@ -10,68 +10,73 @@ import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-an
   templateUrl: 'setting-leagues.html',
 })
 export class SettingLeaguesPage {
+  @ViewChild(Content) content: Content;
   leagues: any;
   originalleagues: any;
   searchTerm: string;
   error: string;
+  noleagues: string;
+  currentPage = 1;
+  totalPage = 0;
+  perPage = 0;
+  totalData = 0;
   constructor(public navCtrl: NavController,
     private authProvider: AuthenicationProvider,
-    public loadingCtrl: LoadingController,
     private gamesProvider: GamesProvider,
     public navParams: NavParams) {
   }
-
-  ngOnInit(): void {
+  ionViewWillEnter() {
     this.GetLeagues();
   }
-  GetLeagues() {//myDate
-    let loading = this.loadingCtrl.create({
-    });
-    // loading.present();
-    this.gamesProvider.GetLeagues()
+  GetLeagues() {
+    this.gamesProvider.GetLeagues(0, 50)
       .subscribe(resp => {
+        console.log(resp);
         if (resp.statusCode === 200) {
-          this.leagues = resp.data;
+          this.leagues = resp.data.content;
           this.originalleagues = this.leagues;
-          console.log(this.originalleagues);
-          this.error = 'full';
+          this.currentPage = resp.data.number;
+          this.totalPage = resp.data.totalPages;
+          this.totalData = resp.data.totalElements;
+          this.perPage = resp.data.size;
+          console.log(this.currentPage, this.totalPage, this.totalData,
+            this.perPage);
+          this.noleagues = 'leagues';
+          console.log(this.leagues);
         } else {
           console.log(resp.description);
-          loading.dismiss().catch(() => { });
         }
       }, error => {
         console.log(JSON.stringify(error));
-        loading.dismiss().catch(() => { });
+        this.error = 'none';
         this.authProvider.showToast(error.error.description);
       });
   }
 
   onSearch() {
-    let term = this.searchTerm;
-    if (term.trim() === '' || term.trim().length < 0) {
-      if (this.leagues.length === 0) {
-        this.error = "empty";
-        console.log("this.leagues");
-      } else {
-        this.error = 'full';
-        this.leagues = this.originalleagues;
-      }
+    let searchvalue = this.searchTerm;
+    if (searchvalue.trim() === '') {
+      this.leagues = this.originalleagues;
     } else {
-      //to search an already popolated arraylist
-      this.leagues = [];
-      if (this.originalleagues) {
-        this.leagues = this.originalleagues.filter((league) => {
-          if (league.name.toLocaleLowerCase().indexOf(term.toLowerCase()) > -1 || league.country.name.toLocaleLowerCase().indexOf(term.toLowerCase()) > -1) {
-            this.error = 'full';
-            return true;
+      if (searchvalue.length >= 3) {
+        this.gamesProvider.SearchLeagues(searchvalue, 0, 50)
+        .subscribe(resp => {
+          console.log(resp);
+          if (resp.statusCode === 200) {
+            this.leagues = resp.data.content;
+            this.currentPage = resp.data.number;
+            this.totalPage = resp.data.totalPages;
+            this.totalData = resp.data.totalElements;
+            this.perPage = resp.data.size;
+            console.log(this.currentPage, this.totalPage, this.totalData,
+              this.perPage);
           } else {
-            if (this.leagues.length === 0) {
-              this.leagues = [];
-              this.error = "empty";
-              console.log("no league");
-            }
-            return false;
+            console.log(resp.description);
           }
+        }, error => {
+          console.log(JSON.stringify(error));
+          this.error = 'none';
+          this.authProvider.showToast(error.error.description);
         });
       }
     }
@@ -79,12 +84,40 @@ export class SettingLeaguesPage {
   onClear(ev) {
     this.searchTerm = "";
     this.leagues = this.originalleagues;
-    this.error = '';
   }
   onCancel(ev) {
     this.searchTerm = "";
     this.leagues = this.originalleagues;
-    this.error = '';
   }
 
+  scrollInfinite(event) {
+    this.currentPage += 1;
+    setTimeout(() => {
+      this.gamesProvider.GetLeagues(this.currentPage, this.perPage)
+        .subscribe(resp => {
+          if (resp.statusCode === 200) {
+            this.currentPage = resp.data.number;
+            this.totalPage = resp.data.totalPages;
+            this.totalData = resp.data.totalElements;
+            this.perPage = resp.data.size;
+            console.log(this.currentPage, this.totalPage, this.totalData,
+              this.perPage);
+            this.noleagues = 'league';
+            for (let i = 0; i < resp.data.content.length; i++) {
+              this.leagues.push(resp.data.content[i]);
+            }
+          } else {
+            console.log(resp.description);
+          }
+          event.complete();
+        }, error => {
+          console.log("End of the countries.");
+          this.noleagues = 'none';
+          event.complete();
+        })
+    }, 1000);
+  }
+  onGotoTop() {
+    this.content.scrollToTop();
+  }
 }
