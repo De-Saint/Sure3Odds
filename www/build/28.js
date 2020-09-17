@@ -1,14 +1,14 @@
 webpackJsonp([28],{
 
-/***/ 716:
+/***/ 724:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PlayersStatsPageModule", function() { return PlayersStatsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchPopPageModule", function() { return SearchPopPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__players_stats__ = __webpack_require__(769);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__search_pop__ = __webpack_require__(787);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var PlayersStatsPageModule = /** @class */ (function () {
-    function PlayersStatsPageModule() {
+var SearchPopPageModule = /** @class */ (function () {
+    function SearchPopPageModule() {
     }
-    PlayersStatsPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
+    SearchPopPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__players_stats__["a" /* PlayersStatsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__search_pop__["a" /* SearchPopPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__players_stats__["a" /* PlayersStatsPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__search_pop__["a" /* SearchPopPage */]),
             ],
         })
-    ], PlayersStatsPageModule);
-    return PlayersStatsPageModule;
+    ], SearchPopPageModule);
+    return SearchPopPageModule;
 }());
 
-//# sourceMappingURL=players-stats.module.js.map
+//# sourceMappingURL=search-pop.module.js.map
 
 /***/ }),
 
-/***/ 769:
+/***/ 787:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlayersStatsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchPopPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -57,36 +56,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-var PlayersStatsPage = /** @class */ (function () {
-    function PlayersStatsPage(navCtrl, global) {
+var SearchPopPage = /** @class */ (function () {
+    function SearchPopPage(navCtrl) {
         this.navCtrl = navCtrl;
-        this.global = global;
-        this.players = [
-            { img: 'assets/imgs/player1.png', name: 'Player Name', team: 'Arsenal', num: '10' },
-            { img: 'assets/imgs/player2.png', name: 'Player Name', team: 'Arsenal', num: '7' },
-            { img: 'assets/imgs/player1.png', name: 'Player Name', team: 'Arsenal', num: '7' },
-            { img: 'assets/imgs/player2.png', name: 'Player Name', team: 'Arsenal', num: '7' },
-            { img: 'assets/imgs/player1.png', name: 'Player Name', team: 'Arsenal', num: '6' },
-            { img: 'assets/imgs/player2.png', name: 'Player Name', team: 'Arsenal', num: '6' },
-            { img: 'assets/imgs/player2.png', name: 'Player Name', team: 'Arsenal', num: '6' },
-            { img: 'assets/imgs/player1.png', name: 'Player Name', team: 'Arsenal', num: '5' },
-            { img: 'assets/imgs/player2.png', name: 'Player Name', team: 'Arsenal', num: '4' },
-            { img: 'assets/imgs/player2.png', name: 'Player Name', team: 'Arsenal', num: '4' },
-            { img: 'assets/imgs/player1.png', name: 'Player Name', team: 'Arsenal', num: '4' },
-            { img: 'assets/imgs/player2.png', name: 'Player Name', team: 'Arsenal', num: '4' },
-        ];
     }
-    PlayersStatsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-players-stats',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/players-stats/players-stats.html"*/'\n<ion-header>\n  <ion-navbar>\n    <ion-title>Goals</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-item class="avatarItem" *ngFor="let item of players">\n      <ion-avatar item-left>\n        <!-- player image -->\n        <img src="{{item.img}}"/>\n      </ion-avatar>\n      <!-- player Name -->\n      <h5 ion-text color="dark">{{item.name}}</h5>\n      <!-- player Team -->\n      <p ion-text color="dark">{{item.team}}</p>\n      <!-- goals , assists or rating Number -->\n      <span ion-text color="color1" class="rateNum" item-right>{{item.num}}</span>\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/players-stats/players-stats.html"*/,
+    SearchPopPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-search-pop',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/search-pop/search-pop.html"*/'<ion-content >\n  <ion-searchbar></ion-searchbar>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/search-pop/search-pop.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
-    ], PlayersStatsPage);
-    return PlayersStatsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"]])
+    ], SearchPopPage);
+    return SearchPopPage;
 }());
 
-//# sourceMappingURL=players-stats.js.map
+//# sourceMappingURL=search-pop.js.map
 
 /***/ })
 

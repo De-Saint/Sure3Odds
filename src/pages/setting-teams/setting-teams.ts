@@ -1,6 +1,6 @@
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
-import { Component, OnInit } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, Content } from 'ionic-angular';
 import { GamesProvider } from '../../providers/games/games';
 
 
@@ -9,58 +9,75 @@ import { GamesProvider } from '../../providers/games/games';
   selector: 'page-setting-teams',
   templateUrl: 'setting-teams.html',
 })
-export class SettingTeamsPage implements OnInit {
+export class SettingTeamsPage {
+  @ViewChild(Content) content: Content;
   searchTerm :string;
   error:string;
   teams:any;
   originalteams:any;
+  noteams:string;
+  currentPage = 1;
+  totalPage = 0;
+  perPage = 0;
+  totalData = 0;
   constructor(private authProvider: AuthenicationProvider,
     private gamesProvider: GamesProvider,
     public navCtrl: NavController, public navParams: NavParams) {
   }
 
- ngOnInit() : void{
+ionViewDidLoad(){
   this.GetTeams();
- }
+}
 
  GetTeams(){
-  this.gamesProvider.GetTeams()
+  this.gamesProvider.GetTeams(0, 200)
   .subscribe(resp => {
+    console.log(resp);
     if (resp.statusCode === 200) {
-      this.teams = resp.data;
+      this.teams = resp.data.content;
       this.originalteams = this.teams;
+      this.currentPage = resp.data.number;
+      this.totalPage = resp.data.totalPages;
+      this.totalData = resp.data.totalElements;
+      this.perPage = resp.data.size;
+      console.log(this.currentPage, this.totalPage, this.totalData,
+        this.perPage);
+      this.noteams = 'teams';
       console.log(this.teams);
     } else {
       console.log(resp.description);
     }
   }, error => {
     console.log(JSON.stringify(error));
+    this.error = 'none';
     this.authProvider.showToast(error.error.description);
   });
  }
 
  onSearch() {
-  let term = this.searchTerm;
-  if (term.trim() === '' || term.trim().length < 0) {
-    if (this.teams.length === 0) {
-      this.error = "No result found."
-    } else {
-      this.teams = this.originalteams;
-    }
+  let searchvalue = this.searchTerm;
+  if (searchvalue.trim() === '') {
+    this.teams = this.originalteams;
   } else {
-    //to search an already popolated arraylist
-    this.teams = [];
-    if (this.originalteams) {
-      this.teams = this.originalteams.filter((team) => {
-        if (team.name.toLocaleLowerCase().indexOf(term.toLowerCase()) > -1) {
-          return true;
+    if (searchvalue.length >= 3) {
+      this.gamesProvider.SearchTeams(searchvalue, 0, 200)
+      .subscribe(resp => {
+        console.log(resp);
+        if (resp.statusCode === 200) {
+          this.teams = resp.data.content;
+          this.currentPage = resp.data.number;
+          this.totalPage = resp.data.totalPages;
+          this.totalData = resp.data.totalElements;
+          this.perPage = resp.data.size;
+          console.log(this.currentPage, this.totalPage, this.totalData,
+            this.perPage);
         } else {
-          if (this.teams.length === 0) {
-            this.teams = [];
-           this.error = "No result found."
-          }
-          return false;
+          console.log(resp.description);
         }
+      }, error => {
+        console.log(JSON.stringify(error));
+        this.error = 'none';
+        this.authProvider.showToast(error.error.description);
       });
     }
   }
@@ -68,11 +85,41 @@ export class SettingTeamsPage implements OnInit {
 onClear(ev) {
   this.searchTerm = "";
   this.teams = this.originalteams;
-  this.error = '';
+
 }
 onCancel(ev) {
   this.searchTerm = "";
   this.teams = this.originalteams;
-  this.error = '';
 }
+scrollInfinite(event) {
+  this.currentPage += 1;
+  setTimeout(() => {
+    this.gamesProvider.GetTeams(this.currentPage, this.perPage)
+      .subscribe(resp => {
+        if (resp.statusCode === 200) {
+          this.currentPage = resp.data.number;
+          this.totalPage = resp.data.totalPages;
+          this.totalData = resp.data.totalElements;
+          this.perPage = resp.data.size;
+          console.log(this.currentPage, this.totalPage, this.totalData,
+            this.perPage);
+          this.noteams = 'teams';
+          for (let i = 0; i < resp.data.content.length; i++) {
+            this.teams.push(resp.data.content[i]);
+          }
+        } else {
+          console.log(resp.description);
+        }
+        event.complete();
+      }, error => {
+        console.log("End of the countries.");
+        this.noteams = 'none';
+        event.complete();
+      })
+  }, 1000);
+}
+onGotoTop() {
+  this.content.scrollToTop();
+}
+
 }

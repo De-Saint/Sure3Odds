@@ -5,7 +5,7 @@
     </button>
     <ion-title>Countries</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only navPush="SettingCountryManagePage">
+      <button ion-button icon-only navPush="SettingCountryAddPage">
         <ion-icon name="add-circle"></ion-icon>
       </button>
     </ion-buttons>
@@ -20,7 +20,7 @@
   </ion-searchbar>
   <div class="leagueStats">
     <ion-list *ngFor="let country of countries">
-      <ion-item class="thumbnailItem" navPush="SettingCountryManagePage" [navParams]="country">
+      <ion-item class="thumbnailItem" navPush="SettingCountryEditPage" [navParams]="country">
         <ion-thumbnail item-left>
           <img src="{{country.imageurl}}" *ngIf="country.imageurl" />
           <img src="assets/imgs/appicon.png" *ngIf="!country.imageurl" />

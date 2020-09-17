@@ -1,14 +1,14 @@
 webpackJsonp([5],{
 
-/***/ 729:
+/***/ 732:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingCountryManagePageModule", function() { return SettingCountryManagePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingSelectionAddPageModule", function() { return SettingSelectionAddPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_country_manage__ = __webpack_require__(785);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_selection_add__ = __webpack_require__(795);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,36 +18,53 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SettingCountryManagePageModule = /** @class */ (function () {
-    function SettingCountryManagePageModule() {
+var SettingSelectionAddPageModule = /** @class */ (function () {
+    function SettingSelectionAddPageModule() {
     }
-    SettingCountryManagePageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
+    SettingSelectionAddPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__setting_country_manage__["a" /* SettingCountryManagePage */],
+                __WEBPACK_IMPORTED_MODULE_2__setting_selection_add__["a" /* SettingSelectionAddPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_country_manage__["a" /* SettingCountryManagePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_selection_add__["a" /* SettingSelectionAddPage */]),
             ],
         })
-    ], SettingCountryManagePageModule);
-    return SettingCountryManagePageModule;
+    ], SettingSelectionAddPageModule);
+    return SettingSelectionAddPageModule;
 }());
 
-//# sourceMappingURL=setting-country-manage.module.js.map
+//# sourceMappingURL=setting-selection-add.module.js.map
 
 /***/ }),
 
-/***/ 785:
+/***/ 752:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingCountryManagePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Selections; });
+var Selections = /** @class */ (function () {
+    function Selections(name, id) {
+        this.name = name;
+        this.id = id;
+    }
+    return Selections;
+}());
+
+//# sourceMappingURL=Selections.js.map
+
+/***/ }),
+
+/***/ 795:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingSelectionAddPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_Selections__ = __webpack_require__(752);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_games_games__ = __webpack_require__(354);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_Countries__ = __webpack_require__(786);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_authenication_authenication__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -62,109 +79,45 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var SettingCountryManagePage = /** @class */ (function () {
-    function SettingCountryManagePage(navCtrl, gameProvider, authProvider, navParams) {
-        this.navCtrl = navCtrl;
+var SettingSelectionAddPage = /** @class */ (function () {
+    function SettingSelectionAddPage(gameProvider, authProvider, navCtrl, navParams) {
         this.gameProvider = gameProvider;
         this.authProvider = authProvider;
+        this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.country = new __WEBPACK_IMPORTED_MODULE_2__interfaces_Countries__["a" /* Countries */]("", "", "");
-        this.countries = this.navParams.data;
-        if (this.countries) {
-            this.country.name = this.countries.name;
-            this.country.id = this.countries.id;
-            console.log(this.country);
-        }
+        this.selection = new __WEBPACK_IMPORTED_MODULE_0__interfaces_Selections__["a" /* Selections */]("", "");
     }
-    SettingCountryManagePage.prototype.ionViewDidLoad = function () {
+    SettingSelectionAddPage.prototype.ionViewDidLoad = function () {
     };
-    SettingCountryManagePage.prototype.onSubmit = function (country) {
-        if (this.country.name) {
-            if (this.countries.name) {
-                //edit
-                console.log("edit");
-                this.onEditCountry(country);
-            }
-            else {
-                //create
-                console.log("create");
-                this.onCreateCountry(country);
-            }
+    SettingSelectionAddPage.prototype.onSubmit = function (selection) {
+        var _this = this;
+        if (selection.name) {
+            console.log(selection);
+            this.gameProvider.createSelection(selection).subscribe(function (res) {
+                if (res.statusCode === 200) {
+                    _this.navCtrl.pop();
+                }
+                else {
+                    _this.authProvider.showToast(res.description);
+                }
+            }, function (error) {
+                _this.authProvider.showToast(error.error.description);
+            });
         }
         else {
             this.authProvider.showToast("Name input field is empty");
         }
     };
-    SettingCountryManagePage.prototype.onCreateCountry = function (country) {
-        var _this = this;
-        alert("heey");
-        this.gameProvider.createCountry(country).subscribe(function (res) {
-            if (res.statusCode === 200) {
-                _this.navCtrl.pop();
-            }
-            else {
-                _this.authProvider.showToast(res.description);
-            }
-        }, function (error) {
-            _this.authProvider.showToast(error.error.description);
-        });
-    };
-    SettingCountryManagePage.prototype.onEditCountry = function (country) {
-        var _this = this;
-        this.gameProvider.updateCountry(country).subscribe(function (res) {
-            if (res.statusCode === 200) {
-                _this.navCtrl.pop();
-            }
-            else {
-                _this.authProvider.showToast(res.description);
-            }
-        }, function (error) {
-            _this.authProvider.showToast(error.error.description);
-        });
-    };
-    SettingCountryManagePage.prototype.onDelete = function () {
-        var _this = this;
-        this.gameProvider.deleteCountry(this.countries.id).subscribe(function (res) {
-            if (res.statusCode === 200) {
-                _this.navCtrl.pop();
-            }
-            else {
-                _this.authProvider.showToast(res.description);
-            }
-        }, function (error) {
-            _this.authProvider.showToast(error.error.description);
-        });
-    };
-    SettingCountryManagePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["n" /* Component */])({
-            selector: 'page-setting-country-manage',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-country-manage/setting-country-manage.html"*/'\n<ion-header>\n  <ion-navbar>\n    <ion-title>Manage Country</ion-title>\n    <ion-buttons end *ngIf="countries.name">\n      <button ion-button icon-only (click)="onDelete()">\n        <ion-icon name="trash"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="otherForm">\n    <ion-list>\n\n     \n      <!-- appear when click update -->\n      <ion-item >\n        <ion-label stacked>Name</ion-label>\n        <ion-input  type="text" [(ngModel)]="country.name"  ></ion-input>\n        <ion-input hidden type="text" [(ngModel)]="country.id"  ></ion-input>\n      </ion-item>\n      <!-- ==================================== -->\n    </ion-list>\n    <button ion-button block color="color2" (click)="onSubmit(country)">Submit</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-country-manage/setting-country-manage.html"*/,
+    SettingSelectionAddPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-setting-selection-add',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-selection-add/setting-selection-add.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Add Selection</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="otherForm">\n    <ion-list>\n\n     \n      <!-- appear when click update -->\n      <ion-item >\n        <ion-label stacked>Name</ion-label>\n        <ion-input  type="text" [(ngModel)]="selection.name"  ></ion-input>\n        <ion-input hidden type="text" [(ngModel)]="selection.id"  ></ion-input>\n      </ion-item>\n      <!-- ==================================== -->\n    </ion-list>\n    <button ion-button block color="color2" (click)="onSubmit(selection)">Submit</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-selection-add/setting-selection-add.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["t" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1__providers_games_games__["a" /* GamesProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */],
-            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["u" /* NavParams */]])
-    ], SettingCountryManagePage);
-    return SettingCountryManagePage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_games_games__["a" /* GamesProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_authenication_authenication__["a" /* AuthenicationProvider */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"]])
+    ], SettingSelectionAddPage);
+    return SettingSelectionAddPage;
 }());
 
-//# sourceMappingURL=setting-country-manage.js.map
-
-/***/ }),
-
-/***/ 786:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Countries; });
-var Countries = /** @class */ (function () {
-    function Countries(name, id, imageurl) {
-        this.name = name;
-        this.id = id;
-        this.imageurl = imageurl;
-    }
-    return Countries;
-}());
-
-//# sourceMappingURL=Countries.js.map
+//# sourceMappingURL=setting-selection-add.js.map
 
 /***/ })
 

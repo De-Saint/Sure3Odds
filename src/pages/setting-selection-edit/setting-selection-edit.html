@@ -1,0 +1,29 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Edit Selection</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="onDelete()">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="otherForm">
+    <ion-list>
+      <!-- appear when click update -->
+      <ion-item >
+        <ion-label stacked>Name</ion-label>
+        <ion-input  type="text" [(ngModel)]="selection.name"  ></ion-input>
+        <ion-input hidden type="text" [(ngModel)]="selection.id"  ></ion-input>
+      </ion-item>
+      <!-- ==================================== -->
+    </ion-list>
+    <button ion-button block color="color2" (click)="onSubmit(selection)">Submit</button>
+  </div>
+</ion-content>

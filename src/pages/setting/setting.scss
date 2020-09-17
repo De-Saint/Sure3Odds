@@ -5,6 +5,13 @@ page-setting {
     .tabs-md .tab-button {
         min-height: 4rem !important;
     }
+    
 }
-
+.item {
+    padding: 4px !important;
+    background-color: transparent;
+}
+.item.item-block {
+    min-height: 1.9em !important;
+}
 

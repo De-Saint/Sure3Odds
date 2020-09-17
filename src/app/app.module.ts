@@ -14,6 +14,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
 import { GamesProvider } from '../providers/games/games';
 
+import { SelectSearchableModule } from 'ionic-select-searchable';
+
 var config = {
   backButtonText: '',
   backButtonIcon: 'md-arrow-back',
@@ -30,9 +32,11 @@ var config = {
   ],
   imports: [
     BrowserModule, IonicImageViewerModule,
+    
     HttpClientModule,
     IonicStorageModule.forRoot(),
     IonicModule.forRoot(Sure3Odds, config),
+    SelectSearchableModule,
   ],
   bootstrap: [IonicApp],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],

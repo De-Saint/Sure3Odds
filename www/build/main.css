@@ -40047,6 +40047,196 @@ image-viewer.ion-page img {
   margin: 0 auto;
 }
 
+.item-label-stacked .select-searchable, .item-label-floating .select-searchable {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  max-width: 100%;
+  padding-left: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.item-label-stacked .select-searchable-value, .item-label-floating .select-searchable-value {
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 19px;
+}
+
+.item-label-stacked .select-searchable-icon-inner, .item-label-floating .select-searchable-icon-inner {
+  top: 7px;
+}
+
+.item-label-stacked .select-searchable-ios .select-searchable-value, .item-label-floating .select-searchable-ios .select-searchable-value {
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 20px;
+}
+
+.item-label-stacked .select-searchable-ios .select-searchable-icon-inner, .item-label-floating .select-searchable-ios .select-searchable-icon-inner {
+  top: 8px;
+}
+
+.item:not(.item-label-stacked):not(.item-label-floating) .select-searchable-md .select-searchable-value {
+  padding-left: 16px;
+}
+
+.item:not(.item-label-stacked):not(.item-label-floating) .select-searchable-ios .select-searchable-value {
+  padding-left: 16px;
+}
+
+.item-select-searchable .item-inner .input-wrapper {
+  -webkit-box-align: normal;
+  -webkit-align-items: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+}
+
+.item-select-searchable ion-label {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  max-width: initial;
+}
+
+.select-searchable {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 45%;
+}
+
+.select-searchable:not(.select-searchable-is-enabled) {
+  opacity: 0.4;
+}
+
+.select-searchable-has-placeholder .select-searchable-value-item {
+  color: #999;
+}
+
+.select-searchable-value {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  overflow: hidden;
+}
+
+.select-searchable-value-item {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.select-searchable-value-item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.select-searchable-icon {
+  position: relative;
+  width: 20px;
+}
+
+.select-searchable-icon-inner {
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  border-top: 5px solid;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  pointer-events: none;
+}
+
+.select-searchable-item-button {
+  width: 25px;
+}
+
+.select-searchable-ios.select-searchable-has-placeholder .select-searchable-value-item {
+  color: #999;
+}
+
+.select-searchable-ios .select-searchable-value {
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+.select-searchable-ios .select-searchable-icon-inner {
+  top: 19px;
+  color: #999;
+}
+
+.select-searchable-md .select-searchable-icon-inner {
+  color: #999;
+}
+
+.select-searchable-spinner {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.select-searchable-spinner-background {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background-color: #000000;
+  opacity: 0.05;
+}
+
+.select-searchable-spinner ion-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  margin-top: -14px;
+  margin-left: -14px;
+}
+
+.select-searchable-add-item-template {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+}
+
+.select-searchable-page-ios .select-searchable-message {
+  padding: 8px;
+}
+
+.select-searchable-page-md .select-searchable-message {
+  padding: 8px 12px;
+}
+
+.select-searchable-page.select-searchable-page-can-clear.select-searchable-page-is-multiple .footer .col:first-child {
+  padding-right: 2px;
+}
+
+.select-searchable-page.select-searchable-page-can-clear.select-searchable-page-is-multiple .footer .col:last-child {
+  padding-left: 2px;
+}
+
+.select-searchable-page.select-searchable-page-is-searching .scroll-content {
+  overflow-y: hidden;
+}
+
+.select-searchable-page.select-searchable-page-is-add-item-template-visible > .content > .scroll-content {
+  overflow-y: hidden;
+}
+
+.select-searchable-page ion-footer ion-toolbar {
+  padding: 5px 4px;
+}
+
 [padding] {
   padding: 4px !important;
 }
@@ -40115,13 +40305,13 @@ image-viewer.ion-page img {
   margin: 0px !important;
 }
 
-.imgBg, page-match-comments .imgs .imgProfile, page-match-details .imgs .imgProfile, page-match-votes .imgs .imgProfile, page-profile .imgs .imgProfile, page-setting-league-edit .imgs .imgProfile, .sign {
+.imgBg, page-match-comments .imgs .imgProfile, page-match-details .imgs .imgProfile, page-match-votes .imgs .imgProfile, page-profile .imgs .imgProfile, page-setting-country-add .imgs .imgProfile, page-setting-country-edit .imgs .imgProfile, page-setting-league-add .imgs .imgProfile, page-setting-league-edit .imgs .imgProfile, .sign {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-.item .label, .item.item-select .label, .item.item-select .select-text, .search_Pop .searchbar .searchbar-input, .signForm .item .text-input, page-profile .otherForm .item .text-input, page-setting-country-manage .otherForm .item .text-input, page-setting-league-edit .otherForm .item .text-input, .commentsList .item.item-block.writComment .input .text-input {
+.item .label, .item.item-select .label, .item.item-select .select-text, .search_Pop .searchbar .searchbar-input, .signForm .item .text-input, page-profile .otherForm .item .text-input, page-setting-country-add .otherForm .item .text-input, page-setting-country-edit .otherForm .item .text-input, page-setting-league-add .otherForm .item .text-input, page-setting-league-edit .otherForm .item .text-input, page-setting-selection-add .otherForm .item .text-input, page-setting-selection-edit .otherForm .item .text-input, .commentsList .item.item-block.writComment .input .text-input {
   color: #fff;
   font-size: 1.2rem !important;
   font-weight: 400;
@@ -40148,7 +40338,7 @@ ion-badge {
   overflow: hidden;
 }
 
-.card, .topNews, .tabelList .item.item-block .grid, .leagueMatches .allMatches, .leagueStats .list .item.item-block, page-all-matches .list, page-home .list, page-league-details .photoItem, page-match-comments .avatarItem, page-match-comments .item.thumbnailItem, page-match-details .avatarItem, page-match-details .item.thumbnailItem, page-match-votes .avatarItem, page-match-votes .item.thumbnailItem, page-notification .list .item, page-photos .photoItem, page-players-stats .list, page-profile .otherForm, page-select-league .favoriteLeagues, page-setting-country .photoItem, page-setting-country .teamMatchs .item.thumbnailItem, page-setting-leagues .photoItem, page-setting-leagues .teamMatchs .item.thumbnailItem, page-setting-leagues .squad, page-setting-teams .photoItem, page-setting-teams .teamMatchs .item.thumbnailItem, page-team .photoItem, page-team .teamMatchs .item.thumbnailItem, page-team .squad, page-teams-stats .list .item, .commentsList {
+.card, .topNews, .tabelList .item.item-block .grid, .leagueMatches .allMatches, .leagueStats .list .item.item-block, page-all-matches .list, page-home .list, page-league-details .photoItem, page-match-comments .avatarItem, page-match-comments .item.thumbnailItem, page-match-details .avatarItem, page-match-details .item.thumbnailItem, page-match-votes .avatarItem, page-match-votes .item.thumbnailItem, page-notification .list .item, page-photos .photoItem, page-players-stats .list, page-profile .otherForm, page-select-league .favoriteLeagues, page-setting-country .photoItem, page-setting-country .teamMatchs .item.thumbnailItem, page-setting-leagues .photoItem, page-setting-leagues .teamMatchs .item.thumbnailItem, page-setting-selections .photoItem, page-setting-selections .teamMatchs .item.thumbnailItem, page-setting-teams .photoItem, page-setting-teams .teamMatchs .item.thumbnailItem, page-team .photoItem, page-team .teamMatchs .item.thumbnailItem, page-team .squad, page-teams-stats .list .item, .commentsList {
   -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.29);
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.29);
 }
@@ -43769,7 +43959,7 @@ ion-menu .menu-inner .leagueList .item-block .label {
   backface-visibility: hidden;
 }
 
-.animateApp .fadeInUp, .animateApp page-home .slides, .animateApp .matchStats, .animateApp page-profile .scroll-content, .animateApp page-top-news-details .scroll-content, .animateApp .sign .signForm, .animateApp .sign page-profile .otherForm, page-profile .animateApp .sign .otherForm, .animateApp .sign page-setting-country-manage .otherForm, page-setting-country-manage .animateApp .sign .otherForm, .animateApp .sign page-setting-league-edit .otherForm, page-setting-league-edit .animateApp .sign .otherForm, .animateApp page-setting .scroll-content {
+.animateApp .fadeInUp, .animateApp page-home .slides, .animateApp .matchStats, .animateApp page-profile .scroll-content, .animateApp page-top-news-details .scroll-content, .animateApp .sign .signForm, .animateApp .sign page-profile .otherForm, page-profile .animateApp .sign .otherForm, .animateApp .sign page-setting-country-add .otherForm, page-setting-country-add .animateApp .sign .otherForm, .animateApp .sign page-setting-country-edit .otherForm, page-setting-country-edit .animateApp .sign .otherForm, .animateApp .sign page-setting-league-add .otherForm, page-setting-league-add .animateApp .sign .otherForm, .animateApp .sign page-setting-league-edit .otherForm, page-setting-league-edit .animateApp .sign .otherForm, .animateApp .sign page-setting-selection-add .otherForm, page-setting-selection-add .animateApp .sign .otherForm, .animateApp .sign page-setting-selection-edit .otherForm, page-setting-selection-edit .animateApp .sign .otherForm, .animateApp page-setting .scroll-content {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
   -webkit-animation-iteration-count: 1;
@@ -49959,6 +50149,15 @@ page-setting .tabs-md .tab-button {
   min-height: 4rem !important;
 }
 
+.item {
+  padding: 4px !important;
+  background-color: transparent;
+}
+
+.item.item-block {
+  min-height: 1.9em !important;
+}
+
 page-setting-country .header .toolbar.matchResultBar {
   padding: 8px 2px;
 }
@@ -50039,42 +50238,293 @@ page-setting-country .teamMatchs .item.thumbnailItem .matchTime p, page-setting-
   margin: 0px;
 }
 
-page-setting-country-manage .otherForm {
-  margin: 4px;
+page-setting-country-add .otherForm {
+  margin-top: 10em;
   border-radius: 4px;
   width: calc( 100% - 4px*2) !important;
   padding: 8px !important;
 }
 
-page-setting-country-manage .otherForm .item {
+page-setting-country-add .otherForm .item {
   -webkit-transition: height 1s;
   transition: height 1s;
 }
 
-page-setting-country-manage .otherForm .item .text-input {
+page-setting-country-add .otherForm .item .text-input {
   color: #000;
   opacity: .8;
   font-weight: 500;
 }
 
-page-setting-country-manage .otherForm .item .label {
+page-setting-country-add .otherForm .item .label {
   color: #000;
   font-weight: bold;
 }
 
-page-setting-country-manage .otherForm .item.show {
+page-setting-country-add .otherForm .item.show {
   height: 0px !important;
   -webkit-transition: height 1s;
   transition: height 1s;
   margin-bottom: 0px !important;
 }
 
-page-setting-country-manage .otherForm .item.item-input-disabled {
+page-setting-country-add .otherForm .item.item-input-disabled {
   border-bottom: none !important;
 }
 
-page-setting-country-manage .otherForm .button {
+page-setting-country-add .otherForm .button {
   margin-top: 8px !important;
+}
+
+page-setting-country-add .imgs {
+  padding: 4px;
+  position: relative;
+}
+
+page-setting-country-add .imgs img {
+  display: block;
+  border-radius: 4px;
+  width: 100%;
+}
+
+page-setting-country-add .imgs .imgProfile {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin: 20px auto 0px;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+}
+
+page-setting-country-add .imgs .button {
+  height: 34px;
+  width: 34px;
+  background: #3B7A57;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+page-setting-country-add .imgs .button .icon {
+  font-size: 1.6rem;
+}
+
+page-setting-country-add .imgs .button.coverCamera {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  left: auto;
+  bottom: auto;
+}
+
+page-setting-country-add .imgs .button.profileCamera {
+  position: absolute;
+  top: auto;
+  right: 0px;
+  left: auto;
+  bottom: 0px;
+}
+
+page-setting-country-add .imgs .button.show {
+  opacity: 1;
+}
+
+page-setting-country-edit .otherForm {
+  margin-top: 10em;
+  border-radius: 4px;
+  width: calc( 100% - 4px*2) !important;
+  padding: 8px !important;
+}
+
+page-setting-country-edit .otherForm .item {
+  -webkit-transition: height 1s;
+  transition: height 1s;
+}
+
+page-setting-country-edit .otherForm .item .text-input {
+  color: #000;
+  opacity: .8;
+  font-weight: 500;
+}
+
+page-setting-country-edit .otherForm .item .label {
+  color: #000;
+  font-weight: bold;
+}
+
+page-setting-country-edit .otherForm .item.show {
+  height: 0px !important;
+  -webkit-transition: height 1s;
+  transition: height 1s;
+  margin-bottom: 0px !important;
+}
+
+page-setting-country-edit .otherForm .item.item-input-disabled {
+  border-bottom: none !important;
+}
+
+page-setting-country-edit .otherForm .button {
+  margin-top: 8px !important;
+}
+
+page-setting-country-edit .imgs {
+  padding: 4px;
+  position: relative;
+}
+
+page-setting-country-edit .imgs img {
+  display: block;
+  border-radius: 4px;
+  width: 100%;
+}
+
+page-setting-country-edit .imgs .imgProfile {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin: 20px auto 0px;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+}
+
+page-setting-country-edit .imgs .button {
+  height: 34px;
+  width: 34px;
+  background: #3B7A57;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+page-setting-country-edit .imgs .button .icon {
+  font-size: 1.6rem;
+}
+
+page-setting-country-edit .imgs .button.coverCamera {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  left: auto;
+  bottom: auto;
+}
+
+page-setting-country-edit .imgs .button.profileCamera {
+  position: absolute;
+  top: auto;
+  right: 0px;
+  left: auto;
+  bottom: 0px;
+}
+
+page-setting-country-edit .imgs .button.show {
+  opacity: 1;
+}
+
+page-setting-league-add .otherForm {
+  margin-top: 10em;
+  border-radius: 4px;
+  width: calc( 100% - 4px*2) !important;
+  padding: 8px !important;
+}
+
+page-setting-league-add .otherForm .item {
+  -webkit-transition: height 1s;
+  transition: height 1s;
+}
+
+page-setting-league-add .otherForm .item .text-input {
+  color: #000;
+  opacity: .8;
+  font-weight: 500;
+}
+
+page-setting-league-add .otherForm .item .label {
+  color: #000;
+  font-weight: bold;
+}
+
+page-setting-league-add .otherForm .item.show {
+  height: 0px !important;
+  -webkit-transition: height 1s;
+  transition: height 1s;
+  margin-bottom: 0px !important;
+}
+
+page-setting-league-add .otherForm .item.item-input-disabled {
+  border-bottom: none !important;
+}
+
+page-setting-league-add .otherForm .button {
+  margin-top: 8px !important;
+}
+
+page-setting-league-add .imgs {
+  padding: 4px;
+  position: relative;
+}
+
+page-setting-league-add .imgs img {
+  display: block;
+  border-radius: 4px;
+  width: 100%;
+}
+
+page-setting-league-add .imgs .imgProfile {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin: 20px auto 0px;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+}
+
+page-setting-league-add .imgs .button {
+  height: 34px;
+  width: 34px;
+  background: #3B7A57;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+page-setting-league-add .imgs .button .icon {
+  font-size: 1.6rem;
+}
+
+page-setting-league-add .imgs .button.coverCamera {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  left: auto;
+  bottom: auto;
+}
+
+page-setting-league-add .imgs .button.profileCamera {
+  position: absolute;
+  top: auto;
+  right: 0px;
+  left: auto;
+  bottom: 0px;
+}
+
+page-setting-league-add .imgs .button.show {
+  opacity: 1;
+}
+
+.item .label, .item.item-select .label, .item.item-select .select-text, .search_Pop .searchbar .searchbar-input, .signForm .item .text-input, page-profile .otherForm .item .text-input, page-setting-country-add .otherForm .item .text-input, page-setting-country-edit .otherForm .item .text-input, page-setting-league-add .otherForm .item .text-input, page-setting-league-edit .otherForm .item .text-input, page-setting-selection-add .otherForm .item .text-input, page-setting-selection-edit .otherForm .item .text-input, page-profile .otherForm .item .text-input, page-setting-country-add .otherForm .item .text-input, page-setting-country-edit .otherForm .item .text-input, page-setting-league-add .otherForm .item .text-input, page-setting-league-edit .otherForm .item .text-input, page-setting-selection-add .otherForm .item .text-input, page-setting-selection-edit .otherForm .item .text-input, .commentsList .item.item-block.writComment .input .text-input {
+  color: #000;
+  font-size: 1.2rem !important;
+  font-weight: 400;
+}
+
+.header .toolbar {
+  padding: 2px 8px;
 }
 
 page-setting-league-edit .imgs {
@@ -50147,9 +50597,9 @@ page-setting-league-edit .nameAndMail p, page-setting-league-edit .nameAndMail .
 }
 
 page-setting-league-edit .otherForm {
-  margin: 4px;
+  margin-top: 4em;
   border-radius: 4px;
-  width: calc( 100% - 4px*2) !important;
+  width: calc(100% - 4px* 2) !important;
   padding: 9px !important;
 }
 
@@ -50160,7 +50610,7 @@ page-setting-league-edit .otherForm .item {
 
 page-setting-league-edit .otherForm .item .text-input {
   color: #000;
-  opacity: .8;
+  opacity: 0.8;
   font-weight: 500;
 }
 
@@ -50182,6 +50632,12 @@ page-setting-league-edit .otherForm .item.item-input-disabled {
 
 page-setting-league-edit .otherForm .button {
   margin-top: 8px !important;
+}
+
+page-setting-league-edit .newimg {
+  position: relative;
+  -webkit-transform: translate(50%, 0);
+  transform: translate(50%, 0);
 }
 
 page-setting-leagues .header .toolbar.matchResultBar {
@@ -50264,41 +50720,80 @@ page-setting-leagues .teamMatchs .item.thumbnailItem .matchTime p, page-setting-
   margin: 0px;
 }
 
-page-setting-leagues .squad {
+page-setting-selection-add .otherForm {
   margin: 4px;
-  width: calc(100% - 4px*2);
   border-radius: 4px;
+  width: calc( 100% - 4px*2) !important;
+  padding: 8px !important;
 }
 
-page-setting-leagues .squad .list {
-  display: inline-block;
-  padding: 4px 0px;
-  margin: 0px 4px;
-  width: calc(100% - 4px*2);
-  border-bottom: 1px solid #949494;
+page-setting-selection-add .otherForm .item {
+  -webkit-transition: height 1s;
+  transition: height 1s;
 }
 
-page-setting-leagues .squad .list:last-of-type {
-  border-bottom: none;
-}
-
-page-setting-leagues .squad .item.list-header {
-  margin: 0px 0px 4px !important;
-}
-
-page-setting-leagues .squad .item.list-header h5 {
-  margin: 0px;
+page-setting-selection-add .otherForm .item .text-input {
+  color: #000;
+  opacity: .8;
   font-weight: 500;
-  white-space: normal;
-  max-height: 20px;
-  line-height: 20px;
-  display: block;
-  overflow: hidden;
 }
 
-page-setting-leagues .squad .item.avatarItem, page-setting-leagues .squad .item.thumbnailItem {
-  padding: 0px;
-  width: 100%;
+page-setting-selection-add .otherForm .item .label {
+  color: #000;
+  font-weight: bold;
+}
+
+page-setting-selection-add .otherForm .item.show {
+  height: 0px !important;
+  -webkit-transition: height 1s;
+  transition: height 1s;
+  margin-bottom: 0px !important;
+}
+
+page-setting-selection-add .otherForm .item.item-input-disabled {
+  border-bottom: none !important;
+}
+
+page-setting-selection-add .otherForm .button {
+  margin-top: 8px !important;
+}
+
+page-setting-selection-edit .otherForm {
+  margin: 4px;
+  border-radius: 4px;
+  width: calc( 100% - 4px*2) !important;
+  padding: 8px !important;
+}
+
+page-setting-selection-edit .otherForm .item {
+  -webkit-transition: height 1s;
+  transition: height 1s;
+}
+
+page-setting-selection-edit .otherForm .item .text-input {
+  color: #000;
+  opacity: .8;
+  font-weight: 500;
+}
+
+page-setting-selection-edit .otherForm .item .label {
+  color: #000;
+  font-weight: bold;
+}
+
+page-setting-selection-edit .otherForm .item.show {
+  height: 0px !important;
+  -webkit-transition: height 1s;
+  transition: height 1s;
+  margin-bottom: 0px !important;
+}
+
+page-setting-selection-edit .otherForm .item.item-input-disabled {
+  border-bottom: none !important;
+}
+
+page-setting-selection-edit .otherForm .button {
+  margin-top: 8px !important;
 }
 
 page-setting-selections .header .toolbar.matchResultBar {
@@ -50309,22 +50804,26 @@ page-setting-selections .header .toolbar.matchResultBar .toolbar-background {
   background: #0b4040;
 }
 
-page-setting-selections .header .matchResult {
-  height: auto;
+page-setting-selections .photoItem {
+  border-radius: 4px;
+  margin-bottom: 4px;
 }
 
-page-setting-selections .header .matchResult p, page-setting-selections .header .matchResult .select-popover .popover-content .list .item .label, .select-popover .popover-content .list .item page-setting-selections .header .matchResult .label {
-  margin: 0px;
-  margin-top: 4px;
-  font-weight: 400;
-  max-width: 100%;
+page-setting-selections .teamMatchs .item.thumbnailItem {
+  padding: 8px 4px;
+  margin: 4px;
 }
 
-page-setting-selections .header .matchResult .grid {
-  max-width: 440px;
+page-setting-selections .teamMatchs .item.thumbnailItem:last-of-type {
+  margin-bottom: 4px !important;
 }
 
-page-setting-selections .header .matchResult .col .item .label {
+page-setting-selections .teamMatchs .item.thumbnailItem ion-thumbnail img {
+  width: 30px;
+  height: 30px;
+}
+
+page-setting-selections .teamMatchs .item.thumbnailItem .col {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -50338,28 +50837,43 @@ page-setting-selections .header .matchResult .col .item .label {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
-page-setting-selections .header .matchResult .col .item .label img {
-  height: 44px;
-  -o-object-fit: contain;
-  object-fit: contain;
+page-setting-selections .teamMatchs .item.thumbnailItem .col:last-of-type {
+  text-align: center;
 }
 
-page-setting-selections .header .matchResult .col .item .label p, page-setting-selections .header .matchResult .col .select-popover .popover-content .list .item .label .label, .select-popover .popover-content .list page-setting-selections .header .matchResult .col .item .label .label {
-  color: #fff;
-  margin-top: 4px;
-  font-weight: 400;
-  max-width: 100%;
+page-setting-selections .teamMatchs .item.thumbnailItem .col:last-of-type p, page-setting-selections .teamMatchs .select-popover .popover-content .list .item.thumbnailItem .col:last-of-type .label, .select-popover .popover-content .list page-setting-selections .teamMatchs .item.thumbnailItem .col:last-of-type .label {
+  white-space: normal;
+  max-height: 32px;
+  line-height: 16px;
+  display: block;
+  overflow: hidden;
 }
 
-page-setting-selections .header .matchResult .col[col-auto] .result span {
-  color: #fff;
-  font-size: 3rem !important;
+page-setting-selections .teamMatchs .item.thumbnailItem .matchTime, page-setting-selections .teamMatchs .item.thumbnailItem .matchResult {
+  text-align: center;
+  width: 60px;
+}
+
+page-setting-selections .teamMatchs .item.thumbnailItem .matchTime span, page-setting-selections .teamMatchs .item.thumbnailItem .matchResult span {
+  font-size: 1.6rem;
+  font-weight: 500;
+  white-space: normal;
+  max-height: 20px;
+  line-height: 20px;
+  display: block;
+  overflow: hidden;
+}
+
+page-setting-selections .teamMatchs .item.thumbnailItem .matchTime p, page-setting-selections .teamMatchs .select-popover .popover-content .list .item.thumbnailItem .matchTime .label, .select-popover .popover-content .list page-setting-selections .teamMatchs .item.thumbnailItem .matchTime .label, page-setting-selections .teamMatchs .item.thumbnailItem .matchResult p, page-setting-selections .teamMatchs .select-popover .popover-content .list .item.thumbnailItem .matchResult .label, .select-popover .popover-content .list page-setting-selections .teamMatchs .item.thumbnailItem .matchResult .label {
+  font-size: 0.8rem !important;
+  white-space: normal;
+  max-height: 15px;
+  line-height: 15px;
+  display: block;
+  overflow: hidden;
+  margin: 0px;
 }
 
 page-setting-teams .header .toolbar.matchResultBar {
@@ -50459,56 +50973,56 @@ page-setting-teams .teamMatchs .item.thumbnailItem .matchTime p, page-setting-te
   font-weight: 500;
 }
 
-.signForm, page-profile .otherForm, page-setting-country-manage .otherForm, page-setting-league-edit .otherForm {
+.signForm, page-profile .otherForm, page-setting-country-add .otherForm, page-setting-country-edit .otherForm, page-setting-league-add .otherForm, page-setting-league-edit .otherForm, page-setting-selection-add .otherForm, page-setting-selection-edit .otherForm {
   display: inline-block;
   width: 100%;
 }
 
-.signForm img, page-profile .otherForm img, page-setting-country-manage .otherForm img, page-setting-league-edit .otherForm img {
+.signForm img, page-profile .otherForm img, page-setting-country-add .otherForm img, page-setting-country-edit .otherForm img, page-setting-league-add .otherForm img, page-setting-league-edit .otherForm img, page-setting-selection-add .otherForm img, page-setting-selection-edit .otherForm img {
   width: 70%;
   max-width: 400px;
   margin: 12% 0px 20%;
 }
 
-.signForm ::-webkit-input-placeholder, page-profile .otherForm ::-webkit-input-placeholder, page-setting-country-manage .otherForm ::-webkit-input-placeholder, page-setting-league-edit .otherForm ::-webkit-input-placeholder {
+.signForm ::-webkit-input-placeholder, page-profile .otherForm ::-webkit-input-placeholder, page-setting-country-add .otherForm ::-webkit-input-placeholder, page-setting-country-edit .otherForm ::-webkit-input-placeholder, page-setting-league-add .otherForm ::-webkit-input-placeholder, page-setting-league-edit .otherForm ::-webkit-input-placeholder, page-setting-selection-add .otherForm ::-webkit-input-placeholder, page-setting-selection-edit .otherForm ::-webkit-input-placeholder {
   font-weight: bold;
 }
 
-.signForm ::-webkit-textarea-placeholder, page-profile .otherForm ::-webkit-textarea-placeholder, page-setting-country-manage .otherForm ::-webkit-textarea-placeholder, page-setting-league-edit .otherForm ::-webkit-textarea-placeholder {
+.signForm ::-webkit-textarea-placeholder, page-profile .otherForm ::-webkit-textarea-placeholder, page-setting-country-add .otherForm ::-webkit-textarea-placeholder, page-setting-country-edit .otherForm ::-webkit-textarea-placeholder, page-setting-league-add .otherForm ::-webkit-textarea-placeholder, page-setting-league-edit .otherForm ::-webkit-textarea-placeholder, page-setting-selection-add .otherForm ::-webkit-textarea-placeholder, page-setting-selection-edit .otherForm ::-webkit-textarea-placeholder {
   font-weight: bold;
 }
 
-.signForm :-moz-placeholder, page-profile .otherForm :-moz-placeholder, page-setting-country-manage .otherForm :-moz-placeholder, page-setting-league-edit .otherForm :-moz-placeholder {
+.signForm :-moz-placeholder, page-profile .otherForm :-moz-placeholder, page-setting-country-add .otherForm :-moz-placeholder, page-setting-country-edit .otherForm :-moz-placeholder, page-setting-league-add .otherForm :-moz-placeholder, page-setting-league-edit .otherForm :-moz-placeholder, page-setting-selection-add .otherForm :-moz-placeholder, page-setting-selection-edit .otherForm :-moz-placeholder {
   font-weight: bold;
 }
 
-.signForm ::-moz-placeholder, page-profile .otherForm ::-moz-placeholder, page-setting-country-manage .otherForm ::-moz-placeholder, page-setting-league-edit .otherForm ::-moz-placeholder {
+.signForm ::-moz-placeholder, page-profile .otherForm ::-moz-placeholder, page-setting-country-add .otherForm ::-moz-placeholder, page-setting-country-edit .otherForm ::-moz-placeholder, page-setting-league-add .otherForm ::-moz-placeholder, page-setting-league-edit .otherForm ::-moz-placeholder, page-setting-selection-add .otherForm ::-moz-placeholder, page-setting-selection-edit .otherForm ::-moz-placeholder {
   font-weight: bold;
 }
 
-.signForm :-ms-input-placeholder, page-profile .otherForm :-ms-input-placeholder, page-setting-country-manage .otherForm :-ms-input-placeholder, page-setting-league-edit .otherForm :-ms-input-placeholder {
+.signForm :-ms-input-placeholder, page-profile .otherForm :-ms-input-placeholder, page-setting-country-add .otherForm :-ms-input-placeholder, page-setting-country-edit .otherForm :-ms-input-placeholder, page-setting-league-add .otherForm :-ms-input-placeholder, page-setting-league-edit .otherForm :-ms-input-placeholder, page-setting-selection-add .otherForm :-ms-input-placeholder, page-setting-selection-edit .otherForm :-ms-input-placeholder {
   font-weight: bold;
 }
 
-.signForm .item, page-profile .otherForm .item, page-setting-country-manage .otherForm .item, page-setting-league-edit .otherForm .item {
+.signForm .item, page-profile .otherForm .item, page-setting-country-add .otherForm .item, page-setting-country-edit .otherForm .item, page-setting-league-add .otherForm .item, page-setting-league-edit .otherForm .item, page-setting-selection-add .otherForm .item, page-setting-selection-edit .otherForm .item {
   height: 40px;
   border-bottom: 2px solid #888ba7 !important;
   margin-bottom: 8px;
 }
 
-.signForm .item .icon[item-left], page-profile .otherForm .item .icon[item-left], page-setting-country-manage .otherForm .item .icon[item-left], page-setting-league-edit .otherForm .item .icon[item-left] {
+.signForm .item .icon[item-left], page-profile .otherForm .item .icon[item-left], page-setting-country-add .otherForm .item .icon[item-left], page-setting-country-edit .otherForm .item .icon[item-left], page-setting-league-add .otherForm .item .icon[item-left], page-setting-league-edit .otherForm .item .icon[item-left], page-setting-selection-add .otherForm .item .icon[item-left], page-setting-selection-edit .otherForm .item .icon[item-left] {
   font-size: 1.65rem;
   min-height: 0px;
   width: 22px;
   text-align: center;
 }
 
-.signForm .item .text-input, page-profile .otherForm .item .text-input, page-setting-country-manage .otherForm .item .text-input, page-setting-league-edit .otherForm .item .text-input {
+.signForm .item .text-input, page-profile .otherForm .item .text-input, page-setting-country-add .otherForm .item .text-input, page-setting-country-edit .otherForm .item .text-input, page-setting-league-add .otherForm .item .text-input, page-setting-league-edit .otherForm .item .text-input, page-setting-selection-add .otherForm .item .text-input, page-setting-selection-edit .otherForm .item .text-input {
   margin: 0px;
   width: 100%;
 }
 
-.signForm .button, page-profile .otherForm .button, page-setting-country-manage .otherForm .button, page-setting-league-edit .otherForm .button {
+.signForm .button, page-profile .otherForm .button, page-setting-country-add .otherForm .button, page-setting-country-edit .otherForm .button, page-setting-league-add .otherForm .button, page-setting-league-edit .otherForm .button, page-setting-selection-add .otherForm .button, page-setting-selection-edit .otherForm .button {
   margin-top: 40px;
 }
 

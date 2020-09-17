@@ -1,14 +1,14 @@
 webpackJsonp([14],{
 
-/***/ 733:
+/***/ 743:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignUpPageModule", function() { return SignUpPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TopNewsDetailsPageModule", function() { return TopNewsDetailsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sign_up__ = __webpack_require__(790);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__top_news_details__ = __webpack_require__(806);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SignUpPageModule = /** @class */ (function () {
-    function SignUpPageModule() {
+var TopNewsDetailsPageModule = /** @class */ (function () {
+    function TopNewsDetailsPageModule() {
     }
-    SignUpPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
+    TopNewsDetailsPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__sign_up__["a" /* SignUpPage */],
+                __WEBPACK_IMPORTED_MODULE_2__top_news_details__["a" /* TopNewsDetailsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__sign_up__["a" /* SignUpPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__top_news_details__["a" /* TopNewsDetailsPage */]),
             ],
         })
-    ], SignUpPageModule);
-    return SignUpPageModule;
+    ], TopNewsDetailsPageModule);
+    return TopNewsDetailsPageModule;
 }());
 
-//# sourceMappingURL=sign-up.module.js.map
+//# sourceMappingURL=top-news-details.module.js.map
 
 /***/ }),
 
-/***/ 790:
+/***/ 806:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignUpPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TopNewsDetailsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global__ = __webpack_require__(353);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,56 +58,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var SignUpPage = /** @class */ (function () {
-    function SignUpPage(navCtrl, platform, auth) {
+var TopNewsDetailsPage = /** @class */ (function () {
+    function TopNewsDetailsPage(navCtrl, global) {
         this.navCtrl = navCtrl;
-        this.platform = platform;
-        this.auth = auth;
-        this.newuser = new __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["b" /* NewUser */]("", "", "", "", "", "", "", { id: "" }, "");
+        this.global = global;
+        this.clickLike = false;
+        this.numLike = 200;
     }
-    SignUpPage.prototype.createAccount = function (page) {
-        if (this.newuser.firstname == "" || this.newuser.firstname == undefined || this.newuser.firstname == null) {
-            this.auth.showToast("Firstname is empty");
-            return false;
-        }
-        else if (this.newuser.lastname == "" || this.newuser.lastname == undefined || this.newuser.lastname == null) {
-            this.auth.showToast("Lastname is empty");
-            return false;
-        }
-        else if (this.newuser.email == "" || this.newuser.email == undefined || this.newuser.email == null) {
-            this.auth.showToast("Email is empty");
-            return false;
-        }
-        else if (this.newuser.phone == "" || this.newuser.phone == undefined || this.newuser.phone == null) {
-            this.auth.showToast("Phone number is empty");
-            return false;
-        }
-        else if (this.newuser.password == "" || this.newuser.password == undefined || this.newuser.password == null) {
-            this.auth.showToast("Password is empty");
-            return false;
+    TopNewsDetailsPage.prototype.like = function ($event) {
+        $event.stopPropagation();
+        if (this.clickLike != true) {
+            this.numLike = this.numLike + 1;
+            this.clickLike = true;
         }
         else {
-            // if (this.platform.is('android')) {
-            //   console.log(this.user);
-            //   this.navCtrl.push(AndroidsubscriptionPage, { newUser: this.user });
-            // } else if (this.platform.is("ios")) {
-            // } else {
-            // }
-            console.log(this.newuser);
-            this.navCtrl.push(page, { newuser: this.newuser });
+            this.numLike = this.numLike - 1;
+            this.clickLike = false;
         }
     };
-    SignUpPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
-            selector: 'page-sign-up',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/sign-up/sign-up.html"*/'<ion-header>\n  <ion-navbar>\n  </ion-navbar>\n</ion-header>\n<ion-content  class="sign" style="background-image:url(\'assets/imgs/welcome3.jpg\')" >\n  <div class="signForm">\n    <img src="assets/imgs/appicon.png" style="width: 8em; height: 8em;"/>\n    <p ion-text color="light">Sure3Odds</p>\n    <ion-list>\n      <ion-item class="halfItem" float-left>\n        <ion-icon name="md-person" item-left color="light"></ion-icon>\n        <ion-input type="text" [(ngModel)]="newuser.firstname" name="firstname" id="firstname"  placeholder="First Name"></ion-input>\n      </ion-item>\n      <ion-item class="halfItem"  float-left>\n        <ion-icon name="md-person" item-left color="light"></ion-icon>\n        <ion-input type="text" [(ngModel)]="newuser.lastname" name="lastname" id="lastname" placeholder="Last Name"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-icon name="md-mail" item-left color="light"></ion-icon>\n        <ion-input type="email" [(ngModel)]="newuser.email" name="email" id="email"  placeholder="E-mail"></ion-input>\n      </ion-item>\n\n      <ion-item >\n        <ion-icon name="call" item-left color="light"></ion-icon>\n        <ion-input type="tel" [(ngModel)]="newuser.phone" name="phone" id="phone" placeholder="Phone"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-icon name="md-lock" item-left color="light"></ion-icon>\n        <ion-input type="password"  [(ngModel)]="newuser.password" name="password" id="password" placeholder="Password"></ion-input>\n      </ion-item>\n      <p ion-text color="light" navPush="TermsPage" >I have read and agreed to the <span ion-text color="secondary">Terms And Conditions</span></p>\n    </ion-list>\n    <button ion-button block type="submit" color="color2" (click)="createAccount(\'AndroidSubscriptionPage\')">CREATE ACCOUNT</button>\n   <p ion-text color="light" navPush="SignInPage" >Already have an account ? Login</p>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/sign-up/sign-up.html"*/,
+    TopNewsDetailsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-top-news-details',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/top-news-details/top-news-details.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu" ></ion-icon>\n    </button>\n    <ion-title>Top News</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only  (click)="global.callSearch($event)">\n        <ion-icon name="md-search"></ion-icon>\n      </button>\n      <button ion-button icon-only navPush="NotificationPage">\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n  <ion-card>\n    <img src="assets/imgs/news2.png"/>\n    <ion-card-content>  \n      <ion-grid no-padding class="gridFooter">\n        <ion-row>  \n          <ion-col col padding-right> \n            <p ion-text color="color4">4 HOURS AGO</p>\n          </ion-col>\n          <!-- users like number -->\n          <ion-col col-auto padding-right>\n            <ion-item (click)="like($event)">\n              <ion-icon  item-left color="color2" [name]="clickLike ? \'ios-heart\' : \'ios-heart-outline\'" ></ion-icon>\n              <p ion-text color="color4">{{numLike}}</p>\n            </ion-item>\n          </ion-col>\n\n          <!-- user Comment number -->\n          <ion-col col-auto>\n              <ion-item>\n                <ion-icon name="md-text" color="color2" item-left></ion-icon>\n                <p ion-text color="color4">160</p>\n              </ion-item>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n      <ion-card-title>\n        Real Madrid want to win Club World Cup\n      </ion-card-title>\n      <p>\n        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\n      </p>\n    </ion-card-content>\n  </ion-card>\n  <ion-list class="commentsList" margin-top>   \n    <ion-list-header>\n      Comment        \n    </ion-list-header>\n    <!-- comment -->\n    <ion-item>\n      <ion-avatar item-left>\n        <img src="assets/imgs/player2.png">\n      </ion-avatar>\n      <ion-grid no-padding>\n        <ion-row>\n          <ion-col col-auto>\n            <h5 ion-text color="dark">Wendy Verdades</h5>   \n          </ion-col>\n          <ion-col col padding-left>\n            <p ion-text color="dark">3days ago</p>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n      <p ion-text color="dark">\n        It is a long established fact that a reader will be distracted \n      </p>\n    </ion-item>\n\n    <!-- add comment -->\n    <ion-item margin-top> \n      <ion-grid no-padding>\n        <ion-row>\n          <ion-col col>\n            <ion-item class="writComment">\n              <ion-textarea placeholder="Write a Comment"></ion-textarea>\n            </ion-item>\n          </ion-col>\n          <ion-col col-auto padding-left>\n            <button ion-button color="color1" class="addBtn">\n              Add\n            </button>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/top-news-details/top-news-details.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["t" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["w" /* Platform */], __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */]])
-    ], SignUpPage);
-    return SignUpPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
+    ], TopNewsDetailsPage);
+    return TopNewsDetailsPage;
 }());
 
-//# sourceMappingURL=sign-up.js.map
+//# sourceMappingURL=top-news-details.js.map
 
 /***/ })
 

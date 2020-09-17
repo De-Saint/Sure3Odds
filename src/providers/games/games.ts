@@ -66,21 +66,6 @@ export class GamesProvider {
         return resp;
       }));
   }
-  GetLeagues(pageNo, pageSize): Observable<ResponseType> {
-    const params = new HttpParams()
-      .set('pageNo', pageNo)
-      .set('pageSize', pageSize);
-    return this.http.get<ResponseType>(`${environment.apiUrl}/games/league/getall`, {params:params})
-      .pipe(map(resp => {
-        return resp;
-      }));
-  }
-  GetTeams(): Observable<ResponseType> {
-    return this.http.get<ResponseType>(`${environment.apiUrl}/games/team/getall`)
-      .pipe(map(resp => {
-        return resp;
-      }));
-  }
 
   SearchCountries(searchValue, pageNo, pageSize): Observable<ResponseType> {
     const params = new HttpParams()
@@ -117,6 +102,16 @@ export class GamesProvider {
       }));
   }
 
+
+  GetLeagues(pageNo, pageSize): Observable<ResponseType> {
+    const params = new HttpParams()
+      .set('pageNo', pageNo)
+      .set('pageSize', pageSize);
+    return this.http.get<ResponseType>(`${environment.apiUrl}/games/league/getall`, {params:params})
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
   SearchLeagues(searchValue, pageNo, pageSize): Observable<ResponseType> {
     const params = new HttpParams()
       .set('searchValue', searchValue)
@@ -127,18 +122,82 @@ export class GamesProvider {
         return resp;
       }));
   }
-
-
   deleteLeague(id): Observable<ResponseType> {
     return this.http.delete<ResponseType>(`${environment.apiUrl}/games/league/delete/${id}`)
       .pipe(map(resp => {
         return resp;
       }));
   }
-
   updateLeague(league): Observable<ResponseType> {
     return this.http.put<ResponseType>(`${environment.apiUrl}/games/league/update`, league).pipe(
       map((resp: any) => {
+        return resp;
+      }));
+  }
+
+
+  
+  GetTeams(pageNo, pageSize): Observable<ResponseType> {
+    const params = new HttpParams()
+      .set('pageNo', pageNo)
+      .set('pageSize', pageSize);
+    return this.http.get<ResponseType>(`${environment.apiUrl}/games/team/getall`, {params:params})
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
+  SearchTeams(searchValue, pageNo, pageSize): Observable<ResponseType> {
+    const params = new HttpParams()
+      .set('searchValue', searchValue)
+      .set('pageNo', pageNo)
+      .set('pageSize', pageSize);
+    return this.http.get<ResponseType>(`${environment.apiUrl}/games/team/search`, {params:params})
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
+
+
+
+
+  //-------------------------Selections
+  GetSelections(pageNo, pageSize): Observable<ResponseType> {
+    const params = new HttpParams()
+      .set('pageNo', pageNo)
+      .set('pageSize', pageSize);
+    return this.http.get<ResponseType>(`${environment.apiUrl}/games/selection/getall`, {params:params})
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
+  SearchSelections(searchValue, pageNo, pageSize): Observable<ResponseType> {
+    const params = new HttpParams()
+      .set('searchValue', searchValue)
+      .set('pageNo', pageNo)
+      .set('pageSize', pageSize);
+    return this.http.get<ResponseType>(`${environment.apiUrl}/games/selection/search`, {params:params})
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
+
+  createSelection(selection): Observable<ResponseType> {
+    return this.http.post<ResponseType>(`${environment.apiUrl}/games/selection/create`, selection).pipe(
+      map((resp: any) => {
+        return resp;
+      }));
+  }
+
+  updateSelection(selection): Observable<ResponseType> {
+    return this.http.put<ResponseType>(`${environment.apiUrl}/games/selection/update`, selection).pipe(
+      map((resp: any) => {
+        return resp;
+      }));
+  }
+
+  deleteSelection(id): Observable<ResponseType> {
+    return this.http.delete<ResponseType>(`${environment.apiUrl}/games/selection/delete/${id}`)
+      .pipe(map(resp => {
         return resp;
       }));
   }

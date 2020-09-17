@@ -1,18 +1,37 @@
-<!--
-  Generated template for the SettingLeagueAddPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
-    <ion-title>SettingLeagueAdd</ion-title>
+    <ion-title>Add League</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <div class="otherForm">
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          Select user
+        </ion-label>
+        <select-searchable item-content [(ngModel)]="user" (onChange)="userChanged($event)" [items]="users"
+          itemValueField="id"
+          [canClear]="true"
+          (onClose)="onClose($event)"
+          clearButtonText="Clear Selected"
+          noItemsFoundtext="No countres found"
+          confirmButtonText="Proceed"
+          itemTextField="name" 
+          [canSearch]="true">
 
+        </select-searchable>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Name</ion-label>
+        <ion-input type="text" [(ngModel)]="league.name"></ion-input>
+      </ion-item>
+      <!-- ==================================== -->
+    </ion-list>
+    <button ion-button block color="color2" (click)="onSubmit(league)">Submit</button>
+  </div>
 </ion-content>

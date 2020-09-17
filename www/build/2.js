@@ -1,15 +1,15 @@
 webpackJsonp([2],{
 
-/***/ 697:
+/***/ 698:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AndroidSubscriptionPageModule", function() { return AndroidSubscriptionPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__android_subscription__ = __webpack_require__(749);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular4_paystack__ = __webpack_require__(750);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__android_subscription__ = __webpack_require__(758);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular4_paystack__ = __webpack_require__(759);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -24,15 +24,15 @@ var AndroidSubscriptionPageModule = /** @class */ (function () {
     function AndroidSubscriptionPageModule() {
     }
     AndroidSubscriptionPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_2__android_subscription__["a" /* AndroidSubscriptionPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__android_subscription__["a" /* AndroidSubscriptionPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__android_subscription__["a" /* AndroidSubscriptionPage */]),
                 __WEBPACK_IMPORTED_MODULE_3_angular4_paystack__["a" /* Angular4PaystackModule */]
             ],
-            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NO_ERRORS_SCHEMA */]]
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"], __WEBPACK_IMPORTED_MODULE_0__angular_core__["NO_ERRORS_SCHEMA"]]
         })
     ], AndroidSubscriptionPageModule);
     return AndroidSubscriptionPageModule;
@@ -42,14 +42,14 @@ var AndroidSubscriptionPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 749:
+/***/ 758:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AndroidSubscriptionPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(88);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -160,13 +160,13 @@ var AndroidSubscriptionPage = /** @class */ (function () {
         });
     };
     AndroidSubscriptionPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
             selector: 'page-android-subscription',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/android-subscription/android-subscription.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Subscription</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="sign" style="background-image:url(\'assets/imgs/welcome3.jpg\')">\n  <div class="signForm">\n    <img src="assets/imgs/appicon.png" style="width: 8em; height: 8em;" />\n    <ion-list>\n      <ion-item>\n        <ion-icon name="briefcase" item-left color="light"></ion-icon>\n        <ion-label color="light">\n          Select a plan per month\n        </ion-label>\n        <ion-select [(ngModel)]="newuser.plantype.id" name="plantype" id="plantype" class="">\n          <ion-option *ngFor="let plan of plantypelist" value="{{ plan.id }}"\n            (ionSelect)="onPlantTypeSelect($event, plan)">{{ plan.name}} - {{ plan.amount  | currency: \'NGN\': \'1.2-2\'}}\n          </ion-option>\n        </ion-select>\n      </ion-item>\n    </ion-list>\n    <!-- <button ion-button block type="submit" color="color2" (click)="Pay(\'AndroidSubscriptionPage\')">PAY\n      {{pay_amount  | currency: \'NGN\': \'1.2-2\'}}</button> -->\n      \n        <button ion-button block color="color2" angular4-paystack type="submit" \n          [key]="public_key" \n          (paymentInit)="paymentInit()" \n          [email]="newuser.email" \n          [amount]="pay_amount * 100" [ref]="random_id"\n          [channels]="channels"\n          (close)="paymentCancel()" \n          (callback)="paymentDone($event)" \n          (click)="onPay(pay_amount)"\n          [metadata]="{ \n            custom_fields: \n            [ {\n              display_name: \'Customer Name\', \n              variable_name: \'Customer Name\', \n              value: newuser.firstname} ,\n            {\n              display_name: \'Payment Type\', \n              variable_name: \'Payment Type\', \n              value: \'Registration\' \n            }] \n          }"\n        > PAY  {{pay_amount  | currency: \'NGN\': \'1.2-2\'}}\n        </button>\n    <p ion-text color="light" navPush="SignInPage">Don\'t want to continue ? Login</p>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/android-subscription/android-subscription.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["q" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* Events */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["LoadingController"],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["Events"],
             __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["t" /* NavController */], __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["u" /* NavParams */]])
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavParams"]])
     ], AndroidSubscriptionPage);
     return AndroidSubscriptionPage;
 }());
@@ -175,7 +175,7 @@ var AndroidSubscriptionPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 750:
+/***/ 759:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -185,7 +185,7 @@ var AndroidSubscriptionPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Angular4PaystackModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(43);
 
 
 
@@ -204,9 +204,9 @@ if (false) {
 }
 var Angular4PaystackComponent = /** @class */ (function () {
     function Angular4PaystackComponent() {
-        this.paymentInit = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* EventEmitter */]();
-        this.close = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* EventEmitter */]();
-        this.callback = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* EventEmitter */]();
+        this.paymentInit = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
+        this.close = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
+        this.callback = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
         this.isPaying = false;
     }
     /**
@@ -356,7 +356,7 @@ var Angular4PaystackComponent = /** @class */ (function () {
         }
     };
     Angular4PaystackComponent.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */], args: [{
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"], args: [{
                     selector: 'angular4-paystack',
                     template: "<button [ngClass]=\"class\" [ngStyle]=\"style\" (click)=\"pay()\">{{text}}<ng-content></ng-content></button>"
                 }] }
@@ -364,24 +364,24 @@ var Angular4PaystackComponent = /** @class */ (function () {
     /** @nocollapse */
     Angular4PaystackComponent.ctorParameters = function () { return []; };
     Angular4PaystackComponent.propDecorators = {
-        text: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        key: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        email: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        amount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        metadata: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        ref: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        currency: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        plan: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        quantity: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        channels: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        subaccount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        transaction_charge: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        bearer: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        class: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        style: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        paymentInit: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* Output */] }],
-        close: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* Output */] }],
-        callback: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* Output */] }]
+        text: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        key: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        email: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        amount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        metadata: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        ref: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        currency: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        plan: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        quantity: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        channels: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        subaccount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        transaction_charge: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        bearer: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        class: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        style: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        paymentInit: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] }],
+        close: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] }],
+        callback: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] }]
     };
     return Angular4PaystackComponent;
 }());
@@ -448,8 +448,8 @@ if (false) {
 }
 var Angular4PaystackDirective = /** @class */ (function () {
     function Angular4PaystackDirective() {
-        this.close = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* EventEmitter */]();
-        this.callback = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* EventEmitter */]();
+        this.close = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
+        this.callback = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
         this.isPaying = false;
         this.setUp();
     }
@@ -586,31 +586,31 @@ var Angular4PaystackDirective = /** @class */ (function () {
         });
     };
     Angular4PaystackDirective.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["t" /* Directive */], args: [{
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Directive"], args: [{
                     selector: '[angular4-paystack]',
                 },] }
     ];
     /** @nocollapse */
     Angular4PaystackDirective.ctorParameters = function () { return []; };
     Angular4PaystackDirective.propDecorators = {
-        text: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        key: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        email: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        amount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        metadata: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        ref: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        currency: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        plan: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        quantity: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        subaccount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        channels: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        transaction_charge: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        bearer: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        class: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        style: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        close: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* Output */] }],
-        callback: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* Output */] }],
-        buttonClick: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["z" /* HostListener */], args: ['click',] }]
+        text: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        key: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        email: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        amount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        metadata: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        ref: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        currency: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        plan: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        quantity: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        subaccount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        channels: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        transaction_charge: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        bearer: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        class: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        style: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        close: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] }],
+        callback: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] }],
+        buttonClick: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["HostListener"], args: ['click',] }]
     };
     return Angular4PaystackDirective;
 }());
@@ -675,9 +675,9 @@ if (false) {
 }
 var Angular4PaystackEmbed = /** @class */ (function () {
     function Angular4PaystackEmbed() {
-        this.paymentInit = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* EventEmitter */]();
-        this.close = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* EventEmitter */]();
-        this.callback = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* EventEmitter */]();
+        this.paymentInit = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
+        this.close = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
+        this.callback = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
     }
     /**
      * @return {?}
@@ -806,31 +806,31 @@ var Angular4PaystackEmbed = /** @class */ (function () {
         });
     };
     Angular4PaystackEmbed.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */], args: [{
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"], args: [{
                     selector: 'angular4-paystack-embed',
-                    changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["j" /* ChangeDetectionStrategy */].OnPush,
+                    changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ChangeDetectionStrategy"].OnPush,
                     template: "<div id=\"paystackEmbedContainer\"></div>"
                 }] }
     ];
     /** @nocollapse */
     Angular4PaystackEmbed.ctorParameters = function () { return []; };
     Angular4PaystackEmbed.propDecorators = {
-        text: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        key: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        email: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        amount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        metadata: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        channels: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        ref: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        currency: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        plan: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        quantity: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        subaccount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        transaction_charge: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        bearer: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Input */] }],
-        paymentInit: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* Output */] }],
-        close: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* Output */] }],
-        callback: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* Output */] }]
+        text: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        key: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        email: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        amount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        metadata: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        channels: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        ref: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        currency: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        plan: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        quantity: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        subaccount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        transaction_charge: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        bearer: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        paymentInit: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] }],
+        close: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] }],
+        callback: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] }]
     };
     return Angular4PaystackEmbed;
 }());
@@ -882,8 +882,8 @@ var Angular4PaystackModule = /** @class */ (function () {
     function Angular4PaystackModule() {
     }
     Angular4PaystackModule.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["K" /* NgModule */], args: [{
-                    imports: [__WEBPACK_IMPORTED_MODULE_2__angular_common__["b" /* CommonModule */]],
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"], args: [{
+                    imports: [__WEBPACK_IMPORTED_MODULE_2__angular_common__["CommonModule"]],
                     exports: [Angular4PaystackComponent, Angular4PaystackDirective, Angular4PaystackEmbed],
                     declarations: [Angular4PaystackComponent, Angular4PaystackDirective, Angular4PaystackEmbed],
                     providers: [],

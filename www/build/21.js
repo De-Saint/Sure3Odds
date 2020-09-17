@@ -1,14 +1,14 @@
 webpackJsonp([21],{
 
-/***/ 724:
+/***/ 737:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingCountryPageModule", function() { return SettingCountryPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingTeamsPageModule", function() { return SettingTeamsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_country__ = __webpack_require__(779);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_teams__ = __webpack_require__(800);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SettingCountryPageModule = /** @class */ (function () {
-    function SettingCountryPageModule() {
+var SettingTeamsPageModule = /** @class */ (function () {
+    function SettingTeamsPageModule() {
     }
-    SettingCountryPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
+    SettingTeamsPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__setting_country__["a" /* SettingCountryPage */],
+                __WEBPACK_IMPORTED_MODULE_2__setting_teams__["a" /* SettingTeamsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_country__["a" /* SettingCountryPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_teams__["a" /* SettingTeamsPage */]),
             ],
         })
-    ], SettingCountryPageModule);
-    return SettingCountryPageModule;
+    ], SettingTeamsPageModule);
+    return SettingTeamsPageModule;
 }());
 
-//# sourceMappingURL=setting-country.module.js.map
+//# sourceMappingURL=setting-teams.module.js.map
 
 /***/ }),
 
-/***/ 779:
+/***/ 800:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingCountryPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_games_games__ = __webpack_require__(354);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(21);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingTeamsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_games_games__ = __webpack_require__(354);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -60,33 +60,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var SettingCountryPage = /** @class */ (function () {
-    function SettingCountryPage(navCtrl, authProvider, gamesProvider, navParams) {
-        this.navCtrl = navCtrl;
+var SettingTeamsPage = /** @class */ (function () {
+    function SettingTeamsPage(authProvider, gamesProvider, navCtrl, navParams) {
         this.authProvider = authProvider;
         this.gamesProvider = gamesProvider;
+        this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.currentPage = 1;
         this.totalPage = 0;
         this.perPage = 0;
         this.totalData = 0;
     }
-    SettingCountryPage.prototype.ionViewWillEnter = function () {
-        this.GetCountries();
+    SettingTeamsPage.prototype.ionViewDidLoad = function () {
+        this.GetTeams();
     };
-    SettingCountryPage.prototype.GetCountries = function () {
+    SettingTeamsPage.prototype.GetTeams = function () {
         var _this = this;
-        this.gamesProvider.GetCountries(0, 20)
+        this.gamesProvider.GetTeams(0, 200)
             .subscribe(function (resp) {
+            console.log(resp);
             if (resp.statusCode === 200) {
-                _this.countries = resp.data.content;
+                _this.teams = resp.data.content;
+                _this.originalteams = _this.teams;
                 _this.currentPage = resp.data.number;
                 _this.totalPage = resp.data.totalPages;
                 _this.totalData = resp.data.totalElements;
                 _this.perPage = resp.data.size;
-                _this.originalcountries = _this.countries;
                 console.log(_this.currentPage, _this.totalPage, _this.totalData, _this.perPage);
-                _this.nocountries = 'countries';
+                _this.noteams = 'teams';
+                console.log(_this.teams);
             }
             else {
                 console.log(resp.description);
@@ -97,19 +99,19 @@ var SettingCountryPage = /** @class */ (function () {
             _this.authProvider.showToast(error.error.description);
         });
     };
-    SettingCountryPage.prototype.onSearch = function () {
+    SettingTeamsPage.prototype.onSearch = function () {
         var _this = this;
         var searchvalue = this.searchTerm;
         if (searchvalue.trim() === '') {
-            this.countries = this.originalcountries;
+            this.teams = this.originalteams;
         }
         else {
             if (searchvalue.length >= 3) {
-                this.gamesProvider.SearchCountries(searchvalue, 0, 20)
+                this.gamesProvider.SearchTeams(searchvalue, 0, 200)
                     .subscribe(function (resp) {
                     console.log(resp);
                     if (resp.statusCode === 200) {
-                        _this.countries = resp.data.content;
+                        _this.teams = resp.data.content;
                         _this.currentPage = resp.data.number;
                         _this.totalPage = resp.data.totalPages;
                         _this.totalData = resp.data.totalElements;
@@ -127,19 +129,19 @@ var SettingCountryPage = /** @class */ (function () {
             }
         }
     };
-    SettingCountryPage.prototype.onClear = function (ev) {
+    SettingTeamsPage.prototype.onClear = function (ev) {
         this.searchTerm = "";
-        this.countries = this.originalcountries;
+        this.teams = this.originalteams;
     };
-    SettingCountryPage.prototype.onCancel = function (ev) {
+    SettingTeamsPage.prototype.onCancel = function (ev) {
         this.searchTerm = "";
-        this.countries = this.originalcountries;
+        this.teams = this.originalteams;
     };
-    SettingCountryPage.prototype.scrollInfinite = function (event) {
+    SettingTeamsPage.prototype.scrollInfinite = function (event) {
         var _this = this;
         this.currentPage += 1;
         setTimeout(function () {
-            _this.gamesProvider.GetCountries(_this.currentPage, _this.perPage)
+            _this.gamesProvider.GetTeams(_this.currentPage, _this.perPage)
                 .subscribe(function (resp) {
                 if (resp.statusCode === 200) {
                     _this.currentPage = resp.data.number;
@@ -147,9 +149,9 @@ var SettingCountryPage = /** @class */ (function () {
                     _this.totalData = resp.data.totalElements;
                     _this.perPage = resp.data.size;
                     console.log(_this.currentPage, _this.totalPage, _this.totalData, _this.perPage);
-                    _this.nocountries = 'countries';
+                    _this.noteams = 'teams';
                     for (var i = 0; i < resp.data.content.length; i++) {
-                        _this.countries.push(resp.data.content[i]);
+                        _this.teams.push(resp.data.content[i]);
                     }
                 }
                 else {
@@ -158,31 +160,30 @@ var SettingCountryPage = /** @class */ (function () {
                 event.complete();
             }, function (error) {
                 console.log("End of the countries.");
-                _this.nocountries = 'none';
+                _this.noteams = 'none';
                 event.complete();
             });
         }, 1000);
     };
-    SettingCountryPage.prototype.onGotoTop = function () {
+    SettingTeamsPage.prototype.onGotoTop = function () {
         this.content.scrollToTop();
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["_10" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["e" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["e" /* Content */])
-    ], SettingCountryPage.prototype, "content", void 0);
-    SettingCountryPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["n" /* Component */])({
-            selector: 'page-setting-country',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-country/setting-country.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Countries</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only navPush="SettingCountryManagePage">\n        <ion-icon name="add-circle"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n\n<ion-content padding>\n  <ion-searchbar [(ngModel)]="searchTerm" (ionCancel)="onCancel($event)" [showCancelButton]="true"\n    (ionClear)="onClear($event)" (ionInput)="onSearch()">\n  </ion-searchbar>\n  <div class="leagueStats">\n    <ion-list *ngFor="let country of countries">\n      <ion-item class="thumbnailItem" navPush="SettingCountryManagePage" [navParams]="country">\n        <ion-thumbnail item-left>\n          <img src="{{country.imageurl}}" *ngIf="country.imageurl" />\n          <img src="assets/imgs/appicon.png" *ngIf="!country.imageurl" />\n        </ion-thumbnail>\n        <h5 ion-text padding-left margin-left color="dark">{{country.name}}</h5>\n      </ion-item>\n    </ion-list>\n\n  </div>\n\n  <div class="" *ngIf="error">\n    <p ion-text text-center color="color2">No result found!</p>\n  </div>\n  <div text-center margin-top margin-bottonm  *ngIf="nocountries === \'none\'" (click)="onGotoTop()">\n    <button ion-button  small color="color2">Back to Top</button>\n  </div>\n  <ion-infinite-scroll (ionInfinite)="scrollInfinite($event)" *ngIf="currentPage < totalPage">\n    <ion-infinite-scroll-content  loadingSpinner="bubbles"\n    loadingText="Loading page {{currentPage}} of {{totalPage}}">\n    </ion-infinite-scroll-content>\n  </ion-infinite-scroll>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-country/setting-country.html"*/,
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["Content"]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["Content"])
+    ], SettingTeamsPage.prototype, "content", void 0);
+    SettingTeamsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
+            selector: 'page-setting-teams',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-teams/setting-teams.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Manage Teams</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only navPush="SettingTeamAddPage">\n        <ion-icon name="add-circle"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-searchbar [(ngModel)]="searchTerm" (ionCancel)="onCancel($event)" [showCancelButton]="true"\n  (ionClear)="onClear($event)" (ionInput)="onSearch()">\n</ion-searchbar>\n<div class="leagueStats">\n  <ion-list *ngFor="let team of teams">\n    <ion-item class="thumbnailItem" navPush="SettingTeamEditPage" [navParams]="team">\n      <ion-thumbnail item-left>\n        <img src="{{team.imageurl}}" *ngIf="team.imageurl" />\n        <img src="assets/imgs/appicon.png" *ngIf="!team.imageurl" />\n      </ion-thumbnail>\n      <!-- team Name -->\n      <h5 ion-text padding-left margin-left color="dark">{{team.name}}</h5>\n      <!-- note -->\n      <p ion-text padding-left margin-left color="dark">{{team.league.name}}</p>\n      <!-- goals or rating Number -->\n      <span ion-text color="color1" class="" item-right>{{team.country.name}}</span>\n    </ion-item>\n  </ion-list>\n</div>\n\n<div class="" *ngIf="error">\n  <p ion-text text-center color="color2">No result found!</p>\n</div>\n<div text-center margin-top margin-bottonm *ngIf="noteams === \'none\'" (click)="onGotoTop()">\n  <button ion-button small color="color2">Back to Top</button>\n</div>\n<ion-infinite-scroll (ionInfinite)="scrollInfinite($event)" *ngIf="currentPage < totalPage">\n  <ion-infinite-scroll-content  loadingSpinner="bubbles"\n  loadingText="Loading page {{currentPage}} of {{totalPage}}"></ion-infinite-scroll-content>\n</ion-infinite-scroll>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-teams/setting-teams.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["t" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */],
-            __WEBPACK_IMPORTED_MODULE_0__providers_games_games__["a" /* GamesProvider */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["u" /* NavParams */]])
-    ], SettingCountryPage);
-    return SettingCountryPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_games_games__["a" /* GamesProvider */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavParams"]])
+    ], SettingTeamsPage);
+    return SettingTeamsPage;
 }());
 
-//# sourceMappingURL=setting-country.js.map
+//# sourceMappingURL=setting-teams.js.map
 
 /***/ })
 
