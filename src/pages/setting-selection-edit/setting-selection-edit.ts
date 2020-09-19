@@ -60,16 +60,16 @@ selection: Selections = new Selections("", "");
     });
     let confirm = this.alertCtrl.create({
       title: 'Delete Selection',
-      message: 'Do you want to delete ' + this.selection.name + '?',
+      message: 'Do you want to delete <b>' + this.selection.name + '?<b><br/><br/>This is action is irreversible.',
       buttons: [
         {
-          text: 'No',
+          text: 'Cancel',
           handler: () => {
 
           }
         },
         {
-          text: 'Yes',
+          text: 'Proceed',
           handler: () => {
             loading.present();
             this.gameProvider.deleteSelection(this.selections.id).subscribe(res => {

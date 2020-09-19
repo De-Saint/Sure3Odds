@@ -52,16 +52,17 @@ export class SettingLeagueEditPage {
     });
     let confirm = this.alertCtrl.create({
       title: 'Delete League',
-      message: 'Do you want to delete ' + this.leagues.name + '?',
+      message: 'Do you want to delete <b>' + this.leagues.name + '?</b><br/><br/>All the teams under <b>' + this.leagues.name + '</b> would be deleted.</b><br/><br/>This is action is irreversible.',
+     
       buttons: [
         {
-          text: 'No',
+          text: 'Cancel',
           handler: () => {
 
           }
         },
         {
-          text: 'Yes',
+          text: 'Proceed',
           handler: () => {
             loading.present();
             this.gameProvider.deleteLeague(this.leagues.id).subscribe(res => {

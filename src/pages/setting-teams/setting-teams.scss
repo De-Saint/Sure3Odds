@@ -92,3 +92,11 @@ page-setting-teams {
         }
     }
 }
+.alert-md .alert-title {
+    font-size: 20px;
+    color: color($colors, color1);
+}
+.alert-md .alert-message, .alert-md .alert-input-group {
+    color: rgba(0, 0, 0, 0.7);
+    padding: 0 24px 24px;
+}

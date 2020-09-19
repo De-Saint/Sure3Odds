@@ -1,14 +1,14 @@
 webpackJsonp([23],{
 
-/***/ 741:
+/***/ 742:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingTeamsPageModule", function() { return SettingTeamsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignInPageModule", function() { return SignInPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_teams__ = __webpack_require__(809);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sign_in__ = __webpack_require__(810);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SettingTeamsPageModule = /** @class */ (function () {
-    function SettingTeamsPageModule() {
+var SignInPageModule = /** @class */ (function () {
+    function SignInPageModule() {
     }
-    SettingTeamsPageModule = __decorate([
+    SignInPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__setting_teams__["a" /* SettingTeamsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__sign_in__["a" /* SignInPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_teams__["a" /* SettingTeamsPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__sign_in__["a" /* SignInPage */]),
             ],
         })
-    ], SettingTeamsPageModule);
-    return SettingTeamsPageModule;
+    ], SignInPageModule);
+    return SignInPageModule;
 }());
 
-//# sourceMappingURL=setting-teams.module.js.map
+//# sourceMappingURL=sign-in.module.js.map
 
 /***/ }),
 
-/***/ 809:
+/***/ 810:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingTeamsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignInPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_games_games__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(88);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -60,147 +60,66 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var SettingTeamsPage = /** @class */ (function () {
-    function SettingTeamsPage(authProvider, gamesProvider, actionSheetCtrl, navCtrl, navParams) {
-        this.authProvider = authProvider;
-        this.gamesProvider = gamesProvider;
-        this.actionSheetCtrl = actionSheetCtrl;
+var SignInPage = /** @class */ (function () {
+    function SignInPage(navCtrl, storage, events, auth) {
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.currentPage = 1;
-        this.totalPage = 0;
-        this.perPage = 0;
-        this.totalData = 0;
+        this.storage = storage;
+        this.events = events;
+        this.auth = auth;
+        this.submitted = false;
+        this.passwordType = 'password';
+        this.passwordIcon = 'eye-off';
+        this.HAS_LOGGED_IN = 'hasLoggedIn';
+        this.login = {};
     }
-    SettingTeamsPage.prototype.ionViewWillEnter = function () {
-        this.GetTeams();
+    SignInPage.prototype.ngOnInit = function () {
     };
-    SettingTeamsPage.prototype.GetTeams = function () {
+    SignInPage.prototype.onLogin = function (form, page) {
         var _this = this;
-        this.gamesProvider.GetTeams(0, 200)
-            .subscribe(function (resp) {
-            if (resp.statusCode === 200) {
-                _this.teams = resp.data.content;
-                _this.originalteams = _this.teams;
-                _this.currentPage = resp.data.number;
-                _this.totalPage = resp.data.totalPages;
-                _this.totalData = resp.data.totalElements;
-                _this.perPage = resp.data.size;
-                _this.noteams = 'teams';
-            }
-            else {
-                _this.authProvider.showToast(resp.description);
-            }
-        }, function (error) {
-            _this.error = 'none';
-            _this.authProvider.showToast(error.error.description);
-        });
-    };
-    SettingTeamsPage.prototype.onSearch = function () {
-        var _this = this;
-        var searchvalue = this.searchTerm;
-        if (searchvalue.trim() === '') {
-            this.teams = this.originalteams;
-        }
-        else {
-            if (searchvalue.length >= 3) {
-                this.gamesProvider.SearchTeams(searchvalue, 0, 200)
-                    .subscribe(function (resp) {
-                    if (resp.statusCode === 200) {
-                        _this.teams = resp.data.content;
-                        _this.currentPage = resp.data.number;
-                        _this.totalPage = resp.data.totalPages;
-                        _this.totalData = resp.data.totalElements;
-                        _this.perPage = resp.data.size;
-                    }
-                    else {
-                        _this.authProvider.showToast(resp.description);
-                    }
-                }, function (error) {
-                    _this.error = 'none';
-                    _this.authProvider.showToast(error.error.description);
-                });
-            }
-        }
-    };
-    SettingTeamsPage.prototype.onClear = function (ev) {
-        this.searchTerm = "";
-        this.teams = this.originalteams;
-    };
-    SettingTeamsPage.prototype.onCancel = function (ev) {
-        this.searchTerm = "";
-        this.teams = this.originalteams;
-    };
-    SettingTeamsPage.prototype.scrollInfinite = function (event) {
-        var _this = this;
-        this.currentPage += 1;
-        setTimeout(function () {
-            _this.gamesProvider.GetTeams(_this.currentPage, _this.perPage)
+        this.submitted = true;
+        if (form.valid) {
+            this.auth.login(this.login.email, this.login.password)
                 .subscribe(function (resp) {
                 if (resp.statusCode === 200) {
-                    _this.currentPage = resp.data.number;
-                    _this.totalPage = resp.data.totalPages;
-                    _this.totalData = resp.data.totalElements;
-                    _this.perPage = resp.data.size;
-                    _this.noteams = 'teams';
-                    for (var i = 0; i < resp.data.content.length; i++) {
-                        _this.teams.push(resp.data.content[i]);
-                    }
+                    _this.gotoHomePage(resp.data, page);
                 }
                 else {
-                    _this.authProvider.showToast(resp.description);
+                    _this.auth.showToast(resp.description);
                 }
-                event.complete();
             }, function (error) {
-                _this.noteams = 'none';
-                event.complete();
+                console.log(error);
+                // this.auth.showToast(error.error.message);
             });
-        }, 1000);
+        }
     };
-    SettingTeamsPage.prototype.onGotoTop = function () {
-        this.content.scrollToTop();
+    SignInPage.prototype.hideShowPassword = function () {
+        this.passwordType = this.passwordType === 'text' ? 'password' : 'text';
+        this.passwordIcon = this.passwordIcon === 'eye-off' ? 'eye' : 'eye-off';
     };
-    SettingTeamsPage.prototype.onTeamOption = function (team) {
+    SignInPage.prototype.gotoHomePage = function (data, page) {
         var _this = this;
-        var actionSheet = this.actionSheetCtrl.create({
-            title: 'Team Options',
-            buttons: [
-                {
-                    text: 'View / Edit',
-                    handler: function () { _this.navCtrl.push('SettingTeamEditPage', { team: team }); }
-                }, {
-                    text: 'Promote',
-                    handler: function () { _this.navCtrl.push('SettingTeamManagePage', { team: team, 'option': 'Promote' }); }
-                }, {
-                    text: 'Relegate',
-                    handler: function () { _this.navCtrl.push('SettingTeamManagePage', { team: team, 'option': 'Relegate' }); }
-                }, {
-                    text: 'Assign To Another League',
-                    handler: function () { _this.navCtrl.push('SettingTeamAssignPage', { team: team }); }
-                }, {
-                    text: 'Cancel',
-                    role: 'cancel',
-                    handler: function () { }
-                }
-            ]
+        this.navCtrl.setRoot(page).then(function () {
+            _this.storage.ready().then(function () {
+                _this.storage.set("hasSeenLogin", true);
+                var name = _this.auth.currentUserDataValue.name;
+                var type = _this.auth.currentUserDataValue.user_type;
+                _this.auth.showToast("Welcome " + name);
+                _this.events.publish('user:login', type, name);
+            });
         });
-        actionSheet.present();
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["Content"]),
-        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["Content"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["Content"]) === "function" && _a || Object)
-    ], SettingTeamsPage.prototype, "content", void 0);
-    SettingTeamsPage = __decorate([
+    SignInPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
-            selector: 'page-setting-teams',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-teams/setting-teams.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Manage Teams</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only navPush="SettingTeamAddPage">\n        <ion-icon name="add-circle"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-searchbar [(ngModel)]="searchTerm" (ionCancel)="onCancel($event)" [showCancelButton]="true"\n  (ionClear)="onClear($event)" (ionInput)="onSearch()">\n</ion-searchbar>\n<div class="leagueStats">\n  <ion-list *ngFor="let team of teams">\n    <ion-item class="thumbnailItem" (click)="onTeamOption(team)">\n      <ion-thumbnail item-left>\n        <img src="{{team.imageurl}}" *ngIf="team.imageurl" />\n        <img src="/assets/imgs/appicon.png" *ngIf="!team.imageurl" />\n      </ion-thumbnail>\n      <!-- team Name -->\n      <h5 ion-text padding-left margin-left color="dark">{{team.name}}</h5>\n      <!-- note -->\n      <p ion-text padding-left margin-left color="dark">{{team.league.name}}</p>\n      <!-- goals or rating Number -->\n      <span ion-text color="color1" class="" item-right>{{team.country.name}}</span>\n    </ion-item>\n  </ion-list>\n</div>\n\n<div class="" *ngIf="error">\n  <p ion-text text-center color="color2">No result found!</p>\n</div>\n<div text-center margin-top margin-bottonm *ngIf="noteams === \'none\'" (click)="onGotoTop()">\n  <button ion-button small color="color2">Back to Top</button>\n</div>\n<ion-infinite-scroll (ionInfinite)="scrollInfinite($event)" *ngIf="currentPage < totalPage">\n  <ion-infinite-scroll-content  loadingSpinner="bubbles"\n  loadingText="Loading page {{currentPage}} of {{totalPage}}"></ion-infinite-scroll-content>\n</ion-infinite-scroll>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-teams/setting-teams.html"*/,
+            selector: 'page-sign-in',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/sign-in/sign-in.html"*/'<ion-content class="sign" style="background-image:url(\'assets/imgs/welcome3.jpg\')">\n\n  <form #loginForm="ngForm">\n    <div class="signForm">\n      <img src="assets/imgs/appicon.png" style="width: 8em; height: 8em;" />\n      <p ion-text color="light">Sure3Odds</p>\n      <ion-list>\n        <ion-item>\n          <ion-icon name="md-mail" item-left color="light"></ion-icon>\n          <ion-input type="email" [(ngModel)]="login.email" name="email" required placeholder="E-mail"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-icon name="md-lock" item-left color="light"></ion-icon>\n          <ion-input [type]="passwordType" clearOnEdit="false" type="password" [(ngModel)]="login.password"\n            name="password" required placeholder="Password"></ion-input>\n          <ion-icon name="eye-off" item-right color="light" style="font-size: large; margin-top: 0.5em !important;"\n            [name]="passwordIcon" class="passwordIcon" (click)=\'hideShowPassword()\'></ion-icon>\n        </ion-item>\n      </ion-list>\n      <button class="" ion-button block color="color2" (click)="onLogin(loginForm, \'AllMatchesPage\')"\n        type="submit">LOGIN</button>\n      <p ion-text color="light" navPush="SignUpPage">No account yet ? Create one</p>\n      <p ion-text color="light">Bet responsively 18+ || <span ion-text color="light" navPush="FreeTipsPage">Free Tips\n          ||</span></p>\n    </div>\n  </form>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/sign-in/sign-in.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_games_games__["a" /* GamesProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_games_games__["a" /* GamesProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["ActionSheetController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["ActionSheetController"]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavController"]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavParams"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavParams"]) === "function" && _f || Object])
-    ], SettingTeamsPage);
-    return SettingTeamsPage;
-    var _a, _b, _c, _d, _e, _f;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavController"],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["Events"],
+            __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */]])
+    ], SignInPage);
+    return SignInPage;
 }());
 
-//# sourceMappingURL=setting-teams.js.map
+//# sourceMappingURL=sign-in.js.map
 
 /***/ })
 

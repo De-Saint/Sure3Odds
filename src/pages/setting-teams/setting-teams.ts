@@ -1,6 +1,6 @@
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, Content, ActionSheetController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Content, ActionSheetController, LoadingController, AlertController } from 'ionic-angular';
 import { GamesProvider } from '../../providers/games/games';
 
 
@@ -21,8 +21,9 @@ export class SettingTeamsPage {
   perPage = 0;
   totalData = 0;
   constructor(private authProvider: AuthenicationProvider,
-    private gamesProvider: GamesProvider,
+    private gamesProvider: GamesProvider, private loadingCtrl: LoadingController,
     private actionSheetCtrl: ActionSheetController,
+    private alertCtrl: AlertController,
     public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -119,14 +120,14 @@ export class SettingTeamsPage {
           text: 'View / Edit',
           handler: () => { this.navCtrl.push('SettingTeamEditPage', { team }) }
         }, {
-          text: 'Promote',
-          handler: () => { this.navCtrl.push('SettingTeamManagePage', {team, 'option': 'Promote'}) }
+          text: 'Promote / Relegate',
+          handler: () => { this.onPromoteDemote(team) }
         }, {
-          text: 'Relegate',
-          handler: () => { this.navCtrl.push('SettingTeamManagePage', {team, 'option': 'Relegate'}) }
+          text: 'Delete From League',
+          handler: () => { this.onDeleteTeam(team) }
         }, {
-          text: 'Assign To Another League',
-          handler: () => { this.navCtrl.push('SettingTeamAssignPage', { team }) }
+          text: 'Add To League',
+          handler: () => { this.onAssignTeam(team) }
         }, {
           text: 'Cancel',
           role: 'cancel',
@@ -135,6 +136,79 @@ export class SettingTeamsPage {
       ]
     });
     actionSheet.present();
+  }
+
+
+  onDeleteTeam(team) {
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    let confirm = this.alertCtrl.create({
+      title: 'Delete Team',
+      message: "Do you want to delete <b>" + team.name + "</b> <br/>from <br/><b>" + team.league.name + "</b> league?",
+      buttons: [
+        {
+          text: 'No',
+          handler: () => {
+
+          }
+        },
+        {
+          text: 'Yes',
+          handler: () => {
+            loading.present();
+            this.gamesProvider.deleteTeam(team.id).subscribe(res => {
+              loading.dismiss().catch(() => { });
+              if (res.statusCode === 200) {
+                this.navCtrl.pop();
+              } else {
+                this.authProvider.showToast(res.description);
+              }
+            }, error => {
+              loading.dismiss().catch(() => { });
+              this.authProvider.showToast(error.error.description);
+            });
+          }
+        }
+      ]
+    });
+    confirm.present();
+  }
+
+
+  onAssignTeam(team) {
+    this.alertCtrl.create({
+      title: "Assign To Another League",
+      message: "Would assign/add <b>" + team.name + "</b> to another league in the selected country.<br/><br/>You would select a country and the league within the selected country to assign <b>" + team.name + " to</b>.",
+      enableBackdropDismiss: !1,
+      buttons: [{
+        text: "Cancel",
+        handler: () => {
+
+        }
+      }, {
+        text: "Continue",
+        handler: () => { this.navCtrl.push('SettingTeamAssignPage', { team, 'option': 'Promote' }) }
+      }]
+    }).present()
+  }
+
+  
+  onPromoteDemote(team) {
+    this.alertCtrl.create({
+      title: "Promote/Relegate Team",
+      message: "Would remove <b>" + team.name + "</b> from the current league - <b>" + team.league.name + "</b>.<br/><br/>Then you would select another league within the same country - <b>" + team.country.name + "</b> to assign <b>" + team.name + " to</b>.",
+      enableBackdropDismiss: !1,
+      buttons: [{
+        text: "Cancel",
+        handler: () => {
+
+        }
+      }, {
+        text: "Continue",
+        handler: () => { this.navCtrl.push('SettingTeamManagePage', { team }) }
+      }]
+    }).present()
   }
 
 

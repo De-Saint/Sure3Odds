@@ -45,7 +45,7 @@ export class SettingCountryPage {
           this.originalcountries = this.countries;
           this.nocountries = 'countries';
         } else {
-          console.log(resp.description);
+          this.authProvider.showToast(resp.description);
         }
         this.error = '';
       }, error => {
@@ -63,21 +63,17 @@ export class SettingCountryPage {
       if (searchvalue.length >= 3) {
         this.gamesProvider.SearchCountries(searchvalue, 0, 20)
           .subscribe(resp => {
-            console.log(resp);
             if (resp.statusCode === 200) {
               this.countries = resp.data.content;
               this.currentPage = resp.data.number;
               this.totalPage = resp.data.totalPages;
               this.totalData = resp.data.totalElements;
               this.perPage = resp.data.size;
-              console.log(this.currentPage, this.totalPage, this.totalData,
-                this.perPage);
             } else {
-              console.log(resp.description);
+              this.authProvider.showToast(resp.description);
             }
             this.error = '';
           }, error => {
-            console.log(JSON.stringify(error));
             this.error = 'none';
             this.countries = [];
             this.authProvider.showToast(error.error.description);
@@ -105,18 +101,15 @@ export class SettingCountryPage {
             this.totalPage = resp.data.totalPages;
             this.totalData = resp.data.totalElements;
             this.perPage = resp.data.size;
-            console.log(this.currentPage, this.totalPage, this.totalData,
-              this.perPage);
             this.nocountries = 'countries';
             for (let i = 0; i < resp.data.content.length; i++) {
               this.countries.push(resp.data.content[i]);
             }
           } else {
-            console.log(resp.description);
+            this.authProvider.showToast(resp.description);
           }
           event.complete();
         }, error => {
-          console.log("End of the countries.");
           this.nocountries = 'none';
           event.complete();
         })

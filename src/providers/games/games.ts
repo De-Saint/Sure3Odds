@@ -211,7 +211,7 @@ export class GamesProvider {
         return resp;
       }));
   }
-  updateTeams(team): Observable<ResponseType> {
+  updateTeam(team): Observable<ResponseType> {
     return this.http.put<ResponseType>(`${environment.apiUrl}/games/team/update`, team).pipe(
       map((resp: any) => {
         return resp;

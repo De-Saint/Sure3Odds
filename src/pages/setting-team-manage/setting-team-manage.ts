@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AuthenicationProvider } from './../../providers/authenication/authenication';
+import { GamesProvider } from './../../providers/games/games';
+import { SelectSearchableComponent } from 'ionic-select-searchable';
+import { Teams } from './../../interfaces/Teams';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 
 
 @IonicPage()
@@ -8,17 +12,70 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'setting-team-manage.html',
 })
 export class SettingTeamManagePage {
-  existingteam: any;
-  option: string;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.existingteam = this.navParams.get("team")
-    console.log(this.existingteam);
-    this.option = this.navParams.get("option");
-    console.log(this.option);
+  @ViewChild('myselect') selectComponent: SelectSearchableComponent;
+  selectedteam: any;
+  league: any;
+  leagues: any;
+  team: Teams = new Teams("", "", "", { id: "", name: "", imageurl: "" }, { id: "", name: "", imageurl: "" })
+  constructor(public navCtrl: NavController,
+    private loadingCtrl: LoadingController, private authProvider: AuthenicationProvider,
+    private gamesProvider: GamesProvider, public navParams: NavParams) {
+    this.selectedteam = this.navParams.get("team");
+    console.log("this.selectedteam", this.selectedteam);
+    if (this.selectedteam) {
+      this.team = this.selectedteam;
+    }
+  }
+  ionViewWillEnter() {
+    this.GetLeaguesByCountryID();
+  }
+  GetLeaguesByCountryID() {
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    if (this.team) {
+      loading.present();
+      this.gamesProvider.GetLeaguesByCountryID(this.team.country.id)
+        .subscribe(resp => {
+          loading.dismiss().catch(() => { });
+          if (resp.statusCode === 200) {
+            this.leagues = resp.data;
+          } else {
+            this.authProvider.showToast(resp.description);
+          }
+        }, error => {
+          loading.dismiss().catch(() => { });
+          this.authProvider.showToast(error.error.description);
+        });
+    }
+
   }
 
-  ionViewDidLoad() {
+  onSelectLeague(event: { component: SelectSearchableComponent, value: any }) {
+    // console.log('league:', event.value);
+  }
 
+  onSubmit(team) {
+    if (team.name) {
+      let loading = this.loadingCtrl.create({
+        content: "Please wait..."
+      });
+      console.log(team)
+      loading.present();
+      this.gamesProvider.updateTeam(team).subscribe(res => {
+        loading.dismiss().catch(() => { });
+        if (res.statusCode === 200) {
+          this.navCtrl.pop();
+        } else {
+          this.authProvider.showToast(res.description);
+        }
+      }, error => {
+        loading.dismiss().catch(() => { });
+        this.authProvider.showToast(error.error.description);
+      });
+    } else {
+      this.authProvider.showToast("Name input field is empty");
+    }
   }
 
 }

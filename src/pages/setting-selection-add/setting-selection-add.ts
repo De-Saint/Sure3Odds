@@ -18,9 +18,6 @@ export class SettingSelectionAddPage {
     public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-
-  }
   onSubmit(selection) {
     if (selection.name) {
       let loading = this.loadingCtrl.create({

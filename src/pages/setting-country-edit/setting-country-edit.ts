@@ -71,16 +71,16 @@ export class SettingCountryEditPage {
     });
     let confirm = this.alertCtrl.create({
       title: 'Delete Country',
-      message: 'Do you want to delete ' + this.countries.name + '?',
+      message: 'Do you want to delete <b>' + this.countries.name + '?</b><br/><br/>All the leagues and teams under <b>' + this.countries.name + '</b> would be deleted.</b><br/><br/>This is action is irreversible.',
       buttons: [
         {
-          text: 'No',
+          text: 'Cancel',
           handler: () => {
 
           }
         },
         {
-          text: 'Yes',
+          text: 'Proceed',
           handler: () => {
             loading.present();
             this.gameProvider.deleteCountry(this.countries.id).subscribe(res => {

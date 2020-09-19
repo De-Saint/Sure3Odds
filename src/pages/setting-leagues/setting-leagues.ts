@@ -43,8 +43,10 @@ export class SettingLeaguesPage {
         } else {
           this.authProvider.showToast(resp.description);
         }
+        this.error = '';
       }, error => {
         this.error = 'none';
+        this.leagues = [];
         this.authProvider.showToast(error.error.description);
       });
   }
@@ -66,8 +68,10 @@ export class SettingLeaguesPage {
           } else {
             this.authProvider.showToast(resp.description);
           }
+          this.error = '';
         }, error => {
           this.error = 'none';
+          this.leagues = [];
           this.authProvider.showToast(error.error.description);
         });
       }

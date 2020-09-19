@@ -89,7 +89,7 @@ var SettingCountryPage = /** @class */ (function () {
                 _this.nocountries = 'countries';
             }
             else {
-                console.log(resp.description);
+                _this.authProvider.showToast(resp.description);
             }
             _this.error = '';
         }, function (error) {
@@ -108,21 +108,18 @@ var SettingCountryPage = /** @class */ (function () {
             if (searchvalue.length >= 3) {
                 this.gamesProvider.SearchCountries(searchvalue, 0, 20)
                     .subscribe(function (resp) {
-                    console.log(resp);
                     if (resp.statusCode === 200) {
                         _this.countries = resp.data.content;
                         _this.currentPage = resp.data.number;
                         _this.totalPage = resp.data.totalPages;
                         _this.totalData = resp.data.totalElements;
                         _this.perPage = resp.data.size;
-                        console.log(_this.currentPage, _this.totalPage, _this.totalData, _this.perPage);
                     }
                     else {
-                        console.log(resp.description);
+                        _this.authProvider.showToast(resp.description);
                     }
                     _this.error = '';
                 }, function (error) {
-                    console.log(JSON.stringify(error));
                     _this.error = 'none';
                     _this.countries = [];
                     _this.authProvider.showToast(error.error.description);
@@ -149,18 +146,16 @@ var SettingCountryPage = /** @class */ (function () {
                     _this.totalPage = resp.data.totalPages;
                     _this.totalData = resp.data.totalElements;
                     _this.perPage = resp.data.size;
-                    console.log(_this.currentPage, _this.totalPage, _this.totalData, _this.perPage);
                     _this.nocountries = 'countries';
                     for (var i = 0; i < resp.data.content.length; i++) {
                         _this.countries.push(resp.data.content[i]);
                     }
                 }
                 else {
-                    console.log(resp.description);
+                    _this.authProvider.showToast(resp.description);
                 }
                 event.complete();
             }, function (error) {
-                console.log("End of the countries.");
                 _this.nocountries = 'none';
                 event.complete();
             });

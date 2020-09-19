@@ -19,7 +19,7 @@ export class SettingTeamEditPage {
   team: Teams = new Teams("", "", "", { id: "", name: "", imageurl: "" }, { id: "", name: "", imageurl: "" })
   constructor(public navCtrl: NavController,
     private authProvider: AuthenicationProvider,
-    private gameProvider: GamesProvider,
+    private gamesProvider: GamesProvider,
     private alertCtrl: AlertController,
     private loadingCtrl: LoadingController,
     public actionSheetCtrl: ActionSheetController, public camera: Camera, public navParams: NavParams) {
@@ -62,7 +62,7 @@ export class SettingTeamEditPage {
     });
     let confirm = this.alertCtrl.create({
       title: 'Delete Team',
-      message: 'Do you want to delete ' + this.team.name + '?',
+      message: "Do you want to delete <b>" + this.team.name + "</b> <br/>from <br/><b>" + this.team.league.name + "</b> league?<br/><br/>This is action is irreversible.",
       buttons: [
         {
           text: 'No',
@@ -74,7 +74,7 @@ export class SettingTeamEditPage {
           text: 'Yes',
           handler: () => {
             loading.present();
-            this.gameProvider.deleteTeam(this.team.id).subscribe(res => {
+            this.gamesProvider.deleteTeam(this.team.id).subscribe(res => {
               loading.dismiss().catch(() => { });
               if (res.statusCode === 200) {
                 this.navCtrl.pop();
@@ -100,7 +100,7 @@ export class SettingTeamEditPage {
         content: "Please wait..."
       });
       loading.present();
-      this.gameProvider.updateTeams(team).subscribe(res => {
+      this.gamesProvider.updateTeam(team).subscribe(res => {
         loading.dismiss().catch(() => { });
         if (res.statusCode === 200) {
           this.navCtrl.pop();

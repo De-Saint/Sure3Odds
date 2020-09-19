@@ -23,16 +23,13 @@ export class SettingTeamAssignPage {
     private gamesProvider: GamesProvider,
     private loadingCtrl: LoadingController,
     private authProvider: AuthenicationProvider, public navParams: NavParams) {
-    this.selectedteam = this.navParams.get("team")
-    console.log(this.selectedteam);
+    this.selectedteam = this.navParams.get("team");
+    console.log("this.selectedteam", this.selectedteam);
     if (this.selectedteam) {
-      this.team.name = this.selectedteam.name;
+      this.team = this.selectedteam;
     }
   }
 
-  ionViewDidLoad() {
-
-  }
   ionViewWillEnter() {
     this.Getcountries();
   }
@@ -62,7 +59,6 @@ export class SettingTeamAssignPage {
           loading.dismiss().catch(() => { });
           if (resp.statusCode === 200) {
             this.leagues = resp.data;
-            console.log(this.leagues);
           } else {
             this.authProvider.showToast(resp.description);
           }
@@ -75,30 +71,30 @@ export class SettingTeamAssignPage {
   }
 
   onSelectLeague(event: { component: SelectSearchableComponent, value: any }) {
-    console.log('league:', event.value);
+    // console.log('league:', event.value);
   }
 
   onSubmit(team) {
-    console.log(team)
-    // if (team.name) {
-    //   // team.imageurl = (team.imageurl != undefined) ? this.img1 : this.img;
-    //   let loading = this.loadingCtrl.create({
-    //     content: "Please wait..."
-    //   });
-    //   loading.present();
-    //   this.gamesProvider.createTeam(team).subscribe(res => {
-    //     loading.dismiss().catch(() => { });
-    //     if (res.statusCode === 200) {
-    //       this.navCtrl.pop();
-    //     } else {
-    //       this.authProvider.showToast(res.description);
-    //     }
-    //   }, error => {
-    //     loading.dismiss().catch(() => { });
-    //     this.authProvider.showToast(error.error.description);
-    //   });
-    // } else {
-    //   this.authProvider.showToast("Name input field is empty");
-    // }
+    if (team.name) {
+      team.id = 0;
+      let loading = this.loadingCtrl.create({
+        content: "Please wait..."
+      });
+      console.log(team)
+      loading.present();
+      this.gamesProvider.createTeam(team).subscribe(res => {
+        loading.dismiss().catch(() => { });
+        if (res.statusCode === 200) {
+          this.navCtrl.pop();
+        } else {
+          this.authProvider.showToast(res.description);
+        }
+      }, error => {
+        loading.dismiss().catch(() => { });
+        this.authProvider.showToast(error.error.description);
+      });
+    } else {
+      this.authProvider.showToast("Name input field is empty");
+    }
   }
 }
