@@ -1,3 +1,79 @@
 page-setting-team-add {
-
+    .otherForm {
+        @extend .signForm;
+        margin-top: 10em;
+        border-radius: $control-radius;
+        // @extend %outerShadow;
+        width: calc(100% - #{$content-padding}* 2) !important;
+        padding: 8px !important;
+        .item {
+          transition: height 1s;
+          .text-input {
+            color: color($colors, dark);
+            opacity: 0.8;
+            font-weight: 500;
+          }
+          .label {
+            color: color($colors, dark);
+            font-weight: bold;
+          }
+    
+          &.show {
+            height: 0px !important;
+            transition: height 1s;
+            margin-bottom: 0px !important;
+          }
+          &.item-input-disabled {
+            border-bottom: none !important;
+          }
+        }
+        .button {
+          margin-top: $content-padding * 2 !important;
+        }
+      }
+    
+      .imgs {
+        padding: $content-padding;
+        position: relative;
+        img {
+          display: block;
+          border-radius: $control-radius;
+          width: 100%;
+        }
+        .imgProfile {
+          @extend .imgBg;
+          width: 110px;
+          height: 110px;
+          border-radius: 50%;
+          margin: 20px auto 0px;
+          position: absolute;
+          left: 0px;
+          right: 0px;
+        }
+        .button {
+          height: 34px;
+          width: 34px;
+          background: color($colors, color2);
+          border-radius: 50%;
+          opacity: 0;
+          transition: opacity 1s;
+          .icon {
+            font-size: 1.6rem;
+          }
+          &.coverCamera {
+            @include position(
+              $content-padding * 2,
+              $content-padding * 2,
+              auto,
+              auto
+            );
+          }
+          &.profileCamera {
+            @include position(auto, 0px, 0px, auto);
+          }
+          &.show {
+            opacity: 1;
+          }
+        }
+      }
 }

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{league.name}} Teams</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only navPush="SettingTeamAddPage">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-searchbar [(ngModel)]="searchTerm" (ionCancel)="onCancel($event)" [showCancelButton]="true"
+    (ionClear)="onClear($event)" (ionInput)="onSearch()">
+  </ion-searchbar>
+  <div class="leagueStats">
+    <ion-list *ngFor="let team of teams">
+      <ion-item class="thumbnailItem" (click)="onTeamOption(team)">
+        <ion-thumbnail item-left>
+          <img src="{{team.imageurl}}" *ngIf="team.imageurl" />
+          <img src="/assets/imgs/appicon.png" *ngIf="!team.imageurl" />
+        </ion-thumbnail>
+        <!-- team Name -->
+        <h5 ion-text padding-left margin-left color="dark">{{team.name}}</h5>
+        <!-- note -->
+        <p ion-text padding-left margin-left color="dark">{{team.league.name}}</p>
+        <!-- goals or rating Number -->
+        <span ion-text color="color1" class="" item-right>{{team.country.name}}</span>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div class="" *ngIf="error">
+    <p ion-text text-center color="color2">No result found!</p>
+  </div>
+  <div text-center margin-top margin-bottonm *ngIf="noteams === 'none'" (click)="onGotoTop()">
+    <button ion-button small color="color2">Back to Top</button>
+  </div>
+
+  <ion-infinite-scroll (ionInfinite)="scrollInfinite($event)" *ngIf="currentPage < totalPage">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading page {{currentPage}} of {{totalPage}}">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

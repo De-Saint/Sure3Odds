@@ -1,7 +1,7 @@
 import { GamesProvider } from './../../providers/games/games';
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, Content } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Content, ActionSheetController } from 'ionic-angular';
 
 
 @IonicPage()
@@ -23,6 +23,7 @@ export class SettingLeaguesPage {
   constructor(public navCtrl: NavController,
     private authProvider: AuthenicationProvider,
     private gamesProvider: GamesProvider,
+    private actionSheetCtrl: ActionSheetController,
     public navParams: NavParams) {
   }
   ionViewWillEnter() {
@@ -31,7 +32,6 @@ export class SettingLeaguesPage {
   GetLeagues() {
     this.gamesProvider.GetLeagues(0, 50)
       .subscribe(resp => {
-        console.log(resp);
         if (resp.statusCode === 200) {
           this.leagues = resp.data.content;
           this.originalleagues = this.leagues;
@@ -39,15 +39,11 @@ export class SettingLeaguesPage {
           this.totalPage = resp.data.totalPages;
           this.totalData = resp.data.totalElements;
           this.perPage = resp.data.size;
-          console.log(this.currentPage, this.totalPage, this.totalData,
-            this.perPage);
           this.noleagues = 'leagues';
-          console.log(this.leagues);
         } else {
-          console.log(resp.description);
+          this.authProvider.showToast(resp.description);
         }
       }, error => {
-        console.log(JSON.stringify(error));
         this.error = 'none';
         this.authProvider.showToast(error.error.description);
       });
@@ -61,20 +57,16 @@ export class SettingLeaguesPage {
       if (searchvalue.length >= 3) {
         this.gamesProvider.SearchLeagues(searchvalue, 0, 50)
         .subscribe(resp => {
-          console.log(resp);
           if (resp.statusCode === 200) {
             this.leagues = resp.data.content;
             this.currentPage = resp.data.number;
             this.totalPage = resp.data.totalPages;
             this.totalData = resp.data.totalElements;
             this.perPage = resp.data.size;
-            console.log(this.currentPage, this.totalPage, this.totalData,
-              this.perPage);
           } else {
-            console.log(resp.description);
+            this.authProvider.showToast(resp.description);
           }
         }, error => {
-          console.log(JSON.stringify(error));
           this.error = 'none';
           this.authProvider.showToast(error.error.description);
         });
@@ -100,18 +92,15 @@ export class SettingLeaguesPage {
             this.totalPage = resp.data.totalPages;
             this.totalData = resp.data.totalElements;
             this.perPage = resp.data.size;
-            console.log(this.currentPage, this.totalPage, this.totalData,
-              this.perPage);
             this.noleagues = 'league';
             for (let i = 0; i < resp.data.content.length; i++) {
               this.leagues.push(resp.data.content[i]);
             }
           } else {
-            console.log(resp.description);
+            this.authProvider.showToast(resp.description);
           }
           event.complete();
         }, error => {
-          console.log("End of the countries.");
           this.noleagues = 'none';
           event.complete();
         })
@@ -119,5 +108,25 @@ export class SettingLeaguesPage {
   }
   onGotoTop() {
     this.content.scrollToTop();
+  }
+
+  onLeagueOption(league) {
+    let actionSheet = this.actionSheetCtrl.create({
+      title: 'League Options',
+      buttons: [
+        {
+          text: 'View / Edit',
+          handler: () => { this.navCtrl.push('SettingLeagueEditPage', {league}) }
+        }, {
+          text: 'View Teams',
+          handler: () => { this.navCtrl.push('SettingTeamViewPage', {league}) }
+        }, {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => { }
+        }
+      ]
+    });
+    actionSheet.present();
   }
 }

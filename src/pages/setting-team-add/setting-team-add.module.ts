@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { SettingTeamAddPage } from './setting-team-add';
+import { SelectSearchableModule } from 'ionic-select-searchable';
 
 @NgModule({
   declarations: [
@@ -8,6 +9,7 @@ import { SettingTeamAddPage } from './setting-team-add';
   ],
   imports: [
     IonicPageModule.forChild(SettingTeamAddPage),
+    SelectSearchableModule
   ],
 })
 export class SettingTeamAddPageModule {}

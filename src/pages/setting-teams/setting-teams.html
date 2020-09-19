@@ -18,10 +18,10 @@
 </ion-searchbar>
 <div class="leagueStats">
   <ion-list *ngFor="let team of teams">
-    <ion-item class="thumbnailItem" navPush="SettingTeamEditPage" [navParams]="team">
+    <ion-item class="thumbnailItem" (click)="onTeamOption(team)">
       <ion-thumbnail item-left>
         <img src="{{team.imageurl}}" *ngIf="team.imageurl" />
-        <img src="assets/imgs/appicon.png" *ngIf="!team.imageurl" />
+        <img src="/assets/imgs/appicon.png" *ngIf="!team.imageurl" />
       </ion-thumbnail>
       <!-- team Name -->
       <h5 ion-text padding-left margin-left color="dark">{{team.name}}</h5>

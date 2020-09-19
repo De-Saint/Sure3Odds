@@ -12,7 +12,7 @@
 
 <ion-content padding>
   <div class="imgs">
-    <img src="{{league.country.imageurl}}" *ngIf="league.country.imageurl" />
+    <img src="{{league.country.imageurl}}" class="newimg" text-center   style="width: 13em; height: 13em;" *ngIf="league.country.imageurl" />
     <img src="assets/imgs/appicon.png" class="newimg" text-center style="width: 13em; height: 13em;" *ngIf="!league.country.imageurl" />
     <div class="imgProfile" [ngStyle]="{'background-image':'url(' + league.imageurl + ')'}">
       <button ion-button icon-only class="profileCamera"  [ngClass]="{'show':flag==false}"  (click)="selectImage()">

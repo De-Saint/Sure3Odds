@@ -2,7 +2,7 @@ import { AuthenicationProvider } from './../../providers/authenication/authenica
 import { GamesProvider } from './../../providers/games/games';
 import { Leagues } from './../../interfaces/Leagues';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ActionSheetController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ActionSheetController, LoadingController, AlertController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 
 
@@ -20,11 +20,12 @@ export class SettingLeagueEditPage {
   league: Leagues = new Leagues("", "", "", { id: "", name: "", imageurl: "" })
   constructor(public navCtrl: NavController,
     private gameProvider: GamesProvider,
+    private alertCtrl: AlertController,
+    private loadingCtrl: LoadingController,
     public actionSheetCtrl: ActionSheetController, public camera: Camera,
     private authProvider: AuthenicationProvider,
     public navParams: NavParams) {
-    this.leagues = this.navParams.data;
-    console.log(this.leagues);
+    this.leagues = this.navParams.get("league");
     if (this.leagues) {
       this.league.name = this.leagues.name;
       this.league.id = this.leagues.id;
@@ -46,27 +47,58 @@ export class SettingLeagueEditPage {
   }
 
   onDelete() {
-    this.gameProvider.deleteLeague(this.leagues.id).subscribe(res => {
-      if (res.statusCode === 200) {
-        this.navCtrl.pop();
-      } else {
-        this.authProvider.showToast(res.description);
-      }
-    }, error => {
-      this.authProvider.showToast(error.error.description);
+    let loading = this.loadingCtrl.create({
+      content:"Please wait..."
     });
+    let confirm = this.alertCtrl.create({
+      title: 'Delete League',
+      message: 'Do you want to delete ' + this.leagues.name + '?',
+      buttons: [
+        {
+          text: 'No',
+          handler: () => {
+
+          }
+        },
+        {
+          text: 'Yes',
+          handler: () => {
+            loading.present();
+            this.gameProvider.deleteLeague(this.leagues.id).subscribe(res => {
+              loading.dismiss().catch(() => { });
+              if (res.statusCode === 200) {
+                this.navCtrl.pop();
+              } else {
+                this.authProvider.showToast(res.description);
+              }
+            }, error => {
+              loading.dismiss().catch(() => { });
+              this.authProvider.showToast(error.error.description);
+            });
+           
+          }
+        }
+      ]
+    });
+    confirm.present();
   }
 
   onSubmit(league) {
-    if (this.league.name) {
-      // this.league.imageurl = (this.league.imageurl != undefined) ? this.leagues.imageurl : this.img;
+    if (league.name) {
+      let loading = this.loadingCtrl.create({
+        content: "Please wait..."
+      });
+      loading.present();
+      league.imageurl = (league.imageurl != undefined) ? this.leagues.imageurl : this.img;
         this.gameProvider.updateLeague(league).subscribe(res => {
+          loading.dismiss().catch(() => { });
           if (res.statusCode === 200) {
             this.navCtrl.pop();
           } else {
             this.authProvider.showToast(res.description);
           }
         }, error => {
+          loading.dismiss().catch(() => { });
           this.authProvider.showToast(error.error.description);
         });
     } else {
@@ -77,7 +109,7 @@ export class SettingLeagueEditPage {
 
   selectImage() {
     let actionSheet = this.actionSheetCtrl.create({
-      title: 'Modify your Picture',
+      title: 'Change League Logo',
       buttons: [
         {
           text: 'Gallery',
@@ -116,4 +148,6 @@ export class SettingLeagueEditPage {
       this.league.imageurl = this.img;
     }
   }
+
+
 }

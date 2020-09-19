@@ -1,7 +1,7 @@
 import { GamesProvider } from './../../providers/games/games';
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, Content } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Content, ActionSheetController } from 'ionic-angular';
 
 
 
@@ -20,19 +20,20 @@ export class SettingCountryPage {
   totalPage = 0;
   perPage = 0;
   totalData = 0;
-  nocountries : string;
+  nocountries: string;
 
   constructor(public navCtrl: NavController,
     private authProvider: AuthenicationProvider,
     private gamesProvider: GamesProvider,
+    private actionSheetCtrl: ActionSheetController,
     public navParams: NavParams) {
   }
 
 
-  ionViewWillEnter(){
+  ionViewWillEnter() {
     this.GetCountries();
   }
-  GetCountries() {//myDate
+  GetCountries() {
     this.gamesProvider.GetCountries(0, 20)
       .subscribe(resp => {
         if (resp.statusCode === 200) {
@@ -42,15 +43,14 @@ export class SettingCountryPage {
           this.totalData = resp.data.totalElements;
           this.perPage = resp.data.size;
           this.originalcountries = this.countries;
-          console.log(this.currentPage, this.totalPage, this.totalData,
-            this.perPage);
-            this.nocountries = 'countries';
+          this.nocountries = 'countries';
         } else {
           console.log(resp.description);
         }
+        this.error = '';
       }, error => {
-        console.log(JSON.stringify(error));
         this.error = 'none';
+        this.countries = [];
         this.authProvider.showToast(error.error.description);
       });
   }
@@ -62,24 +62,26 @@ export class SettingCountryPage {
     } else {
       if (searchvalue.length >= 3) {
         this.gamesProvider.SearchCountries(searchvalue, 0, 20)
-        .subscribe(resp => {
-          console.log(resp);
-          if (resp.statusCode === 200) {
-            this.countries = resp.data.content;
-            this.currentPage = resp.data.number;
-            this.totalPage = resp.data.totalPages;
-            this.totalData = resp.data.totalElements;
-            this.perPage = resp.data.size;
-            console.log(this.currentPage, this.totalPage, this.totalData,
-              this.perPage);
-          } else {
-            console.log(resp.description);
-          }
-        }, error => {
-          console.log(JSON.stringify(error));
-          this.error = 'none';
-          this.authProvider.showToast(error.error.description);
-        });
+          .subscribe(resp => {
+            console.log(resp);
+            if (resp.statusCode === 200) {
+              this.countries = resp.data.content;
+              this.currentPage = resp.data.number;
+              this.totalPage = resp.data.totalPages;
+              this.totalData = resp.data.totalElements;
+              this.perPage = resp.data.size;
+              console.log(this.currentPage, this.totalPage, this.totalData,
+                this.perPage);
+            } else {
+              console.log(resp.description);
+            }
+            this.error = '';
+          }, error => {
+            console.log(JSON.stringify(error));
+            this.error = 'none';
+            this.countries = [];
+            this.authProvider.showToast(error.error.description);
+          });
       }
     }
   }
@@ -105,7 +107,7 @@ export class SettingCountryPage {
             this.perPage = resp.data.size;
             console.log(this.currentPage, this.totalPage, this.totalData,
               this.perPage);
-              this.nocountries = 'countries';
+            this.nocountries = 'countries';
             for (let i = 0; i < resp.data.content.length; i++) {
               this.countries.push(resp.data.content[i]);
             }
@@ -123,5 +125,25 @@ export class SettingCountryPage {
 
   onGotoTop() {
     this.content.scrollToTop();
+  }
+
+  onCountryOption(country) {
+    let actionSheet = this.actionSheetCtrl.create({
+      title: 'Country Options',
+      buttons: [
+        {
+          text: 'View / Edit',
+          handler: () => { this.navCtrl.push('SettingCountryEditPage', {country}) }
+        }, {
+          text: 'View Leagues',
+          handler: () => { this.navCtrl.push('SettingLeagueViewPage', {country}) }
+        }, {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => { }
+        }
+      ]
+    });
+    actionSheet.present();
   }
 }

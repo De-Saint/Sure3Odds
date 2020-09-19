@@ -1,14 +1,14 @@
 webpackJsonp([38],{
 
-/***/ 713:
+/***/ 717:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OldFreeTipsPageModule", function() { return OldFreeTipsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PhotosPageModule", function() { return PhotosPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__old_free_tips__ = __webpack_require__(774);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__photos__ = __webpack_require__(783);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var OldFreeTipsPageModule = /** @class */ (function () {
-    function OldFreeTipsPageModule() {
+var PhotosPageModule = /** @class */ (function () {
+    function PhotosPageModule() {
     }
-    OldFreeTipsPageModule = __decorate([
+    PhotosPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__old_free_tips__["a" /* OldFreeTipsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__photos__["a" /* PhotosPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__old_free_tips__["a" /* OldFreeTipsPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__photos__["a" /* PhotosPage */]),
             ],
         })
-    ], OldFreeTipsPageModule);
-    return OldFreeTipsPageModule;
+    ], PhotosPageModule);
+    return PhotosPageModule;
 }());
 
-//# sourceMappingURL=old-free-tips.module.js.map
+//# sourceMappingURL=photos.module.js.map
 
 /***/ }),
 
-/***/ 774:
+/***/ 783:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OldFreeTipsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PhotosPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global__ = __webpack_require__(354);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,30 +57,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/**
- * Generated class for the OldFreeTipsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var OldFreeTipsPage = /** @class */ (function () {
-    function OldFreeTipsPage(navCtrl, navParams) {
+
+var PhotosPage = /** @class */ (function () {
+    function PhotosPage(navCtrl, global) {
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
+        this.global = global;
+        this.photos = [
+            { img: 'assets/imgs/p001.png', title: '2018 World Cup' },
+            { img: 'assets/imgs/p002.png', title: '2018 World Cup' },
+            { img: 'assets/imgs/p003.png', title: '2018 World Cup' },
+            { img: 'assets/imgs/p001.png', title: '2018 World Cup' },
+            { img: 'assets/imgs/p002.png', title: '2018 World Cup' },
+            { img: 'assets/imgs/p003.png', title: '2018 World Cup' },
+        ];
     }
-    OldFreeTipsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad OldFreeTipsPage');
-    };
-    OldFreeTipsPage = __decorate([
+    PhotosPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-old-free-tips',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/old-free-tips/old-free-tips.html"*/'<!--\n  Generated template for the OldFreeTipsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>oldFreeTips</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/old-free-tips/old-free-tips.html"*/,
+            selector: 'page-photos',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/photos/photos.html"*/'\n<ion-header>\n  <ion-navbar>\n    <ion-title>Photos</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only  (click)="global.callSearch($event)">\n        <ion-icon name="md-search"></ion-icon>\n      </button>\n      <button ion-button icon-only navPush="NotificationPage">\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header> \n<ion-content padding>\n  <ion-list class="lastPhotos">\n    <ion-item class="photoItem" *ngFor="let item of photos" navPush="PhotosDetailsPage">\n      <!-- if you want this image reponsive in large screen please remove class="imgResponsive" from img Tag  -->\n      <img src="{{item.img}}" class="imgResponsive"/>\n      <ion-grid>\n        <ion-row>\n          <ion-col col-auto>\n            <h4 ion-text color="dark">{{item.title}}</h4>\n          </ion-col>\n          <ion-col col>\n            <p ion-text color="color2">200 photos</p>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/photos/photos.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
-    ], OldFreeTipsPage);
-    return OldFreeTipsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
+    ], PhotosPage);
+    return PhotosPage;
 }());
 
-//# sourceMappingURL=old-free-tips.js.map
+//# sourceMappingURL=photos.js.map
 
 /***/ })
 

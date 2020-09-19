@@ -1,12 +1,55 @@
 <ion-header>
-
   <ion-navbar>
     <ion-title>Add Team</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
+  <div class="imgs">
+    <div class="imgProfile" [ngStyle]="{'background-image':'url(' + img1 + ')'}">
+      <button ion-button icon-only class="profileCamera"  [ngClass]="{'show':flag==false}"   (click)="selectImage()">
+        <ion-icon name="md-camera"></ion-icon>
+      </button>
+    </div>
+  </div>
+  <div class="otherForm">
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          Select Country
+        </ion-label>
+        <select-searchable item-content [(ngModel)]="team.country" (onChange)="onSelectCountry($event)" [items]="countries"
+          itemValueField="id" 
+          [canClear]="true"
+          clearButtonText="Clear Selected"
+          confirmButtonText="Proceed"
+          itemTextField="name" 
+          [canSearch]="true">
 
+        </select-searchable>
+      </ion-item>
+
+       <ion-item>
+        <ion-label>
+          Select League
+        </ion-label>
+        <select-searchable item-content [(ngModel)]="team.league" (onChange)="onSelectLeague($event)" [items]="leagues"
+          itemValueField="id"
+          [canClear]="true"
+          clearButtonText="Clear Selected"
+          confirmButtonText="Proceed"
+          itemTextField="name" 
+          [canSearch]="true">
+
+        </select-searchable>
+      </ion-item> 
+      <ion-item>
+        <ion-label stacked>Name</ion-label>
+        <ion-input type="text" [(ngModel)]="team.name"></ion-input>
+      </ion-item>
+      <!-- ==================================== -->
+    </ion-list>
+    <button ion-button block color="color2" (click)="onSubmit(team)">Submit</button>
+  </div>
 </ion-content>

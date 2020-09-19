@@ -4,98 +4,78 @@ import { AuthenicationProvider } from './../../providers/authenication/authenica
 import { GamesProvider } from './../../providers/games/games';
 import { Leagues } from './../../interfaces/Leagues';
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, ActionSheetController, ToastController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ActionSheetController, LoadingController } from 'ionic-angular';
 
 import { SelectSearchableComponent } from 'ionic-select-searchable';
-
-class Port {
-  public id: number;
-  public name: string;
-}
-
+ 
 @IonicPage()
 @Component({
   selector: 'page-setting-league-add',
   templateUrl: 'setting-league-add.html',
 })
 export class SettingLeagueAddPage {
-@ViewChild('myselect') selectComponent : SelectSearchableComponent;
-  league: Leagues = new Leagues("", "", "",{id:"", name:"", imageurl:""});
+  @ViewChild('myselect') selectComponent: SelectSearchableComponent;
+  league: Leagues = new Leagues("", "", "", { id: "", name: "", imageurl: "" });
   img1 = "assets/imgs/appicon.png";
   img: any;
+  country: any
+  countries: any;
   flag = true;
-  user = null;
-  userIds = [];
   selectedCamera;
-users =[
-  {
-    id:1,
-    name: 'Saint',
-    country: 'Nigeria'
-  },
-  {
-    id:2,
-    name: 'Saint',
-    country: 'Ghana'
-  },
-  {
-    id:3,
-    name: 'Mike',
-    country: 'USA'
-  },
-  {
-    id:4,
-    name: 'Pinky',
-    country: 'Turkey'
-  },
-  {
-    id:5,
-    name: 'James',
-    country: 'Nigeria'
-  }
-]
 
+ 
   constructor(
-    private gameProvider: GamesProvider,
-    public actionSheetCtrl: ActionSheetController, public camera: Camera,
-    private authProvider: AuthenicationProvider, private toastCtrl: ToastController,
+    private gamesProvider: GamesProvider,
+    private actionSheetCtrl: ActionSheetController, public camera: Camera,
+    private authProvider: AuthenicationProvider,
+    private loadingCtrl: LoadingController,
     public navCtrl: NavController, public navParams: NavParams) {
 
   }
-
+  ionViewWillEnter() {
+    this.Getcountries();
+  }
+  Getcountries() {
+    this.gamesProvider.Getcountries()
+      .subscribe(resp => {
+        if (resp.statusCode === 200) {
+          this.countries = resp.data;
+        } else {
+          this.authProvider.showToast(resp.description);
+        }
+      }, error => {
+        this.authProvider.showToast(error.error.description);
+      });
+  }
   ionViewDidLoad() {
     this.flag = (this.flag != false) ? false : true;
   }
-  userChanged(event: {component: SelectSearchableComponent, value: any}){
+  userChanged(event: { component: SelectSearchableComponent, value: any }) {
     console.log('user:', event.value);
-}
+  }
 
-onClose(){
-let toast = this.toastCtrl.create({
-  message:'YOu did a good job',
-  duration: 2000
-});
-toast.present();
-}
-
-openFromCode(){
-  this.selectComponent.open();
-}
+  openFromCode() {
+    this.selectComponent.open();
+  }
 
   onSubmit(league) {
     if (this.league.name) {
-      console.log(league);
-    //   this.country.imageurl = (this.country.imageurl != undefined) ? this.img1 : this.img;
-    //   console.log(country);
-    //   this.gameProvider.createCountry(country).subscribe(res => {
-    //     if (res.statusCode === 200) {
-    //       this.navCtrl.pop();
-    //     } else {
-    //       this.authProvider.showToast(res.description);
-    //     }
-    //   }, error => {
-    //     this.authProvider.showToast(error.error.description);
-    //   });
+      this.league.imageurl = (this.league.imageurl != undefined) ? this.img1 : this.img;
+      let loading = this.loadingCtrl.create({
+        content: "Please wait..."
+      });
+      loading.present();
+      this.gamesProvider.createLeague(league).subscribe(res => {
+        loading.dismiss().catch(() => { });
+        if (res.statusCode === 200) {
+          this.navCtrl.pop();
+        } else {
+          this.authProvider.showToast(res.description);
+        }
+      }, error => {
+        loading.dismiss().catch(() => { });
+        this.authProvider.showToast(error.error.description);
+      });
     } else {
       this.authProvider.showToast("Name input field is empty");
     }
@@ -103,7 +83,7 @@ openFromCode(){
 
   selectImage() {
     let actionSheet = this.actionSheetCtrl.create({
-      title: 'Modify your Picture',
+      title: 'Add League Logo',
       buttons: [
         {
           text: 'Gallery',

@@ -17,14 +17,14 @@
     <ion-list class="mainMenuList">
       <ion-item menuClose *ngFor="let p of loggedInMemberPages" (click)="openPage(p.component)">
         <ion-icon color="light" name="{{p.icon}}" item-left></ion-icon>
-        <ion-label> {{p.title}} </ion-label>
+        <ion-label style="color: white !important;"> {{p.title}} </ion-label>
       </ion-item>
     </ion-list>
     <!-- leagues list -->
     <ion-list class="leagueList">
       <ion-item menuClose *ngFor="let item of otherPages" (click)="openPage(item.component)">
         <ion-icon color="{{item.color}}" name="{{item.icon}}" item-left></ion-icon>
-        <ion-label> {{item.title}} </ion-label>
+        <ion-label style="color: white !important;"> {{item.title}} </ion-label>
       </ion-item>
     </ion-list>
   </ion-content>
@@ -50,7 +50,7 @@
     <ion-list class="mainMenuList">
       <ion-item menuClose *ngFor="let p of loggedInAdviserPages" (click)="openPage(p.component)">
         <ion-icon color="{{p.color}}" name="{{p.icon}}" item-left></ion-icon>
-        <ion-label> {{p.title}} </ion-label>
+        <ion-label style="color: white !important;"> {{p.title}} </ion-label>
       </ion-item>
     </ion-list>
 
@@ -58,7 +58,7 @@
     <ion-list class="leagueList">
       <ion-item menuClose *ngFor="let item of otherPages" (click)="openPage(item.component)">
         <ion-icon color="{{item.color}}" name="{{item.icon}}" item-left></ion-icon>
-        <ion-label> {{item.title}} </ion-label>
+        <ion-label style="color: white !important;"> {{item.title}} </ion-label>
       </ion-item>
     </ion-list>
   </ion-content>
@@ -83,7 +83,7 @@
     <ion-list class="mainMenuList">
       <ion-item menuClose *ngFor="let p of loggedInAdminPages" (click)="openPage(p.component)">
         <ion-icon color="{{p.color}}" name="{{p.icon}}" item-left></ion-icon>
-        <ion-label> {{p.title}} </ion-label>
+        <ion-label style="color: white !important;"> {{p.title}} </ion-label>
       </ion-item>
     </ion-list>
 
@@ -91,7 +91,7 @@
     <ion-list class="leagueList">
       <ion-item menuClose *ngFor="let item of otherPages" (click)="openPage(item.component)">
         <ion-icon color="{{item.color}}" name="{{item.icon}}" item-left></ion-icon>
-        <ion-label> {{item.title}} </ion-label>
+        <ion-label style="color: white !important;"> {{item.title}} </ion-label>
       </ion-item>
     </ion-list>
   </ion-content>

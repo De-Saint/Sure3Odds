@@ -2,7 +2,7 @@ import { AuthenicationProvider } from './../../providers/authenication/authenica
 import { GamesProvider } from './../../providers/games/games';
 import { Countries } from './../../interfaces/Countries';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ActionSheetController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ActionSheetController, LoadingController, AlertController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 
 @IonicPage()
@@ -19,10 +19,12 @@ export class SettingCountryEditPage {
   selectedCamera;
   constructor(public navCtrl: NavController,
     private gameProvider: GamesProvider,
-    public actionSheetCtrl: ActionSheetController, public camera: Camera,
+    private loadingCtrl: LoadingController,
+    private alertCtrl: AlertController,
+    private actionSheetCtrl: ActionSheetController, private camera: Camera,
     private authProvider: AuthenicationProvider,
     public navParams: NavParams) {
-    this.countries = this.navParams.data;
+    this.countries = this.navParams.get("country");
     if (this.countries) {
       this.country.name = this.countries.name;
       this.country.id = this.countries.id;
@@ -31,7 +33,7 @@ export class SettingCountryEditPage {
       if (this.countries.imageurl) {
         this.img1 = this.country.imageurl;
       } else {
-        this.img1 = "assets/imgs/appicon.png";
+        this.img1 = "/assets/imgs/appicon.png";
       }
     }
   }
@@ -39,16 +41,21 @@ export class SettingCountryEditPage {
     this.flag = (this.flag != false) ? false : true;
   }
   onSubmit(country) {
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
     if (this.country.name) {
       this.country.imageurl = (this.country.imageurl != undefined) ? this.img1 : this.img;
-      console.log(this.country);
+      loading.present();
       this.gameProvider.updateCountry(country).subscribe(res => {
+        loading.dismiss().catch(() => { });
         if (res.statusCode === 200) {
           this.navCtrl.pop();
         } else {
           this.authProvider.showToast(res.description);
         }
       }, error => {
+        loading.dismiss().catch(() => { });
         this.authProvider.showToast(error.error.description);
       });
     } else {
@@ -59,21 +66,45 @@ export class SettingCountryEditPage {
   }
 
   onDelete() {
-    this.gameProvider.deleteCountry(this.countries.id).subscribe(res => {
-      if (res.statusCode === 200) {
-        this.navCtrl.pop();
-      } else {
-        this.authProvider.showToast(res.description);
-      }
-    }, error => {
-      this.authProvider.showToast(error.error.description);
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
     });
+    let confirm = this.alertCtrl.create({
+      title: 'Delete Country',
+      message: 'Do you want to delete ' + this.countries.name + '?',
+      buttons: [
+        {
+          text: 'No',
+          handler: () => {
+
+          }
+        },
+        {
+          text: 'Yes',
+          handler: () => {
+            loading.present();
+            this.gameProvider.deleteCountry(this.countries.id).subscribe(res => {
+              loading.dismiss().catch(() => { });
+              if (res.statusCode === 200) {
+                this.navCtrl.pop();
+              } else {
+                this.authProvider.showToast(res.description);
+              }
+            }, error => {
+              loading.dismiss().catch(() => { });
+              this.authProvider.showToast(error.error.description);
+            });
+          }
+        }
+      ]
+    });
+    confirm.present();
   }
 
 
   selectImage() {
     let actionSheet = this.actionSheetCtrl.create({
-      title: 'Modify your Picture',
+      title: 'Change Country Logo',
       buttons: [
         {
           text: 'Gallery',

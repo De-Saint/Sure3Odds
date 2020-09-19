@@ -20,7 +20,7 @@
   </ion-searchbar>
   <div class="leagueStats">
     <ion-list *ngFor="let country of countries">
-      <ion-item class="thumbnailItem" navPush="SettingCountryEditPage" [navParams]="country">
+      <ion-item class="thumbnailItem" (click)="onCountryOption(country)">
         <ion-thumbnail item-left>
           <img src="{{country.imageurl}}" *ngIf="country.imageurl" />
           <img src="assets/imgs/appicon.png" *ngIf="!country.imageurl" />
@@ -34,12 +34,11 @@
   <div class="" *ngIf="error">
     <p ion-text text-center color="color2">No result found!</p>
   </div>
-  <div text-center margin-top margin-bottonm  *ngIf="nocountries === 'none'" (click)="onGotoTop()">
-    <button ion-button  small color="color2">Back to Top</button>
+  <div text-center margin-top margin-bottonm *ngIf="nocountries === 'none'" (click)="onGotoTop()">
+    <button ion-button small color="color2">Back to Top</button>
   </div>
   <ion-infinite-scroll (ionInfinite)="scrollInfinite($event)" *ngIf="currentPage < totalPage">
-    <ion-infinite-scroll-content  loadingSpinner="bubbles"
-    loadingText="Loading page {{currentPage}} of {{totalPage}}">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading page {{currentPage}} of {{totalPage}}">
     </ion-infinite-scroll-content>
   </ion-infinite-scroll>
 </ion-content>

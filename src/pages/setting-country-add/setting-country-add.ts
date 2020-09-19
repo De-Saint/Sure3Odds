@@ -2,7 +2,7 @@ import { AuthenicationProvider } from './../../providers/authenication/authenica
 import { GamesProvider } from './../../providers/games/games';
 import { Countries } from './../../interfaces/Countries';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ActionSheetController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ActionSheetController, LoadingController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 
 
@@ -19,7 +19,8 @@ export class SettingCountryAddPage {
   selectedCamera;
   constructor(public navCtrl: NavController,
     private gameProvider: GamesProvider,
-    public actionSheetCtrl: ActionSheetController, public camera: Camera,
+    private loadingCtrl: LoadingController,
+    private actionSheetCtrl: ActionSheetController, private camera: Camera,
     private authProvider: AuthenicationProvider,
     public navParams: NavParams) {
   }
@@ -28,16 +29,21 @@ export class SettingCountryAddPage {
     this.flag = (this.flag != false) ? false : true;
   }
   onSubmit(country) {
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
     if (this.country.name) {
       this.country.imageurl = (this.country.imageurl != undefined) ? this.img1 : this.img;
-      console.log(country);
+      loading.present();
       this.gameProvider.createCountry(country).subscribe(res => {
+        loading.dismiss().catch(() => { });
         if (res.statusCode === 200) {
           this.navCtrl.pop();
         } else {
           this.authProvider.showToast(res.description);
         }
       }, error => {
+        loading.dismiss().catch(() => { });
         this.authProvider.showToast(error.error.description);
       });
     } else {
@@ -49,7 +55,7 @@ export class SettingCountryAddPage {
 
   selectImage() {
     let actionSheet = this.actionSheetCtrl.create({
-      title: 'Modify your Picture',
+      title: 'Add Country Logo',
       buttons: [
         {
           text: 'Gallery',

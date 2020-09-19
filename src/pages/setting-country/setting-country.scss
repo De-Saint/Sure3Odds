@@ -59,5 +59,7 @@ page-setting-country {
             }
         }
     }
-
+    .item.item-block:last-of-type{
+        margin-bottom: 0.2em !important;
+    }
 }

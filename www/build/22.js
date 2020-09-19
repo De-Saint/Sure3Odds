@@ -1,14 +1,14 @@
 webpackJsonp([22],{
 
-/***/ 736:
+/***/ 742:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingTeamEditPageModule", function() { return SettingTeamEditPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingPageModule", function() { return SettingPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_team_edit__ = __webpack_require__(799);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting__ = __webpack_require__(810);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SettingTeamEditPageModule = /** @class */ (function () {
-    function SettingTeamEditPageModule() {
+var SettingPageModule = /** @class */ (function () {
+    function SettingPageModule() {
     }
-    SettingTeamEditPageModule = __decorate([
+    SettingPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__setting_team_edit__["a" /* SettingTeamEditPage */],
+                __WEBPACK_IMPORTED_MODULE_2__setting__["a" /* SettingPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_team_edit__["a" /* SettingTeamEditPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting__["a" /* SettingPage */]),
             ],
         })
-    ], SettingTeamEditPageModule);
-    return SettingTeamEditPageModule;
+    ], SettingPageModule);
+    return SettingPageModule;
 }());
 
-//# sourceMappingURL=setting-team-edit.module.js.map
+//# sourceMappingURL=setting.module.js.map
 
 /***/ }),
 
-/***/ 799:
+/***/ 810:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingTeamEditPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global__ = __webpack_require__(354);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,26 +57,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var SettingTeamEditPage = /** @class */ (function () {
-    function SettingTeamEditPage(navCtrl, navParams) {
+
+var SettingPage = /** @class */ (function () {
+    function SettingPage(navCtrl, global) {
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
+        this.global = global;
+        this.tab1Root = 'SettingCountryPage';
+        this.tab2Root = 'SettingLeaguesPage';
+        this.tab3Root = 'SettingTeamsPage';
+        this.tab4Root = 'SettingSelectionsPage';
     }
-    SettingTeamEditPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad SettingTeamEditPage');
-    };
-    SettingTeamEditPage.prototype.onDelete = function () {
-    };
-    SettingTeamEditPage = __decorate([
+    SettingPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-setting-team-edit',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-team-edit/setting-team-edit.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Edit Team</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="onDelete()">\n        <ion-icon name="trash"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-team-edit/setting-team-edit.html"*/,
+            selector: 'page-setting',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting/setting.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root"  tabTitle="Countries" ></ion-tab>\n  <ion-tab [root]="tab2Root"  tabTitle="Leagues" ></ion-tab>\n  <ion-tab [root]="tab3Root"  tabTitle="Teams"></ion-tab>\n  <ion-tab [root]="tab4Root"  tabTitle="Selections"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting/setting.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
-    ], SettingTeamEditPage);
-    return SettingTeamEditPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
+    ], SettingPage);
+    return SettingPage;
 }());
 
-//# sourceMappingURL=setting-team-edit.js.map
+//# sourceMappingURL=setting.js.map
 
 /***/ })
 

@@ -1,14 +1,14 @@
 webpackJsonp([4],{
 
-/***/ 733:
+/***/ 738:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingSelectionEditPageModule", function() { return SettingSelectionEditPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingTeamEditPageModule", function() { return SettingTeamEditPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_selection_edit__ = __webpack_require__(796);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_team_edit__ = __webpack_require__(806);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,53 +18,57 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SettingSelectionEditPageModule = /** @class */ (function () {
-    function SettingSelectionEditPageModule() {
+var SettingTeamEditPageModule = /** @class */ (function () {
+    function SettingTeamEditPageModule() {
     }
-    SettingSelectionEditPageModule = __decorate([
+    SettingTeamEditPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__setting_selection_edit__["a" /* SettingSelectionEditPage */],
+                __WEBPACK_IMPORTED_MODULE_2__setting_team_edit__["a" /* SettingTeamEditPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_selection_edit__["a" /* SettingSelectionEditPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_team_edit__["a" /* SettingTeamEditPage */]),
             ],
         })
-    ], SettingSelectionEditPageModule);
-    return SettingSelectionEditPageModule;
+    ], SettingTeamEditPageModule);
+    return SettingTeamEditPageModule;
 }());
 
-//# sourceMappingURL=setting-selection-edit.module.js.map
+//# sourceMappingURL=setting-team-edit.module.js.map
 
 /***/ }),
 
-/***/ 752:
+/***/ 757:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Selections; });
-var Selections = /** @class */ (function () {
-    function Selections(name, id) {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Teams; });
+var Teams = /** @class */ (function () {
+    function Teams(name, id, imageurl, country, league) {
         this.name = name;
         this.id = id;
+        this.imageurl = imageurl;
+        this.country = country;
+        this.league = league;
     }
-    return Selections;
+    return Teams;
 }());
 
-//# sourceMappingURL=Selections.js.map
+//# sourceMappingURL=Teams.js.map
 
 /***/ }),
 
-/***/ 796:
+/***/ 806:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingSelectionEditPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_games_games__ = __webpack_require__(354);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingTeamEditPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_games_games__ = __webpack_require__(353);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_Selections__ = __webpack_require__(752);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_Teams__ = __webpack_require__(757);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__ = __webpack_require__(355);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -79,26 +83,92 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var SettingSelectionEditPage = /** @class */ (function () {
-    function SettingSelectionEditPage(navCtrl, gameProvider, authProvider, navParams) {
+
+var SettingTeamEditPage = /** @class */ (function () {
+    function SettingTeamEditPage(navCtrl, authProvider, gameProvider, alertCtrl, loadingCtrl, actionSheetCtrl, camera, navParams) {
         this.navCtrl = navCtrl;
-        this.gameProvider = gameProvider;
         this.authProvider = authProvider;
+        this.gameProvider = gameProvider;
+        this.alertCtrl = alertCtrl;
+        this.loadingCtrl = loadingCtrl;
+        this.actionSheetCtrl = actionSheetCtrl;
+        this.camera = camera;
         this.navParams = navParams;
-        this.selection = new __WEBPACK_IMPORTED_MODULE_2__interfaces_Selections__["a" /* Selections */]("", "");
-        this.selections = this.navParams.data;
-        console.log(this.selections);
-        if (this.selections) {
-            this.selection.id = this.selections.id;
-            this.selection.name = this.selections.name;
+        this.flag = true;
+        this.team = new __WEBPACK_IMPORTED_MODULE_2__interfaces_Teams__["a" /* Teams */]("", "", "", { id: "", name: "", imageurl: "" }, { id: "", name: "", imageurl: "" });
+        this.teams = this.navParams.get("team");
+        console.log(this.teams);
+        if (this.teams) {
+            this.team.name = this.teams.name;
+            this.team.id = this.teams.id;
+            if (this.teams.imageurl) {
+                this.team.imageurl = this.teams.imageurl;
+            }
+            else {
+                this.team.imageurl = "/assets/imgs/appicon.png";
+            }
+            this.team.country.name = this.teams.country.name;
+            this.team.country.id = this.teams.country.id;
+            this.team.country.imageurl = this.teams.country.imageurl;
+            this.team.league.name = this.teams.league.name;
+            this.team.league.id = this.teams.league.id;
+            if (this.teams.league.imageurl) {
+                this.team.league.imageurl = this.teams.league.imageurl;
+            }
+            else {
+                this.team.league.imageurl = "/assets/imgs/appicon.png";
+            }
         }
     }
-    SettingSelectionEditPage.prototype.ionViewDidLoad = function () {
+    SettingTeamEditPage.prototype.ionViewDidLoad = function () {
+        this.flag = (this.flag != false) ? false : true;
     };
-    SettingSelectionEditPage.prototype.onSubmit = function (selection) {
+    SettingTeamEditPage.prototype.onDelete = function () {
         var _this = this;
-        if (this.selection.name) {
-            this.gameProvider.updateSelection(selection).subscribe(function (res) {
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        var confirm = this.alertCtrl.create({
+            title: 'Delete Team',
+            message: 'Do you want to delete ' + this.team.name + '?',
+            buttons: [
+                {
+                    text: 'No',
+                    handler: function () {
+                    }
+                },
+                {
+                    text: 'Yes',
+                    handler: function () {
+                        loading.present();
+                        _this.gameProvider.deleteTeam(_this.team.id).subscribe(function (res) {
+                            loading.dismiss().catch(function () { });
+                            if (res.statusCode === 200) {
+                                _this.navCtrl.pop();
+                            }
+                            else {
+                                _this.authProvider.showToast(res.description);
+                            }
+                        }, function (error) {
+                            loading.dismiss().catch(function () { });
+                            _this.authProvider.showToast(error.error.description);
+                        });
+                    }
+                }
+            ]
+        });
+        confirm.present();
+    };
+    SettingTeamEditPage.prototype.onSubmit = function (team) {
+        var _this = this;
+        if (team.name) {
+            team.imageurl = (team.imageurl != undefined) ? this.team.imageurl : this.img;
+            var loading_1 = this.loadingCtrl.create({
+                content: "Please wait..."
+            });
+            loading_1.present();
+            this.gameProvider.updateTeams(team).subscribe(function (res) {
+                loading_1.dismiss().catch(function () { });
                 if (res.statusCode === 200) {
                     _this.navCtrl.pop();
                 }
@@ -106,36 +176,70 @@ var SettingSelectionEditPage = /** @class */ (function () {
                     _this.authProvider.showToast(res.description);
                 }
             }, function (error) {
+                loading_1.dismiss().catch(function () { });
                 _this.authProvider.showToast(error.error.description);
             });
         }
         else {
-            this.authProvider.showToast("Name input field is empty");
+            this.authProvider.showToast("Name of team input field is empty");
         }
     };
-    SettingSelectionEditPage.prototype.onDelete = function () {
+    SettingTeamEditPage.prototype.selectImage = function () {
         var _this = this;
-        this.gameProvider.deleteSelection(this.selections.id).subscribe(function (res) {
-            if (res.statusCode === 200) {
-                _this.navCtrl.pop();
-            }
-            else {
-                _this.authProvider.showToast(res.description);
-            }
-        }, function (error) {
-            _this.authProvider.showToast(error.error.description);
+        var actionSheet = this.actionSheetCtrl.create({
+            title: 'Change Team Logo',
+            buttons: [
+                {
+                    text: 'Gallery',
+                    handler: function () { _this.get_camera('Gallery'); }
+                }, {
+                    text: 'Camera',
+                    handler: function () { _this.get_camera('Camera'); }
+                }, {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () { }
+                }
+            ]
         });
+        actionSheet.present();
     };
-    SettingSelectionEditPage = __decorate([
+    SettingTeamEditPage.prototype.get_camera = function (source) {
+        var _this = this;
+        var options = {
+            quality: 100, destinationType: this.camera.DestinationType.DATA_URL,
+            encodingType: this.camera.EncodingType.JPEG, mediaType: this.camera.MediaType.PICTURE,
+            allowEdit: true, targetWidth: 512, targetHeight: 512, correctOrientation: true
+        };
+        if (source == 'Gallery') {
+            options.sourceType = this.camera.PictureSourceType.PHOTOLIBRARY;
+        }
+        else {
+            options.sourceType = this.camera.PictureSourceType.CAMERA;
+        }
+        this.camera.getPicture(options).then(function (imageData) {
+            _this.img = 'data:image/jpeg;base64,' + imageData;
+            _this.team.imageurl = _this.img;
+        }, function (err) { });
+        if (this.img != undefined) {
+            this.team.imageurl = this.img;
+        }
+    };
+    SettingTeamEditPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-            selector: 'page-setting-selection-edit',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-selection-edit/setting-selection-edit.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Edit Selection</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="onDelete()">\n        <ion-icon name="trash"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="otherForm">\n    <ion-list>\n      <!-- appear when click update -->\n      <ion-item >\n        <ion-label stacked>Name</ion-label>\n        <ion-input  type="text" [(ngModel)]="selection.name"  ></ion-input>\n        <ion-input hidden type="text" [(ngModel)]="selection.id"  ></ion-input>\n      </ion-item>\n      <!-- ==================================== -->\n    </ion-list>\n    <button ion-button block color="color2" (click)="onSubmit(selection)">Submit</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-selection-edit/setting-selection-edit.html"*/,
+            selector: 'page-setting-team-edit',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-team-edit/setting-team-edit.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Edit Team</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="onDelete()">\n        <ion-icon name="trash"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="imgs">\n    <img src="{{team.country.imageurl}}" class="newimg" text-center style="width: 13em; height: 13em;" *ngIf="team.country.imageurl" />\n    <img src="assets/imgs/appicon.png" class="newimg" text-center style="width: 13em; height: 13em;" *ngIf="!team.country.imageurl" />\n    <div class="imgProfile" [ngStyle]="{\'background-image\':\'url(\' + team.league.imageurl + \')\'}">\n    </div>\n    <div  class="imgProfile2 margin-top" ion-text padding-top [ngStyle]="{\'background-image\':\'url(\' + team.imageurl + \')\'}">\n      <button ion-button icon-only class="profileCamera"  [ngClass]="{\'show\':flag==false}"  (click)="selectImage()">\n        <ion-icon name="md-camera"></ion-icon>\n      </button>\n    </div>\n  </div>\n  <div class="">\n    <div class="otherForm">\n      <ion-list>\n        <ion-item>\n          <ion-label stacked>Country Name</ion-label>\n          <ion-input disabled type="text" [(ngModel)]="team.country.name"></ion-input>\n          <ion-input hidden type="text" [(ngModel)]="team.country.id"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label stacked>League Name</ion-label>\n          <ion-input disabled type="text" [(ngModel)]="team.league.name"></ion-input>\n          <ion-input hidden type="text" [(ngModel)]="team.league.id"></ion-input>\n        </ion-item>\n        <!-- appear when click update -->\n        <ion-item>\n          <ion-label stacked>Team Name</ion-label>\n          <ion-input type="text" [(ngModel)]="team.name"></ion-input>\n          <ion-input hidden type="text" [(ngModel)]="team.id"></ion-input>\n        </ion-item>\n        <!-- ==================================== -->\n      </ion-list>\n      <button ion-button block color="color2" (click)="onSubmit(team)">Submit</button>\n    </div>\n  </div>\n \n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-team-edit/setting-team-edit.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_0__providers_games_games__["a" /* GamesProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"]])
-    ], SettingSelectionEditPage);
-    return SettingSelectionEditPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"],
+            __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */],
+            __WEBPACK_IMPORTED_MODULE_0__providers_games_games__["a" /* GamesProvider */],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["AlertController"],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["LoadingController"],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ActionSheetController"], __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"]])
+    ], SettingTeamEditPage);
+    return SettingTeamEditPage;
 }());
 
-//# sourceMappingURL=setting-selection-edit.js.map
+//# sourceMappingURL=setting-team-edit.js.map
 
 /***/ })
 

@@ -2,7 +2,7 @@ import { GamesProvider } from './../../providers/games/games';
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
 import { Selections } from './../../interfaces/Selections';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
 
 
 @IonicPage()
@@ -13,7 +13,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class SettingSelectionEditPage {
 selections:any;
 selection: Selections = new Selections("", "");
-  constructor(public navCtrl: NavController,  private gameProvider: GamesProvider, private authProvider: AuthenicationProvider, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+    private alertCtrl: AlertController,
+    private gameProvider: GamesProvider, 
+    private loadingCtrl: LoadingController,
+    private authProvider: AuthenicationProvider, public navParams: NavParams) {
     this.selections = this.navParams.data;
     console.log(this.selections);
     if(this.selections){
@@ -26,14 +30,20 @@ selection: Selections = new Selections("", "");
     
   }
   onSubmit(selection) {
+    let loading = this.loadingCtrl.create({
+      content:"Please wait..."
+    });
     if (this.selection.name) {
+      loading.present();
       this.gameProvider.updateSelection(selection).subscribe(res => {
+        loading.dismiss().catch(() => { });
         if (res.statusCode === 200) {
           this.navCtrl.pop();
         } else {
           this.authProvider.showToast(res.description);
         }
       }, error => {
+        loading.dismiss().catch(() => { });
         this.authProvider.showToast(error.error.description);
       });
     } else {
@@ -45,15 +55,38 @@ selection: Selections = new Selections("", "");
 
 
   onDelete(){
-    this.gameProvider.deleteSelection(this.selections.id).subscribe(res => {
-      if (res.statusCode === 200) {
-        this.navCtrl.pop();
-      } else {
-        this.authProvider.showToast(res.description);
-      }
-    }, error => {
-      this.authProvider.showToast(error.error.description);
+    let loading = this.loadingCtrl.create({
+      content:"Please wait..."
     });
-  
+    let confirm = this.alertCtrl.create({
+      title: 'Delete Selection',
+      message: 'Do you want to delete ' + this.selection.name + '?',
+      buttons: [
+        {
+          text: 'No',
+          handler: () => {
+
+          }
+        },
+        {
+          text: 'Yes',
+          handler: () => {
+            loading.present();
+            this.gameProvider.deleteSelection(this.selections.id).subscribe(res => {
+              loading.dismiss().catch(() => { });
+              if (res.statusCode === 200) {
+                this.navCtrl.pop();
+              } else {
+                this.authProvider.showToast(res.description);
+              }
+            }, error => {
+              loading.dismiss().catch(() => { });
+              this.authProvider.showToast(error.error.description);
+            });
+          }
+        }
+      ]
+    });
+    confirm.present();
   }
 }

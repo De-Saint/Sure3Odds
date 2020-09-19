@@ -1,25 +1,28 @@
 <ion-header>
-
   <ion-navbar>
     <ion-title>Add League</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
+  <div class="imgs">
+    <div class="imgProfile" [ngStyle]="{'background-image':'url(' + img1 + ')'}">
+      <button ion-button icon-only class="profileCamera"  [ngClass]="{'show':flag==false}"   (click)="selectImage()">
+        <ion-icon name="md-camera"></ion-icon>
+      </button>
+    </div>
+  </div>
   <div class="otherForm">
     <ion-list>
       <ion-item>
         <ion-label>
-          Select user
+          Select Country
         </ion-label>
-        <select-searchable item-content [(ngModel)]="user" (onChange)="userChanged($event)" [items]="users"
+        <select-searchable item-content [(ngModel)]="league.country" (onChange)="userChanged($event)" [items]="countries"
           itemValueField="id"
           [canClear]="true"
-          (onClose)="onClose($event)"
           clearButtonText="Clear Selected"
-          noItemsFoundtext="No countres found"
           confirmButtonText="Proceed"
           itemTextField="name" 
           [canSearch]="true">
