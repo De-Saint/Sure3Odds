@@ -1,14 +1,14 @@
 webpackJsonp([25],{
 
-/***/ 741:
+/***/ 747:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingTeamsPageModule", function() { return SettingTeamsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TeamPageModule", function() { return TeamPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_teams__ = __webpack_require__(809);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__team__ = __webpack_require__(821);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SettingTeamsPageModule = /** @class */ (function () {
-    function SettingTeamsPageModule() {
+var TeamPageModule = /** @class */ (function () {
+    function TeamPageModule() {
     }
-    SettingTeamsPageModule = __decorate([
+    TeamPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__setting_teams__["a" /* SettingTeamsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__team__["a" /* TeamPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_teams__["a" /* SettingTeamsPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__team__["a" /* TeamPage */]),
             ],
         })
-    ], SettingTeamsPageModule);
-    return SettingTeamsPageModule;
+    ], TeamPageModule);
+    return TeamPageModule;
 }());
 
-//# sourceMappingURL=setting-teams.module.js.map
+//# sourceMappingURL=team.module.js.map
 
 /***/ }),
 
-/***/ 809:
+/***/ 821:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingTeamsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_games_games__ = __webpack_require__(353);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TeamPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global__ = __webpack_require__(354);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,218 +58,132 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-var SettingTeamsPage = /** @class */ (function () {
-    function SettingTeamsPage(authProvider, gamesProvider, loadingCtrl, actionSheetCtrl, alertCtrl, navCtrl, navParams) {
-        this.authProvider = authProvider;
-        this.gamesProvider = gamesProvider;
-        this.loadingCtrl = loadingCtrl;
-        this.actionSheetCtrl = actionSheetCtrl;
-        this.alertCtrl = alertCtrl;
+var TeamPage = /** @class */ (function () {
+    function TeamPage(navCtrl, global) {
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.currentPage = 1;
-        this.totalPage = 0;
-        this.perPage = 0;
-        this.totalData = 0;
+        this.global = global;
+        this.itemInBar = ["MATCHES", "NEWS", "STATS", "SQUAD", "PHOTOS"];
+        this.teams = [
+            { img: 'assets/imgs/teams/bate_borisov.png', team: 'BATE Borisov', date: 'Feb 13,2018', time: '17.30', league: 'Premier League', result: '6 - 1' },
+            { img: 'assets/imgs/teams/real_madrid.png', team: 'Real Madrid', date: 'Feb 23,2018', time: '19:30', league: 'Premier League', result: '' },
+            { img: 'assets/imgs/teams/marseille.png', team: 'Marseille', date: 'Feb 28,2018', time: '22:00', league: 'Premier League', result: '' },
+            { img: 'assets/imgs/teams/bate_borisov.png', team: 'BATE Borisov', date: 'Feb 13,2018', time: '17.30', league: 'Premier League', result: '6 - 1' },
+            { img: 'assets/imgs/teams/real_madrid.png', team: 'Real Madrid', date: 'Feb 23,2018', time: '19:30', league: 'Premier League', result: '' },
+            { img: 'assets/imgs/teams/marseille.png', team: 'Marseille', date: 'Feb 28,2018', time: '22:00', league: 'Premier League', result: '' },
+            { img: 'assets/imgs/teams/bate_borisov.png', team: 'BATE Borisov', date: 'Feb 13,2018', time: '17.30', league: 'Premier League', result: '6 - 1' },
+            { img: 'assets/imgs/teams/real_madrid.png', team: 'Real Madrid', date: 'Feb 23,2018', time: '19:30', league: 'Premier League', result: '' },
+            { img: 'assets/imgs/teams/marseille.png', team: 'Marseille', date: 'Feb 28,2018', time: '22:00', league: 'Premier League', result: '' },
+        ];
+        this.lastNews = [
+            { img: 'assets/imgs/news2.png', title: 'Real Madrid want to win Club World Cup', numLike: 200, subTitle: 'is simply dummy text of the printing and typesetting industry.' },
+            { img: 'assets/imgs/news1.png', title: 'Real Madrid want to win Club World Cup', numLike: 200, subTitle: 'is simply dummy text of the printing and typesetting industry.' },
+            { img: 'assets/imgs/news3.png', title: 'Real Madrid want to win Club World Cup', numLike: 200, subTitle: 'is simply dummy text of the printing and typesetting industry.' },
+            { img: 'assets/imgs/news2.png', title: 'Real Madrid want to win Club World Cup', numLike: 200, subTitle: 'is simply dummy text of the printing and typesetting industry.' },
+            { img: 'assets/imgs/news1.png', title: 'Real Madrid want to win Club World Cup', numLike: 200, subTitle: 'is simply dummy text of the printing and typesetting industry.' },
+            { img: 'assets/imgs/news3.png', title: 'Real Madrid want to win Club World Cup', numLike: 200, subTitle: 'is simply dummy text of the printing and typesetting industry.' }
+        ];
+        this.photos = [
+            { img: 'assets/imgs/p001.png', title: '2018 World Cup' },
+            { img: 'assets/imgs/p002.png', title: '2018 World Cup' },
+            { img: 'assets/imgs/p003.png', title: '2018 World Cup' },
+            { img: 'assets/imgs/p001.png', title: '2018 World Cup' },
+            { img: 'assets/imgs/p002.png', title: '2018 World Cup' },
+            { img: 'assets/imgs/p003.png', title: '2018 World Cup' },
+        ];
+        this.teamStats = [
+            { title: 'BEST AVARAGE RATING', img: 'assets/imgs/teams/arsenal.png', team: 'Arsenal', num: '7.30', note: 'Man of the match:Player Name' },
+            { title: 'SHOTS ON TARGRT PR.MATCH', img: 'assets/imgs/teams/arsenal.png', team: 'Arsenal', num: '22', note: 'Total Shots:28' },
+            { title: 'ACCURATE PASSES PR.MATCH', img: 'assets/imgs/teams/arsenal.png', team: 'Arsenal', num: '678', note: 'Pass percentage:90.2' },
+            { title: 'POSSESSION', img: 'assets/imgs/teams/arsenal.png', team: 'Arsenal', num: '8.5', note: 'Total matches:6' },
+            { title: 'BEST AVARAGE RATING', img: 'assets/imgs/teams/arsenal.png', team: 'Arsenal', num: '7.30', note: 'Man of the match:Player Name' },
+            { title: 'SHOTS ON TARGRT PR.MATCH', img: 'assets/imgs/teams/arsenal.png', team: 'Arsenal', num: '22', note: 'Total Shots:28' },
+            { title: 'ACCURATE PASSES PR.MATCH', img: 'assets/imgs/teams/arsenal.png', team: 'Arsenal', num: '678', note: 'Pass percentage:90.2' },
+            { title: 'POSSESSION', img: 'assets/imgs/teams/arsenal.png', team: 'Arsenal', num: '8.5', note: 'Total matches:6' },
+        ];
+        this.teamSquad = [
+            {
+                title: 'Coach',
+                items: [
+                    { img: 'assets/imgs/player2.png', name: 'Player Name' },
+                ]
+            },
+            {
+                title: 'GoalKeepers',
+                items: [
+                    { img: 'assets/imgs/player3.png', name: 'Player Name' },
+                    { img: 'assets/imgs/player3.png', name: 'Player Name' },
+                    { img: 'assets/imgs/player3.png', name: 'Player Name' },
+                ]
+            },
+            {
+                title: 'Defenders',
+                items: [
+                    { img: 'assets/imgs/player2.png', name: 'Player Name' },
+                    { img: 'assets/imgs/player2.png', name: 'Player Name' },
+                    { img: 'assets/imgs/player2.png', name: 'Player Name' },
+                    { img: 'assets/imgs/player2.png', name: 'Player Name' },
+                ]
+            },
+            {
+                title: 'Midfielder',
+                items: [
+                    { img: 'assets/imgs/player2.png', name: 'Player Name' },
+                    { img: 'assets/imgs/player2.png', name: 'Player Name' },
+                    { img: 'assets/imgs/player2.png', name: 'Player Name' },
+                    { img: 'assets/imgs/player2.png', name: 'Player Name' },
+                    { img: 'assets/imgs/player2.png', name: 'Player Name' },
+                    { img: 'assets/imgs/player2.png', name: 'Player Name' },
+                    { img: 'assets/imgs/player2.png', name: 'Player Name' },
+                    { img: 'assets/imgs/player2.png', name: 'Player Name' },
+                ]
+            },
+            {
+                title: 'Forward',
+                items: [
+                    { img: 'assets/imgs/player2.png', name: 'Player Name' },
+                    { img: 'assets/imgs/player2.png', name: 'Player Name' },
+                    { img: 'assets/imgs/player2.png', name: 'Player Name' },
+                    { img: 'assets/imgs/player2.png', name: 'Player Name' },
+                    { img: 'assets/imgs/player2.png', name: 'Player Name' },
+                    { img: 'assets/imgs/player2.png', name: 'Player Name' },
+                    { img: 'assets/imgs/player2.png', name: 'Player Name' },
+                ]
+            },
+        ];
+        this.activeBtn = 0;
+        this.tit = 'MATCHES';
+        this.favoriteTeam = false;
     }
-    SettingTeamsPage.prototype.ionViewWillEnter = function () {
-        this.GetTeams();
+    TeamPage.prototype.changeTab = function (i, title) {
+        this.activeBtn = i;
+        this.tit = title;
     };
-    SettingTeamsPage.prototype.GetTeams = function () {
-        var _this = this;
-        this.gamesProvider.GetTeams(0, 200)
-            .subscribe(function (resp) {
-            if (resp.statusCode === 200) {
-                _this.teams = resp.data.content;
-                _this.originalteams = _this.teams;
-                _this.currentPage = resp.data.number;
-                _this.totalPage = resp.data.totalPages;
-                _this.totalData = resp.data.totalElements;
-                _this.perPage = resp.data.size;
-                _this.noteams = 'teams';
-            }
-            else {
-                _this.authProvider.showToast(resp.description);
-            }
-        }, function (error) {
-            _this.error = 'none';
-            _this.authProvider.showToast(error.error.description);
-        });
-    };
-    SettingTeamsPage.prototype.onSearch = function () {
-        var _this = this;
-        var searchvalue = this.searchTerm;
-        if (searchvalue.trim() === '') {
-            this.teams = this.originalteams;
+    // like function
+    TeamPage.prototype.like = function ($event, item) {
+        $event.stopPropagation();
+        console.log(item.numLike);
+        if (item.clickLike != true) {
+            item.numLike = item.numLike + 1;
+            item.clickLike = true;
         }
         else {
-            if (searchvalue.length >= 3) {
-                this.gamesProvider.SearchTeams(searchvalue, 0, 200)
-                    .subscribe(function (resp) {
-                    if (resp.statusCode === 200) {
-                        _this.teams = resp.data.content;
-                        _this.currentPage = resp.data.number;
-                        _this.totalPage = resp.data.totalPages;
-                        _this.totalData = resp.data.totalElements;
-                        _this.perPage = resp.data.size;
-                    }
-                    else {
-                        _this.authProvider.showToast(resp.description);
-                    }
-                }, function (error) {
-                    _this.error = 'none';
-                    _this.authProvider.showToast(error.error.description);
-                });
-            }
+            item.numLike = item.numLike - 1;
+            item.clickLike = false;
         }
     };
-    SettingTeamsPage.prototype.onClear = function (ev) {
-        this.searchTerm = "";
-        this.teams = this.originalteams;
+    TeamPage.prototype.addFavoriteTeam = function () {
+        this.favoriteTeam = (this.favoriteTeam != true) ? true : false;
     };
-    SettingTeamsPage.prototype.onCancel = function (ev) {
-        this.searchTerm = "";
-        this.teams = this.originalteams;
-    };
-    SettingTeamsPage.prototype.scrollInfinite = function (event) {
-        var _this = this;
-        this.currentPage += 1;
-        setTimeout(function () {
-            _this.gamesProvider.GetTeams(_this.currentPage, _this.perPage)
-                .subscribe(function (resp) {
-                if (resp.statusCode === 200) {
-                    _this.currentPage = resp.data.number;
-                    _this.totalPage = resp.data.totalPages;
-                    _this.totalData = resp.data.totalElements;
-                    _this.perPage = resp.data.size;
-                    _this.noteams = 'teams';
-                    for (var i = 0; i < resp.data.content.length; i++) {
-                        _this.teams.push(resp.data.content[i]);
-                    }
-                }
-                else {
-                    _this.authProvider.showToast(resp.description);
-                }
-                event.complete();
-            }, function (error) {
-                _this.noteams = 'none';
-                event.complete();
-            });
-        }, 1000);
-    };
-    SettingTeamsPage.prototype.onGotoTop = function () {
-        this.content.scrollToTop();
-    };
-    SettingTeamsPage.prototype.onTeamOption = function (team) {
-        var _this = this;
-        var actionSheet = this.actionSheetCtrl.create({
-            title: 'Team Options',
-            buttons: [
-                {
-                    text: 'View / Edit',
-                    handler: function () { _this.navCtrl.push('SettingTeamEditPage', { team: team }); }
-                }, {
-                    text: 'Promote / Relegate',
-                    handler: function () { _this.onPromoteDemote(team); }
-                }, {
-                    text: 'Delete From League',
-                    handler: function () { _this.onDeleteTeam(team); }
-                }, {
-                    text: 'Add To League',
-                    handler: function () { _this.onAssignTeam(team); }
-                }, {
-                    text: 'Cancel',
-                    role: 'cancel',
-                    handler: function () { }
-                }
-            ]
-        });
-        actionSheet.present();
-    };
-    SettingTeamsPage.prototype.onDeleteTeam = function (team) {
-        var _this = this;
-        var loading = this.loadingCtrl.create({
-            content: "Please wait..."
-        });
-        var confirm = this.alertCtrl.create({
-            title: 'Delete Team',
-            message: "Do you want to delete <b>" + team.name + "</b> <br/>from <br/><b>" + team.league.name + "</b> league?",
-            buttons: [
-                {
-                    text: 'No',
-                    handler: function () {
-                    }
-                },
-                {
-                    text: 'Yes',
-                    handler: function () {
-                        loading.present();
-                        _this.gamesProvider.deleteTeam(team.id).subscribe(function (res) {
-                            loading.dismiss().catch(function () { });
-                            if (res.statusCode === 200) {
-                                _this.navCtrl.pop();
-                            }
-                            else {
-                                _this.authProvider.showToast(res.description);
-                            }
-                        }, function (error) {
-                            loading.dismiss().catch(function () { });
-                            _this.authProvider.showToast(error.error.description);
-                        });
-                    }
-                }
-            ]
-        });
-        confirm.present();
-    };
-    SettingTeamsPage.prototype.onAssignTeam = function (team) {
-        var _this = this;
-        this.alertCtrl.create({
-            title: "Assign To Another League",
-            message: "Would assign/add <b>" + team.name + "</b> to another league in the selected country.<br/><br/>You would select a country and the league within the selected country to assign <b>" + team.name + " to</b>.",
-            enableBackdropDismiss: !1,
-            buttons: [{
-                    text: "Cancel",
-                    handler: function () {
-                    }
-                }, {
-                    text: "Continue",
-                    handler: function () { _this.navCtrl.push('SettingTeamAssignPage', { team: team, 'option': 'Promote' }); }
-                }]
-        }).present();
-    };
-    SettingTeamsPage.prototype.onPromoteDemote = function (team) {
-        var _this = this;
-        this.alertCtrl.create({
-            title: "Promote/Relegate Team",
-            message: "Would remove <b>" + team.name + "</b> from the current league - <b>" + team.league.name + "</b>.<br/><br/>Then you would select another league within the same country - <b>" + team.country.name + "</b> to assign <b>" + team.name + " to</b>.",
-            enableBackdropDismiss: !1,
-            buttons: [{
-                    text: "Cancel",
-                    handler: function () {
-                    }
-                }, {
-                    text: "Continue",
-                    handler: function () { _this.navCtrl.push('SettingTeamManagePage', { team: team }); }
-                }]
-        }).present();
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["Content"]),
-        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["Content"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["Content"]) === "function" && _a || Object)
-    ], SettingTeamsPage.prototype, "content", void 0);
-    SettingTeamsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
-            selector: 'page-setting-teams',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-teams/setting-teams.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Manage Teams</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only navPush="SettingTeamAddPage">\n        <ion-icon name="add-circle"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-searchbar [(ngModel)]="searchTerm" (ionCancel)="onCancel($event)" [showCancelButton]="true"\n  (ionClear)="onClear($event)" (ionInput)="onSearch()">\n</ion-searchbar>\n<div class="leagueStats">\n  <ion-list *ngFor="let team of teams">\n    <ion-item class="thumbnailItem" (click)="onTeamOption(team)">\n      <ion-thumbnail item-left>\n        <img src="{{team.imageurl}}" *ngIf="team.imageurl" />\n        <img src="/assets/imgs/appicon.png" *ngIf="!team.imageurl" />\n      </ion-thumbnail>\n      <!-- team Name -->\n      <h5 ion-text padding-left margin-left color="dark">{{team.name}}</h5>\n      <!-- note -->\n      <p ion-text padding-left margin-left color="dark">{{team.league.name}}</p>\n      <!-- goals or rating Number -->\n      <span ion-text color="color1" class="" item-right>{{team.country.name}}</span>\n    </ion-item>\n  </ion-list>\n</div>\n\n<div class="" *ngIf="error">\n  <p ion-text text-center color="color2">No result found!</p>\n</div>\n<div text-center margin-top margin-bottonm *ngIf="noteams === \'none\'" (click)="onGotoTop()">\n  <button ion-button small color="color2">Back to Top</button>\n</div>\n<ion-infinite-scroll (ionInfinite)="scrollInfinite($event)" *ngIf="currentPage < totalPage">\n  <ion-infinite-scroll-content  loadingSpinner="bubbles"\n  loadingText="Loading page {{currentPage}} of {{totalPage}}"></ion-infinite-scroll-content>\n</ion-infinite-scroll>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-teams/setting-teams.html"*/,
+    TeamPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-team',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/team/team.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu" ></ion-icon>\n    </button>\n    <ion-title>Arsenal</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only  (click)="global.callSearch($event)">\n        <ion-icon name="md-search"></ion-icon>\n      </button>\n      <button ion-button icon-only (click)="addFavoriteTeam()">\n        <ion-icon [name]="favoriteTeam ? \'ios-heart\' : \'ios-heart-outline\'" ></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n  <ion-toolbar class="scrollingBar">\n    <ion-scroll scrollX="true" scrollY="false" >\n      <p *ngFor="let title of itemInBar ; let i=index" (click)="changeTab(i,title)" [ngClass]="{active: activeBtn == i}" >\n          {{title}}\n      </p>\n    </ion-scroll>\n  </ion-toolbar>\n\n</ion-header>\n\n<ion-content [ngSwitch]=\'tit\' >\n\n  <!-- Team Matches -->\n  <div class="teamMatchs" *ngSwitchCase="\'MATCHES\'">\n    <ion-list >\n      <ion-item class="thumbnailItem" *ngFor="let item of teams" navPush="MatchDetailsPage">\n        <ion-thumbnail item-left>\n          <!-- Team image -->\n          <img src="{{item.img}}" navPush="TeamPage"/>\n        </ion-thumbnail>\n        <ion-grid no-padding>\n          <ion-row>\n            <ion-col col-6>\n              <!-- team Name -->\n              <h5 ion-text color="dark" navPush="TeamPage">{{item.team}}</h5>\n              <!-- League Name -->\n              <p ion-text color="dark">{{item.league}}</p>\n            </ion-col>\n            <ion-col col-6>\n              <p ion-text color="dark">Dec 13,2017</p>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n        <!-- Time -->\n        <div class="matchTime" item-right  *ngIf="item.result==\'\'">\n          <span ion-text color="color1">{{item.time}}</span>\n          <p ion-text color="color2">Next Match</p>\n        </div>\n        <!-- Time -->\n        <div class="matchResult" item-right *ngIf="item.result!=\'\'">\n            <span ion-text color="color1"  >{{item.result}}</span>\n          <p ion-text color="color2">Full Time</p>\n        </div>\n      </ion-item>\n    </ion-list>\n  </div>\n\n  <!--Team news -->\n  <div *ngSwitchCase="\'NEWS\'" padding>\n    <ion-card class="newsCard" *ngFor="let item of lastNews" navPush="TopNewsDetailsPage">\n      <!-- if images in this slide equaled in height please remove class="imgResponsive" from img Tag -->\n      <img class="imgResponsive" src="{{item.img}}"/>\n      <div class="container" text-left>\n        <h4 ion-text color="light">{{item.title}}</h4>\n        <p ion-text color="light">{{item.subTitle}}</p>\n  \n        <ion-grid no-padding class="gridFooter">\n          <ion-row>\n            <ion-col col padding-right>\n              <p ion-text color="light">4 HOURS AGO</p>\n            </ion-col>\n            <!-- users like number -->\n            <ion-col col-auto padding-right>\n              <ion-item (click)="like($event,item)">\n                <ion-icon  item-left color="color2" [name]="item.clickLike ? \'ios-heart\' : \'ios-heart-outline\'" ></ion-icon>\n                <p ion-text color="light">{{item.numLike}}</p>\n              </ion-item>\n            </ion-col>\n  \n            <!-- user Comment number -->\n            <ion-col col-auto>\n              <ion-item>\n                <ion-icon name="md-text" color="color2" item-left></ion-icon>\n                <p ion-text color="light">160</p>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </div>\n    </ion-card>\n  </div>\n\n  <!-- Team Stats -->\n  <div *ngSwitchCase="\'STATS\'" class="leagueStats">\n    <ion-list *ngFor="let item of teamStats">\n      <ion-list-header>\n        <h5 ion-text color="color2">{{item.title}}</h5>\n      </ion-list-header>\n\n      <ion-item class="thumbnailItem">\n        <ion-thumbnail item-left>\n          <!-- Team image -->\n          <img src="{{item.img}}"/>\n        </ion-thumbnail>\n        <!-- team Name -->\n        <h5 ion-text color="dark">{{item.team}}</h5>\n        <!-- note -->\n        <p ion-text color="dark">{{item.note}}</p>\n        <!-- goals or rating Number -->\n        <span ion-text color="color1" class="rateNum" item-right>{{item.num}}</span>\n      </ion-item>\n    </ion-list>\n  </div>\n\n  <!--Team Squad  -->\n  <div class="squad" *ngSwitchCase="\'SQUAD\'">\n    <ion-list *ngFor="let x of teamSquad">\n      <ion-list-header>\n        <h5 ion-text color="color2">{{x.title}}</h5>\n      </ion-list-header>\n      <ion-item class="avatarItem"  margin-bottom *ngFor="let item of x.items">\n        <ion-avatar item-left>\n          <img src="{{item.img}}">\n        </ion-avatar>\n        <h5 ion-text color="dark">{{item.name}}</h5> \n      </ion-item>\n    </ion-list>\n  </div>\n  <!--Team photos -->\n  <div *ngSwitchCase="\'PHOTOS\'" padding>\n    <ion-list class="lastPhotos">\n      <ion-item class="photoItem" *ngFor="let item of photos" navPush="PhotosDetailsPage">  \n        <!-- if you want this image reponsive in large screen please remove class="imgResponsive" from img Tag  -->\n        <img src="{{item.img}}" class="imgResponsive"/>\n        <ion-grid>\n          <ion-row>\n            <ion-col col-auto>\n              <h4 ion-text color="dark">{{item.title}}</h4>\n            </ion-col>\n            <ion-col col>\n              <p ion-text color="color2">200 photos</p>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-item>\n    </ion-list>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/team/team.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_games_games__["a" /* GamesProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_games_games__["a" /* GamesProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["LoadingController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["LoadingController"]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["ActionSheetController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["ActionSheetController"]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["AlertController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["AlertController"]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavController"]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavParams"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavParams"]) === "function" && _h || Object])
-    ], SettingTeamsPage);
-    return SettingTeamsPage;
-    var _a, _b, _c, _d, _e, _f, _g, _h;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
+    ], TeamPage);
+    return TeamPage;
 }());
 
-//# sourceMappingURL=setting-teams.js.map
+//# sourceMappingURL=team.js.map
 
 /***/ })
 

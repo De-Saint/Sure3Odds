@@ -10,7 +10,7 @@ import { IonicPage, NavController } from 'ionic-angular';
   templateUrl: 'all-matches.html',
 })
 export class AllMatchesPage implements OnInit {
-  gamelist: any;
+  gamelist: any; 
   match: Object;
   // calender Function
   monthNames = ["January", "February", "March", "April", "May", "June", "July",

@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle icon-only>
+      <ion-icon class="goal-menu"></ion-icon>
+    </button>
+    <ion-title>Games</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only navPush="GameNewPage">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <!-- matches list -->
+  <div class="gamelist">
+    <ion-list class="" *ngFor="let game of gamelist">
+      <ion-list-header>
+        {{game.title}}
+        <ion-icon name="football" color="color1" item-left></ion-icon>
+        <button ion-button clear item-end>Total odds : {{game.odds ? game.odds : '0.0'}}</button>
+      </ion-list-header>
+      <!-- match item  -->
+      <div class="" *ngIf="game.items">
+        <ion-item class="matchItem" *ngFor="let match of game.items">
+          <ion-grid>
+            <ion-row (click)="onGameOption(match)">
+              <ion-col col>
+                <ion-item>
+                  <img src="{{match.hometeam.imageurl}}" item-right *ngIf="match.hometeam.imageurl" />
+                  <img src="assets/imgs/appicon.png" item-right *ngIf="!match.hometeam.imageurl" />
+                  <p text-right>{{match.hometeam.name}}</p>
+                </ion-item>
+              </ion-col>
+              <ion-col col-auto>
+                <span ion-text color="color1">{{match.matchtime}}</span>
+                <p ion-text color="color2"><b>{{match.odds}}</b></p>
+                <p ion-text color="color2">({{match.hometeamscore}}) <b>{{match.selections.name}}</b> ({{match.awayteamscore}})</p>
+              </ion-col>
+              <ion-col col>
+                <ion-item>
+                  <img src="{{match.awayteam.imageurl}}" item-left *ngIf="match.awayteam.imageurl" />
+                  <img src="assets/imgs/appicon.png" item-left *ngIf="!match.awayteam.imageurl" />
+                  <p text-left>{{match.awayteam.name}}</p>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </div>
+      <div class="" *ngIf="game.msg">
+        <p ion-text text-center color="color2">{{game.msg}}</p>
+      </div>
+
+    </ion-list>
+  </div>
+
+</ion-content>

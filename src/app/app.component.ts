@@ -29,15 +29,16 @@ export class Sure3Odds {
   loggedInAdminPages: PageInterface[] = [
     { icon: 'football', color: 'light', title: 'All Games', component: 'AllMatchesPage' },
     { icon: 'person', color: 'light', title: 'My Profile', component: 'ProfilePage' },
-    { icon: 'people', color: 'light', title: 'Sub-Admins', component: 'AdvisersPage' },
-    { icon: 'football', color: 'light', title: 'Sub-Admin Predictions', component: 'PredictionsPage' },
-    { icon: 'people', color: 'light', title: 'Members', component: 'UsersPage' },
+    { icon: 'people', color: 'light', title: 'SubAdmins', component: 'UserSubAdminsPage' },
+    { icon: 'people', color: 'light', title: 'Members', component: 'UserMembersPage' },
+    { icon: 'football', color: 'light', title: 'Games', component: 'GamesPage' },
+    { icon: 'football', color: 'light', title: 'Predictions', component: 'PredictionsPage' },
     { icon: 'card', color: 'light', title: 'Payments', component: 'PaymentsPage' },
     { icon: 'podium', color: 'light', title: 'Reports', component: 'ReportsPage' },
     { icon: 'build', color: 'light', title: 'Settings', component: 'SettingPage' }
   ];
 
-  loggedInAdviserPages: PageInterface[] = [
+  loggedInSubAdminPages: PageInterface[] = [
     { icon: 'football', color: 'light', title: 'All Games', component: 'AllMatchesPage' },
     { icon: 'person', color: 'light', title: 'My Profile', component: 'ProfilePage' },
     { icon: 'football', color: 'light', title: 'My Predictions', component: 'PredictionsPage' },
@@ -115,13 +116,13 @@ export class Sure3Odds {
     if (usertype === "Member") {
       this.menu.enable(showmenu, 'loggedInMemberPages');
       this.menu.enable(!showmenu, 'loggedInAdminMenu');
-      this.menu.enable(!showmenu, 'loggedInAdviserMenu');
+      this.menu.enable(!showmenu, 'loggedInSubAdminMenu');
     } else if (usertype === "Admin") {
       this.menu.enable(showmenu, 'loggedInAdminMenu');
       this.menu.enable(!showmenu, 'loggedInMemberPages');
-      this.menu.enable(!showmenu, 'loggedInAdviserMenu');
-    } else if (usertype === "Sub-Admin") {
-      this.menu.enable(showmenu, 'loggedInAdviserMenu');
+      this.menu.enable(!showmenu, 'loggedInSubAdminMenu');
+    } else if (usertype === "SubAdmin") {
+      this.menu.enable(showmenu, 'loggedInSubAdminMenu');
       this.menu.enable(!showmenu, 'loggedInMemberPages');
       this.menu.enable(!showmenu, 'loggedInAdminMenu');
     }

@@ -1,14 +1,14 @@
 webpackJsonp([56],{
 
-/***/ 695:
+/***/ 699:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddUserPageModule", function() { return AddUserPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FreeTipsPageModule", function() { return FreeTipsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_user__ = __webpack_require__(760);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__free_tips__ = __webpack_require__(770);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddUserPageModule = /** @class */ (function () {
-    function AddUserPageModule() {
+var FreeTipsPageModule = /** @class */ (function () {
+    function FreeTipsPageModule() {
     }
-    AddUserPageModule = __decorate([
+    FreeTipsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__add_user__["a" /* AddUserPage */],
+                __WEBPACK_IMPORTED_MODULE_2__free_tips__["a" /* FreeTipsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__add_user__["a" /* AddUserPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__free_tips__["a" /* FreeTipsPage */]),
             ],
         })
-    ], AddUserPageModule);
-    return AddUserPageModule;
+    ], FreeTipsPageModule);
+    return FreeTipsPageModule;
 }());
 
-//# sourceMappingURL=add-user.module.js.map
+//# sourceMappingURL=free-tips.module.js.map
 
 /***/ }),
 
-/***/ 760:
+/***/ 770:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddUserPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FreeTipsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -57,29 +57,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the AddUserPage page.
+ * Generated class for the FreeTipsPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var AddUserPage = /** @class */ (function () {
-    function AddUserPage(navCtrl, navParams) {
+var FreeTipsPage = /** @class */ (function () {
+    function FreeTipsPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    AddUserPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad AddUserPage');
+    FreeTipsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad FreeTipsPage');
     };
-    AddUserPage = __decorate([
+    FreeTipsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-add-user',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/add-user/add-user.html"*/'<!--\n  Generated template for the AddUserPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>addUser</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/add-user/add-user.html"*/,
+            selector: 'page-free-tips',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/free-tips/free-tips.html"*/'<!--\n  Generated template for the FreeTipsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>freeTips</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/free-tips/free-tips.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
-    ], AddUserPage);
-    return AddUserPage;
+    ], FreeTipsPage);
+    return FreeTipsPage;
 }());
 
-//# sourceMappingURL=add-user.js.map
+//# sourceMappingURL=free-tips.js.map
 
 /***/ })
 

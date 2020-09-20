@@ -1,14 +1,16 @@
 webpackJsonp([12],{
 
-/***/ 727:
+/***/ 729:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingCountryEditPageModule", function() { return SettingCountryEditPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingLeagueAddPageModule", function() { return SettingLeagueAddPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_country_edit__ = __webpack_require__(795);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_league_add__ = __webpack_require__(802);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__ = __webpack_require__(355);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,55 +20,60 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SettingCountryEditPageModule = /** @class */ (function () {
-    function SettingCountryEditPageModule() {
+
+var SettingLeagueAddPageModule = /** @class */ (function () {
+    function SettingLeagueAddPageModule() {
     }
-    SettingCountryEditPageModule = __decorate([
+    SettingLeagueAddPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__setting_country_edit__["a" /* SettingCountryEditPage */],
+                __WEBPACK_IMPORTED_MODULE_2__setting_league_add__["a" /* SettingLeagueAddPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_country_edit__["a" /* SettingCountryEditPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_league_add__["a" /* SettingLeagueAddPage */]),
+                __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__["SelectSearchableModule"],
             ],
         })
-    ], SettingCountryEditPageModule);
-    return SettingCountryEditPageModule;
+    ], SettingLeagueAddPageModule);
+    return SettingLeagueAddPageModule;
 }());
 
-//# sourceMappingURL=setting-country-edit.module.js.map
+//# sourceMappingURL=setting-league-add.module.js.map
 
 /***/ }),
 
-/***/ 755:
+/***/ 761:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Countries; });
-var Countries = /** @class */ (function () {
-    function Countries(name, id, imageurl) {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Leagues; });
+var Leagues = /** @class */ (function () {
+    function Leagues(name, id, imageurl, country) {
         this.name = name;
         this.id = id;
         this.imageurl = imageurl;
+        this.country = country;
     }
-    return Countries;
+    return Leagues;
 }());
 
-//# sourceMappingURL=Countries.js.map
+//# sourceMappingURL=Leagues.js.map
 
 /***/ }),
 
-/***/ 795:
+/***/ 802:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingCountryEditPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_games_games__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_Countries__ = __webpack_require__(755);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__ = __webpack_require__(356);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingLeagueAddPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ionic_native_camera__ = __webpack_require__(356);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_games_games__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__interfaces_Leagues__ = __webpack_require__(761);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_select_searchable__ = __webpack_require__(355);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_ionic_select_searchable__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -82,45 +89,56 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var SettingCountryEditPage = /** @class */ (function () {
-    function SettingCountryEditPage(navCtrl, gameProvider, loadingCtrl, alertCtrl, actionSheetCtrl, camera, authProvider, navParams) {
-        this.navCtrl = navCtrl;
-        this.gameProvider = gameProvider;
-        this.loadingCtrl = loadingCtrl;
-        this.alertCtrl = alertCtrl;
+
+var SettingLeagueAddPage = /** @class */ (function () {
+    function SettingLeagueAddPage(gamesProvider, actionSheetCtrl, camera, authProvider, loadingCtrl, navCtrl, navParams) {
+        this.gamesProvider = gamesProvider;
         this.actionSheetCtrl = actionSheetCtrl;
         this.camera = camera;
         this.authProvider = authProvider;
+        this.loadingCtrl = loadingCtrl;
+        this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.country = new __WEBPACK_IMPORTED_MODULE_2__interfaces_Countries__["a" /* Countries */]("", "", "");
+        this.league = new __WEBPACK_IMPORTED_MODULE_3__interfaces_Leagues__["a" /* Leagues */]("", "", "", { id: "", name: "", imageurl: "" });
+        this.img1 = "assets/imgs/appicon.png";
         this.flag = true;
-        this.countries = this.navParams.get("country");
-        if (this.countries) {
-            this.country.name = this.countries.name;
-            this.country.id = this.countries.id;
-            this.country.imageurl = this.countries.imageurl;
-            console.log(this.country);
-            if (this.countries.imageurl) {
-                this.img1 = this.country.imageurl;
+    }
+    SettingLeagueAddPage.prototype.ionViewWillEnter = function () {
+        this.Getcountries();
+    };
+    SettingLeagueAddPage.prototype.Getcountries = function () {
+        var _this = this;
+        this.gamesProvider.Getcountries()
+            .subscribe(function (resp) {
+            if (resp.statusCode === 200) {
+                _this.countries = resp.data;
             }
             else {
-                this.img1 = "/assets/imgs/appicon.png";
+                _this.authProvider.showToast(resp.description);
             }
-        }
-    }
-    SettingCountryEditPage.prototype.ionViewDidLoad = function () {
+        }, function (error) {
+            _this.authProvider.showToast(error.error.description);
+        });
+    };
+    SettingLeagueAddPage.prototype.ionViewDidLoad = function () {
         this.flag = (this.flag != false) ? false : true;
     };
-    SettingCountryEditPage.prototype.onSubmit = function (country) {
+    SettingLeagueAddPage.prototype.userChanged = function (event) {
+        console.log('user:', event.value);
+    };
+    SettingLeagueAddPage.prototype.openFromCode = function () {
+        this.selectComponent.open();
+    };
+    SettingLeagueAddPage.prototype.onSubmit = function (league) {
         var _this = this;
-        var loading = this.loadingCtrl.create({
-            content: "Please wait..."
-        });
-        if (this.country.name) {
-            this.country.imageurl = (this.country.imageurl != undefined) ? this.img1 : this.img;
-            loading.present();
-            this.gameProvider.updateCountry(country).subscribe(function (res) {
-                loading.dismiss().catch(function () { });
+        if (this.league.name) {
+            this.league.imageurl = (this.league.imageurl != undefined) ? this.img1 : this.img;
+            var loading_1 = this.loadingCtrl.create({
+                content: "Please wait..."
+            });
+            loading_1.present();
+            this.gamesProvider.createLeague(league).subscribe(function (res) {
+                loading_1.dismiss().catch(function () { });
                 if (res.statusCode === 200) {
                     _this.navCtrl.pop();
                 }
@@ -128,7 +146,7 @@ var SettingCountryEditPage = /** @class */ (function () {
                     _this.authProvider.showToast(res.description);
                 }
             }, function (error) {
-                loading.dismiss().catch(function () { });
+                loading_1.dismiss().catch(function () { });
                 _this.authProvider.showToast(error.error.description);
             });
         }
@@ -136,46 +154,10 @@ var SettingCountryEditPage = /** @class */ (function () {
             this.authProvider.showToast("Name input field is empty");
         }
     };
-    SettingCountryEditPage.prototype.onDelete = function () {
-        var _this = this;
-        var loading = this.loadingCtrl.create({
-            content: "Please wait..."
-        });
-        var confirm = this.alertCtrl.create({
-            title: 'Delete Country',
-            message: 'Do you want to delete <b>' + this.countries.name + '?</b><br/><br/>All the leagues and teams under <b>' + this.countries.name + '</b> would be deleted.</b><br/><br/>This is action is irreversible.',
-            buttons: [
-                {
-                    text: 'Cancel',
-                    handler: function () {
-                    }
-                },
-                {
-                    text: 'Proceed',
-                    handler: function () {
-                        loading.present();
-                        _this.gameProvider.deleteCountry(_this.countries.id).subscribe(function (res) {
-                            loading.dismiss().catch(function () { });
-                            if (res.statusCode === 200) {
-                                _this.navCtrl.pop();
-                            }
-                            else {
-                                _this.authProvider.showToast(res.description);
-                            }
-                        }, function (error) {
-                            loading.dismiss().catch(function () { });
-                            _this.authProvider.showToast(error.error.description);
-                        });
-                    }
-                }
-            ]
-        });
-        confirm.present();
-    };
-    SettingCountryEditPage.prototype.selectImage = function () {
+    SettingLeagueAddPage.prototype.selectImage = function () {
         var _this = this;
         var actionSheet = this.actionSheetCtrl.create({
-            title: 'Change Country Logo',
+            title: 'Add League Logo',
             buttons: [
                 {
                     text: 'Gallery',
@@ -192,7 +174,7 @@ var SettingCountryEditPage = /** @class */ (function () {
         });
         actionSheet.present();
     };
-    SettingCountryEditPage.prototype.get_camera = function (source) {
+    SettingLeagueAddPage.prototype.get_camera = function (source) {
         var _this = this;
         var options = {
             quality: 100, destinationType: this.camera.DestinationType.DATA_URL,
@@ -212,17 +194,24 @@ var SettingCountryEditPage = /** @class */ (function () {
             this.img1 = this.img;
         }
     };
-    SettingCountryEditPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-            selector: 'page-setting-country-edit',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-country-edit/setting-country-edit.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Edit Country</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="onDelete()">\n        <ion-icon name="trash"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="imgs">\n    <div class="imgProfile" [ngStyle]="{\'background-image\':\'url(\' + img1 + \')\'}">\n      <button ion-button icon-only class="profileCamera"  [ngClass]="{\'show\':flag==false}"   (click)="selectImage(2)">\n        <ion-icon name="md-camera"></ion-icon>\n      </button>\n    </div>\n  </div>\n  <div class="otherForm">\n    <ion-list>\n      <!-- appear when click update -->\n      <ion-item >\n        <ion-label stacked>Name</ion-label>\n        <ion-input  type="text" [(ngModel)]="country.name"  ></ion-input>\n        <ion-input hidden type="text" [(ngModel)]="country.id"  ></ion-input>\n      </ion-item>\n      <!-- ==================================== -->\n    </ion-list>\n    <button ion-button block color="color2" (click)="onSubmit(country)">Submit</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-country-edit/setting-country-edit.html"*/,
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["ViewChild"])('myselect'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_6_ionic_select_searchable__["SelectSearchableComponent"])
+    ], SettingLeagueAddPage.prototype, "selectComponent", void 0);
+    SettingLeagueAddPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
+            selector: 'page-setting-league-add',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-league-add/setting-league-add.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Add League</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <div class="imgs">\n    <div class="imgProfile" [ngStyle]="{\'background-image\':\'url(\' + img1 + \')\'}">\n      <button ion-button icon-only class="profileCamera"  [ngClass]="{\'show\':flag==false}"   (click)="selectImage()">\n        <ion-icon name="md-camera"></ion-icon>\n      </button>\n    </div>\n  </div>\n  <div class="otherForm">\n    <ion-list>\n      <ion-item>\n        <ion-label>\n          Select Country\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="league.country" (onChange)="userChanged($event)" [items]="countries"\n          itemValueField="id"\n          [canClear]="true"\n          clearButtonText="Clear Selected"\n          confirmButtonText="Proceed"\n          itemTextField="name" \n          [canSearch]="true">\n\n        </select-searchable>\n      </ion-item>\n      <ion-item>\n        <ion-label stacked>Name</ion-label>\n        <ion-input type="text" [(ngModel)]="league.name"></ion-input>\n      </ion-item>\n      <!-- ==================================== -->\n    </ion-list>\n    <button ion-button block color="color2" (click)="onSubmit(league)">Submit</button>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-league-add/setting-league-add.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__providers_games_games__["a" /* GamesProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__providers_games_games__["a" /* GamesProvider */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["LoadingController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["LoadingController"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["AlertController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["AlertController"]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ActionSheetController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ActionSheetController"]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__["a" /* Camera */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__["a" /* Camera */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"]) === "function" && _h || Object])
-    ], SettingCountryEditPage);
-    return SettingCountryEditPage;
-    var _a, _b, _c, _d, _e, _f, _g, _h;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_games_games__["a" /* GamesProvider */],
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["ActionSheetController"], __WEBPACK_IMPORTED_MODULE_0__ionic_native_camera__["a" /* Camera */],
+            __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */],
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["LoadingController"],
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavParams"]])
+    ], SettingLeagueAddPage);
+    return SettingLeagueAddPage;
 }());
 
-//# sourceMappingURL=setting-country-edit.js.map
+//# sourceMappingURL=setting-league-add.js.map
 
 /***/ })
 

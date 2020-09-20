@@ -1,14 +1,16 @@
 webpackJsonp([14],{
 
-/***/ 706:
+/***/ 700:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MatchCommentsPageModule", function() { return MatchCommentsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GameEditPageModule", function() { return GameEditPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__match_comments__ = __webpack_require__(772);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__game_edit__ = __webpack_require__(771);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__ = __webpack_require__(355);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,56 +20,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MatchCommentsPageModule = /** @class */ (function () {
-    function MatchCommentsPageModule() {
+
+var GameEditPageModule = /** @class */ (function () {
+    function GameEditPageModule() {
     }
-    MatchCommentsPageModule = __decorate([
+    GameEditPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__match_comments__["a" /* MatchCommentsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__game_edit__["a" /* GameEditPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__match_comments__["a" /* MatchCommentsPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__game_edit__["a" /* GameEditPage */]),
+                __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__["SelectSearchableModule"]
             ],
         })
-    ], MatchCommentsPageModule);
-    return MatchCommentsPageModule;
+    ], GameEditPageModule);
+    return GameEditPageModule;
 }());
 
-//# sourceMappingURL=match-comments.module.js.map
+//# sourceMappingURL=game-edit.module.js.map
 
 /***/ }),
 
-/***/ 753:
+/***/ 757:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Comments; });
-var Comments = /** @class */ (function () {
-    function Comments(comments, date, time, game, id, user) {
-        this.comments = comments;
-        this.date = date;
-        this.time = time;
-        this.game = game;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Games; });
+var Games = /** @class */ (function () {
+    function Games(awayteam, country, hometeam, league, matchdate, selections, matchtime, sets, odds, id, status, hometeamscore, awayteamscore) {
+        this.awayteam = awayteam;
+        this.country = country;
+        this.hometeam = hometeam;
+        this.league = league;
+        this.matchdate = matchdate;
+        this.selections = selections;
+        this.matchtime = matchtime;
+        this.sets = sets;
+        this.odds = odds;
         this.id = id;
-        this.user = user;
+        this.status = status;
+        this.hometeamscore = hometeamscore;
+        this.awayteamscore = awayteamscore;
     }
-    return Comments;
+    return Games;
 }());
 
-//# sourceMappingURL=Comments.js.map
+//# sourceMappingURL=Games.js.map
 
 /***/ }),
 
-/***/ 772:
+/***/ 771:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MatchCommentsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_global__ = __webpack_require__(354);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_games_games__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_authenication_authenication__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__interfaces_Comments__ = __webpack_require__(753);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GameEditPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_Games__ = __webpack_require__(757);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_games_games__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__ = __webpack_require__(355);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -85,85 +97,224 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var MatchCommentsPage = /** @class */ (function () {
-    function MatchCommentsPage(navCtrl, authProvider, gameProvider, global, navParams) {
-        this.navCtrl = navCtrl;
+var GameEditPage = /** @class */ (function () {
+    function GameEditPage(gamesProvider, authProvider, loadingCtrl, navCtrl, navParams) {
+        this.gamesProvider = gamesProvider;
         this.authProvider = authProvider;
-        this.gameProvider = gameProvider;
-        this.global = global;
+        this.loadingCtrl = loadingCtrl;
+        this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.comment = new __WEBPACK_IMPORTED_MODULE_3__interfaces_Comments__["a" /* Comments */]("", "", "", { id: "" }, "", { id: "" });
-        this.img2 = "assets/imgs/appicon.png";
-        this.match = this.navParams.data;
-        console.log(this.match);
+        this.game = new __WEBPACK_IMPORTED_MODULE_0__interfaces_Games__["a" /* Games */]({ id: "" }, { id: "" }, { id: "" }, { id: "" }, "", { id: "" }, "", { id: "" }, "", "", { id: "" }, 0, 0);
+        this.selectedgame = this.navParams.get("game");
+        if (this.selectedgame) {
+            this.game = this.selectedgame;
+            console.log(this.game);
+        }
     }
-    MatchCommentsPage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        this.mutationObserver = new MutationObserver(function (mutations) {
-            _this.contentArea.scrollToBottom();
-        });
-        this.mutationObserver.observe(this.chatList.nativeElement, {
-            childList: true
-        });
+    GameEditPage.prototype.ionViewWillEnter = function () {
+        this.Getcountries();
+        this.GetSelections();
+        this.GetSets();
+        this.GetStatus();
     };
-    MatchCommentsPage.prototype.ngOnInit = function () {
-        this.GetGameComments();
-        this.jti = this.authProvider.currentUserDataValue.jti;
-    };
-    MatchCommentsPage.prototype.GetGameComments = function () {
+    GameEditPage.prototype.Getcountries = function () {
         var _this = this;
-        this.gameProvider.GetGameComments(this.match.id).subscribe(function (result) {
-            _this.comments = result.data;
-            console.log(_this.comments);
-            _this.error = '';
+        this.gamesProvider.Getcountries()
+            .subscribe(function (resp) {
+            if (resp.statusCode === 200) {
+                _this.countries = resp.data;
+            }
+            else {
+                _this.authProvider.showToast(resp.description);
+            }
         }, function (error) {
-            _this.comments = [];
-            _this.error = error.error.description;
-            console.log(JSON.stringify(_this.error));
+            _this.authProvider.showToast(error.error.description);
         });
     };
-    MatchCommentsPage.prototype.onCreateComment = function (comment, match) {
+    GameEditPage.prototype.onSelectSelection = function (event) {
+        console.log(event.value);
+    };
+    GameEditPage.prototype.onSelectSets = function (event) {
+        console.log(event.value);
+    };
+    GameEditPage.prototype.onSelectHTeam = function (event) {
+        console.log(event.value);
+    };
+    GameEditPage.prototype.onSelectATeam = function (event) {
+        console.log(event.value);
+    };
+    GameEditPage.prototype.onSelectStatus = function (event) {
+        console.log(event.value);
+    };
+    GameEditPage.prototype.onSelectCountry = function (event) {
         var _this = this;
-        console.log(comment);
-        if (this.comment.comments) {
-            this.comment.game.id = match.id;
-            this.gameProvider.createComment(this.comment).subscribe(function (res) {
-                if (res.statusCode === 200) {
-                    _this.GetGameComments();
-                    _this.comment.comments = '';
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        this.game.league = null;
+        if (event.value.id) {
+            loading.present();
+            this.gamesProvider.GetLeaguesByCountryID(event.value.id)
+                .subscribe(function (resp) {
+                loading.dismiss().catch(function () { });
+                if (resp.statusCode === 200) {
+                    _this.leagues = resp.data;
                 }
                 else {
-                    _this.authProvider.showToast(res.description);
+                    _this.authProvider.showToast(resp.description);
                 }
             }, function (error) {
+                loading.dismiss().catch(function () { });
                 _this.authProvider.showToast(error.error.description);
             });
         }
-        else {
-            this.authProvider.showToast("Comment input field is empty");
+    };
+    GameEditPage.prototype.onSelectLeague = function (event) {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        this.game.awayteam = null;
+        this.game.hometeam = null;
+        if (event.value.id) {
+            loading.present();
+            this.gamesProvider.getTeamsByLeagueId(event.value.id)
+                .subscribe(function (resp) {
+                loading.dismiss().catch(function () { });
+                if (resp.statusCode === 200) {
+                    _this.hometeams = resp.data;
+                    _this.awayteams = resp.data;
+                }
+                else {
+                    _this.authProvider.showToast(resp.description);
+                }
+            }, function (error) {
+                loading.dismiss().catch(function () { });
+                _this.authProvider.showToast(error.error.description);
+            });
         }
     };
+    GameEditPage.prototype.onSubmit = function (game) {
+        var _this = this;
+        if (game.sets) {
+            if (game.country) {
+                if (game.league) {
+                    if (game.selections) {
+                        if (game.hometeam && game.awayteam) {
+                            if (game.odds) {
+                                if (game.matchdate && game.matchtime) {
+                                    if (game.hometeam !== game.awayteam) {
+                                        if (game.hometeamscore && game.awayteamscore) {
+                                            var loading_1 = this.loadingCtrl.create({
+                                                content: "Please wait..."
+                                            });
+                                            loading_1.present();
+                                            this.gamesProvider.updateGame(game).subscribe(function (res) {
+                                                loading_1.dismiss().catch(function () { });
+                                                if (res.statusCode === 200) {
+                                                    _this.navCtrl.pop();
+                                                }
+                                                else {
+                                                    _this.authProvider.showToast(res.description);
+                                                }
+                                            }, function (error) {
+                                                loading_1.dismiss().catch(function () { });
+                                                _this.authProvider.showToast(error.error.error);
+                                            });
+                                        }
+                                        else {
+                                            this.authProvider.showToast("Either Home or Away Team score input field is empty or incorrect");
+                                        }
+                                    }
+                                    else {
+                                        this.authProvider.showToast("Home and Away Team cannot be same.");
+                                    }
+                                }
+                                else {
+                                    this.authProvider.showToast("Please, select either the Match Date or Time");
+                                }
+                            }
+                            else {
+                                this.authProvider.showToast("Odds input field is empty");
+                            }
+                        }
+                        else {
+                            this.authProvider.showToast("Please, select either Away or Home Team");
+                        }
+                    }
+                    else {
+                        this.authProvider.showToast("Please, select a Prediction");
+                    }
+                }
+                else {
+                    this.authProvider.showToast("Please, select a League");
+                }
+            }
+            else {
+                this.authProvider.showToast("Please, select a Country");
+            }
+        }
+        else {
+            this.authProvider.showToast("Please, select a Set ");
+        }
+    };
+    GameEditPage.prototype.GetSelections = function () {
+        var _this = this;
+        this.gamesProvider.getSelections()
+            .subscribe(function (resp) {
+            if (resp.statusCode === 200) {
+                _this.selections = resp.data;
+            }
+            else {
+                _this.authProvider.showToast(resp.description);
+            }
+        }, function (error) {
+            _this.authProvider.showToast(error.error.description);
+        });
+    };
+    GameEditPage.prototype.GetSets = function () {
+        var _this = this;
+        this.gamesProvider.GetSets()
+            .subscribe(function (resp) {
+            if (resp.statusCode === 200) {
+                _this.sets = resp.data;
+            }
+            else {
+                _this.authProvider.showToast(resp.description);
+            }
+        }, function (error) {
+            _this.authProvider.showToast(error.error.description);
+        });
+    };
+    GameEditPage.prototype.GetStatus = function () {
+        var _this = this;
+        this.gamesProvider.GetStatus("Game")
+            .subscribe(function (resp) {
+            if (resp.statusCode === 200) {
+                _this.statuses = resp.data;
+            }
+            else {
+                _this.authProvider.showToast(resp.description);
+            }
+        }, function (error) {
+            _this.authProvider.showToast(error.error.description);
+        });
+    };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_5_ionic_angular__["Content"]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["Content"])
-    ], MatchCommentsPage.prototype, "contentArea", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_5_ionic_angular__["List"], { read: __WEBPACK_IMPORTED_MODULE_4__angular_core__["ElementRef"] }),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_4__angular_core__["ElementRef"])
-    ], MatchCommentsPage.prototype, "chatList", void 0);
-    MatchCommentsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["ViewChild"])('myselect'),
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__["SelectSearchableComponent"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__["SelectSearchableComponent"]) === "function" && _a || Object)
+    ], GameEditPage.prototype, "selectComponent", void 0);
+    GameEditPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
-            selector: 'page-match-comments',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/match-comments/match-comments.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu" ></ion-icon>\n    </button>\n    <ion-title>Match Details</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only navPush="NotificationPage">\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n  <ion-toolbar class="matchResultBar">\n    <!-- match item  -->\n    <ion-item class="matchResult">\n      <ion-grid>\n        <ion-row>\n          <!-- first team -->\n          <ion-col col>\n            <ion-item>\n              <img src="{{match.hometeam.imageurl}}" style="border-radius: 50px;" *ngIf="match.hometeam.imageurl" />\n              <img src="assets/imgs/appicon.png" style="border-radius: 50px;" *ngIf="!match.hometeam.imageurl" />\n              <p>{{match.hometeam.name}}</p>\n            </ion-item>\n          </ion-col>\n          <!-- match time -->\n          <ion-col col-auto>\n            <div class="result">\n              <span ion-text color="color1">{{match?.homeTeamScore}}</span>\n              <span ion-text style="padding: 0.3em;" color="color1">-</span>\n              <span ion-text color="color1">{{match?.awayTeamScore}}</span>\n            </div>\n            <p ion-text color="light">{{match?.status}}</p>\n          </ion-col>\n          <!-- second team -->\n          <ion-col col>\n            <ion-item>\n              <img src="{{match.awayteam.imageurl}}" style="border-radius: 50px;" *ngIf="match.awayteam.imageurl" />\n              <img src="assets/imgs/appicon.png" style="border-radius: 50px;" *ngIf="!match.awayteam.imageurl" />\n              <p>{{match.awayteam.name}}</p>\n            </ion-item>\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col col-center>\n            <p ion-text color="secondary" style="text-align: center;">{{match.country.name}} - {{match.league.name}}</p>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n\n    </ion-item>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-list class="timeLine_list">\n    <ion-item [ngClass]="{\'team2\':comment.user.id == jti}" *ngFor="let comment of comments"   #chatList>\n      <ion-grid>\n        <ion-row>\n          <ion-col col-auto>\n            <p ion-text color="color1">{{comment.time}}\'</p>\n          </ion-col>\n          <ion-col col-auto>\n            <img src="assets/imgs/appicon.png" />\n          </ion-col>\n          <ion-col col>\n            <p ion-text color="dark">{{comment.comments}}</p>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </ion-item>\n  </ion-list>\n  <div color="color2" text-center *ngIf="error">\n    What do you think about <br /> <br /> <strong>{{match.hometeam.name}}</strong> Vs  <strong>{{match.awayteam.name}}</strong>?\n  </div>\n</ion-content>\n<ion-footer>\n  <ion-toolbar>\n    <ion-grid class="white bordertop lightborder">\n      <ion-row wrap>\n        <ion-col col-10 class="center">\n          <ion-input type="text" class="" [(ngModel)]="comment.comments" placeholder="Type a message"></ion-input>\n        </ion-col>\n        <ion-col col-2 class="center ">\n          <button ion-button icon-left round class="round paddingleft half-paddingright" color="primary" (click)="onCreateComment(comment, match)">\n            <ion-icon name="send"></ion-icon>\n          </button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </ion-toolbar>\n</ion-footer>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/match-comments/match-comments.html"*/,
+            selector: 'page-game-edit',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/game-edit/game-edit.html"*/'<ion-header>\n \n  <ion-navbar>\n    <ion-title>Edit Game</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="otherForm">\n    <ion-list>\n      <ion-item>\n        <ion-label>\n          Select The Set\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.sets" (onChange)="onSelectSets($event)" [items]="sets"\n          itemValueField="id" [canClear]="true" clearButtonText="Clear Selected" confirmButtonText="Proceed"\n          itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n      <hr ion-text margin-top margin-bottom>\n\n      <ion-item>\n        <ion-label>\n          Select The Country\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.country" (onChange)="onSelectCountry($event)"\n          [items]="countries" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n\n      <ion-item>\n        <ion-label>\n          Select The League\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.league" (onChange)="onSelectLeague($event)"\n          [items]="leagues" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n\n      <ion-item>\n        <ion-label>\n          Select The Home Team\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.hometeam" (onChange)="onSelectHTeam($event)"\n          [items]="hometeams" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n\n      <ion-item>\n        <ion-label>\n          Select The Away Team\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.awayteam" (onChange)="onSelectATeam($event)"\n          [items]="awayteams" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n\n      <hr margin-top margin-bottom>\n      <ion-item>\n        <ion-label>\n          Pick The Selection\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.selections" (onChange)="onSelectSelection($event)"\n          [items]="selections" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n\n      <hr margin-top margin-bottom>\n      <ion-item>\n        <ion-label>\n          Match Date\n        </ion-label>\n        <ion-datetime [(ngModel)]="game.matchdate" required displayFormat="YYYY-MM-DD" min="2017" max="2050-12-31">\n        </ion-datetime>\n      </ion-item>\n      <ion-item>\n        <ion-label>\n          Match Time\n        </ion-label>\n        <ion-datetime displayFormat="h:mm A" required [(ngModel)]="game.matchtime"></ion-datetime>\n      </ion-item>\n\n      <hr margin-top margin-bottom>\n      <ion-item>\n        <ion-label stacked>Odds</ion-label>\n        <ion-input type="text" required [(ngModel)]="game.odds"></ion-input>\n      </ion-item>\n\n      <hr margin-top margin-bottom>\n      <ion-item>\n        <ion-label stacked>Home Time Score</ion-label>\n        <ion-input type="number" required [(ngModel)]="game.hometeamscore"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label stacked>Away Team Score</ion-label>\n        <ion-input type="number" required [(ngModel)]="game.awayteamscore"></ion-input>\n      </ion-item>\n      \n      <hr margin-top margin-bottom>\n      <ion-item>\n        <ion-label>\n          Select The Status\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.status" (onChange)="onSelectStatus($event)"\n          [items]="statuses" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n    </ion-list>\n    <button ion-button block color="color2" (click)="onSubmit(game)">Submit</button>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/game-edit/game-edit.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavController"],
-            __WEBPACK_IMPORTED_MODULE_2__providers_authenication_authenication__["a" /* AuthenicationProvider */],
-            __WEBPACK_IMPORTED_MODULE_1__providers_games_games__["a" /* GamesProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_global__["a" /* Global */],
-            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavParams"]])
-    ], MatchCommentsPage);
-    return MatchCommentsPage;
+        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__providers_games_games__["a" /* GamesProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_games_games__["a" /* GamesProvider */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["LoadingController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["LoadingController"]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavController"]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavParams"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavParams"]) === "function" && _f || Object])
+    ], GameEditPage);
+    return GameEditPage;
+    var _a, _b, _c, _d, _e, _f;
 }());
 
-//# sourceMappingURL=match-comments.js.map
+//# sourceMappingURL=game-edit.js.map
 
 /***/ })
 

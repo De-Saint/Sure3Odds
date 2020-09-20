@@ -31,7 +31,7 @@
 
 </ion-menu>
 
-<ion-menu id="loggedInAdviserMenu" [content]="content" swipeEnabled="false">
+<ion-menu id="loggedInSubAdminMenu" [content]="content" swipeEnabled="false">
   <ion-header>
     <ion-toolbar>
       <ion-item>
@@ -48,7 +48,7 @@
   <ion-content>
     <!-- admin list -->
     <ion-list class="mainMenuList">
-      <ion-item menuClose *ngFor="let p of loggedInAdviserPages" (click)="openPage(p.component)">
+      <ion-item menuClose *ngFor="let p of loggedInSubAdminPages" (click)="openPage(p.component)">
         <ion-icon color="{{p.color}}" name="{{p.icon}}" item-left></ion-icon>
         <ion-label style="color: white !important;"> {{p.title}} </ion-label>
       </ion-item>

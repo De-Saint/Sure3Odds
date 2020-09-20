@@ -8,33 +8,15 @@ import { Storage } from '@ionic/storage';
 import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs';
 
+
 import { JwtHelperService } from "@auth0/angular-jwt";
+import { User } from '../../interfaces/User';
+import {Token } from '../../interfaces/Token';
 const helper = new JwtHelperService();
 
 const TOKEN_KEY = 'access_token';
 
-export class NewUser {
-  constructor(
-    public id: string,
-    public email: string,
-    public firstname: string,
-    public lastname: string,
-    public referencecode: any,
-    public password: string,
-    public phone: string,
-    public plantype: { id },
-    public platform: string,
-  ) { }
-}
-export class User {
-  name: string;
-  user_type: string
-  jti: number;
 
-}
-export class Token {
-  token: string;
-}
 @Injectable()
 export class AuthenicationProvider {
   HAS_LOGGED_IN = 'hasLoggedIn';
@@ -113,7 +95,7 @@ export class AuthenicationProvider {
   }
   createNewUser(user) : Observable<ResponseType>{
     console.log(user);
-    return this.http.post<ResponseType>(`${environment.apiUrl}/users/members/create`, user)
+    return this.http.post<ResponseType>(`${environment.apiUrl}/users/member/create`, user)
       .pipe(map(resp => {
         return resp;
       }));

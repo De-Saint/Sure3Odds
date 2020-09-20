@@ -4,11 +4,7 @@
       <ion-icon class="goal-menu" ></ion-icon>
     </button>
     <ion-title>Match Details</ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only navPush="NotificationPage">
-        <ion-icon name="md-notifications"></ion-icon>
-      </button>
-    </ion-buttons>
+    
   </ion-navbar>
   <ion-toolbar class="matchResultBar">
     <!-- match item  -->
@@ -26,11 +22,11 @@
           <!-- match time -->
           <ion-col col-auto>
             <div class="result">
-              <span ion-text color="color1">{{match?.homeTeamScore}}</span>
+              <span ion-text color="color1">{{match?.hometeamscore}}</span>
               <span ion-text style="padding: 0.3em;" color="color1">-</span>
-              <span ion-text color="color1">{{match?.awayTeamScore}}</span>
+              <span ion-text color="color1">{{match?.awayteamscore}}</span>
             </div>
-            <p ion-text color="light">{{match?.status}}</p>
+            <p ion-text color="light" text-center>{{match?.status.name}}</p>
           </ion-col>
           <!-- second team -->
           <ion-col col>
@@ -57,7 +53,7 @@
   <!-- goals -->
   <div class="goals" padding>
     <ion-list>
-      <h5 ion-text text-center color="color2">Current Votes</h5>
+      <h5 ion-text text-center margin-top color="color2">Current Votes</h5>
       <ion-grid style="margin-bottom: 0.5em;">
         <ion-row>
           <ion-col col-auto text-left style="width: 10em;">

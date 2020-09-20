@@ -13,9 +13,11 @@ export class GamesProvider {
 
   }
 
+   //-------------------------Game -----Start----------------------------
+ 
   GetGames(matchDate): Observable<ResponseType> {
     const params = new HttpParams().set("matchDate", String(matchDate));
-    return this.http.get<ResponseType>(`${environment.apiUrl}/games/game/get_by_userid`, { params })
+    return this.http.get<ResponseType>(`${environment.apiUrl}/games/game/user/get`, { params })
       .pipe(map(resp => {
         return resp;
       }));
@@ -30,6 +32,27 @@ export class GamesProvider {
     var date = group.year + '-' + group.month + '-' + group.day_num;
     return date;
   }
+  addGame(game): Observable<ResponseType> {
+    return this.http.post<ResponseType>(`${environment.apiUrl}/games/game/add`, game).pipe(
+      map((resp: any) => {
+        return resp;
+      }));
+  }
+  updateGame(game): Observable<ResponseType> {
+    return this.http.put<ResponseType>(`${environment.apiUrl}//games/game/update`, game).pipe(
+      map((resp: any) => {
+        return resp;
+      }));
+  }
+
+  deleteGame(id): Observable<ResponseType> {
+    return this.http.delete<ResponseType>(`${environment.apiUrl}/games/game/delete/${id}`)
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
+   //-------------------------Game -----End----------------------------
+ 
   //-------------------------Votes -----Start----------------------------
   GetGameVotes(id): Observable<ResponseType> {
     return this.http.get<ResponseType>(`${environment.apiUrl}/games/vote/get_game_votes/${id}`)
@@ -186,6 +209,12 @@ export class GamesProvider {
       }));
   }
 
+  getTeamsByLeagueId(id): Observable<ResponseType> {
+    return this.http.get<ResponseType>(`${environment.apiUrl}/games/league/teams/getall/${id}`)
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
 
   //-------------------------Leagues------End----------------------------
 
@@ -233,7 +262,7 @@ export class GamesProvider {
 
 
 
-  //-------------------------Selections -----Start
+  //-------------------------Selections -----Start-------------------------
   GetSelections(pageNo, pageSize): Observable<ResponseType> {
     const params = new HttpParams()
       .set('pageNo', pageNo)
@@ -274,6 +303,32 @@ export class GamesProvider {
         return resp;
       }));
   }
+ getSelections(): Observable<ResponseType> {
+    return this.http.get<ResponseType>(`${environment.apiUrl}/games/selection/get_all`)
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
+  //-------------------------Selections -----End-----------------------
 
-  //-------------------------Selections -----End
+  //-------------------------Sets------Start----------------------------
+  GetSets(): Observable<ResponseType> {
+    return this.http.get<ResponseType>(`${environment.apiUrl}/games/set/getall`)
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
+ //-------------------------Sets -----End-----------------------
+
+
+   //-------------------------Status------Start----------------------------
+   GetStatus(statusType): Observable<ResponseType> {
+    const params = new HttpParams()
+    .set('statusType', statusType)
+    return this.http.get<ResponseType>(`${environment.apiUrl}/games/status/type/get`, {params:params})
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
+   //-------------------------Status -----End-----------------------
 }

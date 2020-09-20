@@ -40311,7 +40311,7 @@ image-viewer.ion-page img {
   background-position: center center;
 }
 
-.item .label, .item.item-select .label, .item.item-select .select-text, .search_Pop .searchbar .searchbar-input, .signForm .item .text-input, page-profile .otherForm .item .text-input, page-setting-country-add .otherForm .item .text-input, page-setting-country-edit .otherForm .item .text-input, page-setting-league-add .otherForm .item .text-input, page-setting-league-edit .otherForm .item .text-input, page-setting-selection-add .otherForm .item .text-input, page-setting-selection-edit .otherForm .item .text-input, page-setting-team-add .otherForm .item .text-input, page-setting-team-assign .otherForm .item .text-input, page-setting-team-edit .otherForm .item .text-input, page-setting-team-manage .otherForm .item .text-input, page-setting-teams .otherForm .item .text-input, .commentsList .item.item-block.writComment .input .text-input {
+.item .label, .item.item-select .label, .item.item-select .select-text, .search_Pop .searchbar .searchbar-input, .signForm .item .text-input, page-game-edit .otherForm .item .text-input, page-game-new .otherForm .item .text-input, page-profile .otherForm .item .text-input, page-setting-country-add .otherForm .item .text-input, page-setting-country-edit .otherForm .item .text-input, page-setting-league-add .otherForm .item .text-input, page-setting-league-edit .otherForm .item .text-input, page-setting-selection-add .otherForm .item .text-input, page-setting-selection-edit .otherForm .item .text-input, page-setting-team-add .otherForm .item .text-input, page-setting-team-assign .otherForm .item .text-input, page-setting-team-edit .otherForm .item .text-input, page-setting-team-manage .otherForm .item .text-input, page-setting-teams .otherForm .item .text-input, .commentsList .item.item-block.writComment .input .text-input {
   color: #fff;
   font-size: 1.2rem !important;
   font-weight: 400;
@@ -40338,7 +40338,7 @@ ion-badge {
   overflow: hidden;
 }
 
-.card, .topNews, .tabelList .item.item-block .grid, .leagueMatches .allMatches, .leagueStats .list .item.item-block, page-all-matches .list, page-home .list, page-league-details .photoItem, page-match-comments .avatarItem, page-match-comments .item.thumbnailItem, page-match-details .avatarItem, page-match-details .item.thumbnailItem, page-match-votes .avatarItem, page-match-votes .item.thumbnailItem, page-notification .list .item, page-photos .photoItem, page-players-stats .list, page-profile .otherForm, page-select-league .favoriteLeagues, page-setting-country .photoItem, page-setting-country .teamMatchs .item.thumbnailItem, page-setting-league-view .photoItem, page-setting-league-view .teamMatchs .item.thumbnailItem, page-setting-leagues .photoItem, page-setting-leagues .teamMatchs .item.thumbnailItem, page-setting-selections .photoItem, page-setting-selections .teamMatchs .item.thumbnailItem, page-setting-team-view .photoItem, page-setting-team-view .teamMatchs .item.thumbnailItem, page-setting-teams .photoItem, page-setting-teams .teamMatchs .item.thumbnailItem, page-team .photoItem, page-team .teamMatchs .item.thumbnailItem, page-team .squad, page-teams-stats .list .item, .commentsList {
+.card, .topNews, .tabelList .item.item-block .grid, .leagueMatches .allMatches, .leagueStats .list .item.item-block, page-all-matches .list, page-games .list, page-home .list, page-league-details .photoItem, page-match-comments .avatarItem, page-match-comments .item.thumbnailItem, page-match-details .avatarItem, page-match-details .item.thumbnailItem, page-match-votes .avatarItem, page-match-votes .item.thumbnailItem, page-notification .list .item, page-photos .photoItem, page-players-stats .list, page-profile .otherForm, page-select-league .favoriteLeagues, page-setting-country .photoItem, page-setting-country .teamMatchs .item.thumbnailItem, page-setting-league-view .photoItem, page-setting-league-view .teamMatchs .item.thumbnailItem, page-setting-leagues .photoItem, page-setting-leagues .teamMatchs .item.thumbnailItem, page-setting-selections .photoItem, page-setting-selections .teamMatchs .item.thumbnailItem, page-setting-team-view .photoItem, page-setting-team-view .teamMatchs .item.thumbnailItem, page-setting-teams .photoItem, page-setting-teams .teamMatchs .item.thumbnailItem, page-team .photoItem, page-team .teamMatchs .item.thumbnailItem, page-team .squad, page-teams-stats .list .item, .commentsList {
   -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.29);
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.29);
 }
@@ -43960,7 +43960,7 @@ ion-menu .menu-inner .leagueList .item-block .label {
   backface-visibility: hidden;
 }
 
-.animateApp .fadeInUp, .animateApp page-home .slides, .animateApp .matchStats, .animateApp page-profile .scroll-content, .animateApp page-top-news-details .scroll-content, .animateApp .sign .signForm, .animateApp .sign page-profile .otherForm, page-profile .animateApp .sign .otherForm, .animateApp .sign page-setting-country-add .otherForm, page-setting-country-add .animateApp .sign .otherForm, .animateApp .sign page-setting-country-edit .otherForm, page-setting-country-edit .animateApp .sign .otherForm, .animateApp .sign page-setting-league-add .otherForm, page-setting-league-add .animateApp .sign .otherForm, .animateApp .sign page-setting-league-edit .otherForm, page-setting-league-edit .animateApp .sign .otherForm, .animateApp .sign page-setting-selection-add .otherForm, page-setting-selection-add .animateApp .sign .otherForm, .animateApp .sign page-setting-selection-edit .otherForm, page-setting-selection-edit .animateApp .sign .otherForm, .animateApp .sign page-setting-team-add .otherForm, page-setting-team-add .animateApp .sign .otherForm, .animateApp .sign page-setting-team-assign .otherForm, page-setting-team-assign .animateApp .sign .otherForm, .animateApp .sign page-setting-team-edit .otherForm, page-setting-team-edit .animateApp .sign .otherForm, .animateApp .sign page-setting-team-manage .otherForm, page-setting-team-manage .animateApp .sign .otherForm, .animateApp .sign page-setting-teams .otherForm, page-setting-teams .animateApp .sign .otherForm, .animateApp page-setting .scroll-content {
+.animateApp .fadeInUp, .animateApp page-home .slides, .animateApp .matchStats, .animateApp page-profile .scroll-content, .animateApp page-top-news-details .scroll-content, .animateApp .sign .signForm, .animateApp .sign page-game-edit .otherForm, page-game-edit .animateApp .sign .otherForm, .animateApp .sign page-game-new .otherForm, page-game-new .animateApp .sign .otherForm, .animateApp .sign page-profile .otherForm, page-profile .animateApp .sign .otherForm, .animateApp .sign page-setting-country-add .otherForm, page-setting-country-add .animateApp .sign .otherForm, .animateApp .sign page-setting-country-edit .otherForm, page-setting-country-edit .animateApp .sign .otherForm, .animateApp .sign page-setting-league-add .otherForm, page-setting-league-add .animateApp .sign .otherForm, .animateApp .sign page-setting-league-edit .otherForm, page-setting-league-edit .animateApp .sign .otherForm, .animateApp .sign page-setting-selection-add .otherForm, page-setting-selection-add .animateApp .sign .otherForm, .animateApp .sign page-setting-selection-edit .otherForm, page-setting-selection-edit .animateApp .sign .otherForm, .animateApp .sign page-setting-team-add .otherForm, page-setting-team-add .animateApp .sign .otherForm, .animateApp .sign page-setting-team-assign .otherForm, page-setting-team-assign .animateApp .sign .otherForm, .animateApp .sign page-setting-team-edit .otherForm, page-setting-team-edit .animateApp .sign .otherForm, .animateApp .sign page-setting-team-manage .otherForm, page-setting-team-manage .animateApp .sign .otherForm, .animateApp .sign page-setting-teams .otherForm, page-setting-teams .animateApp .sign .otherForm, .animateApp page-setting .scroll-content {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
   -webkit-animation-iteration-count: 1;
@@ -48955,29 +48955,153 @@ page-all-matches .list .list-header img {
   background: #3B7A57;
 }
 
-page-android-subscription .item.item-select .label {
-  font-weight: 500;
-  color: #fff;
+page-game-edit .select-searchable {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 65% !important;
 }
 
-page-android-subscription .item.item-select .select .select-icon .select-icon-inner {
-  position: initial;
-  margin: 0px !important;
-  color: #fff !important;
-}
-
-page-android-subscription .item.item-select {
-  min-height: 44px;
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  padding: 0px 0px;
+page-game-edit .otherForm {
+  margin-top: 1em;
   border-radius: 4px;
+  width: calc(100% - 4px* 2) !important;
+  padding: 8px !important;
 }
 
-page-android-subscription .item.item-select .select-text {
-  color: #fff;
-  padding: 0px 8px;
+page-game-edit .otherForm .item {
+  -webkit-transition: height 1s;
+  transition: height 1s;
+}
+
+page-game-edit .otherForm .item .text-input {
+  color: #000;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+page-game-edit .otherForm .item .label {
+  color: #000;
+  font-weight: bold;
+}
+
+page-game-edit .otherForm .item.show {
+  height: 0px !important;
+  -webkit-transition: height 1s;
+  transition: height 1s;
+  margin-bottom: 0px !important;
+}
+
+page-game-edit .otherForm .item.item-input-disabled {
+  border-bottom: none !important;
+}
+
+page-game-edit .otherForm .button {
+  margin-top: 8px !important;
+}
+
+page-game-new .select-searchable {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 65% !important;
+}
+
+page-game-new .otherForm {
+  margin-top: 2em;
+  border-radius: 4px;
+  width: calc(100% - 4px* 2) !important;
+  padding: 8px !important;
+}
+
+page-game-new .otherForm .item {
+  -webkit-transition: height 1s;
+  transition: height 1s;
+}
+
+page-game-new .otherForm .item .text-input {
+  color: #000;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+page-game-new .otherForm .item .label {
+  color: #000;
+  font-weight: bold;
+}
+
+page-game-new .otherForm .item.show {
+  height: 0px !important;
+  -webkit-transition: height 1s;
+  transition: height 1s;
+  margin-bottom: 0px !important;
+}
+
+page-game-new .otherForm .item.item-input-disabled {
+  border-bottom: none !important;
+}
+
+page-game-new .otherForm .button {
+  margin-top: 8px !important;
+}
+
+page-games .fixed-content {
+  height: 40px;
+  background: #0b4040;
+}
+
+page-games .matchItem {
+  background: #fff;
+}
+
+page-games .gamelist {
+  margin-top: 3em !important;
+}
+
+page-games .list {
+  display: block;
+  width: calc(100% - 4px*2);
+  margin: 4px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+page-games .list .list-header {
+  background-color: #efefee;
+  margin-top: 0px !important;
+  height: 40px;
+  padding: 0px 4px;
+}
+
+page-games .list .list-header .item-inner {
+  margin: 0px;
+}
+
+page-games .list .list-header .label {
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 20px;
+  line-height: 20px;
+  display: block;
+}
+
+page-games .list .list-header .icon {
+  font-size: 2rem;
+  width: 22px;
+  text-align: center;
+  min-height: 0px;
+}
+
+page-games .list .list-header img {
+  height: 20px;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 
 page-home .slides {
@@ -49874,6 +49998,14 @@ page-notification .list .item p, page-notification .select-popover .popover-cont
   white-space: normal;
 }
 
+page-payments .tabs-md .tabbar {
+  background: none !important;
+}
+
+page-payments .tabs-md .tab-button {
+  min-height: 4rem !important;
+}
+
 page-photos .photoItem {
   border-radius: 4px;
   margin-bottom: 4px;
@@ -49922,6 +50054,14 @@ page-players-stats .list .item.item-block {
 
 page-players-stats .list .item.item-block:last-of-type {
   border-bottom: none;
+}
+
+page-predictions .tabs-md .tabbar {
+  background: none !important;
+}
+
+page-predictions .tabs-md .tab-button {
+  min-height: 4rem !important;
 }
 
 page-profile .scroll-content {
@@ -51595,56 +51735,56 @@ page-setting-teams .teamMatchs .item.thumbnailItem .matchTime p, page-setting-te
   font-weight: 500;
 }
 
-.signForm, page-profile .otherForm, page-setting-country-add .otherForm, page-setting-country-edit .otherForm, page-setting-league-add .otherForm, page-setting-league-edit .otherForm, page-setting-selection-add .otherForm, page-setting-selection-edit .otherForm, page-setting-team-add .otherForm, page-setting-team-assign .otherForm, page-setting-team-edit .otherForm, page-setting-team-manage .otherForm, page-setting-teams .otherForm {
+.signForm, page-game-edit .otherForm, page-game-new .otherForm, page-profile .otherForm, page-setting-country-add .otherForm, page-setting-country-edit .otherForm, page-setting-league-add .otherForm, page-setting-league-edit .otherForm, page-setting-selection-add .otherForm, page-setting-selection-edit .otherForm, page-setting-team-add .otherForm, page-setting-team-assign .otherForm, page-setting-team-edit .otherForm, page-setting-team-manage .otherForm, page-setting-teams .otherForm {
   display: inline-block;
   width: 100%;
 }
 
-.signForm img, page-profile .otherForm img, page-setting-country-add .otherForm img, page-setting-country-edit .otherForm img, page-setting-league-add .otherForm img, page-setting-league-edit .otherForm img, page-setting-selection-add .otherForm img, page-setting-selection-edit .otherForm img, page-setting-team-add .otherForm img, page-setting-team-assign .otherForm img, page-setting-team-edit .otherForm img, page-setting-team-manage .otherForm img, page-setting-teams .otherForm img {
+.signForm img, page-game-edit .otherForm img, page-game-new .otherForm img, page-profile .otherForm img, page-setting-country-add .otherForm img, page-setting-country-edit .otherForm img, page-setting-league-add .otherForm img, page-setting-league-edit .otherForm img, page-setting-selection-add .otherForm img, page-setting-selection-edit .otherForm img, page-setting-team-add .otherForm img, page-setting-team-assign .otherForm img, page-setting-team-edit .otherForm img, page-setting-team-manage .otherForm img, page-setting-teams .otherForm img {
   width: 70%;
   max-width: 400px;
   margin: 12% 0px 20%;
 }
 
-.signForm ::-webkit-input-placeholder, page-profile .otherForm ::-webkit-input-placeholder, page-setting-country-add .otherForm ::-webkit-input-placeholder, page-setting-country-edit .otherForm ::-webkit-input-placeholder, page-setting-league-add .otherForm ::-webkit-input-placeholder, page-setting-league-edit .otherForm ::-webkit-input-placeholder, page-setting-selection-add .otherForm ::-webkit-input-placeholder, page-setting-selection-edit .otherForm ::-webkit-input-placeholder, page-setting-team-add .otherForm ::-webkit-input-placeholder, page-setting-team-assign .otherForm ::-webkit-input-placeholder, page-setting-team-edit .otherForm ::-webkit-input-placeholder, page-setting-team-manage .otherForm ::-webkit-input-placeholder, page-setting-teams .otherForm ::-webkit-input-placeholder {
+.signForm ::-webkit-input-placeholder, page-game-edit .otherForm ::-webkit-input-placeholder, page-game-new .otherForm ::-webkit-input-placeholder, page-profile .otherForm ::-webkit-input-placeholder, page-setting-country-add .otherForm ::-webkit-input-placeholder, page-setting-country-edit .otherForm ::-webkit-input-placeholder, page-setting-league-add .otherForm ::-webkit-input-placeholder, page-setting-league-edit .otherForm ::-webkit-input-placeholder, page-setting-selection-add .otherForm ::-webkit-input-placeholder, page-setting-selection-edit .otherForm ::-webkit-input-placeholder, page-setting-team-add .otherForm ::-webkit-input-placeholder, page-setting-team-assign .otherForm ::-webkit-input-placeholder, page-setting-team-edit .otherForm ::-webkit-input-placeholder, page-setting-team-manage .otherForm ::-webkit-input-placeholder, page-setting-teams .otherForm ::-webkit-input-placeholder {
   font-weight: bold;
 }
 
-.signForm ::-webkit-textarea-placeholder, page-profile .otherForm ::-webkit-textarea-placeholder, page-setting-country-add .otherForm ::-webkit-textarea-placeholder, page-setting-country-edit .otherForm ::-webkit-textarea-placeholder, page-setting-league-add .otherForm ::-webkit-textarea-placeholder, page-setting-league-edit .otherForm ::-webkit-textarea-placeholder, page-setting-selection-add .otherForm ::-webkit-textarea-placeholder, page-setting-selection-edit .otherForm ::-webkit-textarea-placeholder, page-setting-team-add .otherForm ::-webkit-textarea-placeholder, page-setting-team-assign .otherForm ::-webkit-textarea-placeholder, page-setting-team-edit .otherForm ::-webkit-textarea-placeholder, page-setting-team-manage .otherForm ::-webkit-textarea-placeholder, page-setting-teams .otherForm ::-webkit-textarea-placeholder {
+.signForm ::-webkit-textarea-placeholder, page-game-edit .otherForm ::-webkit-textarea-placeholder, page-game-new .otherForm ::-webkit-textarea-placeholder, page-profile .otherForm ::-webkit-textarea-placeholder, page-setting-country-add .otherForm ::-webkit-textarea-placeholder, page-setting-country-edit .otherForm ::-webkit-textarea-placeholder, page-setting-league-add .otherForm ::-webkit-textarea-placeholder, page-setting-league-edit .otherForm ::-webkit-textarea-placeholder, page-setting-selection-add .otherForm ::-webkit-textarea-placeholder, page-setting-selection-edit .otherForm ::-webkit-textarea-placeholder, page-setting-team-add .otherForm ::-webkit-textarea-placeholder, page-setting-team-assign .otherForm ::-webkit-textarea-placeholder, page-setting-team-edit .otherForm ::-webkit-textarea-placeholder, page-setting-team-manage .otherForm ::-webkit-textarea-placeholder, page-setting-teams .otherForm ::-webkit-textarea-placeholder {
   font-weight: bold;
 }
 
-.signForm :-moz-placeholder, page-profile .otherForm :-moz-placeholder, page-setting-country-add .otherForm :-moz-placeholder, page-setting-country-edit .otherForm :-moz-placeholder, page-setting-league-add .otherForm :-moz-placeholder, page-setting-league-edit .otherForm :-moz-placeholder, page-setting-selection-add .otherForm :-moz-placeholder, page-setting-selection-edit .otherForm :-moz-placeholder, page-setting-team-add .otherForm :-moz-placeholder, page-setting-team-assign .otherForm :-moz-placeholder, page-setting-team-edit .otherForm :-moz-placeholder, page-setting-team-manage .otherForm :-moz-placeholder, page-setting-teams .otherForm :-moz-placeholder {
+.signForm :-moz-placeholder, page-game-edit .otherForm :-moz-placeholder, page-game-new .otherForm :-moz-placeholder, page-profile .otherForm :-moz-placeholder, page-setting-country-add .otherForm :-moz-placeholder, page-setting-country-edit .otherForm :-moz-placeholder, page-setting-league-add .otherForm :-moz-placeholder, page-setting-league-edit .otherForm :-moz-placeholder, page-setting-selection-add .otherForm :-moz-placeholder, page-setting-selection-edit .otherForm :-moz-placeholder, page-setting-team-add .otherForm :-moz-placeholder, page-setting-team-assign .otherForm :-moz-placeholder, page-setting-team-edit .otherForm :-moz-placeholder, page-setting-team-manage .otherForm :-moz-placeholder, page-setting-teams .otherForm :-moz-placeholder {
   font-weight: bold;
 }
 
-.signForm ::-moz-placeholder, page-profile .otherForm ::-moz-placeholder, page-setting-country-add .otherForm ::-moz-placeholder, page-setting-country-edit .otherForm ::-moz-placeholder, page-setting-league-add .otherForm ::-moz-placeholder, page-setting-league-edit .otherForm ::-moz-placeholder, page-setting-selection-add .otherForm ::-moz-placeholder, page-setting-selection-edit .otherForm ::-moz-placeholder, page-setting-team-add .otherForm ::-moz-placeholder, page-setting-team-assign .otherForm ::-moz-placeholder, page-setting-team-edit .otherForm ::-moz-placeholder, page-setting-team-manage .otherForm ::-moz-placeholder, page-setting-teams .otherForm ::-moz-placeholder {
+.signForm ::-moz-placeholder, page-game-edit .otherForm ::-moz-placeholder, page-game-new .otherForm ::-moz-placeholder, page-profile .otherForm ::-moz-placeholder, page-setting-country-add .otherForm ::-moz-placeholder, page-setting-country-edit .otherForm ::-moz-placeholder, page-setting-league-add .otherForm ::-moz-placeholder, page-setting-league-edit .otherForm ::-moz-placeholder, page-setting-selection-add .otherForm ::-moz-placeholder, page-setting-selection-edit .otherForm ::-moz-placeholder, page-setting-team-add .otherForm ::-moz-placeholder, page-setting-team-assign .otherForm ::-moz-placeholder, page-setting-team-edit .otherForm ::-moz-placeholder, page-setting-team-manage .otherForm ::-moz-placeholder, page-setting-teams .otherForm ::-moz-placeholder {
   font-weight: bold;
 }
 
-.signForm :-ms-input-placeholder, page-profile .otherForm :-ms-input-placeholder, page-setting-country-add .otherForm :-ms-input-placeholder, page-setting-country-edit .otherForm :-ms-input-placeholder, page-setting-league-add .otherForm :-ms-input-placeholder, page-setting-league-edit .otherForm :-ms-input-placeholder, page-setting-selection-add .otherForm :-ms-input-placeholder, page-setting-selection-edit .otherForm :-ms-input-placeholder, page-setting-team-add .otherForm :-ms-input-placeholder, page-setting-team-assign .otherForm :-ms-input-placeholder, page-setting-team-edit .otherForm :-ms-input-placeholder, page-setting-team-manage .otherForm :-ms-input-placeholder, page-setting-teams .otherForm :-ms-input-placeholder {
+.signForm :-ms-input-placeholder, page-game-edit .otherForm :-ms-input-placeholder, page-game-new .otherForm :-ms-input-placeholder, page-profile .otherForm :-ms-input-placeholder, page-setting-country-add .otherForm :-ms-input-placeholder, page-setting-country-edit .otherForm :-ms-input-placeholder, page-setting-league-add .otherForm :-ms-input-placeholder, page-setting-league-edit .otherForm :-ms-input-placeholder, page-setting-selection-add .otherForm :-ms-input-placeholder, page-setting-selection-edit .otherForm :-ms-input-placeholder, page-setting-team-add .otherForm :-ms-input-placeholder, page-setting-team-assign .otherForm :-ms-input-placeholder, page-setting-team-edit .otherForm :-ms-input-placeholder, page-setting-team-manage .otherForm :-ms-input-placeholder, page-setting-teams .otherForm :-ms-input-placeholder {
   font-weight: bold;
 }
 
-.signForm .item, page-profile .otherForm .item, page-setting-country-add .otherForm .item, page-setting-country-edit .otherForm .item, page-setting-league-add .otherForm .item, page-setting-league-edit .otherForm .item, page-setting-selection-add .otherForm .item, page-setting-selection-edit .otherForm .item, page-setting-team-add .otherForm .item, page-setting-team-assign .otherForm .item, page-setting-team-edit .otherForm .item, page-setting-team-manage .otherForm .item, page-setting-teams .otherForm .item {
+.signForm .item, page-game-edit .otherForm .item, page-game-new .otherForm .item, page-profile .otherForm .item, page-setting-country-add .otherForm .item, page-setting-country-edit .otherForm .item, page-setting-league-add .otherForm .item, page-setting-league-edit .otherForm .item, page-setting-selection-add .otherForm .item, page-setting-selection-edit .otherForm .item, page-setting-team-add .otherForm .item, page-setting-team-assign .otherForm .item, page-setting-team-edit .otherForm .item, page-setting-team-manage .otherForm .item, page-setting-teams .otherForm .item {
   height: 40px;
   border-bottom: 2px solid #888ba7 !important;
   margin-bottom: 8px;
 }
 
-.signForm .item .icon[item-left], page-profile .otherForm .item .icon[item-left], page-setting-country-add .otherForm .item .icon[item-left], page-setting-country-edit .otherForm .item .icon[item-left], page-setting-league-add .otherForm .item .icon[item-left], page-setting-league-edit .otherForm .item .icon[item-left], page-setting-selection-add .otherForm .item .icon[item-left], page-setting-selection-edit .otherForm .item .icon[item-left], page-setting-team-add .otherForm .item .icon[item-left], page-setting-team-assign .otherForm .item .icon[item-left], page-setting-team-edit .otherForm .item .icon[item-left], page-setting-team-manage .otherForm .item .icon[item-left], page-setting-teams .otherForm .item .icon[item-left] {
+.signForm .item .icon[item-left], page-game-edit .otherForm .item .icon[item-left], page-game-new .otherForm .item .icon[item-left], page-profile .otherForm .item .icon[item-left], page-setting-country-add .otherForm .item .icon[item-left], page-setting-country-edit .otherForm .item .icon[item-left], page-setting-league-add .otherForm .item .icon[item-left], page-setting-league-edit .otherForm .item .icon[item-left], page-setting-selection-add .otherForm .item .icon[item-left], page-setting-selection-edit .otherForm .item .icon[item-left], page-setting-team-add .otherForm .item .icon[item-left], page-setting-team-assign .otherForm .item .icon[item-left], page-setting-team-edit .otherForm .item .icon[item-left], page-setting-team-manage .otherForm .item .icon[item-left], page-setting-teams .otherForm .item .icon[item-left] {
   font-size: 1.65rem;
   min-height: 0px;
   width: 22px;
   text-align: center;
 }
 
-.signForm .item .text-input, page-profile .otherForm .item .text-input, page-setting-country-add .otherForm .item .text-input, page-setting-country-edit .otherForm .item .text-input, page-setting-league-add .otherForm .item .text-input, page-setting-league-edit .otherForm .item .text-input, page-setting-selection-add .otherForm .item .text-input, page-setting-selection-edit .otherForm .item .text-input, page-setting-team-add .otherForm .item .text-input, page-setting-team-assign .otherForm .item .text-input, page-setting-team-edit .otherForm .item .text-input, page-setting-team-manage .otherForm .item .text-input, page-setting-teams .otherForm .item .text-input {
+.signForm .item .text-input, page-game-edit .otherForm .item .text-input, page-game-new .otherForm .item .text-input, page-profile .otherForm .item .text-input, page-setting-country-add .otherForm .item .text-input, page-setting-country-edit .otherForm .item .text-input, page-setting-league-add .otherForm .item .text-input, page-setting-league-edit .otherForm .item .text-input, page-setting-selection-add .otherForm .item .text-input, page-setting-selection-edit .otherForm .item .text-input, page-setting-team-add .otherForm .item .text-input, page-setting-team-assign .otherForm .item .text-input, page-setting-team-edit .otherForm .item .text-input, page-setting-team-manage .otherForm .item .text-input, page-setting-teams .otherForm .item .text-input {
   margin: 0px;
   width: 100%;
 }
 
-.signForm .button, page-profile .otherForm .button, page-setting-country-add .otherForm .button, page-setting-country-edit .otherForm .button, page-setting-league-add .otherForm .button, page-setting-league-edit .otherForm .button, page-setting-selection-add .otherForm .button, page-setting-selection-edit .otherForm .button, page-setting-team-add .otherForm .button, page-setting-team-assign .otherForm .button, page-setting-team-edit .otherForm .button, page-setting-team-manage .otherForm .button, page-setting-teams .otherForm .button {
+.signForm .button, page-game-edit .otherForm .button, page-game-new .otherForm .button, page-profile .otherForm .button, page-setting-country-add .otherForm .button, page-setting-country-edit .otherForm .button, page-setting-league-add .otherForm .button, page-setting-league-edit .otherForm .button, page-setting-selection-add .otherForm .button, page-setting-selection-edit .otherForm .button, page-setting-team-add .otherForm .button, page-setting-team-assign .otherForm .button, page-setting-team-edit .otherForm .button, page-setting-team-manage .otherForm .button, page-setting-teams .otherForm .button {
   margin-top: 40px;
 }
 
@@ -51674,6 +51814,31 @@ page-sign-up .backBtn.activated {
 
 page-sign-up .mr-2 {
   margin-right: 0.4em;
+}
+
+page-subscription-android .item.item-select .label {
+  font-weight: 500;
+  color: #fff;
+}
+
+page-subscription-android .item.item-select .select .select-icon .select-icon-inner {
+  position: initial;
+  margin: 0px !important;
+  color: #fff !important;
+}
+
+page-subscription-android .item.item-select {
+  min-height: 44px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  padding: 0px 0px;
+  border-radius: 4px;
+}
+
+page-subscription-android .item.item-select .select-text {
+  color: #fff;
+  padding: 0px 8px;
 }
 
 page-team .photoItem {

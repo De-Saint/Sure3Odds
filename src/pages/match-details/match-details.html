@@ -4,11 +4,6 @@
       <ion-icon class="goal-menu"></ion-icon>
     </button>
     <ion-title>Match Details</ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only navPush="NotificationPage">
-        <ion-icon name="md-notifications"></ion-icon>
-      </button>
-    </ion-buttons>
   </ion-navbar>
   <ion-toolbar class="matchResultBar">
     <!-- match item  -->
@@ -26,11 +21,11 @@
           <!-- match time -->
           <ion-col col-auto>
             <div class="result">
-              <span ion-text color="color1">{{match?.homeTeamScore}}</span>
+              <span ion-text color="color1">{{match?.hometeamscore}}</span>
               <span ion-text style="padding: 0.3em;" color="color1">-</span>
-              <span ion-text color="color1">{{match?.awayTeamScore}}</span>
+              <span ion-text color="color1">{{match?.awayteamscore}}</span>
             </div>
-            <p ion-text color="light" text-center>{{match?.status}}</p>
+            <p ion-text color="light" text-center>{{match?.status.name}}</p>
           </ion-col>
           <!-- second team -->
           <ion-col col>
@@ -90,15 +85,15 @@
             </ion-col>
           </ion-row>
           <ion-row>
-            <ion-col col-5>
+            <ion-col col-4>
               <div class="progressBar" progress-right>
                 <span class="container"></span>
               </div>
             </ion-col>
-            <ion-col col-2 text-center>
-              <p ion-text color="dark" no-margin>{{match.selection.name}}</p>
+            <ion-col col-4 text-center>
+              <p ion-text color="dark" no-margin>{{match.selections.name}}</p>
             </ion-col>
-            <ion-col col-5>
+            <ion-col col-4>
               <div class="progressBar">
                 <span class="container"></span>
               </div>
@@ -106,30 +101,7 @@
           </ion-row>
         </ion-grid>
       </ion-item>
-      <ion-item style="margin-bottom: 0.5em;">
-        <ion-grid>
-          <ion-row>
-            <ion-col col text-center>
-              <p ion-text color="dark" no-margin>Confidence Level</p>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col col-5>
-              <div class="progressBar" progress-right>
-                <span class="container"></span>
-              </div>
-            </ion-col>
-            <ion-col col-2 text-center>
-              <p ion-text color="dark" no-margin>{{match.confidenceLevel}}</p>
-            </ion-col>
-            <ion-col col-5>
-              <div class="progressBar">
-                <span class="container"></span>
-              </div>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-item>
+
       <ion-item style="margin-bottom: 0.5em;">
         <ion-grid>
           <ion-row>
@@ -144,7 +116,7 @@
               </div>
             </ion-col>
             <ion-col col-2 text-center>
-              <p ion-text color="dark" no-margin>{{match.matchTime}}</p>
+              <p ion-text color="dark" no-margin>{{match.matchtime}}</p>
             </ion-col>
             <ion-col col-5>
               <div class="progressBar">
@@ -168,7 +140,7 @@
               </div>
             </ion-col>
             <ion-col col-4 text-center>
-              <p ion-text color="dark" no-margin>{{match.matchDate}}</p>
+              <p ion-text color="dark" no-margin>{{match.matchdate}}</p>
             </ion-col>
             <ion-col col-4>
               <div class="progressBar">

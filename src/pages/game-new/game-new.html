@@ -1,0 +1,102 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add New Game</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="otherForm">
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          Select The Set
+        </ion-label>
+        <select-searchable item-content [(ngModel)]="game.sets" (onChange)="onSelectSets($event)" [items]="sets"
+          itemValueField="id" [canClear]="true" clearButtonText="Clear Selected" confirmButtonText="Proceed"
+          itemTextField="name" [canSearch]="true">
+        </select-searchable>
+      </ion-item>
+      <hr ion-text margin-top margin-bottom>
+      <ion-item>
+        <ion-label>
+          Select The Country
+        </ion-label>
+        <select-searchable item-content [(ngModel)]="game.country" (onChange)="onSelectCountry($event)"
+          [items]="countries" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"
+          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">
+
+        </select-searchable>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          Select The League
+        </ion-label>
+        <select-searchable item-content [(ngModel)]="game.league" (onChange)="onSelectLeague($event)"
+          [items]="leagues" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"
+          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">
+
+        </select-searchable>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          Select The Home Team
+        </ion-label>
+        <select-searchable item-content [(ngModel)]="game.hometeam" (onChange)="onSelectHTeam($event)"
+          [items]="hometeams" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"
+          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">
+
+        </select-searchable>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label>
+          Select The Away Team
+        </ion-label>
+        <select-searchable item-content [(ngModel)]="game.awayteam" (onChange)="onSelectATeam($event)"
+          [items]="awayteams" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"
+          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">
+
+        </select-searchable>
+
+      </ion-item>
+      <hr margin-top margin-bottom>
+      <ion-item>
+        <ion-label>
+          Select The selection
+        </ion-label>
+        <select-searchable item-content [(ngModel)]="game.selections" (onChange)="onSelectSelection($event)"
+          [items]="selections" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"
+          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">
+
+        </select-searchable>
+
+      </ion-item>
+      <hr margin-top margin-bottom>
+     
+      <ion-item>
+        <ion-label>
+          Match Date
+        </ion-label>
+        <ion-datetime [(ngModel)]="game.matchdate" required displayFormat="YYYY-MM-DD" min="2017" max="2050-12-31">
+        </ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          Match Time
+        </ion-label>
+        <ion-datetime displayFormat="h:mm A" required [(ngModel)]="game.matchtime"></ion-datetime>
+      </ion-item>
+      <hr margin-top margin-bottom>
+      <ion-item>
+        <ion-label stacked>Odds</ion-label>
+        <ion-input type="text" required [(ngModel)]="game.odds"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button block color="color2" (click)="onSubmit(game)">Submit</button>
+  </div>
+</ion-content>

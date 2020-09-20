@@ -1,6 +1,8 @@
-import { NewUser, AuthenicationProvider } from './../../providers/authenication/authenication';
+import { AuthenicationProvider } from './../../providers/authenication/authenication';
+
 import { Component } from '@angular/core';
 import { IonicPage, NavController, Platform } from 'ionic-angular';
+import { NewUsers } from '../../interfaces/NewUser';
 
 @IonicPage()
 @Component({
@@ -8,14 +10,13 @@ import { IonicPage, NavController, Platform } from 'ionic-angular';
   templateUrl: 'sign-up.html',
 })
 export class SignUpPage {
-  newuser: NewUser = new NewUser("", "", "", "", "", "", "", {id:""}, "");
+  newuser: NewUsers = new NewUsers("","","","","","","",{id:""},"",{id:""});
 
   constructor(public navCtrl: NavController,
     private platform: Platform, private auth: AuthenicationProvider
   ) {
 
   }
-
 
   createAccount(page) {
     if (this.newuser.firstname == "" || this.newuser.firstname == undefined || this.newuser.firstname == null) {

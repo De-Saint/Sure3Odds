@@ -1,14 +1,14 @@
 webpackJsonp([27],{
 
-/***/ 734:
+/***/ 742:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingSelectionsPageModule", function() { return SettingSelectionsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignInPageModule", function() { return SignInPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_selections__ = __webpack_require__(802);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sign_in__ = __webpack_require__(815);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SettingSelectionsPageModule = /** @class */ (function () {
-    function SettingSelectionsPageModule() {
+var SignInPageModule = /** @class */ (function () {
+    function SignInPageModule() {
     }
-    SettingSelectionsPageModule = __decorate([
+    SignInPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__setting_selections__["a" /* SettingSelectionsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__sign_in__["a" /* SignInPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_selections__["a" /* SettingSelectionsPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__sign_in__["a" /* SignInPage */]),
             ],
         })
-    ], SettingSelectionsPageModule);
-    return SettingSelectionsPageModule;
+    ], SignInPageModule);
+    return SignInPageModule;
 }());
 
-//# sourceMappingURL=setting-selections.module.js.map
+//# sourceMappingURL=sign-in.module.js.map
 
 /***/ }),
 
-/***/ 802:
+/***/ 815:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingSelectionsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_games_games__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(20);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignInPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(88);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -60,129 +60,66 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var SettingSelectionsPage = /** @class */ (function () {
-    function SettingSelectionsPage(navCtrl, authProvider, gamesProvider, navParams) {
+var SignInPage = /** @class */ (function () {
+    function SignInPage(navCtrl, storage, events, auth) {
         this.navCtrl = navCtrl;
-        this.authProvider = authProvider;
-        this.gamesProvider = gamesProvider;
-        this.navParams = navParams;
-        this.currentPage = 1;
-        this.totalPage = 0;
-        this.perPage = 0;
-        this.totalData = 0;
+        this.storage = storage;
+        this.events = events;
+        this.auth = auth;
+        this.submitted = false;
+        this.passwordType = 'password';
+        this.passwordIcon = 'eye-off';
+        this.HAS_LOGGED_IN = 'hasLoggedIn';
+        this.login = {};
     }
-    SettingSelectionsPage.prototype.ionViewWillEnter = function () {
-        this.GetSelections();
+    SignInPage.prototype.ngOnInit = function () {
     };
-    SettingSelectionsPage.prototype.GetSelections = function () {
+    SignInPage.prototype.onLogin = function (form, page) {
         var _this = this;
-        this.gamesProvider.GetSelections(0, 20)
-            .subscribe(function (resp) {
-            if (resp.statusCode === 200) {
-                _this.selections = resp.data.content;
-                _this.currentPage = resp.data.number;
-                _this.totalPage = resp.data.totalPages;
-                _this.totalData = resp.data.totalElements;
-                _this.perPage = resp.data.size;
-                _this.originalselections = _this.selections;
-                console.log(_this.currentPage, _this.totalPage, _this.totalData, _this.perPage);
-                _this.noselections = 'selections';
-            }
-            else {
-                console.log(resp.description);
-            }
-        }, function (error) {
-            console.log(JSON.stringify(error));
-            _this.error = 'none';
-            _this.authProvider.showToast(error.error.description);
-        });
-    };
-    SettingSelectionsPage.prototype.onSearch = function () {
-        var _this = this;
-        var searchvalue = this.searchTerm;
-        if (searchvalue.trim() === '') {
-            this.selections = this.originalselections;
-        }
-        else {
-            if (searchvalue.length >= 3) {
-                this.gamesProvider.SearchSelections(searchvalue, 0, 20)
-                    .subscribe(function (resp) {
-                    console.log(resp);
-                    if (resp.statusCode === 200) {
-                        _this.selections = resp.data.content;
-                        _this.currentPage = resp.data.number;
-                        _this.totalPage = resp.data.totalPages;
-                        _this.totalData = resp.data.totalElements;
-                        _this.perPage = resp.data.size;
-                        console.log(_this.currentPage, _this.totalPage, _this.totalData, _this.perPage);
-                    }
-                    else {
-                        console.log(resp.description);
-                    }
-                }, function (error) {
-                    console.log(JSON.stringify(error));
-                    _this.error = 'none';
-                    _this.authProvider.showToast(error.error.description);
-                });
-            }
-        }
-    };
-    SettingSelectionsPage.prototype.onClear = function (ev) {
-        this.searchTerm = "";
-        this.selections = this.originalselections;
-    };
-    SettingSelectionsPage.prototype.onCancel = function (ev) {
-        this.searchTerm = "";
-        this.selections = this.originalselections;
-    };
-    SettingSelectionsPage.prototype.scrollInfinite = function (event) {
-        var _this = this;
-        this.currentPage += 1;
-        setTimeout(function () {
-            _this.gamesProvider.GetSelections(_this.currentPage, _this.perPage)
+        this.submitted = true;
+        if (form.valid) {
+            this.auth.login(this.login.email, this.login.password)
                 .subscribe(function (resp) {
                 if (resp.statusCode === 200) {
-                    _this.currentPage = resp.data.number;
-                    _this.totalPage = resp.data.totalPages;
-                    _this.totalData = resp.data.totalElements;
-                    _this.perPage = resp.data.size;
-                    console.log(_this.currentPage, _this.totalPage, _this.totalData, _this.perPage);
-                    _this.noselections = 'countries';
-                    for (var i = 0; i < resp.data.content.length; i++) {
-                        _this.selections.push(resp.data.content[i]);
-                    }
+                    _this.gotoHomePage(resp.data, page);
                 }
                 else {
-                    console.log(resp.description);
+                    _this.auth.showToast(resp.description);
                 }
-                event.complete();
             }, function (error) {
-                console.log("End of the countries.");
-                _this.noselections = 'none';
-                event.complete();
+                console.log(error);
+                // this.auth.showToast(error.error.message);
             });
-        }, 1000);
+        }
     };
-    SettingSelectionsPage.prototype.onGotoTop = function () {
-        this.content.scrollToTop();
+    SignInPage.prototype.hideShowPassword = function () {
+        this.passwordType = this.passwordType === 'text' ? 'password' : 'text';
+        this.passwordIcon = this.passwordIcon === 'eye-off' ? 'eye' : 'eye-off';
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["Content"]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["Content"])
-    ], SettingSelectionsPage.prototype, "content", void 0);
-    SettingSelectionsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: 'page-setting-selections',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-selections/setting-selections.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Selections</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only navPush="SettingSelectionAddPage">\n        <ion-icon name="add-circle"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-searchbar [(ngModel)]="searchTerm" (ionCancel)="onCancel($event)" [showCancelButton]="true"\n  (ionClear)="onClear($event)" (ionInput)="onSearch()">\n</ion-searchbar>\n<div class="leagueStats">\n  <ion-list *ngFor="let selection of selections">\n    <ion-item class="thumbnailItem" navPush="SettingSelectionEditPage" [navParams]="selection">\n      <h5 ion-text style="padding-left: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;     height: auto"  color="dark">{{selection.name}}</h5>\n    </ion-item>\n  </ion-list>\n\n</div>\n\n<div class="" *ngIf="error">\n  <p ion-text text-center color="color2">No result found!</p>\n</div>\n<div text-center margin-top margin-bottonm  *ngIf="noselections === \'none\'" (click)="onGotoTop()">\n  <button ion-button  small color="color2">Back to Top</button>\n</div>\n<ion-infinite-scroll (ionInfinite)="scrollInfinite($event)" *ngIf="currentPage < totalPage">\n  <ion-infinite-scroll-content  loadingSpinner="bubbles"\n  loadingText="Loading page {{currentPage}} of {{totalPage}}">\n  </ion-infinite-scroll-content>\n</ion-infinite-scroll>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-selections/setting-selections.html"*/,
+    SignInPage.prototype.gotoHomePage = function (data, page) {
+        var _this = this;
+        this.navCtrl.setRoot(page).then(function () {
+            _this.storage.ready().then(function () {
+                _this.storage.set("hasSeenLogin", true);
+                var name = _this.auth.currentUserDataValue.name;
+                var type = _this.auth.currentUserDataValue.user_type;
+                _this.auth.showToast("Welcome " + name);
+                _this.events.publish('user:login', type, name);
+            });
+        });
+    };
+    SignInPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
+            selector: 'page-sign-in',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/sign-in/sign-in.html"*/'<ion-content class="sign" style="background-image:url(\'assets/imgs/welcome3.jpg\')">\n\n  <form #loginForm="ngForm">\n    <div class="signForm">\n      <img src="assets/imgs/appicon.png" style="width: 8em; height: 8em;" />\n      <p ion-text color="light">Sure3Odds</p>\n      <ion-list>\n        <ion-item>\n          <ion-icon name="md-mail" item-left color="light"></ion-icon>\n          <ion-input type="email" [(ngModel)]="login.email" name="email" required placeholder="E-mail"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-icon name="md-lock" item-left color="light"></ion-icon>\n          <ion-input [type]="passwordType" clearOnEdit="false" type="password" [(ngModel)]="login.password"\n            name="password" required placeholder="Password"></ion-input>\n          <ion-icon name="eye-off" item-right color="light" style="font-size: large; margin-top: 0.5em !important;"\n            [name]="passwordIcon" class="passwordIcon" (click)=\'hideShowPassword()\'></ion-icon>\n        </ion-item>\n      </ion-list>\n      <button class="" ion-button block color="color2" (click)="onLogin(loginForm, \'AllMatchesPage\')"\n        type="submit">LOGIN</button>\n      <p ion-text color="light" navPush="SignUpPage">No account yet ? Create one</p>\n      <p ion-text color="light">Bet responsively 18+ || <span ion-text color="light" navPush="FreeTipsPage">Free Tips\n          ||</span></p>\n    </div>\n  </form>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/sign-in/sign-in.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"],
-            __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */],
-            __WEBPACK_IMPORTED_MODULE_0__providers_games_games__["a" /* GamesProvider */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"]])
-    ], SettingSelectionsPage);
-    return SettingSelectionsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavController"],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["Events"],
+            __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */]])
+    ], SignInPage);
+    return SignInPage;
 }());
 
-//# sourceMappingURL=setting-selections.js.map
+//# sourceMappingURL=sign-in.js.map
 
 /***/ })
 

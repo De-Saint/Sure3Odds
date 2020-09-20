@@ -1,14 +1,14 @@
 webpackJsonp([45],{
 
-/***/ 710:
+/***/ 715:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewGamePageModule", function() { return NewGamePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaymentPlantypesPageModule", function() { return PaymentPlantypesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__new_game__ = __webpack_require__(776);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__payment_plantypes__ = __webpack_require__(786);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var NewGamePageModule = /** @class */ (function () {
-    function NewGamePageModule() {
+var PaymentPlantypesPageModule = /** @class */ (function () {
+    function PaymentPlantypesPageModule() {
     }
-    NewGamePageModule = __decorate([
+    PaymentPlantypesPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__new_game__["a" /* NewGamePage */],
+                __WEBPACK_IMPORTED_MODULE_2__payment_plantypes__["a" /* PaymentPlantypesPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__new_game__["a" /* NewGamePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__payment_plantypes__["a" /* PaymentPlantypesPage */]),
             ],
         })
-    ], NewGamePageModule);
-    return NewGamePageModule;
+    ], PaymentPlantypesPageModule);
+    return PaymentPlantypesPageModule;
 }());
 
-//# sourceMappingURL=new-game.module.js.map
+//# sourceMappingURL=payment-plantypes.module.js.map
 
 /***/ }),
 
-/***/ 776:
+/***/ 786:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewGamePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PaymentPlantypesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -56,30 +56,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/**
- * Generated class for the NewGamePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var NewGamePage = /** @class */ (function () {
-    function NewGamePage(navCtrl, navParams) {
+var PaymentPlantypesPage = /** @class */ (function () {
+    function PaymentPlantypesPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    NewGamePage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad NewGamePage');
+    PaymentPlantypesPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad PaymentPlantypesPage');
     };
-    NewGamePage = __decorate([
+    PaymentPlantypesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-new-game',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/new-game/new-game.html"*/'<!--\n  Generated template for the NewGamePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>newGame</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/new-game/new-game.html"*/,
+            selector: 'page-payment-plantypes',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payment-plantypes/payment-plantypes.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Plan Types </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payment-plantypes/payment-plantypes.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
-    ], NewGamePage);
-    return NewGamePage;
+    ], PaymentPlantypesPage);
+    return PaymentPlantypesPage;
 }());
 
-//# sourceMappingURL=new-game.js.map
+//# sourceMappingURL=payment-plantypes.js.map
 
 /***/ })
 
