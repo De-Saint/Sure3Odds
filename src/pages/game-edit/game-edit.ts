@@ -50,7 +50,7 @@ export class GameEditPage {
           this.authProvider.showToast(resp.description);
         }
       }, error => {
-        this.authProvider.showToast(error.error.description);
+        this.authProvider.showToast(error.error.error);
       });
   }
 
@@ -86,7 +86,7 @@ export class GameEditPage {
           }
         }, error => {
           loading.dismiss().catch(() => { });
-          this.authProvider.showToast(error.error.description);
+          this.authProvider.showToast(error.error.error);
         });
     }
 
@@ -111,7 +111,7 @@ export class GameEditPage {
           }
         }, error => {
           loading.dismiss().catch(() => { });
-          this.authProvider.showToast(error.error.description);
+          this.authProvider.showToast(error.error.error);
         });
     }
 
@@ -182,7 +182,7 @@ export class GameEditPage {
           this.authProvider.showToast(resp.description);
         }
       }, error => {
-        this.authProvider.showToast(error.error.description);
+        this.authProvider.showToast(error.error.error);
       });
   }
   GetSets() {
@@ -194,7 +194,7 @@ export class GameEditPage {
           this.authProvider.showToast(resp.description);
         }
       }, error => {
-        this.authProvider.showToast(error.error.description);
+        this.authProvider.showToast(error.error.error);
       });
   }
   GetStatus() {
@@ -206,7 +206,7 @@ export class GameEditPage {
           this.authProvider.showToast(resp.description);
         }
       }, error => {
-        this.authProvider.showToast(error.error.description);
+        this.authProvider.showToast(error.error.error);
       });
   }
 

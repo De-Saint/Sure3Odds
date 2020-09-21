@@ -15,6 +15,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { GamesProvider } from '../providers/games/games';
 
 import { SelectSearchableModule } from 'ionic-select-searchable';
+import { PaymentsProvider } from '../providers/payments/payments';
 
 var config = {
   backButtonText: '',
@@ -50,6 +51,7 @@ var config = {
     AuthenicationProvider, GamesProvider,
     { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptorProvider, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptorProvider, multi: true },
+    PaymentsProvider,
 
   ]
 })

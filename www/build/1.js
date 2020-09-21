@@ -1,6 +1,6 @@
 webpackJsonp([1],{
 
-/***/ 745:
+/***/ 746:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,8 +8,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SubscriptionAndroidPageModule", function() { return SubscriptionAndroidPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__subscription_android__ = __webpack_require__(818);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular4_paystack__ = __webpack_require__(819);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__subscription_android__ = __webpack_require__(825);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular4_paystack__ = __webpack_require__(826);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -42,13 +42,13 @@ var SubscriptionAndroidPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 763:
+/***/ 762:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewUsers; });
 var NewUsers = /** @class */ (function () {
-    function NewUsers(id, email, firstname, lastname, referencecode, password, phone, plantype, platform, usertype) {
+    function NewUsers(id, email, firstname, lastname, referencecode, password, phone, plantype, platform, usertypes, status) {
         this.id = id;
         this.email = email;
         this.firstname = firstname;
@@ -58,7 +58,8 @@ var NewUsers = /** @class */ (function () {
         this.phone = phone;
         this.plantype = plantype;
         this.platform = platform;
-        this.usertype = usertype;
+        this.usertypes = usertypes;
+        this.status = status;
     }
     return NewUsers;
 }());
@@ -67,13 +68,13 @@ var NewUsers = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 818:
+/***/ 825:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SubscriptionAndroidPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interfaces_NewUser__ = __webpack_require__(763);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interfaces_NewUser__ = __webpack_require__(762);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(88);
@@ -99,7 +100,7 @@ var SubscriptionAndroidPage = /** @class */ (function () {
         this.navCtrl = navCtrl;
         this.auth = auth;
         this.navParams = navParams;
-        this.newuser = new __WEBPACK_IMPORTED_MODULE_1__interfaces_NewUser__["a" /* NewUsers */]("", "", "", "", "", "", "", { id: "" }, "", { id: "" });
+        this.newuser = new __WEBPACK_IMPORTED_MODULE_1__interfaces_NewUser__["a" /* NewUsers */]("", "", "", "", "", "", "", { id: "" }, "", { id: "", name: "" }, { id: "", name: "" });
         this.public_key = 'pk_test_b3685f824518679567d6356e2636fc184878e833'; //Put your paystack Test or Live Key here
         this.channels = ['card']; //Paystack Payment Methods
         this.random_id = Math.floor(Date.now() / 1000); //Line to generate reference number
@@ -144,7 +145,7 @@ var SubscriptionAndroidPage = /** @class */ (function () {
             loading_1.present();
             this.newuser.platform = "Android";
             this.newuser.referencecode = String(ref.reference);
-            this.newuser.usertype.id = 1;
+            this.newuser.usertypes = { id: 2, name: "" };
             console.log(this.newuser);
             this.auth.createNewUser(this.newuser).subscribe(function (resp) {
                 if (resp.statusCode === 200) {
@@ -201,7 +202,7 @@ var SubscriptionAndroidPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 819:
+/***/ 826:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -211,7 +212,7 @@ var SubscriptionAndroidPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Angular4PaystackModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(44);
 
 
 

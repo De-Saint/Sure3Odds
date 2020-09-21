@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle icon-only>
+      <ion-icon class="goal-menu"></ion-icon>
+    </button>
+    <ion-title>Plans </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="teamMatchs">
+    <ion-list >
+      <ion-item class="thumbnailItem" *ngFor="let item of teams" navPush="MatchDetailsPage">
+        <ion-thumbnail item-left>
+          <!-- Team image -->
+          <img src="{{item.img}}" navPush="TeamPage"/>
+        </ion-thumbnail>
+        <ion-grid no-padding>
+          <ion-row>
+            <ion-col col-6>
+              <!-- team Name -->
+              <h5 ion-text color="dark" navPush="TeamPage">{{item.team}}</h5>
+              <!-- League Name -->
+              <p ion-text color="dark">{{item.league}}</p>
+            </ion-col>
+            <ion-col col-6>
+              <p ion-text color="dark">Dec 13,2017</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <!-- Time -->
+        <div class="matchTime" item-right  *ngIf="item.result==''">
+          <span ion-text color="color1">{{item.time}}</span>
+          <p ion-text color="color2">Next Match</p>
+        </div>
+        <!-- Time -->
+        <div class="matchResult" item-right *ngIf="item.result!=''">
+            <span ion-text color="color1"  >{{item.result}}</span>
+          <p ion-text color="color2">Full Time</p>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

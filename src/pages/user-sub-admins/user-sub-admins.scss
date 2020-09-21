@@ -1,3 +1,43 @@
 page-user-sub-admins {
+    .photoItem{
+        border-radius:$control-radius;
+        @extend %outerShadow;
+        margin-bottom:$content-padding;
+    }
+    .item.avatarItem ion-avatar img, .item.thumbnailItem ion-avatar img {
+        width: 40px;
+        height: 40px;
+    }
 
+    .squad{
+        margin:$content-padding;
+        width:calc(100% - #{$content-padding}*2);
+        border-radius:$control-radius;
+        border-bottom:1px solid color($colors,color4);
+        .list{
+            display:inline-block;
+            padding:$content-padding 0px;
+            margin:0px $content-padding;  
+            width: calc(100% - #{$content-padding}*2);
+            
+            &:last-of-type{
+                border-bottom:thick;
+            }
+        }
+        .item{
+            &.list-header{
+                margin:0px 0px $content-padding!important;
+                h5{
+                    margin:0px;
+                    font-weight:500;
+                    @include whiteNormal(20px,1);
+                }
+            }
+            &.avatarItem{
+                padding:2px;
+                width:100%;
+            }
+            border-bottom:1px solid color($colors,color4);
+        }
+    }
 }

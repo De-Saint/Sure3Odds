@@ -1,14 +1,14 @@
 webpackJsonp([46],{
 
-/***/ 714:
+/***/ 719:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaymentDetailsPageModule", function() { return PaymentDetailsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PhotosPageModule", function() { return PhotosPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__payment_details__ = __webpack_require__(785);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__photos__ = __webpack_require__(796);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var PaymentDetailsPageModule = /** @class */ (function () {
-    function PaymentDetailsPageModule() {
+var PhotosPageModule = /** @class */ (function () {
+    function PhotosPageModule() {
     }
-    PaymentDetailsPageModule = __decorate([
+    PhotosPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__payment_details__["a" /* PaymentDetailsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__photos__["a" /* PhotosPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__payment_details__["a" /* PaymentDetailsPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__photos__["a" /* PhotosPage */]),
             ],
         })
-    ], PaymentDetailsPageModule);
-    return PaymentDetailsPageModule;
+    ], PhotosPageModule);
+    return PhotosPageModule;
 }());
 
-//# sourceMappingURL=payment-details.module.js.map
+//# sourceMappingURL=photos.module.js.map
 
 /***/ }),
 
-/***/ 785:
+/***/ 796:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PaymentDetailsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PhotosPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global__ = __webpack_require__(355);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,24 +57,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var PaymentDetailsPage = /** @class */ (function () {
-    function PaymentDetailsPage(navCtrl, navParams) {
+
+var PhotosPage = /** @class */ (function () {
+    function PhotosPage(navCtrl, global) {
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
+        this.global = global;
+        this.photos = [
+            { img: 'assets/imgs/p001.png', title: '2018 World Cup' },
+            { img: 'assets/imgs/p002.png', title: '2018 World Cup' },
+            { img: 'assets/imgs/p003.png', title: '2018 World Cup' },
+            { img: 'assets/imgs/p001.png', title: '2018 World Cup' },
+            { img: 'assets/imgs/p002.png', title: '2018 World Cup' },
+            { img: 'assets/imgs/p003.png', title: '2018 World Cup' },
+        ];
     }
-    PaymentDetailsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad PaymentDetailsPage');
-    };
-    PaymentDetailsPage = __decorate([
+    PhotosPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-payment-details',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payment-details/payment-details.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Payments </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payment-details/payment-details.html"*/,
+            selector: 'page-photos',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/photos/photos.html"*/'\n<ion-header>\n  <ion-navbar>\n    <ion-title>Photos</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only  (click)="global.callSearch($event)">\n        <ion-icon name="md-search"></ion-icon>\n      </button>\n      <button ion-button icon-only navPush="NotificationPage">\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header> \n<ion-content padding>\n  <ion-list class="lastPhotos">\n    <ion-item class="photoItem" *ngFor="let item of photos" navPush="PhotosDetailsPage">\n      <!-- if you want this image reponsive in large screen please remove class="imgResponsive" from img Tag  -->\n      <img src="{{item.img}}" class="imgResponsive"/>\n      <ion-grid>\n        <ion-row>\n          <ion-col col-auto>\n            <h4 ion-text color="dark">{{item.title}}</h4>\n          </ion-col>\n          <ion-col col>\n            <p ion-text color="color2">200 photos</p>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/photos/photos.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
-    ], PaymentDetailsPage);
-    return PaymentDetailsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
+    ], PhotosPage);
+    return PhotosPage;
 }());
 
-//# sourceMappingURL=payment-details.js.map
+//# sourceMappingURL=photos.js.map
 
 /***/ })
 

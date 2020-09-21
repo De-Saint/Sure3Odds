@@ -57,7 +57,7 @@ export class SettingTeamViewPage {
         }
       }, error => {
         loading.dismiss().catch(() => { });
-        this.authProvider.showToast(error.error.description);
+        this.authProvider.showToast(error.error.error);
       });
   }
   onSearch() {
@@ -81,7 +81,7 @@ export class SettingTeamViewPage {
           }, error => {
             this.error = 'none';
             this.teams = [];
-            this.authProvider.showToast(error.error.description);
+            this.authProvider.showToast(error.error.error);
           });
       }
     }
@@ -176,7 +176,7 @@ export class SettingTeamViewPage {
               }
             }, error => {
               loading.dismiss().catch(() => { });
-              this.authProvider.showToast(error.error.description);
+              this.authProvider.showToast(error.error.error);
             });
           }
         }

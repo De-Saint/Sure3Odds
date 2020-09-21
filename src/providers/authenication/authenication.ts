@@ -1,4 +1,4 @@
-import { ResponseType } from './../interface/response';
+
 import { environment } from './../../environments/environment';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -12,6 +12,7 @@ import { BehaviorSubject } from 'rxjs';
 import { JwtHelperService } from "@auth0/angular-jwt";
 import { User } from '../../interfaces/User';
 import {Token } from '../../interfaces/Token';
+import { ResponseType } from '../../interfaces/response';
 const helper = new JwtHelperService();
 
 const TOKEN_KEY = 'access_token';
@@ -93,14 +94,26 @@ export class AuthenicationProvider {
         return resp;
       }));
   }
+
+  findUserDetails(id) : Observable<ResponseType>{
+    return this.http.get<ResponseType>(`${environment.apiUrl}/users/user/find/${id}`)
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
   createNewUser(user) : Observable<ResponseType>{
-    console.log(user);
     return this.http.post<ResponseType>(`${environment.apiUrl}/users/member/create`, user)
       .pipe(map(resp => {
         return resp;
       }));
   }
 
+  deleteMember(id): Observable<ResponseType> {
+    return this.http.delete<ResponseType>(`${environment.apiUrl}/users/member/delete/${id}`)
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
   public logout() {
     sessionStorage.removeItem('currentUser');
     sessionStorage.removeItem('userData');
@@ -108,5 +121,51 @@ export class AuthenicationProvider {
     this.currentUserDataSubject.next(null);
     this.storage.remove(TOKEN_KEY);
     this.storage.remove("hasSeenLogin");
+  }
+
+
+  GetUsersByType(usertypeId, pageNo, pageSize): Observable<ResponseType> {
+    const params = new HttpParams()
+      .set('usertypeId', usertypeId)
+      .set('pageNo', pageNo)
+      .set('pageSize', pageSize);
+    return this.http.get<ResponseType>(`${environment.apiUrl}/users/user/type/get`, { params: params })
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
+  SearchUsersByType(searchValue, usertypeId, pageNo, pageSize): Observable<ResponseType> {
+    const params = new HttpParams()
+    .set('searchValue', searchValue)
+      .set('usertypeId', usertypeId)
+      .set('pageNo', pageNo)
+      .set('pageSize', pageSize);
+    return this.http.get<ResponseType>(`${environment.apiUrl}/users/user/type/search`, { params: params })
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
+  updateUser(user): Observable<ResponseType> {
+    return this.http.put<ResponseType>(`${environment.apiUrl}/users/user/update`, user).pipe(
+      map((resp: any) => {
+        return resp;
+      }));
+  }
+
+
+  //-----------------------SubAdmin-------Start-------------------------
+  createSubAdmin(user) : Observable<ResponseType>{
+    console.log(user);
+    return this.http.post<ResponseType>(`${environment.apiUrl}/users/subadmin/create`, user)
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
+
+  deleteSubAdmin(id): Observable<ResponseType> {
+    return this.http.delete<ResponseType>(`${environment.apiUrl}/users/subadmin/delete/${id}`)
+      .pipe(map(resp => {
+        return resp;
+      }));
   }
 }

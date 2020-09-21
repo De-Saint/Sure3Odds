@@ -10,7 +10,7 @@ import { NewUsers } from '../../interfaces/NewUser';
   templateUrl: 'sign-up.html',
 })
 export class SignUpPage {
-  newuser: NewUsers = new NewUsers("","","","","","","",{id:""},"",{id:""});
+  newuser: NewUsers = new NewUsers("","","","","","","",{id:""},"",{id:"", name:""},{id:"", name:""});
 
   constructor(public navCtrl: NavController,
     private platform: Platform, private auth: AuthenicationProvider

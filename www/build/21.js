@@ -1,14 +1,14 @@
 webpackJsonp([21],{
 
-/***/ 751:
+/***/ 729:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TopNewsPageModule", function() { return TopNewsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingCountryEditPageModule", function() { return SettingCountryEditPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__top_news__ = __webpack_require__(825);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_country_edit__ = __webpack_require__(808);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var TopNewsPageModule = /** @class */ (function () {
-    function TopNewsPageModule() {
+var SettingCountryEditPageModule = /** @class */ (function () {
+    function SettingCountryEditPageModule() {
     }
-    TopNewsPageModule = __decorate([
+    SettingCountryEditPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__top_news__["a" /* TopNewsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__setting_country_edit__["a" /* SettingCountryEditPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__top_news__["a" /* TopNewsPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_country_edit__["a" /* SettingCountryEditPage */]),
             ],
         })
-    ], TopNewsPageModule);
-    return TopNewsPageModule;
+    ], SettingCountryEditPageModule);
+    return SettingCountryEditPageModule;
 }());
 
-//# sourceMappingURL=top-news.module.js.map
+//# sourceMappingURL=setting-country-edit.module.js.map
 
 /***/ }),
 
-/***/ 825:
+/***/ 768:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TopNewsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global__ = __webpack_require__(354);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Countries; });
+var Countries = /** @class */ (function () {
+    function Countries(name, id, imageurl) {
+        this.name = name;
+        this.id = id;
+        this.imageurl = imageurl;
+    }
+    return Countries;
+}());
+
+//# sourceMappingURL=Countries.js.map
+
+/***/ }),
+
+/***/ 808:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingCountryEditPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_games_games__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_Countries__ = __webpack_require__(768);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__ = __webpack_require__(356);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,42 +79,150 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var TopNewsPage = /** @class */ (function () {
-    function TopNewsPage(navCtrl, global) {
+
+
+
+var SettingCountryEditPage = /** @class */ (function () {
+    function SettingCountryEditPage(navCtrl, gameProvider, loadingCtrl, alertCtrl, actionSheetCtrl, camera, authProvider, navParams) {
         this.navCtrl = navCtrl;
-        this.global = global;
-        this.lastNews = [
-            { img: 'assets/imgs/news2.png', title: 'Real Madrid want to win Club World Cup', numLike: 200, subTitle: 'is simply dummy text of the printing and typesetting industry.' },
-            { img: 'assets/imgs/news1.png', title: 'Real Madrid want to win Club World Cup', numLike: 200, subTitle: 'is simply dummy text of the printing and typesetting industry.' },
-            { img: 'assets/imgs/news3.png', title: 'Real Madrid want to win Club World Cup', numLike: 200, subTitle: 'is simply dummy text of the printing and typesetting industry.' },
-            { img: 'assets/imgs/news2.png', title: 'Real Madrid want to win Club World Cup', numLike: 200, subTitle: 'is simply dummy text of the printing and typesetting industry.' },
-            { img: 'assets/imgs/news1.png', title: 'Real Madrid want to win Club World Cup', numLike: 200, subTitle: 'is simply dummy text of the printing and typesetting industry.' },
-            { img: 'assets/imgs/news3.png', title: 'Real Madrid want to win Club World Cup', numLike: 200, subTitle: 'is simply dummy text of the printing and typesetting industry.' }
-        ];
+        this.gameProvider = gameProvider;
+        this.loadingCtrl = loadingCtrl;
+        this.alertCtrl = alertCtrl;
+        this.actionSheetCtrl = actionSheetCtrl;
+        this.camera = camera;
+        this.authProvider = authProvider;
+        this.navParams = navParams;
+        this.country = new __WEBPACK_IMPORTED_MODULE_2__interfaces_Countries__["a" /* Countries */]("", "", "");
+        this.flag = true;
+        this.countries = this.navParams.get("country");
+        if (this.countries) {
+            this.country.name = this.countries.name;
+            this.country.id = this.countries.id;
+            this.country.imageurl = this.countries.imageurl;
+            console.log(this.country);
+            if (this.countries.imageurl) {
+                this.img1 = this.country.imageurl;
+            }
+            else {
+                this.img1 = "/assets/imgs/appicon.png";
+            }
+        }
     }
-    // public clickLike=false;
-    TopNewsPage.prototype.like = function ($event, item) {
-        $event.stopPropagation();
-        console.log(item.numLike);
-        if (item.clickLike != true) {
-            item.numLike = item.numLike + 1;
-            item.clickLike = true;
+    SettingCountryEditPage.prototype.ionViewDidLoad = function () {
+        this.flag = (this.flag != false) ? false : true;
+    };
+    SettingCountryEditPage.prototype.onSubmit = function (country) {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        if (this.country.name) {
+            this.country.imageurl = (this.country.imageurl != undefined) ? this.img1 : this.img;
+            loading.present();
+            this.gameProvider.updateCountry(country).subscribe(function (res) {
+                loading.dismiss().catch(function () { });
+                if (res.statusCode === 200) {
+                    _this.navCtrl.pop();
+                }
+                else {
+                    _this.authProvider.showToast(res.description);
+                }
+            }, function (error) {
+                loading.dismiss().catch(function () { });
+                _this.authProvider.showToast(error.error.description);
+            });
         }
         else {
-            item.numLike = item.numLike - 1;
-            item.clickLike = false;
+            this.authProvider.showToast("Name input field is empty");
         }
     };
-    TopNewsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-top-news',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/top-news/top-news.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu" ></ion-icon>\n    </button>\n    <ion-title>Top News</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only  (click)="global.callSearch($event)">\n        <ion-icon name="md-search"></ion-icon>\n      </button>\n      <button ion-button icon-only navPush="NotificationPage">\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-card class="newsCard" *ngFor="let item of lastNews" navPush="TopNewsDetailsPage">\n    <!-- if images in this slide equaled in height please remove class="imgResponsive" from img Tag -->\n    <img class="imgResponsive" src="{{item.img}}"/>\n    <div class="container" text-left>\n      <h4 ion-text color="light">{{item.title}}</h4>\n      <p ion-text color="light">{{item.subTitle}}</p>\n\n      <ion-grid no-padding class="gridFooter">\n        <ion-row>\n          <ion-col col padding-right>\n            <p ion-text color="light">4 HOURS AGO</p>\n          </ion-col>\n          <!-- users like number -->\n          <ion-col col-auto padding-right>\n            <ion-item (click)="like($event,item)">\n              <ion-icon  item-left color="color2" [name]="item.clickLike ? \'ios-heart\' : \'ios-heart-outline\'" ></ion-icon>\n              <p ion-text color="light">{{item.numLike}}</p>\n            </ion-item>\n          </ion-col>  \n\n          <!-- user Comment number -->\n          <ion-col col-auto>\n            <ion-item>\n              <ion-icon name="md-text" color="color2" item-left></ion-icon>\n              <p ion-text color="light">160</p>\n            </ion-item>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </div>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/top-news/top-news.html"*/,
+    SettingCountryEditPage.prototype.onDelete = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        var confirm = this.alertCtrl.create({
+            title: 'Delete Country',
+            message: 'Do you want to delete <b>' + this.countries.name + '?</b><br/><br/>All the leagues and teams under <b>' + this.countries.name + '</b> would be deleted.</b><br/><br/>This is action is irreversible.',
+            buttons: [
+                {
+                    text: 'Cancel',
+                    handler: function () {
+                    }
+                },
+                {
+                    text: 'Proceed',
+                    handler: function () {
+                        loading.present();
+                        _this.gameProvider.deleteCountry(_this.countries.id).subscribe(function (res) {
+                            loading.dismiss().catch(function () { });
+                            if (res.statusCode === 200) {
+                                _this.navCtrl.pop();
+                            }
+                            else {
+                                _this.authProvider.showToast(res.description);
+                            }
+                        }, function (error) {
+                            loading.dismiss().catch(function () { });
+                            _this.authProvider.showToast(error.error.error);
+                        });
+                    }
+                }
+            ]
+        });
+        confirm.present();
+    };
+    SettingCountryEditPage.prototype.selectImage = function () {
+        var _this = this;
+        var actionSheet = this.actionSheetCtrl.create({
+            title: 'Change Country Logo',
+            buttons: [
+                {
+                    text: 'Gallery',
+                    handler: function () { _this.get_camera('Gallery'); }
+                }, {
+                    text: 'Camera',
+                    handler: function () { _this.get_camera('Camera'); }
+                }, {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () { }
+                }
+            ]
+        });
+        actionSheet.present();
+    };
+    SettingCountryEditPage.prototype.get_camera = function (source) {
+        var _this = this;
+        var options = {
+            quality: 100, destinationType: this.camera.DestinationType.DATA_URL,
+            encodingType: this.camera.EncodingType.JPEG, mediaType: this.camera.MediaType.PICTURE,
+            allowEdit: true, targetWidth: 512, targetHeight: 512, correctOrientation: true
+        };
+        if (source == 'Gallery') {
+            options.sourceType = this.camera.PictureSourceType.PHOTOLIBRARY;
+        }
+        else {
+            options.sourceType = this.camera.PictureSourceType.CAMERA;
+        }
+        this.camera.getPicture(options).then(function (imageData) {
+            _this.img = 'data:image/jpeg;base64,' + imageData;
+        }, function (err) { });
+        if (this.img != undefined) {
+            this.img1 = this.img;
+        }
+    };
+    SettingCountryEditPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-setting-country-edit',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-country-edit/setting-country-edit.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Edit Country</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="onDelete()">\n        <ion-icon name="trash"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="imgs">\n    <div class="imgProfile" [ngStyle]="{\'background-image\':\'url(\' + img1 + \')\'}">\n      <button ion-button icon-only class="profileCamera"  [ngClass]="{\'show\':flag==false}"   (click)="selectImage(2)">\n        <ion-icon name="md-camera"></ion-icon>\n      </button>\n    </div>\n  </div>\n  <div class="otherForm">\n    <ion-list>\n      <!-- appear when click update -->\n      <ion-item >\n        <ion-label stacked>Name</ion-label>\n        <ion-input  type="text" [(ngModel)]="country.name"  ></ion-input>\n        <ion-input hidden type="text" [(ngModel)]="country.id"  ></ion-input>\n      </ion-item>\n      <!-- ==================================== -->\n    </ion-list>\n    <button ion-button block color="color2" (click)="onSubmit(country)">Submit</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-country-edit/setting-country-edit.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
-    ], TopNewsPage);
-    return TopNewsPage;
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__providers_games_games__["a" /* GamesProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__providers_games_games__["a" /* GamesProvider */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["LoadingController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["LoadingController"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["AlertController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["AlertController"]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ActionSheetController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ActionSheetController"]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__["a" /* Camera */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__["a" /* Camera */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"]) === "function" && _h || Object])
+    ], SettingCountryEditPage);
+    return SettingCountryEditPage;
+    var _a, _b, _c, _d, _e, _f, _g, _h;
 }());
 
-//# sourceMappingURL=top-news.js.map
+//# sourceMappingURL=setting-country-edit.js.map
 
 /***/ })
 

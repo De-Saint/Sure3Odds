@@ -1,14 +1,14 @@
 webpackJsonp([10],{
 
-/***/ 744:
+/***/ 735:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignUpPageModule", function() { return SignUpPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingSelectionAddPageModule", function() { return SettingSelectionAddPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sign_up__ = __webpack_require__(817);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_selection_add__ = __webpack_require__(814);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,60 +18,53 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SignUpPageModule = /** @class */ (function () {
-    function SignUpPageModule() {
+var SettingSelectionAddPageModule = /** @class */ (function () {
+    function SettingSelectionAddPageModule() {
     }
-    SignUpPageModule = __decorate([
+    SettingSelectionAddPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__sign_up__["a" /* SignUpPage */],
+                __WEBPACK_IMPORTED_MODULE_2__setting_selection_add__["a" /* SettingSelectionAddPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__sign_up__["a" /* SignUpPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_selection_add__["a" /* SettingSelectionAddPage */]),
             ],
         })
-    ], SignUpPageModule);
-    return SignUpPageModule;
+    ], SettingSelectionAddPageModule);
+    return SettingSelectionAddPageModule;
 }());
 
-//# sourceMappingURL=sign-up.module.js.map
+//# sourceMappingURL=setting-selection-add.module.js.map
 
 /***/ }),
 
-/***/ 763:
+/***/ 770:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewUsers; });
-var NewUsers = /** @class */ (function () {
-    function NewUsers(id, email, firstname, lastname, referencecode, password, phone, plantype, platform, usertype) {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Selections; });
+var Selections = /** @class */ (function () {
+    function Selections(name, id) {
+        this.name = name;
         this.id = id;
-        this.email = email;
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.referencecode = referencecode;
-        this.password = password;
-        this.phone = phone;
-        this.plantype = plantype;
-        this.platform = platform;
-        this.usertype = usertype;
     }
-    return NewUsers;
+    return Selections;
 }());
 
-//# sourceMappingURL=NewUser.js.map
+//# sourceMappingURL=Selections.js.map
 
 /***/ }),
 
-/***/ 817:
+/***/ 814:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignUpPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__interfaces_NewUser__ = __webpack_require__(763);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingSelectionAddPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_Selections__ = __webpack_require__(770);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_games_games__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_authenication_authenication__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -85,56 +78,53 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var SignUpPage = /** @class */ (function () {
-    function SignUpPage(navCtrl, platform, auth) {
+
+var SettingSelectionAddPage = /** @class */ (function () {
+    function SettingSelectionAddPage(gameProvider, loadingCtrl, authProvider, navCtrl, navParams) {
+        this.gameProvider = gameProvider;
+        this.loadingCtrl = loadingCtrl;
+        this.authProvider = authProvider;
         this.navCtrl = navCtrl;
-        this.platform = platform;
-        this.auth = auth;
-        this.newuser = new __WEBPACK_IMPORTED_MODULE_3__interfaces_NewUser__["a" /* NewUsers */]("", "", "", "", "", "", "", { id: "" }, "", { id: "" });
+        this.navParams = navParams;
+        this.selection = new __WEBPACK_IMPORTED_MODULE_0__interfaces_Selections__["a" /* Selections */]("", "");
     }
-    SignUpPage.prototype.createAccount = function (page) {
-        if (this.newuser.firstname == "" || this.newuser.firstname == undefined || this.newuser.firstname == null) {
-            this.auth.showToast("Firstname is empty");
-            return false;
-        }
-        else if (this.newuser.lastname == "" || this.newuser.lastname == undefined || this.newuser.lastname == null) {
-            this.auth.showToast("Lastname is empty");
-            return false;
-        }
-        else if (this.newuser.email == "" || this.newuser.email == undefined || this.newuser.email == null) {
-            this.auth.showToast("Email is empty");
-            return false;
-        }
-        else if (this.newuser.phone == "" || this.newuser.phone == undefined || this.newuser.phone == null) {
-            this.auth.showToast("Phone number is empty");
-            return false;
-        }
-        else if (this.newuser.password == "" || this.newuser.password == undefined || this.newuser.password == null) {
-            this.auth.showToast("Password is empty");
-            return false;
+    SettingSelectionAddPage.prototype.onSubmit = function (selection) {
+        var _this = this;
+        if (selection.name) {
+            var loading_1 = this.loadingCtrl.create({
+                content: "Please wait..."
+            });
+            loading_1.present();
+            this.gameProvider.createSelection(selection).subscribe(function (res) {
+                loading_1.dismiss().catch(function () { });
+                if (res.statusCode === 200) {
+                    _this.navCtrl.pop();
+                }
+                else {
+                    _this.authProvider.showToast(res.description);
+                }
+            }, function (error) {
+                loading_1.dismiss().catch(function () { });
+                _this.authProvider.showToast(error.error.error);
+            });
         }
         else {
-            // if (this.platform.is('android')) {
-            //   console.log(this.user);
-            //   this.navCtrl.push(AndroidsubscriptionPage, { newUser: this.user });
-            // } else if (this.platform.is("ios")) {
-            // } else {
-            // }
-            console.log(this.newuser);
-            this.navCtrl.push(page, { newuser: this.newuser });
+            this.authProvider.showToast("Name input field is empty");
         }
     };
-    SignUpPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
-            selector: 'page-sign-up',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/sign-up/sign-up.html"*/'<ion-header>\n  <ion-navbar>\n  </ion-navbar>\n</ion-header>\n<ion-content  class="sign" style="background-image:url(\'assets/imgs/welcome3.jpg\')" >\n  <div class="signForm">\n    <img src="assets/imgs/appicon.png" style="width: 8em; height: 8em;"/>\n    <p ion-text color="light">Sure3Odds</p>\n    <ion-list>\n      <ion-item class="halfItem" float-left>\n        <ion-icon name="md-person" item-left color="light"></ion-icon>\n        <ion-input type="text" [(ngModel)]="newuser.firstname" name="firstname" id="firstname"  placeholder="First Name"></ion-input>\n      </ion-item>\n      <ion-item class="halfItem"  float-left>\n        <ion-icon name="md-person" item-left color="light"></ion-icon>\n        <ion-input type="text" [(ngModel)]="newuser.lastname" name="lastname" id="lastname" placeholder="Last Name"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-icon name="md-mail" item-left color="light"></ion-icon>\n        <ion-input type="email" [(ngModel)]="newuser.email" name="email" id="email"  placeholder="E-mail"></ion-input>\n      </ion-item>\n\n      <ion-item >\n        <ion-icon name="call" item-left color="light"></ion-icon>\n        <ion-input type="tel" [(ngModel)]="newuser.phone" name="phone" id="phone" placeholder="Phone"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-icon name="md-lock" item-left color="light"></ion-icon>\n        <ion-input type="password"  [(ngModel)]="newuser.password" name="password" id="password" placeholder="Password"></ion-input>\n      </ion-item>\n      <p ion-text color="light" navPush="TermsPage" >I have read and agreed to the <span ion-text color="secondary">Terms And Conditions</span></p>\n    </ion-list>\n    <button ion-button block type="submit" color="color2" (click)="createAccount(\'SubscriptionAndroidPage\')">CREATE ACCOUNT</button>\n   <p ion-text color="light" navPush="SignInPage" >Already have an account ? Login</p>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/sign-up/sign-up.html"*/,
+    SettingSelectionAddPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-setting-selection-add',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-selection-add/setting-selection-add.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Add Selection</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="otherForm">\n    <ion-list>\n\n     \n      <!-- appear when click update -->\n      <ion-item >\n        <ion-label stacked>Name</ion-label>\n        <ion-input  type="text" [(ngModel)]="selection.name"  ></ion-input>\n        <ion-input hidden type="text" [(ngModel)]="selection.id"  ></ion-input>\n      </ion-item>\n      <!-- ==================================== -->\n    </ion-list>\n    <button ion-button block color="color2" (click)="onSubmit(selection)">Submit</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-selection-add/setting-selection-add.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavController"],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["Platform"], __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */]])
-    ], SignUpPage);
-    return SignUpPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_games_games__["a" /* GamesProvider */],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["LoadingController"],
+            __WEBPACK_IMPORTED_MODULE_2__providers_authenication_authenication__["a" /* AuthenicationProvider */],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"]])
+    ], SettingSelectionAddPage);
+    return SettingSelectionAddPage;
 }());
 
-//# sourceMappingURL=sign-up.js.map
+//# sourceMappingURL=setting-selection-add.js.map
 
 /***/ })
 

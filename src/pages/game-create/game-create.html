@@ -1,0 +1,36 @@
+<ion-header>
+ 
+  <ion-navbar>
+    <ion-title>Approve Prediction</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="otherForm">
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          Select The Set
+        </ion-label>
+        <select-searchable item-content [(ngModel)]="prediction.sets" (onChange)="onSelectSets($event)" [items]="sets"
+          itemValueField="id" [canClear]="true" clearButtonText="Clear Selected" confirmButtonText="Proceed"
+          itemTextField="name" [canSearch]="true">
+        </select-searchable>
+      </ion-item>
+      <hr ion-text margin-top margin-bottom>
+
+      <ion-item>
+        <ion-label>
+          Select The Status
+        </ion-label>
+        <select-searchable item-content [(ngModel)]="prediction.status" (onChange)="onSelectStatus($event)"
+          [items]="statuses" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"
+          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">
+        </select-searchable>
+      </ion-item>
+    </ion-list>
+    <button ion-button block color="color2" (click)="onSubmit(prediction)">Submit</button>
+  </div>
+</ion-content>

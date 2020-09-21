@@ -1,0 +1,61 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Edit {{newuser.lastname}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="otherForm">
+    <ion-list>
+      <ion-item>
+        <ion-label stacked>
+          Enter First Name
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="newuser.firstname" name="firstname" id="firstname" placeholder="First Name">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>
+          Enter Last Name
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="newuser.lastname" name="lastname" id="lastname" placeholder="Last Name">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>
+          Enter Email
+        </ion-label>
+        <ion-input type="email" [(ngModel)]="newuser.email" name="email" id="email" placeholder="E-mail"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>
+          Enter Phone
+        </ion-label>
+        <ion-input type="tel" [(ngModel)]="newuser.phone" name="phone" id="phone" placeholder="Phone"></ion-input>
+      </ion-item>
+     
+      <ion-item>
+        <ion-label stacked>
+          Current UserType
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="newuser.usertypes.name" disabled>
+        </ion-input>
+      </ion-item>
+ 
+      <ion-item>
+        <ion-label>
+          Select The Status
+        </ion-label>
+        <select-searchable item-content [(ngModel)]="newuser.status" (onChange)="onSelectStatus($event)"
+          [items]="statuses" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"
+          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">
+        </select-searchable>
+      </ion-item>
+    </ion-list>
+    <button ion-button block type="submit" color="color2" (click)="updateAccount(newuser)">Submit</button>
+  </div>
+</ion-content>

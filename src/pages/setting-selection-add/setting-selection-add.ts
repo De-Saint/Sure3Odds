@@ -33,7 +33,7 @@ export class SettingSelectionAddPage {
         }
       }, error => {
         loading.dismiss().catch(() => { });
-        this.authProvider.showToast(error.error.description);
+        this.authProvider.showToast(error.error.error);
       });
     } else {
       this.authProvider.showToast("Name input field is empty");

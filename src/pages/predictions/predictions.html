@@ -14,5 +14,47 @@
 
 
 <ion-content padding>
+  <!-- matches list -->
+  <div class="gamelist">
+    <ion-list class="">
+      <ion-list-header>
+        <p padding-top>Current Predictions</p>
+        <ion-icon name="football" color="color1" item-left></ion-icon>
+      </ion-list-header>
+      <!-- match item  -->
+      <div class="">
+        <ion-item class="matchItem" *ngFor="let prediction of predictionlist">
+          <ion-grid>
+            <ion-row (click)="onGameOption(prediction)">
+              <ion-col col>
+                <ion-item>
+                  <img src="{{prediction.hometeam.imageurl}}" item-right *ngIf="prediction.hometeam.imageurl" />
+                  <img src="assets/imgs/appicon.png" item-right *ngIf="!prediction.hometeam.imageurl" />
+                  <p text-right>{{prediction.hometeam.name}}</p>
+                </ion-item>
+              </ion-col>
+              <ion-col col-auto >
+                <span ion-text color="color1">{{prediction.matchtime}}</span>
+                <p ion-text color="color2"><b>{{prediction.odds}}</b></p>
+                <p ion-text color="color2"> <b>{{prediction.selections.name}}</b> </p>
+                <p ion-text color="color2">{{prediction.status.name}}</p>
+              </ion-col>
+              <ion-col col>
+                <ion-item>
+                  <img src="{{prediction.awayteam.imageurl}}" item-left *ngIf="prediction.awayteam.imageurl" />
+                  <img src="assets/imgs/appicon.png" item-left *ngIf="!prediction.awayteam.imageurl" />
+                  <p text-left>{{prediction.awayteam.name}}</p>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </div>
+      <!-- <div class="" *ngIf="game.msg">
+        <p ion-text text-center color="color2">{{game.msg}}</p>
+      </div> -->
+
+    </ion-list>
+  </div>
 
 </ion-content>

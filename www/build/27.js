@@ -1,14 +1,14 @@
 webpackJsonp([27],{
 
-/***/ 742:
+/***/ 751:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignInPageModule", function() { return SignInPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TopNewsPageModule", function() { return TopNewsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sign_in__ = __webpack_require__(815);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__top_news__ = __webpack_require__(831);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SignInPageModule = /** @class */ (function () {
-    function SignInPageModule() {
+var TopNewsPageModule = /** @class */ (function () {
+    function TopNewsPageModule() {
     }
-    SignInPageModule = __decorate([
+    TopNewsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__sign_in__["a" /* SignInPage */],
+                __WEBPACK_IMPORTED_MODULE_2__top_news__["a" /* TopNewsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__sign_in__["a" /* SignInPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__top_news__["a" /* TopNewsPage */]),
             ],
         })
-    ], SignInPageModule);
-    return SignInPageModule;
+    ], TopNewsPageModule);
+    return TopNewsPageModule;
 }());
 
-//# sourceMappingURL=sign-in.module.js.map
+//# sourceMappingURL=top-news.module.js.map
 
 /***/ }),
 
-/***/ 815:
+/***/ 831:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignInPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(88);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TopNewsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global__ = __webpack_require__(355);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,67 +58,42 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-var SignInPage = /** @class */ (function () {
-    function SignInPage(navCtrl, storage, events, auth) {
+var TopNewsPage = /** @class */ (function () {
+    function TopNewsPage(navCtrl, global) {
         this.navCtrl = navCtrl;
-        this.storage = storage;
-        this.events = events;
-        this.auth = auth;
-        this.submitted = false;
-        this.passwordType = 'password';
-        this.passwordIcon = 'eye-off';
-        this.HAS_LOGGED_IN = 'hasLoggedIn';
-        this.login = {};
+        this.global = global;
+        this.lastNews = [
+            { img: 'assets/imgs/news2.png', title: 'Real Madrid want to win Club World Cup', numLike: 200, subTitle: 'is simply dummy text of the printing and typesetting industry.' },
+            { img: 'assets/imgs/news1.png', title: 'Real Madrid want to win Club World Cup', numLike: 200, subTitle: 'is simply dummy text of the printing and typesetting industry.' },
+            { img: 'assets/imgs/news3.png', title: 'Real Madrid want to win Club World Cup', numLike: 200, subTitle: 'is simply dummy text of the printing and typesetting industry.' },
+            { img: 'assets/imgs/news2.png', title: 'Real Madrid want to win Club World Cup', numLike: 200, subTitle: 'is simply dummy text of the printing and typesetting industry.' },
+            { img: 'assets/imgs/news1.png', title: 'Real Madrid want to win Club World Cup', numLike: 200, subTitle: 'is simply dummy text of the printing and typesetting industry.' },
+            { img: 'assets/imgs/news3.png', title: 'Real Madrid want to win Club World Cup', numLike: 200, subTitle: 'is simply dummy text of the printing and typesetting industry.' }
+        ];
     }
-    SignInPage.prototype.ngOnInit = function () {
-    };
-    SignInPage.prototype.onLogin = function (form, page) {
-        var _this = this;
-        this.submitted = true;
-        if (form.valid) {
-            this.auth.login(this.login.email, this.login.password)
-                .subscribe(function (resp) {
-                if (resp.statusCode === 200) {
-                    _this.gotoHomePage(resp.data, page);
-                }
-                else {
-                    _this.auth.showToast(resp.description);
-                }
-            }, function (error) {
-                console.log(error);
-                // this.auth.showToast(error.error.message);
-            });
+    // public clickLike=false;
+    TopNewsPage.prototype.like = function ($event, item) {
+        $event.stopPropagation();
+        console.log(item.numLike);
+        if (item.clickLike != true) {
+            item.numLike = item.numLike + 1;
+            item.clickLike = true;
+        }
+        else {
+            item.numLike = item.numLike - 1;
+            item.clickLike = false;
         }
     };
-    SignInPage.prototype.hideShowPassword = function () {
-        this.passwordType = this.passwordType === 'text' ? 'password' : 'text';
-        this.passwordIcon = this.passwordIcon === 'eye-off' ? 'eye' : 'eye-off';
-    };
-    SignInPage.prototype.gotoHomePage = function (data, page) {
-        var _this = this;
-        this.navCtrl.setRoot(page).then(function () {
-            _this.storage.ready().then(function () {
-                _this.storage.set("hasSeenLogin", true);
-                var name = _this.auth.currentUserDataValue.name;
-                var type = _this.auth.currentUserDataValue.user_type;
-                _this.auth.showToast("Welcome " + name);
-                _this.events.publish('user:login', type, name);
-            });
-        });
-    };
-    SignInPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
-            selector: 'page-sign-in',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/sign-in/sign-in.html"*/'<ion-content class="sign" style="background-image:url(\'assets/imgs/welcome3.jpg\')">\n\n  <form #loginForm="ngForm">\n    <div class="signForm">\n      <img src="assets/imgs/appicon.png" style="width: 8em; height: 8em;" />\n      <p ion-text color="light">Sure3Odds</p>\n      <ion-list>\n        <ion-item>\n          <ion-icon name="md-mail" item-left color="light"></ion-icon>\n          <ion-input type="email" [(ngModel)]="login.email" name="email" required placeholder="E-mail"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-icon name="md-lock" item-left color="light"></ion-icon>\n          <ion-input [type]="passwordType" clearOnEdit="false" type="password" [(ngModel)]="login.password"\n            name="password" required placeholder="Password"></ion-input>\n          <ion-icon name="eye-off" item-right color="light" style="font-size: large; margin-top: 0.5em !important;"\n            [name]="passwordIcon" class="passwordIcon" (click)=\'hideShowPassword()\'></ion-icon>\n        </ion-item>\n      </ion-list>\n      <button class="" ion-button block color="color2" (click)="onLogin(loginForm, \'AllMatchesPage\')"\n        type="submit">LOGIN</button>\n      <p ion-text color="light" navPush="SignUpPage">No account yet ? Create one</p>\n      <p ion-text color="light">Bet responsively 18+ || <span ion-text color="light" navPush="FreeTipsPage">Free Tips\n          ||</span></p>\n    </div>\n  </form>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/sign-in/sign-in.html"*/,
+    TopNewsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-top-news',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/top-news/top-news.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu" ></ion-icon>\n    </button>\n    <ion-title>Top News</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only  (click)="global.callSearch($event)">\n        <ion-icon name="md-search"></ion-icon>\n      </button>\n      <button ion-button icon-only navPush="NotificationPage">\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-card class="newsCard" *ngFor="let item of lastNews" navPush="TopNewsDetailsPage">\n    <!-- if images in this slide equaled in height please remove class="imgResponsive" from img Tag -->\n    <img class="imgResponsive" src="{{item.img}}"/>\n    <div class="container" text-left>\n      <h4 ion-text color="light">{{item.title}}</h4>\n      <p ion-text color="light">{{item.subTitle}}</p>\n\n      <ion-grid no-padding class="gridFooter">\n        <ion-row>\n          <ion-col col padding-right>\n            <p ion-text color="light">4 HOURS AGO</p>\n          </ion-col>\n          <!-- users like number -->\n          <ion-col col-auto padding-right>\n            <ion-item (click)="like($event,item)">\n              <ion-icon  item-left color="color2" [name]="item.clickLike ? \'ios-heart\' : \'ios-heart-outline\'" ></ion-icon>\n              <p ion-text color="light">{{item.numLike}}</p>\n            </ion-item>\n          </ion-col>  \n\n          <!-- user Comment number -->\n          <ion-col col-auto>\n            <ion-item>\n              <ion-icon name="md-text" color="color2" item-left></ion-icon>\n              <p ion-text color="light">160</p>\n            </ion-item>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </div>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/top-news/top-news.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavController"],
-            __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["Events"],
-            __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */]])
-    ], SignInPage);
-    return SignInPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
+    ], TopNewsPage);
+    return TopNewsPage;
 }());
 
-//# sourceMappingURL=sign-in.js.map
+//# sourceMappingURL=top-news.js.map
 
 /***/ })
 

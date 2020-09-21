@@ -67,7 +67,7 @@ export class MatchDetailsPage implements OnInit {
       console.log(this.comments);
     }, error => {
       this.comments = [];
-      this.error = error.error.description;
+      this.error = error.error.error;
       console.log(JSON.stringify(this.error));
     });
   }
@@ -86,7 +86,7 @@ export class MatchDetailsPage implements OnInit {
         this.authProvider.showToast(res.description);
       }
     }, error => {
-      this.authProvider.showToast(error.error.description);
+      this.authProvider.showToast(error.error.error);
     });
   }
 
@@ -104,7 +104,7 @@ export class MatchDetailsPage implements OnInit {
           this.authProvider.showToast(res.description);
         }
       }, error => {
-        this.authProvider.showToast(error.error.description);
+        this.authProvider.showToast(error.error.error);
       });
     } else {
       this.authProvider.showToast("Comment input field is empty");

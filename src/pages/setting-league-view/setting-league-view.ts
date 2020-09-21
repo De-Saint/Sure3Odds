@@ -46,7 +46,7 @@ export class SettingLeagueViewPage {
         }
       }, error => {
         loading.dismiss().catch(() => { });
-        this.authProvider.showToast(error.error.description);
+        this.authProvider.showToast(error.error.error);
       });
   }
   onSearch() {
@@ -68,7 +68,7 @@ export class SettingLeagueViewPage {
             console.log(JSON.stringify(error));
             this.error = 'none';
             this.leagues = [];
-            this.authProvider.showToast(error.error.description);
+            this.authProvider.showToast(error.error.error);
           });
       }
     }

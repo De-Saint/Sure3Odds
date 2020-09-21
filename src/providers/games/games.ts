@@ -3,7 +3,8 @@ import { map } from 'rxjs/operators';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
-import { ResponseType } from '../interface/response';
+import { ResponseType } from '../../interfaces/response';
+
 
 
 @Injectable()
@@ -13,8 +14,8 @@ export class GamesProvider {
 
   }
 
-   //-------------------------Game -----Start----------------------------
- 
+  //-------------------------Game -----Start----------------------------
+
   GetGames(matchDate): Observable<ResponseType> {
     const params = new HttpParams().set("matchDate", String(matchDate));
     return this.http.get<ResponseType>(`${environment.apiUrl}/games/game/user/get`, { params })
@@ -39,7 +40,7 @@ export class GamesProvider {
       }));
   }
   updateGame(game): Observable<ResponseType> {
-    return this.http.put<ResponseType>(`${environment.apiUrl}//games/game/update`, game).pipe(
+    return this.http.put<ResponseType>(`${environment.apiUrl}/games/game/update`, game).pipe(
       map((resp: any) => {
         return resp;
       }));
@@ -51,8 +52,20 @@ export class GamesProvider {
         return resp;
       }));
   }
-   //-------------------------Game -----End----------------------------
- 
+
+  createGame(predictionId, setId, statusId): Observable<ResponseType> {
+    const params = new HttpParams()
+    .set('predictionId', predictionId)
+    .set('setId', setId)
+    .set('statusId', statusId);
+    console.log(params);
+    return this.http.post<ResponseType>(`${environment.apiUrl}/games/game/create`, params).pipe(
+      map((resp: any) => {
+        return resp;
+      }));
+  }
+  //-------------------------Game -----End----------------------------
+
   //-------------------------Votes -----Start----------------------------
   GetGameVotes(id): Observable<ResponseType> {
     return this.http.get<ResponseType>(`${environment.apiUrl}/games/vote/get_game_votes/${id}`)
@@ -188,10 +201,10 @@ export class GamesProvider {
   }
   GetTeamsByLeagueId(leagueId, pageNo, pageSize): Observable<ResponseType> {
     const params = new HttpParams()
-    .set('leagueId', leagueId)
-    .set('pageNo', pageNo)
-    .set('pageSize', pageSize);
-    return this.http.get<ResponseType>(`${environment.apiUrl}/games/league/teams/get`, {params:params})
+      .set('leagueId', leagueId)
+      .set('pageNo', pageNo)
+      .set('pageSize', pageSize);
+    return this.http.get<ResponseType>(`${environment.apiUrl}/games/league/teams/get`, { params: params })
       .pipe(map(resp => {
         return resp;
       }));
@@ -303,7 +316,7 @@ export class GamesProvider {
         return resp;
       }));
   }
- getSelections(): Observable<ResponseType> {
+  getSelections(): Observable<ResponseType> {
     return this.http.get<ResponseType>(`${environment.apiUrl}/games/selection/get_all`)
       .pipe(map(resp => {
         return resp;
@@ -318,17 +331,48 @@ export class GamesProvider {
         return resp;
       }));
   }
- //-------------------------Sets -----End-----------------------
+  //-------------------------Sets -----End-----------------------
 
 
-   //-------------------------Status------Start----------------------------
-   GetStatus(statusType): Observable<ResponseType> {
+  //-------------------------Status------Start----------------------------
+  GetStatus(statusType): Observable<ResponseType> {
     const params = new HttpParams()
-    .set('statusType', statusType)
-    return this.http.get<ResponseType>(`${environment.apiUrl}/games/status/type/get`, {params:params})
+      .set('statusType', statusType)
+    return this.http.get<ResponseType>(`${environment.apiUrl}/games/status/type/get`, { params: params })
       .pipe(map(resp => {
         return resp;
       }));
   }
-   //-------------------------Status -----End-----------------------
+  //-------------------------Status -----End-----------------------
+
+
+
+  //-------------------------Predictions------Start----------------------------
+  CreatePrediction(prediction): Observable<ResponseType> {
+    return this.http.post<ResponseType>(`${environment.apiUrl}/games/prediction/create`, prediction).pipe(
+      map((resp: any) => {
+        return resp;
+      }));
+  }
+  GetPredictions(matchDate): Observable<ResponseType> {
+    const params = new HttpParams().set("matchDate", String(matchDate));
+    return this.http.get<ResponseType>(`${environment.apiUrl}/games/prediction/get`, { params })
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
+  deletePrediction(id): Observable<ResponseType> {
+    return this.http.delete<ResponseType>(`${environment.apiUrl}/games/prediction/delete/${id}`)
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
+  updatePrediction(prediction): Observable<ResponseType> {
+    return this.http.put<ResponseType>(`${environment.apiUrl}/games/prediction/update`, prediction).pipe(
+      map((resp: any) => {
+        return resp;
+      }));
+  }
+
+  //-------------------------Predictions -----End-----------------------
 }

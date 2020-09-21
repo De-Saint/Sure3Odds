@@ -9,6 +9,7 @@ export class NewUsers {
     public phone: string,
     public plantype: { id },
     public platform: string,
-    public usertype:{id}
+    public usertypes:{id, name},
+    public status:{id, name}
   ) { }
 }

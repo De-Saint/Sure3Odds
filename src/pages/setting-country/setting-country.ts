@@ -51,7 +51,7 @@ export class SettingCountryPage {
       }, error => {
         this.error = 'none';
         this.countries = [];
-        this.authProvider.showToast(error.error.description);
+        this.authProvider.showToast(error.error.error);
       });
   }
 
@@ -76,7 +76,7 @@ export class SettingCountryPage {
           }, error => {
             this.error = 'none';
             this.countries = [];
-            this.authProvider.showToast(error.error.description);
+            this.authProvider.showToast(error.error.error);
           });
       }
     }

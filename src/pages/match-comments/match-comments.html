@@ -66,7 +66,7 @@
       </ion-grid>
     </ion-item>
   </ion-list>
-  <div color="color2" text-center *ngIf="error">
+  <div color="color2" text-center *ngIf="error === 'none'">
     What do you think about <br /> <br /> <strong>{{match.hometeam.name}}</strong> Vs  <strong>{{match.awayteam.name}}</strong>?
   </div>
 </ion-content>

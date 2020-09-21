@@ -9,5 +9,44 @@
 
 
 <ion-content padding>
-
+  <ion-searchbar [(ngModel)]="searchTerm" (ionCancel)="onCancel($event)" [showCancelButton]="true"
+  (ionClear)="onClear($event)" (ionInput)="onSearch()">
+</ion-searchbar>
+  <div class="teamMatchs">
+    <ion-list >
+      <ion-item class="thumbnailItem" *ngFor="let payment of payments" >
+        <ion-thumbnail item-left>
+          <!-- Team image -->
+          <img src="assets/imgs/appicon.png" />
+        </ion-thumbnail>
+        <ion-grid no-padding>
+          <ion-row>
+            <ion-col col-6>
+              <!-- team Name -->
+              <h5 ion-text color="dark" >{{payment.user.lastname}} {{payment.user.firstname}} </h5>
+              <!-- League Name -->
+              <p ion-text color="color1">{{payment.plantype.name}}</p>
+            </ion-col>
+            <ion-col col-6>
+              <p ion-text color="dark">{{payment.paymentdate}}</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <div class="matchResult" item-right>
+            <span ion-text color="color1"  >{{payment.platform}}</span>
+          <p ion-text color="color2"><b>{{payment.paymenttype}}</b></p>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+  <div class="" *ngIf="error">
+    <p ion-text text-center color="color2">No result found!</p>
+  </div>
+  <div text-center margin-top margin-bottonm *ngIf="nopayments === 'none'" (click)="onGotoTop()">
+    <button ion-button small color="color2">Back to Top</button>
+  </div>
+  <ion-infinite-scroll (ionInfinite)="scrollInfinite($event)" *ngIf="currentPage < totalPage">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading page {{currentPage}} of {{totalPage}}">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>

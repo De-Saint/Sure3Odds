@@ -1,14 +1,14 @@
 webpackJsonp([50],{
 
-/***/ 709:
+/***/ 715:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MatchPageModule", function() { return MatchPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaymentPlantypesPageModule", function() { return PaymentPlantypesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__match__ = __webpack_require__(780);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__payment_plantypes__ = __webpack_require__(792);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MatchPageModule = /** @class */ (function () {
-    function MatchPageModule() {
+var PaymentPlantypesPageModule = /** @class */ (function () {
+    function PaymentPlantypesPageModule() {
     }
-    MatchPageModule = __decorate([
+    PaymentPlantypesPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__match__["a" /* MatchPage */],
+                __WEBPACK_IMPORTED_MODULE_2__payment_plantypes__["a" /* PaymentPlantypesPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__match__["a" /* MatchPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__payment_plantypes__["a" /* PaymentPlantypesPage */]),
             ],
         })
-    ], MatchPageModule);
-    return MatchPageModule;
+    ], PaymentPlantypesPageModule);
+    return PaymentPlantypesPageModule;
 }());
 
-//# sourceMappingURL=match.module.js.map
+//# sourceMappingURL=payment-plantypes.module.js.map
 
 /***/ }),
 
-/***/ 780:
+/***/ 792:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MatchPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PaymentPlantypesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -56,25 +56,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var MatchPage = /** @class */ (function () {
-    function MatchPage(navCtrl, navParams) {
+var PaymentPlantypesPage = /** @class */ (function () {
+    function PaymentPlantypesPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.tab1Root = 'MatchDetailsPage';
-        this.tab2Root = 'MatchVotesPage';
-        this.tab3Root = 'MatchCommentsPage';
-        this.match = this.navParams.data;
     }
-    MatchPage = __decorate([
+    PaymentPlantypesPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad PaymentPlantypesPage');
+    };
+    PaymentPlantypesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-match',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/match/match.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" [rootParams]="match" tabTitle="Details" ></ion-tab>\n  <ion-tab [root]="tab2Root" [rootParams]="match" tabTitle="Votes" ></ion-tab>\n  <ion-tab [root]="tab3Root" [rootParams]="match" tabTitle="Comments"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/match/match.html"*/,
+            selector: 'page-payment-plantypes',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payment-plantypes/payment-plantypes.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Plan Types </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payment-plantypes/payment-plantypes.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
-    ], MatchPage);
-    return MatchPage;
+    ], PaymentPlantypesPage);
+    return PaymentPlantypesPage;
 }());
 
-//# sourceMappingURL=match.js.map
+//# sourceMappingURL=payment-plantypes.js.map
 
 /***/ })
 

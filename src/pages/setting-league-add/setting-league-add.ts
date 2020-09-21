@@ -44,7 +44,7 @@ export class SettingLeagueAddPage {
           this.authProvider.showToast(resp.description);
         }
       }, error => {
-        this.authProvider.showToast(error.error.description);
+        this.authProvider.showToast(error.error.error);
       });
   }
   ionViewDidLoad() {
@@ -74,7 +74,7 @@ export class SettingLeagueAddPage {
         }
       }, error => {
         loading.dismiss().catch(() => { });
-        this.authProvider.showToast(error.error.description);
+        this.authProvider.showToast(error.error.error);
       });
     } else {
       this.authProvider.showToast("Name input field is empty");

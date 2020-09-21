@@ -10,7 +10,7 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'subscription-android.html',
 })
 export class SubscriptionAndroidPage {
-  newuser: NewUsers = new NewUsers("","","","","","","",{id:""},"",{id:""});
+  newuser: NewUsers = new NewUsers("", "", "", "", "", "", "", { id: "" }, "", { id: "", name: "" }, { id: "", name: "" });
 
   plantypelist: any;
   public public_key = 'pk_test_b3685f824518679567d6356e2636fc184878e833'; //Put your paystack Test or Live Key here
@@ -26,9 +26,9 @@ export class SubscriptionAndroidPage {
     console.log(this.newuser);
   }
 
- ionViewWillEnter(){
-  this.getPlantypes();
- }
+  ionViewWillEnter() {
+    this.getPlantypes();
+  }
 
   onPlantTypeSelect($event, plan) {
     this.pay_amount = plan.amount;
@@ -68,7 +68,7 @@ export class SubscriptionAndroidPage {
       loading.present();
       this.newuser.platform = "Android";
       this.newuser.referencecode = String(ref.reference);
-      this.newuser.usertype.id = 1;
+      this.newuser.usertypes = { id: 2, name: "" };
       console.log(this.newuser);
       this.auth.createNewUser(this.newuser).subscribe(resp => {
         if (resp.statusCode === 200) {

@@ -77,7 +77,7 @@ export class SettingCountryEditPage {
           text: 'Cancel',
           handler: () => {
 
-          }
+          } 
         },
         {
           text: 'Proceed',
@@ -92,7 +92,7 @@ export class SettingCountryEditPage {
               }
             }, error => {
               loading.dismiss().catch(() => { });
-              this.authProvider.showToast(error.error.description);
+              this.authProvider.showToast(error.error.error);
             });
           }
         }

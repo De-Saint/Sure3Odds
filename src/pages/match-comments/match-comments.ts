@@ -60,8 +60,7 @@ export class MatchCommentsPage {
       this.error = '';
     }, error => {
       this.comments = [];
-      this.error = error.error.description;
-      console.log(JSON.stringify(this.error));
+      this.error = 'none';
     });
   }
 
@@ -78,7 +77,7 @@ export class MatchCommentsPage {
           this.authProvider.showToast(res.description);
         }
       }, error => {
-        this.authProvider.showToast(error.error.description);
+        this.authProvider.showToast(error.error.error);
       });
     } else {
       this.authProvider.showToast("Comment input field is empty");

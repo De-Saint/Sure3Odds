@@ -1,15 +1,15 @@
 webpackJsonp([12],{
 
-/***/ 729:
+/***/ 721:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingLeagueAddPageModule", function() { return SettingLeagueAddPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PredictionAddPageModule", function() { return PredictionAddPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_league_add__ = __webpack_require__(802);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__ = __webpack_require__(355);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__prediction_add__ = __webpack_require__(798);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__ = __webpack_require__(354);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -21,59 +21,64 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SettingLeagueAddPageModule = /** @class */ (function () {
-    function SettingLeagueAddPageModule() {
+var PredictionAddPageModule = /** @class */ (function () {
+    function PredictionAddPageModule() {
     }
-    SettingLeagueAddPageModule = __decorate([
+    PredictionAddPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__setting_league_add__["a" /* SettingLeagueAddPage */],
+                __WEBPACK_IMPORTED_MODULE_2__prediction_add__["a" /* PredictionAddPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_league_add__["a" /* SettingLeagueAddPage */]),
-                __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__["SelectSearchableModule"],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__prediction_add__["a" /* PredictionAddPage */]),
+                __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__["SelectSearchableModule"]
             ],
         })
-    ], SettingLeagueAddPageModule);
-    return SettingLeagueAddPageModule;
+    ], PredictionAddPageModule);
+    return PredictionAddPageModule;
 }());
 
-//# sourceMappingURL=setting-league-add.module.js.map
+//# sourceMappingURL=prediction-add.module.js.map
 
 /***/ }),
 
-/***/ 761:
+/***/ 767:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Leagues; });
-var Leagues = /** @class */ (function () {
-    function Leagues(name, id, imageurl, country) {
-        this.name = name;
-        this.id = id;
-        this.imageurl = imageurl;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Predictions; });
+var Predictions = /** @class */ (function () {
+    function Predictions(awayteam, country, hometeam, league, matchdate, selections, matchtime, odds, id, status) {
+        this.awayteam = awayteam;
         this.country = country;
+        this.hometeam = hometeam;
+        this.league = league;
+        this.matchdate = matchdate;
+        this.selections = selections;
+        this.matchtime = matchtime;
+        this.odds = odds;
+        this.id = id;
+        this.status = status;
     }
-    return Leagues;
+    return Predictions;
 }());
 
-//# sourceMappingURL=Leagues.js.map
+//# sourceMappingURL=Predictions.js.map
 
 /***/ }),
 
-/***/ 802:
+/***/ 798:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingLeagueAddPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ionic_native_camera__ = __webpack_require__(356);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_games_games__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__interfaces_Leagues__ = __webpack_require__(761);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PredictionAddPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_games_games__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_Predictions__ = __webpack_require__(767);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__ = __webpack_require__(354);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_select_searchable__ = __webpack_require__(355);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_ionic_select_searchable__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -89,24 +94,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-var SettingLeagueAddPage = /** @class */ (function () {
-    function SettingLeagueAddPage(gamesProvider, actionSheetCtrl, camera, authProvider, loadingCtrl, navCtrl, navParams) {
+var PredictionAddPage = /** @class */ (function () {
+    function PredictionAddPage(gamesProvider, authProvider, loadingCtrl, navCtrl, navParams) {
         this.gamesProvider = gamesProvider;
-        this.actionSheetCtrl = actionSheetCtrl;
-        this.camera = camera;
         this.authProvider = authProvider;
         this.loadingCtrl = loadingCtrl;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.league = new __WEBPACK_IMPORTED_MODULE_3__interfaces_Leagues__["a" /* Leagues */]("", "", "", { id: "", name: "", imageurl: "" });
-        this.img1 = "assets/imgs/appicon.png";
-        this.flag = true;
+        this.prediction = new __WEBPACK_IMPORTED_MODULE_2__interfaces_Predictions__["a" /* Predictions */]({ id: "" }, { id: "" }, { id: "" }, { id: "" }, "", { id: "" }, "", "", "", { id: "", name: "" });
     }
-    SettingLeagueAddPage.prototype.ionViewWillEnter = function () {
+    PredictionAddPage.prototype.ionViewWillEnter = function () {
         this.Getcountries();
+        this.GetSelections();
     };
-    SettingLeagueAddPage.prototype.Getcountries = function () {
+    PredictionAddPage.prototype.Getcountries = function () {
         var _this = this;
         this.gamesProvider.Getcountries()
             .subscribe(function (resp) {
@@ -117,101 +118,151 @@ var SettingLeagueAddPage = /** @class */ (function () {
                 _this.authProvider.showToast(resp.description);
             }
         }, function (error) {
-            _this.authProvider.showToast(error.error.description);
+            _this.authProvider.showToast(error.error.error);
         });
     };
-    SettingLeagueAddPage.prototype.ionViewDidLoad = function () {
-        this.flag = (this.flag != false) ? false : true;
+    PredictionAddPage.prototype.onSelectSelection = function (event) {
+        console.log(event.value);
     };
-    SettingLeagueAddPage.prototype.userChanged = function (event) {
-        console.log('user:', event.value);
+    PredictionAddPage.prototype.onSelectHTeam = function (event) {
+        console.log(event.value);
     };
-    SettingLeagueAddPage.prototype.openFromCode = function () {
-        this.selectComponent.open();
+    PredictionAddPage.prototype.onSelectATeam = function (event) {
+        console.log(event.value);
     };
-    SettingLeagueAddPage.prototype.onSubmit = function (league) {
+    PredictionAddPage.prototype.onSelectCountry = function (event) {
         var _this = this;
-        if (this.league.name) {
-            this.league.imageurl = (this.league.imageurl != undefined) ? this.img1 : this.img;
-            var loading_1 = this.loadingCtrl.create({
-                content: "Please wait..."
-            });
-            loading_1.present();
-            this.gamesProvider.createLeague(league).subscribe(function (res) {
-                loading_1.dismiss().catch(function () { });
-                if (res.statusCode === 200) {
-                    _this.navCtrl.pop();
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        this.prediction.league = null;
+        if (event.value.id) {
+            loading.present();
+            this.gamesProvider.GetLeaguesByCountryID(event.value.id)
+                .subscribe(function (resp) {
+                loading.dismiss().catch(function () { });
+                if (resp.statusCode === 200) {
+                    _this.leagues = resp.data;
                 }
                 else {
-                    _this.authProvider.showToast(res.description);
+                    _this.authProvider.showToast(resp.description);
                 }
             }, function (error) {
-                loading_1.dismiss().catch(function () { });
-                _this.authProvider.showToast(error.error.description);
+                loading.dismiss().catch(function () { });
+                _this.authProvider.showToast(error.error.error);
             });
         }
-        else {
-            this.authProvider.showToast("Name input field is empty");
-        }
     };
-    SettingLeagueAddPage.prototype.selectImage = function () {
+    PredictionAddPage.prototype.onSelectLeague = function (event) {
         var _this = this;
-        var actionSheet = this.actionSheetCtrl.create({
-            title: 'Add League Logo',
-            buttons: [
-                {
-                    text: 'Gallery',
-                    handler: function () { _this.get_camera('Gallery'); }
-                }, {
-                    text: 'Camera',
-                    handler: function () { _this.get_camera('Camera'); }
-                }, {
-                    text: 'Cancel',
-                    role: 'cancel',
-                    handler: function () { }
-                }
-            ]
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
         });
-        actionSheet.present();
+        this.prediction.awayteam = null;
+        this.prediction.hometeam = null;
+        if (event.value.id) {
+            loading.present();
+            this.gamesProvider.getTeamsByLeagueId(event.value.id)
+                .subscribe(function (resp) {
+                loading.dismiss().catch(function () { });
+                if (resp.statusCode === 200) {
+                    _this.hometeams = resp.data;
+                    _this.awayteams = resp.data;
+                }
+                else {
+                    _this.authProvider.showToast(resp.description);
+                }
+            }, function (error) {
+                loading.dismiss().catch(function () { });
+                _this.authProvider.showToast(error.error.error);
+            });
+        }
     };
-    SettingLeagueAddPage.prototype.get_camera = function (source) {
+    PredictionAddPage.prototype.onSubmit = function (prediction) {
         var _this = this;
-        var options = {
-            quality: 100, destinationType: this.camera.DestinationType.DATA_URL,
-            encodingType: this.camera.EncodingType.JPEG, mediaType: this.camera.MediaType.PICTURE,
-            allowEdit: true, targetWidth: 512, targetHeight: 512, correctOrientation: true
-        };
-        if (source == 'Gallery') {
-            options.sourceType = this.camera.PictureSourceType.PHOTOLIBRARY;
+        if (prediction.country) {
+            if (prediction.league) {
+                if (prediction.selections) {
+                    if (prediction.hometeam && prediction.awayteam) {
+                        if (prediction.odds) {
+                            if (prediction.matchdate && prediction.matchtime) {
+                                if (prediction.hometeam !== prediction.awayteam) {
+                                    var loading_1 = this.loadingCtrl.create({
+                                        content: "Please wait..."
+                                    });
+                                    loading_1.present();
+                                    this.gamesProvider.CreatePrediction(prediction).subscribe(function (res) {
+                                        loading_1.dismiss().catch(function () { });
+                                        if (res.statusCode === 200) {
+                                            _this.navCtrl.pop();
+                                        }
+                                        else {
+                                            _this.authProvider.showToast(res.description);
+                                        }
+                                    }, function (error) {
+                                        loading_1.dismiss().catch(function () { });
+                                        _this.authProvider.showToast(error.error.error);
+                                    });
+                                }
+                                else {
+                                    this.authProvider.showToast("Home and Away Team cannot be same.");
+                                }
+                            }
+                            else {
+                                this.authProvider.showToast("Please, select either the Match Date or Time");
+                            }
+                        }
+                        else {
+                            this.authProvider.showToast("Odds input field is empty");
+                        }
+                    }
+                    else {
+                        this.authProvider.showToast("Please, select either Away or Home Team");
+                    }
+                }
+                else {
+                    this.authProvider.showToast("Please, select a Prediction");
+                }
+            }
+            else {
+                this.authProvider.showToast("Please, select a League");
+            }
         }
         else {
-            options.sourceType = this.camera.PictureSourceType.CAMERA;
+            this.authProvider.showToast("Please, select a Country");
         }
-        this.camera.getPicture(options).then(function (imageData) {
-            _this.img = 'data:image/jpeg;base64,' + imageData;
-        }, function (err) { });
-        if (this.img != undefined) {
-            this.img1 = this.img;
-        }
+    };
+    PredictionAddPage.prototype.GetSelections = function () {
+        var _this = this;
+        this.gamesProvider.getSelections()
+            .subscribe(function (resp) {
+            if (resp.statusCode === 200) {
+                _this.selections = resp.data;
+            }
+            else {
+                _this.authProvider.showToast(resp.description);
+            }
+        }, function (error) {
+            _this.authProvider.showToast(error.error.error);
+        });
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["ViewChild"])('myselect'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_6_ionic_select_searchable__["SelectSearchableComponent"])
-    ], SettingLeagueAddPage.prototype, "selectComponent", void 0);
-    SettingLeagueAddPage = __decorate([
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__["SelectSearchableComponent"])
+    ], PredictionAddPage.prototype, "selectComponent", void 0);
+    PredictionAddPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
-            selector: 'page-setting-league-add',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-league-add/setting-league-add.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Add League</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <div class="imgs">\n    <div class="imgProfile" [ngStyle]="{\'background-image\':\'url(\' + img1 + \')\'}">\n      <button ion-button icon-only class="profileCamera"  [ngClass]="{\'show\':flag==false}"   (click)="selectImage()">\n        <ion-icon name="md-camera"></ion-icon>\n      </button>\n    </div>\n  </div>\n  <div class="otherForm">\n    <ion-list>\n      <ion-item>\n        <ion-label>\n          Select Country\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="league.country" (onChange)="userChanged($event)" [items]="countries"\n          itemValueField="id"\n          [canClear]="true"\n          clearButtonText="Clear Selected"\n          confirmButtonText="Proceed"\n          itemTextField="name" \n          [canSearch]="true">\n\n        </select-searchable>\n      </ion-item>\n      <ion-item>\n        <ion-label stacked>Name</ion-label>\n        <ion-input type="text" [(ngModel)]="league.name"></ion-input>\n      </ion-item>\n      <!-- ==================================== -->\n    </ion-list>\n    <button ion-button block color="color2" (click)="onSubmit(league)">Submit</button>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-league-add/setting-league-add.html"*/,
+            selector: 'page-prediction-add',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/prediction-add/prediction-add.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Add New Prediction</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="otherForm">\n    <ion-list>\n      <hr ion-text margin-top margin-bottom>\n      <ion-item>\n        <ion-label>\n          Select The Country\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="prediction.country" (onChange)="onSelectCountry($event)"\n          [items]="countries" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n\n        </select-searchable>\n      </ion-item>\n\n      <ion-item>\n        <ion-label>\n          Select The League\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="prediction.league" (onChange)="onSelectLeague($event)"\n          [items]="leagues" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n\n        </select-searchable>\n      </ion-item>\n      <ion-item>\n        <ion-label>\n          Select The Home Team\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="prediction.hometeam" (onChange)="onSelectHTeam($event)"\n          [items]="hometeams" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n\n        </select-searchable>\n      </ion-item>\n\n\n      <ion-item>\n        <ion-label>\n          Select The Away Team\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="prediction.awayteam" (onChange)="onSelectATeam($event)"\n          [items]="awayteams" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n\n        </select-searchable>\n\n      </ion-item>\n      <hr margin-top margin-bottom>\n      <ion-item>\n        <ion-label>\n          Select The selection\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="prediction.selections" (onChange)="onSelectSelection($event)"\n          [items]="selections" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n\n        </select-searchable>\n\n      </ion-item>\n      <hr margin-top margin-bottom>\n     \n      <ion-item>\n        <ion-label>\n          Match Date\n        </ion-label>\n        <ion-datetime [(ngModel)]="prediction.matchdate" required displayFormat="YYYY-MM-DD" min="2017" max="2050-12-31">\n        </ion-datetime>\n      </ion-item>\n      <ion-item>\n        <ion-label>\n          Match Time\n        </ion-label>\n        <ion-datetime displayFormat="h:mm A" required [(ngModel)]="prediction.matchtime"></ion-datetime>\n      </ion-item>\n      <hr margin-top margin-bottom>\n      <ion-item>\n        <ion-label stacked>Odds</ion-label>\n        <ion-input type="text" required [(ngModel)]="prediction.odds"></ion-input>\n      </ion-item>\n    </ion-list>\n    <button ion-button block color="color2" (click)="onSubmit(prediction)">Submit</button>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/prediction-add/prediction-add.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_games_games__["a" /* GamesProvider */],
-            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["ActionSheetController"], __WEBPACK_IMPORTED_MODULE_0__ionic_native_camera__["a" /* Camera */],
-            __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_games_games__["a" /* GamesProvider */],
+            __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */],
             __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["LoadingController"],
             __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavParams"]])
-    ], SettingLeagueAddPage);
-    return SettingLeagueAddPage;
+    ], PredictionAddPage);
+    return PredictionAddPage;
 }());
 
-//# sourceMappingURL=setting-league-add.js.map
+//# sourceMappingURL=prediction-add.js.map
 
 /***/ })
 

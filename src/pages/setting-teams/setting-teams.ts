@@ -47,7 +47,7 @@ export class SettingTeamsPage {
         }
       }, error => {
         this.error = 'none';
-        this.authProvider.showToast(error.error.description);
+        this.authProvider.showToast(error.error.error);
       });
   }
 
@@ -71,7 +71,7 @@ export class SettingTeamsPage {
             }
           }, error => {
             this.error = 'none';
-            this.authProvider.showToast(error.error.description);
+            this.authProvider.showToast(error.error.error);
           });
       }
     }
@@ -145,16 +145,16 @@ export class SettingTeamsPage {
     });
     let confirm = this.alertCtrl.create({
       title: 'Delete Team',
-      message: "Do you want to delete <b>" + team.name + "</b> <br/>from <br/><b>" + team.league.name + "</b> league?",
+      message: "Do you want to delete <b>" + team.name + "</b> <br/>from <br/><b>" + team.league.name + "</b> league? <br/><br/>This action is irreversible.",
       buttons: [
         {
-          text: 'No',
+          text: 'Cancel',
           handler: () => {
 
           }
         },
         {
-          text: 'Yes',
+          text: 'Proceed',
           handler: () => {
             loading.present();
             this.gamesProvider.deleteTeam(team.id).subscribe(res => {
@@ -166,7 +166,7 @@ export class SettingTeamsPage {
               }
             }, error => {
               loading.dismiss().catch(() => { });
-              this.authProvider.showToast(error.error.description);
+              this.authProvider.showToast(error.error.error);
             });
           }
         }
@@ -179,7 +179,7 @@ export class SettingTeamsPage {
   onAssignTeam(team) {
     this.alertCtrl.create({
       title: "Assign To Another League",
-      message: "Would assign/add <b>" + team.name + "</b> to another league in the selected country.<br/><br/>You would select a country and the league within the selected country to assign <b>" + team.name + " to</b>.",
+      message: "Would assign/add <b>" + team.name + "</br> to another league in the selected country.<br/><br/>You would select a country and the league within the selected country to assign <b>" + team.name + " to</b>.",
       enableBackdropDismiss: !1,
       buttons: [{
         text: "Cancel",

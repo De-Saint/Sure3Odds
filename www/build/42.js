@@ -1,15 +1,14 @@
 webpackJsonp([42],{
 
-/***/ 718:
+/***/ 726:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PhotosDetailsPageModule", function() { return PhotosDetailsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchPopPageModule", function() { return SearchPopPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__photos_details__ = __webpack_require__(789);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_img_viewer__ = __webpack_require__(357);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__search_pop__ = __webpack_require__(805);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -19,35 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var PhotosDetailsPageModule = /** @class */ (function () {
-    function PhotosDetailsPageModule() {
+var SearchPopPageModule = /** @class */ (function () {
+    function SearchPopPageModule() {
     }
-    PhotosDetailsPageModule = __decorate([
+    SearchPopPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__photos_details__["a" /* PhotosDetailsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__search_pop__["a" /* SearchPopPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__photos_details__["a" /* PhotosDetailsPage */]), __WEBPACK_IMPORTED_MODULE_3_ionic_img_viewer__["a" /* IonicImageViewerModule */]
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__search_pop__["a" /* SearchPopPage */]),
             ],
         })
-    ], PhotosDetailsPageModule);
-    return PhotosDetailsPageModule;
+    ], SearchPopPageModule);
+    return SearchPopPageModule;
 }());
 
-//# sourceMappingURL=photos-details.module.js.map
+//# sourceMappingURL=search-pop.module.js.map
 
 /***/ }),
 
-/***/ 789:
+/***/ 805:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PhotosDetailsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchPopPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global__ = __webpack_require__(354);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,35 +56,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-var PhotosDetailsPage = /** @class */ (function () {
-    function PhotosDetailsPage(navCtrl, global) {
+var SearchPopPage = /** @class */ (function () {
+    function SearchPopPage(navCtrl) {
         this.navCtrl = navCtrl;
-        this.global = global;
-        this.photos = [
-            "assets/imgs/photos/p1.png",
-            "assets/imgs/photos/p2.png",
-            "assets/imgs/photos/p3.png",
-            "assets/imgs/photos/p4.png",
-            "assets/imgs/photos/p5.png",
-            "assets/imgs/photos/p3.png",
-            "assets/imgs/photos/p1.png",
-            "assets/imgs/photos/p2.png",
-            "assets/imgs/photos/p3.png",
-            "assets/imgs/photos/p4.png",
-            "assets/imgs/photos/p5.png",
-        ];
     }
-    PhotosDetailsPage = __decorate([
+    SearchPopPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-photos-details',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/photos-details/photos-details.html"*/'\n<ion-header>\n  <ion-navbar>\n    <ion-title>photos</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only  (click)="global.callSearch($event)">\n        <ion-icon name="md-search"></ion-icon>\n      </button>\n      <button ion-button icon-only navPush="NotificationPage">\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header> \n<ion-content>\n  <ion-list>\n    <ion-item *ngFor="let item of photos" float-left>\n      <img src="{{item}}" imageViewer="{{item}}"/>\n    </ion-item>\n  </ion-list>\n</ion-content>\n  '/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/photos-details/photos-details.html"*/,
+            selector: 'page-search-pop',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/search-pop/search-pop.html"*/'<ion-content >\n  <ion-searchbar></ion-searchbar>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/search-pop/search-pop.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
-    ], PhotosDetailsPage);
-    return PhotosDetailsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"]])
+    ], SearchPopPage);
+    return SearchPopPage;
 }());
 
-//# sourceMappingURL=photos-details.js.map
+//# sourceMappingURL=search-pop.js.map
 
 /***/ })
 

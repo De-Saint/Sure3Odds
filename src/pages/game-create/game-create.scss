@@ -1,0 +1,41 @@
+page-game-create {
+    .select-searchable {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        max-width: 65% !important;
+      }
+      .otherForm {
+        @extend .signForm;
+        margin-top: 1em;
+        border-radius: $control-radius;
+
+        width: calc(100% - #{$content-padding}* 2) !important;
+        padding: 8px !important;
+        .item {
+          transition: height 1s;
+          .text-input {
+            color: color($colors, dark);
+            opacity: 0.8;
+            font-weight: 500;
+          }
+          .label {
+            color: color($colors, dark);
+            font-weight: bold;
+          }
+    
+          &.show {
+            height: 0px !important;
+            transition: height 1s;
+            margin-bottom: 0px !important;
+          }
+          &.item-input-disabled {
+            border-bottom: none !important;
+          }
+        }
+        .button {
+          margin-top: $content-padding * 2 !important;
+        }
+      }
+}

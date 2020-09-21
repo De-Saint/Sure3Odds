@@ -1,14 +1,14 @@
 webpackJsonp([3],{
 
-/***/ 710:
+/***/ 706:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MatchVotesPageModule", function() { return MatchVotesPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MatchDetailsPageModule", function() { return MatchDetailsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__match_votes__ = __webpack_require__(781);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__match_details__ = __webpack_require__(783);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,27 +18,48 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MatchVotesPageModule = /** @class */ (function () {
-    function MatchVotesPageModule() {
+var MatchDetailsPageModule = /** @class */ (function () {
+    function MatchDetailsPageModule() {
     }
-    MatchVotesPageModule = __decorate([
+    MatchDetailsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__match_votes__["a" /* MatchVotesPage */],
+                __WEBPACK_IMPORTED_MODULE_2__match_details__["a" /* MatchDetailsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__match_votes__["a" /* MatchVotesPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__match_details__["a" /* MatchDetailsPage */]),
             ],
         })
-    ], MatchVotesPageModule);
-    return MatchVotesPageModule;
+    ], MatchDetailsPageModule);
+    return MatchDetailsPageModule;
 }());
 
-//# sourceMappingURL=match-votes.module.js.map
+//# sourceMappingURL=match-details.module.js.map
 
 /***/ }),
 
-/***/ 759:
+/***/ 765:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Comments; });
+var Comments = /** @class */ (function () {
+    function Comments(comments, date, time, game, id, user) {
+        this.comments = comments;
+        this.date = date;
+        this.time = time;
+        this.game = game;
+        this.id = id;
+        this.user = user;
+    }
+    return Comments;
+}());
+
+//# sourceMappingURL=Comments.js.map
+
+/***/ }),
+
+/***/ 766:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59,17 +80,18 @@ var Votes = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 781:
+/***/ 783:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MatchVotesPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_global__ = __webpack_require__(354);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_games_games__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_authenication_authenication__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__interfaces_Votes__ = __webpack_require__(759);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(20);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MatchDetailsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_Comments__ = __webpack_require__(765);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interfaces_Votes__ = __webpack_require__(766);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_games_games__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_global__ = __webpack_require__(355);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_authenication_authenication__ = __webpack_require__(87);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -85,32 +107,58 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var MatchVotesPage = /** @class */ (function () {
-    function MatchVotesPage(navCtrl, authProvider, gameProvider, global, navParams) {
+
+var MatchDetailsPage = /** @class */ (function () {
+    function MatchDetailsPage(navCtrl, authProvider, gameProvider, global, navParams) {
         this.navCtrl = navCtrl;
         this.authProvider = authProvider;
         this.gameProvider = gameProvider;
         this.global = global;
         this.navParams = navParams;
-        this.vote = new __WEBPACK_IMPORTED_MODULE_3__interfaces_Votes__["a" /* Votes */]("", "", { id: "" }, "", "", "");
+        this.tab = 'stats';
+        this.vote = new __WEBPACK_IMPORTED_MODULE_1__interfaces_Votes__["a" /* Votes */]("", "", { id: "" }, "", "", "");
+        this.comment = new __WEBPACK_IMPORTED_MODULE_0__interfaces_Comments__["a" /* Comments */]("", "", "", { id: "" }, "", { id: "" });
         this.img2 = "assets/imgs/appicon.png";
         this.match = this.navParams.data;
         console.log(this.match);
     }
-    MatchVotesPage.prototype.ngOnInit = function () {
-        this.GetGameVotes();
+    MatchDetailsPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        this.mutationObserver = new MutationObserver(function (mutations) {
+            _this.contentArea.scrollToBottom();
+        });
+        this.mutationObserver.observe(this.chatList.nativeElement, {
+            childList: true
+        });
     };
-    MatchVotesPage.prototype.GetGameVotes = function () {
+    MatchDetailsPage.prototype.onClick = function () {
+        this.contentArea.scrollToBottom(500);
+    };
+    MatchDetailsPage.prototype.ngOnInit = function () {
+        this.GetGameVotes();
+        this.GetGameComments();
+        this.jti = this.authProvider.currentUserDataValue.jti;
+    };
+    MatchDetailsPage.prototype.GetGameVotes = function () {
         var _this = this;
         this.gameProvider.GetGameVotes(this.match.id).subscribe(function (result) {
-            console.log(result.data);
             _this.votes = result.data;
-            console.log(_this.votes.AwayVotes);
         }, function (error) {
             console.log(JSON.stringify(error));
         });
     };
-    MatchVotesPage.prototype.onCreateVote = function (uservote, homevote, drawvote, awayvote, match) {
+    MatchDetailsPage.prototype.GetGameComments = function () {
+        var _this = this;
+        this.gameProvider.GetGameComments(this.match.id).subscribe(function (result) {
+            _this.comments = result.data;
+            console.log(_this.comments);
+        }, function (error) {
+            _this.comments = [];
+            _this.error = error.error.error;
+            console.log(JSON.stringify(_this.error));
+        });
+    };
+    MatchDetailsPage.prototype.onCreateVote = function (uservote, homevote, drawvote, awayvote, match) {
         var _this = this;
         this.vote.userVote = uservote;
         this.vote.homeVote = homevote;
@@ -126,22 +174,48 @@ var MatchVotesPage = /** @class */ (function () {
                 _this.authProvider.showToast(res.description);
             }
         }, function (error) {
-            _this.authProvider.showToast(error.error.description);
+            _this.authProvider.showToast(error.error.error);
         });
     };
-    MatchVotesPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
-            selector: 'page-match-votes',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/match-votes/match-votes.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu" ></ion-icon>\n    </button>\n    <ion-title>Match Details</ion-title>\n    \n  </ion-navbar>\n  <ion-toolbar class="matchResultBar">\n    <!-- match item  -->\n    <ion-item class="matchResult">\n      <ion-grid>\n        <ion-row>\n          <!-- first team -->\n          <ion-col col>\n            <ion-item>\n              <img src="{{match.hometeam.imageurl}}" style="border-radius: 50px;" *ngIf="match.hometeam.imageurl" />\n              <img src="assets/imgs/appicon.png" style="border-radius: 50px;" *ngIf="!match.hometeam.imageurl" />\n              <p>{{match.hometeam.name}}</p>\n            </ion-item>\n          </ion-col>\n          <!-- match time -->\n          <ion-col col-auto>\n            <div class="result">\n              <span ion-text color="color1">{{match?.hometeamscore}}</span>\n              <span ion-text style="padding: 0.3em;" color="color1">-</span>\n              <span ion-text color="color1">{{match?.awayteamscore}}</span>\n            </div>\n            <p ion-text color="light" text-center>{{match?.status.name}}</p>\n          </ion-col>\n          <!-- second team -->\n          <ion-col col>\n            <ion-item>\n              <img src="{{match.awayteam.imageurl}}" style="border-radius: 50px;" *ngIf="match.awayteam.imageurl" />\n              <img src="assets/imgs/appicon.png" style="border-radius: 50px;" *ngIf="!match.awayteam.imageurl" />\n              <p>{{match.awayteam.name}}</p>\n            </ion-item>\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col col-center>\n            <p ion-text color="secondary" style="text-align: center;">{{match.country.name}} - {{match.league.name}}</p>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n\n    </ion-item>\n  </ion-toolbar>\n</ion-header>\n\n\n<ion-content >\n  <!-- goals -->\n  <div class="goals" padding>\n    <ion-list>\n      <h5 ion-text text-center margin-top color="color2">Current Votes</h5>\n      <ion-grid style="margin-bottom: 0.5em;">\n        <ion-row>\n          <ion-col col-auto text-left style="width: 10em;">\n            <p ion-text color="color1" no-margin><b>{{match.hometeam.name}} Votes</b></p>\n          </ion-col>\n          <ion-col col text-center>\n            <p ion-text color="dark" no-margin><b>Draw Votes</b></p>\n          </ion-col>\n          <ion-col col-auto text-right style="width: 10em;">\n            <p ion-text color="color1" no-margin><b>{{match.awayteam.name}} Votes</b></p>\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col col-auto text-left>\n            <p ion-text color="dark" no-margin>{{votes?.HomeVotes}}</p>\n          </ion-col>\n          <ion-col col text-center>\n            <p ion-text color="dark" no-margin>{{votes?.DrawVotes}}</p>\n          </ion-col>\n          <ion-col col-auto text-right>\n            <p ion-text color="dark" no-margin>{{votes?.AwayVotes}}</p>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n      <hr>\n\n       <div class="imgs" *ngIf="votes?.UserVote">\n        <div class="imgProfile" [ngStyle]="{\'background-image\':\'url(\' + img2 + \')\'}">\n\n        </div>\n      </div>\n      <div class="nameAndMail" *ngIf="votes?.UserVote">\n        <h5 ion-text color="dark">{{votes?.UserVote.user.lastname}} {{votes?.UserVote.user.firstname}}</h5>\n        <p ion-text color="dark" *ngIf="votes?.UserVote.userVote === 1">{{votes?.UserVote.game.hometeam.name}}:\n          <i>Wins</i></p>\n        <p ion-text color="dark" *ngIf="votes?.UserVote.userVote === 2">{{votes?.UserVote.game.awayteam.name}}:\n          <i>Wins</i></p>\n        <p ion-text color="dark" *ngIf="votes?.UserVote.userVote === 3">Draw Match</p>\n      </div>\n      <hr>\n      <h5 ion-text text-center color="color2" *ngIf="!votes?.UserVote">Who do you think is going to win?</h5>\n      <h5 ion-text text-center color="color2" *ngIf="votes?.UserVote">You have voted.</h5>\n      <div style="margin-bottom: 0.5em;" text-center margin-top ion-text color="danger" *ngIf="!votes?.UserVote">\n        You have not voted.\n      </div>\n      <ion-item margin-top style="margin-bottom: 0.5em;">\n        <ion-grid>\n          <ion-row>\n            <ion-col col text-center>\n              <p ion-text ion-button *ngIf="votes?.UserVote" disabled="true" small outline color="color1"\n                (click)="onCreateVote(1, 1, 0, 0, match)" no-margin> <b>Vote - {{match.hometeam.name}}</b></p>\n              <p ion-text ion-button *ngIf="!votes?.UserVote" small outline color="color1"\n                (click)="onCreateVote(1, 1, 0, 0, match)" no-margin> <b>Vote - {{match.hometeam.name}}</b></p>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-5>\n              <div class="progressBar" progress-right>\n                <span class="container"></span>\n              </div>\n            </ion-col>\n            <ion-col col-2 text-center>\n              <p ion-text color="dark" no-margin>Home Win</p>\n            </ion-col>\n            <ion-col col-5>\n              <div class="progressBar">\n                <span class="container"></span>\n              </div>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-item>\n\n      <ion-item style="margin-bottom: 0.5em;">\n        <ion-grid>\n          <ion-row>\n            <ion-col col text-center>\n              <p ion-text ion-button *ngIf="votes?.UserVote" disabled="true" small outline color="color1"\n                (click)="onCreateVote(3,0,1,0,  match)" no-margin><b>Vote - X</b>\n                <p ion-text ion-button *ngIf="!votes?.UserVote" small outline color="color1"\n                  (click)="onCreateVote(3,0,1,0,  match)" no-margin><b>Vote - X</b>\n                </p>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-5>\n              <div class="progressBar" progress-right>\n                <span class="container"></span>\n              </div>\n            </ion-col>\n            <ion-col col-2 text-center>\n              <p ion-text color="dark" no-margin>Draw</p>\n            </ion-col>\n            <ion-col col-5>\n              <div class="progressBar">\n                <span class="container"></span>\n              </div>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-item>\n      <ion-item style="margin-bottom: 0.5em;">\n        <ion-grid>\n          <ion-row>\n            <ion-col col text-center>\n              <p ion-text ion-button *ngIf="votes?.UserVote" disabled="true" small outline color="color1"\n                (click)="onCreateVote(2,0,0,1, match)" no-margin> <b>Vote - {{match.awayteam.name}}</b></p>\n              <p ion-text ion-button *ngIf="!votes?.UserVote" small outline color="color1"\n                (click)="onCreateVote(2,0,0,1, match)" no-margin> <b>Vote - {{match.awayteam.name}}</b></p>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-5>\n              <div class="progressBar" progress-right>\n                <span class="container"></span>\n              </div>\n            </ion-col>\n            <ion-col col-2 text-center>\n              <p ion-text color="dark" no-margin>Away Win</p>\n            </ion-col>\n            <ion-col col-5>\n              <div class="progressBar">\n                <span class="container"></span>\n              </div>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-item> \n    </ion-list>\n  </div>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/match-votes/match-votes.html"*/,
+    MatchDetailsPage.prototype.onCreateComment = function (comment, match) {
+        var _this = this;
+        console.log(comment);
+        if (this.comment.comments) {
+            this.comment.game.id = match.id;
+            this.gameProvider.createComment(this.comment).subscribe(function (res) {
+                if (res.statusCode === 200) {
+                    _this.GetGameComments();
+                    // this.content.scrollToBottom();
+                }
+                else {
+                    _this.authProvider.showToast(res.description);
+                }
+            }, function (error) {
+                _this.authProvider.showToast(error.error.error);
+            });
+        }
+        else {
+            this.authProvider.showToast("Comment input field is empty");
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["Content"]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["Content"])
+    ], MatchDetailsPage.prototype, "contentArea", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["List"], { read: __WEBPACK_IMPORTED_MODULE_3__angular_core__["ElementRef"] }),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_3__angular_core__["ElementRef"])
+    ], MatchDetailsPage.prototype, "chatList", void 0);
+    MatchDetailsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-match-details',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/match-details/match-details.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Match Details</ion-title>\n  </ion-navbar>\n  <ion-toolbar class="matchResultBar">\n    <!-- match item  -->\n    <ion-item class="matchResult">\n      <ion-grid>\n        <ion-row>\n          <!-- first team -->\n          <ion-col col>\n            <ion-item>\n              <img src="{{match.hometeam.imageurl}}" style="border-radius: 50px;" *ngIf="match.hometeam.imageurl" />\n              <img src="assets/imgs/appicon.png" style="border-radius: 50px;" *ngIf="!match.hometeam.imageurl" />\n              <p>{{match.hometeam.name}}</p>\n            </ion-item>\n          </ion-col>\n          <!-- match time -->\n          <ion-col col-auto>\n            <div class="result">\n              <span ion-text color="color1">{{match?.hometeamscore}}</span>\n              <span ion-text style="padding: 0.3em;" color="color1">-</span>\n              <span ion-text color="color1">{{match?.awayteamscore}}</span>\n            </div>\n            <p ion-text color="light" text-center>{{match?.status.name}}</p>\n          </ion-col>\n          <!-- second team -->\n          <ion-col col>\n            <ion-item>\n              <img src="{{match.awayteam.imageurl}}" style="border-radius: 50px;" *ngIf="match.awayteam.imageurl" />\n              <img src="assets/imgs/appicon.png" style="border-radius: 50px;" *ngIf="!match.awayteam.imageurl" />\n              <p>{{match.awayteam.name}}</p>\n            </ion-item>\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col col-center>\n            <p ion-text color="secondary" style="text-align: center;">{{match.country.name}} - {{match.league.name}}</p>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n\n    </ion-item>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <!-- match stats -->\n  <div class="matchStats" margin-top>\n \n    <ion-list>\n      <!-- state with percentage -->\n      <ion-item margin-top style="margin-bottom: 0.5em;">\n        <ion-grid>\n          <ion-row>\n            <ion-col col text-center>\n              <p ion-text color="dark" no-margin>Odds</p>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-5>\n              <div class="progressBar" progress-right>\n                <span class="container"></span>\n              </div>\n            </ion-col>\n            <ion-col col-2 text-center>\n              <p ion-text color="dark" no-margin>{{match.odds}}</p>\n            </ion-col>\n            <ion-col col-5>\n              <div class="progressBar">\n                <span class="container"></span>\n              </div>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-item>\n      <ion-item style="margin-bottom: 0.5em;">\n        <ion-grid>\n          <ion-row>\n            <ion-col col text-center>\n              <p ion-text color="dark" no-margin>Prediction</p>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-4>\n              <div class="progressBar" progress-right>\n                <span class="container"></span>\n              </div>\n            </ion-col>\n            <ion-col col-4 text-center>\n              <p ion-text color="dark" no-margin>{{match.selections.name}}</p>\n            </ion-col>\n            <ion-col col-4>\n              <div class="progressBar">\n                <span class="container"></span>\n              </div>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-item>\n\n      <ion-item style="margin-bottom: 0.5em;">\n        <ion-grid>\n          <ion-row>\n            <ion-col col text-center>\n              <p ion-text color="dark" no-margin>Match Time</p>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-5>\n              <div class="progressBar" progress-right>\n                <span class="container"></span>\n              </div>\n            </ion-col>\n            <ion-col col-2 text-center>\n              <p ion-text color="dark" no-margin>{{match.matchtime}}</p>\n            </ion-col>\n            <ion-col col-5>\n              <div class="progressBar">\n                <span class="container"></span>\n              </div>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-item>\n      <ion-item style="margin-bottom: 0.5em;">\n        <ion-grid>\n          <ion-row>\n            <ion-col col text-center>\n              <p ion-text color="dark" no-margin>Match Date </p>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-4>\n              <div class="progressBar" progress-right>\n                <span class="container"></span>\n              </div>\n            </ion-col>\n            <ion-col col-4 text-center>\n              <p ion-text color="dark" no-margin>{{match.matchdate}}</p>\n            </ion-col>\n            <ion-col col-4>\n              <div class="progressBar">\n                <span class="container"></span>\n              </div>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n\n      </ion-item>\n    </ion-list>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/match-details/match-details.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavController"],
-            __WEBPACK_IMPORTED_MODULE_2__providers_authenication_authenication__["a" /* AuthenicationProvider */],
-            __WEBPACK_IMPORTED_MODULE_1__providers_games_games__["a" /* GamesProvider */],
-            __WEBPACK_IMPORTED_MODULE_0__providers_global__["a" /* Global */], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavParams"]])
-    ], MatchVotesPage);
-    return MatchVotesPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_6__providers_authenication_authenication__["a" /* AuthenicationProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_games_games__["a" /* GamesProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_global__["a" /* Global */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"]])
+    ], MatchDetailsPage);
+    return MatchDetailsPage;
 }());
 
-//# sourceMappingURL=match-votes.js.map
+//# sourceMappingURL=match-details.js.map
 
 /***/ })
 

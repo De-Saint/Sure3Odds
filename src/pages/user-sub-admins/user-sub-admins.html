@@ -1,18 +1,40 @@
-<!--
-  Generated template for the UserSubAdminsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>UserSubAdmins</ion-title>
+    <button ion-button menuToggle icon-only>
+      <ion-icon class="goal-menu"></ion-icon>
+    </button>
+    <ion-title>Sub-Admins</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only navPush="UserSubAdminAddPage">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
-
+  <ion-searchbar [(ngModel)]="searchTerm" (ionCancel)="onCancel($event)" [showCancelButton]="true"
+    (ionClear)="onClear($event)" (ionInput)="onSearch()">
+  </ion-searchbar>
+  <div class="squad">
+    <ion-list>
+      <ion-item class="avatarItem" margin-bottom *ngFor="let user of users" (click)="onSubAdminOption(user)">
+        <ion-avatar item-left>
+          <img src="assets/imgs/appicon.png">
+        </ion-avatar>
+        <h5 ion-text color="dark">{{user.lastname}} {{user.firstname}}</h5>
+        <p ion-text color="color1" item-right><b>{{user.status.name}}</b></p>
+      </ion-item>
+    </ion-list>
+  </div>
+  <div class="" *ngIf="error === 'none'">
+    <p ion-text text-center color="color2">No result found!</p>
+  </div>
+  <div text-center margin-top margin-bottonm *ngIf="nousers === 'none'" (click)="onGotoTop()">
+    <button ion-button small color="color2">Back to Top</button>
+  </div>
+  <ion-infinite-scroll (ionInfinite)="scrollInfinite($event)" *ngIf="currentPage < totalPage">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading page {{currentPage}} of {{totalPage}}">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>

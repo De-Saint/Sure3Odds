@@ -58,7 +58,7 @@ export class MatchVotesPage {
         this.authProvider.showToast(res.description);
       }
     }, error => {
-      this.authProvider.showToast(error.error.description);
+      this.authProvider.showToast(error.error.error);
     });
   }
 

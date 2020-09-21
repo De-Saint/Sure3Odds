@@ -43,7 +43,7 @@ export class GameNewPage {
           this.authProvider.showToast(resp.description);
         }
       }, error => {
-        this.authProvider.showToast(error.error.description);
+        this.authProvider.showToast(error.error.error);
       });
   }
 
@@ -76,7 +76,7 @@ export class GameNewPage {
           }
         }, error => {
           loading.dismiss().catch(() => { });
-          this.authProvider.showToast(error.error.description);
+          this.authProvider.showToast(error.error.error);
         });
     }
 
@@ -101,7 +101,7 @@ export class GameNewPage {
           }
         }, error => {
           loading.dismiss().catch(() => { });
-          this.authProvider.showToast(error.error.description);
+          this.authProvider.showToast(error.error.error);
         });
     }
 
@@ -168,7 +168,7 @@ export class GameNewPage {
           this.authProvider.showToast(resp.description);
         }
       }, error => {
-        this.authProvider.showToast(error.error.description);
+        this.authProvider.showToast(error.error.error);
       });
   }
   GetSets() {
@@ -180,7 +180,7 @@ export class GameNewPage {
           this.authProvider.showToast(resp.description);
         }
       }, error => {
-        this.authProvider.showToast(error.error.description);
+        this.authProvider.showToast(error.error.error);
       });
   }
 }

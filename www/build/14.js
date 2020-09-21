@@ -1,16 +1,14 @@
 webpackJsonp([14],{
 
-/***/ 700:
+/***/ 758:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GameEditPageModule", function() { return GameEditPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserSubAdminAddPageModule", function() { return UserSubAdminAddPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__game_edit__ = __webpack_require__(771);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__ = __webpack_require__(355);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_sub_admin_add__ = __webpack_require__(838);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,68 +18,61 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var GameEditPageModule = /** @class */ (function () {
-    function GameEditPageModule() {
+var UserSubAdminAddPageModule = /** @class */ (function () {
+    function UserSubAdminAddPageModule() {
     }
-    GameEditPageModule = __decorate([
+    UserSubAdminAddPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__game_edit__["a" /* GameEditPage */],
+                __WEBPACK_IMPORTED_MODULE_2__user_sub_admin_add__["a" /* UserSubAdminAddPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__game_edit__["a" /* GameEditPage */]),
-                __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__["SelectSearchableModule"]
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__user_sub_admin_add__["a" /* UserSubAdminAddPage */]),
             ],
         })
-    ], GameEditPageModule);
-    return GameEditPageModule;
+    ], UserSubAdminAddPageModule);
+    return UserSubAdminAddPageModule;
 }());
 
-//# sourceMappingURL=game-edit.module.js.map
+//# sourceMappingURL=user-sub-admin-add.module.js.map
 
 /***/ }),
 
-/***/ 757:
+/***/ 762:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Games; });
-var Games = /** @class */ (function () {
-    function Games(awayteam, country, hometeam, league, matchdate, selections, matchtime, sets, odds, id, status, hometeamscore, awayteamscore) {
-        this.awayteam = awayteam;
-        this.country = country;
-        this.hometeam = hometeam;
-        this.league = league;
-        this.matchdate = matchdate;
-        this.selections = selections;
-        this.matchtime = matchtime;
-        this.sets = sets;
-        this.odds = odds;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewUsers; });
+var NewUsers = /** @class */ (function () {
+    function NewUsers(id, email, firstname, lastname, referencecode, password, phone, plantype, platform, usertypes, status) {
         this.id = id;
+        this.email = email;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.referencecode = referencecode;
+        this.password = password;
+        this.phone = phone;
+        this.plantype = plantype;
+        this.platform = platform;
+        this.usertypes = usertypes;
         this.status = status;
-        this.hometeamscore = hometeamscore;
-        this.awayteamscore = awayteamscore;
     }
-    return Games;
+    return NewUsers;
 }());
 
-//# sourceMappingURL=Games.js.map
+//# sourceMappingURL=NewUser.js.map
 
 /***/ }),
 
-/***/ 771:
+/***/ 838:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GameEditPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_Games__ = __webpack_require__(757);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_games_games__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__ = __webpack_require__(355);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(20);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserSubAdminAddPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interfaces_NewUser__ = __webpack_require__(762);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -95,226 +86,70 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-var GameEditPage = /** @class */ (function () {
-    function GameEditPage(gamesProvider, authProvider, loadingCtrl, navCtrl, navParams) {
-        this.gamesProvider = gamesProvider;
-        this.authProvider = authProvider;
+var UserSubAdminAddPage = /** @class */ (function () {
+    function UserSubAdminAddPage(loadingCtrl, navCtrl, auth) {
         this.loadingCtrl = loadingCtrl;
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.game = new __WEBPACK_IMPORTED_MODULE_0__interfaces_Games__["a" /* Games */]({ id: "" }, { id: "" }, { id: "" }, { id: "" }, "", { id: "" }, "", { id: "" }, "", "", { id: "" }, 0, 0);
-        this.selectedgame = this.navParams.get("game");
-        if (this.selectedgame) {
-            this.game = this.selectedgame;
-            console.log(this.game);
-        }
+        this.auth = auth;
+        this.newuser = new __WEBPACK_IMPORTED_MODULE_1__interfaces_NewUser__["a" /* NewUsers */]("", "", "", "", "", "", "", { id: "" }, "", { id: "", name: "" }, { id: "", name: "" });
     }
-    GameEditPage.prototype.ionViewWillEnter = function () {
-        this.Getcountries();
-        this.GetSelections();
-        this.GetSets();
-        this.GetStatus();
+    UserSubAdminAddPage.prototype.ionViewDidLoad = function () {
     };
-    GameEditPage.prototype.Getcountries = function () {
+    UserSubAdminAddPage.prototype.createAccount = function () {
         var _this = this;
-        this.gamesProvider.Getcountries()
-            .subscribe(function (resp) {
-            if (resp.statusCode === 200) {
-                _this.countries = resp.data;
-            }
-            else {
-                _this.authProvider.showToast(resp.description);
-            }
-        }, function (error) {
-            _this.authProvider.showToast(error.error.description);
-        });
-    };
-    GameEditPage.prototype.onSelectSelection = function (event) {
-        console.log(event.value);
-    };
-    GameEditPage.prototype.onSelectSets = function (event) {
-        console.log(event.value);
-    };
-    GameEditPage.prototype.onSelectHTeam = function (event) {
-        console.log(event.value);
-    };
-    GameEditPage.prototype.onSelectATeam = function (event) {
-        console.log(event.value);
-    };
-    GameEditPage.prototype.onSelectStatus = function (event) {
-        console.log(event.value);
-    };
-    GameEditPage.prototype.onSelectCountry = function (event) {
-        var _this = this;
-        var loading = this.loadingCtrl.create({
-            content: "Please wait..."
-        });
-        this.game.league = null;
-        if (event.value.id) {
-            loading.present();
-            this.gamesProvider.GetLeaguesByCountryID(event.value.id)
-                .subscribe(function (resp) {
-                loading.dismiss().catch(function () { });
-                if (resp.statusCode === 200) {
-                    _this.leagues = resp.data;
-                }
-                else {
-                    _this.authProvider.showToast(resp.description);
-                }
-            }, function (error) {
-                loading.dismiss().catch(function () { });
-                _this.authProvider.showToast(error.error.description);
-            });
+        if (this.newuser.firstname == "" || this.newuser.firstname == undefined || this.newuser.firstname == null) {
+            this.auth.showToast("Firstname is empty");
+            return false;
         }
-    };
-    GameEditPage.prototype.onSelectLeague = function (event) {
-        var _this = this;
-        var loading = this.loadingCtrl.create({
-            content: "Please wait..."
-        });
-        this.game.awayteam = null;
-        this.game.hometeam = null;
-        if (event.value.id) {
-            loading.present();
-            this.gamesProvider.getTeamsByLeagueId(event.value.id)
-                .subscribe(function (resp) {
-                loading.dismiss().catch(function () { });
-                if (resp.statusCode === 200) {
-                    _this.hometeams = resp.data;
-                    _this.awayteams = resp.data;
-                }
-                else {
-                    _this.authProvider.showToast(resp.description);
-                }
-            }, function (error) {
-                loading.dismiss().catch(function () { });
-                _this.authProvider.showToast(error.error.description);
-            });
+        else if (this.newuser.lastname == "" || this.newuser.lastname == undefined || this.newuser.lastname == null) {
+            this.auth.showToast("Lastname is empty");
+            return false;
         }
-    };
-    GameEditPage.prototype.onSubmit = function (game) {
-        var _this = this;
-        if (game.sets) {
-            if (game.country) {
-                if (game.league) {
-                    if (game.selections) {
-                        if (game.hometeam && game.awayteam) {
-                            if (game.odds) {
-                                if (game.matchdate && game.matchtime) {
-                                    if (game.hometeam !== game.awayteam) {
-                                        if (game.hometeamscore && game.awayteamscore) {
-                                            var loading_1 = this.loadingCtrl.create({
-                                                content: "Please wait..."
-                                            });
-                                            loading_1.present();
-                                            this.gamesProvider.updateGame(game).subscribe(function (res) {
-                                                loading_1.dismiss().catch(function () { });
-                                                if (res.statusCode === 200) {
-                                                    _this.navCtrl.pop();
-                                                }
-                                                else {
-                                                    _this.authProvider.showToast(res.description);
-                                                }
-                                            }, function (error) {
-                                                loading_1.dismiss().catch(function () { });
-                                                _this.authProvider.showToast(error.error.error);
-                                            });
-                                        }
-                                        else {
-                                            this.authProvider.showToast("Either Home or Away Team score input field is empty or incorrect");
-                                        }
-                                    }
-                                    else {
-                                        this.authProvider.showToast("Home and Away Team cannot be same.");
-                                    }
-                                }
-                                else {
-                                    this.authProvider.showToast("Please, select either the Match Date or Time");
-                                }
-                            }
-                            else {
-                                this.authProvider.showToast("Odds input field is empty");
-                            }
-                        }
-                        else {
-                            this.authProvider.showToast("Please, select either Away or Home Team");
-                        }
-                    }
-                    else {
-                        this.authProvider.showToast("Please, select a Prediction");
-                    }
-                }
-                else {
-                    this.authProvider.showToast("Please, select a League");
-                }
-            }
-            else {
-                this.authProvider.showToast("Please, select a Country");
-            }
+        else if (this.newuser.email == "" || this.newuser.email == undefined || this.newuser.email == null) {
+            this.auth.showToast("Email is empty");
+            return false;
+        }
+        else if (this.newuser.phone == "" || this.newuser.phone == undefined || this.newuser.phone == null) {
+            this.auth.showToast("Phone number is empty");
+            return false;
+        }
+        else if (this.newuser.password == "" || this.newuser.password == undefined || this.newuser.password == null) {
+            this.auth.showToast("Password is empty");
+            return false;
         }
         else {
-            this.authProvider.showToast("Please, select a Set ");
+            this.newuser.usertypes = { id: 3, name: "" };
+            console.log(this.newuser);
+            var loading_1 = this.loadingCtrl.create({
+                content: 'Please wait...'
+            });
+            loading_1.present();
+            console.log(this.newuser);
+            this.auth.createSubAdmin(this.newuser).subscribe(function (resp) {
+                if (resp.statusCode === 200) {
+                    loading_1.dismiss().catch(function () { });
+                    _this.navCtrl.pop();
+                }
+                else {
+                    loading_1.dismiss().catch(function () { });
+                    _this.auth.showToast(resp.description);
+                }
+            }, function (error) {
+                loading_1.dismiss().catch(function () { });
+                _this.auth.showToast(error.error.message);
+            });
         }
     };
-    GameEditPage.prototype.GetSelections = function () {
-        var _this = this;
-        this.gamesProvider.getSelections()
-            .subscribe(function (resp) {
-            if (resp.statusCode === 200) {
-                _this.selections = resp.data;
-            }
-            else {
-                _this.authProvider.showToast(resp.description);
-            }
-        }, function (error) {
-            _this.authProvider.showToast(error.error.description);
-        });
-    };
-    GameEditPage.prototype.GetSets = function () {
-        var _this = this;
-        this.gamesProvider.GetSets()
-            .subscribe(function (resp) {
-            if (resp.statusCode === 200) {
-                _this.sets = resp.data;
-            }
-            else {
-                _this.authProvider.showToast(resp.description);
-            }
-        }, function (error) {
-            _this.authProvider.showToast(error.error.description);
-        });
-    };
-    GameEditPage.prototype.GetStatus = function () {
-        var _this = this;
-        this.gamesProvider.GetStatus("Game")
-            .subscribe(function (resp) {
-            if (resp.statusCode === 200) {
-                _this.statuses = resp.data;
-            }
-            else {
-                _this.authProvider.showToast(resp.description);
-            }
-        }, function (error) {
-            _this.authProvider.showToast(error.error.description);
-        });
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["ViewChild"])('myselect'),
-        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__["SelectSearchableComponent"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__["SelectSearchableComponent"]) === "function" && _a || Object)
-    ], GameEditPage.prototype, "selectComponent", void 0);
-    GameEditPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
-            selector: 'page-game-edit',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/game-edit/game-edit.html"*/'<ion-header>\n \n  <ion-navbar>\n    <ion-title>Edit Game</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="otherForm">\n    <ion-list>\n      <ion-item>\n        <ion-label>\n          Select The Set\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.sets" (onChange)="onSelectSets($event)" [items]="sets"\n          itemValueField="id" [canClear]="true" clearButtonText="Clear Selected" confirmButtonText="Proceed"\n          itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n      <hr ion-text margin-top margin-bottom>\n\n      <ion-item>\n        <ion-label>\n          Select The Country\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.country" (onChange)="onSelectCountry($event)"\n          [items]="countries" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n\n      <ion-item>\n        <ion-label>\n          Select The League\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.league" (onChange)="onSelectLeague($event)"\n          [items]="leagues" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n\n      <ion-item>\n        <ion-label>\n          Select The Home Team\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.hometeam" (onChange)="onSelectHTeam($event)"\n          [items]="hometeams" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n\n      <ion-item>\n        <ion-label>\n          Select The Away Team\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.awayteam" (onChange)="onSelectATeam($event)"\n          [items]="awayteams" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n\n      <hr margin-top margin-bottom>\n      <ion-item>\n        <ion-label>\n          Pick The Selection\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.selections" (onChange)="onSelectSelection($event)"\n          [items]="selections" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n\n      <hr margin-top margin-bottom>\n      <ion-item>\n        <ion-label>\n          Match Date\n        </ion-label>\n        <ion-datetime [(ngModel)]="game.matchdate" required displayFormat="YYYY-MM-DD" min="2017" max="2050-12-31">\n        </ion-datetime>\n      </ion-item>\n      <ion-item>\n        <ion-label>\n          Match Time\n        </ion-label>\n        <ion-datetime displayFormat="h:mm A" required [(ngModel)]="game.matchtime"></ion-datetime>\n      </ion-item>\n\n      <hr margin-top margin-bottom>\n      <ion-item>\n        <ion-label stacked>Odds</ion-label>\n        <ion-input type="text" required [(ngModel)]="game.odds"></ion-input>\n      </ion-item>\n\n      <hr margin-top margin-bottom>\n      <ion-item>\n        <ion-label stacked>Home Time Score</ion-label>\n        <ion-input type="number" required [(ngModel)]="game.hometeamscore"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label stacked>Away Team Score</ion-label>\n        <ion-input type="number" required [(ngModel)]="game.awayteamscore"></ion-input>\n      </ion-item>\n      \n      <hr margin-top margin-bottom>\n      <ion-item>\n        <ion-label>\n          Select The Status\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.status" (onChange)="onSelectStatus($event)"\n          [items]="statuses" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n    </ion-list>\n    <button ion-button block color="color2" (click)="onSubmit(game)">Submit</button>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/game-edit/game-edit.html"*/,
+    UserSubAdminAddPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
+            selector: 'page-user-sub-admin-add',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/user-sub-admin-add/user-sub-admin-add.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Add New Sub-Admin</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <div class="otherForm">\n    <ion-list>\n      <ion-item>\n        <ion-label stacked>\n          Enter First Name\n        </ion-label>\n        <ion-input type="text" [(ngModel)]="newuser.firstname" name="firstname" id="firstname"  placeholder="First Name"></ion-input>\n      </ion-item>\n      <ion-item >\n        <ion-label stacked>\n          Enter Last Name\n        </ion-label>\n        <ion-input type="text" [(ngModel)]="newuser.lastname" name="lastname" id="lastname" placeholder="Last Name"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-label stacked>\n          Enter Email\n        </ion-label>\n        <ion-input type="email" [(ngModel)]="newuser.email" name="email" id="email"  placeholder="E-mail"></ion-input>\n      </ion-item>\n\n      <ion-item >\n        <ion-label stacked>\n          Enter Phone\n        </ion-label>\n        <ion-input type="tel" [(ngModel)]="newuser.phone" name="phone" id="phone" placeholder="Phone"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label stacked>\n          Enter Password\n        </ion-label>\n        <ion-input type="password"  [(ngModel)]="newuser.password" name="password" id="password" placeholder="Password"></ion-input>\n      </ion-item>\n      <button ion-button block type="submit" color="color2" (click)="createAccount(newuser)">Submit</button>\n    </ion-list>\n  </div>\n\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/user-sub-admin-add/user-sub-admin-add.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__providers_games_games__["a" /* GamesProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_games_games__["a" /* GamesProvider */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["LoadingController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["LoadingController"]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavController"]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavParams"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavParams"]) === "function" && _f || Object])
-    ], GameEditPage);
-    return GameEditPage;
-    var _a, _b, _c, _d, _e, _f;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["LoadingController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */]])
+    ], UserSubAdminAddPage);
+    return UserSubAdminAddPage;
 }());
 
-//# sourceMappingURL=game-edit.js.map
+//# sourceMappingURL=user-sub-admin-add.js.map
 
 /***/ })
 

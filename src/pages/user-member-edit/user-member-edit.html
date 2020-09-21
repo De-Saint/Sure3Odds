@@ -1,0 +1,100 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Edit {{newuser.lastname}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="otherForm">
+    <ion-list>
+      <ion-list-header>
+        <h2 ion-text text-center color="color2">{{newuser.lastname}} Membership Details</h2>
+      </ion-list-header>
+      <ion-item>
+        <ion-label stacked>
+          Enter First Name
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="newuser.firstname" name="firstname" id="firstname" placeholder="First Name">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>
+          Enter Last Name
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="newuser.lastname" name="lastname" id="lastname" placeholder="Last Name">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>
+          Enter Email
+        </ion-label>
+        <ion-input type="email" [(ngModel)]="newuser.email" name="email" id="email" placeholder="E-mail"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>
+          Enter Phone
+        </ion-label>
+        <ion-input type="tel" [(ngModel)]="newuser.phone" name="phone" id="phone" placeholder="Phone"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>
+          Current UserType
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="newuser.usertypes.name" disabled>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          Select The Status
+        </ion-label>
+        <select-searchable item-content [(ngModel)]="newuser.status" (onChange)="onSelectStatus($event)"
+          [items]="statuses" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"
+          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">
+        </select-searchable>
+      </ion-item>
+
+      <button ion-button block margin-bottom type="submit" color="color2" (click)="updateAccount(newuser)">Update
+        Account</button>
+
+      <hr class="margin-top margin-bottom">
+      <ion-list-header>
+        <h2 ion-text text-center color="color2">{{newuser.lastname}} Subscription Details</h2>
+      </ion-list-header>
+      <ion-item margin-top>
+        <ion-label>
+          Select The Plan Type
+        </ion-label>
+        <select-searchable item-content [(ngModel)]="userplan.plantype" (onChange)="onSelectPlantypes($event)"
+          [items]="plantypes" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"
+          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">
+        </select-searchable>
+      </ion-item>
+      <ion-item class="halfItem" float-left>
+          <h5 ion-text color="dark"><b>Start Date</b></h5>
+          <p ion-text color="color1"><b>{{userplan.startDate}}</b></p>
+      </ion-item>
+      <ion-item class="halfItem" float-left>
+        <h5 ion-text color="dark"><b>End/Due Date</b></h5>
+        <p ion-text color="color1"><b>{{userplan.endDate}}</b></p>
+ 
+      </ion-item>
+      <ion-item class="halfItem" float-left>
+        <h5 ion-text color="dark"><b>Amount</b></h5>
+        <p ion-text color="color1"><b>{{userplan.plantype.amount  | currency: 'NGN': '1.2-2'}}</b></p>
+      </ion-item>
+      <ion-item class="halfItem" float-left>
+        <h5 ion-text color="dark"><b>Status</b></h5>
+        <p ion-text color="danger" *ngIf="newuser.status.name === 'Inactive'"><b>Expired</b></p>
+        <p ion-text color="secondary" *ngIf="newuser.status.name === 'Active'"><b>Running</b></p>
+      </ion-item>
+      <button ion-button block type="submit" color="color2" (click)="renewAccount(userplan)">Manual Activation / Renew
+        Account</button>
+    </ion-list>
+  </div>
+</ion-content>

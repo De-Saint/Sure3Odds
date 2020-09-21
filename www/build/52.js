@@ -1,14 +1,14 @@
 webpackJsonp([52],{
 
-/***/ 705:
+/***/ 713:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageModule", function() { return HomePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaymentDetailsPageModule", function() { return PaymentDetailsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(776);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__payment_details__ = __webpack_require__(790);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var HomePageModule = /** @class */ (function () {
-    function HomePageModule() {
+var PaymentDetailsPageModule = /** @class */ (function () {
+    function PaymentDetailsPageModule() {
     }
-    HomePageModule = __decorate([
+    PaymentDetailsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_2__payment_details__["a" /* PaymentDetailsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__payment_details__["a" /* PaymentDetailsPage */]),
             ],
         })
-    ], HomePageModule);
-    return HomePageModule;
+    ], PaymentDetailsPageModule);
+    return PaymentDetailsPageModule;
 }());
 
-//# sourceMappingURL=home.module.js.map
+//# sourceMappingURL=payment-details.module.js.map
 
 /***/ }),
 
-/***/ 776:
+/***/ 790:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global__ = __webpack_require__(354);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PaymentDetailsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_payments_payments__ = __webpack_require__(357);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,43 +59,183 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var HomePage = /** @class */ (function () {
-    function HomePage(navCtrl, global) {
+
+var PaymentDetailsPage = /** @class */ (function () {
+    function PaymentDetailsPage(navCtrl, authProvider, actionSheetCtrl, loadingCtrl, alertCtrl, paymentsProvider, navParams) {
         this.navCtrl = navCtrl;
-        this.global = global;
-        this.lastNews = [
-            { img: 'assets/imgs/news2.png', title: 'Real Madrid want to win Club World Cup', subTitle: 'is simply dummy text of the printing and typesetting industry.' },
-            { img: 'assets/imgs/news1.png', title: 'Real Madrid want to win Club World Cup', subTitle: 'is simply dummy text of the printing and typesetting industry.' },
-            { img: 'assets/imgs/news3.png', title: 'Real Madrid want to win Club World Cup', subTitle: 'is simply dummy text of the printing and typesetting industry.' }
-        ];
-        this.matches = [
-            { firstTeamImg: 'assets/imgs/teams/real_madrid.png', firstTeamName: 'Real Madrid', time: '19:30', secondTeamImg: 'assets/imgs/teams/granada.png', secondTeamName: 'Garnada' },
-            { firstTeamImg: 'assets/imgs/teams/barcelona.png', firstTeamName: 'Barcelona', time: '22:30', secondTeamImg: 'assets/imgs/teams/villarreal.png', secondTeamName: 'Villarreal' },
-        ];
-        this.clickLike = false;
-        this.numLike = 200;
+        this.authProvider = authProvider;
+        this.actionSheetCtrl = actionSheetCtrl;
+        this.loadingCtrl = loadingCtrl;
+        this.alertCtrl = alertCtrl;
+        this.paymentsProvider = paymentsProvider;
+        this.navParams = navParams;
+        this.currentPage = 1;
+        this.totalPage = 0;
+        this.perPage = 0;
+        this.totalData = 0;
     }
-    HomePage.prototype.like = function ($event) {
-        $event.stopPropagation();
-        if (this.clickLike != true) {
-            this.numLike = this.numLike + 1;
-            this.clickLike = true;
+    PaymentDetailsPage.prototype.ionViewWillEnter = function () {
+        this.GetPayments();
+    };
+    PaymentDetailsPage.prototype.GetPayments = function () {
+        var _this = this;
+        this.paymentsProvider.GetPayments(0, 10)
+            .subscribe(function (resp) {
+            if (resp.statusCode === 200) {
+                _this.payments = resp.data.content;
+                console.log(_this.payments);
+                _this.currentPage = resp.data.number;
+                _this.totalPage = resp.data.totalPages;
+                _this.totalData = resp.data.totalElements;
+                _this.perPage = resp.data.size;
+                _this.originalpayments = _this.payments;
+                _this.nopayments = '';
+            }
+            else {
+                _this.authProvider.showToast(resp.description);
+            }
+            _this.error = '';
+        }, function (error) {
+            _this.error = 'none';
+            _this.payments = null;
+            _this.authProvider.showToast(error.error.error);
+        });
+    };
+    PaymentDetailsPage.prototype.onSearch = function () {
+        var _this = this;
+        var searchvalue = this.searchTerm;
+        if (searchvalue.trim() === '') {
+            this.payments = this.originalpayments;
         }
         else {
-            this.numLike = this.numLike - 1;
-            this.clickLike = false;
+            if (searchvalue.length >= 3) {
+                this.paymentsProvider.SearchPayments(searchvalue, 0, 20)
+                    .subscribe(function (resp) {
+                    if (resp.statusCode === 200) {
+                        _this.payments = resp.data.content;
+                        _this.currentPage = resp.data.number;
+                        _this.totalPage = resp.data.totalPages;
+                        _this.totalData = resp.data.totalElements;
+                        _this.perPage = resp.data.size;
+                    }
+                    else {
+                        _this.authProvider.showToast(resp.description);
+                    }
+                    _this.error = '';
+                }, function (error) {
+                    _this.error = 'none';
+                    _this.payments = null;
+                });
+            }
         }
     };
-    HomePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/home/home.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu" ></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="global.callSearch($event)">\n        <ion-icon name="md-search"></ion-icon>\n      </button>\n      <button ion-button icon-only navPush="NotificationPage">\n        <ion-icon name="md-notifications"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n  <ion-slides>\n    <ion-slide *ngFor="let item of lastNews" navPush="TopNewsDetailsPage">\n      <ion-card class="newsCard">\n        <!-- if images in this slide equaled in height please remove class="imgResponsive" from img Tag -->\n        <img class="imgResponsive" src="{{item.img}}"/>\n        <div class="container" text-left>\n          <h4 ion-text color="light">{{item.title}}</h4>\n          <p ion-text color="light">{{item.subTitle}}</p>\n        </div>\n      </ion-card>\n    </ion-slide>\n  </ion-slides>\n\n  <div padding>\n    <!-- top news -->\n    <div class="topNews">\n      <ion-item navPush="TopNewsDetailsPage">\n        <ion-thumbnail item-left>\n          <img src="assets/imgs/t1.png"/>\n        </ion-thumbnail>\n        <div>\n          <h5 ion-text color="dark">Real Madrid want to win Club World Cup</h5>\n          <p ion-text color="color4" class="subtitle"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s</p>\n        </div>\n\n        <ion-grid no-padding class="gridFooter">\n          <ion-row>\n            <ion-col col padding-right>\n              <p ion-text color="color4">4 HOURS AGO</p>\n            </ion-col>\n            <!-- users like number -->\n            <ion-col col-auto padding-right>\n              <ion-item (click)="like($event)">\n                <ion-icon  item-left color="color2" [name]="clickLike ? \'ios-heart\' : \'ios-heart-outline\'" ></ion-icon>\n                <p ion-text color="color4">{{numLike}}</p>\n              </ion-item>\n            </ion-col>\n\n            <!-- user Comment number -->\n            <ion-col col-auto>\n                <ion-item>\n                  <ion-icon name="md-text" color="color2" item-left></ion-icon>\n                  <p ion-text color="color4">160</p>\n                </ion-item>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-item>\n      <button ion-button clear icon-right float-right class="viewAllBtn" navPush="TopNewsPage">\n        All News\n        <ion-icon class="goal-arrow-right"></ion-icon>\n      </button>\n    </div>\n\n    <!-- matches list -->\n    <ion-list margin-top>\n      <ion-list-header>\n        <button ion-button block clear icon-right float-right class="viewAllBtn"  navPush="AllMatchesPage">\n          All Matches\n          <ion-icon class="goal-arrow-right"></ion-icon>\n        </button>\n      </ion-list-header>\n      <!-- match item  -->\n      <ion-item class="matchItem" *ngFor="let item of matches">\n        <ion-grid>\n          <ion-row>\n            <!-- first team -->\n            <ion-col col>\n              <ion-item navPush="TeamPage">\n                <img src="{{item.firstTeamImg}}" item-right/>\n                <p text-right>{{item.firstTeamName}}</p>\n              </ion-item>\n            </ion-col>\n            <!-- match time -->\n            <ion-col col-auto>\n              <span ion-text color="color1">{{item.time}}</span>\n              <p ion-text color="color2">Next Match</p>\n            </ion-col>\n            <!-- second team -->\n            <ion-col col>\n              <ion-item navPush="TeamPage">\n                <img src="{{item.secondTeamImg}}" item-left/>\n                <p text-left>{{item.secondTeamName}}</p>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-item>\n    </ion-list>\n\n    <!-- last photos -->\n    <ion-list class="lastPhotos" margin-top>\n      <ion-list-header>\n        <button ion-button block clear icon-right float-right class="viewAllBtn" navPush="PhotosPage">\n          Photos\n          <ion-icon class="goal-arrow-right"></ion-icon>\n        </button>\n      </ion-list-header>\n      <ion-item class="photoItem" navPush="PhotosDetailsPage" >\n        <!-- if you want this image reponsive in large screen please remove class="imgResponsive" from img Tag  -->\n        <img src="assets/imgs/p001.png" class="imgResponsive"/>\n        <ion-grid>\n          <ion-row>\n            <ion-col col-auto>\n              <h4 ion-text color="dark">2018 World Cup</h4>\n            </ion-col>\n            <ion-col col>\n              <p ion-text color="color2">200 photos</p>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-item>\n    </ion-list>\n\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/home/home.html"*/,
+    PaymentDetailsPage.prototype.onClear = function (ev) {
+        this.searchTerm = "";
+        this.payments = this.originalpayments;
+        this.error = '';
+    };
+    PaymentDetailsPage.prototype.onCancel = function (ev) {
+        this.searchTerm = "";
+        this.payments = this.originalpayments;
+        this.error = '';
+    };
+    PaymentDetailsPage.prototype.scrollInfinite = function (event) {
+        var _this = this;
+        this.currentPage += 1;
+        setTimeout(function () {
+            _this.paymentsProvider.GetPayments(_this.currentPage, _this.perPage)
+                .subscribe(function (resp) {
+                if (resp.statusCode === 200) {
+                    _this.currentPage = resp.data.number;
+                    _this.totalPage = resp.data.totalPages;
+                    _this.totalData = resp.data.totalElements;
+                    _this.perPage = resp.data.size;
+                    _this.nopayments = '';
+                    for (var i = 0; i < resp.data.content.length; i++) {
+                        _this.payments.push(resp.data.content[i]);
+                    }
+                }
+                else {
+                    _this.authProvider.showToast(resp.description);
+                }
+                event.complete();
+            }, function (error) {
+                _this.nopayments = 'none';
+                event.complete();
+            });
+        }, 1000);
+    };
+    PaymentDetailsPage.prototype.onGotoTop = function () {
+        this.content.scrollToTop();
+    };
+    PaymentDetailsPage.prototype.onCountryOption = function (payment) {
+        var _this = this;
+        var actionSheet = this.actionSheetCtrl.create({
+            title: 'Payment Options',
+            buttons: [
+                {
+                    text: 'Delete',
+                    handler: function () { _this.onDeletePayment(payment); }
+                }, {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () { }
+                }
+            ]
+        });
+        actionSheet.present();
+    };
+    PaymentDetailsPage.prototype.onDeletePayment = function (payment) {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        var confirm = this.alertCtrl.create({
+            title: 'Delete Country',
+            message: 'Do you want to delete this payment record?</b><br/><br/>This is action is irreversible.',
+            buttons: [
+                {
+                    text: 'Cancel',
+                    handler: function () {
+                    }
+                },
+                {
+                    text: 'Proceed',
+                    handler: function () {
+                        loading.present();
+                        _this.paymentsProvider.deletePayment(payment.id).subscribe(function (res) {
+                            loading.dismiss().catch(function () { });
+                            if (res.statusCode === 200) {
+                                _this.navCtrl.pop();
+                            }
+                            else {
+                                _this.authProvider.showToast(res.description);
+                            }
+                        }, function (error) {
+                            loading.dismiss().catch(function () { });
+                            _this.authProvider.showToast(error.error.error);
+                        });
+                    }
+                }
+            ]
+        });
+        confirm.present();
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["Content"]),
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["Content"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["Content"]) === "function" && _a || Object)
+    ], PaymentDetailsPage.prototype, "content", void 0);
+    PaymentDetailsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
+            selector: 'page-payment-details',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payment-details/payment-details.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Payments </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar [(ngModel)]="searchTerm" (ionCancel)="onCancel($event)" [showCancelButton]="true"\n  (ionClear)="onClear($event)" (ionInput)="onSearch()">\n</ion-searchbar>\n  <div class="teamMatchs">\n    <ion-list >\n      <ion-item class="thumbnailItem" *ngFor="let payment of payments" >\n        <ion-thumbnail item-left>\n          <!-- Team image -->\n          <img src="assets/imgs/appicon.png" />\n        </ion-thumbnail>\n        <ion-grid no-padding>\n          <ion-row>\n            <ion-col col-6>\n              <!-- team Name -->\n              <h5 ion-text color="dark" >{{payment.user.lastname}} {{payment.user.firstname}} </h5>\n              <!-- League Name -->\n              <p ion-text color="color1">{{payment.plantype.name}}</p>\n            </ion-col>\n            <ion-col col-6>\n              <p ion-text color="dark">{{payment.paymentdate}}</p>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n        <div class="matchResult" item-right>\n            <span ion-text color="color1"  >{{payment.platform}}</span>\n          <p ion-text color="color2"><b>{{payment.paymenttype}}</b></p>\n        </div>\n      </ion-item>\n    </ion-list>\n  </div>\n  <div class="" *ngIf="error">\n    <p ion-text text-center color="color2">No result found!</p>\n  </div>\n  <div text-center margin-top margin-bottonm *ngIf="nopayments === \'none\'" (click)="onGotoTop()">\n    <button ion-button small color="color2">Back to Top</button>\n  </div>\n  <ion-infinite-scroll (ionInfinite)="scrollInfinite($event)" *ngIf="currentPage < totalPage">\n    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading page {{currentPage}} of {{totalPage}}">\n    </ion-infinite-scroll-content>\n  </ion-infinite-scroll>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payment-details/payment-details.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_2__providers_global__["a" /* Global */]])
-    ], HomePage);
-    return HomePage;
+        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ActionSheetController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ActionSheetController"]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["LoadingController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["LoadingController"]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["AlertController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["AlertController"]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_1__providers_payments_payments__["a" /* PaymentsProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__providers_payments_payments__["a" /* PaymentsProvider */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"]) === "function" && _h || Object])
+    ], PaymentDetailsPage);
+    return PaymentDetailsPage;
+    var _a, _b, _c, _d, _e, _f, _g, _h;
 }());
 
-//# sourceMappingURL=home.js.map
+//# sourceMappingURL=payment-details.js.map
 
 /***/ })
 

@@ -99,7 +99,6 @@ export class AllMatchesPage implements OnInit {
           console.log(resp.description);
         }
       }, error => {
-        console.log(JSON.stringify(error));
         this.authProvider.showToast(error.error.description);
       });
   }

@@ -1,0 +1,94 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Edit Prediction</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="otherForm">
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          Select The Country
+        </ion-label>
+        <select-searchable item-content [(ngModel)]="prediction.country" (onChange)="onSelectCountry($event)"
+          [items]="countries" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"
+          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">
+        </select-searchable>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          Select The League
+        </ion-label>
+        <select-searchable item-content [(ngModel)]="prediction.league" (onChange)="onSelectLeague($event)"
+          [items]="leagues" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"
+          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">
+        </select-searchable>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          Select The Home Team
+        </ion-label>
+        <select-searchable item-content [(ngModel)]="prediction.hometeam" (onChange)="onSelectHTeam($event)"
+          [items]="hometeams" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"
+          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">
+        </select-searchable>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          Select The Away Team
+        </ion-label>
+        <select-searchable item-content [(ngModel)]="prediction.awayteam" (onChange)="onSelectATeam($event)"
+          [items]="awayteams" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"
+          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">
+        </select-searchable>
+      </ion-item>
+
+      <hr margin-top margin-bottom>
+      <ion-item>
+        <ion-label>
+          Pick The Selection
+        </ion-label>
+        <select-searchable item-content [(ngModel)]="prediction.selections" (onChange)="onSelectSelection($event)"
+          [items]="selections" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"
+          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">
+        </select-searchable>
+      </ion-item>
+
+      <hr margin-top margin-bottom>
+      <ion-item>
+        <ion-label>
+          Match Date
+        </ion-label>
+        <ion-datetime [(ngModel)]="prediction.matchdate" required displayFormat="YYYY-MM-DD" min="2017" max="2050-12-31">
+        </ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          Match Time
+        </ion-label>
+        <ion-datetime displayFormat="h:mm A" required [(ngModel)]="prediction.matchtime"></ion-datetime>
+      </ion-item>
+
+      <hr margin-top margin-bottom>
+      <ion-item>
+        <ion-label stacked>Odds</ion-label>
+        <ion-input type="text" required [(ngModel)]="prediction.odds"></ion-input>
+      </ion-item>
+
+      <hr margin-top margin-bottom>
+      <ion-item>
+        <ion-label stacked>Status</ion-label>
+        <ion-input disabled type="text" [(ngModel)]="prediction.status.name"  ></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button block color="color2" (click)="onSubmit(prediction)">Submit</button>
+  </div>
+</ion-content>

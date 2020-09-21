@@ -1,14 +1,16 @@
 webpackJsonp([15],{
 
-/***/ 727:
+/***/ 755:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingCountryEditPageModule", function() { return SettingCountryEditPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserMemberAddPageModule", function() { return UserMemberAddPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_country_edit__ = __webpack_require__(800);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_member_add__ = __webpack_require__(835);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__ = __webpack_require__(354);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,55 +20,65 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SettingCountryEditPageModule = /** @class */ (function () {
-    function SettingCountryEditPageModule() {
+
+var UserMemberAddPageModule = /** @class */ (function () {
+    function UserMemberAddPageModule() {
     }
-    SettingCountryEditPageModule = __decorate([
+    UserMemberAddPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__setting_country_edit__["a" /* SettingCountryEditPage */],
+                __WEBPACK_IMPORTED_MODULE_2__user_member_add__["a" /* UserMemberAddPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_country_edit__["a" /* SettingCountryEditPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__user_member_add__["a" /* UserMemberAddPage */]),
+                __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__["SelectSearchableModule"]
             ],
         })
-    ], SettingCountryEditPageModule);
-    return SettingCountryEditPageModule;
+    ], UserMemberAddPageModule);
+    return UserMemberAddPageModule;
 }());
 
-//# sourceMappingURL=setting-country-edit.module.js.map
+//# sourceMappingURL=user-member-add.module.js.map
 
 /***/ }),
 
-/***/ 760:
+/***/ 762:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Countries; });
-var Countries = /** @class */ (function () {
-    function Countries(name, id, imageurl) {
-        this.name = name;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewUsers; });
+var NewUsers = /** @class */ (function () {
+    function NewUsers(id, email, firstname, lastname, referencecode, password, phone, plantype, platform, usertypes, status) {
         this.id = id;
-        this.imageurl = imageurl;
+        this.email = email;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.referencecode = referencecode;
+        this.password = password;
+        this.phone = phone;
+        this.plantype = plantype;
+        this.platform = platform;
+        this.usertypes = usertypes;
+        this.status = status;
     }
-    return Countries;
+    return NewUsers;
 }());
 
-//# sourceMappingURL=Countries.js.map
+//# sourceMappingURL=NewUser.js.map
 
 /***/ }),
 
-/***/ 800:
+/***/ 835:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingCountryEditPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_games_games__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_Countries__ = __webpack_require__(760);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserMemberAddPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_select_searchable__ = __webpack_require__(354);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ionic_select_searchable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_NewUser__ = __webpack_require__(762);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__ = __webpack_require__(356);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -81,153 +93,91 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-var SettingCountryEditPage = /** @class */ (function () {
-    function SettingCountryEditPage(navCtrl, gameProvider, loadingCtrl, alertCtrl, actionSheetCtrl, camera, authProvider, navParams) {
+var UserMemberAddPage = /** @class */ (function () {
+    function UserMemberAddPage(navCtrl, auth, loadingCtrl, navParams) {
         this.navCtrl = navCtrl;
-        this.gameProvider = gameProvider;
+        this.auth = auth;
         this.loadingCtrl = loadingCtrl;
-        this.alertCtrl = alertCtrl;
-        this.actionSheetCtrl = actionSheetCtrl;
-        this.camera = camera;
-        this.authProvider = authProvider;
         this.navParams = navParams;
-        this.country = new __WEBPACK_IMPORTED_MODULE_2__interfaces_Countries__["a" /* Countries */]("", "", "");
-        this.flag = true;
-        this.countries = this.navParams.get("country");
-        if (this.countries) {
-            this.country.name = this.countries.name;
-            this.country.id = this.countries.id;
-            this.country.imageurl = this.countries.imageurl;
-            console.log(this.country);
-            if (this.countries.imageurl) {
-                this.img1 = this.country.imageurl;
-            }
-            else {
-                this.img1 = "/assets/imgs/appicon.png";
-            }
-        }
+        this.newuser = new __WEBPACK_IMPORTED_MODULE_2__interfaces_NewUser__["a" /* NewUsers */]("", "", "", "", "", "", "", { id: "" }, "", { id: "", name: "" }, { id: "", name: "" });
     }
-    SettingCountryEditPage.prototype.ionViewDidLoad = function () {
-        this.flag = (this.flag != false) ? false : true;
+    UserMemberAddPage.prototype.ionViewWillEnter = function () {
+        this.getPlantypes();
     };
-    SettingCountryEditPage.prototype.onSubmit = function (country) {
+    UserMemberAddPage.prototype.getPlantypes = function () {
         var _this = this;
-        var loading = this.loadingCtrl.create({
-            content: "Please wait..."
+        this.auth.getAllPlantypes().subscribe(function (result) {
+            _this.plantypes = result.data;
+            console.log(_this.plantypes);
         });
-        if (this.country.name) {
-            this.country.imageurl = (this.country.imageurl != undefined) ? this.img1 : this.img;
-            loading.present();
-            this.gameProvider.updateCountry(country).subscribe(function (res) {
-                loading.dismiss().catch(function () { });
-                if (res.statusCode === 200) {
+    };
+    UserMemberAddPage.prototype.onSelectPlantypes = function (event) {
+        console.log(event.value);
+    };
+    UserMemberAddPage.prototype.createAccount = function () {
+        var _this = this;
+        if (this.newuser.firstname == "" || this.newuser.firstname == undefined || this.newuser.firstname == null) {
+            this.auth.showToast("Firstname is empty");
+            return false;
+        }
+        else if (this.newuser.lastname == "" || this.newuser.lastname == undefined || this.newuser.lastname == null) {
+            this.auth.showToast("Lastname is empty");
+            return false;
+        }
+        else if (this.newuser.email == "" || this.newuser.email == undefined || this.newuser.email == null) {
+            this.auth.showToast("Email is empty");
+            return false;
+        }
+        else if (this.newuser.phone == "" || this.newuser.phone == undefined || this.newuser.phone == null) {
+            this.auth.showToast("Phone number is empty");
+            return false;
+        }
+        else if (this.newuser.password == "" || this.newuser.password == undefined || this.newuser.password == null) {
+            this.auth.showToast("Password is empty");
+            return false;
+        }
+        else {
+            this.newuser.platform = "Manual";
+            this.newuser.referencecode = "Sure3Manual";
+            this.newuser.usertypes = { id: 2, name: "" };
+            console.log(this.newuser);
+            var loading_1 = this.loadingCtrl.create({
+                content: 'Please wait...'
+            });
+            loading_1.present();
+            // console.log(this.newuser);
+            this.auth.createNewUser(this.newuser).subscribe(function (resp) {
+                if (resp.statusCode === 200) {
+                    loading_1.dismiss().catch(function () { });
                     _this.navCtrl.pop();
                 }
                 else {
-                    _this.authProvider.showToast(res.description);
+                    loading_1.dismiss().catch(function () { });
+                    _this.auth.showToast(resp.description);
                 }
             }, function (error) {
-                loading.dismiss().catch(function () { });
-                _this.authProvider.showToast(error.error.description);
+                loading_1.dismiss().catch(function () { });
+                _this.auth.showToast(error.error.message);
             });
         }
-        else {
-            this.authProvider.showToast("Name input field is empty");
-        }
     };
-    SettingCountryEditPage.prototype.onDelete = function () {
-        var _this = this;
-        var loading = this.loadingCtrl.create({
-            content: "Please wait..."
-        });
-        var confirm = this.alertCtrl.create({
-            title: 'Delete Country',
-            message: 'Do you want to delete <b>' + this.countries.name + '?</b><br/><br/>All the leagues and teams under <b>' + this.countries.name + '</b> would be deleted.</b><br/><br/>This is action is irreversible.',
-            buttons: [
-                {
-                    text: 'Cancel',
-                    handler: function () {
-                    }
-                },
-                {
-                    text: 'Proceed',
-                    handler: function () {
-                        loading.present();
-                        _this.gameProvider.deleteCountry(_this.countries.id).subscribe(function (res) {
-                            loading.dismiss().catch(function () { });
-                            if (res.statusCode === 200) {
-                                _this.navCtrl.pop();
-                            }
-                            else {
-                                _this.authProvider.showToast(res.description);
-                            }
-                        }, function (error) {
-                            loading.dismiss().catch(function () { });
-                            _this.authProvider.showToast(error.error.description);
-                        });
-                    }
-                }
-            ]
-        });
-        confirm.present();
-    };
-    SettingCountryEditPage.prototype.selectImage = function () {
-        var _this = this;
-        var actionSheet = this.actionSheetCtrl.create({
-            title: 'Change Country Logo',
-            buttons: [
-                {
-                    text: 'Gallery',
-                    handler: function () { _this.get_camera('Gallery'); }
-                }, {
-                    text: 'Camera',
-                    handler: function () { _this.get_camera('Camera'); }
-                }, {
-                    text: 'Cancel',
-                    role: 'cancel',
-                    handler: function () { }
-                }
-            ]
-        });
-        actionSheet.present();
-    };
-    SettingCountryEditPage.prototype.get_camera = function (source) {
-        var _this = this;
-        var options = {
-            quality: 100, destinationType: this.camera.DestinationType.DATA_URL,
-            encodingType: this.camera.EncodingType.JPEG, mediaType: this.camera.MediaType.PICTURE,
-            allowEdit: true, targetWidth: 512, targetHeight: 512, correctOrientation: true
-        };
-        if (source == 'Gallery') {
-            options.sourceType = this.camera.PictureSourceType.PHOTOLIBRARY;
-        }
-        else {
-            options.sourceType = this.camera.PictureSourceType.CAMERA;
-        }
-        this.camera.getPicture(options).then(function (imageData) {
-            _this.img = 'data:image/jpeg;base64,' + imageData;
-        }, function (err) { });
-        if (this.img != undefined) {
-            this.img1 = this.img;
-        }
-    };
-    SettingCountryEditPage = __decorate([
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["ViewChild"])('myselect'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0_ionic_select_searchable__["SelectSearchableComponent"])
+    ], UserMemberAddPage.prototype, "selectComponent", void 0);
+    UserMemberAddPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-            selector: 'page-setting-country-edit',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-country-edit/setting-country-edit.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Edit Country</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="onDelete()">\n        <ion-icon name="trash"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="imgs">\n    <div class="imgProfile" [ngStyle]="{\'background-image\':\'url(\' + img1 + \')\'}">\n      <button ion-button icon-only class="profileCamera"  [ngClass]="{\'show\':flag==false}"   (click)="selectImage(2)">\n        <ion-icon name="md-camera"></ion-icon>\n      </button>\n    </div>\n  </div>\n  <div class="otherForm">\n    <ion-list>\n      <!-- appear when click update -->\n      <ion-item >\n        <ion-label stacked>Name</ion-label>\n        <ion-input  type="text" [(ngModel)]="country.name"  ></ion-input>\n        <ion-input hidden type="text" [(ngModel)]="country.id"  ></ion-input>\n      </ion-item>\n      <!-- ==================================== -->\n    </ion-list>\n    <button ion-button block color="color2" (click)="onSubmit(country)">Submit</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-country-edit/setting-country-edit.html"*/,
+            selector: 'page-user-member-add',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/user-member-add/user-member-add.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Add New Member</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <div class="otherForm">\n    <ion-list>\n      <ion-item>\n        <ion-label stacked>\n          Enter First Name\n        </ion-label>\n        <ion-input type="text" [(ngModel)]="newuser.firstname" name="firstname" id="firstname"  placeholder="First Name"></ion-input>\n      </ion-item>\n      <ion-item >\n        <ion-label stacked>\n          Enter Last Name\n        </ion-label>\n        <ion-input type="text" [(ngModel)]="newuser.lastname" name="lastname" id="lastname" placeholder="Last Name"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-label stacked>\n          Enter Email\n        </ion-label>\n        <ion-input type="email" [(ngModel)]="newuser.email" name="email" id="email"  placeholder="E-mail"></ion-input>\n      </ion-item>\n\n      <ion-item >\n        <ion-label stacked>\n          Enter Phone\n        </ion-label>\n        <ion-input type="tel" [(ngModel)]="newuser.phone" name="phone" id="phone" placeholder="Phone"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label stacked>\n          Enter Password\n        </ion-label>\n        <ion-input type="password"  [(ngModel)]="newuser.password" name="password" id="password" placeholder="Password"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label>\n          Select The Plan Type\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="newuser.plantype" (onChange)="onSelectPlantypes($event)"\n          [items]="plantypes" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n\n      <button ion-button block type="submit" color="color2" (click)="createAccount()">Submit</button>\n    </ion-list>\n  </div>\n\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/user-member-add/user-member-add.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"],
-            __WEBPACK_IMPORTED_MODULE_1__providers_games_games__["a" /* GamesProvider */],
+            __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */],
             __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["LoadingController"],
-            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["AlertController"],
-            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ActionSheetController"], __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__["a" /* Camera */],
-            __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */],
             __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"]])
-    ], SettingCountryEditPage);
-    return SettingCountryEditPage;
+    ], UserMemberAddPage);
+    return UserMemberAddPage;
 }());
 
-//# sourceMappingURL=setting-country-edit.js.map
+//# sourceMappingURL=user-member-add.js.map
 
 /***/ })
 

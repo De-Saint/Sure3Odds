@@ -47,7 +47,7 @@ export class SettingLeaguesPage {
       }, error => {
         this.error = 'none';
         this.leagues = [];
-        this.authProvider.showToast(error.error.description);
+        this.authProvider.showToast(error.error.error);
       });
   }
 
@@ -72,7 +72,7 @@ export class SettingLeaguesPage {
         }, error => {
           this.error = 'none';
           this.leagues = [];
-          this.authProvider.showToast(error.error.description);
+          this.authProvider.showToast(error.error.error);
         });
       }
     }

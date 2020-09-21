@@ -48,7 +48,7 @@ export class SettingSelectionsPage {
       }, error => {
         console.log(JSON.stringify(error));
         this.error = 'none';
-        this.authProvider.showToast(error.error.description);
+        this.authProvider.showToast(error.error.error);
       });
   }
 
@@ -75,7 +75,7 @@ export class SettingSelectionsPage {
         }, error => {
           console.log(JSON.stringify(error));
           this.error = 'none';
-          this.authProvider.showToast(error.error.description);
+          this.authProvider.showToast(error.error.error);
         });
       }
     }
