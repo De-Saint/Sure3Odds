@@ -1,6 +1,5 @@
 import { GamesProvider } from './../../providers/games/games';
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
-import { Global } from './../../providers/global';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ActionSheetController, LoadingController, AlertController } from 'ionic-angular';
 
@@ -13,7 +12,6 @@ import { IonicPage, NavController, NavParams, ActionSheetController, LoadingCont
 export class GamesPage {
   gamelist: any;
   constructor(public navCtrl: NavController,
-    private globalProvider: Global,
     private authProvider: AuthenicationProvider,
     private gamesProvider: GamesProvider,
     private alertCtrl: AlertController,
@@ -23,7 +21,7 @@ export class GamesPage {
   }
 
   ionViewWillEnter() {
-    const currentdate = this.globalProvider.getDate();
+    const currentdate = this.gamesProvider.getDate();
     this.GetGames(currentdate);
   }
 
@@ -83,7 +81,7 @@ export class GamesPage {
             this.gamesProvider.deleteGame(game.id).subscribe(res => {
               loading.dismiss().catch(() => { });
               if (res.statusCode === 200) {
-                const currentdate = this.globalProvider.getDate();
+                const currentdate = this.gamesProvider.getDate();
                 this.GetGames(currentdate);
               } else {
                 this.authProvider.showToast(res.description);

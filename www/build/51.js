@@ -1,14 +1,14 @@
 webpackJsonp([51],{
 
-/***/ 714:
+/***/ 695:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaymentPlansPageModule", function() { return PaymentPlansPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FreeTipsPageModule", function() { return FreeTipsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__payment_plans__ = __webpack_require__(791);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__free_tips__ = __webpack_require__(759);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var PaymentPlansPageModule = /** @class */ (function () {
-    function PaymentPlansPageModule() {
+var FreeTipsPageModule = /** @class */ (function () {
+    function FreeTipsPageModule() {
     }
-    PaymentPlansPageModule = __decorate([
+    FreeTipsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__payment_plans__["a" /* PaymentPlansPage */],
+                __WEBPACK_IMPORTED_MODULE_2__free_tips__["a" /* FreeTipsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__payment_plans__["a" /* PaymentPlansPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__free_tips__["a" /* FreeTipsPage */]),
             ],
         })
-    ], PaymentPlansPageModule);
-    return PaymentPlansPageModule;
+    ], FreeTipsPageModule);
+    return FreeTipsPageModule;
 }());
 
-//# sourceMappingURL=payment-plans.module.js.map
+//# sourceMappingURL=free-tips.module.js.map
 
 /***/ }),
 
-/***/ 791:
+/***/ 759:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PaymentPlansPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FreeTipsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,35 +56,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var PaymentPlansPage = /** @class */ (function () {
-    function PaymentPlansPage(navCtrl, navParams) {
+/**
+ * Generated class for the FreeTipsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var FreeTipsPage = /** @class */ (function () {
+    function FreeTipsPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.teams = [
-            { img: 'assets/imgs/teams/bate_borisov.png', team: 'BATE Borisov', date: 'Feb 13,2018', time: '17.30', league: 'Premier League', result: '6 - 1' },
-            { img: 'assets/imgs/teams/real_madrid.png', team: 'Real Madrid', date: 'Feb 23,2018', time: '19:30', league: 'Premier League', result: '' },
-            { img: 'assets/imgs/teams/marseille.png', team: 'Marseille', date: 'Feb 28,2018', time: '22:00', league: 'Premier League', result: '' },
-            { img: 'assets/imgs/teams/bate_borisov.png', team: 'BATE Borisov', date: 'Feb 13,2018', time: '17.30', league: 'Premier League', result: '6 - 1' },
-            { img: 'assets/imgs/teams/real_madrid.png', team: 'Real Madrid', date: 'Feb 23,2018', time: '19:30', league: 'Premier League', result: '' },
-            { img: 'assets/imgs/teams/marseille.png', team: 'Marseille', date: 'Feb 28,2018', time: '22:00', league: 'Premier League', result: '' },
-            { img: 'assets/imgs/teams/bate_borisov.png', team: 'BATE Borisov', date: 'Feb 13,2018', time: '17.30', league: 'Premier League', result: '6 - 1' },
-            { img: 'assets/imgs/teams/real_madrid.png', team: 'Real Madrid', date: 'Feb 23,2018', time: '19:30', league: 'Premier League', result: '' },
-            { img: 'assets/imgs/teams/marseille.png', team: 'Marseille', date: 'Feb 28,2018', time: '22:00', league: 'Premier League', result: '' },
-        ];
     }
-    PaymentPlansPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad PaymentPlansPage');
+    FreeTipsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad FreeTipsPage');
     };
-    PaymentPlansPage = __decorate([
+    FreeTipsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-payment-plans',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payment-plans/payment-plans.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Plans </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="teamMatchs">\n    <ion-list >\n      <ion-item class="thumbnailItem" *ngFor="let item of teams" navPush="MatchDetailsPage">\n        <ion-thumbnail item-left>\n          <!-- Team image -->\n          <img src="{{item.img}}" navPush="TeamPage"/>\n        </ion-thumbnail>\n        <ion-grid no-padding>\n          <ion-row>\n            <ion-col col-6>\n              <!-- team Name -->\n              <h5 ion-text color="dark" navPush="TeamPage">{{item.team}}</h5>\n              <!-- League Name -->\n              <p ion-text color="dark">{{item.league}}</p>\n            </ion-col>\n            <ion-col col-6>\n              <p ion-text color="dark">Dec 13,2017</p>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n        <!-- Time -->\n        <div class="matchTime" item-right  *ngIf="item.result==\'\'">\n          <span ion-text color="color1">{{item.time}}</span>\n          <p ion-text color="color2">Next Match</p>\n        </div>\n        <!-- Time -->\n        <div class="matchResult" item-right *ngIf="item.result!=\'\'">\n            <span ion-text color="color1"  >{{item.result}}</span>\n          <p ion-text color="color2">Full Time</p>\n        </div>\n      </ion-item>\n    </ion-list>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payment-plans/payment-plans.html"*/,
+            selector: 'page-free-tips',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/free-tips/free-tips.html"*/'<!--\n  Generated template for the FreeTipsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>freeTips</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/free-tips/free-tips.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
-    ], PaymentPlansPage);
-    return PaymentPlansPage;
+    ], FreeTipsPage);
+    return FreeTipsPage;
 }());
 
-//# sourceMappingURL=payment-plans.js.map
+//# sourceMappingURL=free-tips.js.map
 
 /***/ })
 

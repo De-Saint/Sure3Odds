@@ -1,5 +1,4 @@
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
-import { Global } from './../../providers/global';
 import { GamesProvider } from './../../providers/games/games';
 import { Component, OnInit } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
@@ -24,7 +23,7 @@ export class AllMatchesPage implements OnInit {
   // click day
   currentDate:any;
   shownGroup : any;
-  constructor(public navCtrl: NavController, private globalProvider: Global,
+  constructor(public navCtrl: NavController,
     private authProvider: AuthenicationProvider,
      private gamesProvider: GamesProvider) {
     this.getDaysInMonth(this.month_num, this.year);
@@ -32,7 +31,7 @@ export class AllMatchesPage implements OnInit {
   }
 
   ngOnInit(): void {
-    const currentdate = this.globalProvider.getDate();
+    const currentdate = this.gamesProvider.getDate();
     this.GetGames(currentdate);
     var date = this.myDate.getDate();
     var today = date - 1;

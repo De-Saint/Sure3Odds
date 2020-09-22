@@ -52,7 +52,6 @@ export class Sure3Odds {
 
   otherPages: PageInterface[] = [
     { icon: 'help-circle', color: 'light', title: 'Help', component: 'HelpPage' },
-    { icon: 'at', color: 'light', title: 'Contact Us', component: 'TeamPage' },//ContactPage
     { icon: 'briefcase', color: 'light', title: 'Terms', component: 'TermsPage' },
     { icon: 'log-out', color: 'danger', title: 'Logout', component: 'SignInPage' }
   ]

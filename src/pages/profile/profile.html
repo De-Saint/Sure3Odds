@@ -1,75 +1,116 @@
 <ion-header>
   <ion-navbar>
     <button ion-button menuToggle icon-only>
-      <ion-icon class="goal-menu" ></ion-icon>
+      <ion-icon class="goal-menu"></ion-icon>
     </button>
     <ion-title>Profile</ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only  (click)="global.callSearch($event)">
-        <ion-icon name="md-search"></ion-icon>
-      </button>
-      <button ion-button icon-only navPush="NotificationPage">
-        <ion-icon name="md-notifications"></ion-icon>
-      </button>
-    </ion-buttons>
+
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <div class="imgs">
-    <button ion-button icon-only class="coverCamera" [ngClass]="{'show':flag==false}"  (click)="selectImage(1)">
+    <button ion-button icon-only class="coverCamera" [ngClass]="{'show':flag==false}">
       <ion-icon name="md-camera"></ion-icon>
     </button>
-    <img src="{{img1}}"/>
+    <img src="{{img1}}" />
     <div class="imgProfile" [ngStyle]="{'background-image':'url(' + img2 + ')'}">
-      <button ion-button icon-only class="profileCamera"  [ngClass]="{'show':flag==false}"  (click)="selectImage(2)">
+      <button ion-button icon-only class="profileCamera" [ngClass]="{'show':flag==false}">
         <ion-icon name="md-camera"></ion-icon>
       </button>
     </div>
   </div>
 
   <!-- name and email -->
-  <div class="nameAndMail" >
-    <h5 ion-text color="dark">{{firstName}} {{lastName}}</h5>
-    <p ion-text color="dark">{{email}}</p>
+  <div class="nameAndMail">
+    <h5 ion-text color="dark">{{newuser.firstname}} {{newuser.lastname}}</h5>
+    <p ion-text color="dark">{{newuser?.email}}</p>
   </div>
-  
+
   <!-- other information -->
   <div class="otherForm">
     <ion-list>
-
-      <!-- appear when click update -->
-      <ion-item class="halfItem" float-left [ngClass]="{'show': flag==true}">
-        <ion-label stacked>First Name</ion-label>
-        <ion-input disabled="{{flag}}" type="text" [(ngModel)]="firstName" ></ion-input>
+      <ion-list-header>
+        <h2 ion-text text-center color="color2">My Details</h2>
+      </ion-list-header>
+      <ion-item class="halfItem" float-left>
+        <ion-label stacked>
+          First Name
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="newuser.firstname" name="firstname" id="firstname" placeholder="First Name">
+        </ion-input>
       </ion-item>
-      <!-- appear when click update -->
-      <ion-item class="halfItem"  float-left  [ngClass]="{'show': flag==true}">
-          <ion-label stacked>Last Name</ion-label>
-        <ion-input disabled="{{flag}}" type="text" [(ngModel)]="lastName"></ion-input>
-      </ion-item>
-      <!-- appear when click update -->
-      <ion-item [ngClass]="{'show': flag==true}">
-        <ion-label stacked>E-mail</ion-label>
-        <ion-input disabled="{{flag}}" type="email" [(ngModel)]="email"></ion-input>
-      </ion-item>
-      <!-- ==================================== -->
-
-      <ion-item >
-        <ion-label stacked>Phone Number</ion-label>
-        <ion-input disabled="{{flag}}" type="tel" [(ngModel)]="phoneNumber"  id="elemtId"></ion-input>
+      <ion-item class="halfItem" float-left>
+        <ion-label stacked>
+          Last Name
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="newuser.lastname" name="lastname" id="lastname" placeholder="Last Name">
+        </ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label stacked>Password</ion-label>
-        <ion-input disabled="{{flag}}" type="password" [(ngModel)]="passowrd"></ion-input>
+        <ion-label stacked>
+           Email
+        </ion-label>
+        <ion-input type="email" [(ngModel)]="newuser.email" name="email" id="email" placeholder="E-mail"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>
+           Phone
+        </ion-label>
+        <ion-input type="tel" [(ngModel)]="newuser.phone" name="phone" id="phone" placeholder="Phone"></ion-input>
       </ion-item>
 
-      <ion-item >
-        <ion-label stacked>Address</ion-label>
-        <ion-input disabled="{{flag}}" type="text" [(ngModel)]="address"></ion-input>
+      <ion-item class="halfItem" float-left>
+        <ion-label stacked>
+          Current Membership
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="newuser.usertypes.name" disabled>
+        </ion-input>
       </ion-item>
+      <ion-item class="halfItem" float-left>
+        <ion-label stacked>
+          Current Status
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="newuser.status.name" disabled>
+        </ion-input>
+      </ion-item>
+
+      <button ion-button block margin-bottom type="submit" color="color2" (click)="updateAccount(newuser)">Update
+        Account
+      </button>
     </ion-list>
-    <button ion-button block color="color2" (click)="update()">Update</button>
+    <ion-list *ngIf="userplan">
+      <hr class="margin-top margin-bottom">
+      <ion-list-header>
+        <h2 ion-text text-center color="color2">My Subscription Details</h2>
+      </ion-list-header>
+      <ion-item margin-top>
+        <h5 ion-text color="dark"><b>Current Plan Name</b></h5>
+        <p ion-text color="color1"><b>{{userplan.plantype.name}}</b></p>
+      </ion-item>
+
+
+      <ion-item class="halfItem" float-left>
+        <h5 ion-text color="dark"><b>Start Date</b></h5>
+        <p ion-text color="color1"><b>{{userplan.startDate}}</b></p>
+      </ion-item>
+      <ion-item class="halfItem" float-left>
+        <h5 ion-text color="dark"><b>End/Due Date</b></h5>
+        <p ion-text color="color1"><b>{{userplan.endDate}}</b></p>
+      </ion-item>
+      <ion-item class="halfItem" float-left>
+        <h5 ion-text color="dark"><b>Amount</b></h5>
+        <p ion-text color="color1"><b>{{userplan.plantype.amount  | currency: 'NGN': '1.2-2'}}</b></p>
+      </ion-item>
+      <ion-item class="halfItem" float-left>
+        <h5 ion-text color="dark"><b>Status</b></h5>
+        <p ion-text color="danger" *ngIf="newuser.status.name === 'Inactive'"><b>Expired</b></p>
+        <p ion-text color="secondary" *ngIf="newuser.status.name === 'Active'"><b>Running</b></p>
+      </ion-item>
+      <button ion-button block type="submit" color="color2" (click)="renewAccount(userplan)">Renew
+        Subscription</button>
+        
+    </ion-list>
   </div>
 </ion-content>

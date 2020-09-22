@@ -18,7 +18,7 @@ selection: Selections = new Selections("", "");
     private gameProvider: GamesProvider, 
     private loadingCtrl: LoadingController,
     private authProvider: AuthenicationProvider, public navParams: NavParams) {
-    this.selections = this.navParams.data;
+    this.selections = this.navParams.get("selection");
     console.log(this.selections);
     if(this.selections){
       this.selection.id = this.selections.id;
@@ -26,9 +26,7 @@ selection: Selections = new Selections("", "");
     }
   }
 
-  ionViewDidLoad() {
-    
-  }
+
   onSubmit(selection) {
     let loading = this.loadingCtrl.create({
       content:"Please wait..."

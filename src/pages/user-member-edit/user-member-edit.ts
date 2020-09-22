@@ -41,13 +41,19 @@ export class UserMemberEditPage {
 
   GetUserDetails(id) {
     this.authProvider.findUserDetails(id).subscribe(result => {
-      this.userplan = result.data.planData;
-      this.newuser = result.data.userData;
-      this.user = result.data.planData;
-      console.log(this.newuser);
-      console.log(this.userplan);
+      if (result.statusCode == 200) {
+        this.userplan = result.data.planData;
+        this.newuser = result.data.userData;
+        this.user = result.data.planData;
+      }else{
+        this.authProvider.showToast(result.description);
+      }
+    }, error => {
+      this.authProvider.showToast(error.error.description);
     })
   }
+
+  
   getPlantypes() {
     this.authProvider.getAllPlantypes().subscribe(result => {
       this.plantypes = result.data;
@@ -108,7 +114,7 @@ export class UserMemberEditPage {
     });
     let confirm = this.alertCtrl.create({
       title: 'Update Plan',
-      message: "You are about to update <b>" + this.newuser.lastname + "'s subscription plan</b> <br/> To " + plan.plantype.name + ". <br/><br/>If <b>" + plan.plantype.name + "</b> is not the plan you want to update to, you can cancel and then select a new plan instead. <br/><br/>This action is irreversible.",
+      message: "You are about to update <b>" + this.newuser.lastname + "'s subscription plan</b> <br/> to " + plan.plantype.name + ". <br/><br/>If <b>" + plan.plantype.name + "</b> is not the plan you want to update to, you can cancel and then select a new plan instead. <br/><br/>This action is irreversible.",
       buttons: [
         {
           text: 'Cancel',

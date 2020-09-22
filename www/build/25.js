@@ -1,14 +1,14 @@
 webpackJsonp([25],{
 
-/***/ 754:
+/***/ 701:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserMembersPageModule", function() { return UserMembersPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MatchCommentsPageModule", function() { return MatchCommentsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_members__ = __webpack_require__(834);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__match_comments__ = __webpack_require__(765);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,57 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var UserMembersPageModule = /** @class */ (function () {
-    function UserMembersPageModule() {
+var MatchCommentsPageModule = /** @class */ (function () {
+    function MatchCommentsPageModule() {
     }
-    UserMembersPageModule = __decorate([
+    MatchCommentsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__user_members__["a" /* UserMembersPage */],
+                __WEBPACK_IMPORTED_MODULE_2__match_comments__["a" /* MatchCommentsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__user_members__["a" /* UserMembersPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__match_comments__["a" /* MatchCommentsPage */]),
             ],
         })
-    ], UserMembersPageModule);
-    return UserMembersPageModule;
+    ], MatchCommentsPageModule);
+    return MatchCommentsPageModule;
 }());
 
-//# sourceMappingURL=user-members.module.js.map
+//# sourceMappingURL=match-comments.module.js.map
 
 /***/ }),
 
-/***/ 834:
+/***/ 750:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserMembersPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Comments; });
+var Comments = /** @class */ (function () {
+    function Comments(comments, date, time, game, id, user) {
+        this.comments = comments;
+        this.date = date;
+        this.time = time;
+        this.game = game;
+        this.id = id;
+        this.user = user;
+    }
+    return Comments;
+}());
+
+//# sourceMappingURL=Comments.js.map
+
+/***/ }),
+
+/***/ 765:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MatchCommentsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_games_games__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_Comments__ = __webpack_require__(750);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,190 +81,85 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var UserMembersPage = /** @class */ (function () {
-    function UserMembersPage(navCtrl, authProvider, actionSheetCtrl, loadingCtrl, alertCtrl, navParams) {
+
+
+var MatchCommentsPage = /** @class */ (function () {
+    function MatchCommentsPage(navCtrl, authProvider, gameProvider, navParams) {
         this.navCtrl = navCtrl;
         this.authProvider = authProvider;
-        this.actionSheetCtrl = actionSheetCtrl;
-        this.loadingCtrl = loadingCtrl;
-        this.alertCtrl = alertCtrl;
+        this.gameProvider = gameProvider;
         this.navParams = navParams;
-        this.currentPage = 1;
-        this.totalPage = 0;
-        this.perPage = 0;
-        this.totalData = 0;
+        this.comment = new __WEBPACK_IMPORTED_MODULE_2__interfaces_Comments__["a" /* Comments */]("", "", "", { id: "" }, "", { id: "" });
+        this.img2 = "assets/imgs/appicon.png";
+        this.match = this.navParams.data;
+        console.log(this.match);
     }
-    UserMembersPage.prototype.ionViewWillEnter = function () {
-        this.GetUsers();
-    };
-    UserMembersPage.prototype.GetUsers = function () {
+    MatchCommentsPage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        this.authProvider.GetUsersByType(2, 0, 10)
-            .subscribe(function (resp) {
-            if (resp.statusCode === 200) {
-                _this.users = resp.data.content;
-                console.log(_this.users);
-                _this.originalusers = _this.users;
-                _this.currentPage = resp.data.number;
-                _this.totalPage = resp.data.totalPages;
-                _this.totalData = resp.data.totalElements;
-                _this.perPage = resp.data.size;
-                _this.nousers = '';
-            }
-            else {
-                _this.authProvider.showToast(resp.description);
-            }
+        this.mutationObserver = new MutationObserver(function (mutations) {
+            _this.contentArea.scrollToBottom();
+        });
+        this.mutationObserver.observe(this.chatList.nativeElement, {
+            childList: true
+        });
+    };
+    MatchCommentsPage.prototype.ngOnInit = function () {
+        this.GetGameComments();
+        this.jti = this.authProvider.currentUserDataValue.jti;
+    };
+    MatchCommentsPage.prototype.GetGameComments = function () {
+        var _this = this;
+        this.gameProvider.GetGameComments(this.match.id).subscribe(function (result) {
+            _this.comments = result.data;
+            console.log(_this.comments);
             _this.error = '';
         }, function (error) {
+            _this.comments = [];
             _this.error = 'none';
-            _this.authProvider.showToast(error.error.error);
         });
     };
-    UserMembersPage.prototype.onClear = function (ev) {
-        this.searchTerm = "";
-        this.users = this.originalusers;
-        this.error = '';
-    };
-    UserMembersPage.prototype.onCancel = function (ev) {
-        this.searchTerm = "";
-        this.error = '';
-        this.users = this.originalusers;
-    };
-    UserMembersPage.prototype.onSearch = function () {
+    MatchCommentsPage.prototype.onCreateComment = function (comment, match) {
         var _this = this;
-        var searchvalue = this.searchTerm;
-        if (searchvalue.trim() === '' || searchvalue.length < 3) {
-            this.users = this.originalusers;
-        }
-        else {
-            if (searchvalue.length >= 3) {
-                this.authProvider.SearchUsersByType(searchvalue, 2, 0, 10)
-                    .subscribe(function (resp) {
-                    if (resp.statusCode === 200) {
-                        _this.users = resp.data.content;
-                        console.log(_this.users);
-                        _this.currentPage = resp.data.number;
-                        _this.totalPage = resp.data.totalPages;
-                        _this.totalData = resp.data.totalElements;
-                        _this.perPage = resp.data.size;
-                    }
-                    else {
-                        _this.authProvider.showToast(resp.description);
-                    }
-                    _this.error = '';
-                }, function (error) {
-                    _this.error = 'none';
-                    _this.users = [];
-                });
-            }
-        }
-    };
-    UserMembersPage.prototype.scrollInfinite = function (event) {
-        var _this = this;
-        this.currentPage += 1;
-        setTimeout(function () {
-            _this.authProvider.GetUsersByType(2, _this.currentPage, _this.perPage)
-                .subscribe(function (resp) {
-                if (resp.statusCode === 200) {
-                    _this.currentPage = resp.data.number;
-                    _this.totalPage = resp.data.totalPages;
-                    _this.totalData = resp.data.totalElements;
-                    _this.perPage = resp.data.size;
-                    _this.nousers = '';
-                    for (var i = 0; i < resp.data.content.length; i++) {
-                        _this.users.push(resp.data.content[i]);
-                    }
+        console.log(comment);
+        if (this.comment.comments) {
+            this.comment.game.id = match.id;
+            this.gameProvider.createComment(this.comment).subscribe(function (res) {
+                if (res.statusCode === 200) {
+                    _this.GetGameComments();
+                    _this.comment.comments = '';
                 }
                 else {
-                    _this.authProvider.showToast(resp.description);
+                    _this.authProvider.showToast(res.description);
                 }
-                _this.error = '';
-                event.complete();
             }, function (error) {
-                _this.nousers = 'none';
-                _this.users = [];
-                event.complete();
+                _this.authProvider.showToast(error.error.error);
             });
-        }, 1000);
-    };
-    UserMembersPage.prototype.onGotoTop = function () {
-        this.content.scrollToTop();
-    };
-    UserMembersPage.prototype.onMemberOption = function (user) {
-        var _this = this;
-        var actionSheet = this.actionSheetCtrl.create({
-            title: 'Member Options',
-            buttons: [
-                {
-                    text: 'View / Edit',
-                    handler: function () { _this.navCtrl.push('UserMemberEditPage', { user: user }); }
-                }, {
-                    text: 'Delete',
-                    handler: function () { _this.onDeleteMember(user); }
-                }, {
-                    text: 'Cancel',
-                    role: 'cancel',
-                    handler: function () { }
-                }
-            ]
-        });
-        actionSheet.present();
-    };
-    UserMembersPage.prototype.onDeleteMember = function (user) {
-        var _this = this;
-        var loading = this.loadingCtrl.create({
-            content: "Please wait..."
-        });
-        var confirm = this.alertCtrl.create({
-            title: 'Delete Member',
-            message: "Do you want to delete <b>" + user.lastname + "</b>? <br/><br/>All the plans, payments, comments and votes would also be deleted.<br/><br/>You can consider disabling " + user.lastname + " instead by changing the status. <br/><br/>This action is irreversible.",
-            buttons: [
-                {
-                    text: 'Cancel',
-                    handler: function () {
-                    }
-                },
-                {
-                    text: 'Proceed',
-                    handler: function () {
-                        loading.present();
-                        _this.authProvider.deleteSubAdmin(user.id).subscribe(function (res) {
-                            loading.dismiss().catch(function () { });
-                            if (res.statusCode === 200) {
-                                _this.GetUsers();
-                            }
-                            else {
-                                _this.authProvider.showToast(res.description);
-                            }
-                        }, function (error) {
-                            loading.dismiss().catch(function () { });
-                            _this.authProvider.showToast(error.error.error);
-                        });
-                    }
-                }
-            ]
-        });
-        confirm.present();
+        }
+        else {
+            this.authProvider.showToast("Comment input field is empty");
+        }
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["Content"]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["Content"])
-    ], UserMembersPage.prototype, "content", void 0);
-    UserMembersPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
-            selector: 'page-user-members',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/user-members/user-members.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Members</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only navPush="UserMemberAddPage">\n        <ion-icon name="add-circle"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n\n<ion-content padding>\n  <ion-searchbar [(ngModel)]="searchTerm" (ionCancel)="onCancel($event)" [showCancelButton]="true"\n    (ionClear)="onClear($event)" (ionInput)="onSearch()">\n  </ion-searchbar>\n  <div class="squad">\n    <ion-list>\n      <ion-item class="avatarItem" margin-bottom *ngFor="let user of users" (click)="onMemberOption(user)">\n        <ion-avatar item-left>\n          <img src="assets/imgs/appicon.png">\n        </ion-avatar>\n        <h5 ion-text color="dark">{{user.lastname}} {{user.firstname}}</h5>\n        <p ion-text color="color1" item-right><b>{{user.status.name}}</b></p>\n      </ion-item>\n    </ion-list>\n  </div>\n  <div class="" *ngIf="error === \'none\'">\n    <p ion-text text-center color="color2">No result found!</p>\n  </div>\n  <div text-center margin-top margin-bottonm *ngIf="nousers === \'none\'" (click)="onGotoTop()">\n    <button ion-button small color="color2">Back to Top</button>\n  </div>\n  <ion-infinite-scroll (ionInfinite)="scrollInfinite($event)" *ngIf="currentPage < totalPage">\n    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading page {{currentPage}} of {{totalPage}}">\n    </ion-infinite-scroll-content>\n  </ion-infinite-scroll>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/user-members/user-members.html"*/,
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["Content"]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["Content"])
+    ], MatchCommentsPage.prototype, "contentArea", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["List"], { read: __WEBPACK_IMPORTED_MODULE_3__angular_core__["ElementRef"] }),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_3__angular_core__["ElementRef"])
+    ], MatchCommentsPage.prototype, "chatList", void 0);
+    MatchCommentsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-match-comments',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/match-comments/match-comments.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu" ></ion-icon>\n    </button>\n    <ion-title>Match Details</ion-title>\n   \n  </ion-navbar>\n  <ion-toolbar class="matchResultBar">\n    <!-- match item  -->\n    <ion-item class="matchResult">\n      <ion-grid>\n        <ion-row>\n          <!-- first team -->\n          <ion-col col>\n            <ion-item>\n              <img src="{{match.hometeam.imageurl}}" style="border-radius: 50px;" *ngIf="match.hometeam.imageurl" />\n              <img src="assets/imgs/appicon.png" style="border-radius: 50px;" *ngIf="!match.hometeam.imageurl" />\n              <p>{{match.hometeam.name}}</p>\n            </ion-item>\n          </ion-col>\n          <!-- match time -->\n          <ion-col col-auto>\n            <div class="result">\n              <span ion-text color="color1">{{match?.hometeamscore}}</span>\n              <span ion-text style="padding: 0.3em;" color="color1">-</span>\n              <span ion-text color="color1">{{match?.awayteamscore}}</span>\n            </div>\n            <p ion-text color="light" text-center>{{match?.status.name}}</p>\n          </ion-col>\n          <!-- second team -->\n          <ion-col col>\n            <ion-item>\n              <img src="{{match.awayteam.imageurl}}" style="border-radius: 50px;" *ngIf="match.awayteam.imageurl" />\n              <img src="assets/imgs/appicon.png" style="border-radius: 50px;" *ngIf="!match.awayteam.imageurl" />\n              <p>{{match.awayteam.name}}</p>\n            </ion-item>\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col col-center>\n            <p ion-text color="secondary" style="text-align: center;">{{match.country.name}} - {{match.league.name}}</p>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n\n    </ion-item>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-list class="timeLine_list">\n    <ion-item [ngClass]="{\'team2\':comment.user.id == jti}" *ngFor="let comment of comments"   #chatList>\n      <ion-grid>\n        <ion-row>\n          <ion-col col-auto>\n            <p ion-text color="color1">{{comment.time}}\'</p>\n          </ion-col>\n          <ion-col col-auto>\n            <img src="assets/imgs/appicon.png" />\n          </ion-col>\n          <ion-col col>\n            <p ion-text color="dark">{{comment.comments}}</p>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </ion-item>\n  </ion-list>\n  <div color="color2" text-center *ngIf="error === \'none\'">\n    What do you think about <br /> <br /> <strong>{{match.hometeam.name}}</strong> Vs  <strong>{{match.awayteam.name}}</strong>?\n  </div>\n</ion-content>\n<ion-footer>\n  <ion-toolbar>\n    <ion-grid class="white bordertop lightborder">\n      <ion-row wrap>\n        <ion-col col-10 class="center">\n          <ion-input type="text" class="" [(ngModel)]="comment.comments" placeholder="Type a message"></ion-input>\n        </ion-col>\n        <ion-col col-2 class="center ">\n          <button ion-button icon-left round class="round paddingleft half-paddingright" color="primary" (click)="onCreateComment(comment, match)">\n            <ion-icon name="send"></ion-icon>\n          </button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </ion-toolbar>\n</ion-footer>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/match-comments/match-comments.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavController"],
-            __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["ActionSheetController"],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["LoadingController"],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["AlertController"],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavParams"]])
-    ], UserMembersPage);
-    return UserMembersPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"],
+            __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */],
+            __WEBPACK_IMPORTED_MODULE_0__providers_games_games__["a" /* GamesProvider */],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"]])
+    ], MatchCommentsPage);
+    return MatchCommentsPage;
 }());
 
-//# sourceMappingURL=user-members.js.map
+//# sourceMappingURL=match-comments.js.map
 
 /***/ })
 

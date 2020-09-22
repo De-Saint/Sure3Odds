@@ -123,7 +123,7 @@ export class PaymentDetailsPage {
     this.content.scrollToTop();
   }
 
-  onCountryOption(payment) {
+  onPaymentOptions(payment) {
     let actionSheet = this.actionSheetCtrl.create({
       title: 'Payment Options',
       buttons: [
@@ -146,8 +146,8 @@ export class PaymentDetailsPage {
       content: "Please wait..."
     });
     let confirm = this.alertCtrl.create({
-      title: 'Delete Country',
-      message: 'Do you want to delete this payment record?</b><br/><br/>This is action is irreversible.',
+      title: 'Delete Payment',
+      message: 'Do you want to delete this payment record?</b><br/><br/>It would delete the payment history of<b> '+ payment.user.lastname + ' ' + payment.user.firstname  +'.</b><br/><br/>This is action is irreversible.',
       buttons: [
         {
           text: 'Cancel',

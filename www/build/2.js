@@ -1,14 +1,14 @@
 webpackJsonp([2],{
 
-/***/ 760:
+/***/ 741:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserMemberEditPageModule", function() { return UserMemberEditPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_member_edit__ = __webpack_require__(840);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_member_edit__ = __webpack_require__(806);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__ = __webpack_require__(354);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -42,7 +42,7 @@ var UserMemberEditPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 762:
+/***/ 747:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -68,20 +68,39 @@ var NewUsers = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 840:
+/***/ 753:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Plans; });
+var Plans = /** @class */ (function () {
+    function Plans(id, plantype, startDate, endDate) {
+        this.id = id;
+        this.plantype = plantype;
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
+    return Plans;
+}());
+
+//# sourceMappingURL=Plans.js.map
+
+/***/ }),
+
+/***/ 806:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserMemberEditPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_payments_payments__ = __webpack_require__(357);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_payments_payments__ = __webpack_require__(356);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_games_games__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_NewUser__ = __webpack_require__(762);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_NewUser__ = __webpack_require__(747);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__ = __webpack_require__(354);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_authenication_authenication__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__interfaces_Plans__ = __webpack_require__(841);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__interfaces_Plans__ = __webpack_require__(753);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -122,11 +141,16 @@ var UserMemberEditPage = /** @class */ (function () {
     UserMemberEditPage.prototype.GetUserDetails = function (id) {
         var _this = this;
         this.authProvider.findUserDetails(id).subscribe(function (result) {
-            _this.userplan = result.data.planData;
-            _this.newuser = result.data.userData;
-            _this.user = result.data.planData;
-            console.log(_this.newuser);
-            console.log(_this.userplan);
+            if (result.statusCode == 200) {
+                _this.userplan = result.data.planData;
+                _this.newuser = result.data.userData;
+                _this.user = result.data.planData;
+            }
+            else {
+                _this.authProvider.showToast(result.description);
+            }
+        }, function (error) {
+            _this.authProvider.showToast(error.error.description);
         });
     };
     UserMemberEditPage.prototype.getPlantypes = function () {
@@ -192,7 +216,7 @@ var UserMemberEditPage = /** @class */ (function () {
         });
         var confirm = this.alertCtrl.create({
             title: 'Update Plan',
-            message: "You are about to update <b>" + this.newuser.lastname + "'s subscription plan</b> <br/> To " + plan.plantype.name + ". <br/><br/>If <b>" + plan.plantype.name + "</b> is not the plan you want to update to, you can cancel and then select a new plan instead. <br/><br/>This action is irreversible.",
+            message: "You are about to update <b>" + this.newuser.lastname + "'s subscription plan</b> <br/> to " + plan.plantype.name + ". <br/><br/>If <b>" + plan.plantype.name + "</b> is not the plan you want to update to, you can cancel and then select a new plan instead. <br/><br/>This action is irreversible.",
             buttons: [
                 {
                     text: 'Cancel',
@@ -241,25 +265,6 @@ var UserMemberEditPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=user-member-edit.js.map
-
-/***/ }),
-
-/***/ 841:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Plans; });
-var Plans = /** @class */ (function () {
-    function Plans(id, plantype, startDate, endDate) {
-        this.id = id;
-        this.plantype = plantype;
-        this.startDate = startDate;
-        this.endDate = endDate;
-    }
-    return Plans;
-}());
-
-//# sourceMappingURL=Plans.js.map
 
 /***/ })
 

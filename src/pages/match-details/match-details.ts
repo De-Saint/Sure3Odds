@@ -3,7 +3,6 @@ import { Votes } from './../../interfaces/Votes';
 import { GamesProvider } from './../../providers/games/games';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams, Content, List } from 'ionic-angular';
-import { Global } from '../../providers/global';
 import { AuthenicationProvider } from '../../providers/authenication/authenication';
 @IonicPage()
 @Component({
@@ -27,7 +26,8 @@ export class MatchDetailsPage implements OnInit {
 
 
   img2 = "assets/imgs/appicon.png";
-  constructor(public navCtrl: NavController, private authProvider: AuthenicationProvider, private gameProvider: GamesProvider, private global: Global, private navParams: NavParams) {
+  constructor(public navCtrl: NavController, private authProvider: AuthenicationProvider,
+     private gameProvider: GamesProvider, private navParams: NavParams) {
     this.match = this.navParams.data;
     console.log(this.match);
 

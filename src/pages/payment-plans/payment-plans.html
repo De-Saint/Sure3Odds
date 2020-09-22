@@ -9,36 +9,41 @@
 
 <ion-content padding>
   <div class="teamMatchs">
-    <ion-list >
-      <ion-item class="thumbnailItem" *ngFor="let item of teams" navPush="MatchDetailsPage">
+    <ion-list>
+      <ion-item class="thumbnailItem" *ngFor="let plan of plans">
         <ion-thumbnail item-left>
           <!-- Team image -->
-          <img src="{{item.img}}" navPush="TeamPage"/>
+          <img src="assets/imgs/appicon.png" />
         </ion-thumbnail>
         <ion-grid no-padding>
           <ion-row>
             <ion-col col-6>
               <!-- team Name -->
-              <h5 ion-text color="dark" navPush="TeamPage">{{item.team}}</h5>
+              <h5 ion-text color="dark">{{plan.user.lastname}} {{plan.user.firstname}} </h5>
               <!-- League Name -->
-              <p ion-text color="dark">{{item.league}}</p>
+              <p ion-text color="color1">{{plan.plantype.name}}</p>
             </ion-col>
             <ion-col col-6>
-              <p ion-text color="dark">Dec 13,2017</p>
+              <span ion-text style="font-size: small !important;">Start Date</span>
+              <p ion-text color="color1">{{plan.startDate}}</p>
             </ion-col>
           </ion-row>
         </ion-grid>
-        <!-- Time -->
-        <div class="matchTime" item-right  *ngIf="item.result==''">
-          <span ion-text color="color1">{{item.time}}</span>
-          <p ion-text color="color2">Next Match</p>
-        </div>
-        <!-- Time -->
-        <div class="matchResult" item-right *ngIf="item.result!=''">
-            <span ion-text color="color1"  >{{item.result}}</span>
-          <p ion-text color="color2">Full Time</p>
+        <div class=""  style="margin-bottom: 0.3em !important;" item-right>
+          <span ion-text style="font-size: small !important;">End Date</span>
+          <p ion-text color="color2"><b>{{plan.endDate}}</b></p>
         </div>
       </ion-item>
     </ion-list>
   </div>
+  <div class="" *ngIf="error">
+    <p ion-text text-center color="color2">No result found!</p>
+  </div>
+  <div text-center margin-top margin-bottonm *ngIf="noplans === 'none'" (click)="onGotoTop()">
+    <button ion-button small color="color2">Back to Top</button>
+  </div>
+  <ion-infinite-scroll (ionInfinite)="scrollInfinite($event)" *ngIf="currentPage < totalPage">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading page {{currentPage}} of {{totalPage}}">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>

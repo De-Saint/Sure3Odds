@@ -9,5 +9,18 @@
 
 
 <ion-content padding>
+  <div class="leagueStats">
+    <ion-list *ngFor="let plantype of plantypes" (click)="onPlantypeOptions(plantype)">
+      <ion-item class="thumbnailItem">
+        <h5 ion-text style="padding-left: 0.8em; padding-top: 0.5em; padding-bottom: 0.5em;     height: auto"
+          color="dark">{{plantype.name}}</h5>
+        <p ion-text item-right color="color1" margin-right padding-right><b>{{plantype.amount | currency: 'NGN': '1.2-2'}}</b></p>
+      </ion-item>
+    </ion-list>
 
+  </div>
+
+  <div class="" *ngIf="error">
+    <p ion-text text-center color="color2">No result found!</p>
+  </div>
 </ion-content>

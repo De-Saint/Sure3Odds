@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PaymentsProvider } from './../../providers/payments/payments';
+import { AuthenicationProvider } from './../../providers/authenication/authenication';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, Content, ActionSheetController, LoadingController, AlertController } from 'ionic-angular';
 
 
 @IonicPage()
@@ -8,22 +10,169 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'payment-plans.html',
 })
 export class PaymentPlansPage {
-  teams=[
-    {img:'assets/imgs/teams/bate_borisov.png',team:'BATE Borisov',date:'Feb 13,2018',time:'17.30',league:'Premier League',result:'6 - 1'},
-    {img:'assets/imgs/teams/real_madrid.png',team:'Real Madrid',date:'Feb 23,2018',time:'19:30',league:'Premier League',result:''},
-    {img:'assets/imgs/teams/marseille.png',team:'Marseille',date:'Feb 28,2018',time:'22:00',league:'Premier League',result:''},
-    {img:'assets/imgs/teams/bate_borisov.png',team:'BATE Borisov',date:'Feb 13,2018',time:'17.30',league:'Premier League',result:'6 - 1'},
-    {img:'assets/imgs/teams/real_madrid.png',team:'Real Madrid',date:'Feb 23,2018',time:'19:30',league:'Premier League',result:''},
-    {img:'assets/imgs/teams/marseille.png',team:'Marseille',date:'Feb 28,2018',time:'22:00',league:'Premier League',result:''},
-    {img:'assets/imgs/teams/bate_borisov.png',team:'BATE Borisov',date:'Feb 13,2018',time:'17.30',league:'Premier League',result:'6 - 1'},
-    {img:'assets/imgs/teams/real_madrid.png',team:'Real Madrid',date:'Feb 23,2018',time:'19:30',league:'Premier League',result:''},
-    {img:'assets/imgs/teams/marseille.png',team:'Marseille',date:'Feb 28,2018',time:'22:00',league:'Premier League',result:''},
-  ]
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  @ViewChild(Content) content: Content;
+  plans: any;
+  originalplans: any;
+  error: string;
+  currentPage = 1;
+  totalPage = 0;
+  perPage = 0;
+  totalData = 0;
+  noplans: string;
+
+  constructor(public navCtrl: NavController,
+    private authProvider: AuthenicationProvider,
+    private actionSheetCtrl: ActionSheetController,
+    private loadingCtrl: LoadingController,
+    private alertCtrl: AlertController,
+    private paymentsProvider: PaymentsProvider, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad PaymentPlansPage');
+  ionViewWillEnter() {
+    this.GetPlans()
+  }
+
+
+  GetPlans() {
+    this.paymentsProvider.GetPlans(0, 10)
+      .subscribe(resp => {
+        if (resp.statusCode === 200) {
+          this.plans = resp.data.content;
+          console.log(this.plans);
+          this.currentPage = resp.data.number;
+          this.totalPage = resp.data.totalPages;
+          this.totalData = resp.data.totalElements;
+          this.perPage = resp.data.size;
+          this.originalplans = this.plans;
+          this.noplans = '';
+        } else {
+          this.authProvider.showToast(resp.description);
+        }
+        this.error = '';
+      }, error => {
+        this.error = 'none';
+        this.plans = null;
+        this.authProvider.showToast(error.error.descriptions);
+      });
+  }
+  // onSearch() {
+  //   let searchvalue = this.searchTerm;
+  //   if (searchvalue.trim() === '') {
+  //     this.payments = this.originalpayments
+  //   } else {
+  //     if (searchvalue.length >= 3) {
+  //       this.paymentsProvider.SearchPayments(searchvalue, 0, 20)
+  //         .subscribe(resp => {
+  //           if (resp.statusCode === 200) {
+  //             this.payments = resp.data.content;
+  //             this.currentPage = resp.data.number;
+  //             this.totalPage = resp.data.totalPages;
+  //             this.totalData = resp.data.totalElements;
+  //             this.perPage = resp.data.size;
+  //           } else {
+  //             this.authProvider.showToast(resp.description);
+  //           }
+  //           this.error = '';
+  //         }, error => {
+  //           this.error = 'none';
+  //           this.payments = null;
+  //         });
+  //     }
+  //   }
+  // }
+  // onClear(ev) {
+  //   this.searchTerm = "";
+  //   this.payments = this.originalpayments;
+  //   this.error = '';
+  // }
+  // onCancel(ev) {
+  //   this.searchTerm = "";
+  //   this.payments = this.originalpayments;
+  //   this.error = '';
+
+  // }
+
+  scrollInfinite(event) {
+    this.currentPage += 1;
+    setTimeout(() => {
+      this.paymentsProvider.GetPlans(this.currentPage, this.perPage)
+        .subscribe(resp => {
+          if (resp.statusCode === 200) {
+            this.currentPage = resp.data.number;
+            this.totalPage = resp.data.totalPages;
+            this.totalData = resp.data.totalElements;
+            this.perPage = resp.data.size;
+            this.noplans = '';
+            for (let i = 0; i < resp.data.content.length; i++) {
+              this.plans.push(resp.data.content[i]);
+            }
+          } else {
+            this.authProvider.showToast(resp.description);
+          }
+          event.complete();
+        }, error => {
+          this.noplans = 'none';
+          event.complete();
+        })
+    }, 1000);
+  }
+
+  onGotoTop() {
+    this.content.scrollToTop();
+  }
+
+  onDeleteOptions(plan) {
+    let actionSheet = this.actionSheetCtrl.create({
+      title: 'Plan Options',
+      buttons: [
+        {
+          text: 'Delete',
+          handler: () => { this.onDeletePlan(plan) }
+       
+        }, {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => { }
+        }
+      ]
+    });
+    actionSheet.present();
+  }
+
+  onDeletePlan(plan){
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    let confirm = this.alertCtrl.create({
+      title: 'Delete Plan',
+      message: 'Do you want to delete this payment record?</b><br/><br/>This is action is irreversible.',
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: () => {
+
+          }
+        },
+        {
+          text: 'Proceed',
+          handler: () => {
+            loading.present();
+            this.paymentsProvider.deletePayment(plan.id).subscribe(res => {
+              loading.dismiss().catch(() => { });
+              if (res.statusCode === 200) {
+                this.navCtrl.pop();
+              } else {
+                this.authProvider.showToast(res.description);
+              }
+            }, error => {
+              loading.dismiss().catch(() => { });
+              this.authProvider.showToast(error.error.error);
+            });
+          }
+        }
+      ]
+    });
+    confirm.present();
   }
 
 }

@@ -1,9 +1,8 @@
+import { Plans } from './../../interfaces/Plans';
+import { NewUsers } from './../../interfaces/NewUser';
+import { AuthenicationProvider } from './../../providers/authenication/authenication';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, ActionSheetController } from 'ionic-angular';
-import { Camera, CameraOptions } from '@ionic-native/camera'; 
-import { Global } from '../../providers/global';
-import $ from "jquery";
-import 'intl-tel-input';
+import { IonicPage, NavController, ActionSheetController, LoadingController, AlertController, Platform } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -11,86 +10,98 @@ import 'intl-tel-input';
   templateUrl: 'profile.html',
 })
 export class ProfilePage {
-  firstName='John';
-  lastName='Smith';
-  email='john_smith@gmail.com';
-  passowrd='qwse2548';
-  phoneNumber=9123456789;
-  address="Paradeplein,2018 Antwerp ,Belgium";
-  flag=true;
-  img;
-  img1="assets/imgs/profileCover.png";
-  img2="assets/imgs/profile2.png";
-  constructor(public navCtrl: NavController,public actionSheetCtrl: ActionSheetController, public camera: Camera,private global:Global) {
+ flag = true;
+  img1 = "assets/imgs/profileCover.png";
+  img2 = "/assets/imgs/appicon.png";
+  newuser: NewUsers = new NewUsers("", "", "", "", "", "", "", { id: "" }, "", { id: "", name: "" }, { id: "", name: "" });
+  userplan: Plans = new Plans("", { id: "", name: "", amount: "" }, "", "");
+  public public_key: any; //Put your paystack Test or Live Key here
+  public channels = ['card']; //Paystack Payment Methods
+  public random_id = Math.floor(Date.now() / 1000); //Line to generate reference number
+  pay_amount: any;
+  constructor(public navCtrl: NavController,
+    private alertCtrl: AlertController,
+    private authProvider: AuthenicationProvider,
+    private loadingCtrl: LoadingController,
+    private pltform: Platform,
+    public actionSheetCtrl: ActionSheetController) {
   }
-   
-update(){
-  this.flag=(this.flag!=false)? false:true;
-}
 
-//  select country code  
-  ngOnInit(): any {
-    let telInput = $("#elemtId");
-    let output = $("#output");  
+  ionViewWillEnter() {
+    this.GetUserDeta();
+  }
 
-    telInput.intlTelInput();  
-    // listen to "keyup", but also "change" to update when the user selects a country
-    telInput.on("keyup change", function() {
-      var intlNumber = telInput.intlTelInput("getNumber");
-      if (intlNumber) {
-        output.text("International: " + intlNumber);
+  GetUserDeta() {
+    this.authProvider.GetUserDeta().subscribe(result => {
+      if (result.statusCode == 200) {
+        console.log(result);
+        this.userplan = result.data.planData;
+        this.newuser = result.data.userData;
       } else {
-        output.text("Please enter a number below");
+        this.authProvider.showToast(result.description);
       }
-    });
+    }, error => {
+      this.authProvider.showToast(error.error.description);
+    })
   }
-  // gallery 
-  // ActionSheet for change user picture
-  selectedCamera;
-  selectImage(num) {
-    this.selectedCamera=num;
-    let actionSheet = this.actionSheetCtrl.create({
-      title: 'Modify your Picture',
+
+  updateAccount(user) {
+    console.log(user);
+    if (user) {
+      let loading = this.loadingCtrl.create({
+        content: "Please wait..."
+      });
+      loading.present();
+      this.authProvider.updateUser(user).subscribe(res => {
+        loading.dismiss().catch(() => { });
+        if (res.statusCode === 200) {
+          this.GetUserDeta();
+        } else {
+          this.authProvider.showToast(res.description);
+        }
+      }, error => {
+        loading.dismiss().catch(() => { });
+        this.authProvider.showToast(error.error.error);
+      });
+    } else {
+      this.authProvider.showToast("Please, check something is wrong.");
+    }
+  }
+
+  renewAccount(plan) {
+
+    let confirm = this.alertCtrl.create({
+      title: 'Update Plan',
+      message: "You are about to update <b> your subscription plan</b> <br/> to " + plan.plantype.name + ". <br/><br/>If <b>" + plan.plantype.name + "</b> is not the plan you want to update to, you can change it on the subscription screen. <br/><br/>This action is irreversible.",
       buttons: [
         {
-          text: 'Gallery',
-          handler: () => {this.get_camera('Gallery',this.selectedCamera);}
-        },{
-          text: 'Camera',
-          handler: () => {this.get_camera('Camera',this.selectedCamera);}
-        },{
           text: 'Cancel',
-          role: 'cancel',
-          handler: () => {}
+          handler: () => {
+          }
+        },
+        {
+          text: 'Proceed',
+          handler: () => {
+            this.newuser.plantype = this.userplan.plantype;
+            if (this.pltform.is("ios")) {
+              this.onIOSSubscription();
+            } else if (this.pltform.is("android")) {
+              this.onAndroidSubscription();
+            }
+          }
         }
       ]
     });
-    actionSheet.present();
+    confirm.present();
   }
-  get_camera(source,selectCam) {
-    const options: CameraOptions = { quality: 100,destinationType: this.camera.DestinationType.DATA_URL,
-    encodingType: this.camera.EncodingType.JPEG, mediaType: this.camera.MediaType.PICTURE
-    ,allowEdit:true,targetWidth:512,targetHeight:512,correctOrientation:true}
 
-    if(source=='Gallery'){
-      options.sourceType= this.camera.PictureSourceType.PHOTOLIBRARY
-    }
-    else {
-      options.sourceType= this.camera.PictureSourceType.CAMERA
-    }
+  onIOSSubscription() {
+    this.navCtrl.push("SubscriptionIosPage", { newuser: this.newuser, sub_option: "renewal" });
+  }
 
-    this.camera.getPicture(options).then((imageData) => {
-      this.img='data:image/jpeg;base64,' + imageData;
-    }, (err) => {});
-    if(this.img!=undefined){
-      if(selectCam==1){
-        this.img1=this.img;
-      }else{
-        this.img2=this.img;
-      }
-    }
+  onAndroidSubscription() {
+    this.navCtrl.push("SubscriptionAndroidPage", { newuser: this.newuser, sub_option: "renewal" });
   }
 
   
 }
- 

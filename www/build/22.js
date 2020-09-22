@@ -1,14 +1,16 @@
 webpackJsonp([22],{
 
-/***/ 728:
+/***/ 697:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingCountryAddPageModule", function() { return SettingCountryAddPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GameEditPageModule", function() { return GameEditPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_country_add__ = __webpack_require__(807);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__game_edit__ = __webpack_require__(761);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__ = __webpack_require__(354);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,55 +20,68 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SettingCountryAddPageModule = /** @class */ (function () {
-    function SettingCountryAddPageModule() {
+
+var GameEditPageModule = /** @class */ (function () {
+    function GameEditPageModule() {
     }
-    SettingCountryAddPageModule = __decorate([
+    GameEditPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__setting_country_add__["a" /* SettingCountryAddPage */],
+                __WEBPACK_IMPORTED_MODULE_2__game_edit__["a" /* GameEditPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_country_add__["a" /* SettingCountryAddPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__game_edit__["a" /* GameEditPage */]),
+                __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__["SelectSearchableModule"]
             ],
         })
-    ], SettingCountryAddPageModule);
-    return SettingCountryAddPageModule;
+    ], GameEditPageModule);
+    return GameEditPageModule;
 }());
 
-//# sourceMappingURL=setting-country-add.module.js.map
+//# sourceMappingURL=game-edit.module.js.map
 
 /***/ }),
 
-/***/ 768:
+/***/ 749:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Countries; });
-var Countries = /** @class */ (function () {
-    function Countries(name, id, imageurl) {
-        this.name = name;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Games; });
+var Games = /** @class */ (function () {
+    function Games(awayteam, country, hometeam, league, matchdate, selections, matchtime, sets, odds, id, status, hometeamscore, awayteamscore) {
+        this.awayteam = awayteam;
+        this.country = country;
+        this.hometeam = hometeam;
+        this.league = league;
+        this.matchdate = matchdate;
+        this.selections = selections;
+        this.matchtime = matchtime;
+        this.sets = sets;
+        this.odds = odds;
         this.id = id;
-        this.imageurl = imageurl;
+        this.status = status;
+        this.hometeamscore = hometeamscore;
+        this.awayteamscore = awayteamscore;
     }
-    return Countries;
+    return Games;
 }());
 
-//# sourceMappingURL=Countries.js.map
+//# sourceMappingURL=Games.js.map
 
 /***/ }),
 
-/***/ 807:
+/***/ 761:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingCountryAddPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_games_games__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_Countries__ = __webpack_require__(768);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__ = __webpack_require__(356);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GameEditPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_Games__ = __webpack_require__(749);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_games_games__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__ = __webpack_require__(354);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -82,102 +97,226 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var SettingCountryAddPage = /** @class */ (function () {
-    function SettingCountryAddPage(navCtrl, gameProvider, loadingCtrl, actionSheetCtrl, camera, authProvider, navParams) {
-        this.navCtrl = navCtrl;
-        this.gameProvider = gameProvider;
-        this.loadingCtrl = loadingCtrl;
-        this.actionSheetCtrl = actionSheetCtrl;
-        this.camera = camera;
+var GameEditPage = /** @class */ (function () {
+    function GameEditPage(gamesProvider, authProvider, loadingCtrl, navCtrl, navParams) {
+        this.gamesProvider = gamesProvider;
         this.authProvider = authProvider;
+        this.loadingCtrl = loadingCtrl;
+        this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.country = new __WEBPACK_IMPORTED_MODULE_2__interfaces_Countries__["a" /* Countries */]("", "", "");
-        this.img1 = "assets/imgs/appicon.png";
-        this.flag = true;
+        this.game = new __WEBPACK_IMPORTED_MODULE_0__interfaces_Games__["a" /* Games */]({ id: "" }, { id: "" }, { id: "" }, { id: "" }, "", { id: "" }, "", { id: "" }, "", "", { id: "" }, 0, 0);
+        this.selectedgame = this.navParams.get("game");
+        if (this.selectedgame) {
+            this.game = this.selectedgame;
+            console.log(this.game);
+        }
     }
-    SettingCountryAddPage.prototype.ionViewDidLoad = function () {
-        this.flag = (this.flag != false) ? false : true;
+    GameEditPage.prototype.ionViewWillEnter = function () {
+        this.Getcountries();
+        this.GetSelections();
+        this.GetSets();
+        this.GetStatus();
     };
-    SettingCountryAddPage.prototype.onSubmit = function (country) {
+    GameEditPage.prototype.Getcountries = function () {
+        var _this = this;
+        this.gamesProvider.Getcountries()
+            .subscribe(function (resp) {
+            if (resp.statusCode === 200) {
+                _this.countries = resp.data;
+            }
+            else {
+                _this.authProvider.showToast(resp.description);
+            }
+        }, function (error) {
+            _this.authProvider.showToast(error.error.error);
+        });
+    };
+    GameEditPage.prototype.onSelectSelection = function (event) {
+        console.log(event.value);
+    };
+    GameEditPage.prototype.onSelectSets = function (event) {
+        console.log(event.value);
+    };
+    GameEditPage.prototype.onSelectHTeam = function (event) {
+        console.log(event.value);
+    };
+    GameEditPage.prototype.onSelectATeam = function (event) {
+        console.log(event.value);
+    };
+    GameEditPage.prototype.onSelectStatus = function (event) {
+        console.log(event.value);
+    };
+    GameEditPage.prototype.onSelectCountry = function (event) {
         var _this = this;
         var loading = this.loadingCtrl.create({
             content: "Please wait..."
         });
-        if (this.country.name) {
-            this.country.imageurl = (this.country.imageurl != undefined) ? this.img1 : this.img;
+        this.game.league = null;
+        if (event.value.id) {
             loading.present();
-            this.gameProvider.createCountry(country).subscribe(function (res) {
+            this.gamesProvider.GetLeaguesByCountryID(event.value.id)
+                .subscribe(function (resp) {
                 loading.dismiss().catch(function () { });
-                if (res.statusCode === 200) {
-                    _this.navCtrl.pop();
+                if (resp.statusCode === 200) {
+                    _this.leagues = resp.data;
                 }
                 else {
-                    _this.authProvider.showToast(res.description);
+                    _this.authProvider.showToast(resp.description);
                 }
             }, function (error) {
                 loading.dismiss().catch(function () { });
                 _this.authProvider.showToast(error.error.error);
             });
         }
-        else {
-            this.authProvider.showToast("Name input field is empty");
-        }
     };
-    SettingCountryAddPage.prototype.selectImage = function () {
+    GameEditPage.prototype.onSelectLeague = function (event) {
         var _this = this;
-        var actionSheet = this.actionSheetCtrl.create({
-            title: 'Add Country Logo',
-            buttons: [
-                {
-                    text: 'Gallery',
-                    handler: function () { _this.get_camera('Gallery'); }
-                }, {
-                    text: 'Camera',
-                    handler: function () { _this.get_camera('Camera'); }
-                }, {
-                    text: 'Cancel',
-                    role: 'cancel',
-                    handler: function () { }
-                }
-            ]
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
         });
-        actionSheet.present();
+        this.game.awayteam = null;
+        this.game.hometeam = null;
+        if (event.value.id) {
+            loading.present();
+            this.gamesProvider.getTeamsByLeagueId(event.value.id)
+                .subscribe(function (resp) {
+                loading.dismiss().catch(function () { });
+                if (resp.statusCode === 200) {
+                    _this.hometeams = resp.data;
+                    _this.awayteams = resp.data;
+                }
+                else {
+                    _this.authProvider.showToast(resp.description);
+                }
+            }, function (error) {
+                loading.dismiss().catch(function () { });
+                _this.authProvider.showToast(error.error.error);
+            });
+        }
     };
-    SettingCountryAddPage.prototype.get_camera = function (source) {
+    GameEditPage.prototype.onSubmit = function (game) {
         var _this = this;
-        var options = {
-            quality: 100, destinationType: this.camera.DestinationType.DATA_URL,
-            encodingType: this.camera.EncodingType.JPEG, mediaType: this.camera.MediaType.PICTURE,
-            allowEdit: true, targetWidth: 512, targetHeight: 512, correctOrientation: true
-        };
-        if (source == 'Gallery') {
-            options.sourceType = this.camera.PictureSourceType.PHOTOLIBRARY;
+        if (game.sets) {
+            if (game.country) {
+                if (game.league) {
+                    if (game.selections) {
+                        if (game.hometeam && game.awayteam) {
+                            if (game.odds) {
+                                if (game.matchdate && game.matchtime) {
+                                    if (game.hometeam !== game.awayteam) {
+                                        if (game.hometeamscore && game.awayteamscore) {
+                                            var loading_1 = this.loadingCtrl.create({
+                                                content: "Please wait..."
+                                            });
+                                            loading_1.present();
+                                            this.gamesProvider.updateGame(game).subscribe(function (res) {
+                                                loading_1.dismiss().catch(function () { });
+                                                if (res.statusCode === 200) {
+                                                    _this.navCtrl.pop();
+                                                }
+                                                else {
+                                                    _this.authProvider.showToast(res.description);
+                                                }
+                                            }, function (error) {
+                                                loading_1.dismiss().catch(function () { });
+                                                _this.authProvider.showToast(error.error.error);
+                                            });
+                                        }
+                                        else {
+                                            this.authProvider.showToast("Either Home or Away Team score input field is empty or incorrect");
+                                        }
+                                    }
+                                    else {
+                                        this.authProvider.showToast("Home and Away Team cannot be same.");
+                                    }
+                                }
+                                else {
+                                    this.authProvider.showToast("Please, select either the Match Date or Time");
+                                }
+                            }
+                            else {
+                                this.authProvider.showToast("Odds input field is empty");
+                            }
+                        }
+                        else {
+                            this.authProvider.showToast("Please, select either Away or Home Team");
+                        }
+                    }
+                    else {
+                        this.authProvider.showToast("Please, select a Prediction");
+                    }
+                }
+                else {
+                    this.authProvider.showToast("Please, select a League");
+                }
+            }
+            else {
+                this.authProvider.showToast("Please, select a Country");
+            }
         }
         else {
-            options.sourceType = this.camera.PictureSourceType.CAMERA;
-        }
-        this.camera.getPicture(options).then(function (imageData) {
-            _this.img = 'data:image/jpeg;base64,' + imageData;
-        }, function (err) { });
-        if (this.img != undefined) {
-            this.img1 = this.img;
+            this.authProvider.showToast("Please, select a Set ");
         }
     };
-    SettingCountryAddPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-            selector: 'page-setting-country-add',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-country-add/setting-country-add.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Add Country</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="imgs">\n    <div class="imgProfile" [ngStyle]="{\'background-image\':\'url(\' + img1 + \')\'}">\n      <button ion-button icon-only class="profileCamera"  [ngClass]="{\'show\':flag==false}"   (click)="selectImage()">\n        <ion-icon name="md-camera"></ion-icon>\n      </button>\n    </div>\n  </div>\n  <div class="otherForm">\n    <ion-list>\n\n     \n      <!-- appear when click update -->\n      <ion-item >\n        <ion-label stacked>Name</ion-label>\n        <ion-input  type="text" [(ngModel)]="country.name"  ></ion-input>\n      </ion-item>\n      <!-- ==================================== -->\n    </ion-list>\n    <button ion-button block color="color2" (click)="onSubmit(country)">Submit</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-country-add/setting-country-add.html"*/,
+    GameEditPage.prototype.GetSelections = function () {
+        var _this = this;
+        this.gamesProvider.getSelections()
+            .subscribe(function (resp) {
+            if (resp.statusCode === 200) {
+                _this.selections = resp.data;
+            }
+            else {
+                _this.authProvider.showToast(resp.description);
+            }
+        }, function (error) {
+            _this.authProvider.showToast(error.error.error);
+        });
+    };
+    GameEditPage.prototype.GetSets = function () {
+        var _this = this;
+        this.gamesProvider.GetSets()
+            .subscribe(function (resp) {
+            if (resp.statusCode === 200) {
+                _this.sets = resp.data;
+            }
+            else {
+                _this.authProvider.showToast(resp.description);
+            }
+        }, function (error) {
+            _this.authProvider.showToast(error.error.error);
+        });
+    };
+    GameEditPage.prototype.GetStatus = function () {
+        var _this = this;
+        this.gamesProvider.GetStatus("Game")
+            .subscribe(function (resp) {
+            if (resp.statusCode === 200) {
+                _this.statuses = resp.data;
+            }
+            else {
+                _this.authProvider.showToast(resp.description);
+            }
+        }, function (error) {
+            _this.authProvider.showToast(error.error.error);
+        });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["ViewChild"])('myselect'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__["SelectSearchableComponent"])
+    ], GameEditPage.prototype, "selectComponent", void 0);
+    GameEditPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
+            selector: 'page-game-edit',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/game-edit/game-edit.html"*/'<ion-header>\n \n  <ion-navbar>\n    <ion-title>Edit Game</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="otherForm"> \n    <ion-list>\n      <ion-item>\n        <ion-label>\n          Select The Set\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.sets" (onChange)="onSelectSets($event)" [items]="sets"\n          itemValueField="id" [canClear]="true" clearButtonText="Clear Selected" confirmButtonText="Proceed"\n          itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n      <hr ion-text margin-top margin-bottom>\n\n      <ion-item>\n        <ion-label>\n          Select The Country\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.country" (onChange)="onSelectCountry($event)"\n          [items]="countries" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n\n      <ion-item>\n        <ion-label>\n          Select The League\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.league" (onChange)="onSelectLeague($event)"\n          [items]="leagues" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n\n      <ion-item>\n        <ion-label>\n          Select The Home Team\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.hometeam" (onChange)="onSelectHTeam($event)"\n          [items]="hometeams" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n\n      <ion-item>\n        <ion-label>\n          Select The Away Team\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.awayteam" (onChange)="onSelectATeam($event)"\n          [items]="awayteams" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n\n      <hr margin-top margin-bottom>\n      <ion-item>\n        <ion-label>\n          Pick The Selection\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.selections" (onChange)="onSelectSelection($event)"\n          [items]="selections" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n\n      <hr margin-top margin-bottom>\n      <ion-item>\n        <ion-label>\n          Match Date\n        </ion-label>\n        <ion-datetime [(ngModel)]="game.matchdate" required displayFormat="YYYY-MM-DD" min="2017" max="2050-12-31">\n        </ion-datetime>\n      </ion-item>\n      <ion-item>\n        <ion-label>\n          Match Time\n        </ion-label>\n        <ion-datetime displayFormat="h:mm A" required [(ngModel)]="game.matchtime"></ion-datetime>\n      </ion-item>\n\n      <hr margin-top margin-bottom>\n      <ion-item>\n        <ion-label stacked>Odds</ion-label>\n        <ion-input type="text" required [(ngModel)]="game.odds"></ion-input>\n      </ion-item>\n\n      <hr margin-top margin-bottom>\n      <ion-item>\n        <ion-label stacked>Home Time Score</ion-label>\n        <ion-input type="number" required [(ngModel)]="game.hometeamscore"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label stacked>Away Team Score</ion-label>\n        <ion-input type="number" required [(ngModel)]="game.awayteamscore"></ion-input>\n      </ion-item>\n      \n      <hr margin-top margin-bottom>\n      <ion-item>\n        <ion-label>\n          Select The Status\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.status" (onChange)="onSelectStatus($event)"\n          [items]="statuses" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n    </ion-list>\n    <button ion-button block color="color2" (click)="onSubmit(game)">Submit</button>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/game-edit/game-edit.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"],
-            __WEBPACK_IMPORTED_MODULE_1__providers_games_games__["a" /* GamesProvider */],
-            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["LoadingController"],
-            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ActionSheetController"], __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__["a" /* Camera */],
-            __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */],
-            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"]])
-    ], SettingCountryAddPage);
-    return SettingCountryAddPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_games_games__["a" /* GamesProvider */],
+            __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */],
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["LoadingController"],
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavParams"]])
+    ], GameEditPage);
+    return GameEditPage;
 }());
 
-//# sourceMappingURL=setting-country-add.js.map
+//# sourceMappingURL=game-edit.js.map
 
 /***/ })
 

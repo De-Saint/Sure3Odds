@@ -1,14 +1,14 @@
 webpackJsonp([39],{
 
-/***/ 733:
+/***/ 715:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingLeagueViewPageModule", function() { return SettingLeagueViewPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReportGeneralPageModule", function() { return ReportGeneralPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_league_view__ = __webpack_require__(812);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__report_general__ = __webpack_require__(780);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SettingLeagueViewPageModule = /** @class */ (function () {
-    function SettingLeagueViewPageModule() {
+var ReportGeneralPageModule = /** @class */ (function () {
+    function ReportGeneralPageModule() {
     }
-    SettingLeagueViewPageModule = __decorate([
+    ReportGeneralPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__setting_league_view__["a" /* SettingLeagueViewPage */],
+                __WEBPACK_IMPORTED_MODULE_2__report_general__["a" /* ReportGeneralPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_league_view__["a" /* SettingLeagueViewPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__report_general__["a" /* ReportGeneralPage */]),
             ],
         })
-    ], SettingLeagueViewPageModule);
-    return SettingLeagueViewPageModule;
+    ], ReportGeneralPageModule);
+    return ReportGeneralPageModule;
 }());
 
-//# sourceMappingURL=setting-league-view.module.js.map
+//# sourceMappingURL=report-general.module.js.map
 
 /***/ }),
 
-/***/ 812:
+/***/ 780:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingLeagueViewPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_games_games__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(20);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReportGeneralPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,111 +58,42 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-var SettingLeagueViewPage = /** @class */ (function () {
-    function SettingLeagueViewPage(navCtrl, loadingCtrl, actionSheetCtrl, authProvider, gamesProvider, navParams) {
+var ReportGeneralPage = /** @class */ (function () {
+    function ReportGeneralPage(navCtrl, authProvider, navParams) {
         this.navCtrl = navCtrl;
-        this.loadingCtrl = loadingCtrl;
-        this.actionSheetCtrl = actionSheetCtrl;
         this.authProvider = authProvider;
-        this.gamesProvider = gamesProvider;
         this.navParams = navParams;
-        this.country = this.navParams.get("country");
-        console.log(this.country);
     }
-    SettingLeagueViewPage.prototype.ionViewWillEnter = function () {
-        this.getCountryLeagues();
+    ReportGeneralPage.prototype.ionViewWillEnter = function () {
+        this.GetAppReport();
     };
-    SettingLeagueViewPage.prototype.getCountryLeagues = function () {
+    ReportGeneralPage.prototype.GetAppReport = function () {
         var _this = this;
-        var loading = this.loadingCtrl.create({
-            content: "Please wait..."
-        });
-        loading.present();
-        this.gamesProvider.GetLeaguesByCountryID(this.country.id)
+        this.authProvider.GetAppReport()
             .subscribe(function (resp) {
-            loading.dismiss().catch(function () { });
             if (resp.statusCode === 200) {
-                _this.leagues = resp.data;
-                _this.originalleagues = _this.leagues;
+                _this.report = resp.data;
+                console.log(_this.report);
             }
             else {
                 _this.authProvider.showToast(resp.description);
             }
         }, function (error) {
-            loading.dismiss().catch(function () { });
             _this.authProvider.showToast(error.error.error);
         });
     };
-    SettingLeagueViewPage.prototype.onSearch = function () {
-        var _this = this;
-        var searchvalue = this.searchTerm;
-        if (searchvalue.trim() === '') {
-            this.leagues = this.originalleagues;
-        }
-        else {
-            if (searchvalue.length >= 3) {
-                this.gamesProvider.SearchLeaguesByCountryIDAndName(searchvalue, this.country.id)
-                    .subscribe(function (resp) {
-                    console.log(resp);
-                    if (resp.statusCode === 200) {
-                        _this.leagues = resp.data;
-                    }
-                    else {
-                        console.log(resp.description);
-                    }
-                    _this.error = '';
-                }, function (error) {
-                    console.log(JSON.stringify(error));
-                    _this.error = 'none';
-                    _this.leagues = [];
-                    _this.authProvider.showToast(error.error.error);
-                });
-            }
-        }
-    };
-    SettingLeagueViewPage.prototype.onClear = function (ev) {
-        this.searchTerm = "";
-        this.leagues = this.originalleagues;
-    };
-    SettingLeagueViewPage.prototype.onCancel = function (ev) {
-        this.searchTerm = "";
-        this.leagues = this.originalleagues;
-    };
-    SettingLeagueViewPage.prototype.onLeagueOption = function (league) {
-        var _this = this;
-        var actionSheet = this.actionSheetCtrl.create({
-            title: 'League Options',
-            buttons: [
-                {
-                    text: 'View / Edit',
-                    handler: function () { _this.navCtrl.push('SettingLeagueEditPage', { league: league }); }
-                }, {
-                    text: 'View Teams',
-                    handler: function () { _this.navCtrl.push('SettingTeamViewPage', { league: league }); }
-                }, {
-                    text: 'Cancel',
-                    role: 'cancel',
-                    handler: function () { }
-                }
-            ]
-        });
-        actionSheet.present();
-    };
-    SettingLeagueViewPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: 'page-setting-league-view',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-league-view/setting-league-view.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{country.name}} Leagues</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only navPush="SettingLeagueAddPage">\n        <ion-icon name="add-circle"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar [(ngModel)]="searchTerm" (ionCancel)="onCancel($event)" [showCancelButton]="true"\n    (ionClear)="onClear($event)" (ionInput)="onSearch()">\n  </ion-searchbar>\n  <div class="leagueStats">\n    <ion-list *ngFor="let league of leagues">\n      <ion-item class="thumbnailItem" (click)="onLeagueOption(league)">\n        <ion-thumbnail item-left>\n          <img src="{{league.imageurl}}" *ngIf="league.imageurl" />\n          <img src="assets/imgs/appicon.png" *ngIf="!league.imageurl" />\n        </ion-thumbnail>\n        <h5 ion-text padding-left margin-left color="dark">{{league.name}}</h5>\n        <span ion-text color="color1" class="" small item-right>{{league.country.name}}</span>\n      </ion-item>\n     \n    </ion-list>\n  </div>\n\n <div class="" *ngIf="error">\n    <p ion-text text-center color="color2">No result found!</p>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-league-view/setting-league-view.html"*/,
+    ReportGeneralPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
+            selector: 'page-report-general',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/report-general/report-general.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>General Reports </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="otherForm">\n    <ion-list padding>\n      <ion-list-header>\n        <h2 ion-text text-center color="color2">Membership Details</h2>\n      </ion-list-header>\n      <ion-item style="margin-top: 1em;">\n        <h5 ion-text color="dark"><b>Total Members </b></h5>\n        <p ion-text color="color1"><b>{{report?.totalusers}}</b></p>\n      </ion-item>\n      <ion-item class="halfItem" float-left style="margin-top: 1.5em;">\n        <h5 ion-text color="dark"><b>Total VVIP Members</b></h5>\n        <p ion-text color="color1"><b>{{report?.totalvvipusers}}</b></p>\n      </ion-item>\n      <ion-item class="halfItem" float-left style="margin-top:  1.5em;">\n        <h5 ion-text color="dark"><b>Total VIP Members </b></h5>\n        <p ion-text color="color1"><b>{{report?.totalvipusers}}</b></p>\n      </ion-item>\n      <ion-item class="halfItem" float-left style="margin-top:  1.5em;">\n        <h5 ion-text color="dark"><b>Total Active Members</b></h5>\n        <p ion-text color="color1"><b>{{report?.totalactiveusers}}</b></p>\n      </ion-item>\n      <ion-item class="halfItem" float-left style="margin-top:  1.5em;">\n        <h5 ion-text color="dark"><b>Total InActive Members</b></h5>\n        <p ion-text color="color1"><b>{{report?.totalinactiveusers}}</b></p>\n      </ion-item>\n    </ion-list>\n\n    <ion-list padding>\n      <ion-list-header>\n        <h2 ion-text text-center color="color2">Subscription Details</h2>\n      </ion-list-header>\n      <ion-item>\n        <h5 ion-text color="dark"><b>Total Revenue</b></h5>\n        <p ion-text color="color1"><b>{{report?.totalincome  | currency: \'NGN\': \'1.2-2\'}}</b></p>\n      </ion-item>\n      <ion-item class="halfItem" float-left style="margin-top:  1.5em;">\n        <h5 ion-text color="dark"><b>VVIP Revenue</b></h5>\n        <p ion-text color="color1"><b>{{report?.totalvvipincome  | currency: \'NGN\': \'1.2-2\'}}</b></p>\n      </ion-item>\n      <ion-item class="halfItem" float-left style="margin-top:  1.5em;">\n        <h5 ion-text color="dark"><b>VIP Revenue</b></h5>\n        <p ion-text color="color1"><b>{{report?.totalvipincome  | currency: \'NGN\': \'1.2-2\'}}</b></p>\n      </ion-item>\n      <ion-item class="halfItem" float-left style="margin-top:  1.5em;">\n        <h5 ion-text color="dark"><b>VVIP Payments</b></h5>\n        <p ion-text color="color1"><b>{{report?.totalvvippay}}</b></p>\n      </ion-item>\n      <ion-item class="halfItem" float-left style="margin-top:  1.5em;">\n        <h5 ion-text color="dark"><b>VIP Payments</b></h5>\n        <p ion-text color="color1"><b>{{report?.totalvippay }}</b></p>\n      </ion-item>\n    </ion-list>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/report-general/report-general.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["LoadingController"],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ActionSheetController"],
-            __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */],
-            __WEBPACK_IMPORTED_MODULE_0__providers_games_games__["a" /* GamesProvider */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"]])
-    ], SettingLeagueViewPage);
-    return SettingLeagueViewPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavController"],
+            __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavParams"]])
+    ], ReportGeneralPage);
+    return ReportGeneralPage;
 }());
 
-//# sourceMappingURL=setting-league-view.js.map
+//# sourceMappingURL=report-general.js.map
 
 /***/ })
 

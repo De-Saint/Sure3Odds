@@ -23,8 +23,6 @@
         </ion-select>
       </ion-item>
     </ion-list>
-    <!-- <button ion-button block type="submit" color="color2" (click)="Pay('AndroidSubscriptionPage')">PAY
-      {{pay_amount  | currency: 'NGN': '1.2-2'}}</button> -->
       
         <button ion-button block color="color2" angular4-paystack type="submit" 
           [key]="public_key" 
@@ -40,7 +38,7 @@
             [ {
               display_name: 'Customer Name', 
               variable_name: 'Customer Name', 
-              value: newuser.firstname} ,
+              value: newuser.firstname + '' + newuser.lastname} ,
             {
               display_name: 'Payment Type', 
               variable_name: 'Payment Type', 
@@ -49,6 +47,6 @@
           }"
         > PAY  {{pay_amount  | currency: 'NGN': '1.2-2'}}
         </button>
-    <p ion-text color="light" navPush="SignInPage">Don't want to continue ? Login</p>
+    <!-- <p ion-text color="light" navPush="SignInPage">Don't want to continue ? Login</p> -->
   </div>
 </ion-content>

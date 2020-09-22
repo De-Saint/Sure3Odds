@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
-import { Global } from '../../providers/global';
 @IonicPage()
 @Component({
   selector: 'page-setting',
@@ -11,7 +10,7 @@ export class SettingPage {
   tab2Root = 'SettingLeaguesPage';
   tab3Root = 'SettingTeamsPage';
   tab4Root = 'SettingSelectionsPage';
-  constructor(public navCtrl: NavController,private global:Global) {
+  constructor(public navCtrl: NavController) {
     
   } 
 

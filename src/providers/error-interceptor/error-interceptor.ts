@@ -2,7 +2,7 @@ import { Events } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { HttpRequest, HttpHandler, HttpErrorResponse, HttpEvent } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { retry, catchError } from 'rxjs/operators';
+import { catchError } from 'rxjs/operators';
 import { _throw } from 'rxjs/observable/throw';
 
 @Injectable()

@@ -1,12 +1,7 @@
+import { AuthenicationProvider } from './../../providers/authenication/authenication';
+import { GamesProvider } from './../../providers/games/games';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the PaymentSetsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -14,12 +9,31 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'payment-sets.html',
 })
 export class PaymentSetsPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  sets: any;
+  error: any;
+  constructor(public navCtrl: NavController,
+    private gamesProvider: GamesProvider,
+    private auth: AuthenicationProvider,
+    public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad PaymentSetsPage');
+  ionViewWillEnter() {
+    this.GetSets();
   }
 
+  GetSets() {
+    this.gamesProvider.GetSets().subscribe(resp => {
+      if (resp.statusCode === 200) {
+        this.sets = resp.data;
+        console.log(this.sets);
+      } else {
+        this.auth.showToast(resp.description);
+      }
+    }, error => {
+      this.auth.showToast(error.error.description);
+    })
+  }
+  onSetOptions(set) {
+
+  }
 }

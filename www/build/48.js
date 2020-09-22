@@ -1,14 +1,14 @@
 webpackJsonp([48],{
 
-/***/ 717:
+/***/ 700:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaymentsPageModule", function() { return PaymentsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HelpPageModule", function() { return HelpPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__payments__ = __webpack_require__(794);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__help__ = __webpack_require__(764);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var PaymentsPageModule = /** @class */ (function () {
-    function PaymentsPageModule() {
+var HelpPageModule = /** @class */ (function () {
+    function HelpPageModule() {
     }
-    PaymentsPageModule = __decorate([
+    HelpPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__payments__["a" /* PaymentsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__help__["a" /* HelpPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__payments__["a" /* PaymentsPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__help__["a" /* HelpPage */]),
             ],
         })
-    ], PaymentsPageModule);
-    return PaymentsPageModule;
+    ], HelpPageModule);
+    return HelpPageModule;
 }());
 
-//# sourceMappingURL=payments.module.js.map
+//# sourceMappingURL=help.module.js.map
 
 /***/ }),
 
-/***/ 794:
+/***/ 764:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PaymentsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HelpPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,28 +56,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var PaymentsPage = /** @class */ (function () {
-    function PaymentsPage(navCtrl, navParams) {
+/**
+ * Generated class for the HelpPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var HelpPage = /** @class */ (function () {
+    function HelpPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.tab1Root = 'PaymentDetailsPage';
-        this.tab2Root = 'PaymentPlansPage';
-        this.tab3Root = 'PaymentPlantypesPage';
-        this.tab4Root = 'PaymentSetsPage';
     }
-    PaymentsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad PaymentsPage');
+    HelpPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad HelpPage');
     };
-    PaymentsPage = __decorate([
+    HelpPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-payments',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payments/payments.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root"  tabTitle="Payments" ></ion-tab>\n  <ion-tab [root]="tab2Root"  tabTitle="Plans" ></ion-tab>\n  <ion-tab [root]="tab3Root"  tabTitle="Plan Types" ></ion-tab>\n  <ion-tab [root]="tab4Root"  tabTitle="Sets"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payments/payments.html"*/,
+            selector: 'page-help',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/help/help.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Help</ion-title>\n   \n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-item-group>\n    <ion-item-divider color="primary" class=""><b>Support</b></ion-item-divider>\n    <ion-item>\n      <ion-icon color="primary" name="call" item-left></ion-icon>\n      <ion-label color="primary">Call</ion-label>\n      <p item-right ion-text color="primary"><b>08188888320</b></p>\n    </ion-item>\n    <ion-item>\n      <ion-icon name="mail" color="primary" item-left></ion-icon>\n      <ion-label color="primary">Email</ion-label>\n      <p item-right ion-text color="primary"><b>support@sure3odds.com</b></p>\n    </ion-item>\n  </ion-item-group>\n  <ion-item-group>\n    <ion-item-divider color="primary"><b>Manual Payment</b></ion-item-divider>\n    <ion-item>\n      <ion-label color="primary">Account Name</ion-label>\n      <p item-right ion-text color="primary"><b>Sure3Odds Enterprise</b></p>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary">Account Number</ion-label>\n      <p item-right ion-text color="primary"><b>0105601820</b></p>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary">Bank Name</ion-label>\n      <p item-right ion-text color="primary"><b>Diamond Bank</b></p>\n    </ion-item>\n  </ion-item-group>\n  <ion-item-group>\n    <ion-item-divider color="primary"><b>Contact</b></ion-item-divider>\n    <ion-item>\n      <ion-icon color="primary" name="logo-facebook" item-left></ion-icon>\n      <ion-label color="primary">facebook/sure3oddsNigeria</ion-label>\n    </ion-item>\n    <ion-item >\n      <ion-icon color="primary" name="globe" color="primary" item-left></ion-icon>\n      <ion-label color="primary">www.sure3odds.com</ion-label>\n    </ion-item>\n  \n  </ion-item-group>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/help/help.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
-    ], PaymentsPage);
-    return PaymentsPage;
+    ], HelpPage);
+    return HelpPage;
 }());
 
-//# sourceMappingURL=payments.js.map
+//# sourceMappingURL=help.js.map
 
 /***/ })
 

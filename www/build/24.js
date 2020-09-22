@@ -1,14 +1,14 @@
 webpackJsonp([24],{
 
-/***/ 759:
+/***/ 719:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserSubAdminsPageModule", function() { return UserSubAdminsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingCountryAddPageModule", function() { return SettingCountryAddPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_sub_admins__ = __webpack_require__(839);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_country_add__ = __webpack_require__(784);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var UserSubAdminsPageModule = /** @class */ (function () {
-    function UserSubAdminsPageModule() {
+var SettingCountryAddPageModule = /** @class */ (function () {
+    function SettingCountryAddPageModule() {
     }
-    UserSubAdminsPageModule = __decorate([
+    SettingCountryAddPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__user_sub_admins__["a" /* UserSubAdminsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__setting_country_add__["a" /* SettingCountryAddPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__user_sub_admins__["a" /* UserSubAdminsPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_country_add__["a" /* SettingCountryAddPage */]),
             ],
         })
-    ], UserSubAdminsPageModule);
-    return UserSubAdminsPageModule;
+    ], SettingCountryAddPageModule);
+    return SettingCountryAddPageModule;
 }());
 
-//# sourceMappingURL=user-sub-admins.module.js.map
+//# sourceMappingURL=setting-country-add.module.js.map
 
 /***/ }),
 
-/***/ 839:
+/***/ 755:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserSubAdminsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Countries; });
+var Countries = /** @class */ (function () {
+    function Countries(name, id, imageurl) {
+        this.name = name;
+        this.id = id;
+        this.imageurl = imageurl;
+    }
+    return Countries;
+}());
+
+//# sourceMappingURL=Countries.js.map
+
+/***/ }),
+
+/***/ 784:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingCountryAddPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_games_games__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_Countries__ = __webpack_require__(755);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__ = __webpack_require__(355);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,127 +79,61 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var UserSubAdminsPage = /** @class */ (function () {
-    function UserSubAdminsPage(navCtrl, authProvider, alertCtrl, loadingCtrl, actionSheetCtrl, navParams) {
+
+
+
+var SettingCountryAddPage = /** @class */ (function () {
+    function SettingCountryAddPage(navCtrl, gameProvider, loadingCtrl, actionSheetCtrl, camera, authProvider, navParams) {
         this.navCtrl = navCtrl;
-        this.authProvider = authProvider;
-        this.alertCtrl = alertCtrl;
+        this.gameProvider = gameProvider;
         this.loadingCtrl = loadingCtrl;
         this.actionSheetCtrl = actionSheetCtrl;
+        this.camera = camera;
+        this.authProvider = authProvider;
         this.navParams = navParams;
-        this.currentPage = 1;
-        this.totalPage = 0;
-        this.perPage = 0;
-        this.totalData = 0;
+        this.country = new __WEBPACK_IMPORTED_MODULE_2__interfaces_Countries__["a" /* Countries */]("", "", "");
+        this.img1 = "assets/imgs/appicon.png";
+        this.flag = true;
     }
-    UserSubAdminsPage.prototype.ionViewWillEnter = function () {
-        this.GetUsers();
+    SettingCountryAddPage.prototype.ionViewDidLoad = function () {
+        this.flag = (this.flag != false) ? false : true;
     };
-    UserSubAdminsPage.prototype.GetUsers = function () {
+    SettingCountryAddPage.prototype.onSubmit = function (country) {
         var _this = this;
-        this.authProvider.GetUsersByType(3, 0, 10)
-            .subscribe(function (resp) {
-            if (resp.statusCode === 200) {
-                _this.users = resp.data.content;
-                console.log(_this.users);
-                _this.originalusers = _this.users;
-                _this.currentPage = resp.data.number;
-                _this.totalPage = resp.data.totalPages;
-                _this.totalData = resp.data.totalElements;
-                _this.perPage = resp.data.size;
-                _this.nousers = '';
-            }
-            else {
-                _this.authProvider.showToast(resp.description);
-            }
-            _this.error = '';
-        }, function (error) {
-            _this.error = 'none';
-            _this.authProvider.showToast(error.error.error);
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
         });
-    };
-    UserSubAdminsPage.prototype.onClear = function (ev) {
-        this.searchTerm = "";
-        this.users = this.originalusers;
-        this.error = '';
-    };
-    UserSubAdminsPage.prototype.onCancel = function (ev) {
-        this.searchTerm = "";
-        this.error = '';
-        this.users = this.originalusers;
-    };
-    UserSubAdminsPage.prototype.onSearch = function () {
-        var _this = this;
-        var searchvalue = this.searchTerm;
-        if (searchvalue.trim() === '' || searchvalue.length < 3) {
-            this.users = this.originalusers;
-        }
-        else {
-            if (searchvalue.length >= 3) {
-                this.authProvider.SearchUsersByType(searchvalue, 3, 0, 10)
-                    .subscribe(function (resp) {
-                    if (resp.statusCode === 200) {
-                        _this.users = resp.data.content;
-                        console.log(_this.users);
-                        _this.currentPage = resp.data.number;
-                        _this.totalPage = resp.data.totalPages;
-                        _this.totalData = resp.data.totalElements;
-                        _this.perPage = resp.data.size;
-                    }
-                    else {
-                        _this.authProvider.showToast(resp.description);
-                    }
-                    _this.error = '';
-                    _this.nousers = '';
-                }, function (error) {
-                    _this.error = 'none';
-                    _this.users = [];
-                });
-            }
-        }
-    };
-    UserSubAdminsPage.prototype.scrollInfinite = function (event) {
-        var _this = this;
-        this.currentPage += 1;
-        setTimeout(function () {
-            _this.authProvider.GetUsersByType(3, _this.currentPage, _this.perPage)
-                .subscribe(function (resp) {
-                if (resp.statusCode === 200) {
-                    _this.currentPage = resp.data.number;
-                    _this.totalPage = resp.data.totalPages;
-                    _this.totalData = resp.data.totalElements;
-                    _this.perPage = resp.data.size;
-                    _this.nousers = '';
-                    for (var i = 0; i < resp.data.content.length; i++) {
-                        _this.users.push(resp.data.content[i]);
-                    }
+        if (this.country.name) {
+            this.country.imageurl = (this.country.imageurl != undefined) ? this.img1 : this.img;
+            loading.present();
+            this.gameProvider.createCountry(country).subscribe(function (res) {
+                loading.dismiss().catch(function () { });
+                if (res.statusCode === 200) {
+                    _this.navCtrl.pop();
                 }
                 else {
-                    _this.authProvider.showToast(resp.description);
+                    _this.authProvider.showToast(res.description);
                 }
-                _this.error = '';
-                event.complete();
             }, function (error) {
-                _this.nousers = 'none';
-                _this.users = [];
-                event.complete();
+                loading.dismiss().catch(function () { });
+                _this.authProvider.showToast(error.error.error);
             });
-        }, 1000);
+        }
+        else {
+            this.authProvider.showToast("Name input field is empty");
+        }
     };
-    UserSubAdminsPage.prototype.onGotoTop = function () {
-        this.content.scrollToTop();
-    };
-    UserSubAdminsPage.prototype.onSubAdminOption = function (user) {
+    SettingCountryAddPage.prototype.selectImage = function () {
         var _this = this;
         var actionSheet = this.actionSheetCtrl.create({
-            title: 'SubAdmin Options',
+            title: 'Add Country Logo',
             buttons: [
                 {
-                    text: 'View / Edit',
-                    handler: function () { _this.navCtrl.push('UserSubAdminEditPage', { user: user }); }
+                    text: 'Gallery',
+                    handler: function () { _this.get_camera('Gallery'); }
                 }, {
-                    text: 'Delete',
-                    handler: function () { _this.onDeleteSubAdmin(user); }
+                    text: 'Camera',
+                    handler: function () { _this.get_camera('Camera'); }
                 }, {
                     text: 'Cancel',
                     role: 'cancel',
@@ -188,61 +143,41 @@ var UserSubAdminsPage = /** @class */ (function () {
         });
         actionSheet.present();
     };
-    UserSubAdminsPage.prototype.onDeleteSubAdmin = function (user) {
+    SettingCountryAddPage.prototype.get_camera = function (source) {
         var _this = this;
-        var loading = this.loadingCtrl.create({
-            content: "Please wait..."
-        });
-        var confirm = this.alertCtrl.create({
-            title: 'Delete SubAdmin',
-            message: "Do you want to delete <b>" + user.lastname + "</b>? <br/><br/>All the predictions, comments and votes would also be deleted.<br/><br/>You can consider suspending " + user.lastname + " instead by changing the status. <br/><br/>This action is irreversible.",
-            buttons: [
-                {
-                    text: 'Cancel',
-                    handler: function () {
-                    }
-                },
-                {
-                    text: 'Proceed',
-                    handler: function () {
-                        loading.present();
-                        _this.authProvider.deleteSubAdmin(user.id).subscribe(function (res) {
-                            loading.dismiss().catch(function () { });
-                            if (res.statusCode === 200) {
-                                _this.GetUsers();
-                            }
-                            else {
-                                _this.authProvider.showToast(res.description);
-                            }
-                        }, function (error) {
-                            loading.dismiss().catch(function () { });
-                            _this.authProvider.showToast(error.error.error);
-                        });
-                    }
-                }
-            ]
-        });
-        confirm.present();
+        var options = {
+            quality: 100, destinationType: this.camera.DestinationType.DATA_URL,
+            encodingType: this.camera.EncodingType.JPEG, mediaType: this.camera.MediaType.PICTURE,
+            allowEdit: true, targetWidth: 512, targetHeight: 512, correctOrientation: true
+        };
+        if (source == 'Gallery') {
+            options.sourceType = this.camera.PictureSourceType.PHOTOLIBRARY;
+        }
+        else {
+            options.sourceType = this.camera.PictureSourceType.CAMERA;
+        }
+        this.camera.getPicture(options).then(function (imageData) {
+            _this.img = 'data:image/jpeg;base64,' + imageData;
+        }, function (err) { });
+        if (this.img != undefined) {
+            this.img1 = this.img;
+        }
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["Content"]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["Content"])
-    ], UserSubAdminsPage.prototype, "content", void 0);
-    UserSubAdminsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
-            selector: 'page-user-sub-admins',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/user-sub-admins/user-sub-admins.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Sub-Admins</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only navPush="UserSubAdminAddPage">\n        <ion-icon name="add-circle"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-searchbar [(ngModel)]="searchTerm" (ionCancel)="onCancel($event)" [showCancelButton]="true"\n    (ionClear)="onClear($event)" (ionInput)="onSearch()">\n  </ion-searchbar>\n  <div class="squad">\n    <ion-list>\n      <ion-item class="avatarItem" margin-bottom *ngFor="let user of users" (click)="onSubAdminOption(user)">\n        <ion-avatar item-left>\n          <img src="assets/imgs/appicon.png">\n        </ion-avatar>\n        <h5 ion-text color="dark">{{user.lastname}} {{user.firstname}}</h5>\n        <p ion-text color="color1" item-right><b>{{user.status.name}}</b></p>\n      </ion-item>\n    </ion-list>\n  </div>\n  <div class="" *ngIf="error === \'none\'">\n    <p ion-text text-center color="color2">No result found!</p>\n  </div>\n  <div text-center margin-top margin-bottonm *ngIf="nousers === \'none\'" (click)="onGotoTop()">\n    <button ion-button small color="color2">Back to Top</button>\n  </div>\n  <ion-infinite-scroll (ionInfinite)="scrollInfinite($event)" *ngIf="currentPage < totalPage">\n    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading page {{currentPage}} of {{totalPage}}">\n    </ion-infinite-scroll-content>\n  </ion-infinite-scroll>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/user-sub-admins/user-sub-admins.html"*/,
+    SettingCountryAddPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-setting-country-add',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-country-add/setting-country-add.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Add Country</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="imgs">\n    <div class="imgProfile" [ngStyle]="{\'background-image\':\'url(\' + img1 + \')\'}">\n      <button ion-button icon-only class="profileCamera"  [ngClass]="{\'show\':flag==false}"   (click)="selectImage()">\n        <ion-icon name="md-camera"></ion-icon>\n      </button>\n    </div>\n  </div>\n  <div class="otherForm">\n    <ion-list>\n\n     \n      <!-- appear when click update -->\n      <ion-item >\n        <ion-label stacked>Name</ion-label>\n        <ion-input  type="text" [(ngModel)]="country.name"  ></ion-input>\n      </ion-item>\n      <!-- ==================================== -->\n    </ion-list>\n    <button ion-button block color="color2" (click)="onSubmit(country)">Submit</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-country-add/setting-country-add.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavController"],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"],
+            __WEBPACK_IMPORTED_MODULE_1__providers_games_games__["a" /* GamesProvider */],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["LoadingController"],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ActionSheetController"], __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__["a" /* Camera */],
             __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["AlertController"],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["LoadingController"],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["ActionSheetController"],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavParams"]])
-    ], UserSubAdminsPage);
-    return UserSubAdminsPage;
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"]])
+    ], SettingCountryAddPage);
+    return SettingCountryAddPage;
 }());
 
-//# sourceMappingURL=user-sub-admins.js.map
+//# sourceMappingURL=setting-country-add.js.map
 
 /***/ })
 

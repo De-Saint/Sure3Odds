@@ -1,7 +1,7 @@
 import { GamesProvider } from './../../providers/games/games';
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, Content } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Content, ActionSheetController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -21,6 +21,7 @@ export class SettingSelectionsPage {
   noselections : string;
   constructor(public navCtrl: NavController,
     private authProvider: AuthenicationProvider,
+    private actionSheetCtrl: ActionSheetController,
     private gamesProvider: GamesProvider,
     public navParams: NavParams) {
   }
@@ -39,8 +40,6 @@ export class SettingSelectionsPage {
           this.totalData = resp.data.totalElements;
           this.perPage = resp.data.size;
           this.originalselections = this.selections;
-          console.log(this.currentPage, this.totalPage, this.totalData,
-            this.perPage);
             this.noselections = 'selections';
         } else {
           console.log(resp.description);
@@ -75,7 +74,6 @@ export class SettingSelectionsPage {
         }, error => {
           console.log(JSON.stringify(error));
           this.error = 'none';
-          this.authProvider.showToast(error.error.error);
         });
       }
     }
@@ -122,4 +120,22 @@ export class SettingSelectionsPage {
     this.content.scrollToTop();
   }
 
+
+  onSelectionOptions(selection){
+    let actionSheet = this.actionSheetCtrl.create({
+      title: 'Selections Options',
+      buttons: [
+        {
+          text: 'View / Edit',
+          handler: () => { this.navCtrl.push('SettingSelectionEditPage', {selection}) }
+       
+        }, {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => { }
+        }
+      ]
+    });
+    actionSheet.present();
+  }
 }

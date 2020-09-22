@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Edit Plan Type</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="otherForm">
+    <ion-list>
+      <!-- appear when click update -->
+      <ion-item >
+        <ion-label stacked>Name</ion-label>
+        <ion-input  type="text" [(ngModel)]="plantype.name"  ></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label stacked>Amount</ion-label>
+        <ion-input  type="text" [(ngModel)]="plantype.amount"  ></ion-input>
+      </ion-item>
+      <!-- ==================================== -->
+    </ion-list>
+    <button ion-button block color="color2" (click)="onSubmit(plantype)">Submit</button>
+  </div>
+</ion-content>

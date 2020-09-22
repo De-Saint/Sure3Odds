@@ -13,11 +13,11 @@ export class PaymentsProvider {
   }
 
 
-  updatePlan(userId, plantypeId, planform, transactionObject): Observable<ResponseType> {
+  updatePlan(userId, plantypeId, platform, transactionObject): Observable<ResponseType> {
     const params = new HttpParams()
     .set('userId', userId)
     .set('plantypeId', plantypeId)
-    .set('planform', planform)
+    .set('platform', platform)
     .set('transactionObject', transactionObject);
     return this.http.post<ResponseType>(`${environment.apiUrl}/payments/plan/update`, params).pipe(
       map((resp: any) => {
@@ -52,4 +52,28 @@ export class PaymentsProvider {
         return resp;
       }));
   }
+
+
+
+  //-----------------Plan----------Start-------------------
+  GetPlans(pageNo, pageSize): Observable<ResponseType> {
+    const params = new HttpParams()
+      .set('pageNo', pageNo)
+      .set('pageSize', pageSize);
+    return this.http.get<ResponseType>(`${environment.apiUrl}/payments/plan/get`, { params: params })
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
+
+
+  //-----------------Plantype----------Start-------------------
+  updatePlantype(plantype): Observable<ResponseType> {
+    return this.http.put<ResponseType>(`${environment.apiUrl}/payments/plantype/update`, plantype).pipe(
+      map((resp: any) => {
+        return resp;
+      }));
+  }
+
+
 }

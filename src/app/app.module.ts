@@ -8,7 +8,6 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
 import { Sure3Odds } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { Global } from '../providers/global';
 import { AuthenicationProvider } from '../providers/authenication/authenication';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
@@ -46,7 +45,7 @@ var config = {
   ],
   providers: [
     StatusBar,
-    SplashScreen, Camera, Global,
+    SplashScreen, Camera,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     AuthenicationProvider, GamesProvider,
     { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptorProvider, multi: true },

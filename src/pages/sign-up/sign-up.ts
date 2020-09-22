@@ -1,5 +1,4 @@
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
-
 import { Component } from '@angular/core';
 import { IonicPage, NavController, Platform } from 'ionic-angular';
 import { NewUsers } from '../../interfaces/NewUser';
@@ -10,15 +9,16 @@ import { NewUsers } from '../../interfaces/NewUser';
   templateUrl: 'sign-up.html',
 })
 export class SignUpPage {
-  newuser: NewUsers = new NewUsers("","","","","","","",{id:""},"",{id:"", name:""},{id:"", name:""});
+  newuser: NewUsers = new NewUsers("", "", "", "", "", "", "", { id: "" }, "", { id: "", name: "" }, { id: "", name: "" });
 
   constructor(public navCtrl: NavController,
-    private platform: Platform, private auth: AuthenicationProvider
+    private pltform: Platform,
+    private auth: AuthenicationProvider
   ) {
 
   }
 
-  createAccount(page) {
+  createAccount() {
     if (this.newuser.firstname == "" || this.newuser.firstname == undefined || this.newuser.firstname == null) {
       this.auth.showToast("Firstname is empty");
       return false;
@@ -35,16 +35,12 @@ export class SignUpPage {
       this.auth.showToast("Password is empty");
       return false;
     } else {
-      // if (this.platform.is('android')) {
-      //   console.log(this.user);
-      //   this.navCtrl.push(AndroidsubscriptionPage, { newUser: this.user });
-      // } else if (this.platform.is("ios")) {
+      if (this.pltform.is("android")) {
+        this.navCtrl.push('SubscriptionAndroidPage', { newuser: this.newuser, sub_option: "registration" });
+      } else if (this.pltform.is("ios")) {
+        this.navCtrl.push('SubscriptionIosPage', { newuser: this.newuser, sub_option: "registration" });
+      }
 
-      // } else {
-
-      // }
-      console.log(this.newuser);
-      this.navCtrl.push(page, { newuser: this.newuser });
     }
 
   }

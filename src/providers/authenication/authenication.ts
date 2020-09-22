@@ -70,6 +70,15 @@ export class AuthenicationProvider {
     toast.present(toast);
   }
 
+  CalculatePercentage(userAmt) {
+    let addedPerc = (parseInt(userAmt) * 0.02);
+    let newAmt = parseInt(userAmt) + addedPerc;
+    if (parseInt(userAmt) >= 2500) {
+      newAmt = parseInt(userAmt) + 100;
+    }
+    return newAmt;
+  }
+
   login(email, password): Observable<ResponseType> {
     const params = new HttpParams()
       .set('email', email)
@@ -107,7 +116,12 @@ export class AuthenicationProvider {
         return resp;
       }));
   }
-
+ GetUserDeta() : Observable<ResponseType>{
+    return this.http.get<ResponseType>(`${environment.apiUrl}/users/user/get`)
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
   deleteMember(id): Observable<ResponseType> {
     return this.http.delete<ResponseType>(`${environment.apiUrl}/users/member/delete/${id}`)
       .pipe(map(resp => {
@@ -164,6 +178,31 @@ export class AuthenicationProvider {
 
   deleteSubAdmin(id): Observable<ResponseType> {
     return this.http.delete<ResponseType>(`${environment.apiUrl}/users/subadmin/delete/${id}`)
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
+
+
+   GetMonthlyReport(selectedDate): Observable<ResponseType> {
+    const params = new HttpParams()
+    .set('selectedDate', selectedDate)
+    return this.http.get<ResponseType>(`${environment.apiUrl}/users/report/monthly/get`, {params: params})
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
+
+  GetAppReport(): Observable<ResponseType> {
+    return this.http.get<ResponseType>(`${environment.apiUrl}/users/report/general/get`)
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
+
+
+  getParameter(id) : Observable<ResponseType>{
+    return this.http.get<ResponseType>(`${environment.apiUrl}/payments/parameter/get/${id}`)
       .pipe(map(resp => {
         return resp;
       }));

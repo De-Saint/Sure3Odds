@@ -1,4 +1,4 @@
-import { Global } from './../../providers/global';
+
 import { GamesProvider } from './../../providers/games/games';
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
 import { Comments } from './../../interfaces/Comments';
@@ -27,7 +27,7 @@ export class MatchCommentsPage {
   img2 = "assets/imgs/appicon.png";
   constructor(public navCtrl: NavController,
     private authProvider: AuthenicationProvider,
-    private gameProvider: GamesProvider, private global: Global,
+    private gameProvider: GamesProvider,
     public navParams: NavParams) {
     this.match = this.navParams.data;
     console.log(this.match);

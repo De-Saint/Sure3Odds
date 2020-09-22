@@ -1,16 +1,14 @@
 webpackJsonp([13],{
 
-/***/ 757:
+/***/ 709:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserSubAdminEditPageModule", function() { return UserSubAdminEditPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaymentPlantypeEditPageModule", function() { return PaymentPlantypeEditPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_sub_admin_edit__ = __webpack_require__(837);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__ = __webpack_require__(354);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__payment_plantype_edit__ = __webpack_require__(773);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,66 +18,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var UserSubAdminEditPageModule = /** @class */ (function () {
-    function UserSubAdminEditPageModule() {
+var PaymentPlantypeEditPageModule = /** @class */ (function () {
+    function PaymentPlantypeEditPageModule() {
     }
-    UserSubAdminEditPageModule = __decorate([
+    PaymentPlantypeEditPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__user_sub_admin_edit__["a" /* UserSubAdminEditPage */],
+                __WEBPACK_IMPORTED_MODULE_2__payment_plantype_edit__["a" /* PaymentPlantypeEditPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__user_sub_admin_edit__["a" /* UserSubAdminEditPage */]),
-                __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__["SelectSearchableModule"]
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__payment_plantype_edit__["a" /* PaymentPlantypeEditPage */]),
             ],
         })
-    ], UserSubAdminEditPageModule);
-    return UserSubAdminEditPageModule;
+    ], PaymentPlantypeEditPageModule);
+    return PaymentPlantypeEditPageModule;
 }());
 
-//# sourceMappingURL=user-sub-admin-edit.module.js.map
+//# sourceMappingURL=payment-plantype-edit.module.js.map
 
 /***/ }),
 
-/***/ 762:
+/***/ 773:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewUsers; });
-var NewUsers = /** @class */ (function () {
-    function NewUsers(id, email, firstname, lastname, referencecode, password, phone, plantype, platform, usertypes, status) {
-        this.id = id;
-        this.email = email;
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.referencecode = referencecode;
-        this.password = password;
-        this.phone = phone;
-        this.plantype = plantype;
-        this.platform = platform;
-        this.usertypes = usertypes;
-        this.status = status;
-    }
-    return NewUsers;
-}());
-
-//# sourceMappingURL=NewUser.js.map
-
-/***/ }),
-
-/***/ 837:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserSubAdminEditPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_games_games__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_select_searchable__ = __webpack_require__(354);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ionic_select_searchable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__interfaces_NewUser__ = __webpack_require__(762);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(20);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PaymentPlantypeEditPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_payments_payments__ = __webpack_require__(356);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_Plantypes__ = __webpack_require__(774);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -94,84 +62,81 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-var UserSubAdminEditPage = /** @class */ (function () {
-    function UserSubAdminEditPage(navCtrl, gamesProvider, loadingCtrl, authProvider, navParams) {
+var PaymentPlantypeEditPage = /** @class */ (function () {
+    function PaymentPlantypeEditPage(navCtrl, loadingCtrl, authProvider, paymentsProvider, navParams) {
         this.navCtrl = navCtrl;
-        this.gamesProvider = gamesProvider;
         this.loadingCtrl = loadingCtrl;
         this.authProvider = authProvider;
+        this.paymentsProvider = paymentsProvider;
         this.navParams = navParams;
-        this.newuser = new __WEBPACK_IMPORTED_MODULE_3__interfaces_NewUser__["a" /* NewUsers */]("", "", "", "", "", "", "", { id: "" }, "", { id: "", name: "" }, { id: "", name: "" });
-        this.selecteduser = this.navParams.get("user");
-        if (this.selecteduser) {
-            this.newuser = this.selecteduser;
-            console.log(this.newuser);
+        this.plantype = new __WEBPACK_IMPORTED_MODULE_2__interfaces_Plantypes__["a" /* Plantypes */]("", "", "");
+        this.plantypes = this.navParams.get("plantype");
+        if (this.plantype) {
+            this.plantype = this.plantypes;
         }
     }
-    UserSubAdminEditPage.prototype.ionViewWillEnter = function () {
-        this.GetStatus();
-    };
-    UserSubAdminEditPage.prototype.updateAccount = function (user) {
+    PaymentPlantypeEditPage.prototype.onSubmit = function (plantype) {
         var _this = this;
-        console.log(user);
-        if (user) {
-            var loading_1 = this.loadingCtrl.create({
-                content: "Please wait..."
-            });
-            loading_1.present();
-            this.authProvider.updateUser(user).subscribe(function (res) {
-                loading_1.dismiss().catch(function () { });
-                if (res.statusCode === 200) {
-                    _this.navCtrl.pop();
-                }
-                else {
-                    _this.authProvider.showToast(res.description);
-                }
-            }, function (error) {
-                loading_1.dismiss().catch(function () { });
-                _this.authProvider.showToast(error.error.error);
-            });
-        }
-        else {
-            this.authProvider.showToast("Please, check something is wrong.");
-        }
-    };
-    UserSubAdminEditPage.prototype.onSelectStatus = function (event) {
-        console.log(event.value);
-    };
-    UserSubAdminEditPage.prototype.GetStatus = function () {
-        var _this = this;
-        this.gamesProvider.GetStatus("User")
-            .subscribe(function (resp) {
-            if (resp.statusCode === 200) {
-                _this.statuses = resp.data;
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        console.log(plantype);
+        if (plantype.name) {
+            if (plantype.amount) {
+                loading.present();
+                this.paymentsProvider.updatePlantype(plantype).subscribe(function (res) {
+                    loading.dismiss().catch(function () { });
+                    if (res.statusCode === 200) {
+                        _this.navCtrl.pop();
+                    }
+                    else {
+                        _this.authProvider.showToast(res.description);
+                    }
+                }, function (error) {
+                    loading.dismiss().catch(function () { });
+                    _this.authProvider.showToast(error.error.error);
+                });
             }
             else {
-                _this.authProvider.showToast(resp.description);
+                this.authProvider.showToast("Amount input field is empty");
             }
-        }, function (error) {
-            _this.authProvider.showToast(error.error.error);
-        });
+        }
+        else {
+            this.authProvider.showToast("Name input field is empty");
+        }
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["ViewChild"])('myselect'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2_ionic_select_searchable__["SelectSearchableComponent"])
-    ], UserSubAdminEditPage.prototype, "selectComponent", void 0);
-    UserSubAdminEditPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
-            selector: 'page-user-sub-admin-edit',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/user-sub-admin-edit/user-sub-admin-edit.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Edit {{newuser.lastname}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="otherForm">\n    <ion-list>\n      <ion-item>\n        <ion-label stacked>\n          Enter First Name\n        </ion-label>\n        <ion-input type="text" [(ngModel)]="newuser.firstname" name="firstname" id="firstname" placeholder="First Name">\n        </ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label stacked>\n          Enter Last Name\n        </ion-label>\n        <ion-input type="text" [(ngModel)]="newuser.lastname" name="lastname" id="lastname" placeholder="Last Name">\n        </ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-label stacked>\n          Enter Email\n        </ion-label>\n        <ion-input type="email" [(ngModel)]="newuser.email" name="email" id="email" placeholder="E-mail"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label stacked>\n          Enter Phone\n        </ion-label>\n        <ion-input type="tel" [(ngModel)]="newuser.phone" name="phone" id="phone" placeholder="Phone"></ion-input>\n      </ion-item>\n     \n      <ion-item>\n        <ion-label stacked>\n          Current UserType\n        </ion-label>\n        <ion-input type="text" [(ngModel)]="newuser.usertypes.name" disabled>\n        </ion-input>\n      </ion-item>\n \n      <ion-item>\n        <ion-label>\n          Select The Status\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="newuser.status" (onChange)="onSelectStatus($event)"\n          [items]="statuses" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n    </ion-list>\n    <button ion-button block type="submit" color="color2" (click)="updateAccount(newuser)">Submit</button>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/user-sub-admin-edit/user-sub-admin-edit.html"*/,
+    PaymentPlantypeEditPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-payment-plantype-edit',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payment-plantype-edit/payment-plantype-edit.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Edit Plan Type</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="otherForm">\n    <ion-list>\n      <!-- appear when click update -->\n      <ion-item >\n        <ion-label stacked>Name</ion-label>\n        <ion-input  type="text" [(ngModel)]="plantype.name"  ></ion-input>\n      </ion-item>\n      <ion-item >\n        <ion-label stacked>Amount</ion-label>\n        <ion-input  type="text" [(ngModel)]="plantype.amount"  ></ion-input>\n      </ion-item>\n      <!-- ==================================== -->\n    </ion-list>\n    <button ion-button block color="color2" (click)="onSubmit(plantype)">Submit</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payment-plantype-edit/payment-plantype-edit.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavController"],
-            __WEBPACK_IMPORTED_MODULE_1__providers_games_games__["a" /* GamesProvider */],
-            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["LoadingController"],
-            __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */],
-            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavParams"]])
-    ], UserSubAdminEditPage);
-    return UserSubAdminEditPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["LoadingController"],
+            __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */],
+            __WEBPACK_IMPORTED_MODULE_0__providers_payments_payments__["a" /* PaymentsProvider */],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"]])
+    ], PaymentPlantypeEditPage);
+    return PaymentPlantypeEditPage;
 }());
 
-//# sourceMappingURL=user-sub-admin-edit.js.map
+//# sourceMappingURL=payment-plantype-edit.js.map
+
+/***/ }),
+
+/***/ 774:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Plantypes; });
+var Plantypes = /** @class */ (function () {
+    function Plantypes(name, id, amount) {
+        this.name = name;
+        this.id = id;
+        this.amount = amount;
+    }
+    return Plantypes;
+}());
+
+//# sourceMappingURL=Plantypes.js.map
 
 /***/ })
 

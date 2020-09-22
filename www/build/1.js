@@ -1,15 +1,15 @@
 webpackJsonp([1],{
 
-/***/ 746:
+/***/ 738:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SubscriptionAndroidPageModule", function() { return SubscriptionAndroidPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__subscription_android__ = __webpack_require__(825);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular4_paystack__ = __webpack_require__(826);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__subscription_android__ = __webpack_require__(803);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular4_paystack__ = __webpack_require__(754);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -42,7 +42,7 @@ var SubscriptionAndroidPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 762:
+/***/ 747:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -68,141 +68,7 @@ var NewUsers = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 825:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SubscriptionAndroidPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interfaces_NewUser__ = __webpack_require__(762);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(88);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var SubscriptionAndroidPage = /** @class */ (function () {
-    function SubscriptionAndroidPage(loadingCtrl, events, storage, navCtrl, auth, navParams) {
-        this.loadingCtrl = loadingCtrl;
-        this.events = events;
-        this.storage = storage;
-        this.navCtrl = navCtrl;
-        this.auth = auth;
-        this.navParams = navParams;
-        this.newuser = new __WEBPACK_IMPORTED_MODULE_1__interfaces_NewUser__["a" /* NewUsers */]("", "", "", "", "", "", "", { id: "" }, "", { id: "", name: "" }, { id: "", name: "" });
-        this.public_key = 'pk_test_b3685f824518679567d6356e2636fc184878e833'; //Put your paystack Test or Live Key here
-        this.channels = ['card']; //Paystack Payment Methods
-        this.random_id = Math.floor(Date.now() / 1000); //Line to generate reference number
-        this.newuser = navParams.get("newuser");
-        console.log(this.newuser);
-    }
-    SubscriptionAndroidPage.prototype.ionViewWillEnter = function () {
-        this.getPlantypes();
-    };
-    SubscriptionAndroidPage.prototype.onPlantTypeSelect = function ($event, plan) {
-        this.pay_amount = plan.amount;
-    };
-    SubscriptionAndroidPage.prototype.getPlantypes = function () {
-        var _this = this;
-        this.auth.getAllPlantypes().subscribe(function (result) {
-            _this.plantypelist = result.data;
-            console.log(_this.plantypelist);
-        });
-    };
-    SubscriptionAndroidPage.prototype.onPay = function (pay_amount) {
-        this.auth.showToast("Please Wait ...");
-        this.pay_amount = this.CalculatePercentage(pay_amount);
-    };
-    SubscriptionAndroidPage.prototype.paymentInit = function () {
-    };
-    SubscriptionAndroidPage.prototype.CalculatePercentage = function (userAmt) {
-        var addedPerc = (parseInt(userAmt) * 0.02);
-        var newAmt = parseInt(userAmt) + addedPerc;
-        if (parseInt(userAmt) >= 2500) {
-            newAmt = parseInt(userAmt) + 100;
-        }
-        return newAmt;
-    };
-    //Callback function on successful payment
-    SubscriptionAndroidPage.prototype.paymentDone = function (ref) {
-        var _this = this;
-        if (ref.status === "success") {
-            console.log(ref); //ref contains the response from paystack after successful payment
-            var loading_1 = this.loadingCtrl.create({
-                content: 'Please wait...'
-            });
-            loading_1.present();
-            this.newuser.platform = "Android";
-            this.newuser.referencecode = String(ref.reference);
-            this.newuser.usertypes = { id: 2, name: "" };
-            console.log(this.newuser);
-            this.auth.createNewUser(this.newuser).subscribe(function (resp) {
-                if (resp.statusCode === 200) {
-                    _this.auth.login(_this.newuser.email, _this.newuser.password).subscribe(function (res) {
-                        loading_1.dismiss().catch(function () { });
-                        _this.gotoHomePage(resp.data, 'AllMatchesPage');
-                    }, function (error) {
-                        loading_1.dismiss().catch(function () { });
-                        _this.auth.showToast(error.error.message);
-                    });
-                }
-                else {
-                    loading_1.dismiss().catch(function () { });
-                    _this.auth.showToast(resp.description);
-                }
-            }, function (error) {
-                loading_1.dismiss().catch(function () { });
-                _this.auth.showToast(error.error.message);
-            });
-        }
-        else {
-            this.auth.showToast("Please, the payment was not successful.");
-        }
-    };
-    //Event triggered if User cancel the payment
-    SubscriptionAndroidPage.prototype.paymentCancel = function () {
-        this.auth.showToast("You cancelled the payment!");
-    };
-    SubscriptionAndroidPage.prototype.gotoHomePage = function (data, page) {
-        var _this = this;
-        this.navCtrl.setRoot(page).then(function () {
-            _this.storage.ready().then(function () {
-                _this.storage.set("hasSeenLogin", true);
-                var name = _this.auth.currentUserDataValue.name;
-                var type = _this.auth.currentUserDataValue.user_type;
-                _this.auth.showToast("Welcome " + name);
-                _this.events.publish('user:login', type, name);
-            });
-        });
-    };
-    SubscriptionAndroidPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: 'page-subscription-android',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/subscription-android/subscription-android.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Subscription</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="sign" style="background-image:url(\'assets/imgs/welcome3.jpg\')">\n  <div class="signForm">\n    <img src="assets/imgs/appicon.png" style="width: 8em; height: 8em;" />\n    <ion-list>\n      <ion-item>\n        <ion-icon name="briefcase" item-left color="light"></ion-icon>\n        <ion-label color="light">\n          Select a plan per month\n        </ion-label>\n        <ion-select [(ngModel)]="newuser.plantype.id" name="plantype" id="plantype" class="">\n          <ion-option *ngFor="let plan of plantypelist" value="{{ plan.id }}"\n            (ionSelect)="onPlantTypeSelect($event, plan)">{{ plan.name}} - {{ plan.amount  | currency: \'NGN\': \'1.2-2\'}}\n          </ion-option>\n        </ion-select>\n      </ion-item>\n    </ion-list>\n    <!-- <button ion-button block type="submit" color="color2" (click)="Pay(\'AndroidSubscriptionPage\')">PAY\n      {{pay_amount  | currency: \'NGN\': \'1.2-2\'}}</button> -->\n      \n        <button ion-button block color="color2" angular4-paystack type="submit" \n          [key]="public_key" \n          (paymentInit)="paymentInit()" \n          [email]="newuser.email" \n          [amount]="pay_amount * 100" [ref]="random_id"\n          [channels]="channels"\n          (close)="paymentCancel()" \n          (callback)="paymentDone($event)" \n          (click)="onPay(pay_amount)"\n          [metadata]="{ \n            custom_fields: \n            [ {\n              display_name: \'Customer Name\', \n              variable_name: \'Customer Name\', \n              value: newuser.firstname} ,\n            {\n              display_name: \'Payment Type\', \n              variable_name: \'Payment Type\', \n              value: \'Registration\' \n            }] \n          }"\n        > PAY  {{pay_amount  | currency: \'NGN\': \'1.2-2\'}}\n        </button>\n    <p ion-text color="light" navPush="SignInPage">Don\'t want to continue ? Login</p>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/subscription-android/subscription-android.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["LoadingController"],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["Events"],
-            __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"]])
-    ], SubscriptionAndroidPage);
-    return SubscriptionAndroidPage;
-}());
-
-//# sourceMappingURL=subscription-android.js.map
-
-/***/ }),
-
-/***/ 826:
+/***/ 754:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -932,6 +798,164 @@ var Angular4PaystackModule = /** @class */ (function () {
 
 //# sourceMappingURL=angular4-paystack.js.map
 
+
+/***/ }),
+
+/***/ 803:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SubscriptionAndroidPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_payments_payments__ = __webpack_require__(356);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_NewUser__ = __webpack_require__(747);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_storage__ = __webpack_require__(88);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var SubscriptionAndroidPage = /** @class */ (function () {
+    function SubscriptionAndroidPage(loadingCtrl, events, storage, paymentsProvider, navCtrl, auth, navParams) {
+        this.loadingCtrl = loadingCtrl;
+        this.events = events;
+        this.storage = storage;
+        this.paymentsProvider = paymentsProvider;
+        this.navCtrl = navCtrl;
+        this.auth = auth;
+        this.navParams = navParams;
+        this.newuser = new __WEBPACK_IMPORTED_MODULE_2__interfaces_NewUser__["a" /* NewUsers */]("", "", "", "", "", "", "", { id: "" }, "", { id: "", name: "" }, { id: "", name: "" });
+        this.channels = ['card']; //Paystack Payment Methods
+        this.random_id = Math.floor(Date.now() / 1000); //Line to generate reference number
+        this.newuser = this.navParams.get("newuser");
+        this.sub_option = this.navParams.get("sub_option");
+        console.log(this.newuser, this.sub_option);
+    }
+    SubscriptionAndroidPage.prototype.ionViewWillEnter = function () {
+        this.getPlantypes();
+        this.getParameter();
+    };
+    SubscriptionAndroidPage.prototype.onPlantTypeSelect = function ($event, plan) {
+        this.pay_amount = plan.amount;
+    };
+    SubscriptionAndroidPage.prototype.getPlantypes = function () {
+        var _this = this;
+        this.auth.getAllPlantypes().subscribe(function (result) {
+            _this.plantypelist = result.data;
+            console.log(_this.plantypelist);
+        });
+    };
+    SubscriptionAndroidPage.prototype.getParameter = function () {
+        var _this = this;
+        this.auth.getParameter(1).subscribe(function (result) {
+            _this.public_key = result.data.value;
+            console.log(_this.public_key);
+        });
+    };
+    SubscriptionAndroidPage.prototype.onPay = function (pay_amount) {
+        this.auth.showToast("Please Wait ...");
+        this.pay_amount = this.auth.CalculatePercentage(pay_amount);
+    };
+    SubscriptionAndroidPage.prototype.paymentInit = function () {
+    };
+    //Callback function on successful payment
+    SubscriptionAndroidPage.prototype.paymentDone = function (ref) {
+        if (ref.status === "success") {
+            console.log(ref); //ref contains the response from paystack after successful payment
+            var loading = this.loadingCtrl.create({
+                content: 'Please wait...'
+            });
+            loading.present();
+            this.newuser.platform = "Android";
+            this.newuser.referencecode = String(ref.reference);
+            if (this.sub_option === "registration") {
+                this.onRegistration(loading);
+            }
+            else if (this.sub_option === "renewal") {
+                this.onRenewal(loading);
+            }
+        }
+        else {
+            this.auth.showToast("Please, the payment was not successful.");
+        }
+    };
+    //Event triggered if User cancel the payment
+    SubscriptionAndroidPage.prototype.paymentCancel = function () {
+        this.auth.showToast("You cancelled the payment!");
+    };
+    SubscriptionAndroidPage.prototype.onRegistration = function (loading) {
+        var _this = this;
+        this.newuser.usertypes = { id: 2, name: "" };
+        console.log(this.newuser);
+        this.auth.createNewUser(this.newuser).subscribe(function (resp) {
+            if (resp.statusCode === 200) {
+                _this.auth.login(_this.newuser.email, _this.newuser.password).subscribe(function (res) {
+                    loading.dismiss().catch(function () { });
+                    _this.gotoHomePage(resp.data, 'AllMatchesPage');
+                }, function (error) {
+                    loading.dismiss().catch(function () { });
+                    _this.auth.showToast(error.error.message);
+                });
+            }
+            else {
+                loading.dismiss().catch(function () { });
+                _this.auth.showToast(resp.description);
+            }
+        }, function (error) {
+            loading.dismiss().catch(function () { });
+            _this.auth.showToast(error.error.message);
+        });
+    };
+    SubscriptionAndroidPage.prototype.onRenewal = function (loading) {
+        var _this = this;
+        this.paymentsProvider.updatePlan(this.newuser.id, this.newuser.plantype.id, this.newuser.platform, this.newuser.referencecode).subscribe(function (res) {
+            loading.dismiss().catch(function () { });
+            if (res.statusCode === 200) {
+                _this.navCtrl.pop();
+            }
+            else {
+                _this.auth.showToast(res.description);
+            }
+        }, function (error) {
+            loading.dismiss().catch(function () { });
+            _this.auth.showToast(error.error.error);
+        });
+    };
+    SubscriptionAndroidPage.prototype.gotoHomePage = function (data, page) {
+        var _this = this;
+        this.navCtrl.setRoot(page).then(function () {
+            _this.storage.ready().then(function () {
+                _this.storage.set("hasSeenLogin", true);
+                var name = _this.auth.currentUserDataValue.name;
+                var type = _this.auth.currentUserDataValue.user_type;
+                _this.auth.showToast("Welcome " + name);
+                _this.events.publish('user:login', type, name);
+            });
+        });
+    };
+    SubscriptionAndroidPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-subscription-android',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/subscription-android/subscription-android.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Subscription</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="sign" style="background-image:url(\'assets/imgs/welcome3.jpg\')">\n  <div class="signForm">\n    <img src="assets/imgs/appicon.png" style="width: 8em; height: 8em;" />\n    <ion-list>\n      <ion-item>\n        <ion-icon name="briefcase" item-left color="light"></ion-icon>\n        <ion-label color="light">\n          Select a plan per month\n        </ion-label>\n        <ion-select [(ngModel)]="newuser.plantype.id" name="plantype" id="plantype" class="">\n          <ion-option *ngFor="let plan of plantypelist" value="{{ plan.id }}"\n            (ionSelect)="onPlantTypeSelect($event, plan)">{{ plan.name}} - {{ plan.amount  | currency: \'NGN\': \'1.2-2\'}}\n          </ion-option>\n        </ion-select>\n      </ion-item>\n    </ion-list>\n      \n        <button ion-button block color="color2" angular4-paystack type="submit" \n          [key]="public_key" \n          (paymentInit)="paymentInit()" \n          [email]="newuser.email" \n          [amount]="pay_amount * 100" [ref]="random_id"\n          [channels]="channels"\n          (close)="paymentCancel()" \n          (callback)="paymentDone($event)" \n          (click)="onPay(pay_amount)"\n          [metadata]="{ \n            custom_fields: \n            [ {\n              display_name: \'Customer Name\', \n              variable_name: \'Customer Name\', \n              value: newuser.firstname + \'\' + newuser.lastname} ,\n            {\n              display_name: \'Payment Type\', \n              variable_name: \'Payment Type\', \n              value: \'Registration\' \n            }] \n          }"\n        > PAY  {{pay_amount  | currency: \'NGN\': \'1.2-2\'}}\n        </button>\n    <!-- <p ion-text color="light" navPush="SignInPage">Don\'t want to continue ? Login</p> -->\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/subscription-android/subscription-android.html"*/,
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["LoadingController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["LoadingController"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["Events"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["Events"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__ionic_storage__["b" /* Storage */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__providers_payments_payments__["a" /* PaymentsProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__providers_payments_payments__["a" /* PaymentsProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"]) === "function" && _g || Object])
+    ], SubscriptionAndroidPage);
+    return SubscriptionAndroidPage;
+    var _a, _b, _c, _d, _e, _f, _g;
+}());
+
+//# sourceMappingURL=subscription-android.js.map
 
 /***/ })
 

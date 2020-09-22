@@ -1,6 +1,5 @@
 import { GamesProvider } from './../../providers/games/games';
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
-import { Global } from './../../providers/global';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ActionSheetController, LoadingController, AlertController } from 'ionic-angular';
 
@@ -12,8 +11,8 @@ import { IonicPage, NavController, NavParams, ActionSheetController, LoadingCont
 })
 export class PredictionsPage {
   predictionlist: any;
+  error:any;
   constructor(public navCtrl: NavController,
-    private globalProvider: Global,
     private authProvider: AuthenicationProvider,
     private gamesProvider: GamesProvider,
     private alertCtrl: AlertController,
@@ -22,7 +21,7 @@ export class PredictionsPage {
     public navParams: NavParams) {
   }
   ionViewWillEnter() {
-    const currentdate = this.globalProvider.getDate();
+    const currentdate = this.gamesProvider.getDate();
     this.GetPredictions(currentdate);
   }
 
@@ -31,18 +30,17 @@ export class PredictionsPage {
       .subscribe(resp => {
         if (resp.statusCode === 200) {
           this.predictionlist = resp.data;
-          console.log(this.predictionlist);
         } else {
           this.authProvider.showToast(resp.description);
         }
+        this.error = '';
       }, error => {
-        this.authProvider.showToast(error.error.error);
+        this.error = error.error.description;
       });
   }
 
   onGameOption(prediction) {
     const usertype = this.authProvider.currentUserDataValue.user_type;
-    console.log(usertype);
     if (usertype === "Admin") {
       this.AdminActionSheet(prediction);
     } else if (usertype === "SubAdmin") {
@@ -97,7 +95,7 @@ export class PredictionsPage {
     });
     let confirm = this.alertCtrl.create({
       title: 'Delete Prediction',
-      message: 'Do you want to delete this game?<br/><br/>This is action is irreversible.',
+      message: 'Do you want to delete this prediction?<br/><br/>This is action is irreversible.',
       buttons: [
         {
           text: 'Cancel',
@@ -112,7 +110,7 @@ export class PredictionsPage {
             this.gamesProvider.deletePrediction(game.id).subscribe(res => {
               loading.dismiss().catch(() => { });
               if (res.statusCode === 200) {
-                const currentdate = this.globalProvider.getDate();
+                const currentdate = this.gamesProvider.getDate();
                 this.GetPredictions(currentdate);
               } else {
                 this.authProvider.showToast(res.description);
@@ -120,7 +118,7 @@ export class PredictionsPage {
             }, error => {
               loading.dismiss().catch(() => { });
 
-              this.authProvider.showToast(error.error.error);
+              this.authProvider.showToast(error.error.description);
             });
           }
         }

@@ -17,8 +17,8 @@
   (ionClear)="onClear($event)" (ionInput)="onSearch()">
 </ion-searchbar>
 <div class="leagueStats">
-  <ion-list *ngFor="let selection of selections">
-    <ion-item class="thumbnailItem" navPush="SettingSelectionEditPage" [navParams]="selection">
+  <ion-list *ngFor="let selection of selections" (click)="onSelectionOptions(selection)">
+    <ion-item class="thumbnailItem">
       <h5 ion-text style="padding-left: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;     height: auto"  color="dark">{{selection.name}}</h5>
     </ion-item>
   </ion-list>

@@ -126,9 +126,9 @@ export class UserMembersPage {
         {
           text: 'View / Edit',
           handler: () => { this.navCtrl.push('UserMemberEditPage', { user }) }
-        }, {
-          text: 'Delete',
-          handler: () => { this.onDeleteMember(user) }
+        // }, {
+        //   text: 'Delete',
+        //   handler: () => { this.onDeleteMember(user) }
         }, {
           text: 'Cancel',
           role: 'cancel',
