@@ -94,6 +94,7 @@ export class AllMatchesPage implements OnInit {
       .subscribe(resp => {
         if (resp.statusCode === 200) {
           this.gamelist = resp.data;
+          console.log(this.gamelist);
         } else {
           console.log(resp.description);
         }

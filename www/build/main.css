@@ -40282,7 +40282,7 @@ ion-badge {
   overflow: hidden;
 }
 
-.card, .topNews, .tabelList .item.item-block .grid, .leagueMatches .allMatches, .leagueStats .list .item.item-block, page-all-matches .list, page-games .list, page-match-comments .avatarItem, page-match-comments .item.thumbnailItem, page-match-details .avatarItem, page-match-details .item.thumbnailItem, page-match-votes .avatarItem, page-match-votes .item.thumbnailItem, page-payment-details .photoItem, page-payment-details .teamMatchs .item.thumbnailItem, page-payment-plans .photoItem, page-payment-plans .teamMatchs .item.thumbnailItem, page-payment-plantypes .photoItem, page-payment-plantypes .teamMatchs .item.thumbnailItem, page-payment-sets .photoItem, page-payment-sets .teamMatchs .item.thumbnailItem, page-predictions .list, page-profile .otherForm, page-setting-country .photoItem, page-setting-country .teamMatchs .item.thumbnailItem, page-setting-league-view .photoItem, page-setting-league-view .teamMatchs .item.thumbnailItem, page-setting-leagues .photoItem, page-setting-leagues .teamMatchs .item.thumbnailItem, page-setting-selections .photoItem, page-setting-selections .teamMatchs .item.thumbnailItem, page-setting-team-view .photoItem, page-setting-team-view .teamMatchs .item.thumbnailItem, page-setting-teams .photoItem, page-setting-teams .teamMatchs .item.thumbnailItem, page-user-members .photoItem, page-user-sub-admins .photoItem {
+.card, .topNews, .tabelList .item.item-block .grid, .leagueMatches .allMatches, .leagueStats .list .item.item-block, page-all-matches .list, page-free-tips .list, page-games .list, page-match-comments .avatarItem, page-match-comments .item.thumbnailItem, page-match-details .avatarItem, page-match-details .item.thumbnailItem, page-match-votes .avatarItem, page-match-votes .item.thumbnailItem, page-payment-details .photoItem, page-payment-details .teamMatchs .item.thumbnailItem, page-payment-plans .photoItem, page-payment-plans .teamMatchs .item.thumbnailItem, page-payment-plantypes .photoItem, page-payment-plantypes .teamMatchs .item.thumbnailItem, page-payment-sets .photoItem, page-payment-sets .teamMatchs .item.thumbnailItem, page-predictions .list, page-profile .otherForm, page-setting-country .photoItem, page-setting-country .teamMatchs .item.thumbnailItem, page-setting-league-view .photoItem, page-setting-league-view .teamMatchs .item.thumbnailItem, page-setting-leagues .photoItem, page-setting-leagues .teamMatchs .item.thumbnailItem, page-setting-selections .photoItem, page-setting-selections .teamMatchs .item.thumbnailItem, page-setting-team-view .photoItem, page-setting-team-view .teamMatchs .item.thumbnailItem, page-setting-teams .photoItem, page-setting-teams .teamMatchs .item.thumbnailItem, page-user-members .photoItem, page-user-sub-admins .photoItem {
   -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.29);
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.29);
 }
@@ -48778,6 +48778,175 @@ page-all-matches .list .list-header .icon {
 }
 
 page-all-matches .list .list-header img {
+  height: 20px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.calendarToolbar {
+  padding: 0px !important;
+}
+
+.calendarToolbar .toolbar-background {
+  background-color: #0b4040;
+}
+
+.calendarToolbar .calendar.grid {
+  padding: 0px 2px;
+}
+
+.calendarToolbar .calendar.grid .col {
+  padding: 0px 2px;
+  overflow: hidden;
+}
+
+.calendarToolbar .calendar.grid .col[col-auto] .icon {
+  height: 40px;
+  line-height: 40px;
+  display: block;
+  width: 44px;
+  text-align: center;
+}
+
+.calendarToolbar .calendar.grid .col p, .calendarToolbar .calendar.grid .col .select-popover .popover-content .list .item .label, .select-popover .popover-content .list .item .calendarToolbar .calendar.grid .col .label {
+  color: #fff;
+  margin: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 36px;
+  line-height: 36px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.calendarToolbar .calendar.grid .col p span, .calendarToolbar .calendar.grid .col .select-popover .popover-content .list .item .label span, .select-popover .popover-content .list .item .calendarToolbar .calendar.grid .col .label span {
+  max-width: 50%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 36px;
+  line-height: 36px;
+  display: block;
+  padding: 0px 2px;
+}
+
+.calendarToolbar .daysScroll {
+  padding: 0px;
+  min-height: 0px;
+}
+
+.calendarToolbar .daysScroll .toolbar-background {
+  background: #0b4040;
+}
+
+.calendarToolbar .daysScroll .scroll-x {
+  white-space: nowrap;
+  height: 58px;
+}
+
+.calendarToolbar .daysScroll .scroll-x .day {
+  margin: 0px;
+  display: inline-block;
+  height: 58px;
+  width: 14.28571%;
+  text-align: center;
+  padding: 0 5px;
+}
+
+.calendarToolbar .daysScroll .scroll-x .day p, .calendarToolbar .daysScroll .scroll-x .day .select-popover .popover-content .list .item .label, .select-popover .popover-content .list .item .calendarToolbar .daysScroll .scroll-x .day .label {
+  margin: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 20px;
+  line-height: 20px;
+  display: block;
+  color: #fff;
+  display: block;
+}
+
+.calendarToolbar .daysScroll .scroll-x .day .button {
+  padding: 0px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  background: none;
+  display: block;
+  margin: auto;
+}
+
+.calendarToolbar .daysScroll .scroll-x .day .button .button-inner {
+  color: #fff;
+}
+
+.calendarToolbar .daysScroll .scroll-x .day.active .button {
+  background: #3B7A57;
+}
+
+page-free-tips .fixed-content {
+  height: 40px;
+  background: #0b4040;
+}
+
+page-free-tips .matchItem {
+  background: #fff;
+}
+
+page-free-tips .list {
+  display: block;
+  width: calc(100% - 4px*2);
+  margin: 4px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+page-free-tips .list .list-header {
+  background-color: #efefee;
+  margin-top: 0px !important;
+  height: 40px;
+  padding: 0px 4px;
+}
+
+page-free-tips .list .list-header .item-inner {
+  margin: 0px;
+}
+
+page-free-tips .list .list-header .label {
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 20px;
+  line-height: 20px;
+  display: block;
+}
+
+page-free-tips .list .list-header .icon {
+  font-size: 2rem;
+  width: 22px;
+  text-align: center;
+  min-height: 0px;
+}
+
+page-free-tips .list .list-header img {
   height: 20px;
   -o-object-fit: contain;
   object-fit: contain;

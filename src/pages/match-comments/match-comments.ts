@@ -1,11 +1,10 @@
-
+import { Observable } from 'rxjs/Observable';
 import { GamesProvider } from './../../providers/games/games';
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
 import { Comments } from './../../interfaces/Comments';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Content, List } from 'ionic-angular';
-
-
+import { Subscription } from 'rxjs';
 
 @IonicPage()
 @Component({
@@ -15,14 +14,14 @@ import { IonicPage, NavController, NavParams, Content, List } from 'ionic-angula
 export class MatchCommentsPage {
   @ViewChild(Content) contentArea: Content;
   @ViewChild(List, { read: ElementRef }) chatList: ElementRef;
-
+  sub: any;
   match: any;
   comments: any;
   error: string;
   private mutationObserver: MutationObserver;
   comment: Comments = new Comments("", "", "", { id: "" }, "", { id: "" });
   jti: number;
-
+  private placesSub: Subscription;
 
   img2 = "assets/imgs/appicon.png";
   constructor(public navCtrl: NavController,
@@ -34,7 +33,6 @@ export class MatchCommentsPage {
 
   }
   ionViewDidLoad() {
-
     this.mutationObserver = new MutationObserver((mutations) => {
       this.contentArea.scrollToBottom();
     });
@@ -46,9 +44,19 @@ export class MatchCommentsPage {
   }
 
 
-  ngOnInit(): void {
+  ionViewWillEnter() {
+    this.placesSub = Observable.interval(10000)
+      .subscribe((val) => {
+        console.log('called');
+        this.GetGameComments();
+      });
     this.GetGameComments();
     this.jti = this.authProvider.currentUserDataValue.jti;
+
+  }
+
+  ionViewWillLeave() {
+    this.placesSub.unsubscribe();
   }
 
 

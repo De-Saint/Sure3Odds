@@ -35,11 +35,8 @@ export class AuthenicationProvider {
     this.currentUserSubject = new BehaviorSubject<Token>(JSON.parse(sessionStorage.getItem('currentUser')));
     this.currentUser = this.currentUserSubject.asObservable();
    
-
     this.currentUserDataSubject = new BehaviorSubject<User>(JSON.parse(sessionStorage.getItem('userData')));
     this.currentUserData = this.currentUserDataSubject.asObservable();
-
-
   }
 
   public get currentUserValue(): Token {

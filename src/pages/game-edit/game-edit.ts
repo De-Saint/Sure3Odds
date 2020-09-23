@@ -19,7 +19,7 @@ export class GameEditPage {
   hometeams: any;
   selections: any;
   sets: any;
-  statuses:any;
+  statuses: any;
   selectedgame: any;
   game: Games = new Games({ id: "" }, { id: "" }, { id: "" }, { id: "" }, "", { id: "" }, "", { id: "" }, "", "", { id: "" }, 0, 0);
   constructor(private gamesProvider: GamesProvider,
@@ -126,24 +126,29 @@ export class GameEditPage {
               if (game.odds) {
                 if (game.matchdate && game.matchtime) {
                   if (game.hometeam !== game.awayteam) {
-                    if (game.hometeamscore && game.awayteamscore) {
-                      let loading = this.loadingCtrl.create({
-                        content: "Please wait..."
-                      });
-                      loading.present();
-                      this.gamesProvider.updateGame(game).subscribe(res => {
-                        loading.dismiss().catch(() => { });
-                        if (res.statusCode === 200) {
-                          this.navCtrl.pop();
-                        } else {
-                          this.authProvider.showToast(res.description);
-                        }
-                      }, error => {
-                        loading.dismiss().catch(() => { });
-                        this.authProvider.showToast(error.error.error);
-                      });
+                    debugger
+                    if (game.hometeamscore || game.hometeamscore == 0) {
+                      if (game.awayteamscore || game.awayteamscore == 0) {
+                        let loading = this.loadingCtrl.create({
+                          content: "Please wait..."
+                        });
+                        loading.present();
+                        this.gamesProvider.updateGame(game).subscribe(res => {
+                          loading.dismiss().catch(() => { });
+                          if (res.statusCode === 200) {
+                            this.navCtrl.pop();
+                          } else {
+                            this.authProvider.showToast(res.description);
+                          }
+                        }, error => {
+                          loading.dismiss().catch(() => { });
+                          this.authProvider.showToast(error.error.error);
+                        });
+                      } else {
+                        this.authProvider.showToast("Away Team score input field is empty or incorrect");
+                      }
                     } else {
-                      this.authProvider.showToast("Either Home or Away Team score input field is empty or incorrect");
+                      this.authProvider.showToast("Home score input field is empty or incorrect");
                     }
                   } else {
                     this.authProvider.showToast("Home and Away Team cannot be same.");

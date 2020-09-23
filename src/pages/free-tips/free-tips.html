@@ -1,18 +1,95 @@
-<!--
-  Generated template for the FreeTipsPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
-    <ion-title>freeTips</ion-title>
+    <ion-title>Free Tips</ion-title>
   </ion-navbar>
 
+  <ion-toolbar class="calendarToolbar">
+    <ion-grid class="calendar">
+      <ion-row>
+        <ion-col col-auto>
+          <ion-icon name="ios-arrow-back" color="light" (click)="change_month('decrease')"></ion-icon>
+        </ion-col>
+        <ion-col col>
+          <p>
+            <span>{{month_name}}</span>,
+            <span>{{year}}</span>
+          </p>
+        </ion-col>
+        <ion-col col-auto>
+          <ion-icon name="ios-arrow-forward" color="light" (click)="change_month('increase')"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <div class="daysScroll">
+      <ion-scroll scrollX="true" scrollY="false" >
+        <div class="day" *ngFor="let day of days ; let i=index" (click)="toggleGroup(i)" [ngClass]="{'active': isGroupShown(i)}" >
+          <p>{{day.name}}</p>
+          <button ion-button clear (click)="onClick(day)">{{day.day_num}} </button>
+        </div>
+      </ion-scroll>
+    </div>
+
+    <p ion-text text-center no-margin color="light"><b>{{currentDate |  date:'mediumDate'}}</b></p>
+  </ion-toolbar>
 </ion-header>
+<ion-content>
 
-
-<ion-content padding>
+   <!-- matches list -->
+   <ion-list margin-top *ngFor="let game of gamelist">
+    <ion-list-header>
+      {{game.title}}
+      <ion-icon name="football" color="color1" item-left></ion-icon>
+    </ion-list-header>
+    <!-- match item  -->
+    <div class="" *ngIf="game.items">
+      <ion-item class="matchItem" *ngFor="let match of game.items"> 
+      <ion-grid>
+        <ion-row  (click)="onView(match.sets.id)">
+          <ion-col col>
+            <ion-item >
+              <img src="{{match.hometeam.imageurl}}" item-right  *ngIf="match.hometeam.imageurl"/>
+              <img src="assets/imgs/appicon.png"  item-right  *ngIf="!match.hometeam.imageurl"/>
+              <p text-right>{{match.hometeam.name}}</p>
+            </ion-item>
+          </ion-col>
+          <ion-col col-auto>
+            <span ion-text color="color1">{{match.matchtime}}</span>
+            <p ion-text color="color2"  *ngIf="match.sets.id === 1"><b>{{match.odds}}</b></p>
+            <p ion-text color="color2" *ngIf="match.sets.id === 1" ><b>{{match.selections.name}}</b></p>
+          </ion-col>
+          <ion-col col>
+            <ion-item >
+              <img src="{{match.awayteam.imageurl}}" item-left *ngIf="match.awayteam.imageurl"/>
+              <img src="assets/imgs/appicon.png" item-left *ngIf="!match.awayteam.imageurl"/>
+              <p text-left>{{match.awayteam.name}}</p>
+            </ion-item>
+          </ion-col> 
+        </ion-row> 
+       </ion-grid>
+     </ion-item> 
+    </div>
+    <div class="" *ngIf="game.msg">
+     <p ion-text text-center color="color2">{{game.msg}}</p> 
+    </div>
+     
+  </ion-list>
+   <!-- matches list -->
 
 </ion-content>
+<ion-footer>
+<ion-toolbar>
+  <ion-grid class="white bordertop lightborder">
+    <ion-row wrap>
+      <ion-col col-12 class="center">
+        <div class="" margin-top ion-text text-center>
+          Subscribe to VIP and VVIP plans to gain access to more features like posting your predictions, voting, interactions, advert
+             free, advisers and many more predictions.
+         </div>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-toolbar>
+</ion-footer>

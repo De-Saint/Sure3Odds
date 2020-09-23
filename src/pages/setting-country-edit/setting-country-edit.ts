@@ -4,7 +4,9 @@ import { Countries } from './../../interfaces/Countries';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ActionSheetController, LoadingController, AlertController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+// import { Plugins, CameraResultType, Capacitor } from '@capacitor/core';
 
+// const { Camera, CameraOptions } = Plugins;
 @IonicPage()
 @Component({
   selector: 'page-setting-country-edit',
@@ -77,7 +79,7 @@ export class SettingCountryEditPage {
           text: 'Cancel',
           handler: () => {
 
-          } 
+          }
         },
         {
           text: 'Proceed',
@@ -122,24 +124,40 @@ export class SettingCountryEditPage {
     actionSheet.present();
   }
   get_camera(source) {
-    const options: CameraOptions = {
-      quality: 100, destinationType: this.camera.DestinationType.DATA_URL,
-      encodingType: this.camera.EncodingType.JPEG, mediaType: this.camera.MediaType.PICTURE
-      , allowEdit: true, targetWidth: 512, targetHeight: 512, correctOrientation: true
-    }
 
-    if (source == 'Gallery') {
-      options.sourceType = this.camera.PictureSourceType.PHOTOLIBRARY
-    }
-    else {
-      options.sourceType = this.camera.PictureSourceType.CAMERA
-    }
+    // if (!Capacitor.isPluginAvailable('Camera')) {
+    //   return;
+    // }
+    // const CameraOptions = {
+    //   // Whether to allow the user to crop or make small edits (platform specific)
+    //   allowEditing ?: boolean;
+    // }      
 
-    this.camera.getPicture(options).then((imageData) => {
-      this.img = 'data:image/jpeg;base64,' + imageData;
-    }, (err) => { });
-    if (this.img != undefined) {
-      this.img1 = this.img;
-    }
+    // Camera.getPhoto(options: CameraOptions)
+
+    // const options: CameraOptions = {
+    //   quality: 100,
+    //   destinationType: this.camera.DestinationType.DATA_URL,
+    //   encodingType: this.camera.EncodingType.JPEG,
+    //   mediaType: this.camera.MediaType.PICTURE,
+    //   allowEdit: true,
+    //   targetWidth: 512,
+    //   targetHeight: 512,
+    //   correctOrientation: true
+    // }
+
+    // if (source == 'Gallery') {
+    //   options.sourceType = this.camera.PictureSourceType.PHOTOLIBRARY
+    // }
+    // else {
+    //   options.sourceType = this.camera.PictureSourceType.CAMERA
+    // }
+
+    // this.camera.getPicture(options).then((imageData) => {
+    //   this.img = 'data:image/jpeg;base64,' + imageData;
+    // }, (err) => { });
+    // if (this.img != undefined) {
+    //   this.img1 = this.img;
+    // }
   }
 }

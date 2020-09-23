@@ -12,6 +12,7 @@ import { AuthenicationProvider } from '../providers/authenication/authenication'
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
 import { GamesProvider } from '../providers/games/games';
+import { AdMobFree} from '@ionic-native/admob-free/ngx';
 
 import { SelectSearchableModule } from 'ionic-select-searchable';
 import { PaymentsProvider } from '../providers/payments/payments';
@@ -45,7 +46,7 @@ var config = {
   ],
   providers: [
     StatusBar,
-    SplashScreen, Camera,
+    SplashScreen, Camera, AdMobFree,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     AuthenicationProvider, GamesProvider,
     { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptorProvider, multi: true },

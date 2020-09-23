@@ -44,6 +44,14 @@ export class GamesProvider {
         return resp;
       }));
   }
+
+  GetFreeGames(matchDate): Observable<ResponseType> {
+    const params = new HttpParams().set("matchDate", String(matchDate)).set("id", "1");
+    return this.http.get<ResponseType>(`${environment.apiUrl}/games/game/free/get`, { params })
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
   computeOldMatchDate(group) {
     if (group.day_num < 10) {
       group.day_num = '0' + group.day_num

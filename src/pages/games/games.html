@@ -10,6 +10,34 @@
       </button>
     </ion-buttons>
   </ion-navbar>
+  <ion-toolbar class="calendarToolbar">
+    <ion-grid class="calendar">
+      <ion-row>
+        <ion-col col-auto>
+          <ion-icon name="ios-arrow-back" color="light" (click)="change_month('decrease')"></ion-icon>
+        </ion-col>
+        <ion-col col>
+          <p>
+            <span>{{month_name}}</span>,
+            <span>{{year}}</span>
+          </p>
+        </ion-col>
+        <ion-col col-auto>
+          <ion-icon name="ios-arrow-forward" color="light" (click)="change_month('increase')"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <div class="daysScroll">
+      <ion-scroll scrollX="true" scrollY="false" >
+        <div class="day" *ngFor="let day of days ; let i=index" (click)="toggleGroup(i)" [ngClass]="{'active': isGroupShown(i)}" >
+          <p>{{day.name}}</p>
+          <button ion-button clear (click)="onClick(day)">{{day.day_num}} </button>
+        </div>
+      </ion-scroll>
+    </div>
+
+    <p ion-text text-center no-margin color="light"><b>{{currentDate |  date:'mediumDate'}}</b></p>
+  </ion-toolbar>
 </ion-header>
 
 

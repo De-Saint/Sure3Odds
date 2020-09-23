@@ -42,7 +42,7 @@ var GameEditPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 749:
+/***/ 750:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -75,8 +75,8 @@ var Games = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GameEditPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_Games__ = __webpack_require__(749);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_Games__ = __webpack_require__(750);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_games_games__ = __webpack_require__(353);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__ = __webpack_require__(354);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__);
@@ -204,26 +204,32 @@ var GameEditPage = /** @class */ (function () {
                             if (game.odds) {
                                 if (game.matchdate && game.matchtime) {
                                     if (game.hometeam !== game.awayteam) {
-                                        if (game.hometeamscore && game.awayteamscore) {
-                                            var loading_1 = this.loadingCtrl.create({
-                                                content: "Please wait..."
-                                            });
-                                            loading_1.present();
-                                            this.gamesProvider.updateGame(game).subscribe(function (res) {
-                                                loading_1.dismiss().catch(function () { });
-                                                if (res.statusCode === 200) {
-                                                    _this.navCtrl.pop();
-                                                }
-                                                else {
-                                                    _this.authProvider.showToast(res.description);
-                                                }
-                                            }, function (error) {
-                                                loading_1.dismiss().catch(function () { });
-                                                _this.authProvider.showToast(error.error.error);
-                                            });
+                                        debugger;
+                                        if (game.hometeamscore || game.hometeamscore == 0) {
+                                            if (game.awayteamscore || game.awayteamscore == 0) {
+                                                var loading_1 = this.loadingCtrl.create({
+                                                    content: "Please wait..."
+                                                });
+                                                loading_1.present();
+                                                this.gamesProvider.updateGame(game).subscribe(function (res) {
+                                                    loading_1.dismiss().catch(function () { });
+                                                    if (res.statusCode === 200) {
+                                                        _this.navCtrl.pop();
+                                                    }
+                                                    else {
+                                                        _this.authProvider.showToast(res.description);
+                                                    }
+                                                }, function (error) {
+                                                    loading_1.dismiss().catch(function () { });
+                                                    _this.authProvider.showToast(error.error.error);
+                                                });
+                                            }
+                                            else {
+                                                this.authProvider.showToast("Away Team score input field is empty or incorrect");
+                                            }
                                         }
                                         else {
-                                            this.authProvider.showToast("Either Home or Away Team score input field is empty or incorrect");
+                                            this.authProvider.showToast("Home score input field is empty or incorrect");
                                         }
                                     }
                                     else {
