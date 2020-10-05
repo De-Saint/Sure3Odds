@@ -3,9 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  // apiUrl :"https://5c0e0c010a54.ngrok.io/sure3odds"
-  apiUrl :"http://localhost:8080/sure3odds"
+  production: true,
+  apiUrl :"http://104.248.175.241:8080/sure3odds"
+  // apiUrl :"http://localhost:8080/sure3odds"
 };
 
 /*

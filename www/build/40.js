@@ -1,6 +1,6 @@
 webpackJsonp([40],{
 
-/***/ 708:
+/***/ 707:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaymentPlansPageModule", function() { return PaymentPlansPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__payment_plans__ = __webpack_require__(775);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__payment_plans__ = __webpack_require__(774);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var PaymentPlansPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 775:
+/***/ 774:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -195,7 +195,7 @@ var PaymentPlansPage = /** @class */ (function () {
     ], PaymentPlansPage.prototype, "content", void 0);
     PaymentPlansPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: 'page-payment-plans',template:/*ion-inline-start:"/Users/mac/Downloads/Sure3Odds/src/pages/payment-plans/payment-plans.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Plans </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="teamMatchs">\n    <ion-list>\n      <ion-item class="thumbnailItem" *ngFor="let plan of plans">\n        <ion-thumbnail item-left>\n          <!-- Team image -->\n          <img src="assets/imgs/appicon.png" />\n        </ion-thumbnail>\n        <ion-grid no-padding>\n          <ion-row>\n            <ion-col col-6>\n              <!-- team Name -->\n              <h5 ion-text color="dark">{{plan.user.lastname}} {{plan.user.firstname}} </h5>\n              <!-- League Name -->\n              <p ion-text color="color1">{{plan.plantype.name}}</p>\n            </ion-col>\n            <ion-col col-6>\n              <span ion-text style="font-size: small !important;">Start Date</span>\n              <p ion-text color="color1">{{plan.startDate}}</p>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n        <div class=""  style="margin-bottom: 0.3em !important;" item-right>\n          <span ion-text style="font-size: small !important;">End Date</span>\n          <p ion-text color="color2"><b>{{plan.endDate}}</b></p>\n        </div>\n      </ion-item>\n    </ion-list>\n  </div>\n  <div class="" *ngIf="error">\n    <p ion-text text-center color="color2">No result found!</p>\n  </div>\n  <div text-center margin-top margin-bottonm *ngIf="noplans === \'none\'" (click)="onGotoTop()">\n    <button ion-button small color="color2">Back to Top</button>\n  </div>\n  <ion-infinite-scroll (ionInfinite)="scrollInfinite($event)" *ngIf="currentPage < totalPage">\n    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading page {{currentPage}} of {{totalPage}}">\n    </ion-infinite-scroll-content>\n  </ion-infinite-scroll>\n</ion-content>'/*ion-inline-end:"/Users/mac/Downloads/Sure3Odds/src/pages/payment-plans/payment-plans.html"*/,
+            selector: 'page-payment-plans',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payment-plans/payment-plans.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Plans </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="teamMatchs">\n    <ion-list>\n      <ion-item class="thumbnailItem" *ngFor="let plan of plans">\n        <ion-thumbnail item-left>\n          <!-- Team image -->\n          <img src="assets/imgs/appicon.png" />\n        </ion-thumbnail>\n        <ion-grid no-padding>\n          <ion-row>\n            <ion-col col-6>\n              <!-- team Name -->\n              <h5 ion-text color="dark">{{plan.user.lastname}} {{plan.user.firstname}} </h5>\n              <!-- League Name -->\n              <p ion-text color="color1">{{plan.plantype.name}}</p>\n            </ion-col>\n            <ion-col col-6>\n              <span ion-text style="font-size: small !important;">Start Date</span>\n              <p ion-text color="color1">{{plan.startDate}}</p>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n        <div class=""  style="margin-bottom: 0.3em !important;" item-right>\n          <span ion-text style="font-size: small !important;">End Date</span>\n          <p ion-text color="color2"><b>{{plan.endDate}}</b></p>\n        </div>\n      </ion-item>\n    </ion-list>\n  </div>\n  <div class="" *ngIf="error">\n    <p ion-text text-center color="color2">No result found!</p>\n  </div>\n  <div text-center margin-top margin-bottonm *ngIf="noplans === \'none\'" (click)="onGotoTop()">\n    <button ion-button small color="color2">Back to Top</button>\n  </div>\n  <ion-infinite-scroll (ionInfinite)="scrollInfinite($event)" *ngIf="currentPage < totalPage">\n    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading page {{currentPage}} of {{totalPage}}">\n    </ion-infinite-scroll-content>\n  </ion-infinite-scroll>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payment-plans/payment-plans.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"],
             __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */],

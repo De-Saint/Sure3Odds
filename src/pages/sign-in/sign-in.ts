@@ -24,19 +24,18 @@ export class SignInPage {
   onLogin(form, page) {
     this.submitted = true;
     if (form.valid) {
-      this.auth.login(this.login.email, this.login.password)
-        .subscribe(resp => {
-          console.log(resp)
-          if (resp.statusCode === 200) {
-           this.gotoHomePage(resp.data, page);
-          } else {
-            this.auth.showToast(resp.description);
-          }
-        }, error => {
-          console.log(error.error.message);
-          console.log(JSON.stringify(error));
-          // this.auth.showToast(error.error.message);
-        });
+      this.auth.login(this.login.email, this.login.password);
+      //   .subscribe(resp => {
+      //     console.log(resp)
+      //     if (resp.statusCode === 200) {
+      //      this.gotoHomePage(resp.data, page);
+      //     } else {
+      //       this.auth.showToast(resp.description);
+      //     }
+      //   }, error => {
+      //     console.log(JSON.stringify(error));
+      //     // this.auth.showToast(error.error.message);
+      //   });
 
     }
   }

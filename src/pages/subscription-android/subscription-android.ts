@@ -89,13 +89,13 @@ export class SubscriptionAndroidPage {
     console.log(this.newuser);
     this.auth.createNewUser(this.newuser).subscribe(resp => {
       if (resp.statusCode === 200) {
-        this.auth.login(this.newuser.email, this.newuser.password).subscribe(res => {
-          loading.dismiss().catch(() => { });
-          this.gotoHomePage(resp.data, 'AllMatchesPage');
-        }, error => {
-          loading.dismiss().catch(() => { });
-          this.auth.showToast(error.error.message);
-        })
+        // this.auth.login(this.newuser.email, this.newuser.password).subscribe(res => {
+        //   loading.dismiss().catch(() => { });
+        //   this.gotoHomePage(resp.data, 'AllMatchesPage');
+        // }, error => {
+        //   loading.dismiss().catch(() => { });
+        //   this.auth.showToast(error.error.message);
+        // })
       } else {
         loading.dismiss().catch(() => { });
         this.auth.showToast(resp.description);

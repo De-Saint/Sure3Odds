@@ -23,7 +23,7 @@ export class RequestInterceptorProvider {
       let clone: HttpRequest<any>;
       clone = request.clone({
         setHeaders: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${token}`
         }
       });
       return clone;

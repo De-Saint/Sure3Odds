@@ -29,7 +29,7 @@ export class AuthenicationProvider {
   private currentUserDataSubject: BehaviorSubject<User>;
   public currentUserData: Observable<User>;
 
-  constructor(public http: HttpClient, private nativeHttp: HTTP,
+  constructor(public http: HttpClient, private httP: HTTP,
     private storage: Storage, private platform: Platform,
     public toastCtrl: ToastController) {
 
@@ -81,7 +81,7 @@ export class AuthenicationProvider {
 
     if (apimethod === "post") {
       alert("hey");
-      let nativeCall = this.nativeHttp.post(url, data, {
+      let nativeCall = this.httP.post(url, data, {
         "Content-Type": "application/json"
       });
       console.log(JSON.stringify(nativeCall));
@@ -169,7 +169,7 @@ export class AuthenicationProvider {
 
   }
 
-  login(email, password): Observable<ResponseType> {
+  login1(email, password): Observable<ResponseType> {
     const params = new HttpParams()
       .set('email', email)
       .set('password', password);
@@ -184,8 +184,31 @@ export class AuthenicationProvider {
         }
         return res;
       }))
-
+     
   }
+  login(email, password) {
+    const params = new HttpParams()
+      .set('email', email)
+      .set('password', password);
+    return this.httP.post(`${environment.apiUrl}/users/member/authenticate`, params, {})
+    .then(data => {
+
+      console.log(data.status);
+      console.log(data.data); // data received by server
+      console.log(data.headers);
+  
+    })
+    .catch(error => {
+  
+      console.log(error.status);
+      console.log(error.error); // error message as string
+      console.log(error.headers);
+  
+    });
+     
+  }
+
+  
 
 
   getAllPlantypes(): Observable<ResponseType> {
