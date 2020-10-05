@@ -1,14 +1,14 @@
 webpackJsonp([43],{
 
-/***/ 710:
+/***/ 702:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaymentPlantypesPageModule", function() { return PaymentPlantypesPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HelpPageModule", function() { return HelpPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__payment_plantypes__ = __webpack_require__(775);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__help__ = __webpack_require__(767);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var PaymentPlantypesPageModule = /** @class */ (function () {
-    function PaymentPlantypesPageModule() {
+var HelpPageModule = /** @class */ (function () {
+    function HelpPageModule() {
     }
-    PaymentPlantypesPageModule = __decorate([
+    HelpPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__payment_plantypes__["a" /* PaymentPlantypesPage */],
+                __WEBPACK_IMPORTED_MODULE_2__help__["a" /* HelpPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__payment_plantypes__["a" /* PaymentPlantypesPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__help__["a" /* HelpPage */]),
             ],
         })
-    ], PaymentPlantypesPageModule);
-    return PaymentPlantypesPageModule;
+    ], HelpPageModule);
+    return HelpPageModule;
 }());
 
-//# sourceMappingURL=payment-plantypes.module.js.map
+//# sourceMappingURL=help.module.js.map
 
 /***/ }),
 
-/***/ 775:
+/***/ 767:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PaymentPlantypesPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HelpPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -57,55 +56,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-var PaymentPlantypesPage = /** @class */ (function () {
-    function PaymentPlantypesPage(navCtrl, auth, actionSheetCtrl, navParams) {
+/**
+ * Generated class for the HelpPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var HelpPage = /** @class */ (function () {
+    function HelpPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
-        this.auth = auth;
-        this.actionSheetCtrl = actionSheetCtrl;
         this.navParams = navParams;
     }
-    PaymentPlantypesPage.prototype.ionViewWillEnter = function () {
-        this.GetPlantypes();
+    HelpPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad HelpPage');
     };
-    PaymentPlantypesPage.prototype.GetPlantypes = function () {
-        var _this = this;
-        this.auth.getAllPlantypes().subscribe(function (result) {
-            _this.plantypes = result.data;
-            console.log(_this.plantypes);
-        }, function (error) {
-            _this.auth.showToast(error.error.description);
-        });
-    };
-    PaymentPlantypesPage.prototype.onPlantypeOptions = function (plantype) {
-        var _this = this;
-        var actionSheet = this.actionSheetCtrl.create({
-            title: 'Plan Type Options',
-            buttons: [
-                {
-                    text: 'View / Edit',
-                    handler: function () { _this.navCtrl.push('PaymentPlantypeEditPage', { plantype: plantype }); }
-                }, {
-                    text: 'Cancel',
-                    role: 'cancel',
-                    handler: function () { }
-                }
-            ]
-        });
-        actionSheet.present();
-    };
-    PaymentPlantypesPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
-            selector: 'page-payment-plantypes',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payment-plantypes/payment-plantypes.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Plan Types </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <div class="leagueStats">\n    <ion-list *ngFor="let plantype of plantypes" (click)="onPlantypeOptions(plantype)">\n      <ion-item class="thumbnailItem">\n        <h5 ion-text style="padding-left: 0.8em; padding-top: 0.5em; padding-bottom: 0.5em;     height: auto"\n          color="dark">{{plantype.name}}</h5>\n        <p ion-text item-right color="color1" margin-right padding-right><b>{{plantype.amount | currency: \'NGN\': \'1.2-2\'}}</b></p>\n      </ion-item>\n    </ion-list>\n\n  </div>\n\n  <div class="" *ngIf="error">\n    <p ion-text text-center color="color2">No result found!</p>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payment-plantypes/payment-plantypes.html"*/,
+    HelpPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-help',template:/*ion-inline-start:"/Users/mac/Downloads/Sure3Odds/src/pages/help/help.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Help</ion-title>\n   \n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-item-group>\n    <ion-item-divider color="primary" class=""><b>Support</b></ion-item-divider>\n    <ion-item>\n      <ion-icon color="primary" name="call" item-left></ion-icon>\n      <ion-label color="primary">Call</ion-label>\n      <p item-right ion-text color="primary"><b>08188888320</b></p>\n    </ion-item>\n    <ion-item>\n      <ion-icon name="mail" color="primary" item-left></ion-icon>\n      <ion-label color="primary">Email</ion-label>\n      <p item-right ion-text color="primary"><b>support@sure3odds.com</b></p>\n    </ion-item>\n  </ion-item-group>\n  <ion-item-group>\n    <ion-item-divider color="primary"><b>Manual Payment</b></ion-item-divider>\n    <ion-item>\n      <ion-label color="primary">Account Name</ion-label>\n      <p item-right ion-text color="primary"><b>Sure3Odds Enterprise</b></p>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary">Account Number</ion-label>\n      <p item-right ion-text color="primary"><b>0105601820</b></p>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary">Bank Name</ion-label>\n      <p item-right ion-text color="primary"><b>Diamond Bank</b></p>\n    </ion-item>\n  </ion-item-group>\n  <ion-item-group>\n    <ion-item-divider color="primary"><b>Contact</b></ion-item-divider>\n    <ion-item>\n      <ion-icon color="primary" name="logo-facebook" item-left></ion-icon>\n      <ion-label color="primary">facebook/sure3oddsNigeria</ion-label>\n    </ion-item>\n    <ion-item >\n      <ion-icon color="primary" name="globe" color="primary" item-left></ion-icon>\n      <ion-label color="primary">www.sure3odds.com</ion-label>\n    </ion-item>\n  \n  </ion-item-group>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Downloads/Sure3Odds/src/pages/help/help.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavController"],
-            __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["ActionSheetController"], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavParams"]])
-    ], PaymentPlantypesPage);
-    return PaymentPlantypesPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
+    ], HelpPage);
+    return HelpPage;
 }());
 
-//# sourceMappingURL=payment-plantypes.js.map
+//# sourceMappingURL=help.js.map
 
 /***/ })
 

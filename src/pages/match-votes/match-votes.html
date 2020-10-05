@@ -1,10 +1,9 @@
 <ion-header>
   <ion-navbar>
     <button ion-button menuToggle icon-only>
-      <ion-icon class="goal-menu" ></ion-icon>
+      <ion-icon class="goal-menu"></ion-icon>
     </button>
-    <ion-title>Match Details</ion-title>
-    
+    <ion-title>Predictions</ion-title>
   </ion-navbar>
   <ion-toolbar class="matchResultBar">
     <!-- match item  -->
@@ -14,9 +13,9 @@
           <!-- first team -->
           <ion-col col>
             <ion-item>
-              <img src="{{match.hometeam.imageurl}}" style="border-radius: 50px;" *ngIf="match.hometeam.imageurl" />
-              <img src="assets/imgs/appicon.png" style="border-radius: 50px;" *ngIf="!match.hometeam.imageurl" />
-              <p>{{match.hometeam.name}}</p>
+              <img src="{{match.hometeam?.imageurl}}" style="border-radius: 50px;" *ngIf="match.hometeam?.imageurl" />
+              <img src="assets/imgs/appicon.png" style="border-radius: 50px;" *ngIf="!match.hometeam?.imageurl" />
+              <p>{{match.hometeam?.name}}</p>
             </ion-item>
           </ion-col>
           <!-- match time -->
@@ -26,20 +25,21 @@
               <span ion-text style="padding: 0.3em;" color="color1">-</span>
               <span ion-text color="color1">{{match?.awayteamscore}}</span>
             </div>
-            <p ion-text color="light" text-center>{{match?.status.name}}</p>
+            <p ion-text color="light" text-center>{{match.status?.name}}</p>
           </ion-col>
           <!-- second team -->
           <ion-col col>
             <ion-item>
-              <img src="{{match.awayteam.imageurl}}" style="border-radius: 50px;" *ngIf="match.awayteam.imageurl" />
-              <img src="assets/imgs/appicon.png" style="border-radius: 50px;" *ngIf="!match.awayteam.imageurl" />
-              <p>{{match.awayteam.name}}</p>
+              <img src="{{match.awayteam?.imageurl}}" style="border-radius: 50px;" *ngIf="match.awayteam?.imageurl" />
+              <img src="assets/imgs/appicon.png" style="border-radius: 50px;" *ngIf="!match.awayteam?.imageurl" />
+              <p>{{match.awayteam?.name}}</p>
             </ion-item>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col col-center>
-            <p ion-text color="secondary" style="text-align: center;">{{match.country.name}} - {{match.league.name}}</p>
+            <p ion-text color="secondary" style="text-align: center;">{{match.country?.name}} - {{match.league?.name}}
+            </p>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -49,7 +49,7 @@
 </ion-header>
 
 
-<ion-content >
+<ion-content>
   <!-- goals -->
   <div class="goals" padding>
     <ion-list>
@@ -57,13 +57,13 @@
       <ion-grid style="margin-bottom: 0.5em;">
         <ion-row>
           <ion-col col-auto text-left style="width: 10em;">
-            <p ion-text color="color1" no-margin><b>{{match.hometeam.name}} Votes</b></p>
+            <p ion-text color="color1" no-margin><b>{{match.hometeam?.name}} Votes</b></p>
           </ion-col>
           <ion-col col text-center>
             <p ion-text color="dark" no-margin><b>Draw Votes</b></p>
           </ion-col>
           <ion-col col-auto text-right style="width: 10em;">
-            <p ion-text color="color1" no-margin><b>{{match.awayteam.name}} Votes</b></p>
+            <p ion-text color="color1" no-margin><b>{{match.awayteam?.name}} Votes</b></p>
           </ion-col>
         </ion-row>
         <ion-row>
@@ -80,18 +80,18 @@
       </ion-grid>
       <hr>
 
-       <div class="imgs" *ngIf="votes?.UserVote">
+      <div class="imgs" *ngIf="votes?.UserVote">
         <div class="imgProfile" [ngStyle]="{'background-image':'url(' + img2 + ')'}">
 
         </div>
       </div>
       <div class="nameAndMail" *ngIf="votes?.UserVote">
-        <h5 ion-text color="dark">{{votes?.UserVote.user.lastname}} {{votes?.UserVote.user.firstname}}</h5>
-        <p ion-text color="dark" *ngIf="votes?.UserVote.userVote === 1">{{votes?.UserVote.game.hometeam.name}}:
+        <h5 ion-text color="dark">{{votes.UserVote.user?.lastname}} {{votes.UserVote.user?.firstname}}</h5>
+        <p ion-text color="dark" *ngIf="votes.UserVote?.userVote === 1">{{votes.UserVote.game.hometeam?.name}}:
           <i>Wins</i></p>
-        <p ion-text color="dark" *ngIf="votes?.UserVote.userVote === 2">{{votes?.UserVote.game.awayteam.name}}:
+        <p ion-text color="dark" *ngIf="votes.UserVote?.userVote === 2">{{votes.UserVote.game.awayteam?.name}}:
           <i>Wins</i></p>
-        <p ion-text color="dark" *ngIf="votes?.UserVote.userVote === 3">Draw Match</p>
+        <p ion-text color="dark" *ngIf="votes.UserVote?.userVote === 3">Draw Match</p>
       </div>
       <hr>
       <h5 ion-text text-center color="color2" *ngIf="!votes?.UserVote">Who do you think is going to win?</h5>
@@ -104,9 +104,11 @@
           <ion-row>
             <ion-col col text-center>
               <p ion-text ion-button *ngIf="votes?.UserVote" disabled="true" small outline color="color1"
-                (click)="onCreateVote(1, 1, 0, 0, match)" no-margin> <b>Vote - {{match.hometeam.name}}</b></p>
+                (click)="onCreateVote(1, 1, 0, 0, match)" no-margin> <b>{{match.hometeam?.name}} Wins</b>
+              </p>
               <p ion-text ion-button *ngIf="!votes?.UserVote" small outline color="color1"
-                (click)="onCreateVote(1, 1, 0, 0, match)" no-margin> <b>Vote - {{match.hometeam.name}}</b></p>
+                (click)="onCreateVote(1, 1, 0, 0, match)" no-margin> <b>{{match.hometeam?.name}} Wins</b>
+              </p>
             </ion-col>
           </ion-row>
           <ion-row>
@@ -132,9 +134,9 @@
           <ion-row>
             <ion-col col text-center>
               <p ion-text ion-button *ngIf="votes?.UserVote" disabled="true" small outline color="color1"
-                (click)="onCreateVote(3,0,1,0,  match)" no-margin><b>Vote - X</b>
+                (click)="onCreateVote(3,0,1,0,  match)" no-margin><b>X</b>
                 <p ion-text ion-button *ngIf="!votes?.UserVote" small outline color="color1"
-                  (click)="onCreateVote(3,0,1,0,  match)" no-margin><b>Vote - X</b>
+                  (click)="onCreateVote(3,0,1,0,  match)" no-margin><b>X</b>
                 </p>
             </ion-col>
           </ion-row>
@@ -160,9 +162,11 @@
           <ion-row>
             <ion-col col text-center>
               <p ion-text ion-button *ngIf="votes?.UserVote" disabled="true" small outline color="color1"
-                (click)="onCreateVote(2,0,0,1, match)" no-margin> <b>Vote - {{match.awayteam.name}}</b></p>
+                (click)="onCreateVote(2,0,0,1, match)" no-margin> <b>{{match.awayteam?.name}} Wins</b>
+              </p>
               <p ion-text ion-button *ngIf="!votes?.UserVote" small outline color="color1"
-                (click)="onCreateVote(2,0,0,1, match)" no-margin> <b>Vote - {{match.awayteam.name}}</b></p>
+                (click)="onCreateVote(2,0,0,1, match)" no-margin> <b>{{match.awayteam?.name}} Wins</b>
+              </p>
             </ion-col>
           </ion-row>
           <ion-row>
@@ -181,7 +185,7 @@
             </ion-col>
           </ion-row>
         </ion-grid>
-      </ion-item> 
+      </ion-item>
     </ion-list>
   </div>
 

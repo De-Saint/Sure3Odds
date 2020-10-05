@@ -2,7 +2,7 @@ import { GamesProvider } from './../../providers/games/games';
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
 import { Votes } from './../../interfaces/Votes';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 
 
 @IonicPage()
@@ -20,9 +20,10 @@ export class MatchVotesPage {
   vote: Votes = new Votes("", "", { id: "" }, "", "", "");
   img2 = "assets/imgs/appicon.png";
   constructor(public navCtrl: NavController,
-     private authProvider: AuthenicationProvider, 
-    private gameProvider: GamesProvider,  private navParams: NavParams) {
-    this.match = this.navParams.data;
+    private loadingCtrl: LoadingController,
+    private authProvider: AuthenicationProvider,
+    private gameProvider: GamesProvider, private navParams: NavParams) {
+    this.match = this.navParams.get("match");
     console.log(this.match);
 
   }
@@ -49,17 +50,23 @@ export class MatchVotesPage {
     this.vote.awayVote = awayvote;
     this.vote.game.id = match.id;
     console.log(this.vote);
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    loading.present();
     this.gameProvider.createVote(this.vote).subscribe(res => {
+      loading.dismiss().catch(() => { });
       if (res.statusCode === 200) {
         this.GetGameVotes();
       } else {
         this.authProvider.showToast(res.description);
       }
     }, error => {
+      loading.dismiss().catch(() => { });
       this.authProvider.showToast(error.error.error);
     });
   }
 
 
- 
+
 }

@@ -24,9 +24,18 @@ export class UserMemberAddPage {
   }
 
   getPlantypes() {
-    this.auth.getAllPlantypes().subscribe(result => {
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    loading.present();
+    this.auth.getAllPlantypes()
+    .subscribe(result => {
+      loading.dismiss().catch(() => { });
       this.plantypes = result.data;
       console.log(this.plantypes);
+      loading.dismiss().catch(() => { });
+    },error => {
+      loading.dismiss().catch(() => { });
     })
   }
   onSelectPlantypes(event: { component: SelectSearchableComponent, value: any }) {

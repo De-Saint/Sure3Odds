@@ -33,8 +33,13 @@ export class UserSubAdminsPage {
   }
 
   GetUsers() {
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    loading.present();
     this.authProvider.GetUsersByType(3, 0, 10)
       .subscribe(resp => {
+        loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
           this.users = resp.data.content;
           console.log(this.users);
@@ -50,6 +55,7 @@ export class UserSubAdminsPage {
         this.error = '';
       }, error => {
         this.error = 'none';
+        loading.dismiss().catch(() => { });
         this.authProvider.showToast(error.error.error);
       });
   }
@@ -70,8 +76,13 @@ export class UserSubAdminsPage {
       this.users = this.originalusers;
     } else {
       if (searchvalue.length >= 3) {
+        let loading = this.loadingCtrl.create({
+          content: "Please wait..."
+        });
+        loading.present();
         this.authProvider.SearchUsersByType(searchvalue, 3, 0, 10)
           .subscribe(resp => {
+            loading.dismiss().catch(() => { });
             if (resp.statusCode === 200) {
               this.users = resp.data.content;
               console.log(this.users);
@@ -85,6 +96,7 @@ export class UserSubAdminsPage {
             this.error = '';
             this.nousers = '';
           }, error => {
+            loading.dismiss().catch(() => { });
             this.error = 'none';
             this.users = [];
           });

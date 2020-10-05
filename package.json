@@ -1,5 +1,5 @@
 {
-  "name": "smartPlug",
+  "name": "Sure3Odds",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "http://ionicframework.com/",
@@ -14,46 +14,37 @@
     "@angular/animations": "5.2.11",
     "@angular/common": "5.2.11",
     "@angular/compiler": "5.2.11",
-    "@angular/compiler-cli": "^10.0.14",
+    "@angular/compiler-cli": "5.2.11",
     "@angular/core": "5.2.11",
     "@angular/forms": "5.2.11",
     "@angular/http": "5.2.11",
     "@angular/platform-browser": "5.2.11",
     "@angular/platform-browser-dynamic": "5.2.11",
     "@auth0/angular-jwt": "5.0.0",
-    "@capacitor/android": "^2.4.1",
-    "@capacitor/core": "2.4.1",
-    "@ionic-native/admob-free": "^5.28.0",
+    "@capacitor/android": "^2.4.2",
+    "@capacitor/core": "2.4.2",
+    "@capacitor/ios": "^2.4.2",
     "@ionic-native/camera": "^4.19.0",
-    "@ionic-native/core": "~4.18.0",
-    "@ionic-native/splash-screen": "~4.18.0",
-    "@ionic-native/status-bar": "~4.18.0",
-    "@ionic/storage": "^2.2.0",
+    "@ionic-native/core": "4.20.0",
+    "@ionic-native/http": "^5.28.0",
+    "@ionic-native/splash-screen": "4.20.0",
+    "@ionic-native/status-bar": "4.20.0",
+    "@ionic/storage": "2.2.0",
     "angular4-paystack": "^2.4.0",
-    "bootstrap": "^4.5.2",
-    "cordova-admob-sdk": "^0.24.1",
-    "cordova-plugin-admob-free": "^0.27.0",
-    "cordova-plugin-camera": "^4.0.3",
-    "cordova-promise-polyfill": "0.0.2",
-    "intl-tel-input": "^12.1.8",
-    "ionic-angular": "3.9.2",
+    "cordova-plugin-advanced-http": "^3.0.1",
+    "cordova-plugin-file": "^6.0.2",
+    "ionic-angular": "3.9.9",
     "ionic-img-viewer": "^2.9.0",
     "ionic-select-searchable": "^2.10.0",
     "ionicons": "3.0.0",
-    "jquery": "^3.3.1",
     "rxjs": "5.5.11",
     "sw-toolbox": "3.6.0",
-    "zone.js": "0.8.26"
+    "zone.js": "0.8.29"
   },
   "devDependencies": {
-    "@capacitor/cli": "2.4.1",
-    "@ionic/app-scripts": "3.2.1",
-    "typescript": "~2.6.2"
+    "@capacitor/cli": "2.4.2",
+    "@ionic/app-scripts": "3.2.4",
+    "typescript": "2.6.2"
   },
-  "description": "An Ionic project",
-  "cordova": {
-    "plugins": {
-      "cordova-plugin-camera": {}
-    }
-  }
+  "description": "An Ionic project"
 }

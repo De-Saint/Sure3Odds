@@ -48,9 +48,9 @@
     </ion-list-header>
     <!-- match item  -->
     <div class="" *ngIf="game.items">
-      <ion-item class="matchItem" *ngFor="let match of game.items"> 
+      <ion-item class="matchItem" *ngFor="let match of game.items">
       <ion-grid>
-        <ion-row navPush="MatchPage" [navParams]="match">
+        <ion-row (click)="onMatchOption(match)">
           <ion-col col>
             <ion-item >
               <img src="{{match.hometeam.imageurl}}" item-right  *ngIf="match.hometeam.imageurl"/>
@@ -69,15 +69,28 @@
               <img src="assets/imgs/appicon.png" item-left *ngIf="!match.awayteam.imageurl"/>
               <p text-left>{{match.awayteam.name}}</p>
             </ion-item>
-          </ion-col> 
-        </ion-row> 
+          </ion-col>
+        </ion-row>
        </ion-grid>
-     </ion-item> 
+     </ion-item>
     </div>
     <div class="" *ngIf="game.msg">
-     <p ion-text text-center color="color2">{{game.msg}}</p> 
+     <p ion-text text-center color="color2">{{game.msg}}</p>
     </div>
-     
+
   </ion-list>
    <!-- matches list -->
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid class="white bordertop lightborder">
+      <ion-row wrap>
+        <ion-col col-12 class="center">
+          <div class="" margin-top ion-text text-center>
+            Sure3Odds provides the best predictions between 2 - 3 odds with highest level of confidence and precision for you to select wisely and bet responsively.
+           </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+  </ion-footer>

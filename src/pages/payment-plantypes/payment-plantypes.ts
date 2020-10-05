@@ -1,6 +1,6 @@
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ActionSheetController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ActionSheetController, LoadingController } from 'ionic-angular';
 
 
 @IonicPage()
@@ -14,6 +14,7 @@ export class PaymentPlantypesPage {
 
   constructor(public navCtrl: NavController,
     private auth: AuthenicationProvider,
+    private loadingCtrl: LoadingController,
     private actionSheetCtrl: ActionSheetController, public navParams: NavParams) {
   }
 
@@ -21,12 +22,19 @@ export class PaymentPlantypesPage {
     this.GetPlantypes();
   }
 
-  
+
   GetPlantypes() {
-    this.auth.getAllPlantypes().subscribe(result => {
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    loading.present();
+    this.auth.getAllPlantypes()
+    .subscribe(result => {
+      loading.dismiss().catch(() => { });
       this.plantypes = result.data;
       console.log(this.plantypes);
     }, error => {
+      loading.dismiss().catch(() => { });
       this.auth.showToast(error.error.description);
     })
   }

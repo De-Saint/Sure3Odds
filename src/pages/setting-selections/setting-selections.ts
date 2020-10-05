@@ -1,7 +1,7 @@
 import { GamesProvider } from './../../providers/games/games';
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, Content, ActionSheetController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Content, ActionSheetController, LoadingController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -23,6 +23,7 @@ export class SettingSelectionsPage {
     private authProvider: AuthenicationProvider,
     private actionSheetCtrl: ActionSheetController,
     private gamesProvider: GamesProvider,
+    private loadingCtrl: LoadingController,
     public navParams: NavParams) {
   }
 
@@ -31,8 +32,13 @@ export class SettingSelectionsPage {
     this.GetSelections();
   }
   GetSelections() {//myDate
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    loading.present();
     this.gamesProvider.GetSelections(0, 20)
       .subscribe(resp => {
+        loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
           this.selections = resp.data.content;
           this.currentPage = resp.data.number;
@@ -45,8 +51,8 @@ export class SettingSelectionsPage {
           console.log(resp.description);
         }
       }, error => {
-        console.log(JSON.stringify(error));
         this.error = 'none';
+        loading.dismiss().catch(() => { });
         this.authProvider.showToast(error.error.error);
       });
   }
@@ -57,9 +63,14 @@ export class SettingSelectionsPage {
       this.selections = this.originalselections;
     } else {
       if (searchvalue.length >= 3) {
+        let loading = this.loadingCtrl.create({
+          content: "Please wait..."
+        });
+        loading.present();
         this.gamesProvider.SearchSelections(searchvalue, 0, 20)
         .subscribe(resp => {
           console.log(resp);
+          loading.dismiss().catch(() => { });
           if (resp.statusCode === 200) {
             this.selections = resp.data.content;
             this.currentPage = resp.data.number;
@@ -74,6 +85,7 @@ export class SettingSelectionsPage {
         }, error => {
           console.log(JSON.stringify(error));
           this.error = 'none';
+          loading.dismiss().catch(() => { });
         });
       }
     }
@@ -128,7 +140,7 @@ export class SettingSelectionsPage {
         {
           text: 'View / Edit',
           handler: () => { this.navCtrl.push('SettingSelectionEditPage', {selection}) }
-       
+
         }, {
           text: 'Cancel',
           role: 'cancel',

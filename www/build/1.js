@@ -1,14 +1,14 @@
 webpackJsonp([1],{
 
-/***/ 738:
+/***/ 716:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SubscriptionAndroidPageModule", function() { return SubscriptionAndroidPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfilePageModule", function() { return ProfilePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__subscription_android__ = __webpack_require__(803);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile__ = __webpack_require__(783);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular4_paystack__ = __webpack_require__(755);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -20,29 +20,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SubscriptionAndroidPageModule = /** @class */ (function () {
-    function SubscriptionAndroidPageModule() {
+var ProfilePageModule = /** @class */ (function () {
+    function ProfilePageModule() {
     }
-    SubscriptionAndroidPageModule = __decorate([
+    ProfilePageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__subscription_android__["a" /* SubscriptionAndroidPage */],
+                __WEBPACK_IMPORTED_MODULE_2__profile__["a" /* ProfilePage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__subscription_android__["a" /* SubscriptionAndroidPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__profile__["a" /* ProfilePage */]),
                 __WEBPACK_IMPORTED_MODULE_3_angular4_paystack__["a" /* Angular4PaystackModule */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"], __WEBPACK_IMPORTED_MODULE_0__angular_core__["NO_ERRORS_SCHEMA"]]
         })
-    ], SubscriptionAndroidPageModule);
-    return SubscriptionAndroidPageModule;
+    ], ProfilePageModule);
+    return ProfilePageModule;
 }());
 
-//# sourceMappingURL=subscription-android.module.js.map
+//# sourceMappingURL=profile.module.js.map
 
 /***/ }),
 
-/***/ 748:
+/***/ 749:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -65,6 +65,25 @@ var NewUsers = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=NewUser.js.map
+
+/***/ }),
+
+/***/ 754:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Plans; });
+var Plans = /** @class */ (function () {
+    function Plans(id, plantype, startDate, endDate) {
+        this.id = id;
+        this.plantype = plantype;
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
+    return Plans;
+}());
+
+//# sourceMappingURL=Plans.js.map
 
 /***/ }),
 
@@ -801,17 +820,16 @@ var Angular4PaystackModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 803:
+/***/ 783:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SubscriptionAndroidPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_payments_payments__ = __webpack_require__(356);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_NewUser__ = __webpack_require__(748);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_Plans__ = __webpack_require__(754);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interfaces_NewUser__ = __webpack_require__(749);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_authenication_authenication__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_storage__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(18);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -826,139 +844,120 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-var SubscriptionAndroidPage = /** @class */ (function () {
-    function SubscriptionAndroidPage(loadingCtrl, events, storage, paymentsProvider, navCtrl, auth, navParams) {
-        this.loadingCtrl = loadingCtrl;
-        this.events = events;
-        this.storage = storage;
-        this.paymentsProvider = paymentsProvider;
+var ProfilePage = /** @class */ (function () {
+    function ProfilePage(navCtrl, alertCtrl, authProvider, loadingCtrl, pltform, actionSheetCtrl) {
         this.navCtrl = navCtrl;
-        this.auth = auth;
-        this.navParams = navParams;
-        this.newuser = new __WEBPACK_IMPORTED_MODULE_2__interfaces_NewUser__["a" /* NewUsers */]("", "", "", "", "", "", "", { id: "" }, "", { id: "", name: "" }, { id: "", name: "" });
+        this.alertCtrl = alertCtrl;
+        this.authProvider = authProvider;
+        this.loadingCtrl = loadingCtrl;
+        this.pltform = pltform;
+        this.actionSheetCtrl = actionSheetCtrl;
+        this.flag = true;
+        this.img1 = "assets/imgs/profileCover.png";
+        this.img2 = "/assets/imgs/appicon.png";
+        this.newuser = new __WEBPACK_IMPORTED_MODULE_1__interfaces_NewUser__["a" /* NewUsers */]("", "", "", "", "", "", "", { id: "" }, "", { id: "", name: "" }, { id: "", name: "" });
+        this.userplan = new __WEBPACK_IMPORTED_MODULE_0__interfaces_Plans__["a" /* Plans */]("", { id: "", name: "", amount: "" }, "", "");
         this.channels = ['card']; //Paystack Payment Methods
         this.random_id = Math.floor(Date.now() / 1000); //Line to generate reference number
-        this.newuser = this.navParams.get("newuser");
-        this.sub_option = this.navParams.get("sub_option");
-        console.log(this.newuser, this.sub_option);
     }
-    SubscriptionAndroidPage.prototype.ionViewWillEnter = function () {
-        this.getPlantypes();
-        this.getParameter();
+    ProfilePage.prototype.ionViewWillEnter = function () {
+        this.GetUserDeta();
     };
-    SubscriptionAndroidPage.prototype.onPlantTypeSelect = function ($event, plan) {
-        this.pay_amount = plan.amount;
-    };
-    SubscriptionAndroidPage.prototype.getPlantypes = function () {
+    ProfilePage.prototype.GetUserDeta = function () {
         var _this = this;
-        this.auth.getAllPlantypes().subscribe(function (result) {
-            _this.plantypelist = result.data;
-            console.log(_this.plantypelist);
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        loading.present();
+        this.authProvider.GetUserDeta()
+            .subscribe(function (result) {
+            loading.dismiss().catch(function () { });
+            if (result.statusCode == 200) {
+                console.log(result);
+                _this.userplan = result.data.planData;
+                _this.newuser = result.data.userData;
+            }
+            else {
+                _this.authProvider.showToast(result.description);
+            }
+        }, function (error) {
+            loading.dismiss().catch(function () { });
+            _this.authProvider.showToast(error.error.description);
         });
     };
-    SubscriptionAndroidPage.prototype.getParameter = function () {
+    ProfilePage.prototype.updateAccount = function (user) {
         var _this = this;
-        this.auth.getParameter(1).subscribe(function (result) {
-            _this.public_key = result.data.value;
-            console.log(_this.public_key);
-        });
-    };
-    SubscriptionAndroidPage.prototype.onPay = function (pay_amount) {
-        this.auth.showToast("Please Wait ...");
-        this.pay_amount = this.auth.CalculatePercentage(pay_amount);
-    };
-    SubscriptionAndroidPage.prototype.paymentInit = function () {
-    };
-    //Callback function on successful payment
-    SubscriptionAndroidPage.prototype.paymentDone = function (ref) {
-        if (ref.status === "success") {
-            console.log(ref); //ref contains the response from paystack after successful payment
-            var loading = this.loadingCtrl.create({
-                content: 'Please wait...'
+        console.log(user);
+        if (user) {
+            var loading_1 = this.loadingCtrl.create({
+                content: "Please wait..."
             });
-            loading.present();
-            this.newuser.platform = "Android";
-            this.newuser.referencecode = String(ref.reference);
-            if (this.sub_option === "registration") {
-                this.onRegistration(loading);
-            }
-            else if (this.sub_option === "renewal") {
-                this.onRenewal(loading);
-            }
+            loading_1.present();
+            this.authProvider.updateUser(user).subscribe(function (res) {
+                loading_1.dismiss().catch(function () { });
+                if (res.statusCode === 200) {
+                    _this.GetUserDeta();
+                }
+                else {
+                    _this.authProvider.showToast(res.description);
+                }
+            }, function (error) {
+                loading_1.dismiss().catch(function () { });
+                _this.authProvider.showToast(error.error.error);
+            });
         }
         else {
-            this.auth.showToast("Please, the payment was not successful.");
+            this.authProvider.showToast("Please, check something is wrong.");
         }
     };
-    //Event triggered if User cancel the payment
-    SubscriptionAndroidPage.prototype.paymentCancel = function () {
-        this.auth.showToast("You cancelled the payment!");
-    };
-    SubscriptionAndroidPage.prototype.onRegistration = function (loading) {
+    ProfilePage.prototype.renewAccount = function (plan) {
         var _this = this;
-        this.newuser.usertypes = { id: 2, name: "" };
-        console.log(this.newuser);
-        this.auth.createNewUser(this.newuser).subscribe(function (resp) {
-            if (resp.statusCode === 200) {
-                _this.auth.login(_this.newuser.email, _this.newuser.password).subscribe(function (res) {
-                    loading.dismiss().catch(function () { });
-                    _this.gotoHomePage(resp.data, 'AllMatchesPage');
-                }, function (error) {
-                    loading.dismiss().catch(function () { });
-                    _this.auth.showToast(error.error.message);
-                });
-            }
-            else {
-                loading.dismiss().catch(function () { });
-                _this.auth.showToast(resp.description);
-            }
-        }, function (error) {
-            loading.dismiss().catch(function () { });
-            _this.auth.showToast(error.error.message);
+        var confirm = this.alertCtrl.create({
+            title: 'Update Plan',
+            message: "You are about to update <b> your subscription plan</b> <br/> to " + plan.plantype.name + ". <br/><br/>If <b>" + plan.plantype.name + "</b> is not the plan you want to update to, you can change it on the subscription screen. <br/><br/>This action is irreversible.",
+            buttons: [
+                {
+                    text: 'Cancel',
+                    handler: function () {
+                    }
+                },
+                {
+                    text: 'Proceed',
+                    handler: function () {
+                        _this.newuser.plantype = _this.userplan.plantype;
+                        if (_this.pltform.is("ios")) {
+                            _this.onIOSSubscription();
+                        }
+                        else if (_this.pltform.is("android")) {
+                            _this.onAndroidSubscription();
+                        }
+                    }
+                }
+            ]
         });
+        confirm.present();
     };
-    SubscriptionAndroidPage.prototype.onRenewal = function (loading) {
-        var _this = this;
-        this.paymentsProvider.updatePlan(this.newuser.id, this.newuser.plantype.id, this.newuser.platform, this.newuser.referencecode).subscribe(function (res) {
-            loading.dismiss().catch(function () { });
-            if (res.statusCode === 200) {
-                _this.navCtrl.pop();
-            }
-            else {
-                _this.auth.showToast(res.description);
-            }
-        }, function (error) {
-            loading.dismiss().catch(function () { });
-            _this.auth.showToast(error.error.error);
-        });
+    ProfilePage.prototype.onIOSSubscription = function () {
+        this.navCtrl.push("SubscriptionIosPage", { newuser: this.newuser, sub_option: "renewal" });
     };
-    SubscriptionAndroidPage.prototype.gotoHomePage = function (data, page) {
-        var _this = this;
-        this.navCtrl.setRoot(page).then(function () {
-            _this.storage.ready().then(function () {
-                _this.storage.set("hasSeenLogin", true);
-                var name = _this.auth.currentUserDataValue.name;
-                var type = _this.auth.currentUserDataValue.user_type;
-                _this.auth.showToast("Welcome " + name);
-                _this.events.publish('user:login', type, name);
-            });
-        });
+    ProfilePage.prototype.onAndroidSubscription = function () {
+        this.navCtrl.push("SubscriptionAndroidPage", { newuser: this.newuser, sub_option: "renewal" });
     };
-    SubscriptionAndroidPage = __decorate([
+    ProfilePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-            selector: 'page-subscription-android',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/subscription-android/subscription-android.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Subscription</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="sign" style="background-image:url(\'assets/imgs/welcome3.jpg\')">\n  <div class="signForm">\n    <img src="assets/imgs/appicon.png" style="width: 8em; height: 8em;" />\n    <ion-list>\n      <ion-item>\n        <ion-icon name="briefcase" item-left color="light"></ion-icon>\n        <ion-label color="light">\n          Select a plan per month\n        </ion-label>\n        <ion-select [(ngModel)]="newuser.plantype.id" name="plantype" id="plantype" class="">\n          <ion-option *ngFor="let plan of plantypelist" value="{{ plan.id }}"\n            (ionSelect)="onPlantTypeSelect($event, plan)">{{ plan.name}} - {{ plan.amount  | currency: \'NGN\': \'1.2-2\'}}\n          </ion-option>\n        </ion-select>\n      </ion-item>\n    </ion-list>\n      \n        <button ion-button block color="color2" angular4-paystack type="submit" \n          [key]="public_key" \n          (paymentInit)="paymentInit()" \n          [email]="newuser.email" \n          [amount]="pay_amount * 100" [ref]="random_id"\n          [channels]="channels"\n          (close)="paymentCancel()" \n          (callback)="paymentDone($event)" \n          (click)="onPay(pay_amount)"\n          [metadata]="{ \n            custom_fields: \n            [ {\n              display_name: \'Customer Name\', \n              variable_name: \'Customer Name\', \n              value: newuser.firstname + \'\' + newuser.lastname} ,\n            {\n              display_name: \'Payment Type\', \n              variable_name: \'Payment Type\', \n              value: \'Registration\' \n            }] \n          }"\n        > PAY  {{pay_amount  | currency: \'NGN\': \'1.2-2\'}}\n        </button>\n    <!-- <p ion-text color="light" navPush="SignInPage">Don\'t want to continue ? Login</p> -->\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/subscription-android/subscription-android.html"*/,
+            selector: 'page-profile',template:/*ion-inline-start:"/Users/mac/Downloads/Sure3Odds/src/pages/profile/profile.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Profile</ion-title>\n\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <div class="imgs">\n    <button ion-button icon-only class="coverCamera" [ngClass]="{\'show\':flag==false}">\n      <ion-icon name="md-camera"></ion-icon>\n    </button>\n    <img src="{{img1}}" />\n    <div class="imgProfile" [ngStyle]="{\'background-image\':\'url(\' + img2 + \')\'}">\n      <button ion-button icon-only class="profileCamera" [ngClass]="{\'show\':flag==false}">\n        <ion-icon name="md-camera"></ion-icon>\n      </button>\n    </div>\n  </div>\n\n  <!-- name and email -->\n  <div class="nameAndMail">\n    <h5 ion-text color="dark">{{newuser.firstname}} {{newuser.lastname}}</h5>\n    <p ion-text color="dark">{{newuser?.email}}</p>\n  </div>\n\n  <!-- other information -->\n  <div class="otherForm">\n    <ion-list>\n      <ion-list-header>\n        <h2 ion-text text-center color="color2">My Details</h2>\n      </ion-list-header>\n      <ion-item class="halfItem" float-left>\n        <ion-label stacked>\n          First Name\n        </ion-label>\n        <ion-input type="text" [(ngModel)]="newuser.firstname" name="firstname" id="firstname" placeholder="First Name">\n        </ion-input>\n      </ion-item>\n      <ion-item class="halfItem" float-left>\n        <ion-label stacked>\n          Last Name\n        </ion-label>\n        <ion-input type="text" [(ngModel)]="newuser.lastname" name="lastname" id="lastname" placeholder="Last Name">\n        </ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-label stacked>\n           Email\n        </ion-label>\n        <ion-input type="email" [(ngModel)]="newuser.email" name="email" id="email" placeholder="E-mail"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label stacked>\n           Phone\n        </ion-label>\n        <ion-input type="tel" [(ngModel)]="newuser.phone" name="phone" id="phone" placeholder="Phone"></ion-input>\n      </ion-item>\n\n      <ion-item class="halfItem" float-left>\n        <ion-label stacked>\n          Current Membership\n        </ion-label>\n        <ion-input type="text" [(ngModel)]="newuser.usertypes.name" disabled>\n        </ion-input>\n      </ion-item>\n      <ion-item class="halfItem" float-left>\n        <ion-label stacked>\n          Current Status\n        </ion-label>\n        <ion-input type="text" [(ngModel)]="newuser.status.name" disabled>\n        </ion-input>\n      </ion-item>\n\n      <button ion-button block margin-bottom type="submit" color="color2" (click)="updateAccount(newuser)">Update\n        Account\n      </button>\n    </ion-list>\n    <ion-list *ngIf="userplan">\n      <hr class="margin-top margin-bottom">\n      <ion-list-header>\n        <h2 ion-text text-center color="color2">My Subscription Details</h2>\n      </ion-list-header>\n      <ion-item margin-top>\n        <h5 ion-text color="dark"><b>Current Plan Name</b></h5>\n        <p ion-text color="color1"><b>{{userplan.plantype.name}}</b></p>\n      </ion-item>\n\n\n      <ion-item class="halfItem" float-left>\n        <h5 ion-text color="dark"><b>Start Date</b></h5>\n        <p ion-text color="color1"><b>{{userplan.startDate}}</b></p>\n      </ion-item>\n      <ion-item class="halfItem" float-left>\n        <h5 ion-text color="dark"><b>End/Due Date</b></h5>\n        <p ion-text color="color1"><b>{{userplan.endDate}}</b></p>\n      </ion-item>\n      <ion-item class="halfItem" float-left>\n        <h5 ion-text color="dark"><b>Amount</b></h5>\n        <p ion-text color="color1"><b>{{userplan.plantype.amount  | currency: \'NGN\': \'1.2-2\'}}</b></p>\n      </ion-item>\n      <ion-item class="halfItem" float-left>\n        <h5 ion-text color="dark"><b>Status</b></h5>\n        <p ion-text color="danger" *ngIf="newuser.status.name === \'Inactive\'"><b>Expired</b></p>\n        <p ion-text color="secondary" *ngIf="newuser.status.name === \'Active\'"><b>Running</b></p>\n      </ion-item>\n      <button ion-button block type="submit" color="color2" (click)="renewAccount(userplan)">Renew\n        Subscription</button>\n        \n    </ion-list>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/mac/Downloads/Sure3Odds/src/pages/profile/profile.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["LoadingController"],
-            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["Events"],
-            __WEBPACK_IMPORTED_MODULE_5__ionic_storage__["b" /* Storage */],
-            __WEBPACK_IMPORTED_MODULE_0__providers_payments_payments__["a" /* PaymentsProvider */],
-            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"]])
-    ], SubscriptionAndroidPage);
-    return SubscriptionAndroidPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["AlertController"],
+            __WEBPACK_IMPORTED_MODULE_2__providers_authenication_authenication__["a" /* AuthenicationProvider */],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["LoadingController"],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["Platform"],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ActionSheetController"]])
+    ], ProfilePage);
+    return ProfilePage;
 }());
 
-//# sourceMappingURL=subscription-android.js.map
+//# sourceMappingURL=profile.js.map
 
 /***/ })
 

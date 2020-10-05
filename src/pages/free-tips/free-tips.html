@@ -44,7 +44,7 @@
     </ion-list-header>
     <!-- match item  -->
     <div class="" *ngIf="game.items">
-      <ion-item class="matchItem" *ngFor="let match of game.items"> 
+      <ion-item class="matchItem" *ngFor="let match of game.items">
       <ion-grid>
         <ion-row  (click)="onView(match.sets.id)">
           <ion-col col>
@@ -58,6 +58,7 @@
             <span ion-text color="color1">{{match.matchtime}}</span>
             <p ion-text color="color2"  *ngIf="match.sets.id === 1"><b>{{match.odds}}</b></p>
             <p ion-text color="color2" *ngIf="match.sets.id === 1" ><b>{{match.selections.name}}</b></p>
+            <p ion-text color="color2" *ngIf="match.sets.id !== 1" ><b>View</b></p>
           </ion-col>
           <ion-col col>
             <ion-item >
@@ -65,15 +66,15 @@
               <img src="assets/imgs/appicon.png" item-left *ngIf="!match.awayteam.imageurl"/>
               <p text-left>{{match.awayteam.name}}</p>
             </ion-item>
-          </ion-col> 
-        </ion-row> 
+          </ion-col>
+        </ion-row>
        </ion-grid>
-     </ion-item> 
+     </ion-item>
     </div>
     <div class="" *ngIf="game.msg">
-     <p ion-text text-center color="color2">{{game.msg}}</p> 
+     <p ion-text text-center color="color2">{{game.msg}}</p>
     </div>
-     
+
   </ion-list>
    <!-- matches list -->
 
@@ -84,10 +85,9 @@
     <ion-row wrap>
       <ion-col col-12 class="center">
         <div class="" margin-top ion-text text-center>
-          Subscribe to VIP and VVIP plans to gain access to more features like posting your predictions, voting, interactions, advert
-             free, advisers and many more predictions.
+          Subscribe to VIP or VVIP Plan today, to gain access to more features like posting your predictions, commenting and interacting with other users, advert
+             free and many more predictions.
          </div>
-
       </ion-col>
     </ion-row>
   </ion-grid>

@@ -38,15 +38,21 @@ export class SettingTeamAddPage {
     this.flag = (this.flag != false) ? false : true;
   }
   Getcountries() {
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    loading.present();
     this.gamesProvider.Getcountries()
       .subscribe(resp => {
+        loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
           this.countries = resp.data;
         } else {
           this.authProvider.showToast(resp.description);
         }
       }, error => {
-        this.authProvider.showToast(error.error.error);
+        loading.dismiss().catch(() => { });
+        this.authProvider.showToast(error.error.description);
       });
   }
 

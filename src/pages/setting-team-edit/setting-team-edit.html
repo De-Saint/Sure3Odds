@@ -3,22 +3,18 @@
 
   <ion-navbar>
     <ion-title>Edit Team</ion-title>
-    <ion-buttons end>
+    <!-- <ion-buttons end>
       <button ion-button icon-only (click)="onDelete()">
         <ion-icon name="trash"></ion-icon>
       </button>
-    </ion-buttons>
+    </ion-buttons> -->
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <div class="imgs">
-    <img src="{{team.country.imageurl}}" class="newimg" text-center style="width: 13em; height: 13em;" *ngIf="team.country.imageurl" />
-    <img src="assets/imgs/appicon.png" class="newimg" text-center style="width: 13em; height: 13em;" *ngIf="!team.country.imageurl" />
-    <div class="imgProfile" [ngStyle]="{'background-image':'url(' + team.league.imageurl + ')'}">
-    </div>
+  <div class="imgs" style="margin-top: 1em;">
     <div  class="imgProfile2 margin-top" ion-text padding-top [ngStyle]="{'background-image':'url(' + team.imageurl + ')'}">
       <button ion-button icon-only class="profileCamera"  [ngClass]="{'show':flag==false}"  (click)="selectImage()">
         <ion-icon name="md-camera"></ion-icon>

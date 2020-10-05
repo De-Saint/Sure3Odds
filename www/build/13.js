@@ -1,14 +1,14 @@
 webpackJsonp([13],{
 
-/***/ 708:
+/***/ 709:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaymentPlantypeEditPageModule", function() { return PaymentPlantypeEditPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__payment_plantype_edit__ = __webpack_require__(772);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__payment_plantype_edit__ = __webpack_require__(776);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,16 +38,16 @@ var PaymentPlantypeEditPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 772:
+/***/ 776:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PaymentPlantypeEditPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_payments_payments__ = __webpack_require__(356);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_Plantypes__ = __webpack_require__(773);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_payments_payments__ = __webpack_require__(359);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_Plantypes__ = __webpack_require__(777);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(18);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -80,7 +80,6 @@ var PaymentPlantypeEditPage = /** @class */ (function () {
         var loading = this.loadingCtrl.create({
             content: "Please wait..."
         });
-        console.log(plantype);
         if (plantype.name) {
             if (plantype.amount) {
                 loading.present();
@@ -107,7 +106,7 @@ var PaymentPlantypeEditPage = /** @class */ (function () {
     };
     PaymentPlantypeEditPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-            selector: 'page-payment-plantype-edit',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payment-plantype-edit/payment-plantype-edit.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Edit Plan Type</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="otherForm">\n    <ion-list>\n      <!-- appear when click update -->\n      <ion-item >\n        <ion-label stacked>Name</ion-label>\n        <ion-input  type="text" [(ngModel)]="plantype.name"  ></ion-input>\n      </ion-item>\n      <ion-item >\n        <ion-label stacked>Amount</ion-label>\n        <ion-input  type="text" [(ngModel)]="plantype.amount"  ></ion-input>\n      </ion-item>\n      <!-- ==================================== -->\n    </ion-list>\n    <button ion-button block color="color2" (click)="onSubmit(plantype)">Submit</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payment-plantype-edit/payment-plantype-edit.html"*/,
+            selector: 'page-payment-plantype-edit',template:/*ion-inline-start:"/Users/mac/Downloads/Sure3Odds/src/pages/payment-plantype-edit/payment-plantype-edit.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Edit Plan Type</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="otherForm">\n    <ion-list>\n      <!-- appear when click update -->\n      <ion-item >\n        <ion-label stacked>Name</ion-label>\n        <ion-input  type="text" [(ngModel)]="plantype.name"  ></ion-input>\n      </ion-item>\n      <ion-item >\n        <ion-label stacked>Amount</ion-label>\n        <ion-input  type="text" [(ngModel)]="plantype.amount"  ></ion-input>\n      </ion-item>\n      <!-- ==================================== -->\n    </ion-list>\n    <button ion-button block color="color2" (click)="onSubmit(plantype)">Submit</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Downloads/Sure3Odds/src/pages/payment-plantype-edit/payment-plantype-edit.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"],
             __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["LoadingController"],
@@ -122,7 +121,7 @@ var PaymentPlantypeEditPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 773:
+/***/ 777:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

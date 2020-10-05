@@ -32,7 +32,13 @@ export class ProfilePage {
   }
 
   GetUserDeta() {
-    this.authProvider.GetUserDeta().subscribe(result => {
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    loading.present();
+    this.authProvider.GetUserDeta()
+    .subscribe(result => {
+      loading.dismiss().catch(() => { });
       if (result.statusCode == 200) {
         console.log(result);
         this.userplan = result.data.planData;
@@ -41,6 +47,7 @@ export class ProfilePage {
         this.authProvider.showToast(result.description);
       }
     }, error => {
+      loading.dismiss().catch(() => { });
       this.authProvider.showToast(error.error.description);
     })
   }
@@ -69,7 +76,6 @@ export class ProfilePage {
   }
 
   renewAccount(plan) {
-
     let confirm = this.alertCtrl.create({
       title: 'Update Plan',
       message: "You are about to update <b> your subscription plan</b> <br/> to " + plan.plantype.name + ". <br/><br/>If <b>" + plan.plantype.name + "</b> is not the plan you want to update to, you can change it on the subscription screen. <br/><br/>This action is irreversible.",
@@ -103,5 +109,5 @@ export class ProfilePage {
     this.navCtrl.push("SubscriptionAndroidPage", { newuser: this.newuser, sub_option: "renewal" });
   }
 
-  
+
 }

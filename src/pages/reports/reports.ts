@@ -7,11 +7,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'reports.html',
 })
 export class ReportsPage {
-  tab1Root = 'ReportGeneralPage';
-  tab2Root = 'ReportMonthlyPage';
+  GeneralReportPage = "ReportGeneralPage";
+  MonthlyReportPage = "ReportMonthlyPage";
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  
+
 
 }

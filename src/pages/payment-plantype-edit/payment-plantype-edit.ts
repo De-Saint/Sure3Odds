@@ -28,7 +28,6 @@ export class PaymentPlantypeEditPage {
     let loading = this.loadingCtrl.create({
       content: "Please wait..."
     });
-    console.log(plantype);
     if (plantype.name) {
       if (plantype.amount) {
         loading.present();

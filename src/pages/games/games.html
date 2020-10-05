@@ -28,8 +28,9 @@
       </ion-row>
     </ion-grid>
     <div class="daysScroll">
-      <ion-scroll scrollX="true" scrollY="false" >
-        <div class="day" *ngFor="let day of days ; let i=index" (click)="toggleGroup(i)" [ngClass]="{'active': isGroupShown(i)}" >
+      <ion-scroll scrollX="true" scrollY="false">
+        <div class="day" *ngFor="let day of days ; let i=index" (click)="toggleGroup(i)"
+          [ngClass]="{'active': isGroupShown(i)}">
           <p>{{day.name}}</p>
           <button ion-button clear (click)="onClick(day)">{{day.day_num}} </button>
         </div>
@@ -42,13 +43,22 @@
 
 
 <ion-content padding>
-  <!-- matches list -->
+  <!-- matches list  Sure3Odds.com  -->
   <div class="gamelist">
     <ion-list class="" *ngFor="let game of gamelist">
       <ion-list-header>
-        {{game.title}}
-        <ion-icon name="football" color="color1" item-left></ion-icon>
-        <button ion-button clear item-end>Total odds : {{game.odds ? game.odds : '0.0'}}</button>
+        <ion-row>
+          <ion-col col-4>
+            <ion-icon name="football" color="color1" item-left></ion-icon>
+            <span ion-text padding-bottom>{{game.title}}</span>
+          </ion-col>
+          <ion-col col-4 text-center>
+            <p ion-text padding-top color="color2">sure3odds.com</p>
+          </ion-col>
+          <ion-col col-4 text-right>
+            <span ion-text color="color1">Total odds : {{game.odds ? game.odds : '0.0'}}</span>
+          </ion-col>
+        </ion-row>
       </ion-list-header>
       <!-- match item  -->
       <div class="" *ngIf="game.items">
@@ -65,7 +75,7 @@
               <ion-col col-auto>
                 <span ion-text color="color1">{{match.matchtime}}</span>
                 <p ion-text color="color2"><b>{{match.odds}}</b></p>
-                <p ion-text color="color2">({{match.hometeamscore}}) <b>{{match.selections.name}}</b> ({{match.awayteamscore}})</p>
+                <p ion-text color="color2"><b>{{match.selections.name}}</b></p>
               </ion-col>
               <ion-col col>
                 <ion-item>

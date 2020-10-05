@@ -1,15 +1,14 @@
 webpackJsonp([0],{
 
-/***/ 716:
+/***/ 732:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfilePageModule", function() { return ProfilePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingTeamEditPageModule", function() { return SettingTeamEditPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile__ = __webpack_require__(781);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular4_paystack__ = __webpack_require__(755);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_team_edit__ = __webpack_require__(798);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -19,26 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var ProfilePageModule = /** @class */ (function () {
-    function ProfilePageModule() {
+var SettingTeamEditPageModule = /** @class */ (function () {
+    function SettingTeamEditPageModule() {
     }
-    ProfilePageModule = __decorate([
+    SettingTeamEditPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__profile__["a" /* ProfilePage */],
+                __WEBPACK_IMPORTED_MODULE_2__setting_team_edit__["a" /* SettingTeamEditPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__profile__["a" /* ProfilePage */]),
-                __WEBPACK_IMPORTED_MODULE_3_angular4_paystack__["a" /* Angular4PaystackModule */]
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_team_edit__["a" /* SettingTeamEditPage */]),
             ],
-            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"], __WEBPACK_IMPORTED_MODULE_0__angular_core__["NO_ERRORS_SCHEMA"]]
         })
-    ], ProfilePageModule);
-    return ProfilePageModule;
+    ], SettingTeamEditPageModule);
+    return SettingTeamEditPageModule;
 }());
 
-//# sourceMappingURL=profile.module.js.map
+//# sourceMappingURL=setting-team-edit.module.js.map
 
 /***/ }),
 
@@ -46,790 +42,429 @@ var ProfilePageModule = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewUsers; });
-var NewUsers = /** @class */ (function () {
-    function NewUsers(id, email, firstname, lastname, referencecode, password, phone, plantype, platform, usertypes, status) {
-        this.id = id;
-        this.email = email;
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.referencecode = referencecode;
-        this.password = password;
-        this.phone = phone;
-        this.plantype = plantype;
-        this.platform = platform;
-        this.usertypes = usertypes;
-        this.status = status;
+/* unused harmony export WebPluginRegistry */
+/* unused harmony export WebPlugins */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WebPlugin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return mergeWebPlugins; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return mergeWebPlugin; });
+var WebPluginRegistry = /** @class */ (function () {
+    function WebPluginRegistry() {
+        this.plugins = {};
+        this.loadedPlugins = {};
     }
-    return NewUsers;
-}());
-
-//# sourceMappingURL=NewUser.js.map
-
-/***/ }),
-
-/***/ 754:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Plans; });
-var Plans = /** @class */ (function () {
-    function Plans(id, plantype, startDate, endDate) {
-        this.id = id;
-        this.plantype = plantype;
-        this.startDate = startDate;
-        this.endDate = endDate;
-    }
-    return Plans;
-}());
-
-//# sourceMappingURL=Plans.js.map
-
-/***/ }),
-
-/***/ 755:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export Angular4PaystackComponent */
-/* unused harmony export Angular4PaystackDirective */
-/* unused harmony export Angular4PaystackEmbed */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Angular4PaystackModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(44);
-
-
-
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * @record
- */
-function MyWindow() { }
-if (false) {
-    /** @type {?} */
-    MyWindow.prototype.PaystackPop;
-}
-var Angular4PaystackComponent = /** @class */ (function () {
-    function Angular4PaystackComponent() {
-        this.paymentInit = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
-        this.close = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
-        this.callback = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
-        this.isPaying = false;
-    }
-    /**
-     * @return {?}
-     */
-    Angular4PaystackComponent.prototype.pay = /**
-     * @return {?}
-     */
-    function () {
-        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
-            var payment;
-            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        if (!this.checkInput()) {
-                            return [2 /*return*/];
-                        }
-                        return [4 /*yield*/, this.loadScript()];
-                    case 1:
-                        _a.sent();
-                        this.setUp();
-                        if (this.isPaying) {
-                            return [2 /*return*/];
-                        }
-                        if (this.paymentInit.observers.length) {
-                            this.paymentInit.emit();
-                        }
-                        payment = window.PaystackPop.setup(this.paystackOptions);
-                        payment.openIframe();
-                        this.isPaying = true;
-                        return [2 /*return*/];
-                }
-            });
-        });
+    WebPluginRegistry.prototype.addPlugin = function (plugin) {
+        this.plugins[plugin.config.name] = plugin;
     };
-    /**
-     * @return {?}
-     */
-    Angular4PaystackComponent.prototype.checkInput = /**
-     * @return {?}
-     */
-    function () {
-        if (!this.key) {
-            return console.error('ANGULAR-PAYSTACK: Paystack key cannot be empty');
-        }
-        if (!this.email) {
-            return console.error('ANGULAR-PAYSTACK: Paystack email cannot be empty');
-        }
-        if (!this.amount) {
-            return console.error('ANGULAR-PAYSTACK: Paystack amount cannot be empty');
-        }
-        if (!this.ref) {
-            return console.error('ANGULAR-PAYSTACK: Paystack ref cannot be empty');
-        }
-        if (!this.callback.observers.length) {
-            return console.error("ANGULAR-PAYSTACK: Insert a callback output like so (callback)='PaymentComplete($event)' to check payment status");
-        }
-        return true;
+    WebPluginRegistry.prototype.getPlugin = function (name) {
+        return this.plugins[name];
     };
-    /**
-     * @return {?}
-     */
-    Angular4PaystackComponent.prototype.setUp = /**
-     * @return {?}
-     */
-    function () {
-        var _this = this;
-        this.paystackOptions = {
-            key: this.key,
-            email: this.email,
-            amount: this.amount,
-            ref: this.ref,
-            metadata: this.metadata || {},
-            currency: this.currency || 'NGN',
-            plan: this.plan || '',
-            channels: this.channels,
-            quantity: this.quantity || '',
-            subaccount: this.subaccount || '',
-            transaction_charge: this.transaction_charge || 0,
-            bearer: this.bearer || '',
-            callback: (/**
-             * @param {?} res
-             * @return {?}
-             */
-            function (res) {
-                _this.isPaying = false;
-                _this.callback.emit(res);
-            }),
-            onClose: (/**
-             * @return {?}
-             */
-            function () {
-                _this.isPaying = false;
-                _this.close.emit();
-            }),
-        };
-    };
-    /**
-     * @return {?}
-     */
-    Angular4PaystackComponent.prototype.loadScript = /**
-     * @return {?}
-     */
-    function () {
-        return new Promise((/**
-         * @param {?} resolve
-         * @return {?}
-         */
-        function (resolve) {
-            if (window.PaystackPop && typeof window.PaystackPop.setup === 'function') {
-                resolve();
-                return;
-            }
-            /** @type {?} */
-            var script = window.document.createElement('script');
-            window.document.head.appendChild(script);
-            /** @type {?} */
-            var onLoadFunc = (/**
-             * @return {?}
-             */
-            function () {
-                script.removeEventListener('load', onLoadFunc);
-                resolve();
-            });
-            script.addEventListener('load', onLoadFunc);
-            script.setAttribute('src', 'https://js.paystack.co/v1/inline.js');
-        }));
-    };
-    /**
-     * @return {?}
-     */
-    Angular4PaystackComponent.prototype.ngOnChanges = /**
-     * @return {?}
-     */
-    function () {
-        this.setUp();
-    };
-    /**
-     * @return {?}
-     */
-    Angular4PaystackComponent.prototype.ngOnInit = /**
-     * @return {?}
-     */
-    function () {
-        if (this.text) {
-            console.error('Paystack Text input is deprecated. Add text into textnode like so <angular4-paystack>Pay With Paystack</angular4-paystack>');
-        }
-    };
-    Angular4PaystackComponent.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"], args: [{
-                    selector: 'angular4-paystack',
-                    template: "<button [ngClass]=\"class\" [ngStyle]=\"style\" (click)=\"pay()\">{{text}}<ng-content></ng-content></button>"
-                }] }
-    ];
-    /** @nocollapse */
-    Angular4PaystackComponent.ctorParameters = function () { return []; };
-    Angular4PaystackComponent.propDecorators = {
-        text: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        key: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        email: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        amount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        metadata: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        ref: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        currency: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        plan: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        quantity: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        channels: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        subaccount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        transaction_charge: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        bearer: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        class: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        style: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        paymentInit: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] }],
-        close: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] }],
-        callback: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] }]
-    };
-    return Angular4PaystackComponent;
-}());
-if (false) {
-    /** @type {?} */
-    Angular4PaystackComponent.prototype.text;
-    /** @type {?} */
-    Angular4PaystackComponent.prototype.key;
-    /** @type {?} */
-    Angular4PaystackComponent.prototype.email;
-    /** @type {?} */
-    Angular4PaystackComponent.prototype.amount;
-    /** @type {?} */
-    Angular4PaystackComponent.prototype.metadata;
-    /** @type {?} */
-    Angular4PaystackComponent.prototype.ref;
-    /** @type {?} */
-    Angular4PaystackComponent.prototype.currency;
-    /** @type {?} */
-    Angular4PaystackComponent.prototype.plan;
-    /** @type {?} */
-    Angular4PaystackComponent.prototype.quantity;
-    /** @type {?} */
-    Angular4PaystackComponent.prototype.channels;
-    /** @type {?} */
-    Angular4PaystackComponent.prototype.subaccount;
-    /** @type {?} */
-    Angular4PaystackComponent.prototype.transaction_charge;
-    /** @type {?} */
-    Angular4PaystackComponent.prototype.bearer;
-    /** @type {?} */
-    Angular4PaystackComponent.prototype.class;
-    /** @type {?} */
-    Angular4PaystackComponent.prototype.style;
-    /** @type {?} */
-    Angular4PaystackComponent.prototype.paymentInit;
-    /** @type {?} */
-    Angular4PaystackComponent.prototype.close;
-    /** @type {?} */
-    Angular4PaystackComponent.prototype.callback;
-    /**
-     * @type {?}
-     * @private
-     */
-    Angular4PaystackComponent.prototype.paystackOptions;
-    /**
-     * @type {?}
-     * @private
-     */
-    Angular4PaystackComponent.prototype.isPaying;
-}
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * @record
- */
-function MyWindow$1() { }
-if (false) {
-    /** @type {?} */
-    MyWindow$1.prototype.PaystackPop;
-}
-var Angular4PaystackDirective = /** @class */ (function () {
-    function Angular4PaystackDirective() {
-        this.close = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
-        this.callback = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
-        this.isPaying = false;
-        this.setUp();
-    }
-    /**
-     * @return {?}
-     */
-    Angular4PaystackDirective.prototype.pay = /**
-     * @return {?}
-     */
-    function () {
-        this.setUp();
-        if (!this.checkInput()) {
+    WebPluginRegistry.prototype.loadPlugin = function (name) {
+        var plugin = this.getPlugin(name);
+        if (!plugin) {
+            console.error("Unable to load web plugin " + name + ", no such plugin found.");
             return;
         }
-        /** @type {?} */
-        var payment = window.PaystackPop.setup(this.paystackOptions);
-        payment.openIframe();
-        this.isPaying = true;
+        plugin.load();
     };
-    /**
-     * @return {?}
-     */
-    Angular4PaystackDirective.prototype.checkInput = /**
-     * @return {?}
-     */
-    function () {
-        if (!this.key) {
-            return console.error('ANGULAR-PAYSTACK: Paystack key cannot be empty');
+    WebPluginRegistry.prototype.getPlugins = function () {
+        var p = [];
+        for (var name_1 in this.plugins) {
+            p.push(this.plugins[name_1]);
         }
-        if (!this.email) {
-            return console.error('ANGULAR-PAYSTACK: Paystack email cannot be empty');
-        }
-        if (!this.amount) {
-            return console.error('ANGULAR-PAYSTACK: Paystack amount cannot be empty');
-        }
-        if (!this.ref) {
-            return console.error('ANGULAR-PAYSTACK: Paystack ref cannot be empty');
-        }
-        if (!this.callback.observers.length) {
-            return console.error("ANGULAR-PAYSTACK: Insert a callback output like so (callback)='PaymentComplete($event)' to check payment status");
-        }
-        return true;
+        return p;
     };
-    /**
-     * @return {?}
-     */
-    Angular4PaystackDirective.prototype.setUp = /**
-     * @return {?}
-     */
-    function () {
-        var _this = this;
-        this.paystackOptions = {
-            key: this.key,
-            email: this.email,
-            amount: this.amount,
-            ref: this.ref,
-            metadata: this.metadata || {},
-            currency: this.currency || 'NGN',
-            plan: this.plan || '',
-            quantity: this.quantity || '',
-            subaccount: this.subaccount || '',
-            channels: this.channels,
-            transaction_charge: this.transaction_charge || 0,
-            bearer: this.bearer || '',
-            callback: (/**
-             * @param {?} res
-             * @return {?}
-             */
-            function (res) {
-                _this.isPaying = false;
-                _this.callback.emit(res);
-            }),
-            onClose: (/**
-             * @return {?}
-             */
-            function () {
-                _this.isPaying = false;
-                _this.close.emit();
-            })
-        };
-    };
-    /**
-     * @return {?}
-     */
-    Angular4PaystackDirective.prototype.loadScript = /**
-     * @return {?}
-     */
-    function () {
-        return new Promise((/**
-         * @param {?} resolve
-         * @return {?}
-         */
-        function (resolve) {
-            if (window.PaystackPop && typeof window.PaystackPop.setup === 'function') {
-                resolve();
-                return;
-            }
-            /** @type {?} */
-            var script = window.document.createElement('script');
-            window.document.head.appendChild(script);
-            /** @type {?} */
-            var onLoadFunc = (/**
-             * @return {?}
-             */
-            function () {
-                script.removeEventListener('load', onLoadFunc);
-                resolve();
-            });
-            script.addEventListener('load', onLoadFunc);
-            script.setAttribute('src', 'https://js.paystack.co/v1/inline.js');
-        }));
-    };
-    /**
-     * @return {?}
-     */
-    Angular4PaystackDirective.prototype.buttonClick = /**
-     * @return {?}
-     */
-    function () {
-        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
-            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        if (this.isPaying) {
-                            return [2 /*return*/];
-                        }
-                        return [4 /*yield*/, this.loadScript()];
-                    case 1:
-                        _a.sent();
-                        this.pay();
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    Angular4PaystackDirective.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Directive"], args: [{
-                    selector: '[angular4-paystack]',
-                },] }
-    ];
-    /** @nocollapse */
-    Angular4PaystackDirective.ctorParameters = function () { return []; };
-    Angular4PaystackDirective.propDecorators = {
-        text: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        key: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        email: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        amount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        metadata: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        ref: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        currency: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        plan: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        quantity: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        subaccount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        channels: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        transaction_charge: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        bearer: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        class: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        style: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        close: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] }],
-        callback: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] }],
-        buttonClick: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["HostListener"], args: ['click',] }]
-    };
-    return Angular4PaystackDirective;
+    return WebPluginRegistry;
 }());
-if (false) {
-    /** @type {?} */
-    Angular4PaystackDirective.prototype.text;
-    /** @type {?} */
-    Angular4PaystackDirective.prototype.key;
-    /** @type {?} */
-    Angular4PaystackDirective.prototype.email;
-    /** @type {?} */
-    Angular4PaystackDirective.prototype.amount;
-    /** @type {?} */
-    Angular4PaystackDirective.prototype.metadata;
-    /** @type {?} */
-    Angular4PaystackDirective.prototype.ref;
-    /** @type {?} */
-    Angular4PaystackDirective.prototype.currency;
-    /** @type {?} */
-    Angular4PaystackDirective.prototype.plan;
-    /** @type {?} */
-    Angular4PaystackDirective.prototype.quantity;
-    /** @type {?} */
-    Angular4PaystackDirective.prototype.subaccount;
-    /** @type {?} */
-    Angular4PaystackDirective.prototype.channels;
-    /** @type {?} */
-    Angular4PaystackDirective.prototype.transaction_charge;
-    /** @type {?} */
-    Angular4PaystackDirective.prototype.bearer;
-    /** @type {?} */
-    Angular4PaystackDirective.prototype.class;
-    /** @type {?} */
-    Angular4PaystackDirective.prototype.style;
-    /** @type {?} */
-    Angular4PaystackDirective.prototype.close;
-    /** @type {?} */
-    Angular4PaystackDirective.prototype.callback;
-    /**
-     * @type {?}
-     * @private
-     */
-    Angular4PaystackDirective.prototype.paystackOptions;
-    /**
-     * @type {?}
-     * @private
-     */
-    Angular4PaystackDirective.prototype.isPaying;
-}
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * @record
- */
-function MyWindow$2() { }
-if (false) {
-    /** @type {?} */
-    MyWindow$2.prototype.PaystackPop;
-}
-var Angular4PaystackEmbed = /** @class */ (function () {
-    function Angular4PaystackEmbed() {
-        this.paymentInit = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
-        this.close = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
-        this.callback = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
+var WebPlugins = new WebPluginRegistry();
+
+var WebPlugin = /** @class */ (function () {
+    function WebPlugin(config, pluginRegistry) {
+        this.config = config;
+        this.loaded = false;
+        this.listeners = {};
+        this.windowListeners = {};
+        if (!pluginRegistry) {
+            WebPlugins.addPlugin(this);
+        }
+        else {
+            pluginRegistry.addPlugin(this);
+        }
     }
-    /**
-     * @return {?}
-     */
-    Angular4PaystackEmbed.prototype.pay = /**
-     * @return {?}
-     */
-    function () {
-        if (!this.checkInput()) {
+    WebPlugin.prototype.addWindowListener = function (handle) {
+        window.addEventListener(handle.windowEventName, handle.handler);
+        handle.registered = true;
+    };
+    WebPlugin.prototype.removeWindowListener = function (handle) {
+        if (!handle) {
             return;
         }
-        this.setUp();
-        if (this.paymentInit.observers.length) {
-            this.paymentInit.emit();
-        }
-        window.PaystackPop.setup(this.paystackOptions);
+        window.removeEventListener(handle.windowEventName, handle.handler);
+        handle.registered = false;
     };
-    /**
-     * @return {?}
-     */
-    Angular4PaystackEmbed.prototype.checkInput = /**
-     * @return {?}
-     */
-    function () {
-        if (!this.key) {
-            return console.error('ANGULAR-PAYSTACK: Paystack key cannot be empty');
-        }
-        if (!this.email) {
-            return console.error('ANGULAR-PAYSTACK: Paystack email cannot be empty');
-        }
-        if (!this.amount) {
-            return console.error('ANGULAR-PAYSTACK: Paystack amount cannot be empty');
-        }
-        if (!this.ref) {
-            return console.error('ANGULAR-PAYSTACK: Paystack ref cannot be empty');
-        }
-        if (!this.callback.observers.length) {
-            return console.error("\n        ANGULAR-PAYSTACK: Insert a callback output like so (callback)='PaymentComplete($event)' to check payment status\n      ");
-        }
-        return true;
-    };
-    /**
-     * @return {?}
-     */
-    Angular4PaystackEmbed.prototype.setUp = /**
-     * @return {?}
-     */
-    function () {
+    WebPlugin.prototype.addListener = function (eventName, listenerFunc) {
         var _this = this;
-        this.paystackOptions = {
-            container: 'paystackEmbedContainer',
-            key: this.key,
-            email: this.email,
-            amount: this.amount,
-            ref: this.ref,
-            metadata: this.metadata || {},
-            currency: this.currency || 'NGN',
-            plan: this.plan || '',
-            quantity: this.quantity || '',
-            subaccount: this.subaccount || '',
-            channels: this.channels,
-            transaction_charge: this.transaction_charge || 0,
-            bearer: this.bearer || '',
-            callback: (/**
-             * @param {?} res
-             * @return {?}
-             */
-            function (res) { return _this.callback.emit(res); }),
-            onClose: (/**
-             * @return {?}
-             */
-            function () { return _this.close && _this.close.emit(); }),
+        var listeners = this.listeners[eventName];
+        if (!listeners) {
+            this.listeners[eventName] = [];
+        }
+        this.listeners[eventName].push(listenerFunc);
+        // If we haven't added a window listener for this event and it requires one,
+        // go ahead and add it
+        var windowListener = this.windowListeners[eventName];
+        if (windowListener && !windowListener.registered) {
+            this.addWindowListener(windowListener);
+        }
+        return {
+            remove: function () {
+                _this.removeListener(eventName, listenerFunc);
+            }
         };
     };
-    /**
-     * @return {?}
-     */
-    Angular4PaystackEmbed.prototype.loadScript = /**
-     * @return {?}
-     */
-    function () {
-        return new Promise((/**
-         * @param {?} resolve
-         * @return {?}
-         */
-        function (resolve) {
-            if (window.PaystackPop && typeof window.PaystackPop.setup === 'function') {
-                resolve();
-                return;
+    WebPlugin.prototype.removeListener = function (eventName, listenerFunc) {
+        var listeners = this.listeners[eventName];
+        if (!listeners) {
+            return;
+        }
+        var index = listeners.indexOf(listenerFunc);
+        this.listeners[eventName].splice(index, 1);
+        // If there are no more listeners for this type of event,
+        // remove the window listener
+        if (!this.listeners[eventName].length) {
+            this.removeWindowListener(this.windowListeners[eventName]);
+        }
+    };
+    WebPlugin.prototype.removeAllListeners = function () {
+        this.listeners = {};
+        for (var listener in this.windowListeners) {
+            this.removeWindowListener(this.windowListeners[listener]);
+        }
+        this.windowListeners = {};
+    };
+    WebPlugin.prototype.notifyListeners = function (eventName, data) {
+        var listeners = this.listeners[eventName];
+        if (listeners) {
+            listeners.forEach(function (listener) { return listener(data); });
+        }
+    };
+    WebPlugin.prototype.hasListeners = function (eventName) {
+        return !!this.listeners[eventName].length;
+    };
+    WebPlugin.prototype.registerWindowListener = function (windowEventName, pluginEventName) {
+        var _this = this;
+        this.windowListeners[pluginEventName] = {
+            registered: false,
+            windowEventName: windowEventName,
+            pluginEventName: pluginEventName,
+            handler: function (event) {
+                _this.notifyListeners(pluginEventName, event);
             }
-            /** @type {?} */
-            var script = window.document.createElement('script');
-            window.document.head.appendChild(script);
-            /** @type {?} */
-            var onLoadFunc = (/**
-             * @return {?}
-             */
-            function () {
-                script.removeEventListener('load', onLoadFunc);
-                resolve();
-            });
-            script.addEventListener('load', onLoadFunc);
-            script.setAttribute('src', 'https://js.paystack.co/v1/inline.js');
-        }));
+        };
     };
-    /**
-     * @return {?}
-     */
-    Angular4PaystackEmbed.prototype.ngOnInit = /**
-     * @return {?}
-     */
-    function () {
-        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
-            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.loadScript()];
-                    case 1:
-                        _a.sent();
-                        if (this.text) {
-                            console.error('ANGULAR-PAYSTACK: Paystack Text input is deprecated. Use this instead <angular4-paystack>Pay With Paystack</angular4-paystack>');
-                        }
-                        this.pay();
-                        return [2 /*return*/];
-                }
-            });
-        });
+    WebPlugin.prototype.requestPermissions = function () {
+        if (Capacitor.isNative) {
+            return Capacitor.nativePromise(this.config.name, 'requestPermissions', {});
+        }
+        else {
+            return Promise.resolve({ results: [] });
+        }
     };
-    Angular4PaystackEmbed.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"], args: [{
-                    selector: 'angular4-paystack-embed',
-                    changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ChangeDetectionStrategy"].OnPush,
-                    template: "<div id=\"paystackEmbedContainer\"></div>"
-                }] }
-    ];
-    /** @nocollapse */
-    Angular4PaystackEmbed.ctorParameters = function () { return []; };
-    Angular4PaystackEmbed.propDecorators = {
-        text: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        key: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        email: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        amount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        metadata: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        channels: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        ref: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        currency: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        plan: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        quantity: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        subaccount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        transaction_charge: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        bearer: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
-        paymentInit: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] }],
-        close: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] }],
-        callback: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] }]
+    WebPlugin.prototype.load = function () {
+        this.loaded = true;
     };
-    return Angular4PaystackEmbed;
+    return WebPlugin;
 }());
-if (false) {
-    /** @type {?} */
-    Angular4PaystackEmbed.prototype.text;
-    /** @type {?} */
-    Angular4PaystackEmbed.prototype.key;
-    /** @type {?} */
-    Angular4PaystackEmbed.prototype.email;
-    /** @type {?} */
-    Angular4PaystackEmbed.prototype.amount;
-    /** @type {?} */
-    Angular4PaystackEmbed.prototype.metadata;
-    /** @type {?} */
-    Angular4PaystackEmbed.prototype.channels;
-    /** @type {?} */
-    Angular4PaystackEmbed.prototype.ref;
-    /** @type {?} */
-    Angular4PaystackEmbed.prototype.currency;
-    /** @type {?} */
-    Angular4PaystackEmbed.prototype.plan;
-    /** @type {?} */
-    Angular4PaystackEmbed.prototype.quantity;
-    /** @type {?} */
-    Angular4PaystackEmbed.prototype.subaccount;
-    /** @type {?} */
-    Angular4PaystackEmbed.prototype.transaction_charge;
-    /** @type {?} */
-    Angular4PaystackEmbed.prototype.bearer;
-    /** @type {?} */
-    Angular4PaystackEmbed.prototype.paymentInit;
-    /** @type {?} */
-    Angular4PaystackEmbed.prototype.close;
-    /** @type {?} */
-    Angular4PaystackEmbed.prototype.callback;
-    /**
-     * @type {?}
-     * @private
-     */
-    Angular4PaystackEmbed.prototype.paystackOptions;
-}
 
+var shouldMergeWebPlugin = function (plugin) {
+    return plugin.config.platforms && plugin.config.platforms.indexOf(Capacitor.platform) >= 0;
+};
 /**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * For all our known web plugins, merge them into the global plugins
+ * registry if they aren't already existing. If they don't exist, that
+ * means there's no existing native implementation for it.
+ * @param knownPlugins the Capacitor.Plugins global registry.
  */
-var Angular4PaystackModule = /** @class */ (function () {
-    function Angular4PaystackModule() {
+var mergeWebPlugins = function (knownPlugins) {
+    var plugins = WebPlugins.getPlugins();
+    for (var _i = 0, plugins_1 = plugins; _i < plugins_1.length; _i++) {
+        var plugin = plugins_1[_i];
+        mergeWebPlugin(knownPlugins, plugin);
     }
-    Angular4PaystackModule.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"], args: [{
-                    imports: [__WEBPACK_IMPORTED_MODULE_2__angular_common__["CommonModule"]],
-                    exports: [Angular4PaystackComponent, Angular4PaystackDirective, Angular4PaystackEmbed],
-                    declarations: [Angular4PaystackComponent, Angular4PaystackDirective, Angular4PaystackEmbed],
-                    providers: [],
-                },] }
-    ];
-    return Angular4PaystackModule;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-
-
-//# sourceMappingURL=angular4-paystack.js.map
-
+};
+var mergeWebPlugin = function (knownPlugins, plugin) {
+    // If we already have a plugin registered (meaning it was defined in the native layer),
+    // then we should only overwrite it if the corresponding web plugin activates on
+    // a certain platform. For example: Geolocation uses the WebPlugin on Android but not iOS
+    if (knownPlugins.hasOwnProperty(plugin.config.name) && !shouldMergeWebPlugin(plugin)) {
+        return;
+    }
+    knownPlugins[plugin.config.name] = plugin;
+};
+//# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 781:
+/***/ 750:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_Plans__ = __webpack_require__(754);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interfaces_NewUser__ = __webpack_require__(748);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_authenication_authenication__ = __webpack_require__(88);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Teams; });
+var Teams = /** @class */ (function () {
+    function Teams(name, id, imageurl, country, league) {
+        this.name = name;
+        this.id = id;
+        this.imageurl = imageurl;
+        this.country = country;
+        this.league = league;
+    }
+    return Teams;
+}());
+
+//# sourceMappingURL=Teams.js.map
+
+/***/ }),
+
+/***/ 751:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return CameraSource; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CameraDirection; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return CameraResultType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return FilesystemDirectory; });
+/* unused harmony export FilesystemEncoding */
+/* unused harmony export HapticsImpactStyle */
+/* unused harmony export HapticsNotificationType */
+/* unused harmony export KeyboardStyle */
+/* unused harmony export KeyboardResize */
+/* unused harmony export ActionSheetOptionStyle */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return PermissionType; });
+/* unused harmony export PhotosAlbumType */
+/* unused harmony export StatusBarStyle */
+/* unused harmony export StatusBarAnimation */
+var CameraSource;
+(function (CameraSource) {
+    CameraSource["Prompt"] = "PROMPT";
+    CameraSource["Camera"] = "CAMERA";
+    CameraSource["Photos"] = "PHOTOS";
+})(CameraSource || (CameraSource = {}));
+var CameraDirection;
+(function (CameraDirection) {
+    CameraDirection["Rear"] = "REAR";
+    CameraDirection["Front"] = "FRONT";
+})(CameraDirection || (CameraDirection = {}));
+var CameraResultType;
+(function (CameraResultType) {
+    CameraResultType["Uri"] = "uri";
+    CameraResultType["Base64"] = "base64";
+    CameraResultType["DataUrl"] = "dataUrl";
+})(CameraResultType || (CameraResultType = {}));
+var FilesystemDirectory;
+(function (FilesystemDirectory) {
+    /**
+     * The Documents directory
+     * On iOS it's the app's documents directory.
+     * Use this directory to store user-generated content.
+     * On Android it's the Public Documents folder, so it's accessible from other apps.
+     * It's not accesible on Android 10 unless the app enables legacy External Storage
+     * by adding `android:requestLegacyExternalStorage="true"` in the `application` tag
+     * in the `AndroidManifest.xml`
+     */
+    FilesystemDirectory["Documents"] = "DOCUMENTS";
+    /**
+     * The Data directory
+     * On iOS it will use the Documents directory
+     * On Android it's the directory holding application files.
+     * Files will be deleted when the application is uninstalled.
+     */
+    FilesystemDirectory["Data"] = "DATA";
+    /**
+     * The Cache directory
+     * Can be deleted in cases of low memory, so use this directory to write app-specific files
+     * that your app can re-create easily.
+     */
+    FilesystemDirectory["Cache"] = "CACHE";
+    /**
+     * The external directory
+     * On iOS it will use the Documents directory
+     * On Android it's the directory on the primary shared/external
+     * storage device where the application can place persistent files it owns.
+     * These files are internal to the applications, and not typically visible
+     * to the user as media.
+     * Files will be deleted when the application is uninstalled.
+     */
+    FilesystemDirectory["External"] = "EXTERNAL";
+    /**
+     * The external storage directory
+     * On iOS it will use the Documents directory
+     * On Android it's the primary shared/external storage directory.
+     * It's not accesible on Android 10 unless the app enables legacy External Storage
+     * by adding `android:requestLegacyExternalStorage="true"` in the `application` tag
+     * in the `AndroidManifest.xml`
+     */
+    FilesystemDirectory["ExternalStorage"] = "EXTERNAL_STORAGE";
+})(FilesystemDirectory || (FilesystemDirectory = {}));
+var FilesystemEncoding;
+(function (FilesystemEncoding) {
+    FilesystemEncoding["UTF8"] = "utf8";
+    FilesystemEncoding["ASCII"] = "ascii";
+    FilesystemEncoding["UTF16"] = "utf16";
+})(FilesystemEncoding || (FilesystemEncoding = {}));
+var HapticsImpactStyle;
+(function (HapticsImpactStyle) {
+    HapticsImpactStyle["Heavy"] = "HEAVY";
+    HapticsImpactStyle["Medium"] = "MEDIUM";
+    HapticsImpactStyle["Light"] = "LIGHT";
+})(HapticsImpactStyle || (HapticsImpactStyle = {}));
+var HapticsNotificationType;
+(function (HapticsNotificationType) {
+    HapticsNotificationType["SUCCESS"] = "SUCCESS";
+    HapticsNotificationType["WARNING"] = "WARNING";
+    HapticsNotificationType["ERROR"] = "ERROR";
+})(HapticsNotificationType || (HapticsNotificationType = {}));
+var KeyboardStyle;
+(function (KeyboardStyle) {
+    KeyboardStyle["Dark"] = "DARK";
+    KeyboardStyle["Light"] = "LIGHT";
+})(KeyboardStyle || (KeyboardStyle = {}));
+var KeyboardResize;
+(function (KeyboardResize) {
+    KeyboardResize["Body"] = "body";
+    KeyboardResize["Ionic"] = "ionic";
+    KeyboardResize["Native"] = "native";
+    KeyboardResize["None"] = "none";
+})(KeyboardResize || (KeyboardResize = {}));
+var ActionSheetOptionStyle;
+(function (ActionSheetOptionStyle) {
+    ActionSheetOptionStyle["Default"] = "DEFAULT";
+    ActionSheetOptionStyle["Destructive"] = "DESTRUCTIVE";
+    ActionSheetOptionStyle["Cancel"] = "CANCEL";
+})(ActionSheetOptionStyle || (ActionSheetOptionStyle = {}));
+//
+var PermissionType;
+(function (PermissionType) {
+    PermissionType["Camera"] = "camera";
+    PermissionType["Photos"] = "photos";
+    PermissionType["Geolocation"] = "geolocation";
+    PermissionType["Notifications"] = "notifications";
+    PermissionType["ClipboardRead"] = "clipboard-read";
+    PermissionType["ClipboardWrite"] = "clipboard-write";
+    PermissionType["Microphone"] = "microphone";
+})(PermissionType || (PermissionType = {}));
+var PhotosAlbumType;
+(function (PhotosAlbumType) {
+    /**
+     * Album is a "smart" album (such as Favorites or Recently Added)
+     */
+    PhotosAlbumType["Smart"] = "smart";
+    /**
+     * Album is a cloud-shared album
+     */
+    PhotosAlbumType["Shared"] = "shared";
+    /**
+     * Album is a user-created album
+     */
+    PhotosAlbumType["User"] = "user";
+})(PhotosAlbumType || (PhotosAlbumType = {}));
+var StatusBarStyle;
+(function (StatusBarStyle) {
+    /**
+     * Light text for dark backgrounds.
+     */
+    StatusBarStyle["Dark"] = "DARK";
+    /**
+     * Dark text for light backgrounds.
+     */
+    StatusBarStyle["Light"] = "LIGHT";
+})(StatusBarStyle || (StatusBarStyle = {}));
+var StatusBarAnimation;
+(function (StatusBarAnimation) {
+    /**
+     * No animation during show/hide.
+     */
+    StatusBarAnimation["None"] = "NONE";
+    /**
+     * Slide animation during show/hide.
+     */
+    StatusBarAnimation["Slide"] = "SLIDE";
+    /**
+     * Fade animation during show/hide.
+     */
+    StatusBarAnimation["Fade"] = "FADE";
+})(StatusBarAnimation || (StatusBarAnimation = {}));
+//# sourceMappingURL=core-plugin-definitions.js.map
+
+/***/ }),
+
+/***/ 760:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {/* unused harmony export Capacitor */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Plugins; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__web_runtime__ = __webpack_require__(800);
+
+// Create our default Capacitor instance, which will be
+// overridden on native platforms
+var Capacitor = (function (globalThis) {
+    // Create a new CapacitorWeb instance if one doesn't already exist on globalThis
+    // Ensure the global is assigned the same Capacitor instance,
+    // then export Capacitor so it can be imported in other modules
+    return globalThis.Capacitor = (globalThis.Capacitor || new __WEBPACK_IMPORTED_MODULE_0__web_runtime__["a" /* CapacitorWeb */]());
+})(
+// figure out the current globalThis, such as "window", "self" or "global"
+// ensure errors are not thrown in an node SSR environment or web worker
+typeof self !== 'undefined' ? self : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : {});
+var Plugins = Capacitor.Plugins;
+
+//# sourceMappingURL=global.js.map
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(46)))
+
+/***/ }),
+
+/***/ 761:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return extend; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return uuid4; });
+var extend = function (target) {
+    var objs = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        objs[_i - 1] = arguments[_i];
+    }
+    objs.forEach(function (o) {
+        if (o && typeof (o) === 'object') {
+            for (var k in o) {
+                if (o.hasOwnProperty(k)) {
+                    target[k] = o[k];
+                }
+            }
+        }
+    });
+    return target;
+};
+var uuid4 = function () {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        var r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
+};
+//# sourceMappingURL=util.js.map
+
+/***/ }),
+
+/***/ 798:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingTeamEditPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_games_games__ = __webpack_require__(357);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_Teams__ = __webpack_require__(750);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__capacitor_core__ = __webpack_require__(799);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -844,52 +479,81 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var ProfilePage = /** @class */ (function () {
-    function ProfilePage(navCtrl, alertCtrl, authProvider, loadingCtrl, pltform, actionSheetCtrl) {
+
+var Camera = __WEBPACK_IMPORTED_MODULE_5__capacitor_core__["c" /* Plugins */].Camera;
+var SettingTeamEditPage = /** @class */ (function () {
+    function SettingTeamEditPage(navCtrl, authProvider, gamesProvider, alertCtrl, loadingCtrl, actionSheetCtrl, navParams) {
         this.navCtrl = navCtrl;
-        this.alertCtrl = alertCtrl;
         this.authProvider = authProvider;
+        this.gamesProvider = gamesProvider;
+        this.alertCtrl = alertCtrl;
         this.loadingCtrl = loadingCtrl;
-        this.pltform = pltform;
         this.actionSheetCtrl = actionSheetCtrl;
+        this.navParams = navParams;
         this.flag = true;
-        this.img1 = "assets/imgs/profileCover.png";
-        this.img2 = "/assets/imgs/appicon.png";
-        this.newuser = new __WEBPACK_IMPORTED_MODULE_1__interfaces_NewUser__["a" /* NewUsers */]("", "", "", "", "", "", "", { id: "" }, "", { id: "", name: "" }, { id: "", name: "" });
-        this.userplan = new __WEBPACK_IMPORTED_MODULE_0__interfaces_Plans__["a" /* Plans */]("", { id: "", name: "", amount: "" }, "", "");
-        this.channels = ['card']; //Paystack Payment Methods
-        this.random_id = Math.floor(Date.now() / 1000); //Line to generate reference number
-    }
-    ProfilePage.prototype.ionViewWillEnter = function () {
-        this.GetUserDeta();
-    };
-    ProfilePage.prototype.GetUserDeta = function () {
-        var _this = this;
-        this.authProvider.GetUserDeta().subscribe(function (result) {
-            if (result.statusCode == 200) {
-                console.log(result);
-                _this.userplan = result.data.planData;
-                _this.newuser = result.data.userData;
+        this.team = new __WEBPACK_IMPORTED_MODULE_2__interfaces_Teams__["a" /* Teams */]("", "", "", { id: "", name: "", imageurl: "" }, { id: "", name: "", imageurl: "" });
+        this.teams = this.navParams.get("team");
+        if (this.teams) {
+            this.team = this.teams;
+            if (this.teams.imageurl) {
+                this.team.imageurl = this.teams.imageurl;
             }
             else {
-                _this.authProvider.showToast(result.description);
+                this.team.imageurl = "/assets/imgs/appicon.png";
             }
-        }, function (error) {
-            _this.authProvider.showToast(error.error.description);
-        });
+        }
+    }
+    SettingTeamEditPage.prototype.ionViewDidLoad = function () {
+        this.flag = (this.flag != false) ? false : true;
     };
-    ProfilePage.prototype.updateAccount = function (user) {
+    SettingTeamEditPage.prototype.onDelete = function () {
         var _this = this;
-        console.log(user);
-        if (user) {
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        var confirm = this.alertCtrl.create({
+            title: 'Delete Team',
+            message: "Do you want to delete <b>" + this.team.name + "</b> <br/>from <br/><b>" + this.team.league.name + "</b> league?<br/><br/>This is action is irreversible.",
+            buttons: [
+                {
+                    text: 'No',
+                    handler: function () {
+                    }
+                },
+                {
+                    text: 'Yes',
+                    handler: function () {
+                        loading.present();
+                        _this.gamesProvider.deleteTeam(_this.team.id).subscribe(function (res) {
+                            loading.dismiss().catch(function () { });
+                            if (res.statusCode === 200) {
+                                _this.navCtrl.pop();
+                            }
+                            else {
+                                _this.authProvider.showToast(res.description);
+                            }
+                        }, function (error) {
+                            loading.dismiss().catch(function () { });
+                            _this.authProvider.showToast(error.error.error);
+                        });
+                    }
+                }
+            ]
+        });
+        confirm.present();
+    };
+    SettingTeamEditPage.prototype.onSubmit = function (team) {
+        var _this = this;
+        if (team.name) {
+            team.imageurl = (team.imageurl != undefined) ? this.team.imageurl : this.img;
             var loading_1 = this.loadingCtrl.create({
                 content: "Please wait..."
             });
             loading_1.present();
-            this.authProvider.updateUser(user).subscribe(function (res) {
+            this.gamesProvider.updateTeam(team).subscribe(function (res) {
                 loading_1.dismiss().catch(function () { });
                 if (res.statusCode === 200) {
-                    _this.GetUserDeta();
+                    _this.navCtrl.pop();
                 }
                 else {
                     _this.authProvider.showToast(res.description);
@@ -900,57 +564,2139 @@ var ProfilePage = /** @class */ (function () {
             });
         }
         else {
-            this.authProvider.showToast("Please, check something is wrong.");
+            this.authProvider.showToast("Name of team input field is empty");
         }
     };
-    ProfilePage.prototype.renewAccount = function (plan) {
+    SettingTeamEditPage.prototype.selectImage = function () {
         var _this = this;
-        var confirm = this.alertCtrl.create({
-            title: 'Update Plan',
-            message: "You are about to update <b> your subscription plan</b> <br/> to " + plan.plantype.name + ". <br/><br/>If <b>" + plan.plantype.name + "</b> is not the plan you want to update to, you can change it on the subscription screen. <br/><br/>This action is irreversible.",
+        var actionSheet = this.actionSheetCtrl.create({
+            title: 'Change Team Logo',
             buttons: [
                 {
+                    text: 'Gallery',
+                    handler: function () { _this.get_camera('Gallery'); }
+                }, {
+                    text: 'Camera',
+                    handler: function () { _this.get_camera('Camera'); }
+                }, {
                     text: 'Cancel',
-                    handler: function () {
-                    }
-                },
-                {
-                    text: 'Proceed',
-                    handler: function () {
-                        _this.newuser.plantype = _this.userplan.plantype;
-                        if (_this.pltform.is("ios")) {
-                            _this.onIOSSubscription();
-                        }
-                        else if (_this.pltform.is("android")) {
-                            _this.onAndroidSubscription();
-                        }
-                    }
+                    role: 'cancel',
+                    handler: function () { }
                 }
             ]
         });
-        confirm.present();
+        actionSheet.present();
     };
-    ProfilePage.prototype.onIOSSubscription = function () {
-        this.navCtrl.push("SubscriptionIosPage", { newuser: this.newuser, sub_option: "renewal" });
+    SettingTeamEditPage.prototype.get_camera = function (source) {
+        var _this = this;
+        var options = {
+            quality: 50,
+            height: 320,
+            correctOrientation: true,
+            width: 320,
+            resultType: __WEBPACK_IMPORTED_MODULE_5__capacitor_core__["a" /* CameraResultType */].DataUrl
+        };
+        if (source == 'Gallery') {
+            options.source = __WEBPACK_IMPORTED_MODULE_5__capacitor_core__["b" /* CameraSource */].Photos;
+        }
+        else {
+            options.source = __WEBPACK_IMPORTED_MODULE_5__capacitor_core__["b" /* CameraSource */].Camera;
+        }
+        Camera.getPhoto(options).then(function (imageData) {
+            _this.img = 'data:image/jpeg;base64,' + imageData.base64String;
+            _this.team.imageurl = _this.img;
+        }).catch(function (error) {
+            console.log(error);
+            if (_this.img != undefined) {
+                _this.team.imageurl = _this.img;
+            }
+            return false;
+        });
     };
-    ProfilePage.prototype.onAndroidSubscription = function () {
-        this.navCtrl.push("SubscriptionAndroidPage", { newuser: this.newuser, sub_option: "renewal" });
-    };
-    ProfilePage = __decorate([
+    SettingTeamEditPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-            selector: 'page-profile',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/profile/profile.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Profile</ion-title>\n\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <div class="imgs">\n    <button ion-button icon-only class="coverCamera" [ngClass]="{\'show\':flag==false}">\n      <ion-icon name="md-camera"></ion-icon>\n    </button>\n    <img src="{{img1}}" />\n    <div class="imgProfile" [ngStyle]="{\'background-image\':\'url(\' + img2 + \')\'}">\n      <button ion-button icon-only class="profileCamera" [ngClass]="{\'show\':flag==false}">\n        <ion-icon name="md-camera"></ion-icon>\n      </button>\n    </div>\n  </div>\n\n  <!-- name and email -->\n  <div class="nameAndMail">\n    <h5 ion-text color="dark">{{newuser.firstname}} {{newuser.lastname}}</h5>\n    <p ion-text color="dark">{{newuser?.email}}</p>\n  </div>\n\n  <!-- other information -->\n  <div class="otherForm">\n    <ion-list>\n      <ion-list-header>\n        <h2 ion-text text-center color="color2">My Details</h2>\n      </ion-list-header>\n      <ion-item class="halfItem" float-left>\n        <ion-label stacked>\n          First Name\n        </ion-label>\n        <ion-input type="text" [(ngModel)]="newuser.firstname" name="firstname" id="firstname" placeholder="First Name">\n        </ion-input>\n      </ion-item>\n      <ion-item class="halfItem" float-left>\n        <ion-label stacked>\n          Last Name\n        </ion-label>\n        <ion-input type="text" [(ngModel)]="newuser.lastname" name="lastname" id="lastname" placeholder="Last Name">\n        </ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-label stacked>\n           Email\n        </ion-label>\n        <ion-input type="email" [(ngModel)]="newuser.email" name="email" id="email" placeholder="E-mail"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label stacked>\n           Phone\n        </ion-label>\n        <ion-input type="tel" [(ngModel)]="newuser.phone" name="phone" id="phone" placeholder="Phone"></ion-input>\n      </ion-item>\n\n      <ion-item class="halfItem" float-left>\n        <ion-label stacked>\n          Current Membership\n        </ion-label>\n        <ion-input type="text" [(ngModel)]="newuser.usertypes.name" disabled>\n        </ion-input>\n      </ion-item>\n      <ion-item class="halfItem" float-left>\n        <ion-label stacked>\n          Current Status\n        </ion-label>\n        <ion-input type="text" [(ngModel)]="newuser.status.name" disabled>\n        </ion-input>\n      </ion-item>\n\n      <button ion-button block margin-bottom type="submit" color="color2" (click)="updateAccount(newuser)">Update\n        Account\n      </button>\n    </ion-list>\n    <ion-list *ngIf="userplan">\n      <hr class="margin-top margin-bottom">\n      <ion-list-header>\n        <h2 ion-text text-center color="color2">My Subscription Details</h2>\n      </ion-list-header>\n      <ion-item margin-top>\n        <h5 ion-text color="dark"><b>Current Plan Name</b></h5>\n        <p ion-text color="color1"><b>{{userplan.plantype.name}}</b></p>\n      </ion-item>\n\n\n      <ion-item class="halfItem" float-left>\n        <h5 ion-text color="dark"><b>Start Date</b></h5>\n        <p ion-text color="color1"><b>{{userplan.startDate}}</b></p>\n      </ion-item>\n      <ion-item class="halfItem" float-left>\n        <h5 ion-text color="dark"><b>End/Due Date</b></h5>\n        <p ion-text color="color1"><b>{{userplan.endDate}}</b></p>\n      </ion-item>\n      <ion-item class="halfItem" float-left>\n        <h5 ion-text color="dark"><b>Amount</b></h5>\n        <p ion-text color="color1"><b>{{userplan.plantype.amount  | currency: \'NGN\': \'1.2-2\'}}</b></p>\n      </ion-item>\n      <ion-item class="halfItem" float-left>\n        <h5 ion-text color="dark"><b>Status</b></h5>\n        <p ion-text color="danger" *ngIf="newuser.status.name === \'Inactive\'"><b>Expired</b></p>\n        <p ion-text color="secondary" *ngIf="newuser.status.name === \'Active\'"><b>Running</b></p>\n      </ion-item>\n      <button ion-button block type="submit" color="color2" (click)="renewAccount(userplan)">Renew\n        Subscription</button>\n        \n    </ion-list>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/profile/profile.html"*/,
+            selector: 'page-setting-team-edit',template:/*ion-inline-start:"/Users/mac/Downloads/Sure3Odds/src/pages/setting-team-edit/setting-team-edit.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Edit Team</ion-title>\n    <!-- <ion-buttons end>\n      <button ion-button icon-only (click)="onDelete()">\n        <ion-icon name="trash"></ion-icon>\n      </button>\n    </ion-buttons> -->\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="imgs" style="margin-top: 1em;">\n    <div  class="imgProfile2 margin-top" ion-text padding-top [ngStyle]="{\'background-image\':\'url(\' + team.imageurl + \')\'}">\n      <button ion-button icon-only class="profileCamera"  [ngClass]="{\'show\':flag==false}"  (click)="selectImage()">\n        <ion-icon name="md-camera"></ion-icon>\n      </button>\n    </div>\n  </div>\n  <div class="">\n    <div class="otherForm">\n      <ion-list>\n        <ion-item>\n          <ion-label stacked>Country Name</ion-label>\n          <ion-input disabled type="text" [(ngModel)]="team.country.name"></ion-input>\n          <ion-input hidden type="text" [(ngModel)]="team.country.id"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label stacked>League Name</ion-label>\n          <ion-input disabled type="text" [(ngModel)]="team.league.name"></ion-input>\n          <ion-input hidden type="text" [(ngModel)]="team.league.id"></ion-input>\n        </ion-item>\n        <!-- appear when click update -->\n        <ion-item>\n          <ion-label stacked>Team Name</ion-label>\n          <ion-input type="text" [(ngModel)]="team.name"></ion-input>\n          <ion-input hidden type="text" [(ngModel)]="team.id"></ion-input>\n        </ion-item>\n        <!-- ==================================== -->\n      </ion-list>\n      <button ion-button block color="color2" (click)="onSubmit(team)">Submit</button>\n    </div>\n  </div>\n \n</ion-content>\n'/*ion-inline-end:"/Users/mac/Downloads/Sure3Odds/src/pages/setting-team-edit/setting-team-edit.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"],
+            __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */],
+            __WEBPACK_IMPORTED_MODULE_0__providers_games_games__["a" /* GamesProvider */],
             __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["AlertController"],
-            __WEBPACK_IMPORTED_MODULE_2__providers_authenication_authenication__["a" /* AuthenicationProvider */],
             __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["LoadingController"],
-            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["Platform"],
-            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ActionSheetController"]])
-    ], ProfilePage);
-    return ProfilePage;
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ActionSheetController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"]])
+    ], SettingTeamEditPage);
+    return SettingTeamEditPage;
 }());
 
-//# sourceMappingURL=profile.js.map
+//# sourceMappingURL=setting-team-edit.js.map
+
+/***/ }),
+
+/***/ 799:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_plugin_definitions__ = __webpack_require__(751);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__core_plugin_definitions__["b"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__core_plugin_definitions__["c"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__global__ = __webpack_require__(760);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_1__global__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__web_plugins__ = __webpack_require__(801);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__web_index__ = __webpack_require__(748);
+/* unused harmony namespace reexport */
+
+
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 800:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CapacitorWeb; });
+var CapacitorWeb = /** @class */ (function () {
+    function CapacitorWeb() {
+        var _this = this;
+        this.platform = 'web';
+        this.isNative = false;
+        // Need to assign here to avoid having to define every plugin but still
+        // get the typed benefits of the provided plugins in PluginRegistry
+        this.Plugins = {};
+        // Gracefully degrade in non-Proxy supporting engines, e.g. IE11. This
+        // effectively means that trying to access an unavailable plugin will
+        // locally throw, but this is still better than throwing a syntax error.
+        if (typeof Proxy !== 'undefined') {
+            // Build a proxy for the Plugins object that returns the "Noop Plugin"
+            // if a plugin isn't available
+            this.Plugins = new Proxy(this.Plugins, {
+                get: function (target, prop) {
+                    if (typeof target[prop] === 'undefined') {
+                        var thisRef_1 = _this;
+                        return new Proxy({}, {
+                            get: function (_target, _prop) {
+                                if (typeof _target[_prop] === 'undefined') {
+                                    return thisRef_1.pluginMethodNoop.bind(thisRef_1, _target, _prop, prop);
+                                }
+                                else {
+                                    return _target[_prop];
+                                }
+                            }
+                        });
+                    }
+                    else {
+                        return target[prop];
+                    }
+                }
+            });
+        }
+    }
+    CapacitorWeb.prototype.pluginMethodNoop = function (_target, _prop, pluginName) {
+        return Promise.reject(pluginName + " does not have web implementation.");
+    };
+    CapacitorWeb.prototype.getPlatform = function () {
+        return this.platform;
+    };
+    CapacitorWeb.prototype.isPluginAvailable = function (name) {
+        return this.Plugins.hasOwnProperty(name);
+    };
+    CapacitorWeb.prototype.convertFileSrc = function (filePath) {
+        return filePath;
+    };
+    CapacitorWeb.prototype.handleError = function (e) {
+        console.error(e);
+    };
+    return CapacitorWeb;
+}());
+
+//# sourceMappingURL=web-runtime.js.map
+
+/***/ }),
+
+/***/ 801:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export registerWebPlugin */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__global__ = __webpack_require__(760);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__web_index__ = __webpack_require__(748);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__web_accessibility__ = __webpack_require__(802);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__web_app__ = __webpack_require__(803);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__web_browser__ = __webpack_require__(804);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__web_camera__ = __webpack_require__(805);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__web_clipboard__ = __webpack_require__(806);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__web_filesystem__ = __webpack_require__(807);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__web_geolocation__ = __webpack_require__(808);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__web_device__ = __webpack_require__(809);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__web_local_notifications__ = __webpack_require__(810);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__web_share__ = __webpack_require__(811);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__web_modals__ = __webpack_require__(812);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__web_motion__ = __webpack_require__(813);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__web_network__ = __webpack_require__(814);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__web_permissions__ = __webpack_require__(815);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__web_splash_screen__ = __webpack_require__(816);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__web_storage__ = __webpack_require__(817);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__web_toast__ = __webpack_require__(818);
+/* unused harmony namespace reexport */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Object(__WEBPACK_IMPORTED_MODULE_1__web_index__["c" /* mergeWebPlugins */])(__WEBPACK_IMPORTED_MODULE_0__global__["a" /* Plugins */]);
+var registerWebPlugin = function (plugin) {
+    Object(__WEBPACK_IMPORTED_MODULE_1__web_index__["b" /* mergeWebPlugin */])(__WEBPACK_IMPORTED_MODULE_0__global__["a" /* Plugins */], plugin);
+};
+//# sourceMappingURL=web-plugins.js.map
+
+/***/ }),
+
+/***/ 802:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export AccessibilityPluginWeb */
+/* unused harmony export Accessibility */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(748);
+
+
+var AccessibilityPluginWeb = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __extends */])(AccessibilityPluginWeb, _super);
+    function AccessibilityPluginWeb() {
+        return _super.call(this, {
+            name: 'Accessibility',
+            platforms: ['web']
+        }) || this;
+    }
+    AccessibilityPluginWeb.prototype.isScreenReaderEnabled = function () {
+        throw new Error('Feature not available in the browser');
+    };
+    AccessibilityPluginWeb.prototype.speak = function (options) {
+        if (!('speechSynthesis' in window)) {
+            return Promise.reject('Browser does not support the Speech Synthesis API');
+        }
+        var utterance = new SpeechSynthesisUtterance(options.value);
+        if (options.language) {
+            utterance.lang = options.language;
+        }
+        window.speechSynthesis.speak(utterance);
+        return Promise.resolve();
+    };
+    return AccessibilityPluginWeb;
+}(__WEBPACK_IMPORTED_MODULE_1__index__["a" /* WebPlugin */]));
+
+var Accessibility = new AccessibilityPluginWeb();
+
+//# sourceMappingURL=accessibility.js.map
+
+/***/ }),
+
+/***/ 803:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export AppPluginWeb */
+/* unused harmony export App */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(748);
+
+
+var AppPluginWeb = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __extends */])(AppPluginWeb, _super);
+    function AppPluginWeb() {
+        var _this = _super.call(this, {
+            name: 'App',
+            platforms: ['web']
+        }) || this;
+        if (typeof document !== 'undefined') {
+            document.addEventListener('visibilitychange', _this.handleVisibilityChange.bind(_this), false);
+        }
+        return _this;
+    }
+    AppPluginWeb.prototype.exitApp = function () {
+        throw new Error('Method not implemented.');
+    };
+    AppPluginWeb.prototype.canOpenUrl = function (_options) {
+        return Promise.resolve({ value: true });
+    };
+    AppPluginWeb.prototype.openUrl = function (_options) {
+        return Promise.resolve({ completed: true });
+    };
+    AppPluginWeb.prototype.getLaunchUrl = function () {
+        return Promise.resolve({ url: '' });
+    };
+    AppPluginWeb.prototype.getState = function () {
+        return Promise.resolve({ isActive: document.hidden !== true });
+    };
+    AppPluginWeb.prototype.handleVisibilityChange = function () {
+        var data = {
+            isActive: document.hidden !== true
+        };
+        this.notifyListeners('appStateChange', data);
+    };
+    return AppPluginWeb;
+}(__WEBPACK_IMPORTED_MODULE_1__index__["a" /* WebPlugin */]));
+
+var App = new AppPluginWeb();
+
+//# sourceMappingURL=app.js.map
+
+/***/ }),
+
+/***/ 804:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export BrowserPluginWeb */
+/* unused harmony export Browser */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(748);
+
+
+var BrowserPluginWeb = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __extends */])(BrowserPluginWeb, _super);
+    function BrowserPluginWeb() {
+        return _super.call(this, {
+            name: 'Browser',
+            platforms: ['web']
+        }) || this;
+    }
+    BrowserPluginWeb.prototype.open = function (options) {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                this._lastWindow = window.open(options.url, options.windowName || '_blank');
+                return [2 /*return*/, Promise.resolve()];
+            });
+        });
+    };
+    BrowserPluginWeb.prototype.prefetch = function (_options) {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                // Does nothing
+                return [2 /*return*/, Promise.resolve()];
+            });
+        });
+    };
+    BrowserPluginWeb.prototype.close = function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                this._lastWindow && this._lastWindow.close();
+                return [2 /*return*/, Promise.resolve()];
+            });
+        });
+    };
+    return BrowserPluginWeb;
+}(__WEBPACK_IMPORTED_MODULE_1__index__["a" /* WebPlugin */]));
+
+var Browser = new BrowserPluginWeb();
+
+//# sourceMappingURL=browser.js.map
+
+/***/ }),
+
+/***/ 805:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export CameraPluginWeb */
+/* unused harmony export Camera */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(748);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_plugin_definitions__ = __webpack_require__(751);
+
+
+
+var CameraPluginWeb = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __extends */])(CameraPluginWeb, _super);
+    function CameraPluginWeb() {
+        return _super.call(this, {
+            name: 'Camera',
+            platforms: ['web']
+        }) || this;
+    }
+    CameraPluginWeb.prototype.getPhoto = function (options) {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var _this = this;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) { return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(_this, void 0, void 0, function () {
+                        var cameraModal_1, e_1;
+                        var _this = this;
+                        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                            switch (_a.label) {
+                                case 0:
+                                    if (!options.webUseInput) return [3 /*break*/, 1];
+                                    this.fileInputExperience(options, resolve);
+                                    return [3 /*break*/, 7];
+                                case 1:
+                                    if (!customElements.get('pwa-camera-modal')) return [3 /*break*/, 6];
+                                    cameraModal_1 = document.createElement('pwa-camera-modal');
+                                    document.body.appendChild(cameraModal_1);
+                                    _a.label = 2;
+                                case 2:
+                                    _a.trys.push([2, 4, , 5]);
+                                    return [4 /*yield*/, cameraModal_1.componentOnReady()];
+                                case 3:
+                                    _a.sent();
+                                    cameraModal_1.addEventListener('onPhoto', function (e) { return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(_this, void 0, void 0, function () {
+                                        var photo, _a;
+                                        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_b) {
+                                            switch (_b.label) {
+                                                case 0:
+                                                    photo = e.detail;
+                                                    if (!(photo === null)) return [3 /*break*/, 1];
+                                                    reject('User cancelled photos app');
+                                                    return [3 /*break*/, 4];
+                                                case 1:
+                                                    if (!(photo instanceof Error)) return [3 /*break*/, 2];
+                                                    reject(photo.message);
+                                                    return [3 /*break*/, 4];
+                                                case 2:
+                                                    _a = resolve;
+                                                    return [4 /*yield*/, this._getCameraPhoto(photo, options)];
+                                                case 3:
+                                                    _a.apply(void 0, [_b.sent()]);
+                                                    _b.label = 4;
+                                                case 4:
+                                                    cameraModal_1.dismiss();
+                                                    document.body.removeChild(cameraModal_1);
+                                                    return [2 /*return*/];
+                                            }
+                                        });
+                                    }); });
+                                    cameraModal_1.present();
+                                    return [3 /*break*/, 5];
+                                case 4:
+                                    e_1 = _a.sent();
+                                    this.fileInputExperience(options, resolve);
+                                    return [3 /*break*/, 5];
+                                case 5: return [3 /*break*/, 7];
+                                case 6:
+                                    console.error("Unable to load PWA Element 'pwa-camera-modal'. See the docs: https://capacitorjs.com/docs/pwa-elements.");
+                                    this.fileInputExperience(options, resolve);
+                                    _a.label = 7;
+                                case 7: return [2 /*return*/];
+                            }
+                        });
+                    }); })];
+            });
+        });
+    };
+    CameraPluginWeb.prototype.fileInputExperience = function (options, resolve) {
+        var input = document.querySelector('#_capacitor-camera-input');
+        var cleanup = function () {
+            input.parentNode && input.parentNode.removeChild(input);
+        };
+        if (!input) {
+            input = document.createElement('input');
+            input.id = '_capacitor-camera-input';
+            input.type = 'file';
+            document.body.appendChild(input);
+        }
+        input.accept = 'image/*';
+        input.capture = true;
+        if (options.source === __WEBPACK_IMPORTED_MODULE_2__core_plugin_definitions__["c" /* CameraSource */].Photos || options.source === __WEBPACK_IMPORTED_MODULE_2__core_plugin_definitions__["c" /* CameraSource */].Prompt) {
+            input.removeAttribute('capture');
+        }
+        else if (options.direction === __WEBPACK_IMPORTED_MODULE_2__core_plugin_definitions__["a" /* CameraDirection */].Front) {
+            input.capture = 'user';
+        }
+        else if (options.direction === __WEBPACK_IMPORTED_MODULE_2__core_plugin_definitions__["a" /* CameraDirection */].Rear) {
+            input.capture = 'environment';
+        }
+        input.addEventListener('change', function (_e) {
+            var file = input.files[0];
+            var format = 'jpeg';
+            if (file.type === 'image/png') {
+                format = 'png';
+            }
+            else if (file.type === 'image/gif') {
+                format = 'gif';
+            }
+            if (options.resultType === __WEBPACK_IMPORTED_MODULE_2__core_plugin_definitions__["b" /* CameraResultType */].DataUrl || options.resultType === __WEBPACK_IMPORTED_MODULE_2__core_plugin_definitions__["b" /* CameraResultType */].Base64) {
+                var reader_1 = new FileReader();
+                reader_1.addEventListener('load', function () {
+                    if (options.resultType === __WEBPACK_IMPORTED_MODULE_2__core_plugin_definitions__["b" /* CameraResultType */].DataUrl) {
+                        resolve({
+                            dataUrl: reader_1.result,
+                            format: format
+                        });
+                    }
+                    else if (options.resultType === __WEBPACK_IMPORTED_MODULE_2__core_plugin_definitions__["b" /* CameraResultType */].Base64) {
+                        var b64 = reader_1.result.split(',')[1];
+                        resolve({
+                            base64String: b64,
+                            format: format
+                        });
+                    }
+                    cleanup();
+                });
+                reader_1.readAsDataURL(file);
+            }
+            else {
+                resolve({
+                    webPath: URL.createObjectURL(file),
+                    format: format
+                });
+                cleanup();
+            }
+        });
+        input.click();
+    };
+    CameraPluginWeb.prototype._getCameraPhoto = function (photo, options) {
+        return new Promise(function (resolve, reject) {
+            var reader = new FileReader();
+            var format = photo.type.split('/')[1];
+            if (options.resultType === __WEBPACK_IMPORTED_MODULE_2__core_plugin_definitions__["b" /* CameraResultType */].Uri) {
+                resolve({
+                    webPath: URL.createObjectURL(photo),
+                    format: format
+                });
+            }
+            else {
+                reader.readAsDataURL(photo);
+                reader.onloadend = function () {
+                    var r = reader.result;
+                    if (options.resultType === __WEBPACK_IMPORTED_MODULE_2__core_plugin_definitions__["b" /* CameraResultType */].DataUrl) {
+                        resolve({
+                            dataUrl: r,
+                            format: format
+                        });
+                    }
+                    else {
+                        resolve({
+                            base64String: r.split(',')[1],
+                            format: format
+                        });
+                    }
+                };
+                reader.onerror = function (e) {
+                    reject(e);
+                };
+            }
+        });
+    };
+    return CameraPluginWeb;
+}(__WEBPACK_IMPORTED_MODULE_1__index__["a" /* WebPlugin */]));
+
+var Camera = new CameraPluginWeb();
+
+//# sourceMappingURL=camera.js.map
+
+/***/ }),
+
+/***/ 806:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export ClipboardPluginWeb */
+/* unused harmony export Clipboard */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(748);
+
+
+var ClipboardPluginWeb = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __extends */])(ClipboardPluginWeb, _super);
+    function ClipboardPluginWeb() {
+        return _super.call(this, {
+            name: 'Clipboard',
+            platforms: ['web']
+        }) || this;
+    }
+    ClipboardPluginWeb.prototype.write = function (options) {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var blob, clipboardItemInput, err_1;
+            var _a;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        if (!navigator.clipboard) {
+                            return [2 /*return*/, Promise.reject('Clipboard API not available in this browser')];
+                        }
+                        if (!(options.string !== undefined || options.url)) return [3 /*break*/, 2];
+                        if (!navigator.clipboard.writeText) {
+                            return [2 /*return*/, Promise.reject('Writting to clipboard not supported in this browser')];
+                        }
+                        return [4 /*yield*/, navigator.clipboard.writeText(options.string !== undefined ? options.string : options.url)];
+                    case 1:
+                        _b.sent();
+                        return [3 /*break*/, 10];
+                    case 2:
+                        if (!options.image) return [3 /*break*/, 9];
+                        if (!navigator.clipboard.write) {
+                            return [2 /*return*/, Promise.reject('Setting images not supported in this browser')];
+                        }
+                        _b.label = 3;
+                    case 3:
+                        _b.trys.push([3, 7, , 8]);
+                        return [4 /*yield*/, fetch(options.image)];
+                    case 4: return [4 /*yield*/, (_b.sent()).blob()];
+                    case 5:
+                        blob = _b.sent();
+                        clipboardItemInput = new ClipboardItem((_a = {}, _a[blob.type] = blob, _a));
+                        return [4 /*yield*/, navigator.clipboard.write([clipboardItemInput])];
+                    case 6:
+                        _b.sent();
+                        return [3 /*break*/, 8];
+                    case 7:
+                        err_1 = _b.sent();
+                        return [2 /*return*/, Promise.reject('Failed to write image')];
+                    case 8: return [3 /*break*/, 10];
+                    case 9: return [2 /*return*/, Promise.reject('Nothing to write')];
+                    case 10: return [2 /*return*/, Promise.resolve()];
+                }
+            });
+        });
+    };
+    ClipboardPluginWeb.prototype.read = function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var clipboardItems, type, clipboardBlob, data, err_2;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!navigator.clipboard) {
+                            return [2 /*return*/, Promise.reject('Clipboard API not available in this browser')];
+                        }
+                        if (!!navigator.clipboard.read) return [3 /*break*/, 1];
+                        if (!navigator.clipboard.readText) {
+                            return [2 /*return*/, Promise.reject('Reading from clipboard not supported in this browser')];
+                        }
+                        return [2 /*return*/, this.readText()];
+                    case 1:
+                        _a.trys.push([1, 5, , 6]);
+                        return [4 /*yield*/, navigator.clipboard.read()];
+                    case 2:
+                        clipboardItems = _a.sent();
+                        type = clipboardItems[0].types[0];
+                        return [4 /*yield*/, clipboardItems[0].getType(type)];
+                    case 3:
+                        clipboardBlob = _a.sent();
+                        return [4 /*yield*/, this._getBlobData(clipboardBlob, type)];
+                    case 4:
+                        data = _a.sent();
+                        return [2 /*return*/, Promise.resolve({ value: data, type: type })];
+                    case 5:
+                        err_2 = _a.sent();
+                        return [2 /*return*/, this.readText()];
+                    case 6: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ClipboardPluginWeb.prototype.readText = function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var text;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, navigator.clipboard.readText()];
+                    case 1:
+                        text = _a.sent();
+                        return [2 /*return*/, Promise.resolve({ value: text, type: 'text/plain' })];
+                }
+            });
+        });
+    };
+    ClipboardPluginWeb.prototype._getBlobData = function (clipboardBlob, type) {
+        return new Promise(function (resolve, reject) {
+            var reader = new FileReader();
+            if (type.includes('image')) {
+                reader.readAsDataURL(clipboardBlob);
+            }
+            else {
+                reader.readAsText(clipboardBlob);
+            }
+            reader.onloadend = function () {
+                var r = reader.result;
+                resolve(r);
+            };
+            reader.onerror = function (e) {
+                reject(e);
+            };
+        });
+    };
+    return ClipboardPluginWeb;
+}(__WEBPACK_IMPORTED_MODULE_1__index__["a" /* WebPlugin */]));
+
+var Clipboard = new ClipboardPluginWeb();
+
+//# sourceMappingURL=clipboard.js.map
+
+/***/ }),
+
+/***/ 807:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export FilesystemPluginWeb */
+/* unused harmony export Filesystem */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(748);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_plugin_definitions__ = __webpack_require__(751);
+
+
+
+var FilesystemPluginWeb = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __extends */])(FilesystemPluginWeb, _super);
+    function FilesystemPluginWeb() {
+        var _this = _super.call(this, {
+            name: 'Filesystem',
+            platforms: ['web']
+        }) || this;
+        _this.DEFAULT_DIRECTORY = __WEBPACK_IMPORTED_MODULE_2__core_plugin_definitions__["d" /* FilesystemDirectory */].Data;
+        _this.DB_VERSION = 1;
+        _this.DB_NAME = 'Disc';
+        _this._writeCmds = ['add', 'put', 'delete'];
+        return _this;
+    }
+    FilesystemPluginWeb.prototype.initDb = function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var _this = this;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                if (this._db !== undefined) {
+                    return [2 /*return*/, this._db];
+                }
+                if (!('indexedDB' in window)) {
+                    throw new Error('This browser doesn\'t support IndexedDB');
+                }
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var request = indexedDB.open(_this.DB_NAME, _this.DB_VERSION);
+                        request.onupgradeneeded = FilesystemPluginWeb.doUpgrade;
+                        request.onsuccess = function () {
+                            _this._db = request.result;
+                            resolve(request.result);
+                        };
+                        request.onerror = function () { return reject(request.error); };
+                        request.onblocked = function () {
+                            console.warn('db blocked');
+                        };
+                    })];
+            });
+        });
+    };
+    FilesystemPluginWeb.doUpgrade = function (event) {
+        var eventTarget = event.target;
+        var db = eventTarget.result;
+        switch (event.oldVersion) {
+            case 0:
+            case 1:
+            default:
+                if (db.objectStoreNames.contains('FileStorage')) {
+                    db.deleteObjectStore('FileStorage');
+                }
+                var store = db.createObjectStore('FileStorage', { keyPath: 'path' });
+                store.createIndex('by_folder', 'folder');
+        }
+    };
+    FilesystemPluginWeb.prototype.dbRequest = function (cmd, args) {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var readFlag;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                readFlag = this._writeCmds.indexOf(cmd) !== -1 ? 'readwrite' : 'readonly';
+                return [2 /*return*/, this.initDb()
+                        .then(function (conn) {
+                        return new Promise(function (resolve, reject) {
+                            var tx = conn.transaction(['FileStorage'], readFlag);
+                            var store = tx.objectStore('FileStorage');
+                            var req = store[cmd].apply(store, args);
+                            req.onsuccess = function () { return resolve(req.result); };
+                            req.onerror = function () { return reject(req.error); };
+                        });
+                    })];
+            });
+        });
+    };
+    FilesystemPluginWeb.prototype.dbIndexRequest = function (indexName, cmd, args) {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var readFlag;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                readFlag = this._writeCmds.indexOf(cmd) !== -1 ? 'readwrite' : 'readonly';
+                return [2 /*return*/, this.initDb()
+                        .then(function (conn) {
+                        return new Promise(function (resolve, reject) {
+                            var tx = conn.transaction(['FileStorage'], readFlag);
+                            var store = tx.objectStore('FileStorage');
+                            var index = store.index(indexName);
+                            var req = index[cmd].apply(index, args);
+                            req.onsuccess = function () { return resolve(req.result); };
+                            req.onerror = function () { return reject(req.error); };
+                        });
+                    })];
+            });
+        });
+    };
+    FilesystemPluginWeb.prototype.getPath = function (directory, uriPath) {
+        directory = directory || this.DEFAULT_DIRECTORY;
+        var cleanedUriPath = uriPath !== undefined ? uriPath.replace(/^[/]+|[/]+$/g, '') : '';
+        var fsPath = '/' + directory;
+        if (uriPath !== '')
+            fsPath += '/' + cleanedUriPath;
+        return fsPath;
+    };
+    FilesystemPluginWeb.prototype.clear = function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var conn, tx, store;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.initDb()];
+                    case 1:
+                        conn = _a.sent();
+                        tx = conn.transaction(['FileStorage'], 'readwrite');
+                        store = tx.objectStore('FileStorage');
+                        store.clear();
+                        return [2 /*return*/, {}];
+                }
+            });
+        });
+    };
+    /**
+     * Read a file from disk
+     * @param options options for the file read
+     * @return a promise that resolves with the read file data result
+     */
+    FilesystemPluginWeb.prototype.readFile = function (options) {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var path, entry;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        path = this.getPath(options.directory, options.path);
+                        return [4 /*yield*/, this.dbRequest('get', [path])];
+                    case 1:
+                        entry = _a.sent();
+                        if (entry === undefined)
+                            throw Error('File does not exist.');
+                        return [2 /*return*/, { data: entry.content }];
+                }
+            });
+        });
+    };
+    /**
+     * Write a file to disk in the specified location on device
+     * @param options options for the file write
+     * @return a promise that resolves with the file write result
+     */
+    FilesystemPluginWeb.prototype.writeFile = function (options) {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var path, data, doRecursive, occupiedEntry, encoding, parentPath, parentEntry, subDirIndex, parentArgPath, now, pathObj;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        path = this.getPath(options.directory, options.path);
+                        data = options.data;
+                        doRecursive = options.recursive;
+                        return [4 /*yield*/, this.dbRequest('get', [path])];
+                    case 1:
+                        occupiedEntry = _a.sent();
+                        if (occupiedEntry && occupiedEntry.type === 'directory')
+                            throw ('The supplied path is a directory.');
+                        encoding = options.encoding;
+                        parentPath = path.substr(0, path.lastIndexOf('/'));
+                        return [4 /*yield*/, this.dbRequest('get', [parentPath])];
+                    case 2:
+                        parentEntry = _a.sent();
+                        if (!(parentEntry === undefined)) return [3 /*break*/, 4];
+                        subDirIndex = parentPath.indexOf('/', 1);
+                        if (!(subDirIndex !== -1)) return [3 /*break*/, 4];
+                        parentArgPath = parentPath.substr(subDirIndex);
+                        return [4 /*yield*/, this.mkdir({ path: parentArgPath, directory: options.directory, recursive: doRecursive })];
+                    case 3:
+                        _a.sent();
+                        _a.label = 4;
+                    case 4:
+                        now = Date.now();
+                        pathObj = {
+                            path: path,
+                            folder: parentPath,
+                            type: 'file',
+                            size: data.length,
+                            ctime: now,
+                            mtime: now,
+                            content: !encoding && data.indexOf(',') >= 0 ? data.split(',')[1] : data,
+                        };
+                        return [4 /*yield*/, this.dbRequest('put', [pathObj])];
+                    case 5:
+                        _a.sent();
+                        return [2 /*return*/, {
+                                uri: pathObj.path
+                            }];
+                }
+            });
+        });
+    };
+    /**
+     * Append to a file on disk in the specified location on device
+     * @param options options for the file append
+     * @return a promise that resolves with the file write result
+     */
+    FilesystemPluginWeb.prototype.appendFile = function (options) {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var path, data, parentPath, now, ctime, occupiedEntry, parentEntry, parentArgPathIndex, parentArgPath, pathObj;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        path = this.getPath(options.directory, options.path);
+                        data = options.data;
+                        parentPath = path.substr(0, path.lastIndexOf('/'));
+                        now = Date.now();
+                        ctime = now;
+                        return [4 /*yield*/, this.dbRequest('get', [path])];
+                    case 1:
+                        occupiedEntry = _a.sent();
+                        if (occupiedEntry && occupiedEntry.type === 'directory')
+                            throw ('The supplied path is a directory.');
+                        return [4 /*yield*/, this.dbRequest('get', [parentPath])];
+                    case 2:
+                        parentEntry = _a.sent();
+                        if (!(parentEntry === undefined)) return [3 /*break*/, 4];
+                        parentArgPathIndex = parentPath.indexOf('/', 1);
+                        parentArgPath = parentArgPathIndex !== -1 ? parentPath.substr(parentArgPathIndex) : '/';
+                        return [4 /*yield*/, this.mkdir({ path: parentArgPath, directory: options.directory, recursive: true })];
+                    case 3:
+                        _a.sent();
+                        _a.label = 4;
+                    case 4:
+                        if (occupiedEntry !== undefined) {
+                            data = occupiedEntry.content + data;
+                            ctime = occupiedEntry.ctime;
+                        }
+                        pathObj = {
+                            path: path,
+                            folder: parentPath,
+                            type: 'file',
+                            size: data.length,
+                            ctime: ctime,
+                            mtime: now,
+                            content: data
+                        };
+                        return [4 /*yield*/, this.dbRequest('put', [pathObj])];
+                    case 5:
+                        _a.sent();
+                        return [2 /*return*/, {}];
+                }
+            });
+        });
+    };
+    /**
+     * Delete a file from disk
+     * @param options options for the file delete
+     * @return a promise that resolves with the deleted file data result
+     */
+    FilesystemPluginWeb.prototype.deleteFile = function (options) {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var path, entry, entries;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        path = this.getPath(options.directory, options.path);
+                        return [4 /*yield*/, this.dbRequest('get', [path])];
+                    case 1:
+                        entry = _a.sent();
+                        if (entry === undefined)
+                            throw Error('File does not exist.');
+                        return [4 /*yield*/, this.dbIndexRequest('by_folder', 'getAllKeys', [IDBKeyRange.only(path)])];
+                    case 2:
+                        entries = _a.sent();
+                        if (entries.length !== 0)
+                            throw Error('Folder is not empty.');
+                        return [4 /*yield*/, this.dbRequest('delete', [path])];
+                    case 3:
+                        _a.sent();
+                        return [2 /*return*/, {}];
+                }
+            });
+        });
+    };
+    /**
+     * Create a directory.
+     * @param options options for the mkdir
+     * @return a promise that resolves with the mkdir result
+     */
+    FilesystemPluginWeb.prototype.mkdir = function (options) {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var path, doRecursive, parentPath, depth, parentEntry, occupiedEntry, parentArgPath, now, pathObj;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        path = this.getPath(options.directory, options.path);
+                        doRecursive = options.recursive;
+                        parentPath = path.substr(0, path.lastIndexOf('/'));
+                        depth = (path.match(/\//g) || []).length;
+                        return [4 /*yield*/, this.dbRequest('get', [parentPath])];
+                    case 1:
+                        parentEntry = _a.sent();
+                        return [4 /*yield*/, this.dbRequest('get', [path])];
+                    case 2:
+                        occupiedEntry = _a.sent();
+                        if (depth === 1)
+                            throw Error('Cannot create Root directory');
+                        if (occupiedEntry !== undefined)
+                            throw Error('Current directory does already exist.');
+                        if (!doRecursive && depth !== 2 && parentEntry === undefined)
+                            throw Error('Parent directory must exist');
+                        if (!(doRecursive && depth !== 2 && parentEntry === undefined)) return [3 /*break*/, 4];
+                        parentArgPath = parentPath.substr(parentPath.indexOf('/', 1));
+                        return [4 /*yield*/, this.mkdir({
+                                path: parentArgPath,
+                                directory: options.directory,
+                                recursive: doRecursive
+                            })];
+                    case 3:
+                        _a.sent();
+                        _a.label = 4;
+                    case 4:
+                        now = Date.now();
+                        pathObj = { path: path, folder: parentPath, type: 'directory', size: 0, ctime: now, mtime: now };
+                        return [4 /*yield*/, this.dbRequest('put', [pathObj])];
+                    case 5:
+                        _a.sent();
+                        return [2 /*return*/, {}];
+                }
+            });
+        });
+    };
+    /**
+     * Remove a directory
+     * @param options the options for the directory remove
+     */
+    FilesystemPluginWeb.prototype.rmdir = function (options) {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var path, directory, recursive, fullPath, entry, readDirResult, _i, _a, entry_1, entryPath, entryObj;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        path = options.path, directory = options.directory, recursive = options.recursive;
+                        fullPath = this.getPath(directory, path);
+                        return [4 /*yield*/, this.dbRequest('get', [fullPath])];
+                    case 1:
+                        entry = _b.sent();
+                        if (entry === undefined)
+                            throw Error('Folder does not exist.');
+                        if (entry.type !== 'directory')
+                            throw Error('Requested path is not a directory');
+                        return [4 /*yield*/, this.readdir({ path: path, directory: directory })];
+                    case 2:
+                        readDirResult = _b.sent();
+                        if (readDirResult.files.length !== 0 && !recursive)
+                            throw Error('Folder is not empty');
+                        _i = 0, _a = readDirResult.files;
+                        _b.label = 3;
+                    case 3:
+                        if (!(_i < _a.length)) return [3 /*break*/, 9];
+                        entry_1 = _a[_i];
+                        entryPath = path + "/" + entry_1;
+                        return [4 /*yield*/, this.stat({ path: entryPath, directory: directory })];
+                    case 4:
+                        entryObj = _b.sent();
+                        if (!(entryObj.type === 'file')) return [3 /*break*/, 6];
+                        return [4 /*yield*/, this.deleteFile({ path: entryPath, directory: directory })];
+                    case 5:
+                        _b.sent();
+                        return [3 /*break*/, 8];
+                    case 6: return [4 /*yield*/, this.rmdir({ path: entryPath, directory: directory, recursive: recursive })];
+                    case 7:
+                        _b.sent();
+                        _b.label = 8;
+                    case 8:
+                        _i++;
+                        return [3 /*break*/, 3];
+                    case 9: return [4 /*yield*/, this.dbRequest('delete', [fullPath])];
+                    case 10:
+                        _b.sent();
+                        return [2 /*return*/, {}];
+                }
+            });
+        });
+    };
+    /**
+     * Return a list of files from the directory (not recursive)
+     * @param options the options for the readdir operation
+     * @return a promise that resolves with the readdir directory listing result
+     */
+    FilesystemPluginWeb.prototype.readdir = function (options) {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var path, entry, entries, names;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        path = this.getPath(options.directory, options.path);
+                        return [4 /*yield*/, this.dbRequest('get', [path])];
+                    case 1:
+                        entry = _a.sent();
+                        if (options.path !== '' && entry === undefined)
+                            throw Error('Folder does not exist.');
+                        return [4 /*yield*/, this.dbIndexRequest('by_folder', 'getAllKeys', [IDBKeyRange.only(path)])];
+                    case 2:
+                        entries = _a.sent();
+                        names = entries.map(function (e) {
+                            return e.substring(path.length + 1);
+                        });
+                        return [2 /*return*/, { files: names }];
+                }
+            });
+        });
+    };
+    /**
+     * Return full File URI for a path and directory
+     * @param options the options for the stat operation
+     * @return a promise that resolves with the file stat result
+     */
+    FilesystemPluginWeb.prototype.getUri = function (options) {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var path, entry;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        path = this.getPath(options.directory, options.path);
+                        return [4 /*yield*/, this.dbRequest('get', [path])];
+                    case 1:
+                        entry = _a.sent();
+                        if (!(entry === undefined)) return [3 /*break*/, 3];
+                        return [4 /*yield*/, this.dbRequest('get', [path + '/'])];
+                    case 2:
+                        entry = (_a.sent());
+                        _a.label = 3;
+                    case 3:
+                        if (entry === undefined)
+                            throw Error('Entry does not exist.');
+                        return [2 /*return*/, {
+                                uri: entry.path
+                            }];
+                }
+            });
+        });
+    };
+    /**
+     * Return data about a file
+     * @param options the options for the stat operation
+     * @return a promise that resolves with the file stat result
+     */
+    FilesystemPluginWeb.prototype.stat = function (options) {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var path, entry;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        path = this.getPath(options.directory, options.path);
+                        return [4 /*yield*/, this.dbRequest('get', [path])];
+                    case 1:
+                        entry = _a.sent();
+                        if (!(entry === undefined)) return [3 /*break*/, 3];
+                        return [4 /*yield*/, this.dbRequest('get', [path + '/'])];
+                    case 2:
+                        entry = (_a.sent());
+                        _a.label = 3;
+                    case 3:
+                        if (entry === undefined)
+                            throw Error('Entry does not exist.');
+                        return [2 /*return*/, {
+                                type: entry.type,
+                                size: entry.size,
+                                ctime: entry.ctime,
+                                mtime: entry.mtime,
+                                uri: entry.path
+                            }];
+                }
+            });
+        });
+    };
+    /**
+     * Rename a file or directory
+     * @param options the options for the rename operation
+     * @return a promise that resolves with the rename result
+     */
+    FilesystemPluginWeb.prototype.rename = function (options) {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                return [2 /*return*/, this._copy(options, true)];
+            });
+        });
+    };
+    /**
+     * Copy a file or directory
+     * @param options the options for the copy operation
+     * @return a promise that resolves with the copy result
+     */
+    FilesystemPluginWeb.prototype.copy = function (options) {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                return [2 /*return*/, this._copy(options, false)];
+            });
+        });
+    };
+    /**
+     * Function that can perform a copy or a rename
+     * @param options the options for the rename operation
+     * @param doRename whether to perform a rename or copy operation
+     * @return a promise that resolves with the result
+     */
+    FilesystemPluginWeb.prototype._copy = function (options, doRename) {
+        if (doRename === void 0) { doRename = false; }
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var to, from, fromDirectory, toDirectory, fromPath, toPath, toObj, e_1, toPathComponents, toPath_1, toParentDirectory, fromObj, updateTime, _a, file, e_2, contents, _i, contents_1, filename;
+            var _this = this;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        to = options.to, from = options.from, fromDirectory = options.directory, toDirectory = options.toDirectory;
+                        if (!to || !from) {
+                            throw Error('Both to and from must be provided');
+                        }
+                        // If no "to" directory is provided, use the "from" directory
+                        if (!toDirectory) {
+                            toDirectory = fromDirectory;
+                        }
+                        fromPath = this.getPath(fromDirectory, from);
+                        toPath = this.getPath(toDirectory, to);
+                        // Test that the "to" and "from" locations are different
+                        if (fromPath === toPath) {
+                            return [2 /*return*/, {}];
+                        }
+                        if (toPath.startsWith(fromPath)) {
+                            throw Error('To path cannot contain the from path');
+                        }
+                        _b.label = 1;
+                    case 1:
+                        _b.trys.push([1, 3, , 6]);
+                        return [4 /*yield*/, this.stat({
+                                path: to,
+                                directory: toDirectory
+                            })];
+                    case 2:
+                        toObj = _b.sent();
+                        return [3 /*break*/, 6];
+                    case 3:
+                        e_1 = _b.sent();
+                        toPathComponents = to.split('/');
+                        toPathComponents.pop();
+                        toPath_1 = toPathComponents.join('/');
+                        if (!(toPathComponents.length > 0)) return [3 /*break*/, 5];
+                        return [4 /*yield*/, this.stat({
+                                path: toPath_1,
+                                directory: toDirectory,
+                            })];
+                    case 4:
+                        toParentDirectory = _b.sent();
+                        if (toParentDirectory.type !== 'directory') {
+                            throw new Error('Parent directory of the to path is a file');
+                        }
+                        _b.label = 5;
+                    case 5: return [3 /*break*/, 6];
+                    case 6:
+                        // Cannot overwrite a directory
+                        if (toObj && toObj.type === 'directory') {
+                            throw new Error('Cannot overwrite a directory with a file');
+                        }
+                        return [4 /*yield*/, this.stat({
+                                path: from,
+                                directory: fromDirectory,
+                            })];
+                    case 7:
+                        fromObj = _b.sent();
+                        updateTime = function (path, ctime, mtime) { return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(_this, void 0, void 0, function () {
+                            var fullPath, entry;
+                            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                                switch (_a.label) {
+                                    case 0:
+                                        fullPath = this.getPath(toDirectory, path);
+                                        return [4 /*yield*/, this.dbRequest('get', [fullPath])];
+                                    case 1:
+                                        entry = _a.sent();
+                                        entry.ctime = ctime;
+                                        entry.mtime = mtime;
+                                        return [4 /*yield*/, this.dbRequest('put', [entry])];
+                                    case 2:
+                                        _a.sent();
+                                        return [2 /*return*/];
+                                }
+                            });
+                        }); };
+                        _a = fromObj.type;
+                        switch (_a) {
+                            case 'file': return [3 /*break*/, 8];
+                            case 'directory': return [3 /*break*/, 15];
+                        }
+                        return [3 /*break*/, 28];
+                    case 8: return [4 /*yield*/, this.readFile({
+                            path: from,
+                            directory: fromDirectory
+                        })];
+                    case 9:
+                        file = _b.sent();
+                        if (!doRename) return [3 /*break*/, 11];
+                        return [4 /*yield*/, this.deleteFile({
+                                path: from,
+                                directory: fromDirectory
+                            })];
+                    case 10:
+                        _b.sent();
+                        _b.label = 11;
+                    case 11: 
+                    // Write the file to the new location
+                    return [4 /*yield*/, this.writeFile({
+                            path: to,
+                            directory: toDirectory,
+                            data: file.data
+                        })];
+                    case 12:
+                        // Write the file to the new location
+                        _b.sent();
+                        if (!doRename) return [3 /*break*/, 14];
+                        return [4 /*yield*/, updateTime(to, fromObj.ctime, fromObj.mtime)];
+                    case 13:
+                        _b.sent();
+                        _b.label = 14;
+                    case 14: 
+                    // Resolve promise
+                    return [2 /*return*/, {}];
+                    case 15:
+                        if (toObj) {
+                            throw Error('Cannot move a directory over an existing object');
+                        }
+                        _b.label = 16;
+                    case 16:
+                        _b.trys.push([16, 20, , 21]);
+                        // Create the to directory
+                        return [4 /*yield*/, this.mkdir({
+                                path: to,
+                                directory: toDirectory,
+                                recursive: false,
+                            })];
+                    case 17:
+                        // Create the to directory
+                        _b.sent();
+                        if (!doRename) return [3 /*break*/, 19];
+                        return [4 /*yield*/, updateTime(to, fromObj.ctime, fromObj.mtime)];
+                    case 18:
+                        _b.sent();
+                        _b.label = 19;
+                    case 19: return [3 /*break*/, 21];
+                    case 20:
+                        e_2 = _b.sent();
+                        return [3 /*break*/, 21];
+                    case 21: return [4 /*yield*/, this.readdir({
+                            path: from,
+                            directory: fromDirectory,
+                        })];
+                    case 22:
+                        contents = (_b.sent()).files;
+                        _i = 0, contents_1 = contents;
+                        _b.label = 23;
+                    case 23:
+                        if (!(_i < contents_1.length)) return [3 /*break*/, 26];
+                        filename = contents_1[_i];
+                        // Move item from the from directory to the to directory
+                        return [4 /*yield*/, this._copy({
+                                from: from + "/" + filename,
+                                to: to + "/" + filename,
+                                directory: fromDirectory,
+                                toDirectory: toDirectory,
+                            }, doRename)];
+                    case 24:
+                        // Move item from the from directory to the to directory
+                        _b.sent();
+                        _b.label = 25;
+                    case 25:
+                        _i++;
+                        return [3 /*break*/, 23];
+                    case 26:
+                        if (!doRename) return [3 /*break*/, 28];
+                        return [4 /*yield*/, this.rmdir({
+                                path: from,
+                                directory: fromDirectory
+                            })];
+                    case 27:
+                        _b.sent();
+                        _b.label = 28;
+                    case 28: return [2 /*return*/, {}];
+                }
+            });
+        });
+    };
+    FilesystemPluginWeb._debug = true;
+    return FilesystemPluginWeb;
+}(__WEBPACK_IMPORTED_MODULE_1__index__["a" /* WebPlugin */]));
+
+var Filesystem = new FilesystemPluginWeb();
+
+//# sourceMappingURL=filesystem.js.map
+
+/***/ }),
+
+/***/ 808:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export GeolocationPluginWeb */
+/* unused harmony export Geolocation */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(748);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util__ = __webpack_require__(761);
+
+
+
+var GeolocationPluginWeb = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __extends */])(GeolocationPluginWeb, _super);
+    function GeolocationPluginWeb() {
+        return _super.call(this, {
+            name: 'Geolocation',
+            platforms: ['web']
+        }) || this;
+    }
+    GeolocationPluginWeb.prototype.getCurrentPosition = function (options) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            return _this.requestPermissions().then(function (_result) {
+                window.navigator.geolocation.getCurrentPosition(function (pos) {
+                    resolve(pos);
+                }, function (err) {
+                    reject(err);
+                }, Object(__WEBPACK_IMPORTED_MODULE_2__util__["a" /* extend */])({
+                    enableHighAccuracy: true,
+                    timeout: 10000,
+                    maximumAge: 0
+                }, options));
+            });
+        });
+    };
+    GeolocationPluginWeb.prototype.watchPosition = function (options, callback) {
+        var id = window.navigator.geolocation.watchPosition(function (pos) {
+            callback(pos);
+        }, function (err) {
+            callback(null, err);
+        }, Object(__WEBPACK_IMPORTED_MODULE_2__util__["a" /* extend */])({
+            enableHighAccuracy: true,
+            timeout: 10000,
+            maximumAge: 0
+        }, options));
+        return "" + id;
+    };
+    GeolocationPluginWeb.prototype.clearWatch = function (options) {
+        window.navigator.geolocation.clearWatch(parseInt(options.id, 10));
+        return Promise.resolve();
+    };
+    return GeolocationPluginWeb;
+}(__WEBPACK_IMPORTED_MODULE_1__index__["a" /* WebPlugin */]));
+
+var Geolocation = new GeolocationPluginWeb();
+
+//# sourceMappingURL=geolocation.js.map
+
+/***/ }),
+
+/***/ 809:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export DevicePluginWeb */
+/* unused harmony export Device */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(748);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util__ = __webpack_require__(761);
+
+
+
+var DevicePluginWeb = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __extends */])(DevicePluginWeb, _super);
+    function DevicePluginWeb() {
+        return _super.call(this, {
+            name: 'Device',
+            platforms: ['web']
+        }) || this;
+    }
+    DevicePluginWeb.prototype.getInfo = function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var ua, uaFields;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                ua = navigator.userAgent;
+                uaFields = this.parseUa(ua);
+                return [2 /*return*/, Promise.resolve({
+                        model: uaFields.model,
+                        platform: 'web',
+                        appVersion: '',
+                        appBuild: '',
+                        appId: '',
+                        appName: '',
+                        operatingSystem: uaFields.operatingSystem,
+                        osVersion: uaFields.osVersion,
+                        manufacturer: navigator.vendor,
+                        isVirtual: false,
+                        uuid: this.getUid()
+                    })];
+            });
+        });
+    };
+    DevicePluginWeb.prototype.getBatteryInfo = function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var battery, e_1;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        battery = {};
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 3, , 4]);
+                        return [4 /*yield*/, navigator.getBattery()];
+                    case 2:
+                        battery = _a.sent();
+                        return [3 /*break*/, 4];
+                    case 3:
+                        e_1 = _a.sent();
+                        return [3 /*break*/, 4];
+                    case 4: return [2 /*return*/, Promise.resolve({
+                            batteryLevel: battery.level,
+                            isCharging: battery.charging
+                        })];
+                }
+            });
+        });
+    };
+    DevicePluginWeb.prototype.getLanguageCode = function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                return [2 /*return*/, {
+                        value: navigator.language
+                    }];
+            });
+        });
+    };
+    DevicePluginWeb.prototype.parseUa = function (_ua) {
+        var uaFields = {};
+        var start = _ua.indexOf('(') + 1;
+        var end = _ua.indexOf(') AppleWebKit');
+        if (_ua.indexOf(') Gecko') !== -1) {
+            end = _ua.indexOf(') Gecko');
+        }
+        var fields = _ua.substring(start, end);
+        if (_ua.indexOf('Android') !== -1) {
+            uaFields.model = fields.replace('; wv', '').split('; ').pop().split(' Build')[0];
+            uaFields.osVersion = fields.split('; ')[1];
+        }
+        else {
+            uaFields.model = fields.split('; ')[0];
+            if (navigator.oscpu) {
+                uaFields.osVersion = navigator.oscpu;
+            }
+            else {
+                if (_ua.indexOf('Windows') !== -1) {
+                    uaFields.osVersion = fields;
+                }
+                else {
+                    var lastParts = fields.split('; ').pop().replace(' like Mac OS X', '').split(' ');
+                    uaFields.osVersion = lastParts[lastParts.length - 1].replace(/_/g, '.');
+                }
+            }
+        }
+        if (/android/i.test(_ua)) {
+            uaFields.operatingSystem = 'android';
+        }
+        else if (/iPad|iPhone|iPod/.test(_ua) && !window.MSStream) {
+            uaFields.operatingSystem = 'ios';
+        }
+        else if (/Win/.test(_ua)) {
+            uaFields.operatingSystem = 'windows';
+        }
+        else if (/Mac/i.test(_ua)) {
+            uaFields.operatingSystem = 'mac';
+        }
+        else {
+            uaFields.operatingSystem = 'unknown';
+        }
+        return uaFields;
+    };
+    DevicePluginWeb.prototype.getUid = function () {
+        var uid = window.localStorage.getItem('_capuid');
+        if (uid) {
+            return uid;
+        }
+        uid = Object(__WEBPACK_IMPORTED_MODULE_2__util__["b" /* uuid4 */])();
+        window.localStorage.setItem('_capuid', uid);
+        return uid;
+    };
+    return DevicePluginWeb;
+}(__WEBPACK_IMPORTED_MODULE_1__index__["a" /* WebPlugin */]));
+
+var Device = new DevicePluginWeb();
+
+//# sourceMappingURL=device.js.map
+
+/***/ }),
+
+/***/ 810:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export LocalNotificationsPluginWeb */
+/* unused harmony export LocalNotifications */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(748);
+
+
+var LocalNotificationsPluginWeb = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __extends */])(LocalNotificationsPluginWeb, _super);
+    function LocalNotificationsPluginWeb() {
+        var _this = _super.call(this, {
+            name: 'LocalNotifications',
+            platforms: ['web']
+        }) || this;
+        _this.pending = [];
+        return _this;
+    }
+    LocalNotificationsPluginWeb.prototype.createChannel = function (channel) {
+        throw new Error('Feature not available in the browser. ' + channel.id);
+    };
+    LocalNotificationsPluginWeb.prototype.deleteChannel = function (channel) {
+        throw new Error('Feature not available in the browser. ' + channel.id);
+    };
+    LocalNotificationsPluginWeb.prototype.listChannels = function () {
+        throw new Error('Feature not available in the browser');
+    };
+    LocalNotificationsPluginWeb.prototype.sendPending = function () {
+        var _this = this;
+        var toRemove = [];
+        var now = +new Date;
+        this.pending.forEach(function (localNotification) {
+            if (localNotification.schedule && localNotification.schedule.at) {
+                if (+localNotification.schedule.at <= now) {
+                    _this.buildNotification(localNotification);
+                    toRemove.push(localNotification);
+                }
+            }
+        });
+        console.log('Sent pending, removing', toRemove);
+        this.pending = this.pending.filter(function (localNotification) { return !toRemove.find(function (ln) { return ln === localNotification; }); });
+    };
+    LocalNotificationsPluginWeb.prototype.sendNotification = function (localNotification) {
+        var _this = this;
+        var l = localNotification;
+        if (localNotification.schedule && localNotification.schedule.at) {
+            var diff = +localNotification.schedule.at - +new Date;
+            this.pending.push(l);
+            setTimeout(function () {
+                _this.sendPending();
+            }, diff);
+            return;
+        }
+        this.buildNotification(localNotification);
+    };
+    LocalNotificationsPluginWeb.prototype.buildNotification = function (localNotification) {
+        var l = localNotification;
+        return new Notification(l.title, {
+            body: l.body
+        });
+    };
+    LocalNotificationsPluginWeb.prototype.schedule = function (options) {
+        var _this = this;
+        var notifications = [];
+        options.notifications.forEach(function (notification) {
+            notifications.push(_this.sendNotification(notification));
+        });
+        return Promise.resolve({
+            notifications: options.notifications.map(function (notification) { return { id: '' + notification.id }; })
+        });
+    };
+    LocalNotificationsPluginWeb.prototype.getPending = function () {
+        return Promise.resolve({
+            notifications: this.pending.map(function (localNotification) {
+                return {
+                    id: '' + localNotification.id
+                };
+            })
+        });
+    };
+    LocalNotificationsPluginWeb.prototype.registerActionTypes = function (_options) {
+        throw new Error('Method not implemented.');
+    };
+    LocalNotificationsPluginWeb.prototype.cancel = function (pending) {
+        console.log('Cancel these', pending);
+        this.pending = this.pending.filter(function (localNotification) { return !pending.notifications.find(function (ln) { return ln.id === '' + localNotification.id; }); });
+        return Promise.resolve();
+    };
+    LocalNotificationsPluginWeb.prototype.areEnabled = function () {
+        return Promise.resolve({
+            value: Notification.permission === 'granted'
+        });
+    };
+    LocalNotificationsPluginWeb.prototype.requestPermission = function () {
+        return new Promise(function (resolve) {
+            Notification.requestPermission(function (result) {
+                var granted = true;
+                if (result === 'denied' || result === 'default') {
+                    granted = false;
+                }
+                resolve({ granted: granted });
+            });
+        });
+    };
+    LocalNotificationsPluginWeb.prototype.requestPermissions = function () {
+        return new Promise(function (resolve, reject) {
+            Notification.requestPermission(function (result) {
+                if (result === 'denied' || result === 'default') {
+                    reject(result);
+                    return;
+                }
+                resolve({
+                    results: [result]
+                });
+            });
+        });
+    };
+    return LocalNotificationsPluginWeb;
+}(__WEBPACK_IMPORTED_MODULE_1__index__["a" /* WebPlugin */]));
+
+var LocalNotifications = new LocalNotificationsPluginWeb();
+
+//# sourceMappingURL=local-notifications.js.map
+
+/***/ }),
+
+/***/ 811:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export SharePluginWeb */
+/* unused harmony export Share */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(748);
+
+
+var SharePluginWeb = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __extends */])(SharePluginWeb, _super);
+    function SharePluginWeb() {
+        return _super.call(this, {
+            name: 'Share',
+            platforms: ['web']
+        }) || this;
+    }
+    SharePluginWeb.prototype.share = function (options) {
+        if (!navigator.share) {
+            return Promise.reject('Web Share API not available');
+        }
+        return navigator.share({
+            title: options.title,
+            text: options.text,
+            url: options.url
+        });
+    };
+    return SharePluginWeb;
+}(__WEBPACK_IMPORTED_MODULE_1__index__["a" /* WebPlugin */]));
+
+var Share = new SharePluginWeb();
+
+//# sourceMappingURL=share.js.map
+
+/***/ }),
+
+/***/ 812:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export ModalsPluginWeb */
+/* unused harmony export Modals */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(748);
+
+
+var ModalsPluginWeb = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __extends */])(ModalsPluginWeb, _super);
+    function ModalsPluginWeb() {
+        return _super.call(this, {
+            name: 'Modals',
+            platforms: ['web']
+        }) || this;
+    }
+    ModalsPluginWeb.prototype.alert = function (options) {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                window.alert(options.message);
+                return [2 /*return*/, Promise.resolve()];
+            });
+        });
+    };
+    ModalsPluginWeb.prototype.prompt = function (options) {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var val;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                val = window.prompt(options.message, options.inputText || '');
+                return [2 /*return*/, Promise.resolve({
+                        value: val,
+                        cancelled: val === null
+                    })];
+            });
+        });
+    };
+    ModalsPluginWeb.prototype.confirm = function (options) {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var val;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                val = window.confirm(options.message);
+                return [2 /*return*/, Promise.resolve({
+                        value: val
+                    })];
+            });
+        });
+    };
+    ModalsPluginWeb.prototype.showActions = function (options) {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var _this = this;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, _reject) { return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(_this, void 0, void 0, function () {
+                        var actionSheet;
+                        var _this = this;
+                        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                            actionSheet = document.querySelector('pwa-action-sheet');
+                            if (!actionSheet) {
+                                actionSheet = document.createElement('pwa-action-sheet');
+                                document.body.appendChild(actionSheet);
+                            }
+                            actionSheet.header = options.title;
+                            actionSheet.cancelable = false;
+                            actionSheet.options = options.options;
+                            actionSheet.addEventListener('onSelection', function (e) { return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(_this, void 0, void 0, function () {
+                                var selection;
+                                return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                                    selection = e.detail;
+                                    resolve({
+                                        index: selection
+                                    });
+                                    return [2 /*return*/];
+                                });
+                            }); });
+                            return [2 /*return*/];
+                        });
+                    }); })];
+            });
+        });
+    };
+    return ModalsPluginWeb;
+}(__WEBPACK_IMPORTED_MODULE_1__index__["a" /* WebPlugin */]));
+
+var Modals = new ModalsPluginWeb();
+
+//# sourceMappingURL=modals.js.map
+
+/***/ }),
+
+/***/ 813:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export MotionPluginWeb */
+/* unused harmony export Motion */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(748);
+
+
+var MotionPluginWeb = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __extends */])(MotionPluginWeb, _super);
+    function MotionPluginWeb() {
+        var _this = _super.call(this, {
+            name: 'Motion'
+        }) || this;
+        _this.registerWindowListener('devicemotion', 'accel');
+        _this.registerWindowListener('deviceorientation', 'orientation');
+        return _this;
+    }
+    return MotionPluginWeb;
+}(__WEBPACK_IMPORTED_MODULE_1__index__["a" /* WebPlugin */]));
+
+var Motion = new MotionPluginWeb();
+
+//# sourceMappingURL=motion.js.map
+
+/***/ }),
+
+/***/ 814:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export NetworkPluginWeb */
+/* unused harmony export Network */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(748);
+
+
+var NetworkPluginWeb = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __extends */])(NetworkPluginWeb, _super);
+    function NetworkPluginWeb() {
+        var _this = _super.call(this, {
+            name: 'Network',
+            platforms: ['web']
+        }) || this;
+        _this.listenerFunction = null;
+        return _this;
+    }
+    NetworkPluginWeb.prototype.getStatus = function () {
+        return new Promise(function (resolve, reject) {
+            if (!window.navigator) {
+                reject('Network info not available');
+                return;
+            }
+            var connected = window.navigator.onLine;
+            var connection = window.navigator.connection || window.navigator.mozConnection || window.navigator.webkitConnection;
+            var connectionType = connection ? (connection.type || connection.effectiveType) : 'wifi';
+            resolve({
+                connected: connected,
+                connectionType: connected ? connectionType : 'none'
+            });
+        });
+    };
+    NetworkPluginWeb.prototype.addListener = function (eventName, listenerFunc) {
+        var thisRef = this;
+        var connection = window.navigator.connection || window.navigator.mozConnection || window.navigator.webkitConnection;
+        var connectionType = connection ? (connection.type || connection.effectiveType) : 'wifi';
+        var onlineBindFunc = listenerFunc.bind(thisRef, { connected: true, connectionType: connectionType });
+        var offlineBindFunc = listenerFunc.bind(thisRef, { connected: false, connectionType: 'none' });
+        if (eventName.localeCompare('networkStatusChange') === 0) {
+            window.addEventListener('online', onlineBindFunc);
+            window.addEventListener('offline', offlineBindFunc);
+            return {
+                remove: function () {
+                    window.removeEventListener('online', onlineBindFunc);
+                    window.removeEventListener('offline', offlineBindFunc);
+                }
+            };
+        }
+    };
+    return NetworkPluginWeb;
+}(__WEBPACK_IMPORTED_MODULE_1__index__["a" /* WebPlugin */]));
+
+var Network = new NetworkPluginWeb();
+
+//# sourceMappingURL=network.js.map
+
+/***/ }),
+
+/***/ 815:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export PermissionsPluginWeb */
+/* unused harmony export Permissions */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(748);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_plugin_definitions__ = __webpack_require__(751);
+
+
+
+var PermissionsPluginWeb = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __extends */])(PermissionsPluginWeb, _super);
+    function PermissionsPluginWeb() {
+        return _super.call(this, {
+            name: 'Permissions'
+        }) || this;
+    }
+    PermissionsPluginWeb.prototype.query = function (options) {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var navigator, name, ret;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        navigator = window.navigator;
+                        if (!navigator.permissions) {
+                            return [2 /*return*/, Promise.reject('This browser does not support the Permissions API')];
+                        }
+                        name = options.name === __WEBPACK_IMPORTED_MODULE_2__core_plugin_definitions__["e" /* PermissionType */].Photos ? 'camera' : options.name;
+                        return [4 /*yield*/, navigator.permissions.query({ name: name })];
+                    case 1:
+                        ret = _a.sent();
+                        return [2 /*return*/, {
+                                state: ret.state
+                            }];
+                }
+            });
+        });
+    };
+    return PermissionsPluginWeb;
+}(__WEBPACK_IMPORTED_MODULE_1__index__["a" /* WebPlugin */]));
+
+var Permissions = new PermissionsPluginWeb();
+
+//# sourceMappingURL=permissions.js.map
+
+/***/ }),
+
+/***/ 816:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export SplashScreenPluginWeb */
+/* unused harmony export SplashScreen */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(748);
+
+
+var SplashScreenPluginWeb = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __extends */])(SplashScreenPluginWeb, _super);
+    function SplashScreenPluginWeb() {
+        return _super.call(this, {
+            name: 'SplashScreen',
+            platforms: ['web']
+        }) || this;
+    }
+    SplashScreenPluginWeb.prototype.show = function (_options, _callback) {
+        return Promise.resolve();
+    };
+    SplashScreenPluginWeb.prototype.hide = function (_options, _callback) {
+        return Promise.resolve();
+    };
+    return SplashScreenPluginWeb;
+}(__WEBPACK_IMPORTED_MODULE_1__index__["a" /* WebPlugin */]));
+
+var SplashScreen = new SplashScreenPluginWeb();
+
+//# sourceMappingURL=splash-screen.js.map
+
+/***/ }),
+
+/***/ 817:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export StoragePluginWeb */
+/* unused harmony export Storage */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(748);
+
+
+var StoragePluginWeb = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __extends */])(StoragePluginWeb, _super);
+    function StoragePluginWeb() {
+        var _this = _super.call(this, {
+            name: 'Storage',
+            platforms: ['web']
+        }) || this;
+        _this.KEY_PREFIX = '_cap_';
+        return _this;
+    }
+    StoragePluginWeb.prototype.get = function (options) {
+        var _this = this;
+        return new Promise(function (resolve, _reject) {
+            resolve({
+                value: window.localStorage.getItem(_this.makeKey(options.key))
+            });
+        });
+    };
+    StoragePluginWeb.prototype.set = function (options) {
+        var _this = this;
+        return new Promise(function (resolve, _reject) {
+            window.localStorage.setItem(_this.makeKey(options.key), options.value);
+            resolve();
+        });
+    };
+    StoragePluginWeb.prototype.remove = function (options) {
+        var _this = this;
+        return new Promise(function (resolve, _reject) {
+            window.localStorage.removeItem(_this.makeKey(options.key));
+            resolve();
+        });
+    };
+    StoragePluginWeb.prototype.keys = function () {
+        var _this = this;
+        return new Promise(function (resolve, _reject) {
+            resolve({
+                keys: Object.keys(localStorage).filter(function (k) { return _this.isKey(k); }).map(function (k) { return _this.getKey(k); })
+            });
+        });
+    };
+    StoragePluginWeb.prototype.clear = function () {
+        var _this = this;
+        return new Promise(function (resolve, _reject) {
+            Object.keys(localStorage)
+                .filter(function (k) { return _this.isKey(k); })
+                .forEach(function (k) { return window.localStorage.removeItem(k); });
+            resolve();
+        });
+    };
+    StoragePluginWeb.prototype.makeKey = function (key) {
+        return this.KEY_PREFIX + key;
+    };
+    StoragePluginWeb.prototype.isKey = function (key) {
+        return key.indexOf(this.KEY_PREFIX) === 0;
+    };
+    StoragePluginWeb.prototype.getKey = function (key) {
+        return key.substr(this.KEY_PREFIX.length);
+    };
+    return StoragePluginWeb;
+}(__WEBPACK_IMPORTED_MODULE_1__index__["a" /* WebPlugin */]));
+
+var Storage = new StoragePluginWeb();
+
+//# sourceMappingURL=storage.js.map
+
+/***/ }),
+
+/***/ 818:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export ToastPluginWeb */
+/* unused harmony export Toast */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(748);
+
+
+var ToastPluginWeb = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __extends */])(ToastPluginWeb, _super);
+    function ToastPluginWeb() {
+        return _super.call(this, {
+            name: 'Toast',
+            platforms: ['web']
+        }) || this;
+    }
+    ToastPluginWeb.prototype.show = function (options) {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var duration, toast;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __generator */])(this, function (_a) {
+                duration = 2000;
+                if (options.duration) {
+                    duration = options.duration === 'long' ? 3500 : 2000;
+                }
+                toast = document.createElement('pwa-toast');
+                toast.duration = duration;
+                toast.message = options.text;
+                document.body.appendChild(toast);
+                return [2 /*return*/];
+            });
+        });
+    };
+    return ToastPluginWeb;
+}(__WEBPACK_IMPORTED_MODULE_1__index__["a" /* WebPlugin */]));
+
+var Toast = new ToastPluginWeb();
+
+//# sourceMappingURL=toast.js.map
 
 /***/ })
 

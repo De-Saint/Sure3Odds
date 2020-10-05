@@ -1,23 +1,18 @@
 <ion-header>
   <ion-navbar>
     <ion-title>Edit League</ion-title>
-    <ion-buttons end>
+    <!-- <ion-buttons end>
       <button ion-button icon-only (click)="onDelete()">
         <ion-icon name="trash"></ion-icon>
       </button>
-    </ion-buttons>
+    </ion-buttons> -->
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-  <div class="imgs">
-    <img src="{{league.country.imageurl}}" class="newimg" text-center   style="width: 13em; height: 13em;" *ngIf="league.country.imageurl" />
-    <img src="assets/imgs/appicon.png" class="newimg" text-center style="width: 13em; height: 13em;" *ngIf="!league.country.imageurl" />
-    <div class="imgProfile" [ngStyle]="{'background-image':'url(' + league.imageurl + ')'}">
-      <button ion-button icon-only class="profileCamera"  [ngClass]="{'show':flag==false}"  (click)="selectImage()">
-        <ion-icon name="md-camera"></ion-icon>
-      </button>
+  <div class="imgs" style="margin-top: 5em; ">
+     <div class="imgProfile" [ngStyle]="{'background-image':'url(' + league.imageurl + ')'}">
     </div>
   </div>
   <div class="ion-margin">

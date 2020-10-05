@@ -1,14 +1,14 @@
 webpackJsonp([44],{
 
-/***/ 706:
+/***/ 701:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaymentPlansPageModule", function() { return PaymentPlansPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GamesPageModule", function() { return GamesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__payment_plans__ = __webpack_require__(770);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__games__ = __webpack_require__(766);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var PaymentPlansPageModule = /** @class */ (function () {
-    function PaymentPlansPageModule() {
+var GamesPageModule = /** @class */ (function () {
+    function GamesPageModule() {
     }
-    PaymentPlansPageModule = __decorate([
+    GamesPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__payment_plans__["a" /* PaymentPlansPage */],
+                __WEBPACK_IMPORTED_MODULE_2__games__["a" /* GamesPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__payment_plans__["a" /* PaymentPlansPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__games__["a" /* GamesPage */]),
             ],
         })
-    ], PaymentPlansPageModule);
-    return PaymentPlansPageModule;
+    ], GamesPageModule);
+    return GamesPageModule;
 }());
 
-//# sourceMappingURL=payment-plans.module.js.map
+//# sourceMappingURL=games.module.js.map
 
 /***/ }),
 
-/***/ 770:
+/***/ 766:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PaymentPlansPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_payments_payments__ = __webpack_require__(356);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(88);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GamesPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_games_games__ = __webpack_require__(357);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(18);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -60,119 +60,112 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var PaymentPlansPage = /** @class */ (function () {
-    function PaymentPlansPage(navCtrl, authProvider, actionSheetCtrl, loadingCtrl, alertCtrl, paymentsProvider, navParams) {
+var GamesPage = /** @class */ (function () {
+    function GamesPage(navCtrl, authProvider, gamesProvider, alertCtrl, loadingCtrl, actionSheetCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.authProvider = authProvider;
-        this.actionSheetCtrl = actionSheetCtrl;
-        this.loadingCtrl = loadingCtrl;
+        this.gamesProvider = gamesProvider;
         this.alertCtrl = alertCtrl;
-        this.paymentsProvider = paymentsProvider;
+        this.loadingCtrl = loadingCtrl;
+        this.actionSheetCtrl = actionSheetCtrl;
         this.navParams = navParams;
-        this.currentPage = 1;
-        this.totalPage = 0;
-        this.perPage = 0;
-        this.totalData = 0;
+        // calender Function
+        this.monthNames = ["January", "February", "March", "April", "May", "June", "July",
+            "August", "September", "October", "November", "December"];
+        this.days_name = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        this.days = [];
+        this.myDate = new Date();
+        this.year = this.myDate.getFullYear();
+        this.month_num = this.myDate.getMonth();
+        this.month_name = this.monthNames[this.month_num];
+        this.getDaysInMonth(this.month_num, this.year);
+        this.currentDate = this.myDate;
     }
-    PaymentPlansPage.prototype.ionViewWillEnter = function () {
-        this.GetPlans();
+    GamesPage.prototype.ionViewWillEnter = function () {
+        var currentdate = this.gamesProvider.getDate();
+        this.GetGames(currentdate);
+        var date = this.myDate.getDate();
+        var today = date - 1;
+        this.isGroupShown(today);
+        this.shownGroup = today;
     };
-    PaymentPlansPage.prototype.GetPlans = function () {
+    GamesPage.prototype.getDaysInMonth = function (month, year) {
+        // Since no month has fewer than 28 days
+        var date = new Date(year, month);
+        while (date.getMonth() === month) {
+            var a = new Date(date);
+            var day_num = a.getDate();
+            this.days.push({ name: this.days_name[a.getDay()], day_num: day_num, month: month + 1, year: year });
+            date.setDate(date.getDate() + 1);
+        }
+    };
+    // increase and decrease month function
+    GamesPage.prototype.change_month = function (type) {
+        this.shownGroup = null;
+        if (type == 'increase') {
+            this.month_num = this.month_num + 1;
+            if (this.month_num >= 12) {
+                this.month_num = 0;
+                this.year = this.year + 1;
+            }
+        }
+        else if (type == 'decrease') {
+            this.month_num = this.month_num - 1;
+            if (this.month_num < 0) {
+                this.month_num = 11;
+                this.year = this.year - 1;
+            }
+        }
+        this.month_name = this.monthNames[this.month_num];
+        this.days = [];
+        this.getDaysInMonth(this.month_num, this.year);
+    };
+    GamesPage.prototype.toggleGroup = function (group) {
+        this.shownGroup = group;
+    };
+    GamesPage.prototype.isGroupShown = function (group) {
+        return this.shownGroup === group;
+    };
+    GamesPage.prototype.onClick = function (day) {
+        this.shownGroup = null;
+        var date = this.gamesProvider.computeOldMatchDate(day);
+        this.GetGames(date);
+        this.month_name = this.monthNames[this.month_num];
+        this.days = [];
+        this.getDaysInMonth(this.month_num, this.year);
+    };
+    GamesPage.prototype.GetGames = function (currentdate) {
         var _this = this;
-        this.paymentsProvider.GetPlans(0, 10)
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        loading.present();
+        this.gamesProvider.GetGames(currentdate)
             .subscribe(function (resp) {
+            loading.dismiss().catch(function () { });
             if (resp.statusCode === 200) {
-                _this.plans = resp.data.content;
-                console.log(_this.plans);
-                _this.currentPage = resp.data.number;
-                _this.totalPage = resp.data.totalPages;
-                _this.totalData = resp.data.totalElements;
-                _this.perPage = resp.data.size;
-                _this.originalplans = _this.plans;
-                _this.noplans = '';
+                console.log(resp);
+                _this.gamelist = resp.data;
             }
             else {
                 _this.authProvider.showToast(resp.description);
             }
-            _this.error = '';
         }, function (error) {
-            _this.error = 'none';
-            _this.plans = null;
-            _this.authProvider.showToast(error.error.descriptions);
+            loading.dismiss().catch(function () { });
+            _this.authProvider.showToast(error.error.error);
         });
     };
-    // onSearch() {
-    //   let searchvalue = this.searchTerm;
-    //   if (searchvalue.trim() === '') {
-    //     this.payments = this.originalpayments
-    //   } else {
-    //     if (searchvalue.length >= 3) {
-    //       this.paymentsProvider.SearchPayments(searchvalue, 0, 20)
-    //         .subscribe(resp => {
-    //           if (resp.statusCode === 200) {
-    //             this.payments = resp.data.content;
-    //             this.currentPage = resp.data.number;
-    //             this.totalPage = resp.data.totalPages;
-    //             this.totalData = resp.data.totalElements;
-    //             this.perPage = resp.data.size;
-    //           } else {
-    //             this.authProvider.showToast(resp.description);
-    //           }
-    //           this.error = '';
-    //         }, error => {
-    //           this.error = 'none';
-    //           this.payments = null;
-    //         });
-    //     }
-    //   }
-    // }
-    // onClear(ev) {
-    //   this.searchTerm = "";
-    //   this.payments = this.originalpayments;
-    //   this.error = '';
-    // }
-    // onCancel(ev) {
-    //   this.searchTerm = "";
-    //   this.payments = this.originalpayments;
-    //   this.error = '';
-    // }
-    PaymentPlansPage.prototype.scrollInfinite = function (event) {
-        var _this = this;
-        this.currentPage += 1;
-        setTimeout(function () {
-            _this.paymentsProvider.GetPlans(_this.currentPage, _this.perPage)
-                .subscribe(function (resp) {
-                if (resp.statusCode === 200) {
-                    _this.currentPage = resp.data.number;
-                    _this.totalPage = resp.data.totalPages;
-                    _this.totalData = resp.data.totalElements;
-                    _this.perPage = resp.data.size;
-                    _this.noplans = '';
-                    for (var i = 0; i < resp.data.content.length; i++) {
-                        _this.plans.push(resp.data.content[i]);
-                    }
-                }
-                else {
-                    _this.authProvider.showToast(resp.description);
-                }
-                event.complete();
-            }, function (error) {
-                _this.noplans = 'none';
-                event.complete();
-            });
-        }, 1000);
-    };
-    PaymentPlansPage.prototype.onGotoTop = function () {
-        this.content.scrollToTop();
-    };
-    PaymentPlansPage.prototype.onDeleteOptions = function (plan) {
+    GamesPage.prototype.onGameOption = function (game) {
         var _this = this;
         var actionSheet = this.actionSheetCtrl.create({
-            title: 'Plan Options',
+            title: 'Game Options',
             buttons: [
                 {
+                    text: 'View / Edit',
+                    handler: function () { _this.navCtrl.push('GameEditPage', { game: game }); }
+                }, {
                     text: 'Delete',
-                    handler: function () { _this.onDeletePlan(plan); }
+                    handler: function () { _this.onDeleteGame(game); }
                 }, {
                     text: 'Cancel',
                     role: 'cancel',
@@ -182,14 +175,14 @@ var PaymentPlansPage = /** @class */ (function () {
         });
         actionSheet.present();
     };
-    PaymentPlansPage.prototype.onDeletePlan = function (plan) {
+    GamesPage.prototype.onDeleteGame = function (game) {
         var _this = this;
         var loading = this.loadingCtrl.create({
             content: "Please wait..."
         });
         var confirm = this.alertCtrl.create({
-            title: 'Delete Plan',
-            message: 'Do you want to delete this payment record?</b><br/><br/>This is action is irreversible.',
+            title: 'Delete Game',
+            message: 'Do you want to delete this game?</b><br/><br/>All the votes and comments on this game would also be deleted.</b><br/><br/>This is action is irreversible.',
             buttons: [
                 {
                     text: 'Cancel',
@@ -200,10 +193,11 @@ var PaymentPlansPage = /** @class */ (function () {
                     text: 'Proceed',
                     handler: function () {
                         loading.present();
-                        _this.paymentsProvider.deletePayment(plan.id).subscribe(function (res) {
+                        _this.gamesProvider.deleteGame(game.id).subscribe(function (res) {
                             loading.dismiss().catch(function () { });
                             if (res.statusCode === 200) {
-                                _this.navCtrl.pop();
+                                var currentdate = _this.gamesProvider.getDate();
+                                _this.GetGames(currentdate);
                             }
                             else {
                                 _this.authProvider.showToast(res.description);
@@ -218,25 +212,22 @@ var PaymentPlansPage = /** @class */ (function () {
         });
         confirm.present();
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["Content"]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["Content"])
-    ], PaymentPlansPage.prototype, "content", void 0);
-    PaymentPlansPage = __decorate([
+    GamesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: 'page-payment-plans',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payment-plans/payment-plans.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Plans </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="teamMatchs">\n    <ion-list>\n      <ion-item class="thumbnailItem" *ngFor="let plan of plans">\n        <ion-thumbnail item-left>\n          <!-- Team image -->\n          <img src="assets/imgs/appicon.png" />\n        </ion-thumbnail>\n        <ion-grid no-padding>\n          <ion-row>\n            <ion-col col-6>\n              <!-- team Name -->\n              <h5 ion-text color="dark">{{plan.user.lastname}} {{plan.user.firstname}} </h5>\n              <!-- League Name -->\n              <p ion-text color="color1">{{plan.plantype.name}}</p>\n            </ion-col>\n            <ion-col col-6>\n              <span ion-text style="font-size: small !important;">Start Date</span>\n              <p ion-text color="color1">{{plan.startDate}}</p>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n        <div class=""  style="margin-bottom: 0.3em !important;" item-right>\n          <span ion-text style="font-size: small !important;">End Date</span>\n          <p ion-text color="color2"><b>{{plan.endDate}}</b></p>\n        </div>\n      </ion-item>\n    </ion-list>\n  </div>\n  <div class="" *ngIf="error">\n    <p ion-text text-center color="color2">No result found!</p>\n  </div>\n  <div text-center margin-top margin-bottonm *ngIf="noplans === \'none\'" (click)="onGotoTop()">\n    <button ion-button small color="color2">Back to Top</button>\n  </div>\n  <ion-infinite-scroll (ionInfinite)="scrollInfinite($event)" *ngIf="currentPage < totalPage">\n    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading page {{currentPage}} of {{totalPage}}">\n    </ion-infinite-scroll-content>\n  </ion-infinite-scroll>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payment-plans/payment-plans.html"*/,
+            selector: 'page-games',template:/*ion-inline-start:"/Users/mac/Downloads/Sure3Odds/src/pages/games/games.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Games</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only navPush="GameNewPage">\n        <ion-icon name="add-circle"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n  <ion-toolbar class="calendarToolbar">\n    <ion-grid class="calendar">\n      <ion-row>\n        <ion-col col-auto>\n          <ion-icon name="ios-arrow-back" color="light" (click)="change_month(\'decrease\')"></ion-icon>\n        </ion-col>\n        <ion-col col>\n          <p>\n            <span>{{month_name}}</span>,\n            <span>{{year}}</span>\n          </p>\n        </ion-col>\n        <ion-col col-auto>\n          <ion-icon name="ios-arrow-forward" color="light" (click)="change_month(\'increase\')"></ion-icon>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n    <div class="daysScroll">\n      <ion-scroll scrollX="true" scrollY="false">\n        <div class="day" *ngFor="let day of days ; let i=index" (click)="toggleGroup(i)"\n          [ngClass]="{\'active\': isGroupShown(i)}">\n          <p>{{day.name}}</p>\n          <button ion-button clear (click)="onClick(day)">{{day.day_num}} </button>\n        </div>\n      </ion-scroll>\n    </div>\n\n    <p ion-text text-center no-margin color="light"><b>{{currentDate |  date:\'mediumDate\'}}</b></p>\n  </ion-toolbar>\n</ion-header>\n\n\n<ion-content padding>\n  <!-- matches list  Sure3Odds.com  -->\n  <div class="gamelist">\n    <ion-list class="" *ngFor="let game of gamelist">\n      <ion-list-header>\n        <ion-row>\n          <ion-col col-4>\n            <ion-icon name="football" color="color1" item-left></ion-icon>\n            <span ion-text padding-bottom>{{game.title}}</span>\n          </ion-col>\n          <ion-col col-4 text-center>\n            <p ion-text padding-top color="color2">sure3odds.com</p>\n          </ion-col>\n          <ion-col col-4 text-right>\n            <span ion-text color="color1">Total odds : {{game.odds ? game.odds : \'0.0\'}}</span>\n          </ion-col>\n        </ion-row>\n      </ion-list-header>\n      <!-- match item  -->\n      <div class="" *ngIf="game.items">\n        <ion-item class="matchItem" *ngFor="let match of game.items">\n          <ion-grid>\n            <ion-row (click)="onGameOption(match)">\n              <ion-col col>\n                <ion-item>\n                  <img src="{{match.hometeam.imageurl}}" item-right *ngIf="match.hometeam.imageurl" />\n                  <img src="assets/imgs/appicon.png" item-right *ngIf="!match.hometeam.imageurl" />\n                  <p text-right>{{match.hometeam.name}}</p>\n                </ion-item>\n              </ion-col>\n              <ion-col col-auto>\n                <span ion-text color="color1">{{match.matchtime}}</span>\n                <p ion-text color="color2"><b>{{match.odds}}</b></p>\n                <p ion-text color="color2"><b>{{match.selections.name}}</b></p>\n              </ion-col>\n              <ion-col col>\n                <ion-item>\n                  <img src="{{match.awayteam.imageurl}}" item-left *ngIf="match.awayteam.imageurl" />\n                  <img src="assets/imgs/appicon.png" item-left *ngIf="!match.awayteam.imageurl" />\n                  <p text-left>{{match.awayteam.name}}</p>\n                </ion-item>\n              </ion-col>\n            </ion-row>\n          </ion-grid>\n        </ion-item>\n      </div>\n      <div class="" *ngIf="game.msg">\n        <p ion-text text-center color="color2">{{game.msg}}</p>\n      </div>\n\n    </ion-list>\n  </div>\n\n</ion-content>'/*ion-inline-end:"/Users/mac/Downloads/Sure3Odds/src/pages/games/games.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"],
             __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ActionSheetController"],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["LoadingController"],
+            __WEBPACK_IMPORTED_MODULE_0__providers_games_games__["a" /* GamesProvider */],
             __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["AlertController"],
-            __WEBPACK_IMPORTED_MODULE_0__providers_payments_payments__["a" /* PaymentsProvider */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"]])
-    ], PaymentPlansPage);
-    return PaymentPlansPage;
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["LoadingController"],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ActionSheetController"],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"]])
+    ], GamesPage);
+    return GamesPage;
 }());
 
-//# sourceMappingURL=payment-plans.js.map
+//# sourceMappingURL=games.js.map
 
 /***/ })
 

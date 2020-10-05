@@ -9,6 +9,7 @@ export class Predictions {
       public matchtime: string,
       public odds:string,
       public id: string,
-      public status:{id, name}
+      public status:{id, name},
+      public user:{id, firstname, lastname}
     ) { }
   }

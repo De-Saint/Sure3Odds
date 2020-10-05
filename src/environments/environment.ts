@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  // apiUrl :"http://104.248.162.83/core-api"
-  apiUrl :"http://localhost:8081/sure3odds"
+  // apiUrl :"https://5c0e0c010a54.ngrok.io/sure3odds"
+  apiUrl :"http://localhost:8080/sure3odds"
 };
 
 /*

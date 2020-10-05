@@ -1,0 +1,13 @@
+{
+  "appId": "com.sure3odds.sureapp",
+  "appName": "Sure3Odds",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

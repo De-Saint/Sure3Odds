@@ -34,8 +34,13 @@ export class PaymentPlansPage {
 
 
   GetPlans() {
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    loading.present();
     this.paymentsProvider.GetPlans(0, 10)
       .subscribe(resp => {
+        loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
           this.plans = resp.data.content;
           console.log(this.plans);
@@ -52,45 +57,11 @@ export class PaymentPlansPage {
       }, error => {
         this.error = 'none';
         this.plans = null;
+        loading.dismiss().catch(() => { });
         this.authProvider.showToast(error.error.descriptions);
       });
   }
-  // onSearch() {
-  //   let searchvalue = this.searchTerm;
-  //   if (searchvalue.trim() === '') {
-  //     this.payments = this.originalpayments
-  //   } else {
-  //     if (searchvalue.length >= 3) {
-  //       this.paymentsProvider.SearchPayments(searchvalue, 0, 20)
-  //         .subscribe(resp => {
-  //           if (resp.statusCode === 200) {
-  //             this.payments = resp.data.content;
-  //             this.currentPage = resp.data.number;
-  //             this.totalPage = resp.data.totalPages;
-  //             this.totalData = resp.data.totalElements;
-  //             this.perPage = resp.data.size;
-  //           } else {
-  //             this.authProvider.showToast(resp.description);
-  //           }
-  //           this.error = '';
-  //         }, error => {
-  //           this.error = 'none';
-  //           this.payments = null;
-  //         });
-  //     }
-  //   }
-  // }
-  // onClear(ev) {
-  //   this.searchTerm = "";
-  //   this.payments = this.originalpayments;
-  //   this.error = '';
-  // }
-  // onCancel(ev) {
-  //   this.searchTerm = "";
-  //   this.payments = this.originalpayments;
-  //   this.error = '';
 
-  // }
 
   scrollInfinite(event) {
     this.currentPage += 1;
@@ -128,7 +99,7 @@ export class PaymentPlansPage {
         {
           text: 'Delete',
           handler: () => { this.onDeletePlan(plan) }
-       
+
         }, {
           text: 'Cancel',
           role: 'cancel',

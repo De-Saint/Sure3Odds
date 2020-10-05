@@ -32,8 +32,13 @@ export class SettingTeamsPage {
   }
 
   GetTeams() {
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    loading.present();
     this.gamesProvider.GetTeams(0, 200)
       .subscribe(resp => {
+        loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
           this.teams = resp.data.content;
           this.originalteams = this.teams;
@@ -47,7 +52,8 @@ export class SettingTeamsPage {
         }
       }, error => {
         this.error = 'none';
-        this.authProvider.showToast(error.error.error);
+        loading.dismiss().catch(() => { });
+        this.authProvider.showToast(error.error.description);
       });
   }
 
@@ -57,8 +63,13 @@ export class SettingTeamsPage {
       this.teams = this.originalteams;
     } else {
       if (searchvalue.length >= 3) {
+        let loading = this.loadingCtrl.create({
+          content: "Please wait..."
+        });
+        loading.present();
         this.gamesProvider.SearchTeams(searchvalue, 0, 200)
           .subscribe(resp => {
+            loading.dismiss().catch(() => { });
             if (resp.statusCode === 200) {
               this.teams = resp.data.content;
               this.currentPage = resp.data.number;
@@ -71,7 +82,8 @@ export class SettingTeamsPage {
             }
           }, error => {
             this.error = 'none';
-            this.authProvider.showToast(error.error.error);
+            loading.dismiss().catch(() => { });
+            this.authProvider.showToast(error.error.description);
           });
       }
     }
@@ -193,7 +205,7 @@ export class SettingTeamsPage {
     }).present()
   }
 
-  
+
   onPromoteDemote(team) {
     this.alertCtrl.create({
       title: "Promote/Relegate Team",

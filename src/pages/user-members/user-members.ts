@@ -32,8 +32,13 @@ export class UserMembersPage {
   }
 
   GetUsers() {
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    loading.present();
     this.authProvider.GetUsersByType(2, 0, 10)
       .subscribe(resp => {
+        loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
           this.users = resp.data.content;
           console.log(this.users);
@@ -49,7 +54,8 @@ export class UserMembersPage {
         this.error = '';
       }, error => {
         this.error = 'none';
-        this.authProvider.showToast(error.error.error);
+        loading.dismiss().catch(() => { });
+        this.authProvider.showToast(error.error.description);
       });
   }
   onClear(ev) {
@@ -69,8 +75,13 @@ export class UserMembersPage {
       this.users = this.originalusers;
     } else {
       if (searchvalue.length >= 3) {
+        let loading = this.loadingCtrl.create({
+          content: "Please wait..."
+        });
+        loading.present();
         this.authProvider.SearchUsersByType(searchvalue, 2, 0, 10)
           .subscribe(resp => {
+            loading.dismiss().catch(() => { });
             if (resp.statusCode === 200) {
               this.users = resp.data.content;
               console.log(this.users);
@@ -83,6 +94,7 @@ export class UserMembersPage {
             }
             this.error = '';
           }, error => {
+            loading.dismiss().catch(() => { });
             this.error = 'none';
             this.users = [];
           });
@@ -102,7 +114,7 @@ export class UserMembersPage {
             this.nousers = '';
             for (let i = 0; i < resp.data.content.length; i++) {
               this.users.push(resp.data.content[i]);
-            } 
+            }
           } else {
             this.authProvider.showToast(resp.description);
           }

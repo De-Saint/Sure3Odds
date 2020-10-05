@@ -40,7 +40,13 @@ export class UserMemberEditPage {
   }
 
   GetUserDetails(id) {
-    this.authProvider.findUserDetails(id).subscribe(result => {
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    loading.present();
+    this.authProvider.findUserDetails(id)
+    .subscribe(result => {
+      loading.dismiss().catch(() => { });
       if (result.statusCode == 200) {
         this.userplan = result.data.planData;
         this.newuser = result.data.userData;
@@ -49,11 +55,12 @@ export class UserMemberEditPage {
         this.authProvider.showToast(result.description);
       }
     }, error => {
+      loading.dismiss().catch(() => { });
       this.authProvider.showToast(error.error.description);
     })
   }
 
-  
+
   getPlantypes() {
     this.authProvider.getAllPlantypes().subscribe(result => {
       this.plantypes = result.data;

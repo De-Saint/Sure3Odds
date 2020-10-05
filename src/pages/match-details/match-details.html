@@ -13,9 +13,9 @@
           <!-- first team -->
           <ion-col col>
             <ion-item>
-              <img src="{{match.hometeam.imageurl}}" style="border-radius: 50px;" *ngIf="match.hometeam.imageurl" />
-              <img src="assets/imgs/appicon.png" style="border-radius: 50px;" *ngIf="!match.hometeam.imageurl" />
-              <p>{{match.hometeam.name}}</p>
+              <img src="{{match.hometeam?.imageurl}}" style="border-radius: 50px;" *ngIf="match.hometeam?.imageurl" />
+              <img src="assets/imgs/appicon.png" style="border-radius: 50px;" *ngIf="!match.hometeam?.imageurl" />
+              <p>{{match.hometeam?.name}}</p>
             </ion-item>
           </ion-col>
           <!-- match time -->
@@ -25,20 +25,20 @@
               <span ion-text style="padding: 0.3em;" color="color1">-</span>
               <span ion-text color="color1">{{match?.awayteamscore}}</span>
             </div>
-            <p ion-text color="light" text-center>{{match?.status.name}}</p>
+            <p ion-text color="light" text-center>{{match.status?.name}}</p>
           </ion-col>
           <!-- second team -->
           <ion-col col>
             <ion-item>
-              <img src="{{match.awayteam.imageurl}}" style="border-radius: 50px;" *ngIf="match.awayteam.imageurl" />
-              <img src="assets/imgs/appicon.png" style="border-radius: 50px;" *ngIf="!match.awayteam.imageurl" />
-              <p>{{match.awayteam.name}}</p>
+              <img src="{{match.awayteam?.imageurl}}" style="border-radius: 50px;" *ngIf="match.awayteam?.imageurl" />
+              <img src="assets/imgs/appicon.png" style="border-radius: 50px;" *ngIf="!match.awayteam?.imageurl" />
+              <p>{{match.awayteam?.name}}</p>
             </ion-item>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col col-center>
-            <p ion-text color="secondary" style="text-align: center;">{{match.country.name}} - {{match.league.name}}</p>
+            <p ion-text color="secondary" style="text-align: center;">{{match.country?.name}} - {{match.league?.name}}</p>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -91,7 +91,7 @@
               </div>
             </ion-col>
             <ion-col col-4 text-center>
-              <p ion-text color="dark" no-margin>{{match.selections.name}}</p>
+              <p ion-text color="dark" no-margin>{{match.selections?.name}}</p>
             </ion-col>
             <ion-col col-4>
               <div class="progressBar">

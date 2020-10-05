@@ -66,8 +66,13 @@ export class SettingTeamViewPage {
       this.teams = this.originalteams
     } else {
       if (searchvalue.length >= 3) {
+        let loading = this.loadingCtrl.create({
+          content: "Please wait..."
+        });
+        loading.present();
         this.gamesProvider.SearchTeamsByLeagueIdAndName(searchvalue, this.league.id, 0, 10)
           .subscribe(resp => {
+            loading.dismiss().catch(() => { });
             if (resp.statusCode === 200) {
               this.teams = resp.data.content;
               this.currentPage = resp.data.number;
@@ -81,6 +86,7 @@ export class SettingTeamViewPage {
           }, error => {
             this.error = 'none';
             this.teams = [];
+            loading.dismiss().catch(() => { });
             this.authProvider.showToast(error.error.error);
           });
       }
@@ -203,7 +209,7 @@ export class SettingTeamViewPage {
     }).present()
   }
 
-  
+
   onPromoteDemote(team) {
     this.alertCtrl.create({
       title: "Promote/Relegate Team",

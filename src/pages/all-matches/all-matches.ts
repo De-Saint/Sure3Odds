@@ -1,7 +1,7 @@
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
 import { GamesProvider } from './../../providers/games/games';
 import { Component, OnInit } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, NavController, LoadingController, ActionSheetController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -9,7 +9,7 @@ import { IonicPage, NavController } from 'ionic-angular';
   templateUrl: 'all-matches.html',
 })
 export class AllMatchesPage implements OnInit {
-  gamelist: any; 
+  gamelist: any;
   match: Object;
   // calender Function
   monthNames = ["January", "February", "March", "April", "May", "June", "July",
@@ -21,11 +21,13 @@ export class AllMatchesPage implements OnInit {
   month_num = this.myDate.getMonth();
   month_name = this.monthNames[this.month_num];
   // click day
-  currentDate:any;
-  shownGroup : any;
+  currentDate: any;
+  shownGroup: any;
   constructor(public navCtrl: NavController,
     private authProvider: AuthenicationProvider,
-     private gamesProvider: GamesProvider) {
+    private loadingCtrl: LoadingController,
+    private actionSheetCtrl: ActionSheetController,
+    private gamesProvider: GamesProvider) {
     this.getDaysInMonth(this.month_num, this.year);
     this.currentDate = this.myDate;
   }
@@ -80,7 +82,7 @@ export class AllMatchesPage implements OnInit {
   }
 
 
-  onClick(day):void {
+  onClick(day): void {
     this.shownGroup = null;
     var date = this.gamesProvider.computeOldMatchDate(day);
     this.GetGames(date);
@@ -90,8 +92,13 @@ export class AllMatchesPage implements OnInit {
   }
 
   GetGames(currentdate) {
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    loading.present();
     this.gamesProvider.GetGames(currentdate)
       .subscribe(resp => {
+        loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
           this.gamelist = resp.data;
           console.log(this.gamelist);
@@ -99,13 +106,33 @@ export class AllMatchesPage implements OnInit {
           console.log(resp.description);
         }
       }, error => {
+        loading.dismiss().catch(() => { });
         this.authProvider.showToast(error.error.description);
       });
   }
 
-  GotoMatchDetails(page) {
-    this.navCtrl.push(page)
-  }
 
+  onMatchOption(match) {
+    let actionSheet = this.actionSheetCtrl.create({
+      title: 'Match Options',
+      buttons: [
+        {
+          text: 'View Details',
+          handler: () => { this.navCtrl.push('MatchDetailsPage', { match }) }
+        }, {
+          text: 'Post Your Comment',
+          handler: () => { this.navCtrl.push('MatchCommentsPage', { match }) }
+        }, {
+          text: 'Predict Match',
+          handler: () => { this.navCtrl.push('MatchVotesPage', { match }) }
+        }, {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => { }
+        }
+      ]
+    });
+    actionSheet.present();
+  }
 
 }

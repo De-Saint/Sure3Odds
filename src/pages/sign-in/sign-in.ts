@@ -1,5 +1,5 @@
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { IonicPage, NavController, Events } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 
@@ -8,7 +8,7 @@ import { Storage } from '@ionic/storage';
   selector: 'page-sign-in',
   templateUrl: 'sign-in.html',
 })
-export class SignInPage implements OnInit {
+export class SignInPage {
   submitted = false;
   passwordType: string = 'password';
   passwordIcon: string = 'eye-off';
@@ -19,22 +19,22 @@ export class SignInPage implements OnInit {
     private storage: Storage, private events: Events,
     private auth: AuthenicationProvider) {
   }
-  ngOnInit(): void {
 
-  }
 
   onLogin(form, page) {
     this.submitted = true;
     if (form.valid) {
       this.auth.login(this.login.email, this.login.password)
         .subscribe(resp => {
+          console.log(resp)
           if (resp.statusCode === 200) {
            this.gotoHomePage(resp.data, page);
           } else {
             this.auth.showToast(resp.description);
           }
         }, error => {
-          console.log(error);
+          console.log(error.error.message);
+          console.log(JSON.stringify(error));
           // this.auth.showToast(error.error.message);
         });
 

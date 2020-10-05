@@ -1,7 +1,7 @@
 import { GamesProvider } from './../../providers/games/games';
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, Content, ActionSheetController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Content, ActionSheetController, LoadingController } from 'ionic-angular';
 
 
 
@@ -25,6 +25,7 @@ export class SettingCountryPage {
   constructor(public navCtrl: NavController,
     private authProvider: AuthenicationProvider,
     private gamesProvider: GamesProvider,
+    private loadingCtrl: LoadingController,
     private actionSheetCtrl: ActionSheetController,
     public navParams: NavParams) {
   }
@@ -34,8 +35,13 @@ export class SettingCountryPage {
     this.GetCountries();
   }
   GetCountries() {
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    loading.present();
     this.gamesProvider.GetCountries(0, 20)
       .subscribe(resp => {
+        loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
           this.countries = resp.data.content;
           this.currentPage = resp.data.number;
@@ -51,6 +57,7 @@ export class SettingCountryPage {
       }, error => {
         this.error = 'none';
         this.countries = [];
+        loading.dismiss().catch(() => { });
         this.authProvider.showToast(error.error.error);
       });
   }

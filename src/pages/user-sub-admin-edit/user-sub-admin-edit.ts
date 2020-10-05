@@ -16,7 +16,7 @@ export class UserSubAdminEditPage {
   selecteduser: any;
   statuses: any;
   newuser: NewUsers = new NewUsers("", "", "", "", "", "", "", { id: "" }, "", { id: "", name: "" }, { id: "", name: "" });
- 
+
   constructor(public navCtrl: NavController,
     private gamesProvider: GamesProvider,
     private loadingCtrl: LoadingController,
@@ -60,14 +60,20 @@ export class UserSubAdminEditPage {
     console.log(event.value);
   }
   GetStatus() {
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    loading.present();
     this.gamesProvider.GetStatus("User")
       .subscribe(resp => {
+        loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
           this.statuses = resp.data;
         } else {
           this.authProvider.showToast(resp.description);
         }
       }, error => {
+        loading.dismiss().catch(() => { });
         this.authProvider.showToast(error.error.error);
       });
   }

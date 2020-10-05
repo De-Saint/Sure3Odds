@@ -3,8 +3,8 @@
     <button ion-button menuToggle icon-only>
       <ion-icon class="goal-menu" ></ion-icon>
     </button>
-    <ion-title>Match Details</ion-title>
-   
+    <ion-title>Comments</ion-title>
+
   </ion-navbar>
   <ion-toolbar class="matchResultBar">
     <!-- match item  -->
@@ -14,9 +14,9 @@
           <!-- first team -->
           <ion-col col>
             <ion-item>
-              <img src="{{match.hometeam.imageurl}}" style="border-radius: 50px;" *ngIf="match.hometeam.imageurl" />
-              <img src="assets/imgs/appicon.png" style="border-radius: 50px;" *ngIf="!match.hometeam.imageurl" />
-              <p>{{match.hometeam.name}}</p>
+              <img src="{{match.hometeam?.imageurl}}" style="border-radius: 50px;" *ngIf="match.hometeam?.imageurl" />
+              <img src="assets/imgs/appicon.png" style="border-radius: 50px;" *ngIf="!match.hometeam?.imageurl" />
+              <p>{{match.hometeam?.name}}</p>
             </ion-item>
           </ion-col>
           <!-- match time -->
@@ -26,20 +26,20 @@
               <span ion-text style="padding: 0.3em;" color="color1">-</span>
               <span ion-text color="color1">{{match?.awayteamscore}}</span>
             </div>
-            <p ion-text color="light" text-center>{{match?.status.name}}</p>
+            <p ion-text color="light" text-center>{{match.status?.name}}</p>
           </ion-col>
           <!-- second team -->
           <ion-col col>
             <ion-item>
-              <img src="{{match.awayteam.imageurl}}" style="border-radius: 50px;" *ngIf="match.awayteam.imageurl" />
-              <img src="assets/imgs/appicon.png" style="border-radius: 50px;" *ngIf="!match.awayteam.imageurl" />
-              <p>{{match.awayteam.name}}</p>
+              <img src="{{match.awayteam?.imageurl}}" style="border-radius: 50px;" *ngIf="match.awayteam?.imageurl" />
+              <img src="assets/imgs/appicon.png" style="border-radius: 50px;" *ngIf="!match.awayteam?.imageurl" />
+              <p>{{match.awayteam?.name}}</p>
             </ion-item>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col col-center>
-            <p ion-text color="secondary" style="text-align: center;">{{match.country.name}} - {{match.league.name}}</p>
+            <p ion-text color="secondary" style="text-align: center;">{{match.country?.name}} - {{match.league?.name}}</p>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -67,7 +67,7 @@
     </ion-item>
   </ion-list>
   <div color="color2" text-center *ngIf="error === 'none'">
-    What do you think about <br /> <br /> <strong>{{match.hometeam.name}}</strong> Vs  <strong>{{match.awayteam.name}}</strong>?
+    What do you think about <br /> <br /> <strong>{{match.hometeam?.name}}</strong> Vs  <strong>{{match.awayteam?.name}}</strong>?
   </div>
 </ion-content>
 <ion-footer>
@@ -75,7 +75,7 @@
     <ion-grid class="white bordertop lightborder">
       <ion-row wrap>
         <ion-col col-10 class="center">
-          <ion-input type="text" class="" [(ngModel)]="comment.comments" placeholder="Type a message"></ion-input>
+          <ion-input type="text" class="" [(ngModel)]="comment.comments" placeholder="Type your comment"></ion-input>
         </ion-col>
         <ion-col col-2 class="center ">
           <button ion-button icon-left round class="round paddingleft half-paddingright" color="primary" (click)="onCreateComment(comment, match)">

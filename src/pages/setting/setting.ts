@@ -6,13 +6,13 @@ import { IonicPage, NavController } from 'ionic-angular';
   templateUrl: 'setting.html',
 })
 export class SettingPage {
-  tab1Root = 'SettingCountryPage';
-  tab2Root = 'SettingLeaguesPage';
-  tab3Root = 'SettingTeamsPage';
-  tab4Root = 'SettingSelectionsPage';
+  CountryPage = "SettingCountryPage";
+  LeaguePage = "SettingLeaguesPage";
+  TeamPage = "SettingTeamsPage";
+  SelectionPage = "SettingSelectionsPage";
   constructor(public navCtrl: NavController) {
-    
-  } 
+
+  }
 
 
 

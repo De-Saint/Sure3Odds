@@ -1,15 +1,15 @@
 webpackJsonp([7],{
 
-/***/ 732:
+/***/ 733:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingTeamAssignPageModule", function() { return SettingTeamAssignPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingTeamManagePageModule", function() { return SettingTeamManagePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_team_assign__ = __webpack_require__(797);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__ = __webpack_require__(354);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_team_manage__ = __webpack_require__(819);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__ = __webpack_require__(358);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -21,28 +21,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SettingTeamAssignPageModule = /** @class */ (function () {
-    function SettingTeamAssignPageModule() {
+var SettingTeamManagePageModule = /** @class */ (function () {
+    function SettingTeamManagePageModule() {
     }
-    SettingTeamAssignPageModule = __decorate([
+    SettingTeamManagePageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__setting_team_assign__["a" /* SettingTeamAssignPage */],
+                __WEBPACK_IMPORTED_MODULE_2__setting_team_manage__["a" /* SettingTeamManagePage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_team_assign__["a" /* SettingTeamAssignPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_team_manage__["a" /* SettingTeamManagePage */]),
                 __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__["SelectSearchableModule"]
             ],
         })
-    ], SettingTeamAssignPageModule);
-    return SettingTeamAssignPageModule;
+    ], SettingTeamManagePageModule);
+    return SettingTeamManagePageModule;
 }());
 
-//# sourceMappingURL=setting-team-assign.module.js.map
+//# sourceMappingURL=setting-team-manage.module.js.map
 
 /***/ }),
 
-/***/ 749:
+/***/ 750:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -62,18 +62,18 @@ var Teams = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 797:
+/***/ 819:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingTeamAssignPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_games_games__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_Teams__ = __webpack_require__(749);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__ = __webpack_require__(354);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingTeamManagePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_games_games__ = __webpack_require__(357);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_select_searchable__ = __webpack_require__(358);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ionic_select_searchable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__interfaces_Teams__ = __webpack_require__(750);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(18);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -89,46 +89,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var SettingTeamAssignPage = /** @class */ (function () {
-    function SettingTeamAssignPage(navCtrl, gamesProvider, loadingCtrl, authProvider, navParams) {
+var SettingTeamManagePage = /** @class */ (function () {
+    function SettingTeamManagePage(navCtrl, loadingCtrl, authProvider, gamesProvider, navParams) {
         this.navCtrl = navCtrl;
-        this.gamesProvider = gamesProvider;
         this.loadingCtrl = loadingCtrl;
         this.authProvider = authProvider;
+        this.gamesProvider = gamesProvider;
         this.navParams = navParams;
-        this.team = new __WEBPACK_IMPORTED_MODULE_2__interfaces_Teams__["a" /* Teams */]("", "", "", { id: "", name: "", imageurl: "" }, { id: "", name: "", imageurl: "" });
+        this.team = new __WEBPACK_IMPORTED_MODULE_3__interfaces_Teams__["a" /* Teams */]("", "", "", { id: "", name: "", imageurl: "" }, { id: "", name: "", imageurl: "" });
         this.selectedteam = this.navParams.get("team");
         console.log("this.selectedteam", this.selectedteam);
         if (this.selectedteam) {
             this.team = this.selectedteam;
         }
     }
-    SettingTeamAssignPage.prototype.ionViewWillEnter = function () {
-        this.Getcountries();
+    SettingTeamManagePage.prototype.ionViewWillEnter = function () {
+        this.GetLeaguesByCountryID();
     };
-    SettingTeamAssignPage.prototype.Getcountries = function () {
-        var _this = this;
-        this.gamesProvider.Getcountries()
-            .subscribe(function (resp) {
-            if (resp.statusCode === 200) {
-                _this.countries = resp.data;
-            }
-            else {
-                _this.authProvider.showToast(resp.description);
-            }
-        }, function (error) {
-            _this.authProvider.showToast(error.error.error);
-        });
-    };
-    SettingTeamAssignPage.prototype.onSelectCountry = function (event) {
+    SettingTeamManagePage.prototype.GetLeaguesByCountryID = function () {
         var _this = this;
         var loading = this.loadingCtrl.create({
             content: "Please wait..."
         });
-        this.team.league = null;
-        if (event.value) {
+        if (this.team) {
             loading.present();
-            this.gamesProvider.GetLeaguesByCountryID(event.value.id)
+            this.gamesProvider.GetLeaguesByCountryID(this.team.country.id)
                 .subscribe(function (resp) {
                 loading.dismiss().catch(function () { });
                 if (resp.statusCode === 200) {
@@ -143,19 +128,18 @@ var SettingTeamAssignPage = /** @class */ (function () {
             });
         }
     };
-    SettingTeamAssignPage.prototype.onSelectLeague = function (event) {
+    SettingTeamManagePage.prototype.onSelectLeague = function (event) {
         // console.log('league:', event.value);
     };
-    SettingTeamAssignPage.prototype.onSubmit = function (team) {
+    SettingTeamManagePage.prototype.onSubmit = function (team) {
         var _this = this;
         if (team.name) {
-            team.id = 0;
             var loading_1 = this.loadingCtrl.create({
                 content: "Please wait..."
             });
             console.log(team);
             loading_1.present();
-            this.gamesProvider.createTeam(team).subscribe(function (res) {
+            this.gamesProvider.updateTeam(team).subscribe(function (res) {
                 loading_1.dismiss().catch(function () { });
                 if (res.statusCode === 200) {
                     _this.navCtrl.pop();
@@ -174,21 +158,20 @@ var SettingTeamAssignPage = /** @class */ (function () {
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["ViewChild"])('myselect'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__["SelectSearchableComponent"])
-    ], SettingTeamAssignPage.prototype, "selectComponent", void 0);
-    SettingTeamAssignPage = __decorate([
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2_ionic_select_searchable__["SelectSearchableComponent"])
+    ], SettingTeamManagePage.prototype, "selectComponent", void 0);
+    SettingTeamManagePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
-            selector: 'page-setting-team-assign',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-team-assign/setting-team-assign.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Assign {{selectedteam.name}} To: </ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="otherForm">\n    <ion-list>\n      <ion-item>\n        <ion-label>\n          Select Country\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="team.country" (onChange)="onSelectCountry($event)" [items]="countries"\n          itemValueField="id" \n          [canClear]="true"\n          clearButtonText="Clear Selected"\n          confirmButtonText="Proceed"\n          itemTextField="name" \n          [canSearch]="true">\n\n        </select-searchable>\n      </ion-item>\n \n       <ion-item>\n        <ion-label>\n          Select League\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="team.league" (onChange)="onSelectLeague($event)" [items]="leagues"\n          itemValueField="id"\n          [canClear]="true"\n          clearButtonText="Clear Selected"\n          confirmButtonText="Proceed"\n          itemTextField="name" \n          [canSearch]="true">\n\n        </select-searchable>\n      </ion-item> \n      <ion-item>\n        <ion-label stacked>Name</ion-label>\n        <ion-input type="text" readonly [(ngModel)]="team.name"></ion-input>\n      </ion-item>\n      <!-- ==================================== -->\n    </ion-list>\n    <button ion-button block color="color2" (click)="onSubmit(team)">Submit</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-team-assign/setting-team-assign.html"*/,
+            selector: 'page-setting-team-manage',template:/*ion-inline-start:"/Users/mac/Downloads/Sure3Odds/src/pages/setting-team-manage/setting-team-manage.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Assign {{selectedteam.name}} To: </ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="otherForm">\n    <ion-list>\n       <ion-item>\n        <ion-label>\n          Select League\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="team.league" (onChange)="onSelectLeague($event)" [items]="leagues"\n          itemValueField="id"\n          [canClear]="true"\n          clearButtonText="Clear Selected"\n          confirmButtonText="Proceed"\n          itemTextField="name" \n          [canSearch]="true">\n\n        </select-searchable>\n      </ion-item> \n      <ion-item>\n        <ion-label stacked>Name</ion-label>\n        <ion-input type="text" readonly [(ngModel)]="team.name"></ion-input>\n      </ion-item>\n      <!-- ==================================== -->\n    </ion-list>\n    <button ion-button block color="color2" (click)="onSubmit(team)">Submit</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Downloads/Sure3Odds/src/pages/setting-team-manage/setting-team-manage.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavController"],
-            __WEBPACK_IMPORTED_MODULE_1__providers_games_games__["a" /* GamesProvider */],
-            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["LoadingController"],
-            __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavParams"]])
-    ], SettingTeamAssignPage);
-    return SettingTeamAssignPage;
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["LoadingController"], __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */],
+            __WEBPACK_IMPORTED_MODULE_1__providers_games_games__["a" /* GamesProvider */], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavParams"]])
+    ], SettingTeamManagePage);
+    return SettingTeamManagePage;
 }());
 
-//# sourceMappingURL=setting-team-assign.js.map
+//# sourceMappingURL=setting-team-manage.js.map
 
 /***/ })
 

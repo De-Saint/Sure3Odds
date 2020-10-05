@@ -18,7 +18,7 @@ export class PredictionAddPage {
   awayteams: any;
   hometeams: any;
   selections: any;
-  prediction: Predictions = new Predictions({ id: "" }, { id: "" }, { id: "" }, { id: "" }, "", { id: "" }, "", "", "", { id: "", name:"" })
+  prediction: Predictions = new Predictions({ id: "" }, { id: "" }, { id: "" }, { id: "" }, "", { id: "" }, "", "", "", { id: "", name:"" }, {id:"", firstname: "", lastname:""})
   constructor(private gamesProvider: GamesProvider,
     private authProvider: AuthenicationProvider,
     private loadingCtrl: LoadingController,
@@ -31,14 +31,20 @@ export class PredictionAddPage {
   }
 
   Getcountries() {
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    loading.present();
     this.gamesProvider.Getcountries()
       .subscribe(resp => {
+        loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
           this.countries = resp.data;
         } else {
           this.authProvider.showToast(resp.description);
         }
       }, error => {
+        loading.dismiss().catch(() => { });
         this.authProvider.showToast(error.error.error);
       });
   }
@@ -161,6 +167,6 @@ export class PredictionAddPage {
         this.authProvider.showToast(error.error.error);
       });
   }
- 
+
 
 }

@@ -1,6 +1,6 @@
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 
 
 @IonicPage()
@@ -11,6 +11,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ReportGeneralPage {
   report: any;
   constructor(public navCtrl: NavController,
+    private loadingCtrl: LoadingController,
     private authProvider: AuthenicationProvider,
     public navParams: NavParams) {
   }
@@ -20,8 +21,13 @@ export class ReportGeneralPage {
   }
 
   GetAppReport() {
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    loading.present();
     this.authProvider.GetAppReport()
       .subscribe(resp => {
+        loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
           this.report = resp.data;
           console.log(this.report);
@@ -29,6 +35,7 @@ export class ReportGeneralPage {
           this.authProvider.showToast(resp.description);
         }
       }, error => {
+        loading.dismiss().catch(() => { });
         this.authProvider.showToast(error.error.error);
       });
   }

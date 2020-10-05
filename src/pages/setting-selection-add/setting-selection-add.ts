@@ -38,7 +38,5 @@ export class SettingSelectionAddPage {
     } else {
       this.authProvider.showToast("Name input field is empty");
     }
-
-
   }
 }

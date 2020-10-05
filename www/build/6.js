@@ -1,14 +1,14 @@
 webpackJsonp([6],{
 
-/***/ 731:
+/***/ 706:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingTeamEditPageModule", function() { return SettingTeamEditPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MatchVotesPageModule", function() { return MatchVotesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_team_edit__ = __webpack_require__(796);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__match_votes__ = __webpack_require__(772);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,57 +18,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SettingTeamEditPageModule = /** @class */ (function () {
-    function SettingTeamEditPageModule() {
+var MatchVotesPageModule = /** @class */ (function () {
+    function MatchVotesPageModule() {
     }
-    SettingTeamEditPageModule = __decorate([
+    MatchVotesPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__setting_team_edit__["a" /* SettingTeamEditPage */],
+                __WEBPACK_IMPORTED_MODULE_2__match_votes__["a" /* MatchVotesPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_team_edit__["a" /* SettingTeamEditPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__match_votes__["a" /* MatchVotesPage */]),
             ],
         })
-    ], SettingTeamEditPageModule);
-    return SettingTeamEditPageModule;
+    ], MatchVotesPageModule);
+    return MatchVotesPageModule;
 }());
 
-//# sourceMappingURL=setting-team-edit.module.js.map
+//# sourceMappingURL=match-votes.module.js.map
 
 /***/ }),
 
-/***/ 749:
+/***/ 772:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Teams; });
-var Teams = /** @class */ (function () {
-    function Teams(name, id, imageurl, country, league) {
-        this.name = name;
-        this.id = id;
-        this.imageurl = imageurl;
-        this.country = country;
-        this.league = league;
-    }
-    return Teams;
-}());
-
-//# sourceMappingURL=Teams.js.map
-
-/***/ }),
-
-/***/ 796:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingTeamEditPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_games_games__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_Teams__ = __webpack_require__(749);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MatchVotesPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_games_games__ = __webpack_require__(357);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_Votes__ = __webpack_require__(773);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__ = __webpack_require__(355);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(18);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -83,163 +62,90 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-var SettingTeamEditPage = /** @class */ (function () {
-    function SettingTeamEditPage(navCtrl, authProvider, gamesProvider, alertCtrl, loadingCtrl, actionSheetCtrl, camera, navParams) {
+var MatchVotesPage = /** @class */ (function () {
+    function MatchVotesPage(navCtrl, loadingCtrl, authProvider, gameProvider, navParams) {
         this.navCtrl = navCtrl;
-        this.authProvider = authProvider;
-        this.gamesProvider = gamesProvider;
-        this.alertCtrl = alertCtrl;
         this.loadingCtrl = loadingCtrl;
-        this.actionSheetCtrl = actionSheetCtrl;
-        this.camera = camera;
+        this.authProvider = authProvider;
+        this.gameProvider = gameProvider;
         this.navParams = navParams;
-        this.flag = true;
-        this.team = new __WEBPACK_IMPORTED_MODULE_2__interfaces_Teams__["a" /* Teams */]("", "", "", { id: "", name: "", imageurl: "" }, { id: "", name: "", imageurl: "" });
-        this.teams = this.navParams.get("team");
-        console.log(this.teams);
-        if (this.teams) {
-            this.team.name = this.teams.name;
-            this.team.id = this.teams.id;
-            if (this.teams.imageurl) {
-                this.team.imageurl = this.teams.imageurl;
-            }
-            else {
-                this.team.imageurl = "/assets/imgs/appicon.png";
-            }
-            this.team.country.name = this.teams.country.name;
-            this.team.country.id = this.teams.country.id;
-            this.team.country.imageurl = this.teams.country.imageurl;
-            this.team.league.name = this.teams.league.name;
-            this.team.league.id = this.teams.league.id;
-            if (this.teams.league.imageurl) {
-                this.team.league.imageurl = this.teams.league.imageurl;
-            }
-            else {
-                this.team.league.imageurl = "/assets/imgs/appicon.png";
-            }
-        }
+        this.vote = new __WEBPACK_IMPORTED_MODULE_2__interfaces_Votes__["a" /* Votes */]("", "", { id: "" }, "", "", "");
+        this.img2 = "assets/imgs/appicon.png";
+        this.match = this.navParams.get("match");
+        console.log(this.match);
     }
-    SettingTeamEditPage.prototype.ionViewDidLoad = function () {
-        this.flag = (this.flag != false) ? false : true;
+    MatchVotesPage.prototype.ngOnInit = function () {
+        this.GetGameVotes();
     };
-    SettingTeamEditPage.prototype.onDelete = function () {
+    MatchVotesPage.prototype.GetGameVotes = function () {
         var _this = this;
+        this.gameProvider.GetGameVotes(this.match.id).subscribe(function (result) {
+            console.log(result.data);
+            _this.votes = result.data;
+            console.log(_this.votes.AwayVotes);
+        }, function (error) {
+            console.log(JSON.stringify(error));
+        });
+    };
+    MatchVotesPage.prototype.onCreateVote = function (uservote, homevote, drawvote, awayvote, match) {
+        var _this = this;
+        this.vote.userVote = uservote;
+        this.vote.homeVote = homevote;
+        this.vote.drawVote = drawvote;
+        this.vote.awayVote = awayvote;
+        this.vote.game.id = match.id;
+        console.log(this.vote);
         var loading = this.loadingCtrl.create({
             content: "Please wait..."
         });
-        var confirm = this.alertCtrl.create({
-            title: 'Delete Team',
-            message: "Do you want to delete <b>" + this.team.name + "</b> <br/>from <br/><b>" + this.team.league.name + "</b> league?<br/><br/>This is action is irreversible.",
-            buttons: [
-                {
-                    text: 'No',
-                    handler: function () {
-                    }
-                },
-                {
-                    text: 'Yes',
-                    handler: function () {
-                        loading.present();
-                        _this.gamesProvider.deleteTeam(_this.team.id).subscribe(function (res) {
-                            loading.dismiss().catch(function () { });
-                            if (res.statusCode === 200) {
-                                _this.navCtrl.pop();
-                            }
-                            else {
-                                _this.authProvider.showToast(res.description);
-                            }
-                        }, function (error) {
-                            loading.dismiss().catch(function () { });
-                            _this.authProvider.showToast(error.error.error);
-                        });
-                    }
-                }
-            ]
+        loading.present();
+        this.gameProvider.createVote(this.vote).subscribe(function (res) {
+            loading.dismiss().catch(function () { });
+            if (res.statusCode === 200) {
+                _this.GetGameVotes();
+            }
+            else {
+                _this.authProvider.showToast(res.description);
+            }
+        }, function (error) {
+            loading.dismiss().catch(function () { });
+            _this.authProvider.showToast(error.error.error);
         });
-        confirm.present();
     };
-    SettingTeamEditPage.prototype.onSubmit = function (team) {
-        var _this = this;
-        if (team.name) {
-            team.imageurl = (team.imageurl != undefined) ? this.team.imageurl : this.img;
-            var loading_1 = this.loadingCtrl.create({
-                content: "Please wait..."
-            });
-            loading_1.present();
-            this.gamesProvider.updateTeam(team).subscribe(function (res) {
-                loading_1.dismiss().catch(function () { });
-                if (res.statusCode === 200) {
-                    _this.navCtrl.pop();
-                }
-                else {
-                    _this.authProvider.showToast(res.description);
-                }
-            }, function (error) {
-                loading_1.dismiss().catch(function () { });
-                _this.authProvider.showToast(error.error.error);
-            });
-        }
-        else {
-            this.authProvider.showToast("Name of team input field is empty");
-        }
-    };
-    SettingTeamEditPage.prototype.selectImage = function () {
-        var _this = this;
-        var actionSheet = this.actionSheetCtrl.create({
-            title: 'Change Team Logo',
-            buttons: [
-                {
-                    text: 'Gallery',
-                    handler: function () { _this.get_camera('Gallery'); }
-                }, {
-                    text: 'Camera',
-                    handler: function () { _this.get_camera('Camera'); }
-                }, {
-                    text: 'Cancel',
-                    role: 'cancel',
-                    handler: function () { }
-                }
-            ]
-        });
-        actionSheet.present();
-    };
-    SettingTeamEditPage.prototype.get_camera = function (source) {
-        var _this = this;
-        var options = {
-            quality: 100, destinationType: this.camera.DestinationType.DATA_URL,
-            encodingType: this.camera.EncodingType.JPEG, mediaType: this.camera.MediaType.PICTURE,
-            allowEdit: true, targetWidth: 512, targetHeight: 512, correctOrientation: true
-        };
-        if (source == 'Gallery') {
-            options.sourceType = this.camera.PictureSourceType.PHOTOLIBRARY;
-        }
-        else {
-            options.sourceType = this.camera.PictureSourceType.CAMERA;
-        }
-        this.camera.getPicture(options).then(function (imageData) {
-            _this.img = 'data:image/jpeg;base64,' + imageData;
-            _this.team.imageurl = _this.img;
-        }, function (err) { });
-        if (this.img != undefined) {
-            this.team.imageurl = this.img;
-        }
-    };
-    SettingTeamEditPage = __decorate([
+    MatchVotesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-            selector: 'page-setting-team-edit',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-team-edit/setting-team-edit.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Edit Team</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="onDelete()">\n        <ion-icon name="trash"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="imgs">\n    <img src="{{team.country.imageurl}}" class="newimg" text-center style="width: 13em; height: 13em;" *ngIf="team.country.imageurl" />\n    <img src="assets/imgs/appicon.png" class="newimg" text-center style="width: 13em; height: 13em;" *ngIf="!team.country.imageurl" />\n    <div class="imgProfile" [ngStyle]="{\'background-image\':\'url(\' + team.league.imageurl + \')\'}">\n    </div>\n    <div  class="imgProfile2 margin-top" ion-text padding-top [ngStyle]="{\'background-image\':\'url(\' + team.imageurl + \')\'}">\n      <button ion-button icon-only class="profileCamera"  [ngClass]="{\'show\':flag==false}"  (click)="selectImage()">\n        <ion-icon name="md-camera"></ion-icon>\n      </button>\n    </div>\n  </div>\n  <div class="">\n    <div class="otherForm">\n      <ion-list>\n        <ion-item>\n          <ion-label stacked>Country Name</ion-label>\n          <ion-input disabled type="text" [(ngModel)]="team.country.name"></ion-input>\n          <ion-input hidden type="text" [(ngModel)]="team.country.id"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label stacked>League Name</ion-label>\n          <ion-input disabled type="text" [(ngModel)]="team.league.name"></ion-input>\n          <ion-input hidden type="text" [(ngModel)]="team.league.id"></ion-input>\n        </ion-item>\n        <!-- appear when click update -->\n        <ion-item>\n          <ion-label stacked>Team Name</ion-label>\n          <ion-input type="text" [(ngModel)]="team.name"></ion-input>\n          <ion-input hidden type="text" [(ngModel)]="team.id"></ion-input>\n        </ion-item>\n        <!-- ==================================== -->\n      </ion-list>\n      <button ion-button block color="color2" (click)="onSubmit(team)">Submit</button>\n    </div>\n  </div>\n \n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-team-edit/setting-team-edit.html"*/,
+            selector: 'page-match-votes',template:/*ion-inline-start:"/Users/mac/Downloads/Sure3Odds/src/pages/match-votes/match-votes.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Predictions</ion-title>\n  </ion-navbar>\n  <ion-toolbar class="matchResultBar">\n    <!-- match item  -->\n    <ion-item class="matchResult">\n      <ion-grid>\n        <ion-row>\n          <!-- first team -->\n          <ion-col col>\n            <ion-item>\n              <img src="{{match.hometeam?.imageurl}}" style="border-radius: 50px;" *ngIf="match.hometeam?.imageurl" />\n              <img src="assets/imgs/appicon.png" style="border-radius: 50px;" *ngIf="!match.hometeam?.imageurl" />\n              <p>{{match.hometeam?.name}}</p>\n            </ion-item>\n          </ion-col>\n          <!-- match time -->\n          <ion-col col-auto>\n            <div class="result">\n              <span ion-text color="color1">{{match?.hometeamscore}}</span>\n              <span ion-text style="padding: 0.3em;" color="color1">-</span>\n              <span ion-text color="color1">{{match?.awayteamscore}}</span>\n            </div>\n            <p ion-text color="light" text-center>{{match.status?.name}}</p>\n          </ion-col>\n          <!-- second team -->\n          <ion-col col>\n            <ion-item>\n              <img src="{{match.awayteam?.imageurl}}" style="border-radius: 50px;" *ngIf="match.awayteam?.imageurl" />\n              <img src="assets/imgs/appicon.png" style="border-radius: 50px;" *ngIf="!match.awayteam?.imageurl" />\n              <p>{{match.awayteam?.name}}</p>\n            </ion-item>\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col col-center>\n            <p ion-text color="secondary" style="text-align: center;">{{match.country?.name}} - {{match.league?.name}}\n            </p>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n\n    </ion-item>\n  </ion-toolbar>\n</ion-header>\n\n\n<ion-content>\n  <!-- goals -->\n  <div class="goals" padding>\n    <ion-list>\n      <h5 ion-text text-center margin-top color="color2">Current Votes</h5>\n      <ion-grid style="margin-bottom: 0.5em;">\n        <ion-row>\n          <ion-col col-auto text-left style="width: 10em;">\n            <p ion-text color="color1" no-margin><b>{{match.hometeam?.name}} Votes</b></p>\n          </ion-col>\n          <ion-col col text-center>\n            <p ion-text color="dark" no-margin><b>Draw Votes</b></p>\n          </ion-col>\n          <ion-col col-auto text-right style="width: 10em;">\n            <p ion-text color="color1" no-margin><b>{{match.awayteam?.name}} Votes</b></p>\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col col-auto text-left>\n            <p ion-text color="dark" no-margin>{{votes?.HomeVotes}}</p>\n          </ion-col>\n          <ion-col col text-center>\n            <p ion-text color="dark" no-margin>{{votes?.DrawVotes}}</p>\n          </ion-col>\n          <ion-col col-auto text-right>\n            <p ion-text color="dark" no-margin>{{votes?.AwayVotes}}</p>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n      <hr>\n\n      <div class="imgs" *ngIf="votes?.UserVote">\n        <div class="imgProfile" [ngStyle]="{\'background-image\':\'url(\' + img2 + \')\'}">\n\n        </div>\n      </div>\n      <div class="nameAndMail" *ngIf="votes?.UserVote">\n        <h5 ion-text color="dark">{{votes.UserVote.user?.lastname}} {{votes.UserVote.user?.firstname}}</h5>\n        <p ion-text color="dark" *ngIf="votes.UserVote?.userVote === 1">{{votes.UserVote.game.hometeam?.name}}:\n          <i>Wins</i></p>\n        <p ion-text color="dark" *ngIf="votes.UserVote?.userVote === 2">{{votes.UserVote.game.awayteam?.name}}:\n          <i>Wins</i></p>\n        <p ion-text color="dark" *ngIf="votes.UserVote?.userVote === 3">Draw Match</p>\n      </div>\n      <hr>\n      <h5 ion-text text-center color="color2" *ngIf="!votes?.UserVote">Who do you think is going to win?</h5>\n      <h5 ion-text text-center color="color2" *ngIf="votes?.UserVote">You have voted.</h5>\n      <div style="margin-bottom: 0.5em;" text-center margin-top ion-text color="danger" *ngIf="!votes?.UserVote">\n        You have not voted.\n      </div>\n      <ion-item margin-top style="margin-bottom: 0.5em;">\n        <ion-grid>\n          <ion-row>\n            <ion-col col text-center>\n              <p ion-text ion-button *ngIf="votes?.UserVote" disabled="true" small outline color="color1"\n                (click)="onCreateVote(1, 1, 0, 0, match)" no-margin> <b>{{match.hometeam?.name}} Wins</b>\n              </p>\n              <p ion-text ion-button *ngIf="!votes?.UserVote" small outline color="color1"\n                (click)="onCreateVote(1, 1, 0, 0, match)" no-margin> <b>{{match.hometeam?.name}} Wins</b>\n              </p>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-5>\n              <div class="progressBar" progress-right>\n                <span class="container"></span>\n              </div>\n            </ion-col>\n            <ion-col col-2 text-center>\n              <p ion-text color="dark" no-margin>Home Win</p>\n            </ion-col>\n            <ion-col col-5>\n              <div class="progressBar">\n                <span class="container"></span>\n              </div>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-item>\n\n      <ion-item style="margin-bottom: 0.5em;">\n        <ion-grid>\n          <ion-row>\n            <ion-col col text-center>\n              <p ion-text ion-button *ngIf="votes?.UserVote" disabled="true" small outline color="color1"\n                (click)="onCreateVote(3,0,1,0,  match)" no-margin><b>X</b>\n                <p ion-text ion-button *ngIf="!votes?.UserVote" small outline color="color1"\n                  (click)="onCreateVote(3,0,1,0,  match)" no-margin><b>X</b>\n                </p>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-5>\n              <div class="progressBar" progress-right>\n                <span class="container"></span>\n              </div>\n            </ion-col>\n            <ion-col col-2 text-center>\n              <p ion-text color="dark" no-margin>Draw</p>\n            </ion-col>\n            <ion-col col-5>\n              <div class="progressBar">\n                <span class="container"></span>\n              </div>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-item>\n      <ion-item style="margin-bottom: 0.5em;">\n        <ion-grid>\n          <ion-row>\n            <ion-col col text-center>\n              <p ion-text ion-button *ngIf="votes?.UserVote" disabled="true" small outline color="color1"\n                (click)="onCreateVote(2,0,0,1, match)" no-margin> <b>{{match.awayteam?.name}} Wins</b>\n              </p>\n              <p ion-text ion-button *ngIf="!votes?.UserVote" small outline color="color1"\n                (click)="onCreateVote(2,0,0,1, match)" no-margin> <b>{{match.awayteam?.name}} Wins</b>\n              </p>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col col-5>\n              <div class="progressBar" progress-right>\n                <span class="container"></span>\n              </div>\n            </ion-col>\n            <ion-col col-2 text-center>\n              <p ion-text color="dark" no-margin>Away Win</p>\n            </ion-col>\n            <ion-col col-5>\n              <div class="progressBar">\n                <span class="container"></span>\n              </div>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-item>\n    </ion-list>\n  </div>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Downloads/Sure3Odds/src/pages/match-votes/match-votes.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"],
-            __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */],
-            __WEBPACK_IMPORTED_MODULE_0__providers_games_games__["a" /* GamesProvider */],
-            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["AlertController"],
             __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["LoadingController"],
-            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ActionSheetController"], __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"]])
-    ], SettingTeamEditPage);
-    return SettingTeamEditPage;
+            __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */],
+            __WEBPACK_IMPORTED_MODULE_0__providers_games_games__["a" /* GamesProvider */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"]])
+    ], MatchVotesPage);
+    return MatchVotesPage;
 }());
 
-//# sourceMappingURL=setting-team-edit.js.map
+//# sourceMappingURL=match-votes.js.map
+
+/***/ }),
+
+/***/ 773:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Votes; });
+var Votes = /** @class */ (function () {
+    function Votes(awayVote, drawVote, game, homeVote, id, userVote) {
+        this.awayVote = awayVote;
+        this.drawVote = drawVote;
+        this.game = game;
+        this.homeVote = homeVote;
+        this.id = id;
+        this.userVote = userVote;
+    }
+    return Votes;
+}());
+
+//# sourceMappingURL=Votes.js.map
 
 /***/ })
 

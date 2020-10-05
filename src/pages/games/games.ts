@@ -93,8 +93,13 @@ export class GamesPage {
     this.getDaysInMonth(this.month_num, this.year);
   }
   GetGames(currentdate) {
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    loading.present();
     this.gamesProvider.GetGames(currentdate)
       .subscribe(resp => {
+        loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
           console.log(resp);
           this.gamelist = resp.data;
@@ -102,6 +107,7 @@ export class GamesPage {
           this.authProvider.showToast(resp.description);
         }
       }, error => {
+        loading.dismiss().catch(() => { });
         this.authProvider.showToast(error.error.error);
       });
   }

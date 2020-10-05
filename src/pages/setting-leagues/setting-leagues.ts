@@ -1,7 +1,7 @@
 import { GamesProvider } from './../../providers/games/games';
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, Content, ActionSheetController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Content, ActionSheetController, LoadingController } from 'ionic-angular';
 
 
 @IonicPage()
@@ -23,6 +23,7 @@ export class SettingLeaguesPage {
   constructor(public navCtrl: NavController,
     private authProvider: AuthenicationProvider,
     private gamesProvider: GamesProvider,
+    private loadingCtrl: LoadingController,
     private actionSheetCtrl: ActionSheetController,
     public navParams: NavParams) {
   }
@@ -30,8 +31,13 @@ export class SettingLeaguesPage {
     this.GetLeagues();
   }
   GetLeagues() {
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    loading.present();
     this.gamesProvider.GetLeagues(0, 50)
       .subscribe(resp => {
+        loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
           this.leagues = resp.data.content;
           this.originalleagues = this.leagues;
@@ -46,8 +52,9 @@ export class SettingLeaguesPage {
         this.error = '';
       }, error => {
         this.error = 'none';
+        loading.dismiss().catch(() => { });
         this.leagues = [];
-        this.authProvider.showToast(error.error.error);
+        this.authProvider.showToast(error.error.description);
       });
   }
 
@@ -57,23 +64,29 @@ export class SettingLeaguesPage {
       this.leagues = this.originalleagues;
     } else {
       if (searchvalue.length >= 3) {
-        this.gamesProvider.SearchLeagues(searchvalue, 0, 50)
-        .subscribe(resp => {
-          if (resp.statusCode === 200) {
-            this.leagues = resp.data.content;
-            this.currentPage = resp.data.number;
-            this.totalPage = resp.data.totalPages;
-            this.totalData = resp.data.totalElements;
-            this.perPage = resp.data.size;
-          } else {
-            this.authProvider.showToast(resp.description);
-          }
-          this.error = '';
-        }, error => {
-          this.error = 'none';
-          this.leagues = [];
-          this.authProvider.showToast(error.error.error);
+        let loading = this.loadingCtrl.create({
+          content: "Please wait..."
         });
+        loading.present();
+        this.gamesProvider.SearchLeagues(searchvalue, 0, 50)
+          .subscribe(resp => {
+            loading.dismiss().catch(() => { });
+            if (resp.statusCode === 200) {
+              this.leagues = resp.data.content;
+              this.currentPage = resp.data.number;
+              this.totalPage = resp.data.totalPages;
+              this.totalData = resp.data.totalElements;
+              this.perPage = resp.data.size;
+            } else {
+              this.authProvider.showToast(resp.description);
+            }
+            this.error = '';
+          }, error => {
+            this.error = 'none';
+            this.leagues = [];
+            loading.dismiss().catch(() => { });
+            this.authProvider.showToast(error.error.error);
+          });
       }
     }
   }
@@ -120,10 +133,10 @@ export class SettingLeaguesPage {
       buttons: [
         {
           text: 'View / Edit',
-          handler: () => { this.navCtrl.push('SettingLeagueEditPage', {league}) }
+          handler: () => { this.navCtrl.push('SettingLeagueEditPage', { league }) }
         }, {
           text: 'View Teams',
-          handler: () => { this.navCtrl.push('SettingTeamViewPage', {league}) }
+          handler: () => { this.navCtrl.push('SettingTeamViewPage', { league }) }
         }, {
           text: 'Cancel',
           role: 'cancel',

@@ -1,3 +1,6 @@
+import { PaymentsPage } from './../pages/payments/payments';
+import { SettingPage } from './../pages/setting/setting';
+import { ReportsPage } from './../pages/reports/reports';
 import { AuthenicationProvider } from './../providers/authenication/authenication';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform, Events, MenuController } from 'ionic-angular';
@@ -23,7 +26,6 @@ export class Sure3Odds {
   activePage: any;
   app_version: string;
   rootPage: any;
-  pages: Array<{ title: string, component: any }>;
   version = "1.0.0";
 
   loggedInAdminPages: PageInterface[] = [
@@ -33,16 +35,16 @@ export class Sure3Odds {
     { icon: 'people', color: 'light', title: 'Members', component: 'UserMembersPage' },
     { icon: 'football', color: 'light', title: 'Games', component: 'GamesPage' },
     { icon: 'football', color: 'light', title: 'Predictions', component: 'PredictionsPage' },
-    { icon: 'card', color: 'light', title: 'Payments', component: 'PaymentsPage' },
-    { icon: 'podium', color: 'light', title: 'Reports', component: 'ReportsPage' },
-    { icon: 'build', color: 'light', title: 'Settings', component: 'SettingPage' }
+    { icon: 'card', color: 'light', title: 'Payments', component: PaymentsPage },
+    { icon: 'podium', color: 'light', title: 'Reports', component: ReportsPage },
+    { icon: 'build', color: 'light', title: 'Settings', component: SettingPage }
   ];
 
   loggedInSubAdminPages: PageInterface[] = [
     { icon: 'football', color: 'light', title: 'All Games', component: 'AllMatchesPage' },
     { icon: 'person', color: 'light', title: 'My Profile', component: 'ProfilePage' },
     { icon: 'football', color: 'light', title: 'My Predictions', component: 'PredictionsPage' },
-    { icon: 'build', color: 'light', title: 'Settings', component: 'SettingPage' }
+    { icon: 'build', color: 'light', title: 'Settings', component: SettingPage }
   ];
 
   loggedInMemberPages: PageInterface[] = [
@@ -57,7 +59,7 @@ export class Sure3Odds {
   ]
 
   public animateVarible: boolean = false;
-  
+
   constructor(public storage: Storage,
     public platform: Platform,
     public events: Events,
@@ -83,9 +85,12 @@ export class Sure3Odds {
       this.storage.get('hasSeenLogin') // Check if the user has already seen the LoginPage
         .then((hasSeenLogin) => {
           if (hasSeenLogin) {
-            this.Userfullname = this.auth.currentUserDataValue.name;
-            this.usertype = this.auth.currentUserDataValue.user_type;
-            this.enableMenu(hasSeenLogin === true, this.usertype);
+            if(this.auth.currentUserDataValue){
+              this.Userfullname = this.auth.currentUserDataValue.name;
+              this.usertype = this.auth.currentUserDataValue.user_type;
+              this.enableMenu(hasSeenLogin === true, this.usertype);
+            }
+
           } else {
             this.rootPage = 'SignInPage';
           }

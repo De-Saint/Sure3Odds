@@ -3,7 +3,10 @@ import { AuthenicationProvider } from './../../providers/authenication/authenica
 import { Teams } from './../../interfaces/Teams';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ActionSheetController, LoadingController, AlertController } from 'ionic-angular';
-import { Camera, CameraOptions } from '@ionic-native/camera';
+
+import { Plugins, CameraResultType, CameraSource, CameraOptions } from '@capacitor/core';
+
+const { Camera } = Plugins;
 
 @IonicPage()
 @Component({
@@ -22,32 +25,15 @@ export class SettingTeamEditPage {
     private gamesProvider: GamesProvider,
     private alertCtrl: AlertController,
     private loadingCtrl: LoadingController,
-    public actionSheetCtrl: ActionSheetController, public camera: Camera, public navParams: NavParams) {
+    public actionSheetCtrl: ActionSheetController, public navParams: NavParams) {
     this.teams = this.navParams.get("team");
-    console.log(this.teams);
     if (this.teams) {
-      this.team.name = this.teams.name;
-      this.team.id = this.teams.id;
+      this.team = this.teams;
       if (this.teams.imageurl) {
         this.team.imageurl = this.teams.imageurl;
       } else {
         this.team.imageurl = "/assets/imgs/appicon.png";
       }
-
-
-      this.team.country.name = this.teams.country.name;
-      this.team.country.id = this.teams.country.id;
-      this.team.country.imageurl = this.teams.country.imageurl;
-
-      this.team.league.name = this.teams.league.name;
-      this.team.league.id = this.teams.league.id;
-      if (this.teams.league.imageurl) {
-        this.team.league.imageurl = this.teams.league.imageurl;
-      } else {
-        this.team.league.imageurl = "/assets/imgs/appicon.png";
-      }
-
-
     }
   }
 
@@ -137,24 +123,28 @@ export class SettingTeamEditPage {
   }
   get_camera(source) {
     const options: CameraOptions = {
-      quality: 100, destinationType: this.camera.DestinationType.DATA_URL,
-      encodingType: this.camera.EncodingType.JPEG, mediaType: this.camera.MediaType.PICTURE
-      , allowEdit: true, targetWidth: 512, targetHeight: 512, correctOrientation: true
+      quality: 50,
+      height: 320,
+      correctOrientation: true,
+      width: 320,
+      resultType: CameraResultType.DataUrl
     }
 
     if (source == 'Gallery') {
-      options.sourceType = this.camera.PictureSourceType.PHOTOLIBRARY
-    }
-    else {
-      options.sourceType = this.camera.PictureSourceType.CAMERA
+      options.source = CameraSource.Photos;
+    } else {
+      options.source = CameraSource.Camera;
     }
 
-    this.camera.getPicture(options).then((imageData) => {
-      this.img = 'data:image/jpeg;base64,' + imageData;
+    Camera.getPhoto(options).then(imageData => {
+      this.img = 'data:image/jpeg;base64,' + imageData.base64String;
       this.team.imageurl = this.img;
-    }, (err) => { });
-    if (this.img != undefined) {
-      this.team.imageurl = this.img;
-    }
+    }).catch(error => {
+      console.log(error);
+      if (this.img != undefined) {
+        this.team.imageurl = this.img;
+      }
+      return false;
+    })
   }
 }

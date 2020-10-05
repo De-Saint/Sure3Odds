@@ -1,25 +1,22 @@
-<ion-header>
+<ion-header> 
 
   <ion-navbar>
     <ion-title>Edit Country</ion-title>
-    <ion-buttons end>
+    <!-- <ion-buttons end>
       <button ion-button icon-only (click)="onDelete()">
         <ion-icon name="trash"></ion-icon>
       </button>
-    </ion-buttons>
+    </ion-buttons> -->
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <div class="imgs">
-    <div class="imgProfile" [ngStyle]="{'background-image':'url(' + img1 + ')'}">
-      <button ion-button icon-only class="profileCamera"  [ngClass]="{'show':flag==false}"   (click)="selectImage(2)">
-        <ion-icon name="md-camera"></ion-icon>
-      </button>
-    </div>
-  </div>
+  <div class="imgs" style="margin-top: 2em; "> 
+     <div class="imgProfile" [ngStyle]="{'background-image':'url(' + country.imageurl + ')'}">
+   </div>
+ </div>
   <div class="otherForm">
     <ion-list>
       <!-- appear when click update -->

@@ -126,7 +126,6 @@ export class GameEditPage {
               if (game.odds) {
                 if (game.matchdate && game.matchtime) {
                   if (game.hometeam !== game.awayteam) {
-                    debugger
                     if (game.hometeamscore || game.hometeamscore == 0) {
                       if (game.awayteamscore || game.awayteamscore == 0) {
                         let loading = this.loadingCtrl.create({

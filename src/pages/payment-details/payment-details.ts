@@ -36,8 +36,13 @@ export class PaymentDetailsPage {
 
 
   GetPayments() {
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    loading.present();
     this.paymentsProvider.GetPayments(0, 10)
       .subscribe(resp => {
+        loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
           this.payments = resp.data.content;
           console.log(this.payments);
@@ -51,9 +56,11 @@ export class PaymentDetailsPage {
           this.authProvider.showToast(resp.description);
         }
         this.error = '';
+
       }, error => {
         this.error = 'none';
         this.payments = null;
+        loading.dismiss().catch(() => { });
         this.authProvider.showToast(error.error.error);
       });
   }
@@ -63,8 +70,13 @@ export class PaymentDetailsPage {
       this.payments = this.originalpayments
     } else {
       if (searchvalue.length >= 3) {
+        let loading = this.loadingCtrl.create({
+          content: "Please wait..."
+        });
+        loading.present();
         this.paymentsProvider.SearchPayments(searchvalue, 0, 20)
           .subscribe(resp => {
+            loading.dismiss().catch(() => { });
             if (resp.statusCode === 200) {
               this.payments = resp.data.content;
               this.currentPage = resp.data.number;
@@ -76,6 +88,7 @@ export class PaymentDetailsPage {
             }
             this.error = '';
           }, error => {
+            loading.dismiss().catch(() => { });
             this.error = 'none';
             this.payments = null;
           });
@@ -130,7 +143,7 @@ export class PaymentDetailsPage {
         {
           text: 'Delete',
           handler: () => { this.onDeletePayment(payment) }
-       
+
         }, {
           text: 'Cancel',
           role: 'cancel',

@@ -1,11 +1,13 @@
 import { GamesProvider } from './../../providers/games/games';
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, AlertController, Platform } from 'ionic-angular';
-import { AdMobFree, AdMobFreeInterstitialConfig,
-   AdMobFreeRewardVideoConfig, 
-   AdMobFreeBannerConfig} from '@ionic-native/admob-free/ngx';
+import { IonicPage, NavController, AlertController, Platform, LoadingController } from 'ionic-angular';
 
+// import  { Plugins } from "@capacitor/core";
+// import { initialize } from 'capacitor-admob'; No longar required
+// import { AdOptions, AdSize, AdPosition } from "capacitor-admob";
+
+// const { AdMob } = Plugins;
 
 @IonicPage()
 @Component({
@@ -30,14 +32,14 @@ export class FreeTipsPage {
   constructor(public navCtrl: NavController,
     private authProvider: AuthenicationProvider,
     private alertCtrl: AlertController,
-    public admobFree:AdMobFree,
     public platform: Platform,
+    public loadingCtrl: LoadingController,
     private gamesProvider: GamesProvider) {
     this.getDaysInMonth(this.month_num, this.year);
     this.currentDate = this.myDate;
   }
 
-  ngOnInit(): void {
+  ionViewWillEnter(){
     const currentdate = this.gamesProvider.getDate();
     this.GetFreeGames(currentdate);
     var date = this.myDate.getDate();
@@ -47,36 +49,43 @@ export class FreeTipsPage {
   }
 
 
-  ionViewWillEnter(){
-    this.platform.ready().then(() => {
-      var admobid = {
-        banner: 'ca-app-pub-5986351309197564/7004464032',
-        interstitial: 'ca-app-pub-5986351309197564/6096058111',
-        reward: 'ca-app-pub-5986351309197564/7025996408'
-      };
+  // ionViewWillEnter(){
+  //   this.platform.ready().then(() => {
+    //   var admobid = {
+    //     banner: 'ca-app-pub-5986351309197564/7004464032',
+    //     interstitial: 'ca-app-pub-5986351309197564/6096058111',
+    //     reward: 'ca-app-pub-5986351309197564/7025996408'
+    //   };
+    //  const bannerOptions: AdOptions = {
+    //     adId: admobid.banner,
+    //     adSize: AdSize.BANNER,
+    //     position: AdPosition.BOTTOM_CENTER
+    //   };
 
-      const bannerConfig: AdMobFreeBannerConfig = {
-        id: admobid.banner,
-        autoShow: true
-      };
-      this.admobFree.banner.config(bannerConfig);
-      this.ShowSure3Banner();
+      // const bannerConfig: AdMobFreeBannerConfig = {
+      //   id: admobid.banner,
+      //   autoShow: true
+      // };
 
-      const interstitialConfig: AdMobFreeInterstitialConfig = {
-        id: admobid.interstitial,
-        autoShow: true
-      }
-      this.admobFree.interstitial.config(interstitialConfig);
-      this.ShowSure3Inter();
+      // AdMob.showBanner()
+      // this.admobFree.banner.config(bannerConfig);
+      // this.ShowSure3Banner();
 
-      const rewardVidConfig: AdMobFreeRewardVideoConfig = {
-        id: admobid.reward,
-        autoShow: true
-      }
-      this.admobFree.rewardVideo.config(rewardVidConfig);
+      // const interstitialConfig: AdMobFreeInterstitialConfig = {
+      //   id: admobid.interstitial,
+      //   autoShow: true
+      // }
+      // this.admobFree.interstitial.config(interstitialConfig);
+      // this.ShowSure3Inter();
+
+      // const rewardVidConfig: AdMobFreeRewardVideoConfig = {
+      //   id: admobid.reward,
+      //   autoShow: true
+      // }
+      // this.admobFree.rewardVideo.config(rewardVidConfig);
       // this.ShowSure3Reward();
-    });
-  }
+  //   });
+  // }
   getDaysInMonth(month, year) {
     // Since no month has fewer than 28 days
     var date = new Date(year, month);
@@ -128,8 +137,13 @@ export class FreeTipsPage {
   }
 
   GetFreeGames(currentdate) {
+    let loading = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    loading.present();
     this.gamesProvider.GetFreeGames(currentdate)
       .subscribe(resp => {
+        loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
           this.gamelist = resp.data;
           console.log(this.gamelist);
@@ -137,6 +151,7 @@ export class FreeTipsPage {
           console.log(resp.description);
         }
       }, error => {
+        loading.dismiss().catch(() => { });
         this.authProvider.showToast(error.error.description);
       });
   }
@@ -149,7 +164,7 @@ export class FreeTipsPage {
   onView(id) {
     console.log(id);
     if(id !== 1){
-        this.showAlert("Subscribe", "Subscribe to VIP and VVIP plans to gain access to more features like posting your predictions, voting, interactions, advert free and many more predictions.");
+        this.showAlert("Subscribe", "Subscribe to VIP or VVIP Plan today, to gain access to more features like posting your predictions, commenting on matches and interacting with other users, advert free and many more predictions.");
     }
  }
 
@@ -162,30 +177,30 @@ export class FreeTipsPage {
     alert.present();
   }
 
-  ShowSure3Banner(){
-    this.admobFree.banner.prepare().then((res) => {
-      console.log(res);
-    }).catch((e) => {
-      console.log(e);
-    });
-  }
+  // ShowSure3Banner(){
+  //   this.admobFree.banner.prepare().then((res) => {
+  //     console.log(res);
+  //   }).catch((e) => {
+  //     console.log(e);
+  //   });
+  // }
 
-  ShowSure3Inter(){
-    this.admobFree.interstitial.prepare().then((res) => {
-      console.log(res);
-    }).catch((e) => {
-      console.log(e);
-    });
-  }
+  // ShowSure3Inter(){
+  //   this.admobFree.interstitial.prepare().then((res) => {
+  //     console.log(res);
+  //   }).catch((e) => {
+  //     console.log(e);
+  //   });
+  // }
 
-  ionViewWillLeave() {
-    this.platform.ready().then(() => {
-      this.admobFree.banner.hide();
-    });
-  }
-  ionViewDidLeave() {
-    this.platform.ready().then(() => {
-      this.admobFree.banner.hide();
-    });
-  }
+  // ionViewWillLeave() {
+  //   this.platform.ready().then(() => {
+  //     this.admobFree.banner.hide();
+  //   });
+  // }
+  // ionViewDidLeave() {
+  //   this.platform.ready().then(() => {
+  //     this.admobFree.banner.hide();
+  //   });
+  // }
 }

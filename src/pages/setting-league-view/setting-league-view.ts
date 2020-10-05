@@ -55,8 +55,13 @@ export class SettingLeagueViewPage {
       this.leagues = this.originalleagues
     } else {
       if (searchvalue.length >= 3) {
+        let loading = this.loadingCtrl.create({
+          content: "Please wait..."
+        });
+        loading.present();
         this.gamesProvider.SearchLeaguesByCountryIDAndName(searchvalue, this.country.id)
           .subscribe(resp => {
+            loading.dismiss().catch(() => { });
             console.log(resp);
             if (resp.statusCode === 200) {
               this.leagues = resp.data
@@ -65,10 +70,10 @@ export class SettingLeagueViewPage {
             }
             this.error = '';
           }, error => {
-            console.log(JSON.stringify(error));
             this.error = 'none';
             this.leagues = [];
-            this.authProvider.showToast(error.error.error);
+            loading.dismiss().catch(() => { });
+            this.authProvider.showToast(error.error.description);
           });
       }
     }
