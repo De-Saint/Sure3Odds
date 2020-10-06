@@ -42,7 +42,6 @@ var config = {
     SettingPageModule,
     ReportsPageModule,
     PaymentsPageModule
-
   ],
   bootstrap: [IonicApp],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
@@ -57,8 +56,6 @@ var config = {
     AuthenicationProvider, PaymentsProvider, GamesProvider, NativeHttpProvider,
     { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptorProvider, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptorProvider, multi: true },
-    ,
-
   ]
 })
 export class AppModule { }

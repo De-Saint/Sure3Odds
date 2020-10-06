@@ -39,9 +39,17 @@ export class SubscriptionAndroidPage {
     this.pay_amount = plan.amount;
   }
   getPlantypes() {
-    this.nativeHttp.getAllPlantypes().subscribe(result => {
+    let loading = this.loadingCtrl.create({
+      content: 'Please wait...'
+    });
+    loading.present();
+    this.nativeHttp.getAllPlantypes()
+    .subscribe(result => {
+      loading.dismiss().catch(() => { });
       this.plantypelist = result.data;
       console.log(this.plantypelist);
+    },error=>{
+      loading.dismiss().catch(() => { });
     })
   }
   getParameter() {
@@ -58,8 +66,6 @@ export class SubscriptionAndroidPage {
   paymentInit() {
 
   }
-
-
 
   //Callback function on successful payment
   paymentDone(ref: any) {
@@ -91,9 +97,9 @@ export class SubscriptionAndroidPage {
     console.log(this.newuser);
     this.nativeHttp.createNewUser(this.newuser).subscribe(resp => {
       if (resp.statusCode === 200) {
-        this.auth.login(this.newuser.email, this.newuser.password).subscribe(res => {
+        this.auth.login(String(this.newuser.email), String(this.newuser.password)).subscribe(res => {
           loading.dismiss().catch(() => { });
-          this.gotoHomePage(resp.data, 'AllMatchesPage');
+          this.gotoHomePage(res, 'AllMatchesPage');
         }, error => {
           loading.dismiss().catch(() => { });
           this.auth.showToast(error.error.message);

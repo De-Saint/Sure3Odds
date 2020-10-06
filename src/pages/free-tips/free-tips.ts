@@ -148,7 +148,7 @@ export class FreeTipsPage {
         loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
           this.gamelist = resp.data;
-          console.log(this.gamelist);
+          console.log(JSON.stringify(this.gamelist));
         } else {
           console.log(resp.description);
         }

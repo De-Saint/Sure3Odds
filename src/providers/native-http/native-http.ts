@@ -6,24 +6,22 @@ import { Observable } from 'rxjs/Observable';
 import { map } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
 import { ResponseType } from '../../interfaces/response';
-
 import { from } from 'rxjs/observable/from';
+import { NewUsers } from '../../interfaces/NewUser';
 
 @Injectable()
 export class NativeHttpProvider {
-
   constructor(public http: HttpClient, private nativeHttp: HTTP,
     private platform: Platform, ) {
   }
-
 
   GetFreeGames(matchDate): Observable<ResponseType> {
     if (this.platform.is("android") || this.platform.is("ios")) {
       const params = {
         matchDate: matchDate,
-        id: 1,
+        id: "1",
       };
-      let nativeCall = this.nativeHttp.get(`${environment.apiUrl}/users/member/authenticate`, params, {
+      let nativeCall = this.nativeHttp.get(`${environment.apiUrl}/games/game/free/get`, params, {
         "Content-Type": "application/json"
       });
       return from(nativeCall).pipe(
@@ -80,9 +78,23 @@ export class NativeHttpProvider {
   }
 
 
-  createNewUser(user): Observable<ResponseType> {
+  createNewUser(newuser: NewUsers): Observable<ResponseType> {
     if (this.platform.is("android") || this.platform.is("ios")) {
-      let nativeCall = this.nativeHttp.get(`${environment.apiUrl}/users/member/create`, user, {
+      const user = {
+        id: newuser.id,
+        email: newuser.email,
+        firstname: newuser.firstname,
+        lastname: newuser.lastname,
+        referencecode: newuser.referencecode,
+        password: newuser.password,
+        phone: newuser.phone,
+        plantype: newuser.plantype,
+        platform: newuser.platform,
+        usertypes:  newuser.usertypes,
+        status: newuser.status
+      }
+      this.nativeHttp.setDataSerializer('json');
+      let nativeCall = this.nativeHttp.post(`${environment.apiUrl}/users/member/create`, user, {
         "Content-Type": "application/json"
       });
       return from(nativeCall).pipe(
@@ -91,6 +103,7 @@ export class NativeHttpProvider {
         })
       )
     } else {
+      const user = newuser;
       return this.http.post<ResponseType>(`${environment.apiUrl}/users/member/create`, user)
         .pipe(map(resp => {
           return resp;

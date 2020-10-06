@@ -77,7 +77,8 @@ export class AuthenicationProvider {
   }
 
   onNativeApiCall(url, data) {
-    let nativeCall = this.nativeHttp.post(url, data, {
+    this.nativeHttp.setDataSerializer('json');
+    let nativeCall = this.nativeHttp.get(url, data, {
       "Content-Type": "application/json"
     });
     return from(nativeCall).pipe(
@@ -85,32 +86,28 @@ export class AuthenicationProvider {
         return JSON.parse(result.data);
       })
     )
-
   }
 
   login(email, password) {
-    
-    // let url = `${environment.apiUrl}/users/member/authenticate`;
-    // if (this.platform.is("android") || this.platform.is("ios")) {
-      // const params = {
-      //   email: email,
-      //   password: password,
-      // };
-    //   return this.onNativeApiCall(url, params).pipe(map(res => {
-    //     alert(res.description);
-    //     if (res.statusCode === 200) {
-    //       sessionStorage.setItem('currentUser', JSON.stringify(res.data));
-    //       this.currentUserSubject.next(res.data);
-    //       const decoded = helper.decodeToken(res.data.token);
-    //       sessionStorage.setItem('userData', JSON.stringify(decoded));
-    //       this.currentUserDataSubject.next(decoded);
-    //     }
-    //     return res;
-    //   }))
-    // } else {
-        const params = new HttpParams()
-      .set('email', email)
-      .set('password', password);
+    if (this.platform.is("android") || this.platform.is("ios")) {
+      const params = {
+        email: email,
+        password: password,
+      };
+      return this.onNativeApiCall(`${environment.apiUrl}/users/member/authenticateuser`, params).pipe(map(res => {
+        if (res.statusCode === 200) {
+          sessionStorage.setItem('currentUser', JSON.stringify(res.data));
+          this.currentUserSubject.next(res.data);
+          const decoded = helper.decodeToken(res.data.token);
+          sessionStorage.setItem('userData', JSON.stringify(decoded));
+          this.currentUserDataSubject.next(decoded);
+        }
+        return res;
+      }))
+    } else {
+      const params = new HttpParams()
+        .set('email', email)
+        .set('password', password);
       return this.http.post<ResponseType>(`${environment.apiUrl}/users/member/authenticate`, params)
         .pipe(map(res => {
           if (res.statusCode === 200) {
@@ -122,7 +119,7 @@ export class AuthenicationProvider {
           }
           return res;
         }))
-    // }
+    }
 
   }
 
@@ -223,7 +220,10 @@ export class AuthenicationProvider {
         return resp;
       }));
   }
-
-
- 
+  createNewUser(user): Observable<ResponseType> {
+    return this.http.post<ResponseType>(`${environment.apiUrl}/users/member/create`, user)
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
 }

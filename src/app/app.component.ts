@@ -98,8 +98,8 @@ export class Sure3Odds {
           }
         });
         if(this.platform.is("ios") || this.platform.is('android')){
-          // this.changeStatusBar();
-          // this.hideSplash();
+          this.changeStatusBar();
+          this.hideSplash();
         }
     });
   }

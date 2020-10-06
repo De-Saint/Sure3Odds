@@ -1,3 +1,4 @@
+import { NativeHttpProvider } from './../../providers/native-http/native-http';
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ActionSheetController, LoadingController } from 'ionic-angular';
@@ -14,6 +15,7 @@ export class PaymentPlantypesPage {
 
   constructor(public navCtrl: NavController,
     private auth: AuthenicationProvider,
+    private nativeHttp: NativeHttpProvider,
     private loadingCtrl: LoadingController,
     private actionSheetCtrl: ActionSheetController, public navParams: NavParams) {
   }
@@ -28,7 +30,7 @@ export class PaymentPlantypesPage {
       content: "Please wait..."
     });
     loading.present();
-    this.auth.getAllPlantypes()
+    this.nativeHttp.getAllPlantypes()
     .subscribe(result => {
       loading.dismiss().catch(() => { });
       this.plantypes = result.data;
