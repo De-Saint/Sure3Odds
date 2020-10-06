@@ -1,14 +1,14 @@
 webpackJsonp([28],{
 
-/***/ 736:
+/***/ 763:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignInPageModule", function() { return SignInPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sign_in__ = __webpack_require__(821);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sign_in__ = __webpack_require__(824);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,15 +38,15 @@ var SignInPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 821:
+/***/ 824:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignInPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(90);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -73,20 +73,22 @@ var SignInPage = /** @class */ (function () {
         this.login = {};
     }
     SignInPage.prototype.onLogin = function (form, page) {
+        var _this = this;
         this.submitted = true;
         if (form.valid) {
-            this.auth.login(this.login.email, this.login.password);
-            //   .subscribe(resp => {
-            //     console.log(resp)
-            //     if (resp.statusCode === 200) {
-            //      this.gotoHomePage(resp.data, page);
-            //     } else {
-            //       this.auth.showToast(resp.description);
-            //     }
-            //   }, error => {
-            //     console.log(JSON.stringify(error));
-            //     // this.auth.showToast(error.error.message);
-            //   });
+            this.auth.login(this.login.email, this.login.password)
+                .subscribe(function (resp) {
+                console.log(resp);
+                if (resp.statusCode === 200) {
+                    _this.gotoHomePage(resp.data, page);
+                }
+                else {
+                    _this.auth.showToast(resp.description);
+                }
+            }, function (error) {
+                console.log(JSON.stringify(error));
+                // this.auth.showToast(error.error.message);
+            });
         }
     };
     SignInPage.prototype.hideShowPassword = function () {

@@ -4,8 +4,12 @@ import { ReportsPage } from './../pages/reports/reports';
 import { AuthenicationProvider } from './../providers/authenication/authenication';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform, Events, MenuController } from 'ionic-angular';
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+import {
+  Plugins,
+  StatusBarStyle,
+} from '@capacitor/core';
+
+const { StatusBar, SplashScreen } = Plugins;
 import { Storage } from '@ionic/storage';
 export interface PageInterface {
   icon: string;
@@ -27,6 +31,7 @@ export class Sure3Odds {
   app_version: string;
   rootPage: any;
   version = "1.0.0";
+  isStatusBarLight = true
 
   loggedInAdminPages: PageInterface[] = [
     { icon: 'football', color: 'light', title: 'All Games', component: 'AllMatchesPage' },
@@ -64,9 +69,8 @@ export class Sure3Odds {
     public platform: Platform,
     public events: Events,
     public menu: MenuController,
-    public statusBar: StatusBar,
     public auth: AuthenicationProvider,
-    public splashScreen: SplashScreen) {
+) {
     this.initializeApp();
 
   }
@@ -80,8 +84,7 @@ export class Sure3Odds {
 
   platformReady() {
     this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
+     
       this.storage.get('hasSeenLogin') // Check if the user has already seen the LoginPage
         .then((hasSeenLogin) => {
           if (hasSeenLogin) {
@@ -95,8 +98,36 @@ export class Sure3Odds {
             this.rootPage = 'SignInPage';
           }
         });
+        if(this.platform.is("ios") || this.platform.is('android')){
+          this.changeStatusBar();
+          this.hideSplash();
+        }
     });
   }
+
+  changeStatusBar() {
+    StatusBar.show();
+    StatusBar.setStyle({
+      style: this.isStatusBarLight ? StatusBarStyle.Dark : StatusBarStyle.Light
+    });
+    this.isStatusBarLight = !this.isStatusBarLight;
+
+    // Display content under transparent status bar (Android only)
+    StatusBar.setOverlaysWebView({
+      overlay: false
+    });
+
+    StatusBar.setBackgroundColor({
+      color : "#000000"
+      });
+  }
+
+  hideSplash() {
+    setTimeout(() => {
+      SplashScreen.hide();
+    }, 3000);
+  }
+
   listenToEvents() {
     this.events.subscribe('user:signup', () => {
       this.enableMenu(true, "");

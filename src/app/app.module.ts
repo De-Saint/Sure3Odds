@@ -14,9 +14,9 @@ import { AuthenicationProvider } from '../providers/authenication/authenication'
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
 import { GamesProvider } from '../providers/games/games';
-import { HTTP } from '@ionic-native/http/ngx';
 import { SelectSearchableModule } from 'ionic-select-searchable';
 import { PaymentsProvider } from '../providers/payments/payments';
+import { HTTP } from '@ionic-native/http';
 
 var config = {
   backButtonText: '',

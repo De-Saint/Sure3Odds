@@ -1,21 +1,20 @@
 
 import { environment } from './../../environments/environment';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ToastController, Platform } from 'ionic-angular';
 import { map } from "rxjs/operators";
 import { Storage } from '@ionic/storage';
 import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs';
-import { HTTP } from '@ionic-native/http/ngx';
 
 import { JwtHelperService } from "@auth0/angular-jwt";
 import { User } from '../../interfaces/User';
 import { Token } from '../../interfaces/Token';
 import { ResponseType } from '../../interfaces/response';
-import { from } from 'rxjs/observable/from';
 const helper = new JwtHelperService();
-
+import { HTTP } from '@ionic-native/http';
+import { from } from 'rxjs/observable/from';
 const TOKEN_KEY = 'access_token';
 
 
@@ -29,7 +28,7 @@ export class AuthenicationProvider {
   private currentUserDataSubject: BehaviorSubject<User>;
   public currentUserData: Observable<User>;
 
-  constructor(public http: HttpClient, private httP: HTTP,
+  constructor(public http: HttpClient, private nativeHttp: HTTP,
     private storage: Storage, private platform: Platform,
     public toastCtrl: ToastController) {
 
@@ -77,71 +76,26 @@ export class AuthenicationProvider {
     return newAmt;
   }
 
-  onNativeApiCall(url, data, apimethod) {
-
-    if (apimethod === "post") {
-      alert("hey");
-      let nativeCall = this.httP.post(url, data, {
-        "Content-Type": "application/json"
-      });
-      console.log(JSON.stringify(nativeCall));
-      return from(nativeCall).pipe(
-        map(result => {
-          console.log(JSON.stringify(result));
-          return JSON.parse(result.data);
-        })
-      )
-    }
-
-    // else if (apimethod === "get") {
-    //   let nativeCall = this.nativeHttp.get(url, data, {
-    //     "Content-Type": "application/json"
-    //   });
-    //   return from(nativeCall).pipe(
-    //     map(result => {
-    //       alert(JSON.stringify(result));
-    //       return JSON.parse(result.data);
-    //     })
-    //   )
-    // } else if (apimethod === "delete") {
-    //   let nativeCall = this.nativeHttp.delete(url, data, {
-    //     "Content-Type": "application/json"
-    //   });
-    //   return from(nativeCall).pipe(
-    //     map(result => {
-    //       alert(JSON.stringify(result));
-    //       return JSON.parse(result.data);
-    //     })
-    //   )
-    // } else if (apimethod === "put") {
-    //   let nativeCall = this.nativeHttp.delete(url, data, {
-    //     "Content-Type": "application/json"
-    //   });
-    //   return from(nativeCall).pipe(
-    //     map(result => {
-    //       alert(JSON.stringify(result));
-    //       return JSON.parse(result.data);
-    //     })
-    //   )
-    // }
-  }
-
-  onStandardApiCall(url, data) {
-    return this.http.post<ResponseType>(url, data).pipe(
-      map(res => {
-        return res;
+  onNativeApiCall(url, data) {
+    let nativeCall = this.nativeHttp.post(url, data, {
+      "Content-Type": "application/json"
+    });
+    return from(nativeCall).pipe(
+      map(result => {
+        return JSON.parse(result.data);
       })
-    );
+    )
+
   }
 
-  login2(email, password) : Observable<ResponseType>{
-    const params = new HttpParams()
-      .set('email', email)
-      .set('password', password);
+  login(email, password) {
+    const params = {
+      email: email,
+      password: password,
+    };
     let url = `${environment.apiUrl}/users/member/authenticate`;
     if (this.platform.is("android") || this.platform.is("ios")) {
-      alert(environment.apiUrl);
-      return this.onNativeApiCall(url, params, "post").pipe(map(res => {
+      return this.onNativeApiCall(url, params).pipe(map(res => {
         alert(res.description);
         if (res.statusCode === 200) {
           sessionStorage.setItem('currentUser', JSON.stringify(res.data));
@@ -168,48 +122,6 @@ export class AuthenicationProvider {
     }
 
   }
-
-  login1(email, password): Observable<ResponseType> {
-    const params = new HttpParams()
-      .set('email', email)
-      .set('password', password);
-    return this.http.post<ResponseType>(`${environment.apiUrl}/users/member/authenticate`, params)
-      .pipe(map(res => {
-        if (res.statusCode === 200) {
-          sessionStorage.setItem('currentUser', JSON.stringify(res.data));
-          this.currentUserSubject.next(res.data);
-          const decoded = helper.decodeToken(res.data.token);
-          sessionStorage.setItem('userData', JSON.stringify(decoded));
-          this.currentUserDataSubject.next(decoded);
-        }
-        return res;
-      }))
-     
-  }
-  login(email, password) {
-    const params = new HttpParams()
-      .set('email', email)
-      .set('password', password);
-    return this.httP.post(`${environment.apiUrl}/users/member/authenticate`, params, {})
-    .then(data => {
-
-      console.log(data.status);
-      console.log(data.data); // data received by server
-      console.log(data.headers);
-  
-    })
-    .catch(error => {
-  
-      console.log(error.status);
-      console.log(error.error); // error message as string
-      console.log(error.headers);
-  
-    });
-     
-  }
-
-  
-
 
   getAllPlantypes(): Observable<ResponseType> {
     return this.http.get<ResponseType>(`${environment.apiUrl}/payments/plantype/getall`)
