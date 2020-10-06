@@ -6,6 +6,6 @@
        </trust-anchors>
    </base-config>
     <domain-config cleartextTrafficPermitted="true">
-        <domain>104.248.175.241</domain>
+        <domain>178.62.124.12</domain>
     </domain-config>
 </network-security-config>

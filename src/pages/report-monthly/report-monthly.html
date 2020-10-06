@@ -15,10 +15,11 @@
         <ion-label>
           Select Month
         </ion-label>
-        <ion-datetime displayFormat="MMMM YYYY" placeholder="Select a month"  max="2050-12-31" name="reportdate" (ionChange)="GetReportByDate($event)">
+        <ion-datetime displayFormat="MMMM YYYY" placeholder="Select a month" max="2050-12-31" name="reportdate"
+          (ionChange)="GetReportByDate($event)">
         </ion-datetime>
       </ion-item>
-      
+
       <ion-list-header>
         <h2 ion-text text-center color="color2">Membership Details</h2>
       </ion-list-header>
@@ -50,15 +51,23 @@
       </ion-list-header>
       <ion-item>
         <h5 ion-text color="dark"><b>Total Revenue</b></h5>
-        <p ion-text color="color1"><b>{{report?.totalincome | currency: 'NGN': '1.2-2' ? report?.totalincome : 0}}</b></p>
+        <p ion-text color="color1" *ngIf="!report?.totalincome"><b>{{totalincome | currency: 'NGN': '1.2-2'}}</b></p>
+        <p ion-text color="color1" *ngIf="report?.totalincome"><b>{{report?.totalincome | currency: 'NGN': '1.2-2'}}</b>
+        </p>
       </ion-item>
       <ion-item class="halfItem" float-left style="margin-top:  1.5em;">
         <h5 ion-text color="dark"><b>VVIP Revenue</b></h5>
-        <p ion-text color="color1"><b>{{report?.totalvvipincome   | currency: 'NGN': '1.2-2' ? report?.totalvvipincome : 0}}</b></p>
+        <p ion-text color="color1" *ngIf="!report?.totalvvipincome">
+          <b>{{ totalvvipincome | currency: 'NGN': '1.2-2'}}</b></p>
+        <p ion-text color="color1" *ngIf="report?.totalvvipincome">
+          <b>{{report?.totalvvipincome | currency: 'NGN': '1.2-2'}}</b></p>
       </ion-item>
       <ion-item class="halfItem" float-left style="margin-top:  1.5em;">
         <h5 ion-text color="dark"><b>VIP Revenue</b></h5>
-        <p ion-text color="color1"><b>{{report?.totalvipincome   | currency: 'NGN': '1.2-2'  ? report?.totalvipincome : 0 }}</b></p>
+        <p ion-text color="color1" *ngIf="!report?.totalvipincome"><b>{{totalvipincome | currency: 'NGN': '1.2-2' }}</b>
+        </p>
+        <p ion-text color="color1" *ngIf="report?.totalvipincome">
+          <b>{{report?.totalvipincome | currency: 'NGN': '1.2-2'}}</b></p>
       </ion-item>
       <ion-item class="halfItem" float-left style="margin-top:  1.5em;">
         <h5 ion-text color="dark"><b>VVIP Payments</b></h5>

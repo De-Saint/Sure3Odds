@@ -1,3 +1,4 @@
+import { NativeHttpProvider } from './../../providers/native-http/native-http';
 import { GamesProvider } from './../../providers/games/games';
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
 import { Component } from '@angular/core';
@@ -33,6 +34,7 @@ export class FreeTipsPage {
     private authProvider: AuthenicationProvider,
     private alertCtrl: AlertController,
     public platform: Platform,
+    private nativeHttp: NativeHttpProvider,
     public loadingCtrl: LoadingController,
     private gamesProvider: GamesProvider) {
     this.getDaysInMonth(this.month_num, this.year);
@@ -141,7 +143,7 @@ export class FreeTipsPage {
       content: "Please wait..."
     });
     loading.present();
-    this.gamesProvider.GetFreeGames(currentdate)
+    this.nativeHttp.GetFreeGames(currentdate)
       .subscribe(resp => {
         loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {

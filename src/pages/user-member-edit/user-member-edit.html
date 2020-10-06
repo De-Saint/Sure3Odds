@@ -90,7 +90,7 @@
       </ion-item>
       <ion-item class="halfItem" float-left>
         <h5 ion-text color="dark"><b>Status</b></h5>
-        <p ion-text color="danger" *ngIf="newuser.status.name === 'Inactive'"><b>Expired</b></p>
+        <p ion-text color="danger" *ngIf="newuser.status.name === 'Inactive'"><b>InActive/Expired</b></p>
         <p ion-text color="secondary" *ngIf="newuser.status.name === 'Active'"><b>Running</b></p>
       </ion-item>
       <button ion-button block type="submit" color="color2" (click)="renewAccount(userplan)">Manual Activation / Renew

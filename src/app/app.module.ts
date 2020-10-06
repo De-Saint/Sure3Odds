@@ -1,6 +1,3 @@
-import { PaymentsPage } from './../pages/payments/payments';
-import { SettingPage } from './../pages/setting/setting';
-import { ReportsPage } from './../pages/reports/reports';
 import { ErrorInterceptorProvider } from './../providers/error-interceptor/error-interceptor';
 import { RequestInterceptorProvider } from './../providers/request-interceptor/request-interceptor';
 import { BrowserModule } from '@angular/platform-browser';
@@ -17,6 +14,10 @@ import { GamesProvider } from '../providers/games/games';
 import { SelectSearchableModule } from 'ionic-select-searchable';
 import { PaymentsProvider } from '../providers/payments/payments';
 import { HTTP } from '@ionic-native/http';
+import { SettingPageModule } from '../pages/setting/setting.module';
+import { ReportsPageModule } from '../pages/reports/reports.module';
+import { PaymentsPageModule } from '../pages/payments/payments.module';
+import { NativeHttpProvider } from '../providers/native-http/native-http';
 
 var config = {
   backButtonText: '',
@@ -30,10 +31,7 @@ var config = {
 };
 @NgModule({
   declarations: [
-    Sure3Odds,
-    ReportsPage,
-    SettingPage,
-    PaymentsPage
+    Sure3Odds
   ],
   imports: [
     BrowserModule, IonicImageViewerModule,
@@ -41,24 +39,25 @@ var config = {
     IonicStorageModule.forRoot(),
     IonicModule.forRoot(Sure3Odds, config),
     SelectSearchableModule,
+    SettingPageModule,
+    ReportsPageModule,
+    PaymentsPageModule
+
   ],
   bootstrap: [IonicApp],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   entryComponents: [
-    Sure3Odds,
-    ReportsPage,
-    SettingPage,
-    PaymentsPage
+    Sure3Odds
   ],
   providers: [
     StatusBar,
     SplashScreen,
     HTTP,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    AuthenicationProvider, GamesProvider,
+    AuthenicationProvider, PaymentsProvider, GamesProvider, NativeHttpProvider,
     { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptorProvider, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptorProvider, multi: true },
-    PaymentsProvider,
+    ,
 
   ]
 })

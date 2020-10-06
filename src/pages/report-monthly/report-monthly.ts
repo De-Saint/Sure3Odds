@@ -10,6 +10,9 @@ import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-an
 })
 export class ReportMonthlyPage {
   report: any;
+  totalvvipincome = 0;
+  totalincome = 0;
+  totalvipincome = 0;
   constructor(public navCtrl: NavController,
     private loadingCtrl: LoadingController,
     private authProvider: AuthenicationProvider,

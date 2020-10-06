@@ -1,6 +1,6 @@
 
 import { environment } from './../../environments/environment';
-import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ToastController, Platform } from 'ionic-angular';
 import { map } from "rxjs/operators";
@@ -89,27 +89,30 @@ export class AuthenicationProvider {
   }
 
   login(email, password) {
-    const params = {
-      email: email,
-      password: password,
-    };
-    let url = `${environment.apiUrl}/users/member/authenticate`;
-    if (this.platform.is("android") || this.platform.is("ios")) {
-      return this.onNativeApiCall(url, params).pipe(map(res => {
-        alert(res.description);
-        if (res.statusCode === 200) {
-          sessionStorage.setItem('currentUser', JSON.stringify(res.data));
-          this.currentUserSubject.next(res.data);
-          const decoded = helper.decodeToken(res.data.token);
-          sessionStorage.setItem('userData', JSON.stringify(decoded));
-          this.currentUserDataSubject.next(decoded);
-        }
-        return res;
-      }))
-    } else {
+    
+    // let url = `${environment.apiUrl}/users/member/authenticate`;
+    // if (this.platform.is("android") || this.platform.is("ios")) {
+      // const params = {
+      //   email: email,
+      //   password: password,
+      // };
+    //   return this.onNativeApiCall(url, params).pipe(map(res => {
+    //     alert(res.description);
+    //     if (res.statusCode === 200) {
+    //       sessionStorage.setItem('currentUser', JSON.stringify(res.data));
+    //       this.currentUserSubject.next(res.data);
+    //       const decoded = helper.decodeToken(res.data.token);
+    //       sessionStorage.setItem('userData', JSON.stringify(decoded));
+    //       this.currentUserDataSubject.next(decoded);
+    //     }
+    //     return res;
+    //   }))
+    // } else {
+        const params = new HttpParams()
+      .set('email', email)
+      .set('password', password);
       return this.http.post<ResponseType>(`${environment.apiUrl}/users/member/authenticate`, params)
         .pipe(map(res => {
-          alert(res.description);
           if (res.statusCode === 200) {
             sessionStorage.setItem('currentUser', JSON.stringify(res.data));
             this.currentUserSubject.next(res.data);
@@ -119,7 +122,7 @@ export class AuthenicationProvider {
           }
           return res;
         }))
-    }
+    // }
 
   }
 
@@ -136,12 +139,7 @@ export class AuthenicationProvider {
         return resp;
       }));
   }
-  createNewUser(user): Observable<ResponseType> {
-    return this.http.post<ResponseType>(`${environment.apiUrl}/users/member/create`, user)
-      .pipe(map(resp => {
-        return resp;
-      }));
-  }
+
   GetUserDeta(): Observable<ResponseType> {
     return this.http.get<ResponseType>(`${environment.apiUrl}/users/user/get`)
       .pipe(map(resp => {
@@ -227,10 +225,5 @@ export class AuthenicationProvider {
   }
 
 
-  getParameter(id): Observable<ResponseType> {
-    return this.http.get<ResponseType>(`${environment.apiUrl}/payments/parameter/get/${id}`)
-      .pipe(map(resp => {
-        return resp;
-      }));
-  }
+ 
 }

@@ -84,7 +84,6 @@ export class Sure3Odds {
 
   platformReady() {
     this.platform.ready().then(() => {
-     
       this.storage.get('hasSeenLogin') // Check if the user has already seen the LoginPage
         .then((hasSeenLogin) => {
           if (hasSeenLogin) {
@@ -99,8 +98,8 @@ export class Sure3Odds {
           }
         });
         if(this.platform.is("ios") || this.platform.is('android')){
-          this.changeStatusBar();
-          this.hideSplash();
+          // this.changeStatusBar();
+          // this.hideSplash();
         }
     });
   }

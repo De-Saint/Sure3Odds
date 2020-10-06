@@ -1,3 +1,4 @@
+import { NativeHttpProvider } from './../../providers/native-http/native-http';
 import { PaymentsProvider } from './../../providers/payments/payments';
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
 import { NewUsers } from './../../interfaces/NewUser';
@@ -21,6 +22,7 @@ export class SubscriptionAndroidPage {
   constructor(private loadingCtrl: LoadingController,
     private events: Events,
     private storage: Storage,
+    private nativeHttp: NativeHttpProvider,
     private paymentsProvider: PaymentsProvider,
     private navCtrl: NavController, private auth: AuthenicationProvider, public navParams: NavParams) {
     this.newuser = this.navParams.get("newuser");
@@ -37,13 +39,13 @@ export class SubscriptionAndroidPage {
     this.pay_amount = plan.amount;
   }
   getPlantypes() {
-    this.auth.getAllPlantypes().subscribe(result => {
+    this.nativeHttp.getAllPlantypes().subscribe(result => {
       this.plantypelist = result.data;
       console.log(this.plantypelist);
     })
   }
   getParameter() {
-    this.auth.getParameter(1).subscribe(result => {
+    this.nativeHttp.getParameter(1).subscribe(result => {
       this.public_key = result.data.value;
       console.log(this.public_key);
     })
@@ -87,7 +89,7 @@ export class SubscriptionAndroidPage {
   onRegistration(loading) {
     this.newuser.usertypes = { id: 2, name: "" };
     console.log(this.newuser);
-    this.auth.createNewUser(this.newuser).subscribe(resp => {
+    this.nativeHttp.createNewUser(this.newuser).subscribe(resp => {
       if (resp.statusCode === 200) {
         this.auth.login(this.newuser.email, this.newuser.password).subscribe(res => {
           loading.dismiss().catch(() => { });
