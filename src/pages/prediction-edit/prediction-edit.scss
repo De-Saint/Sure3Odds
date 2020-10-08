@@ -24,14 +24,11 @@ page-prediction-edit {
             color: color($colors, dark);
             font-weight: bold;
           }
-    
+
           &.show {
             height: 0px !important;
             transition: height 1s;
             margin-bottom: 0px !important;
-          }
-          &.item-input-disabled {
-            border-bottom: none !important;
           }
         }
         .button {

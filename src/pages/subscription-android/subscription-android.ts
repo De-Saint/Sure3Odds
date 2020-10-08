@@ -4,7 +4,8 @@ import { AuthenicationProvider } from './../../providers/authenication/authenica
 import { NewUsers } from './../../interfaces/NewUser';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Events, LoadingController } from 'ionic-angular';
-import { Storage } from '@ionic/storage';
+import { Plugins } from '@capacitor/core';
+const { Storage } = Plugins;
 
 @IonicPage()
 @Component({
@@ -21,13 +22,12 @@ export class SubscriptionAndroidPage {
   pay_amount: any;
   constructor(private loadingCtrl: LoadingController,
     private events: Events,
-    private storage: Storage,
     private nativeHttp: NativeHttpProvider,
     private paymentsProvider: PaymentsProvider,
     private navCtrl: NavController, private auth: AuthenicationProvider, public navParams: NavParams) {
     this.newuser = this.navParams.get("newuser");
     this.sub_option = this.navParams.get("sub_option");
-    console.log(this.newuser, this.sub_option);
+
   }
 
   ionViewWillEnter() {
@@ -47,7 +47,6 @@ export class SubscriptionAndroidPage {
     .subscribe(result => {
       loading.dismiss().catch(() => { });
       this.plantypelist = result.data;
-      console.log(this.plantypelist);
     },error=>{
       loading.dismiss().catch(() => { });
     })
@@ -55,7 +54,6 @@ export class SubscriptionAndroidPage {
   getParameter() {
     this.nativeHttp.getParameter(1).subscribe(result => {
       this.public_key = result.data.value;
-      console.log(this.public_key);
     })
   }
 
@@ -70,7 +68,7 @@ export class SubscriptionAndroidPage {
   //Callback function on successful payment
   paymentDone(ref: any) {
     if (ref.status === "success") {
-      console.log(ref) //ref contains the response from paystack after successful payment
+    //ref contains the response from paystack after successful payment
       let loading = this.loadingCtrl.create({
         content: 'Please wait...'
       });
@@ -94,7 +92,6 @@ export class SubscriptionAndroidPage {
 
   onRegistration(loading) {
     this.newuser.usertypes = { id: 2, name: "" };
-    console.log(this.newuser);
     this.nativeHttp.createNewUser(this.newuser).subscribe(resp => {
       if (resp.statusCode === 200) {
         this.auth.login(String(this.newuser.email), String(this.newuser.password)).subscribe(res => {
@@ -102,7 +99,7 @@ export class SubscriptionAndroidPage {
           this.gotoHomePage(res, 'AllMatchesPage');
         }, error => {
           loading.dismiss().catch(() => { });
-          this.auth.showToast(error.error.message);
+          this.auth.showToast(error.error.description);
         })
       } else {
         loading.dismiss().catch(() => { });
@@ -110,7 +107,7 @@ export class SubscriptionAndroidPage {
       }
     }, error => {
       loading.dismiss().catch(() => { });
-      this.auth.showToast(error.error.message);
+      this.auth.showToast(error.error.description);
     })
   }
 
@@ -124,21 +121,20 @@ export class SubscriptionAndroidPage {
       }
     }, error => {
       loading.dismiss().catch(() => { });
-      this.auth.showToast(error.error.error);
+      this.auth.showToast(error.error.description);
     });
   }
 
 
   private gotoHomePage(data, page) {
     this.navCtrl.setRoot(page).then(() => {
-      this.storage.ready().then(() => {
-        this.storage.set("hasSeenLogin", true);
-        const name = this.auth.currentUserDataValue.name;
-        const type = this.auth.currentUserDataValue.user_type;
-        this.auth.showToast("Welcome " + name);
-        this.events.publish('user:login', type, name);
-      });
+      Storage.set({ key: "hasSeenLogin", value: "true" })
+      const name = this.auth.currentUserDataValue.name;
+      const type = this.auth.currentUserDataValue.user_type;
+      this.auth.showToast("Welcome " + name);
+      this.events.publish('user:login', type, name);
     });
+
   }
 
 }

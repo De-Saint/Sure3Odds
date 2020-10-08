@@ -6,10 +6,10 @@ import { IonicPage, NavController } from 'ionic-angular';
   templateUrl: 'setting.html',
 })
 export class SettingPage {
-  CountryPage = "SettingCountryPage";
-  LeaguePage = "SettingLeaguesPage";
-  TeamPage = "SettingTeamsPage";
-  SelectionPage = "SettingSelectionsPage";
+  CountryPage = 'SettingCountryPage';
+  LeaguePage = 'SettingLeaguesPage';
+  TeamPage = 'SettingTeamsPage';
+  SelectionPage = 'SettingSelectionsPage';
   constructor(public navCtrl: NavController) {
 
   }

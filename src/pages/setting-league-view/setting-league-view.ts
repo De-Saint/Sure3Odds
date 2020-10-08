@@ -22,7 +22,7 @@ export class SettingLeagueViewPage {
     private authProvider: AuthenicationProvider,
     private gamesProvider: GamesProvider, public navParams: NavParams) {
     this.country = this.navParams.get("country");
-    console.log(this.country);
+
   }
 
 
@@ -62,11 +62,9 @@ export class SettingLeagueViewPage {
         this.gamesProvider.SearchLeaguesByCountryIDAndName(searchvalue, this.country.id)
           .subscribe(resp => {
             loading.dismiss().catch(() => { });
-            console.log(resp);
+
             if (resp.statusCode === 200) {
               this.leagues = resp.data
-            } else {
-              console.log(resp.description);
             }
             this.error = '';
           }, error => {

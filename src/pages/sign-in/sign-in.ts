@@ -1,7 +1,9 @@
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, Events } from 'ionic-angular';
-import { Storage } from '@ionic/storage';
+import { IonicPage, NavController, Events, LoadingController } from 'ionic-angular';
+import { Plugins } from '@capacitor/core';
+
+const { Storage } = Plugins;
 
 @IonicPage()
 @Component({
@@ -16,7 +18,8 @@ export class SignInPage {
   HAS_LOGGED_IN = 'hasLoggedIn';
   login: { email?: string, password?: string } = {};
   constructor(private navCtrl: NavController,
-    private storage: Storage, private events: Events,
+    private events: Events,
+    private loadingCtrl: LoadingController,
     private auth: AuthenicationProvider) {
   }
 
@@ -24,16 +27,18 @@ export class SignInPage {
   onLogin(form, page) {
     this.submitted = true;
     if (form.valid) {
+      let loading = this.loadingCtrl.create({
+        content: 'Please wait...'
+      });
+      loading.present();
       this.auth.login(this.login.email, this.login.password)
         .subscribe(resp => {
-          console.log(resp)
+          loading.dismiss().catch(() => { });
           if (resp.statusCode === 200) {
-           this.gotoHomePage(resp.data, page);
-          } else {
-            this.auth.showToast(resp.description);
+            this.gotoHomePage(resp.data, page);
           }
         }, error => {
-          console.log(JSON.stringify(error));
+          loading.dismiss().catch(() => { });
           // this.auth.showToast(error.error.message);
         });
 
@@ -45,17 +50,16 @@ export class SignInPage {
     this.passwordIcon = this.passwordIcon === 'eye-off' ? 'eye' : 'eye-off';
   }
 
-private gotoHomePage(data, page){
-  this.navCtrl.setRoot(page).then(() => {
-    this.storage.ready().then(() => {
-      this.storage.set("hasSeenLogin", true);
+  private gotoHomePage(data, page) {
+    this.navCtrl.setRoot(page).then(() => {
+      Storage.set({ key: "hasSeenLogin", value: "true" })
       const name = this.auth.currentUserDataValue.name;
       const type = this.auth.currentUserDataValue.user_type;
       this.auth.showToast("Welcome " + name);
       this.events.publish('user:login', type, name);
     });
-  });
-}
+
+  }
 
 }
 

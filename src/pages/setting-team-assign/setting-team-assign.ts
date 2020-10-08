@@ -24,7 +24,6 @@ export class SettingTeamAssignPage {
     private loadingCtrl: LoadingController,
     private authProvider: AuthenicationProvider, public navParams: NavParams) {
     this.selectedteam = this.navParams.get("team");
-    console.log("this.selectedteam", this.selectedteam);
     if (this.selectedteam) {
       this.team = this.selectedteam;
     }
@@ -77,7 +76,7 @@ export class SettingTeamAssignPage {
   }
 
   onSelectLeague(event: { component: SelectSearchableComponent, value: any }) {
-    // console.log('league:', event.value);
+
   }
 
   onSubmit(team) {
@@ -86,7 +85,6 @@ export class SettingTeamAssignPage {
       let loading = this.loadingCtrl.create({
         content: "Please wait..."
       });
-      console.log(team)
       loading.present();
       this.gamesProvider.createTeam(team).subscribe(res => {
         loading.dismiss().catch(() => { });

@@ -23,7 +23,6 @@ export class GameCreatePage {
     this.selectedprediction = this.navParams.get("prediction");
     if (this.selectedprediction) {
       this.prediction = this.selectedprediction;
-      console.log(this.prediction);
     }
   }
 
@@ -33,10 +32,10 @@ export class GameCreatePage {
     this.GetStatus();
   }
   onSelectSets(event: { component: SelectSearchableComponent, value: any }) {
-    console.log(event.value);
+
   }
   onSelectStatus(event: { component: SelectSearchableComponent, value: any }) {
-    console.log(event.value);
+
   }
   GetSets() {
     this.gamesProvider.GetSets()

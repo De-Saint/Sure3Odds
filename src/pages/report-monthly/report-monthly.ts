@@ -20,14 +20,12 @@ export class ReportMonthlyPage {
   }
 
   GetReportByDate(value) {
-    console.log(value)
     var month = value.month;
     if (month < 10) {
       month = "0" + month;
     }
     let year = value.year;
     var date = year + "-" + month + "-01";
-    console.log(date);
     this.GetMonthlyStats(date);
   }
   GetMonthlyStats(date) {
@@ -40,7 +38,6 @@ export class ReportMonthlyPage {
         loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
           this.report = resp.data;
-          console.log(this.report);
         } else {
           this.authProvider.showToast(resp.description);
         }

@@ -27,7 +27,6 @@ export class PredictionEditPage {
     this.selectedprediction = this.navParams.get("prediction");
     if (this.selectedprediction) {
       this.prediction = this.selectedprediction;
-      console.log(this.prediction);
     }
 
   }
@@ -57,19 +56,19 @@ export class PredictionEditPage {
   }
 
   onSelectSelection(event: { component: SelectSearchableComponent, value: any }) {
-    console.log(event.value);
+
   }
   onSelectSets(event: { component: SelectSearchableComponent, value: any }) {
-    console.log(event.value);
+
   }
   onSelectHTeam(event: { component: SelectSearchableComponent, value: any }) {
-    console.log(event.value);
+
   }
   onSelectATeam(event: { component: SelectSearchableComponent, value: any }) {
-    console.log(event.value);
+
   }
   onSelectStatus(event: { component: SelectSearchableComponent, value: any }) {
-    console.log(event.value);
+
   }
   onSelectCountry(event: { component: SelectSearchableComponent, value: any }) {
     let loading = this.loadingCtrl.create({

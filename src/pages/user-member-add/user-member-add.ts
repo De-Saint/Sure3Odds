@@ -32,14 +32,13 @@ export class UserMemberAddPage {
     .subscribe(result => {
       loading.dismiss().catch(() => { });
       this.plantypes = result.data;
-      console.log(this.plantypes);
       loading.dismiss().catch(() => { });
     },error => {
       loading.dismiss().catch(() => { });
     })
   }
   onSelectPlantypes(event: { component: SelectSearchableComponent, value: any }) {
-    console.log(event.value);
+
   }
   createAccount() {
     if (this.newuser.firstname == "" || this.newuser.firstname == undefined || this.newuser.firstname == null) {
@@ -61,12 +60,10 @@ export class UserMemberAddPage {
       this.newuser.platform = "Manual";
       this.newuser.referencecode = "Sure3Manual";
       this.newuser.usertypes = { id: 2, name: "" };
-      console.log(this.newuser);
       let loading = this.loadingCtrl.create({
         content: 'Please wait...'
       });
       loading.present();
-      // console.log(this.newuser);
       this.auth.createNewUser(this.newuser).subscribe(resp => {
         if (resp.statusCode === 200) {
           loading.dismiss().catch(() => { });

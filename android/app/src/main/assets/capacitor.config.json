@@ -16,8 +16,8 @@
       "launchShowDuration": 3000,
       "launchAutoHide": false,
       "androidScaleType": "CENTER_CROP",
-      "splashFullScreen": false,
-      "splashImmersive": false
+      "FadeSplashScreen": false,
+      "androidSplashResourceName": "splash"
     }
   },
   "cordova": {}

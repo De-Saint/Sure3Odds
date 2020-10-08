@@ -26,7 +26,6 @@ export class UserSubAdminEditPage {
 
     if (this.selecteduser) {
       this.newuser = this.selecteduser;
-      console.log(this.newuser);
     }
   }
 
@@ -35,7 +34,6 @@ export class UserSubAdminEditPage {
   }
 
   updateAccount(user) {
-    console.log(user);
     if (user) {
       let loading = this.loadingCtrl.create({
         content: "Please wait..."
@@ -57,7 +55,7 @@ export class UserSubAdminEditPage {
     }
   }
   onSelectStatus(event: { component: SelectSearchableComponent, value: any }) {
-    console.log(event.value);
+
   }
   GetStatus() {
     let loading = this.loadingCtrl.create({

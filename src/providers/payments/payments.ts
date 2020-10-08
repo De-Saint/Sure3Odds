@@ -9,7 +9,7 @@ import { ResponseType } from '../../interfaces/response';
 export class PaymentsProvider {
 
   constructor(public http: HttpClient) {
-    
+
   }
 
 

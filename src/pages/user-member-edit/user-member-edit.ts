@@ -64,14 +64,13 @@ export class UserMemberEditPage {
   getPlantypes() {
     this.authProvider.getAllPlantypes().subscribe(result => {
       this.plantypes = result.data;
-      console.log(this.plantypes);
     })
   }
   onSelectPlantypes(event: { component: SelectSearchableComponent, value: any }) {
-    console.log(event.value);
+
   }
   onSelectStatus(event: { component: SelectSearchableComponent, value: any }) {
-    console.log(event.value);
+
   }
   GetStatus() {
     this.gamesProvider.GetStatus("User")
@@ -87,7 +86,6 @@ export class UserMemberEditPage {
   }
 
   updateAccount(user) {
-    console.log(user);
     if (user) {
       let loading = this.loadingCtrl.create({
         content: "Please wait..."
@@ -113,9 +111,7 @@ export class UserMemberEditPage {
   renewAccount(plan) {
     this.newuser.platform = "Manual";
     this.newuser.referencecode = "Sure3Manual";
-    // this.newuser.id
 
-    console.log(this.newuser.id, plan.plantype);
     let loading = this.loadingCtrl.create({
       content: "Please wait..."
     });

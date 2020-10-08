@@ -35,12 +35,11 @@ export class UserSubAdminAddPage {
       return false;
     } else {
       this.newuser.usertypes = { id: 3, name: "" };
-      console.log(this.newuser);
+
       let loading = this.loadingCtrl.create({
         content: 'Please wait...'
       });
       loading.present();
-      console.log(this.newuser);
       this.auth.createSubAdmin(this.newuser).subscribe(resp => {
         if (resp.statusCode === 200) {
           loading.dismiss().catch(() => { });

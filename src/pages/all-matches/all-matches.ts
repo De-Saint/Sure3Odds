@@ -1,8 +1,11 @@
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
 import { GamesProvider } from './../../providers/games/games';
 import { Component, OnInit } from '@angular/core';
-import { IonicPage, NavController, LoadingController, ActionSheetController } from 'ionic-angular';
+import { IonicPage, NavController, LoadingController, ActionSheetController, Platform, AlertController } from 'ionic-angular';
+import { AppVersion } from '@ionic-native/app-version';
+import { Plugins } from '@capacitor/core';
 
+const { Browser } = Plugins;
 @IonicPage()
 @Component({
   selector: 'page-all-matches',
@@ -26,10 +29,14 @@ export class AllMatchesPage implements OnInit {
   constructor(public navCtrl: NavController,
     private authProvider: AuthenicationProvider,
     private loadingCtrl: LoadingController,
+    private appVersion: AppVersion,
+    private platform: Platform,
+    private alertCtrl: AlertController,
     private actionSheetCtrl: ActionSheetController,
     private gamesProvider: GamesProvider) {
     this.getDaysInMonth(this.month_num, this.year);
     this.currentDate = this.myDate;
+    this.getVersionNumber();
   }
 
   ngOnInit(): void {
@@ -39,6 +46,7 @@ export class AllMatchesPage implements OnInit {
     var today = date - 1;
     this.isGroupShown(today);
     this.shownGroup = today;
+
   }
 
   getDaysInMonth(month, year) {
@@ -51,6 +59,7 @@ export class AllMatchesPage implements OnInit {
       date.setDate(date.getDate() + 1);
     }
   }
+
 
   // increase and decrease month function
   change_month(type) {
@@ -101,9 +110,6 @@ export class AllMatchesPage implements OnInit {
         loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
           this.gamelist = resp.data;
-          console.log(this.gamelist);
-        } else {
-          console.log(resp.description);
         }
       }, error => {
         loading.dismiss().catch(() => { });
@@ -135,4 +141,78 @@ export class AllMatchesPage implements OnInit {
     actionSheet.present();
   }
 
+  async getVersionNumber() {
+    this.platform.ready().then(() => {
+      if (this.platform.is("android") || this.platform.is("ios")) {
+        this.appVersion.getVersionNumber()
+          .then((version) => {
+            this.CheckAppVersion(version);
+          }).catch(() => {
+          });
+      }
+    })
+  }
+  CheckAppVersion(appversion) {
+    this.platform.ready().then(() => {
+      this.gamesProvider.GetAppVersion().subscribe(result => {
+        if (result.statusCode === 200) {
+          let serverAppVersion = result.data;
+          if (this.platform.is('android')) {
+            if (String(appversion) !== String(serverAppVersion.android)) {
+              this.UpdateVersion();
+            }
+          } else if (this.platform.is('ios')) {
+            if (String(appversion) === String(serverAppVersion.ios)) {
+              this.UpdateVersion();
+            }
+          }
+        }
+      }, error => {
+      });
+    });
+  }
+  UpdateVersion() {
+    const confirm = this.alertCtrl.create({
+      title: 'Update Available!',
+      message: 'A new version of Sure3Odds is available. Please update to the new version now!!!',
+      buttons: [
+        {
+          text: 'Update Later',
+          handler: () => {
+
+          }
+        },
+        {
+          text: 'Update Now',
+          handler: () => {
+            this.onUpdateNow();
+          }
+        }
+      ]
+    });
+    confirm.present();
+
+  }
+  onUpdateNow() {
+    this.platform.ready().then(() => {
+      if (this.platform.is("ios")) {
+        this.openInAppStore('itms-apps://itunes.apple.com/app/1504720335');
+      } else if (this.platform.is("android")) {
+        this.openInAppStore("https://play.google.com/store/apps/details?id=com.whatsapp").then(response => {
+          console.log(response);
+        }).catch(error => {
+          console.log(error);
+        });
+      }
+    });
+  }
+
+  async openInAppStore(link) {
+    await Browser.open(
+      {
+        url: link,
+        toolbarColor: "#0f5656"
+      }
+      );
+  }
 }

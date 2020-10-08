@@ -4,12 +4,6 @@ import { AuthenicationProvider } from './../../providers/authenication/authenica
 import { Component } from '@angular/core';
 import { IonicPage, NavController, AlertController, Platform, LoadingController } from 'ionic-angular';
 
-// import  { Plugins } from "@capacitor/core";
-// import { initialize } from 'capacitor-admob'; No longar required
-// import { AdOptions, AdSize, AdPosition } from "capacitor-admob";
-
-// const { AdMob } = Plugins;
-
 @IonicPage()
 @Component({
   selector: 'page-free-tips',
@@ -148,9 +142,6 @@ export class FreeTipsPage {
         loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
           this.gamelist = resp.data;
-          console.log(JSON.stringify(this.gamelist));
-        } else {
-          console.log(resp.description);
         }
       }, error => {
         loading.dismiss().catch(() => { });
@@ -164,7 +155,6 @@ export class FreeTipsPage {
 
 
   onView(id) {
-    console.log(id);
     if(id !== 1){
         this.showAlert("Subscribe", "Subscribe to VIP or VVIP Plan today, to gain access to more features like posting your predictions, commenting on matches and interacting with other users, advert free and many more predictions.");
     }
@@ -181,17 +171,13 @@ export class FreeTipsPage {
 
   // ShowSure3Banner(){
   //   this.admobFree.banner.prepare().then((res) => {
-  //     console.log(res);
   //   }).catch((e) => {
-  //     console.log(e);
   //   });
   // }
 
   // ShowSure3Inter(){
   //   this.admobFree.interstitial.prepare().then((res) => {
-  //     console.log(res);
   //   }).catch((e) => {
-  //     console.log(e);
   //   });
   // }
 

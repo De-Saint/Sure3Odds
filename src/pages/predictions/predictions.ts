@@ -30,7 +30,6 @@ export class PredictionsPage {
       .subscribe(resp => {
         if (resp.statusCode === 200) {
           this.predictionlist = resp.data;
-          console.log(this.predictionlist);
         } else {
           this.authProvider.showToast(resp.description);
         }

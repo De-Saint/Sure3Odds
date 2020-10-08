@@ -45,7 +45,6 @@ export class PaymentDetailsPage {
         loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
           this.payments = resp.data.content;
-          console.log(this.payments);
           this.currentPage = resp.data.number;
           this.totalPage = resp.data.totalPages;
           this.totalData = resp.data.totalElements;

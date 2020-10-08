@@ -101,7 +101,6 @@ export class GamesPage {
       .subscribe(resp => {
         loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
-          console.log(resp);
           this.gamelist = resp.data;
         } else {
           this.authProvider.showToast(resp.description);

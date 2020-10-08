@@ -30,7 +30,6 @@ export class MatchCommentsPage {
     private loadingCtrl: LoadingController,
     public navParams: NavParams) {
     this.match = this.navParams.get("match");
-    console.log(this.match);
 
   }
   ionViewDidLoad() {
@@ -56,7 +55,6 @@ export class MatchCommentsPage {
   ionViewWillEnter() {
     this.placesSub = Observable.interval(10000)
       .subscribe((val) => {
-        console.log(val);
         this.GetGameComments("");
       });
     let loading = this.loadingCtrl.create({
@@ -70,7 +68,6 @@ export class MatchCommentsPage {
   GetGameComments(loading: any) {
     this.gameProvider.GetGameComments(this.match.id).subscribe(result => {
       this.comments = result.data;
-      console.log(this.comments);
       this.error = '';
       if (loading) {
         loading.dismiss().catch(() => { });
@@ -78,7 +75,6 @@ export class MatchCommentsPage {
     }, error => {
       this.comments = [];
       this.error = 'none';
-      console.log(error.error.description);
       if (loading) {
         loading.dismiss().catch(() => { });
       }
@@ -90,8 +86,6 @@ export class MatchCommentsPage {
     let loading = this.loadingCtrl.create({
       content: "Please wait..."
     });
-
-    console.log(comment);
     if (this.comment.comments) {
       this.comment.game.id = match.id;
       loading.present();

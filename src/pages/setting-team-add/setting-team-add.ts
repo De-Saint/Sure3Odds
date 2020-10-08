@@ -62,16 +62,13 @@ export class SettingTeamAddPage {
     let loading = this.loadingCtrl.create({
       content: "Please wait..."
     });
-    console.log('country:', event.value);
     this.team.league = null;
-    console.log(event.value.id);
     loading.present();
     this.gamesProvider.GetLeaguesByCountryID(event.value.id)
       .subscribe(resp => {
         loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
           this.leagues = resp.data;
-          console.log(this.leagues);
         } else {
           this.authProvider.showToast(resp.description);
         }
@@ -82,11 +79,10 @@ export class SettingTeamAddPage {
   }
 
   onSelectLeague(event: { component: SelectSearchableComponent, value: any }) {
-    console.log('league:', event.value);
+
   }
 
   onSubmit(team) {
-    console.log(team)
     if (team.name) {
       team.imageurl = (team.imageurl != undefined) ? this.img1 : this.img;
       let loading = this.loadingCtrl.create({

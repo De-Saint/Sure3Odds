@@ -1,16 +1,13 @@
-import { PaymentsPage } from './../pages/payments/payments';
-import { SettingPage } from './../pages/setting/setting';
-import { ReportsPage } from './../pages/reports/reports';
 import { AuthenicationProvider } from './../providers/authenication/authenication';
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform, Events, MenuController } from 'ionic-angular';
+import { Nav, Platform, Events, MenuController, AlertController, App } from 'ionic-angular';
 import {
   Plugins,
-  StatusBarStyle,
+  StatusBarStyle
 } from '@capacitor/core';
 
-const { StatusBar, SplashScreen } = Plugins;
-import { Storage } from '@ionic/storage';
+const { StatusBar, SplashScreen, Storage } = Plugins;
+
 export interface PageInterface {
   icon: string;
   color: string;
@@ -40,16 +37,16 @@ export class Sure3Odds {
     { icon: 'people', color: 'light', title: 'Members', component: 'UserMembersPage' },
     { icon: 'football', color: 'light', title: 'Games', component: 'GamesPage' },
     { icon: 'football', color: 'light', title: 'Predictions', component: 'PredictionsPage' },
-    { icon: 'card', color: 'light', title: 'Payments', component: PaymentsPage },
-    { icon: 'podium', color: 'light', title: 'Reports', component: ReportsPage },
-    { icon: 'build', color: 'light', title: 'Settings', component: SettingPage }
+    { icon: 'build', color: 'light', title: 'Settings', component: 'SettingPage' },
+    { icon: 'card', color: 'light', title: 'Payments', component: 'PaymentsPage' },
+    { icon: 'podium', color: 'light', title: 'Reports', component: 'ReportsPage' },
   ];
 
   loggedInSubAdminPages: PageInterface[] = [
     { icon: 'football', color: 'light', title: 'All Games', component: 'AllMatchesPage' },
     { icon: 'person', color: 'light', title: 'My Profile', component: 'ProfilePage' },
     { icon: 'football', color: 'light', title: 'My Predictions', component: 'PredictionsPage' },
-    { icon: 'build', color: 'light', title: 'Settings', component: SettingPage }
+    { icon: 'build', color: 'light', title: 'Settings', component: 'SettingPage' }
   ];
 
   loggedInMemberPages: PageInterface[] = [
@@ -64,44 +61,45 @@ export class Sure3Odds {
   ]
 
   public animateVarible: boolean = false;
-
-  constructor(public storage: Storage,
+  HAS_LOGGED_IN = 'hasLoggedIn';
+  constructor(
     public platform: Platform,
     public events: Events,
+    private app: App,
+    private alertCtrl: AlertController,
     public menu: MenuController,
     public auth: AuthenicationProvider,
-) {
+  ) {
     this.initializeApp();
 
   }
 
   initializeApp() {
-    this.storage.ready().then(() => {
-      this.platformReady()
-      this.listenToEvents();
-    });
+    this.listenToEvents();
+    this.platformReady();
+
   }
 
-  platformReady() {
+  async platformReady() {
     this.platform.ready().then(() => {
-      this.storage.get('hasSeenLogin') // Check if the user has already seen the LoginPage
-        .then((hasSeenLogin) => {
-          if (hasSeenLogin) {
-            if(this.auth.currentUserDataValue){
-              this.Userfullname = this.auth.currentUserDataValue.name;
-              this.usertype = this.auth.currentUserDataValue.user_type;
-              this.enableMenu(hasSeenLogin === true, this.usertype);
-            }
-
-          } else {
-            this.rootPage = 'SignInPage';
-          }
-        });
-        if(this.platform.is("ios") || this.platform.is('android')){
-          this.changeStatusBar();
-          this.hideSplash();
-        }
+      this.changeStatusBar();
+      this.hideSplash();
+      this.androidExitAppOnBackButton();
+      // this.backgroundMode.enable();
     });
+    this.platform.resume.subscribe(async () => {
+      console.log('Resume event detected');
+    });
+    const { value } = await Storage.get({ key: this.HAS_LOGGED_IN });
+    if (value == "true") {
+      if (this.auth.currentUserDataValue) {
+        this.Userfullname = this.auth.currentUserDataValue.name;
+        this.usertype = this.auth.currentUserDataValue.user_type;
+        this.enableMenu(true, this.usertype);
+      }
+    } else {
+      this.rootPage = 'SignInPage';
+    }
   }
 
   changeStatusBar() {
@@ -117,14 +115,12 @@ export class Sure3Odds {
     });
 
     StatusBar.setBackgroundColor({
-      color : "#000000"
-      });
+      color: "#0f5656"
+    });
   }
 
   hideSplash() {
-    setTimeout(() => {
-      SplashScreen.hide();
-    }, 3000);
+    SplashScreen.hide();
   }
 
   listenToEvents() {
@@ -174,4 +170,43 @@ export class Sure3Odds {
     }
   }
 
+  androidExitAppOnBackButton() {
+    if (!this.platform.is('android')) {
+      return;
+    }
+
+    this.platform.registerBackButtonAction(() => {
+      let nav = this.app.getActiveNavs()[0];
+      let activeView = nav.getActive();
+
+      if (nav.canGoBack()) { //Can we go back?
+        nav.pop();
+      } else {
+        if (activeView.component === 'AllMatchesPage') {
+          let actionSheet = this.alertCtrl.create({
+            title: 'Exit Sur3Odds?',
+            message: 'Do you want to exit Sur3Odds?',
+            buttons: [
+              {
+                text: 'Yes',
+                handler: () => {
+                  this.platform.exitApp(); //Exit from app
+                }
+              }, {
+                text: 'No',
+                role: 'cancel',
+                handler: () => {
+                }
+              }
+            ]
+          });
+          actionSheet.present();
+        } else {
+        }
+      }
+    });
+
+  }
+
 }
+

@@ -55,7 +55,7 @@ export class SettingLeagueAddPage {
     this.flag = (this.flag != false) ? false : true;
   }
   userChanged(event: { component: SelectSearchableComponent, value: any }) {
-    console.log('user:', event.value);
+
   }
 
   openFromCode() {

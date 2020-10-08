@@ -48,7 +48,6 @@ export class SettingSelectionsPage {
           this.originalselections = this.selections;
             this.noselections = 'selections';
         } else {
-          console.log(resp.description);
         }
       }, error => {
         this.error = 'none';
@@ -69,7 +68,6 @@ export class SettingSelectionsPage {
         loading.present();
         this.gamesProvider.SearchSelections(searchvalue, 0, 20)
         .subscribe(resp => {
-          console.log(resp);
           loading.dismiss().catch(() => { });
           if (resp.statusCode === 200) {
             this.selections = resp.data.content;
@@ -77,13 +75,8 @@ export class SettingSelectionsPage {
             this.totalPage = resp.data.totalPages;
             this.totalData = resp.data.totalElements;
             this.perPage = resp.data.size;
-            console.log(this.currentPage, this.totalPage, this.totalData,
-              this.perPage);
-          } else {
-            console.log(resp.description);
           }
         }, error => {
-          console.log(JSON.stringify(error));
           this.error = 'none';
           loading.dismiss().catch(() => { });
         });
@@ -110,18 +103,13 @@ export class SettingSelectionsPage {
             this.totalPage = resp.data.totalPages;
             this.totalData = resp.data.totalElements;
             this.perPage = resp.data.size;
-            console.log(this.currentPage, this.totalPage, this.totalData,
-              this.perPage);
               this.noselections = 'countries';
             for (let i = 0; i < resp.data.content.length; i++) {
               this.selections.push(resp.data.content[i]);
             }
-          } else {
-            console.log(resp.description);
           }
           event.complete();
         }, error => {
-          console.log("End of the countries.");
           this.noselections = 'none';
           event.complete();
         })

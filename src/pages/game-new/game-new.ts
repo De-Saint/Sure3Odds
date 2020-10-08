@@ -54,16 +54,16 @@ export class GameNewPage {
   }
 
   onSelectSelection(event: { component: SelectSearchableComponent, value: any }) {
-    console.log(event.value);
+
   }
   onSelectSets(event: { component: SelectSearchableComponent, value: any }) {
-    console.log(event.value);
+
   }
   onSelectHTeam(event: { component: SelectSearchableComponent, value: any }) {
-    console.log(event.value);
+
   }
   onSelectATeam(event: { component: SelectSearchableComponent, value: any }) {
-    console.log(event.value);
+
   }
   onSelectCountry(event: { component: SelectSearchableComponent, value: any }) {
     let loading = this.loadingCtrl.create({

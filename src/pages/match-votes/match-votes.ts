@@ -24,7 +24,6 @@ export class MatchVotesPage {
     private authProvider: AuthenicationProvider,
     private gameProvider: GamesProvider, private navParams: NavParams) {
     this.match = this.navParams.get("match");
-    console.log(this.match);
 
   }
 
@@ -34,11 +33,10 @@ export class MatchVotesPage {
 
   GetGameVotes() {
     this.gameProvider.GetGameVotes(this.match.id).subscribe(result => {
-      console.log(result.data);
+
       this.votes = result.data;
-      console.log(this.votes.AwayVotes);
     }, error => {
-      console.log(JSON.stringify(error));
+
     });
   }
 
@@ -49,7 +47,6 @@ export class MatchVotesPage {
     this.vote.drawVote = drawvote;
     this.vote.awayVote = awayvote;
     this.vote.game.id = match.id;
-    console.log(this.vote);
     let loading = this.loadingCtrl.create({
       content: "Please wait..."
     });

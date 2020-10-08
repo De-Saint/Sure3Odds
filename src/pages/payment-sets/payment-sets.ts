@@ -32,8 +32,6 @@ export class PaymentSetsPage {
       loading.dismiss().catch(() => { });
       if (resp.statusCode === 200) {
         this.sets = resp.data;
-
-        console.log(this.sets);
       } else {
         this.auth.showToast(resp.description);
       }

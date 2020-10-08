@@ -36,7 +36,7 @@ export class SettingTeamsPage {
       content: "Please wait..."
     });
     loading.present();
-    this.gamesProvider.GetTeams(0, 200)
+    this.gamesProvider.GetTeams(0, 50)
       .subscribe(resp => {
         loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {

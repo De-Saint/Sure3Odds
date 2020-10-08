@@ -4,7 +4,6 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ToastController, Platform } from 'ionic-angular';
 import { map } from "rxjs/operators";
-import { Storage } from '@ionic/storage';
 import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs';
 
@@ -16,6 +15,9 @@ const helper = new JwtHelperService();
 import { HTTP } from '@ionic-native/http';
 import { from } from 'rxjs/observable/from';
 const TOKEN_KEY = 'access_token';
+import { Plugins } from '@capacitor/core';
+const { Storage } = Plugins;
+
 
 
 @Injectable()
@@ -29,7 +31,7 @@ export class AuthenicationProvider {
   public currentUserData: Observable<User>;
 
   constructor(public http: HttpClient, private nativeHttp: HTTP,
-    private storage: Storage, private platform: Platform,
+    private platform: Platform,
     public toastCtrl: ToastController) {
 
     this.currentUserSubject = new BehaviorSubject<Token>(JSON.parse(sessionStorage.getItem('currentUser')));
@@ -45,13 +47,6 @@ export class AuthenicationProvider {
 
   public get currentUserDataValue(): User {
     return this.currentUserDataSubject.value;
-  }
-  hasLoggedIn() {
-    return this.storage.ready().then(() => {
-      return this.storage.get(this.HAS_LOGGED_IN).then((value) => {
-        return value === true;
-      });
-    });
   }
 
   showToast(message: string) {
@@ -108,7 +103,7 @@ export class AuthenicationProvider {
       const params = new HttpParams()
         .set('email', email)
         .set('password', password);
-      return this.http.post<ResponseType>(`${environment.apiUrl}/users/member/authenticate`, params)
+      return this.http.get<ResponseType>(`${environment.apiUrl}/users/member/authenticateuser`, { params })
         .pipe(map(res => {
           if (res.statusCode === 200) {
             sessionStorage.setItem('currentUser', JSON.stringify(res.data));
@@ -154,8 +149,8 @@ export class AuthenicationProvider {
     sessionStorage.removeItem('userData');
     this.currentUserSubject.next(null);
     this.currentUserDataSubject.next(null);
-    this.storage.remove(TOKEN_KEY);
-    this.storage.remove("hasSeenLogin");
+    Storage.remove({ key: 'hasSeenLogin' });
+    Storage.remove({ key: TOKEN_KEY });
   }
 
 

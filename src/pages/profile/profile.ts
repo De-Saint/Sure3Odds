@@ -40,7 +40,6 @@ export class ProfilePage {
     .subscribe(result => {
       loading.dismiss().catch(() => { });
       if (result.statusCode == 200) {
-        console.log(result);
         this.userplan = result.data.planData;
         this.newuser = result.data.userData;
       } else {
@@ -53,7 +52,6 @@ export class ProfilePage {
   }
 
   updateAccount(user) {
-    console.log(user);
     if (user) {
       let loading = this.loadingCtrl.create({
         content: "Please wait..."
@@ -102,11 +100,11 @@ export class ProfilePage {
   }
 
   onIOSSubscription() {
-    this.navCtrl.push("SubscriptionIosPage", { newuser: this.newuser, sub_option: "renewal" });
+    this.navCtrl.push('SubscriptionIosPage', { newuser: this.newuser, sub_option: "renewal" });
   }
 
   onAndroidSubscription() {
-    this.navCtrl.push("SubscriptionAndroidPage", { newuser: this.newuser, sub_option: "renewal" });
+    this.navCtrl.push('SubscriptionAndroidPage', { newuser: this.newuser, sub_option: "renewal" });
   }
 
 

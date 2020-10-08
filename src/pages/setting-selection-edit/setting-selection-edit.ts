@@ -13,13 +13,12 @@ import { IonicPage, NavController, NavParams, AlertController, LoadingController
 export class SettingSelectionEditPage {
 selections:any;
 selection: Selections = new Selections("", "");
-  constructor(public navCtrl: NavController, 
+  constructor(public navCtrl: NavController,
     private alertCtrl: AlertController,
-    private gameProvider: GamesProvider, 
+    private gameProvider: GamesProvider,
     private loadingCtrl: LoadingController,
     private authProvider: AuthenicationProvider, public navParams: NavParams) {
     this.selections = this.navParams.get("selection");
-    console.log(this.selections);
     if(this.selections){
       this.selection.id = this.selections.id;
       this.selection.name = this.selections.name;

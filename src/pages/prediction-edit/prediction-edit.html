@@ -91,8 +91,8 @@
 
       <hr margin-top margin-bottom>
       <ion-item>
-        <h5 ion-text color="dark"><b>Predicted By</b></h5>
-        <p ion-text color="color1"><b>{{prediction.user?.lastname}} {{prediction.user?.firstname}}</b></p>
+        <ion-label stacked>Predicted By</ion-label>
+        <ion-input disabled type="text" value="{{prediction.user?.lastname}} {{prediction.user?.firstname}}"></ion-input>
       </ion-item>
     </ion-list>
     <button ion-button block color="color2" (click)="onSubmit(prediction)">Submit</button>

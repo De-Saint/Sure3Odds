@@ -4,7 +4,7 @@ page-report-general {
         @extend .signForm;
         margin-top: 0.5em;
         border-radius: $control-radius;
-    
+
         width: calc(100% - #{$content-padding}* 2) !important;
         padding: 8px !important;
         .item {
@@ -18,15 +18,13 @@ page-report-general {
             color: color($colors, dark);
             font-weight: bold;
           }
-    
+
           &.show {
             height: 0px !important;
             transition: height 1s;
             margin-bottom: 0px !important;
           }
-          &.item-input-disabled {
-            border-bottom: none !important;
-          }
+
         }
         .button {
           margin-top: $content-padding * 2 !important;

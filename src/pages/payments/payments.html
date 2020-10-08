@@ -1,6 +1,23 @@
-<ion-tabs>
-  <ion-tab [root]="tab1Root"  tabTitle="Payments" ></ion-tab>
-  <ion-tab [root]="tab2Root"  tabTitle="Plans" ></ion-tab>
-  <ion-tab [root]="tab3Root"  tabTitle="Plan Types" ></ion-tab>
-  <ion-tab [root]="tab4Root"  tabTitle="Sets"></ion-tab>
-</ion-tabs>
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle icon-only>
+      <ion-icon class="goal-menu"></ion-icon>
+    </button>
+    <ion-title> {{currentpage}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <super-tabs
+  tabsPlacement="top" 
+  [config]="{ sideMenu: 'left' }" 
+  toolbarBackground="light" 
+  toolbarColor="color1" 
+  indicatorColor="color1"
+  *ngIf="pages.length > 1"
+    (tabSelect)="onTabSelect($event)">
+    <!-- <super-tab class="" *ngFor="let page of pages" [root]="page.pageName" [icon]="page.icon" [id]="page.id"></super-tab> -->
+    <super-tab class="" *ngFor="let page of pages" [title]="page.title" [root]="page.pageName" [id]="page.id"></super-tab>
+  </super-tabs>
+</ion-content>

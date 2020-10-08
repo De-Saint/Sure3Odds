@@ -30,7 +30,6 @@ export class ReportGeneralPage {
         loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
           this.report = resp.data;
-          console.log(this.report);
         } else {
           this.authProvider.showToast(resp.description);
         }

@@ -29,7 +29,6 @@ export class GameEditPage {
     this.selectedgame = this.navParams.get("game");
     if (this.selectedgame) {
       this.game = this.selectedgame;
-      console.log(this.game);
     }
 
   }
@@ -55,19 +54,19 @@ export class GameEditPage {
   }
 
   onSelectSelection(event: { component: SelectSearchableComponent, value: any }) {
-    console.log(event.value);
+
   }
   onSelectSets(event: { component: SelectSearchableComponent, value: any }) {
-    console.log(event.value);
+
   }
   onSelectHTeam(event: { component: SelectSearchableComponent, value: any }) {
-    console.log(event.value);
+
   }
   onSelectATeam(event: { component: SelectSearchableComponent, value: any }) {
-    console.log(event.value);
+
   }
   onSelectStatus(event: { component: SelectSearchableComponent, value: any }) {
-    console.log(event.value);
+
   }
   onSelectCountry(event: { component: SelectSearchableComponent, value: any }) {
     let loading = this.loadingCtrl.create({

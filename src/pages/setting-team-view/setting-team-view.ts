@@ -29,7 +29,7 @@ export class SettingTeamViewPage {
     private actionSheetCtrl: ActionSheetController,
     public navParams: NavParams) {
     this.league = this.navParams.get("league")
-    console.log(this.league);
+
   }
 
   ionViewWillEnter() {

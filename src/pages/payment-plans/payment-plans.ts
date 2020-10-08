@@ -43,7 +43,6 @@ export class PaymentPlansPage {
         loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
           this.plans = resp.data.content;
-          console.log(this.plans);
           this.currentPage = resp.data.number;
           this.totalPage = resp.data.totalPages;
           this.totalData = resp.data.totalElements;

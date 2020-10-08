@@ -15,10 +15,9 @@ export class SubscriptionIosPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.newuser = this.navParams.get("newuser");
     this.sub_option = this.navParams.get("sub_option");
-    console.log(this.newuser, this.sub_option);
 
   }
 
- 
+
 
 }

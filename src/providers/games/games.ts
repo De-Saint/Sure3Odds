@@ -31,7 +31,7 @@ export class GamesProvider {
 
     if (this.month < 10) {
       this.month = '0' + this.month
-    } 
+    }
     this.today = this.year + '-' + this.month + '-' + this.day;
     return this.today;
   }
@@ -44,8 +44,14 @@ export class GamesProvider {
         return resp;
       }));
   }
+  GetAppVersion(): Observable<ResponseType> {
+    return this.http.get<ResponseType>(`${environment.apiUrl}/users/app/getversion`, { })
+      .pipe(map(resp => {
+        return resp;
+      }));
+  }
 
- 
+
   computeOldMatchDate(group) {
     if (group.day_num < 10) {
       group.day_num = '0' + group.day_num

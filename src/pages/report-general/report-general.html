@@ -1,12 +1,3 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle icon-only>
-      <ion-icon class="goal-menu"></ion-icon>
-    </button>
-    <ion-title>General Reports </ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content padding>
   <div class="otherForm">
     <ion-list padding>
@@ -14,24 +5,24 @@
         <h2 ion-text text-center color="color2">Membership Details</h2>
       </ion-list-header>
       <ion-item style="margin-top: 1em;">
-        <h5 ion-text color="dark"><b>Total Members </b></h5>
-        <p ion-text color="color1"><b>{{report?.totalusers}}</b></p>
+        <ion-label stacked><b>Total Members</b></ion-label>
+        <ion-input disabled type="text" value="{{report?.totalusers}}"></ion-input>
       </ion-item>
       <ion-item class="halfItem" float-left style="margin-top: 1.5em;">
-        <h5 ion-text color="dark"><b>Total VVIP Members</b></h5>
-        <p ion-text color="color1"><b>{{report?.totalvvipusers}}</b></p>
+        <ion-label stacked><b>Total VVIP Members</b></ion-label>
+        <ion-input disabled type="text" value="{{report?.totalvvipusers}}"></ion-input>
       </ion-item>
       <ion-item class="halfItem" float-left style="margin-top:  1.5em;">
-        <h5 ion-text color="dark"><b>Total VIP Members </b></h5>
-        <p ion-text color="color1"><b>{{report?.totalvipusers}}</b></p>
+        <ion-label stacked><b>Total VIP Members</b></ion-label>
+        <ion-input disabled type="text" value="{{report?.totalvipusers}}"></ion-input>
       </ion-item>
       <ion-item class="halfItem" float-left style="margin-top:  1.5em;">
-        <h5 ion-text color="dark"><b>Total Active Members</b></h5>
-        <p ion-text color="color1"><b>{{report?.totalactiveusers}}</b></p>
+        <ion-label stacked><b>Total Active Members</b></ion-label>
+        <ion-input disabled type="text" value="{{report?.totalactiveusers}}"></ion-input>
       </ion-item>
       <ion-item class="halfItem" float-left style="margin-top:  1.5em;">
-        <h5 ion-text color="dark"><b>Total InActive Members</b></h5>
-        <p ion-text color="color1"><b>{{report?.totalinactiveusers}}</b></p>
+        <ion-label stacked><b>Total InActive Members</b></ion-label>
+        <ion-input disabled type="text" value="{{report?.totalinactiveusers}}"></ion-input>
       </ion-item>
     </ion-list>
 
@@ -40,24 +31,25 @@
         <h2 ion-text text-center color="color2">Subscription Details</h2>
       </ion-list-header>
       <ion-item>
-        <h5 ion-text color="dark"><b>Total Revenue</b></h5>
-        <p ion-text color="color1"><b>{{report?.totalincome  | currency: 'NGN': '1.2-2'}}</b></p>
+        <ion-label stacked><b>Total Revenue</b></ion-label>
+        <ion-input disabled type="text" value="{{report?.totalincome  | currency: 'NGN': '1.2-2'}}"> </ion-input>
       </ion-item>
       <ion-item class="halfItem" float-left style="margin-top:  1.5em;">
-        <h5 ion-text color="dark"><b>VVIP Revenue</b></h5>
-        <p ion-text color="color1"><b>{{report?.totalvvipincome  | currency: 'NGN': '1.2-2'}}</b></p>
+        <ion-label stacked><b>VVIP Revenue</b></ion-label>
+        <ion-input disabled type="text" value="{{report?.totalvvipincome  | currency: 'NGN': '1.2-2'}}"></ion-input>
       </ion-item>
       <ion-item class="halfItem" float-left style="margin-top:  1.5em;">
-        <h5 ion-text color="dark"><b>VIP Revenue</b></h5>
-        <p ion-text color="color1"><b>{{report?.totalvipincome  | currency: 'NGN': '1.2-2'}}</b></p>
+        <ion-label stacked><b>VIP Revenue</b></ion-label>
+        <ion-input disabled type="text" value="{{report?.totalvipincome  | currency: 'NGN': '1.2-2'}}"></ion-input>
       </ion-item>
       <ion-item class="halfItem" float-left style="margin-top:  1.5em;">
-        <h5 ion-text color="dark"><b>VVIP Payments</b></h5>
-        <p ion-text color="color1"><b>{{report?.totalvvippay}}</b></p>
+        <ion-label stacked><b>VVIP Payments</b></ion-label>
+        <ion-input disabled type="text" value="{{report?.totalvvippay}}"></ion-input>
       </ion-item>
       <ion-item class="halfItem" float-left style="margin-top:  1.5em;">
-        <h5 ion-text color="dark"><b>VIP Payments</b></h5>
-        <p ion-text color="color1"><b>{{report?.totalvippay }}</b></p>
+        <ion-label stacked><b>VIP Payments</b></ion-label>
+        <ion-input disabled type="text" value="{{report?.totalvippay}}"></ion-input>
+
       </ion-item>
     </ion-list>
   </div>

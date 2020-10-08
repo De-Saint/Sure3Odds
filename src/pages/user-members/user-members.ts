@@ -41,7 +41,6 @@ export class UserMembersPage {
         loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
           this.users = resp.data.content;
-          console.log(this.users);
           this.originalusers = this.users;
           this.currentPage = resp.data.number;
           this.totalPage = resp.data.totalPages;
@@ -84,7 +83,6 @@ export class UserMembersPage {
             loading.dismiss().catch(() => { });
             if (resp.statusCode === 200) {
               this.users = resp.data.content;
-              console.log(this.users);
               this.currentPage = resp.data.number;
               this.totalPage = resp.data.totalPages;
               this.totalData = resp.data.totalElements;

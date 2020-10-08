@@ -5,11 +5,8 @@ import { ErrorHandler, NgModule, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
 import { Sure3Odds } from './app.component';
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthenicationProvider } from '../providers/authenication/authenication';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { IonicStorageModule } from '@ionic/storage';
 import { GamesProvider } from '../providers/games/games';
 import { SelectSearchableModule } from 'ionic-select-searchable';
 import { PaymentsProvider } from '../providers/payments/payments';
@@ -18,6 +15,8 @@ import { SettingPageModule } from '../pages/setting/setting.module';
 import { ReportsPageModule } from '../pages/reports/reports.module';
 import { PaymentsPageModule } from '../pages/payments/payments.module';
 import { NativeHttpProvider } from '../providers/native-http/native-http';
+import { SuperTabsModule } from 'ionic2-super-tabs';
+import { AppVersion } from '@ionic-native/app-version';
 
 var config = {
   backButtonText: '',
@@ -36,12 +35,12 @@ var config = {
   imports: [
     BrowserModule, IonicImageViewerModule,
     HttpClientModule,
-    IonicStorageModule.forRoot(),
     IonicModule.forRoot(Sure3Odds, config),
     SelectSearchableModule,
     SettingPageModule,
     ReportsPageModule,
-    PaymentsPageModule
+    PaymentsPageModule,
+    SuperTabsModule.forRoot(),
   ],
   bootstrap: [IonicApp],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
@@ -49,9 +48,8 @@ var config = {
     Sure3Odds
   ],
   providers: [
-    StatusBar,
-    SplashScreen,
     HTTP,
+    AppVersion,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     AuthenicationProvider, PaymentsProvider, GamesProvider, NativeHttpProvider,
     { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptorProvider, multi: true },

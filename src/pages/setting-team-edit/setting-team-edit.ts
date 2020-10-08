@@ -123,11 +123,11 @@ export class SettingTeamEditPage {
   }
   get_camera(source) {
     const options: CameraOptions = {
-      quality: 50,
+      quality: 90,
       height: 320,
       correctOrientation: true,
       width: 320,
-      resultType: CameraResultType.DataUrl
+      resultType: CameraResultType.Base64
     }
 
     if (source == 'Gallery') {
@@ -140,7 +140,6 @@ export class SettingTeamEditPage {
       this.img = 'data:image/jpeg;base64,' + imageData.base64String;
       this.team.imageurl = this.img;
     }).catch(error => {
-      console.log(error);
       if (this.img != undefined) {
         this.team.imageurl = this.img;
       }

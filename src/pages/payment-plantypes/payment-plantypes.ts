@@ -12,13 +12,14 @@ import { IonicPage, NavController, NavParams, ActionSheetController, LoadingCont
 export class PaymentPlantypesPage {
   plantypes: any;
   error: any;
-
+  rootNavCtrl: NavController;
   constructor(public navCtrl: NavController,
     private auth: AuthenicationProvider,
     private nativeHttp: NativeHttpProvider,
     private loadingCtrl: LoadingController,
     private actionSheetCtrl: ActionSheetController, public navParams: NavParams) {
-  }
+      this.rootNavCtrl = this.navParams.get('rootNavCtrl');
+    }
 
   ionViewWillEnter() {
     this.GetPlantypes();
@@ -34,10 +35,9 @@ export class PaymentPlantypesPage {
     .subscribe(result => {
       loading.dismiss().catch(() => { });
       this.plantypes = result.data;
-      console.log(this.plantypes);
     }, error => {
       loading.dismiss().catch(() => { });
-      this.auth.showToast(error.error.description);
+      this.auth.showToast(error.error.message);
     })
   }
 
@@ -48,7 +48,8 @@ export class PaymentPlantypesPage {
       buttons: [
         {
           text: 'View / Edit',
-          handler: () => { this.navCtrl.push('PaymentPlantypeEditPage', { plantype }) }
+          handler: () => {
+            this.rootNavCtrl.push('PaymentPlantypeEditPage', { plantype });}
 
         }, {
           text: 'Cancel',

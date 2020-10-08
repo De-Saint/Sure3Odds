@@ -18,7 +18,6 @@ export class MatchDetailsPage {
   constructor(public navCtrl: NavController,
       private navParams: NavParams) {
     this.match = this.navParams.get("match");
-    console.log(this.match);
 
   }
 
