@@ -1,3 +1,4 @@
+import { NativeHttpProvider } from './../../providers/native-http/native-http';
 import { SelectSearchableComponent } from 'ionic-select-searchable';
 import { AuthenicationProvider } from './../../providers/authenication/authenication';
 import { NewUsers } from './../../interfaces/NewUser';
@@ -16,6 +17,7 @@ export class UserMemberAddPage {
   plantypes: any;
   constructor(public navCtrl: NavController,
     private auth: AuthenicationProvider,
+    private nativeHttp:NativeHttpProvider,
     private loadingCtrl: LoadingController,
     public navParams: NavParams) {
   }
@@ -28,7 +30,7 @@ export class UserMemberAddPage {
       content: "Please wait..."
     });
     loading.present();
-    this.auth.getAllPlantypes()
+    this.nativeHttp.getAllPlantypes()
     .subscribe(result => {
       loading.dismiss().catch(() => { });
       this.plantypes = result.data;

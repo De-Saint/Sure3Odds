@@ -41,13 +41,14 @@ export class UserSubAdminsPage {
       .subscribe(resp => {
         loading.dismiss().catch(() => { });
         if (resp.statusCode === 200) {
-
+          this.users = resp.data.content;
           this.originalusers = this.users;
           this.currentPage = resp.data.number;
           this.totalPage = resp.data.totalPages;
           this.totalData = resp.data.totalElements;
           this.perPage = resp.data.size;
           this.nousers = '';
+
         } else {
           this.authProvider.showToast(resp.description);
         }
@@ -84,7 +85,6 @@ export class UserSubAdminsPage {
             loading.dismiss().catch(() => { });
             if (resp.statusCode === 200) {
               this.users = resp.data.content;
-
               this.currentPage = resp.data.number;
               this.totalPage = resp.data.totalPages;
               this.totalData = resp.data.totalElements;

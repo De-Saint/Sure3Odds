@@ -1,1 +1,185 @@
-webpackJsonp([19],{704:function(n,l,e){"use strict";function t(n){return u["ɵvid"](0,[(n()(),u["ɵeld"](0,0,null,null,11,"ion-header",[],null,null,null,null,null)),u["ɵdid"](1,16384,null,0,y.a,[C.a,u.ElementRef,u.Renderer,[2,R.a]],null,null),(n()(),u["ɵted"](-1,null,[" \n\n  "])),(n()(),u["ɵeld"](3,0,null,null,7,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,w.b,w.a)),u["ɵdid"](4,49152,null,0,I.a,[N.a,[2,R.a],[2,_.a],C.a,u.ElementRef,u.Renderer],null,null),(n()(),u["ɵted"](-1,3,["\n    "])),(n()(),u["ɵeld"](6,0,null,3,2,"ion-title",[],null,null,null,x.b,x.a)),u["ɵdid"](7,49152,null,0,P.a,[C.a,u.ElementRef,u.Renderer,[2,k.a],[2,I.a]],null,null),(n()(),u["ɵted"](-1,0,["Edit Country"])),(n()(),u["ɵted"](-1,3,["\n    "])),(n()(),u["ɵted"](-1,3,["\n  "])),(n()(),u["ɵted"](-1,null,["\n\n"])),(n()(),u["ɵted"](-1,null,["\n\n\n"])),(n()(),u["ɵeld"](13,0,null,null,47,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,E.b,E.a)),u["ɵdid"](14,4374528,null,0,M.a,[C.a,T.a,F.a,u.ElementRef,u.Renderer,N.a,D.a,u.NgZone,[2,R.a],[2,_.a]],null,null),(n()(),u["ɵted"](-1,1,["\n  "])),(n()(),u["ɵeld"](16,0,null,1,6,"div",[["class","imgs"],["style","margin-top: 2em; "]],null,null,null,null,null)),(n()(),u["ɵted"](-1,null,[" \n     "])),(n()(),u["ɵeld"](18,0,null,null,3,"div",[["class","imgProfile"]],null,null,null,null,null)),u["ɵdid"](19,278528,null,0,S.NgStyle,[u.KeyValueDiffers,u.ElementRef,u.Renderer2],{ngStyle:[0,"ngStyle"]},null),u["ɵpod"](20,{"background-image":0}),(n()(),u["ɵted"](-1,null,["\n   "])),(n()(),u["ɵted"](-1,null,["\n "])),(n()(),u["ɵted"](-1,1,["\n  "])),(n()(),u["ɵeld"](24,0,null,1,35,"div",[["class","otherForm"]],null,null,null,null,null)),(n()(),u["ɵted"](-1,null,["\n    "])),(n()(),u["ɵeld"](26,0,null,null,28,"ion-list",[],null,null,null,null,null)),u["ɵdid"](27,16384,null,0,V.a,[C.a,u.ElementRef,u.Renderer,T.a,L.m,F.a],null,null),(n()(),u["ɵted"](-1,null,["\n      "])),(n()(),u["ɵted"](-1,null,["\n      "])),(n()(),u["ɵeld"](30,0,null,null,22,"ion-item",[["class","item item-block"]],null,null,null,K.b,K.a)),u["ɵdid"](31,1097728,null,3,q.a,[B.a,C.a,u.ElementRef,u.Renderer,[2,O.a]],null,null),u["ɵqud"](335544320,1,{contentLabel:0}),u["ɵqud"](603979776,2,{_buttons:1}),u["ɵqud"](603979776,3,{_icons:1}),u["ɵdid"](35,16384,null,0,A.a,[],null,null),(n()(),u["ɵted"](-1,2,["\n        "])),(n()(),u["ɵeld"](37,0,null,1,2,"ion-label",[["stacked",""]],null,null,null,null,null)),u["ɵdid"](38,16384,[[1,4]],0,z.a,[C.a,u.ElementRef,u.Renderer,[8,null],[8,""],[8,null],[8,null]],null,null),(n()(),u["ɵted"](-1,null,["Name"])),(n()(),u["ɵted"](-1,2,["\n        "])),(n()(),u["ɵeld"](41,0,null,3,4,"ion-input",[["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(n,l,e){var t=!0;if("ngModelChange"===l){t=!1!==(n.component.country.name=e)&&t}return t},U.b,U.a)),u["ɵdid"](42,671744,null,0,j.NgModel,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),u["ɵprd"](2048,null,j.NgControl,null,[j.NgModel]),u["ɵdid"](44,16384,null,0,j.NgControlStatus,[j.NgControl],null,null),u["ɵdid"](45,5423104,null,0,J.a,[C.a,T.a,B.a,N.a,u.ElementRef,u.Renderer,[2,M.a],[2,q.a],[2,j.NgControl],F.a],{type:[0,"type"]},null),(n()(),u["ɵted"](-1,2,["\n        "])),(n()(),u["ɵeld"](47,0,null,3,4,"ion-input",[["hidden",""],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(n,l,e){var t=!0;if("ngModelChange"===l){t=!1!==(n.component.country.id=e)&&t}return t},U.b,U.a)),u["ɵdid"](48,671744,null,0,j.NgModel,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),u["ɵprd"](2048,null,j.NgControl,null,[j.NgModel]),u["ɵdid"](50,16384,null,0,j.NgControlStatus,[j.NgControl],null,null),u["ɵdid"](51,5423104,null,0,J.a,[C.a,T.a,B.a,N.a,u.ElementRef,u.Renderer,[2,M.a],[2,q.a],[2,j.NgControl],F.a],{type:[0,"type"]},null),(n()(),u["ɵted"](-1,2,["\n      "])),(n()(),u["ɵted"](-1,null,["\n      "])),(n()(),u["ɵted"](-1,null,["\n    "])),(n()(),u["ɵted"](-1,null,["\n    "])),(n()(),u["ɵeld"](56,0,null,null,2,"button",[["block",""],["color","color2"],["ion-button",""]],null,[[null,"click"]],function(n,l,e){var t=!0,u=n.component;if("click"===l){t=!1!==u.onSubmit(u.country)&&t}return t},Z.b,Z.a)),u["ɵdid"](57,1097728,null,0,G.a,[[8,""],C.a,u.ElementRef,u.Renderer],{color:[0,"color"],block:[1,"block"]},null),(n()(),u["ɵted"](-1,0,["Submit"])),(n()(),u["ɵted"](-1,null,["\n  "])),(n()(),u["ɵted"](-1,1,["\n"])),(n()(),u["ɵted"](-1,null,["\n"]))],function(n,l){var e=l.component;n(l,19,0,n(l,20,0,"url("+e.country.imageurl+")"));n(l,42,0,e.country.name);n(l,45,0,"text");n(l,48,0,e.country.id);n(l,51,0,"text");n(l,57,0,"color2","")},function(n,l){n(l,3,0,u["ɵnov"](l,4)._hidden,u["ɵnov"](l,4)._sbPadding);n(l,13,0,u["ɵnov"](l,14).statusbarPadding,u["ɵnov"](l,14)._hasRefresher);n(l,41,0,u["ɵnov"](l,44).ngClassUntouched,u["ɵnov"](l,44).ngClassTouched,u["ɵnov"](l,44).ngClassPristine,u["ɵnov"](l,44).ngClassDirty,u["ɵnov"](l,44).ngClassValid,u["ɵnov"](l,44).ngClassInvalid,u["ɵnov"](l,44).ngClassPending);n(l,47,0,u["ɵnov"](l,50).ngClassUntouched,u["ɵnov"](l,50).ngClassTouched,u["ɵnov"](l,50).ngClassPristine,u["ɵnov"](l,50).ngClassDirty,u["ɵnov"](l,50).ngClassValid,u["ɵnov"](l,50).ngClassInvalid,u["ɵnov"](l,50).ngClassPending)})}Object.defineProperty(l,"__esModule",{value:!0});var u=e(0),o=(e(1),e(15),e(66)),a=e(205),i=e(741),r=function(){function n(n,l,e,t,u,o){this.navCtrl=n,this.gameProvider=l,this.loadingCtrl=e,this.alertCtrl=t,this.authProvider=u,this.navParams=o,this.country=new i.a("","",""),this.countries=this.navParams.get("country"),this.countries&&(this.country=this.countries,this.country.imageurl=this.countries.imageurl?this.country.imageurl:"/assets/imgs/appicon.png")}return n.prototype.ionViewDidLoad=function(){},n.prototype.onSubmit=function(n){var l=this,e=this.loadingCtrl.create({content:"Please wait..."});this.country.name?(e.present(),this.gameProvider.updateCountry(n).subscribe(function(n){e.dismiss().catch(function(){}),200===n.statusCode?l.navCtrl.pop():l.authProvider.showToast(n.description)},function(n){e.dismiss().catch(function(){}),l.authProvider.showToast(n.error.description)})):this.authProvider.showToast("Name input field is empty")},n.prototype.onDelete=function(){var n=this,l=this.loadingCtrl.create({content:"Please wait..."});this.alertCtrl.create({title:"Delete Country",message:"Do you want to delete <b>"+this.countries.name+"?</b><br/><br/>All the leagues and teams under <b>"+this.countries.name+"</b> would be deleted.</b><br/><br/>This is action is irreversible.",buttons:[{text:"Cancel",handler:function(){}},{text:"Proceed",handler:function(){l.present(),n.gameProvider.deleteCountry(n.countries.id).subscribe(function(e){l.dismiss().catch(function(){}),200===e.statusCode?n.navCtrl.pop():n.authProvider.showToast(e.description)},function(e){l.dismiss().catch(function(){}),n.authProvider.showToast(e.error.error)})}}]}).present()},n}(),d=function(){return function(){}}(),s=e(206),c=e(207),f=e(208),p=e(209),m=e(210),g=e(211),h=e(212),v=e(213),b=e(214),y=e(54),C=e(3),R=e(7),w=e(92),I=e(37),N=e(9),_=e(20),x=e(145),P=e(61),k=e(38),E=e(91),M=e(30),T=e(5),F=e(10),D=e(31),S=e(14),V=e(60),L=e(8),K=e(143),q=e(28),B=e(25),O=e(53),A=e(67),z=e(62),U=e(731),j=e(24),J=e(215),Z=e(41),G=e(26),H=e(144),Q=e(93),W=e(17),X=u["ɵcrt"]({encapsulation:2,styles:[],data:{}}),Y=u["ɵccf"]("page-setting-country-edit",r,function(n){return u["ɵvid"](0,[(n()(),u["ɵeld"](0,0,null,null,1,"page-setting-country-edit",[],null,null,null,t,X)),u["ɵdid"](1,49152,null,0,r,[_.a,a.a,H.a,Q.a,o.a,W.a],null,null)],null,null)},{},{},[]),$=e(141),nn=e(52);e.d(l,"SettingCountryEditPageModuleNgFactory",function(){return ln});var ln=u["ɵcmf"](d,[],function(n){return u["ɵmod"]([u["ɵmpd"](512,u.ComponentFactoryResolver,u["ɵCodegenComponentFactoryResolver"],[[8,[s.a,c.a,f.a,p.a,m.a,g.a,h.a,v.a,b.a,Y]],[3,u.ComponentFactoryResolver],u.NgModuleRef]),u["ɵmpd"](4608,S.NgLocalization,S.NgLocaleLocalization,[u.LOCALE_ID,[2,S["ɵa"]]]),u["ɵmpd"](4608,j["ɵi"],j["ɵi"],[]),u["ɵmpd"](4608,j.FormBuilder,j.FormBuilder,[]),u["ɵmpd"](512,S.CommonModule,S.CommonModule,[]),u["ɵmpd"](512,j["ɵba"],j["ɵba"],[]),u["ɵmpd"](512,j.FormsModule,j.FormsModule,[]),u["ɵmpd"](512,j.ReactiveFormsModule,j.ReactiveFormsModule,[]),u["ɵmpd"](512,$.a,$.a,[]),u["ɵmpd"](512,$.b,$.b,[]),u["ɵmpd"](512,d,d,[]),u["ɵmpd"](256,nn.a,r,[])])})},731:function(n,l,e){"use strict";function t(n){return r["ɵvid"](0,[(n()(),r["ɵeld"](0,0,[[1,0],["textInput",1]],null,1,"input",[["class","text-input"],["dir","auto"]],[[8,"type",0],[1,"aria-labelledby",0],[1,"min",0],[1,"max",0],[1,"step",0],[1,"autocomplete",0],[1,"autocorrect",0],[8,"placeholder",0],[8,"disabled",0],[8,"readOnly",0]],[[null,"input"],[null,"blur"],[null,"focus"],[null,"keydown"]],function(n,l,e){var t=!0,u=n.component;if("input"===l){t=!1!==u.onInput(e)&&t}if("blur"===l){t=!1!==u.onBlur(e)&&t}if("focus"===l){t=!1!==u.onFocus(e)&&t}if("keydown"===l){t=!1!==u.onKeydown(e)&&t}return t},null,null)),r["ɵdid"](1,278528,null,0,d.NgClass,[r.IterableDiffers,r.KeyValueDiffers,r.ElementRef,r.Renderer2],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null)],function(n,l){n(l,1,0,"text-input","text-input-"+l.component._mode)},function(n,l){var e=l.component;n(l,0,0,e._type,e._labelId,e.min,e.max,e.step,e.autocomplete,e.autocorrect,e.placeholder,e._disabled,e._readonly)})}function u(n){return r["ɵvid"](0,[(n()(),r["ɵeld"](0,0,[[1,0],["textInput",1]],null,1,"textarea",[["class","text-input"]],[[1,"aria-labelledby",0],[1,"autocomplete",0],[1,"autocorrect",0],[8,"placeholder",0],[8,"disabled",0],[8,"readOnly",0]],[[null,"input"],[null,"blur"],[null,"focus"],[null,"keydown"]],function(n,l,e){var t=!0,u=n.component;if("input"===l){t=!1!==u.onInput(e)&&t}if("blur"===l){t=!1!==u.onBlur(e)&&t}if("focus"===l){t=!1!==u.onFocus(e)&&t}if("keydown"===l){t=!1!==u.onKeydown(e)&&t}return t},null,null)),r["ɵdid"](1,278528,null,0,d.NgClass,[r.IterableDiffers,r.KeyValueDiffers,r.ElementRef,r.Renderer2],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null)],function(n,l){n(l,1,0,"text-input","text-input-"+l.component._mode)},function(n,l){var e=l.component;n(l,0,0,e._labelId,e.autocomplete,e.autocorrect,e.placeholder,e._disabled,e._readonly)})}function o(n){return r["ɵvid"](0,[(n()(),r["ɵeld"](0,0,null,null,1,"button",[["class","text-input-clear-icon"],["clear",""],["ion-button",""],["tabindex","-1"],["type","button"]],null,[[null,"click"],[null,"mousedown"]],function(n,l,e){var t=!0,u=n.component;if("click"===l){t=!1!==u.clearTextInput(e)&&t}if("mousedown"===l){t=!1!==u.clearTextInput(e)&&t}return t},s.b,s.a)),r["ɵdid"](1,1097728,null,0,c.a,[[8,""],f.a,r.ElementRef,r.Renderer],{clear:[0,"clear"]},null)],function(n,l){n(l,1,0,"")},null)}function a(n){return r["ɵvid"](0,[(n()(),r["ɵeld"](0,0,null,null,0,"div",[["class","input-cover"]],null,[[null,"touchstart"],[null,"touchend"],[null,"mousedown"],[null,"mouseup"]],function(n,l,e){var t=!0,u=n.component;if("touchstart"===l){t=!1!==u._pointerStart(e)&&t}if("touchend"===l){t=!1!==u._pointerEnd(e)&&t}if("mousedown"===l){t=!1!==u._pointerStart(e)&&t}if("mouseup"===l){t=!1!==u._pointerEnd(e)&&t}return t},null,null))],null,null)}function i(n){return r["ɵvid"](2,[r["ɵqud"](671088640,1,{_native:0}),(n()(),r["ɵand"](16777216,null,null,1,null,t)),r["ɵdid"](2,16384,null,0,d.NgIf,[r.ViewContainerRef,r.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),r["ɵand"](16777216,null,null,1,null,u)),r["ɵdid"](4,16384,null,0,d.NgIf,[r.ViewContainerRef,r.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),r["ɵand"](16777216,null,null,1,null,o)),r["ɵdid"](6,16384,null,0,d.NgIf,[r.ViewContainerRef,r.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),r["ɵand"](16777216,null,null,1,null,a)),r["ɵdid"](8,16384,null,0,d.NgIf,[r.ViewContainerRef,r.TemplateRef],{ngIf:[0,"ngIf"]},null)],function(n,l){var e=l.component;n(l,2,0,!e._isTextarea);n(l,4,0,e._isTextarea);n(l,6,0,e._clearInput);n(l,8,0,e._useAssist)},null)}e.d(l,"a",function(){return p}),l.b=i;var r=e(0),d=e(14),s=e(41),c=e(26),f=e(3),p=(e(5),e(25),e(10),r["ɵcrt"]({encapsulation:2,styles:[],data:{}}))},741:function(n,l,e){"use strict";e.d(l,"a",function(){return t});var t=function(){return function(n,l,e){this.name=n,this.id=l,this.imageurl=e}}()}});
+webpackJsonp([19],{
+
+/***/ 755:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingLeagueEditPageModule", function() { return SettingLeagueEditPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_league_edit__ = __webpack_require__(816);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var SettingLeagueEditPageModule = /** @class */ (function () {
+    function SettingLeagueEditPageModule() {
+    }
+    SettingLeagueEditPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__setting_league_edit__["a" /* SettingLeagueEditPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_league_edit__["a" /* SettingLeagueEditPage */]),
+            ],
+        })
+    ], SettingLeagueEditPageModule);
+    return SettingLeagueEditPageModule;
+}());
+
+//# sourceMappingURL=setting-league-edit.module.js.map
+
+/***/ }),
+
+/***/ 786:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Leagues; });
+var Leagues = /** @class */ (function () {
+    function Leagues(name, id, imageurl, country) {
+        this.name = name;
+        this.id = id;
+        this.imageurl = imageurl;
+        this.country = country;
+    }
+    return Leagues;
+}());
+
+//# sourceMappingURL=Leagues.js.map
+
+/***/ }),
+
+/***/ 816:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingLeagueEditPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_games_games__ = __webpack_require__(369);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interfaces_Leagues__ = __webpack_require__(786);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var SettingLeagueEditPage = /** @class */ (function () {
+    function SettingLeagueEditPage(navCtrl, gameProvider, alertCtrl, loadingCtrl, actionSheetCtrl, authProvider, navParams) {
+        this.navCtrl = navCtrl;
+        this.gameProvider = gameProvider;
+        this.alertCtrl = alertCtrl;
+        this.loadingCtrl = loadingCtrl;
+        this.actionSheetCtrl = actionSheetCtrl;
+        this.authProvider = authProvider;
+        this.navParams = navParams;
+        this.league = new __WEBPACK_IMPORTED_MODULE_2__interfaces_Leagues__["a" /* Leagues */]("", "", "", { id: "", name: "", imageurl: "" });
+        this.leagues = this.navParams.get("league");
+        if (this.leagues) {
+            this.league = this.leagues;
+            if (this.leagues.imageurl) {
+                this.league.imageurl = this.leagues.imageurl;
+            }
+            else {
+                this.league.imageurl = "assets/imgs/appicon.png";
+            }
+        }
+    }
+    SettingLeagueEditPage.prototype.onDelete = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        var confirm = this.alertCtrl.create({
+            title: 'Delete League',
+            message: 'Do you want to delete <b>' + this.leagues.name + '?</b><br/><br/>All the teams under <b>' + this.leagues.name + '</b> would be deleted.</b><br/><br/>This is action is irreversible.',
+            buttons: [
+                {
+                    text: 'Cancel',
+                    handler: function () {
+                    }
+                },
+                {
+                    text: 'Proceed',
+                    handler: function () {
+                        loading.present();
+                        _this.gameProvider.deleteLeague(_this.leagues.id).subscribe(function (res) {
+                            loading.dismiss().catch(function () { });
+                            if (res.statusCode === 200) {
+                                _this.navCtrl.pop();
+                            }
+                            else {
+                                _this.authProvider.showToast(res.description);
+                            }
+                        }, function (error) {
+                            loading.dismiss().catch(function () { });
+                            _this.authProvider.showToast(error.error.error);
+                        });
+                    }
+                }
+            ]
+        });
+        confirm.present();
+    };
+    SettingLeagueEditPage.prototype.onSubmit = function (league) {
+        var _this = this;
+        if (league.name) {
+            var loading_1 = this.loadingCtrl.create({
+                content: "Please wait..."
+            });
+            loading_1.present();
+            this.gameProvider.updateLeague(league).subscribe(function (res) {
+                loading_1.dismiss().catch(function () { });
+                if (res.statusCode === 200) {
+                    _this.navCtrl.pop();
+                }
+                else {
+                    _this.authProvider.showToast(res.description);
+                }
+            }, function (error) {
+                loading_1.dismiss().catch(function () { });
+                _this.authProvider.showToast(error.error.error);
+            });
+        }
+        else {
+            this.authProvider.showToast("Name of league input field is empty");
+        }
+    };
+    SettingLeagueEditPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-setting-league-edit',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-league-edit/setting-league-edit.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Edit League</ion-title>\n    <!-- <ion-buttons end>\n      <button ion-button icon-only (click)="onDelete()">\n        <ion-icon name="trash"></ion-icon>\n      </button>\n    </ion-buttons> -->\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <div class="imgs" style="margin-top: 5em; ">\n     <div class="imgProfile" [ngStyle]="{\'background-image\':\'url(\' + league.imageurl + \')\'}">\n    </div>\n  </div>\n  <div class="ion-margin">\n    <div class="otherForm">\n      <ion-list>\n        <ion-item>\n          <ion-label stacked>Country Name</ion-label>\n          <ion-input disabled type="text" [(ngModel)]="league.country.name"></ion-input>\n          <ion-input hidden type="text" [(ngModel)]="league.country.id"></ion-input>\n        </ion-item>\n        <!-- appear when click update -->\n        <ion-item>\n          <ion-label stacked>League Name</ion-label>\n          <ion-input type="text" [(ngModel)]="league.name"></ion-input>\n          <ion-input hidden type="text" [(ngModel)]="league.id"></ion-input>\n        </ion-item>\n        <!-- ==================================== -->\n      </ion-list>\n      <button ion-button block color="color2" (click)="onSubmit(league)">Submit</button>\n    </div>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-league-edit/setting-league-edit.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"],
+            __WEBPACK_IMPORTED_MODULE_1__providers_games_games__["a" /* GamesProvider */],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["AlertController"],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["LoadingController"],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ActionSheetController"],
+            __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"]])
+    ], SettingLeagueEditPage);
+    return SettingLeagueEditPage;
+}());
+
+//# sourceMappingURL=setting-league-edit.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=19.js.map

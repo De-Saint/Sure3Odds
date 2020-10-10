@@ -1,1 +1,258 @@
-webpackJsonp([41],{699:function(l,n,e){"use strict";function u(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,0,"img",[["item-right",""]],[[8,"src",4]],null,null,null,null))],null,function(l,n){l(n,0,0,c["ɵinlineInterpolate"](1,"",n.parent.context.$implicit.hometeam.imageurl,""))})}function t(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,0,"img",[["item-right",""],["src","assets/imgs/appicon.png"]],null,null,null,null,null))],null,null)}function i(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,0,"img",[["item-left",""]],[[8,"src",4]],null,null,null,null))],null,function(l,n){l(n,0,0,c["ɵinlineInterpolate"](1,"",n.parent.context.$implicit.awayteam.imageurl,""))})}function d(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,0,"img",[["item-left",""],["src","assets/imgs/appicon.png"]],null,null,null,null,null))],null,null)}function o(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,76,"ion-item",[["class","matchItem item item-block"]],null,null,null,w.b,w.a)),c["ɵdid"](1,1097728,null,3,y.a,[I.a,_.a,c.ElementRef,c.Renderer,[2,q.a]],null,null),c["ɵqud"](335544320,6,{contentLabel:0}),c["ɵqud"](603979776,7,{_buttons:1}),c["ɵqud"](603979776,8,{_icons:1}),c["ɵdid"](5,16384,null,0,A.a,[],null,null),(l()(),c["ɵted"](-1,2,["\n          "])),(l()(),c["ɵeld"](7,0,null,2,68,"ion-grid",[["class","grid"]],null,null,null,null,null)),c["ɵdid"](8,16384,null,0,F.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n            "])),(l()(),c["ɵeld"](10,0,null,null,64,"ion-row",[["class","row"]],null,[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.onGameOption(l.context.$implicit)&&u}return u},null,null)),c["ɵdid"](11,16384,null,0,T.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n              "])),(l()(),c["ɵeld"](13,0,null,null,19,"ion-col",[["class","col"],["col",""]],null,null,null,null,null)),c["ɵdid"](14,16384,null,0,D.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n                "])),(l()(),c["ɵeld"](16,0,null,null,15,"ion-item",[["class","item item-block"]],null,null,null,w.b,w.a)),c["ɵdid"](17,1097728,null,3,y.a,[I.a,_.a,c.ElementRef,c.Renderer,[2,q.a]],null,null),c["ɵqud"](335544320,9,{contentLabel:0}),c["ɵqud"](603979776,10,{_buttons:1}),c["ɵqud"](603979776,11,{_icons:1}),c["ɵdid"](21,16384,null,0,A.a,[],null,null),(l()(),c["ɵted"](-1,2,["\n                  "])),(l()(),c["ɵand"](16777216,null,4,1,null,u)),c["ɵdid"](24,16384,null,0,$.NgIf,[c.ViewContainerRef,c.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),c["ɵted"](-1,2,["\n                  "])),(l()(),c["ɵand"](16777216,null,4,1,null,t)),c["ɵdid"](27,16384,null,0,$.NgIf,[c.ViewContainerRef,c.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),c["ɵted"](-1,2,["\n                  "])),(l()(),c["ɵeld"](29,0,null,2,1,"p",[["text-right",""]],null,null,null,null,null)),(l()(),c["ɵted"](30,null,["",""])),(l()(),c["ɵted"](-1,2,["\n                "])),(l()(),c["ɵted"](-1,null,["\n              "])),(l()(),c["ɵted"](-1,null,["\n              "])),(l()(),c["ɵeld"](34,0,null,null,18,"ion-col",[["class","col"],["col-auto",""]],null,null,null,null,null)),c["ɵdid"](35,16384,null,0,D.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n                "])),(l()(),c["ɵeld"](37,0,null,null,2,"span",[["color","color1"],["ion-text",""]],null,null,null,null,null)),c["ɵdid"](38,16384,null,0,k.a,[_.a,c.ElementRef,c.Renderer],{color:[0,"color"]},null),(l()(),c["ɵted"](39,null,["",""])),(l()(),c["ɵted"](-1,null,["\n                "])),(l()(),c["ɵeld"](41,0,null,null,3,"p",[["color","color2"],["ion-text",""]],null,null,null,null,null)),c["ɵdid"](42,16384,null,0,k.a,[_.a,c.ElementRef,c.Renderer],{color:[0,"color"]},null),(l()(),c["ɵeld"](43,0,null,null,1,"b",[],null,null,null,null,null)),(l()(),c["ɵted"](44,null,["",""])),(l()(),c["ɵted"](-1,null,["\n                "])),(l()(),c["ɵeld"](46,0,null,null,5,"p",[["color","color2"],["ion-text",""]],null,null,null,null,null)),c["ɵdid"](47,16384,null,0,k.a,[_.a,c.ElementRef,c.Renderer],{color:[0,"color"]},null),(l()(),c["ɵted"](-1,null,[" "])),(l()(),c["ɵeld"](49,0,null,null,1,"b",[],null,null,null,null,null)),(l()(),c["ɵted"](50,null,["",""])),(l()(),c["ɵted"](-1,null,[" "])),(l()(),c["ɵted"](-1,null,["\n              "])),(l()(),c["ɵted"](-1,null,["\n              "])),(l()(),c["ɵeld"](54,0,null,null,19,"ion-col",[["class","col"],["col",""]],null,null,null,null,null)),c["ɵdid"](55,16384,null,0,D.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n                "])),(l()(),c["ɵeld"](57,0,null,null,15,"ion-item",[["class","item item-block"]],null,null,null,w.b,w.a)),c["ɵdid"](58,1097728,null,3,y.a,[I.a,_.a,c.ElementRef,c.Renderer,[2,q.a]],null,null),c["ɵqud"](335544320,12,{contentLabel:0}),c["ɵqud"](603979776,13,{_buttons:1}),c["ɵqud"](603979776,14,{_icons:1}),c["ɵdid"](62,16384,null,0,A.a,[],null,null),(l()(),c["ɵted"](-1,2,["\n                  "])),(l()(),c["ɵand"](16777216,null,0,1,null,i)),c["ɵdid"](65,16384,null,0,$.NgIf,[c.ViewContainerRef,c.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),c["ɵted"](-1,2,["\n                  "])),(l()(),c["ɵand"](16777216,null,0,1,null,d)),c["ɵdid"](68,16384,null,0,$.NgIf,[c.ViewContainerRef,c.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),c["ɵted"](-1,2,["\n                  "])),(l()(),c["ɵeld"](70,0,null,2,1,"p",[["text-left",""]],null,null,null,null,null)),(l()(),c["ɵted"](71,null,["",""])),(l()(),c["ɵted"](-1,2,["\n                "])),(l()(),c["ɵted"](-1,null,["\n              "])),(l()(),c["ɵted"](-1,null,["\n            "])),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵted"](-1,2,["\n        "]))],function(l,n){l(n,24,0,n.context.$implicit.hometeam.imageurl);l(n,27,0,!n.context.$implicit.hometeam.imageurl);l(n,38,0,"color1");l(n,42,0,"color2");l(n,47,0,"color2");l(n,65,0,n.context.$implicit.awayteam.imageurl);l(n,68,0,!n.context.$implicit.awayteam.imageurl)},function(l,n){l(n,30,0,n.context.$implicit.hometeam.name);l(n,39,0,n.context.$implicit.matchtime);l(n,44,0,n.context.$implicit.odds);l(n,50,0,n.context.$implicit.selections.name);l(n,71,0,n.context.$implicit.awayteam.name)})}function a(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,5,"div",[["class",""]],null,null,null,null,null)),(l()(),c["ɵted"](-1,null,["\n        "])),(l()(),c["ɵeld"](2,0,null,null,2,"p",[["color","color2"],["ion-text",""],["text-center",""]],null,null,null,null,null)),c["ɵdid"](3,16384,null,0,k.a,[_.a,c.ElementRef,c.Renderer],{color:[0,"color"]},null),(l()(),c["ɵted"](4,null,["",""])),(l()(),c["ɵted"](-1,null,["\n      "]))],function(l,n){l(n,3,0,"color2")},function(l,n){l(n,4,0,n.component.error)})}function r(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,33,"ion-header",[],null,null,null,null,null)),c["ɵdid"](1,16384,null,0,N.a,[_.a,c.ElementRef,c.Renderer,[2,S.a]],null,null),(l()(),c["ɵted"](-1,null,["\n  "])),(l()(),c["ɵeld"](3,0,null,null,29,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,V.b,V.a)),c["ɵdid"](4,49152,null,0,L.a,[M.a,[2,S.a],[2,O.a],_.a,c.ElementRef,c.Renderer],null,null),(l()(),c["ɵted"](-1,3,["\n    "])),(l()(),c["ɵeld"](6,0,null,0,8,"button",[["icon-only",""],["ion-button",""],["menuToggle",""]],[[8,"hidden",0]],[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==c["ɵnov"](l,8).toggle()&&u}return u},G.b,G.a)),c["ɵdid"](7,1097728,[[1,4]],0,z.a,[[8,""],_.a,c.ElementRef,c.Renderer],null,null),c["ɵdid"](8,1064960,null,0,B.a,[j.a,[2,S.a],[2,z.a],[2,L.a]],{menuToggle:[0,"menuToggle"]},null),c["ɵdid"](9,16384,null,1,H.a,[_.a,c.ElementRef,c.Renderer,[2,J.a],[2,L.a]],null,null),c["ɵqud"](603979776,1,{_buttons:1}),(l()(),c["ɵted"](-1,0,["\n      "])),(l()(),c["ɵeld"](12,0,null,0,1,"ion-icon",[["class","goal-menu"],["role","img"]],[[2,"hide",null]],null,null,null,null)),c["ɵdid"](13,147456,null,0,U.a,[_.a,c.ElementRef,c.Renderer],null,null),(l()(),c["ɵted"](-1,0,["\n    "])),(l()(),c["ɵted"](-1,3,["\n    "])),(l()(),c["ɵeld"](16,0,null,3,2,"ion-title",[],null,null,null,W.b,W.a)),c["ɵdid"](17,49152,null,0,Z.a,[_.a,c.ElementRef,c.Renderer,[2,J.a],[2,L.a]],null,null),(l()(),c["ɵted"](-1,0,["Predictions"])),(l()(),c["ɵted"](-1,3,["\n    "])),(l()(),c["ɵeld"](20,0,null,2,11,"ion-buttons",[["end",""]],null,null,null,null,null)),c["ɵdid"](21,16384,null,1,H.a,[_.a,c.ElementRef,c.Renderer,[2,J.a],[2,L.a]],null,null),c["ɵqud"](603979776,2,{_buttons:1}),(l()(),c["ɵted"](-1,null,["\n      "])),(l()(),c["ɵeld"](24,0,null,null,6,"button",[["icon-only",""],["ion-button",""],["navPush","PredictionAddPage"]],null,[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==c["ɵnov"](l,26).onClick()&&u}return u},G.b,G.a)),c["ɵdid"](25,1097728,[[2,4]],0,z.a,[[8,""],_.a,c.ElementRef,c.Renderer],null,null),c["ɵdid"](26,16384,null,0,K.a,[[2,O.a]],{navPush:[0,"navPush"]},null),(l()(),c["ɵted"](-1,0,["\n        "])),(l()(),c["ɵeld"](28,0,null,0,1,"ion-icon",[["name","add-circle"],["role","img"]],[[2,"hide",null]],null,null,null,null)),c["ɵdid"](29,147456,null,0,U.a,[_.a,c.ElementRef,c.Renderer],{name:[0,"name"]},null),(l()(),c["ɵted"](-1,0,["\n      "])),(l()(),c["ɵted"](-1,null,["\n    "])),(l()(),c["ɵted"](-1,3,["\n  "])),(l()(),c["ɵted"](-1,null,["\n"])),(l()(),c["ɵted"](-1,null,["\n\n\n"])),(l()(),c["ɵeld"](35,0,null,null,34,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,Q.b,Q.a)),c["ɵdid"](36,4374528,null,0,X.a,[_.a,Y.a,ll.a,c.ElementRef,c.Renderer,M.a,nl.a,c.NgZone,[2,S.a],[2,O.a]],null,null),(l()(),c["ɵted"](-1,1,["\n  "])),(l()(),c["ɵted"](-1,1,["\n  "])),(l()(),c["ɵeld"](39,0,null,1,29,"div",[["class","gamelist"]],null,null,null,null,null)),(l()(),c["ɵted"](-1,null,["\n    "])),(l()(),c["ɵeld"](41,0,null,null,26,"ion-list",[["class",""]],null,null,null,null,null)),c["ɵdid"](42,16384,null,0,el.a,[_.a,c.ElementRef,c.Renderer,Y.a,ul.m,ll.a],null,null),(l()(),c["ɵted"](-1,null,["\n      "])),(l()(),c["ɵeld"](44,0,null,null,12,"ion-list-header",[["class","item"]],null,null,null,w.b,w.a)),c["ɵdid"](45,1097728,null,3,y.a,[I.a,_.a,c.ElementRef,c.Renderer,[2,q.a]],null,null),c["ɵqud"](335544320,3,{contentLabel:0}),c["ɵqud"](603979776,4,{_buttons:1}),c["ɵqud"](603979776,5,{_icons:1}),c["ɵdid"](49,16384,null,0,tl.a,[_.a,c.Renderer,c.ElementRef,[8,null]],null,null),(l()(),c["ɵted"](-1,2,["\n        "])),(l()(),c["ɵeld"](51,0,null,2,1,"p",[["padding-top",""]],null,null,null,null,null)),(l()(),c["ɵted"](-1,null,["Current Predictions"])),(l()(),c["ɵted"](-1,2,["\n        "])),(l()(),c["ɵeld"](54,0,null,0,1,"ion-icon",[["color","color1"],["item-left",""],["name","football"],["role","img"]],[[2,"hide",null]],null,null,null,null)),c["ɵdid"](55,147456,[[5,4]],0,U.a,[_.a,c.ElementRef,c.Renderer],{color:[0,"color"],name:[1,"name"]},null),(l()(),c["ɵted"](-1,2,["\n      "])),(l()(),c["ɵted"](-1,null,["\n      "])),(l()(),c["ɵted"](-1,null,["\n      "])),(l()(),c["ɵeld"](59,0,null,null,4,"div",[["class",""]],null,null,null,null,null)),(l()(),c["ɵted"](-1,null,["\n        "])),(l()(),c["ɵand"](16777216,null,null,1,null,o)),c["ɵdid"](62,802816,null,0,$.NgForOf,[c.ViewContainerRef,c.TemplateRef,c.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),c["ɵted"](-1,null,["\n      "])),(l()(),c["ɵted"](-1,null,["\n      "])),(l()(),c["ɵand"](16777216,null,null,1,null,a)),c["ɵdid"](66,16384,null,0,$.NgIf,[c.ViewContainerRef,c.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),c["ɵted"](-1,null,["\n\n    "])),(l()(),c["ɵted"](-1,null,["\n  "])),(l()(),c["ɵted"](-1,1,["\n\n"]))],function(l,n){var e=n.component;l(n,8,0,"");l(n,26,0,"PredictionAddPage");l(n,29,0,"add-circle");l(n,55,0,"color1","football");l(n,62,0,e.predictionlist);l(n,66,0,e.error)},function(l,n){l(n,3,0,c["ɵnov"](n,4)._hidden,c["ɵnov"](n,4)._sbPadding);l(n,6,0,c["ɵnov"](n,8).isHidden);l(n,12,0,c["ɵnov"](n,13)._hidden);l(n,28,0,c["ɵnov"](n,29)._hidden);l(n,35,0,c["ɵnov"](n,36).statusbarPadding,c["ɵnov"](n,36)._hasRefresher);l(n,54,0,c["ɵnov"](n,55)._hidden)})}Object.defineProperty(n,"__esModule",{value:!0});var c=e(0),s=(e(1),e(15),e(205)),m=e(66),f=function(){function l(l,n,e,u,t,i,d){this.navCtrl=l,this.authProvider=n,this.gamesProvider=e,this.alertCtrl=u,this.loadingCtrl=t,this.actionSheetCtrl=i,this.navParams=d}return l.prototype.ionViewWillEnter=function(){var l=this.gamesProvider.getDate();this.GetPredictions(l)},l.prototype.GetPredictions=function(l){var n=this;this.gamesProvider.GetPredictions(l).subscribe(function(l){200===l.statusCode?n.predictionlist=l.data:n.authProvider.showToast(l.description),n.error=""},function(l){n.error=l.error.description})},l.prototype.onGameOption=function(l){var n=this.authProvider.currentUserDataValue.user_type;"Admin"===n?this.AdminActionSheet(l):"SubAdmin"===n&&this.SubAdminActionSheet(l)},l.prototype.SubAdminActionSheet=function(l){var n=this;this.actionSheetCtrl.create({title:"Prediction Options",buttons:[{text:"View / Edit",handler:function(){n.navCtrl.push("PredictionEditPage",{prediction:l})}},{text:"Delete",handler:function(){n.onDeletePrediction(l)}},{text:"Cancel",role:"cancel",handler:function(){}}]}).present()},l.prototype.AdminActionSheet=function(l){var n=this;this.actionSheetCtrl.create({title:"Prediction Options",buttons:[{text:"View / Edit",handler:function(){n.navCtrl.push("PredictionEditPage",{prediction:l})}},{text:"Approve",handler:function(){n.navCtrl.push("GameCreatePage",{prediction:l})}},{text:"Delete",handler:function(){n.onDeletePrediction(l)}},{text:"Cancel",role:"cancel",handler:function(){}}]}).present()},l.prototype.onDeletePrediction=function(l){var n=this,e=this.loadingCtrl.create({content:"Please wait..."});this.alertCtrl.create({title:"Delete Prediction",message:"Do you want to delete this prediction?<br/><br/>This is action is irreversible.",buttons:[{text:"Cancel",handler:function(){}},{text:"Proceed",handler:function(){e.present(),n.gamesProvider.deletePrediction(l.id).subscribe(function(l){if(e.dismiss().catch(function(){}),200===l.statusCode){var u=n.gamesProvider.getDate();n.GetPredictions(u)}else n.authProvider.showToast(l.description)},function(l){e.dismiss().catch(function(){}),n.authProvider.showToast(l.error.description)})}}]}).present()},l}(),p=function(){return function(){}}(),g=e(206),h=e(207),v=e(208),R=e(209),b=e(210),P=e(211),C=e(212),x=e(213),E=e(214),w=e(143),y=e(28),I=e(25),_=e(3),q=e(53),A=e(67),F=e(218),T=e(149),D=e(148),$=e(14),k=e(68),N=e(54),S=e(7),V=e(92),L=e(37),M=e(9),O=e(20),G=e(41),z=e(26),B=e(94),j=e(36),H=e(69),J=e(38),U=e(34),W=e(145),Z=e(61),K=e(147),Q=e(91),X=e(30),Y=e(5),ll=e(10),nl=e(31),el=e(60),ul=e(8),tl=e(150),il=e(93),dl=e(144),ol=e(146),al=e(17),rl=c["ɵcrt"]({encapsulation:2,styles:[],data:{}}),cl=c["ɵccf"]("page-predictions",f,function(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,1,"page-predictions",[],null,null,null,r,rl)),c["ɵdid"](1,49152,null,0,f,[O.a,m.a,s.a,il.a,dl.a,ol.a,al.a],null,null)],null,null)},{},{},[]),sl=e(24),ml=e(141),fl=e(52);e.d(n,"PredictionsPageModuleNgFactory",function(){return pl});var pl=c["ɵcmf"](p,[],function(l){return c["ɵmod"]([c["ɵmpd"](512,c.ComponentFactoryResolver,c["ɵCodegenComponentFactoryResolver"],[[8,[g.a,h.a,v.a,R.a,b.a,P.a,C.a,x.a,E.a,cl]],[3,c.ComponentFactoryResolver],c.NgModuleRef]),c["ɵmpd"](4608,$.NgLocalization,$.NgLocaleLocalization,[c.LOCALE_ID,[2,$["ɵa"]]]),c["ɵmpd"](4608,sl["ɵi"],sl["ɵi"],[]),c["ɵmpd"](4608,sl.FormBuilder,sl.FormBuilder,[]),c["ɵmpd"](512,$.CommonModule,$.CommonModule,[]),c["ɵmpd"](512,sl["ɵba"],sl["ɵba"],[]),c["ɵmpd"](512,sl.FormsModule,sl.FormsModule,[]),c["ɵmpd"](512,sl.ReactiveFormsModule,sl.ReactiveFormsModule,[]),c["ɵmpd"](512,ml.a,ml.a,[]),c["ɵmpd"](512,ml.b,ml.b,[]),c["ɵmpd"](512,p,p,[]),c["ɵmpd"](256,fl.a,f,[])])})}});
+webpackJsonp([41],{
+
+/***/ 740:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaymentDetailsPageModule", function() { return PaymentDetailsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__payment_details__ = __webpack_require__(800);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var PaymentDetailsPageModule = /** @class */ (function () {
+    function PaymentDetailsPageModule() {
+    }
+    PaymentDetailsPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__payment_details__["a" /* PaymentDetailsPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__payment_details__["a" /* PaymentDetailsPage */]),
+            ],
+        })
+    ], PaymentDetailsPageModule);
+    return PaymentDetailsPageModule;
+}());
+
+//# sourceMappingURL=payment-details.module.js.map
+
+/***/ }),
+
+/***/ 800:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PaymentDetailsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_payments_payments__ = __webpack_require__(372);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var PaymentDetailsPage = /** @class */ (function () {
+    function PaymentDetailsPage(navCtrl, authProvider, actionSheetCtrl, loadingCtrl, alertCtrl, paymentsProvider, navParams) {
+        this.navCtrl = navCtrl;
+        this.authProvider = authProvider;
+        this.actionSheetCtrl = actionSheetCtrl;
+        this.loadingCtrl = loadingCtrl;
+        this.alertCtrl = alertCtrl;
+        this.paymentsProvider = paymentsProvider;
+        this.navParams = navParams;
+        this.currentPage = 1;
+        this.totalPage = 0;
+        this.perPage = 0;
+        this.totalData = 0;
+    }
+    PaymentDetailsPage.prototype.ionViewWillEnter = function () {
+        this.GetPayments();
+    };
+    PaymentDetailsPage.prototype.GetPayments = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        loading.present();
+        this.paymentsProvider.GetPayments(0, 10)
+            .subscribe(function (resp) {
+            loading.dismiss().catch(function () { });
+            if (resp.statusCode === 200) {
+                _this.payments = resp.data.content;
+                _this.currentPage = resp.data.number;
+                _this.totalPage = resp.data.totalPages;
+                _this.totalData = resp.data.totalElements;
+                _this.perPage = resp.data.size;
+                _this.originalpayments = _this.payments;
+                _this.nopayments = '';
+            }
+            else {
+                _this.authProvider.showToast(resp.description);
+            }
+            _this.error = '';
+        }, function (error) {
+            _this.error = 'none';
+            _this.payments = null;
+            loading.dismiss().catch(function () { });
+            _this.authProvider.showToast(error.error.error);
+        });
+    };
+    PaymentDetailsPage.prototype.onSearch = function () {
+        var _this = this;
+        var searchvalue = this.searchTerm;
+        if (searchvalue.trim() === '') {
+            this.payments = this.originalpayments;
+        }
+        else {
+            if (searchvalue.length >= 3) {
+                var loading_1 = this.loadingCtrl.create({
+                    content: "Please wait..."
+                });
+                loading_1.present();
+                this.paymentsProvider.SearchPayments(searchvalue, 0, 20)
+                    .subscribe(function (resp) {
+                    loading_1.dismiss().catch(function () { });
+                    if (resp.statusCode === 200) {
+                        _this.payments = resp.data.content;
+                        _this.currentPage = resp.data.number;
+                        _this.totalPage = resp.data.totalPages;
+                        _this.totalData = resp.data.totalElements;
+                        _this.perPage = resp.data.size;
+                    }
+                    else {
+                        _this.authProvider.showToast(resp.description);
+                    }
+                    _this.error = '';
+                }, function (error) {
+                    loading_1.dismiss().catch(function () { });
+                    _this.error = 'none';
+                    _this.payments = null;
+                });
+            }
+        }
+    };
+    PaymentDetailsPage.prototype.onClear = function (ev) {
+        this.searchTerm = "";
+        this.payments = this.originalpayments;
+        this.error = '';
+    };
+    PaymentDetailsPage.prototype.onCancel = function (ev) {
+        this.searchTerm = "";
+        this.payments = this.originalpayments;
+        this.error = '';
+    };
+    PaymentDetailsPage.prototype.scrollInfinite = function (event) {
+        var _this = this;
+        this.currentPage += 1;
+        setTimeout(function () {
+            _this.paymentsProvider.GetPayments(_this.currentPage, _this.perPage)
+                .subscribe(function (resp) {
+                if (resp.statusCode === 200) {
+                    _this.currentPage = resp.data.number;
+                    _this.totalPage = resp.data.totalPages;
+                    _this.totalData = resp.data.totalElements;
+                    _this.perPage = resp.data.size;
+                    _this.nopayments = '';
+                    for (var i = 0; i < resp.data.content.length; i++) {
+                        _this.payments.push(resp.data.content[i]);
+                    }
+                }
+                else {
+                    _this.authProvider.showToast(resp.description);
+                }
+                event.complete();
+            }, function (error) {
+                _this.nopayments = 'none';
+                event.complete();
+            });
+        }, 1000);
+    };
+    PaymentDetailsPage.prototype.onGotoTop = function () {
+        this.content.scrollToTop();
+    };
+    PaymentDetailsPage.prototype.onPaymentOptions = function (payment) {
+        var _this = this;
+        var actionSheet = this.actionSheetCtrl.create({
+            title: 'Payment Options',
+            buttons: [
+                {
+                    text: 'Delete',
+                    handler: function () { _this.onDeletePayment(payment); }
+                }, {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () { }
+                }
+            ]
+        });
+        actionSheet.present();
+    };
+    PaymentDetailsPage.prototype.onDeletePayment = function (payment) {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        var confirm = this.alertCtrl.create({
+            title: 'Delete Payment',
+            message: 'Do you want to delete this payment record?</b><br/><br/>It would delete the payment history of<b> ' + payment.user.lastname + ' ' + payment.user.firstname + '.</b><br/><br/>This is action is irreversible.',
+            buttons: [
+                {
+                    text: 'Cancel',
+                    handler: function () {
+                    }
+                },
+                {
+                    text: 'Proceed',
+                    handler: function () {
+                        loading.present();
+                        _this.paymentsProvider.deletePayment(payment.id).subscribe(function (res) {
+                            loading.dismiss().catch(function () { });
+                            if (res.statusCode === 200) {
+                                _this.navCtrl.pop();
+                            }
+                            else {
+                                _this.authProvider.showToast(res.description);
+                            }
+                        }, function (error) {
+                            loading.dismiss().catch(function () { });
+                            _this.authProvider.showToast(error.error.error);
+                        });
+                    }
+                }
+            ]
+        });
+        confirm.present();
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["Content"]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["Content"])
+    ], PaymentDetailsPage.prototype, "content", void 0);
+    PaymentDetailsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
+            selector: 'page-payment-details',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payment-details/payment-details.html"*/'\n<ion-content padding>\n  <ion-searchbar [(ngModel)]="searchTerm" (ionCancel)="onCancel($event)" [showCancelButton]="true"\n  (ionClear)="onClear($event)" (ionInput)="onSearch()">\n</ion-searchbar>\n  <div class="teamMatchs">\n    <ion-list >\n      <ion-item class="thumbnailItem" *ngFor="let payment of payments" >\n        <ion-thumbnail item-left>\n          <!-- Team image -->\n          <img src="assets/imgs/appicon.png" />\n        </ion-thumbnail>\n        <ion-grid no-padding>\n          <ion-row>\n            <ion-col col-6>\n              <!-- team Name -->\n              <h5 ion-text color="dark" >{{payment.user.lastname}} {{payment.user.firstname}} </h5>\n              <!-- League Name -->\n              <p ion-text color="color1">{{payment.plantype.name}}</p>\n            </ion-col>\n            <ion-col col-6>\n              <p ion-text color="dark">{{payment.paymentdate}}</p>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n        <div class="matchResult" item-right>\n            <span ion-text color="color1"  >{{payment.platform}}</span>\n          <p ion-text color="color2"><b>{{payment.paymenttype}}</b></p>\n        </div>\n      </ion-item>\n    </ion-list>\n  </div>\n  <div class="" *ngIf="error">\n    <p ion-text text-center color="color2">No result found!</p>\n  </div>\n  <div text-center margin-top margin-bottonm *ngIf="nopayments === \'none\'" (click)="onGotoTop()">\n    <button ion-button small color="color2">Back to Top</button>\n  </div>\n  <ion-infinite-scroll (ionInfinite)="scrollInfinite($event)" *ngIf="currentPage < totalPage">\n    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading page {{currentPage}} of {{totalPage}}">\n    </ion-infinite-scroll-content>\n  </ion-infinite-scroll>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payment-details/payment-details.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"],
+            __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ActionSheetController"],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["LoadingController"],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["AlertController"],
+            __WEBPACK_IMPORTED_MODULE_1__providers_payments_payments__["a" /* PaymentsProvider */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"]])
+    ], PaymentDetailsPage);
+    return PaymentDetailsPage;
+}());
+
+//# sourceMappingURL=payment-details.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=41.js.map

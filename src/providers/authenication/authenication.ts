@@ -118,13 +118,6 @@ export class AuthenicationProvider {
 
   }
 
-  getAllPlantypes(): Observable<ResponseType> {
-    return this.http.get<ResponseType>(`${environment.apiUrl}/payments/plantype/getall`)
-      .pipe(map(resp => {
-        return resp;
-      }));
-  }
-
   findUserDetails(id): Observable<ResponseType> {
     return this.http.get<ResponseType>(`${environment.apiUrl}/users/user/find/${id}`)
       .pipe(map(resp => {
@@ -216,7 +209,7 @@ export class AuthenicationProvider {
       }));
   }
   createNewUser(user): Observable<ResponseType> {
-    return this.http.post<ResponseType>(`${environment.apiUrl}/users/member/create`, user)
+    return this.http.post<ResponseType>(`${environment.apiUrl}/users/member/add`, user)
       .pipe(map(resp => {
         return resp;
       }));

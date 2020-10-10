@@ -1,1 +1,1886 @@
-webpackJsonp([51],{116:function(e,t,n){"use strict";n.d(t,"a",function(){return l});var l={production:!0,apiUrl:"http://178.62.124.12:8080/sure3odds"}},157:function(e,t,n){"use strict";n.d(t,"a",function(){return l});n(1),n(15),n(89);var l=function(){function e(e,t){this.navCtrl=e,this.navParams=t,this.pages=[{pageName:"PaymentDetailsPage",title:"Payments",id:"Payments"},{pageName:"PaymentPlansPage",title:"Plans",id:"Plans"},{pageName:"PaymentPlantypesPage",title:"Plan Types",id:"Plan Types"},{pageName:"PaymentSetsPage",title:"Sets",id:"Sets"}],this.currentpage="Payments",this.selectedTab=0}return e.prototype.onTabSelect=function(e){this.selectedTab=e.index,this.currentpage=e.id},e}()},205:function(e,t,n){"use strict";n.d(t,"a",function(){return r});n(1);var l=n(51),a=(n.n(l),n(57)),o=n(116),r=function(){function e(e){this.http=e}return e.prototype.getDate=function(){return this.today=new Date,this.day=this.today.getDate(),this.month=this.today.getMonth()+1,this.year=this.today.getFullYear(),this.day<10&&(this.day="0"+this.day),this.month<10&&(this.month="0"+this.month),this.today=this.year+"-"+this.month+"-"+this.day,this.today},e.prototype.GetGames=function(e){var t=(new a.g).set("matchDate",String(e));return this.http.get(o.a.apiUrl+"/games/game/user/get",{params:t}).pipe(Object(l.map)(function(e){return e}))},e.prototype.GetAppVersion=function(){return this.http.get(o.a.apiUrl+"/users/app/getversion",{}).pipe(Object(l.map)(function(e){return e}))},e.prototype.computeOldMatchDate=function(e){e.day_num<10&&(e.day_num="0"+e.day_num),e.month<10&&(e.month="0"+e.month);return e.year+"-"+e.month+"-"+e.day_num},e.prototype.addGame=function(e){return this.http.post(o.a.apiUrl+"/games/game/add",e).pipe(Object(l.map)(function(e){return e}))},e.prototype.updateGame=function(e){return this.http.put(o.a.apiUrl+"/games/game/update",e).pipe(Object(l.map)(function(e){return e}))},e.prototype.deleteGame=function(e){return this.http.delete(o.a.apiUrl+"/games/game/delete/"+e).pipe(Object(l.map)(function(e){return e}))},e.prototype.createGame=function(e,t,n){var r=(new a.g).set("predictionId",e).set("setId",t).set("statusId",n);return console.log(r),this.http.post(o.a.apiUrl+"/games/game/create",r).pipe(Object(l.map)(function(e){return e}))},e.prototype.GetGameVotes=function(e){return this.http.get(o.a.apiUrl+"/games/vote/get_game_votes/"+e).pipe(Object(l.map)(function(e){return e}))},e.prototype.createVote=function(e){return this.http.post(o.a.apiUrl+"/games/vote/create",e).pipe(Object(l.map)(function(e){return e}))},e.prototype.GetGameComments=function(e){return this.http.get(o.a.apiUrl+"/games/comment/get_game_comments/"+e).pipe(Object(l.map)(function(e){return e}))},e.prototype.createComment=function(e){return this.http.post(o.a.apiUrl+"/games/comment/create",e).pipe(Object(l.map)(function(e){return e}))},e.prototype.GetCountries=function(e,t){var n=(new a.g).set("pageNo",e).set("pageSize",t);return this.http.get(o.a.apiUrl+"/games/country/getall",{params:n}).pipe(Object(l.map)(function(e){return e}))},e.prototype.Getcountries=function(){return this.http.get(o.a.apiUrl+"/games/country/get_all").pipe(Object(l.map)(function(e){return e}))},e.prototype.SearchCountries=function(e,t,n){var r=(new a.g).set("searchValue",e).set("pageNo",t).set("pageSize",n);return this.http.get(o.a.apiUrl+"/games/country/search",{params:r}).pipe(Object(l.map)(function(e){return e}))},e.prototype.createCountry=function(e){return this.http.post(o.a.apiUrl+"/games/country/create",e).pipe(Object(l.map)(function(e){return e}))},e.prototype.updateCountry=function(e){return this.http.put(o.a.apiUrl+"/games/country/update",e).pipe(Object(l.map)(function(e){return e}))},e.prototype.deleteCountry=function(e){return this.http.delete(o.a.apiUrl+"/games/country/delete/"+e).pipe(Object(l.map)(function(e){return e}))},e.prototype.GetLeaguesByCountryID=function(e){return this.http.get(o.a.apiUrl+"/games/country/leagues/get/"+e).pipe(Object(l.map)(function(e){return e}))},e.prototype.SearchLeaguesByCountryIDAndName=function(e,t){var n=(new a.g).set("searchValue",e).set("countryId",t);return this.http.get(o.a.apiUrl+"/games/country/leagues/search",{params:n}).pipe(Object(l.map)(function(e){return e}))},e.prototype.GetLeagues=function(e,t){var n=(new a.g).set("pageNo",e).set("pageSize",t);return this.http.get(o.a.apiUrl+"/games/league/getall",{params:n}).pipe(Object(l.map)(function(e){return e}))},e.prototype.SearchLeagues=function(e,t,n){var r=(new a.g).set("searchValue",e).set("pageNo",t).set("pageSize",n);return this.http.get(o.a.apiUrl+"/games/league/search",{params:r}).pipe(Object(l.map)(function(e){return e}))},e.prototype.deleteLeague=function(e){return this.http.delete(o.a.apiUrl+"/games/league/delete/"+e).pipe(Object(l.map)(function(e){return e}))},e.prototype.updateLeague=function(e){return this.http.put(o.a.apiUrl+"/games/league/update",e).pipe(Object(l.map)(function(e){return e}))},e.prototype.createLeague=function(e){return this.http.post(o.a.apiUrl+"/games/league/create",e).pipe(Object(l.map)(function(e){return e}))},e.prototype.GetTeamsByLeagueId=function(e,t,n){var r=(new a.g).set("leagueId",e).set("pageNo",t).set("pageSize",n);return this.http.get(o.a.apiUrl+"/games/league/teams/get",{params:r}).pipe(Object(l.map)(function(e){return e}))},e.prototype.SearchTeamsByLeagueIdAndName=function(e,t,n,r){var i=(new a.g).set("searchValue",e).set("leagueId",t).set("pageNo",n).set("pageSize",r);return this.http.get(o.a.apiUrl+"/games/league/teams/search",{params:i}).pipe(Object(l.map)(function(e){return e}))},e.prototype.getTeamsByLeagueId=function(e){return this.http.get(o.a.apiUrl+"/games/league/teams/getall/"+e).pipe(Object(l.map)(function(e){return e}))},e.prototype.GetTeams=function(e,t){var n=(new a.g).set("pageNo",e).set("pageSize",t);return this.http.get(o.a.apiUrl+"/games/team/getall",{params:n}).pipe(Object(l.map)(function(e){return e}))},e.prototype.SearchTeams=function(e,t,n){var r=(new a.g).set("searchValue",e).set("pageNo",t).set("pageSize",n);return this.http.get(o.a.apiUrl+"/games/team/search",{params:r}).pipe(Object(l.map)(function(e){return e}))},e.prototype.updateTeam=function(e){return this.http.put(o.a.apiUrl+"/games/team/update",e).pipe(Object(l.map)(function(e){return e}))},e.prototype.deleteTeam=function(e){return this.http.delete(o.a.apiUrl+"/games/team/delete/"+e).pipe(Object(l.map)(function(e){return e}))},e.prototype.createTeam=function(e){return this.http.post(o.a.apiUrl+"/games/team/create",e).pipe(Object(l.map)(function(e){return e}))},e.prototype.GetSelections=function(e,t){var n=(new a.g).set("pageNo",e).set("pageSize",t);return this.http.get(o.a.apiUrl+"/games/selection/getall",{params:n}).pipe(Object(l.map)(function(e){return e}))},e.prototype.SearchSelections=function(e,t,n){var r=(new a.g).set("searchValue",e).set("pageNo",t).set("pageSize",n);return this.http.get(o.a.apiUrl+"/games/selection/search",{params:r}).pipe(Object(l.map)(function(e){return e}))},e.prototype.createSelection=function(e){return this.http.post(o.a.apiUrl+"/games/selection/create",e).pipe(Object(l.map)(function(e){return e}))},e.prototype.updateSelection=function(e){return this.http.put(o.a.apiUrl+"/games/selection/update",e).pipe(Object(l.map)(function(e){return e}))},e.prototype.deleteSelection=function(e){return this.http.delete(o.a.apiUrl+"/games/selection/delete/"+e).pipe(Object(l.map)(function(e){return e}))},e.prototype.getSelections=function(){return this.http.get(o.a.apiUrl+"/games/selection/get_all").pipe(Object(l.map)(function(e){return e}))},e.prototype.GetSets=function(){return this.http.get(o.a.apiUrl+"/games/set/getall").pipe(Object(l.map)(function(e){return e}))},e.prototype.GetStatus=function(e){var t=(new a.g).set("statusType",e);return this.http.get(o.a.apiUrl+"/games/status/type/get",{params:t}).pipe(Object(l.map)(function(e){return e}))},e.prototype.CreatePrediction=function(e){return this.http.post(o.a.apiUrl+"/games/prediction/create",e).pipe(Object(l.map)(function(e){return e}))},e.prototype.GetPredictions=function(e){var t=(new a.g).set("matchDate",String(e));return this.http.get(o.a.apiUrl+"/games/prediction/get",{params:t}).pipe(Object(l.map)(function(e){return e}))},e.prototype.deletePrediction=function(e){return this.http.delete(o.a.apiUrl+"/games/prediction/delete/"+e).pipe(Object(l.map)(function(e){return e}))},e.prototype.updatePrediction=function(e){return this.http.put(o.a.apiUrl+"/games/prediction/update",e).pipe(Object(l.map)(function(e){return e}))},e}()},217:function(e,t,n){"use strict";n.d(t,"a",function(){return r});n(1);var l=n(51),a=(n.n(l),n(116)),o=n(57),r=function(){function e(e){this.http=e}return e.prototype.updatePlan=function(e,t,n,r){var i=(new o.g).set("userId",e).set("plantypeId",t).set("platform",n).set("transactionObject",r);return this.http.post(a.a.apiUrl+"/payments/plan/update",i).pipe(Object(l.map)(function(e){return e}))},e.prototype.GetPayments=function(e,t){var n=(new o.g).set("pageNo",e).set("pageSize",t);return this.http.get(a.a.apiUrl+"/payments/payment/get",{params:n}).pipe(Object(l.map)(function(e){return e}))},e.prototype.SearchPayments=function(e,t,n){var r=(new o.g).set("searchValue",e).set("pageNo",t).set("pageSize",n);return this.http.get(a.a.apiUrl+"/payments/payment/search",{params:r}).pipe(Object(l.map)(function(e){return e}))},e.prototype.deletePayment=function(e){return this.http.delete(a.a.apiUrl+"/payments/payment/delete/"+e).pipe(Object(l.map)(function(e){return e}))},e.prototype.GetPlans=function(e,t){var n=(new o.g).set("pageNo",e).set("pageSize",t);return this.http.get(a.a.apiUrl+"/payments/plan/get",{params:n}).pipe(Object(l.map)(function(e){return e}))},e.prototype.updatePlantype=function(e){return this.http.put(a.a.apiUrl+"/payments/plantype/update",e).pipe(Object(l.map)(function(e){return e}))},e}()},221:function(e,t,n){"use strict";n.d(t,"a",function(){return i});n(1),n(15),n(126);var l=n(57),a=n(51),o=(n.n(a),n(116)),r=n(119),i=(n.n(r),function(){function e(e,t,n){this.http=e,this.nativeHttp=t,this.platform=n}return e.prototype.GetFreeGames=function(e){if(this.platform.is("android")||this.platform.is("ios")){var t=this.nativeHttp.get(o.a.apiUrl+"/games/game/free/get",n={matchDate:e,id:"1"},{"Content-Type":"application/json"});return Object(r.from)(t).pipe(Object(a.map)(function(e){return JSON.parse(e.data)}))}var n=(new l.g).set("matchDate",String(e)).set("id","1");return this.http.get(o.a.apiUrl+"/games/game/free/get",{params:n}).pipe(Object(a.map)(function(e){return e}))},e.prototype.getAllPlantypes=function(){if(this.platform.is("android")||this.platform.is("ios")){var e=this.nativeHttp.get(o.a.apiUrl+"/payments/plantype/getall",{},{"Content-Type":"application/json"});return Object(r.from)(e).pipe(Object(a.map)(function(e){return JSON.parse(e.data)}))}return this.http.get(o.a.apiUrl+"/payments/plantype/getall").pipe(Object(a.map)(function(e){return e}))},e.prototype.getParameter=function(e){if(this.platform.is("android")||this.platform.is("ios")){var t=this.nativeHttp.get(o.a.apiUrl+"/payments/parameter/get/"+e,{},{"Content-Type":"application/json"});return Object(r.from)(t).pipe(Object(a.map)(function(e){return JSON.parse(e.data)}))}return this.http.get(o.a.apiUrl+"/payments/parameter/get/"+e).pipe(Object(a.map)(function(e){return e}))},e.prototype.createNewUser=function(e){if(this.platform.is("android")||this.platform.is("ios")){var t={id:e.id,email:e.email,firstname:e.firstname,lastname:e.lastname,referencecode:e.referencecode,password:e.password,phone:e.phone,plantype:e.plantype,platform:e.platform,usertypes:e.usertypes,status:e.status};this.nativeHttp.setDataSerializer("json");var n=this.nativeHttp.post(o.a.apiUrl+"/users/member/create",t,{"Content-Type":"application/json"});return Object(r.from)(n).pipe(Object(a.map)(function(e){return JSON.parse(e.data)}))}return this.http.post(o.a.apiUrl+"/users/member/create",t=e).pipe(Object(a.map)(function(e){return e}))},e}())},228:function(e,t,n){"use strict";n.d(t,"a",function(){return l});n(1),n(15),n(89);var l=function(){return function(){}}()},229:function(e,t,n){"use strict";n.d(t,"a",function(){return l});n(1),n(15),n(89);var l=function(){return function(){}}()},230:function(e,t,n){"use strict";n.d(t,"a",function(){return l});n(1),n(89),n(15);var l=function(){function e(e,t){this.navCtrl=e,this.navParams=t,this.pages=[{pageName:"ReportGeneralPage",title:"General Reports",id:"General Reports"},{pageName:"ReportMonthlyPage",title:"Monthly Reports",id:"Monthly Reports"}],this.currentpage="General Reports",this.selectedTab=0}return e.prototype.onTabSelect=function(e){this.selectedTab=e.index,this.currentpage=e.id},e}()},231:function(e,t,n){"use strict";n.d(t,"a",function(){return l});n(1),n(15);var l=function(){return function(){}}()},232:function(e,t,n){"use strict";n.d(t,"a",function(){return l});n(1),n(15);var l=function(){return function(e){this.navCtrl=e,this.CountryPage="SettingCountryPage",this.LeaguePage="SettingLeaguesPage",this.TeamPage="SettingTeamsPage",this.SelectionPage="SettingSelectionsPage"}}()},243:function(e,t){function n(e){return Promise.resolve().then(function(){throw new Error("Cannot find module '"+e+"'.")})}n.keys=function(){return[]},n.resolve=n,e.exports=n,n.id=243},265:function(e,t,n){function l(e){var t=a[e];return t?n.e(t[1]).then(function(){return n(t[0])}):Promise.reject(new Error("Cannot find module '"+e+"'."))}var a={"../pages/all-matches/all-matches.module.ngfactory":[680,25],"../pages/free-tips/free-tips.module.ngfactory":[681,24],"../pages/game-create/game-create.module.ngfactory":[682,50],"../pages/game-edit/game-edit.module.ngfactory":[683,5],"../pages/game-new/game-new.module.ngfactory":[684,4],"../pages/games/games.module.ngfactory":[685,23],"../pages/help/help.module.ngfactory":[686,49],"../pages/match-comments/match-comments.module.ngfactory":[687,29],"../pages/match-details/match-details.module.ngfactory":[688,48],"../pages/match-votes/match-votes.module.ngfactory":[689,47],"../pages/payment-details/payment-details.module.ngfactory":[690,46],"../pages/payment-plans/payment-plans.module.ngfactory":[691,45],"../pages/payment-plantype-edit/payment-plantype-edit.module.ngfactory":[692,28],"../pages/payment-plantypes/payment-plantypes.module.ngfactory":[694,44],"../pages/payment-sets/payment-sets.module.ngfactory":[693,43],"../pages/payments/payments.module.ngfactory":[697,42],"../pages/prediction-add/prediction-add.module.ngfactory":[695,3],"../pages/prediction-edit/prediction-edit.module.ngfactory":[696,2],"../pages/predictions/predictions.module.ngfactory":[699,41],"../pages/profile/profile.module.ngfactory":[698,0],"../pages/report-general/report-general.module.ngfactory":[701,27],"../pages/report-monthly/report-monthly.module.ngfactory":[702,20],"../pages/reports/reports.module.ngfactory":[700,40],"../pages/setting-country-add/setting-country-add.module.ngfactory":[703,7],"../pages/setting-country-edit/setting-country-edit.module.ngfactory":[704,19],"../pages/setting-country/setting-country.module.ngfactory":[706,39],"../pages/setting-league-add/setting-league-add.module.ngfactory":[707,18],"../pages/setting-league-edit/setting-league-edit.module.ngfactory":[705,17],"../pages/setting-league-view/setting-league-view.module.ngfactory":[709,38],"../pages/setting-leagues/setting-leagues.module.ngfactory":[708,37],"../pages/setting-selection-add/setting-selection-add.module.ngfactory":[710,16],"../pages/setting-selection-edit/setting-selection-edit.module.ngfactory":[711,15],"../pages/setting-selections/setting-selections.module.ngfactory":[712,36],"../pages/setting-team-add/setting-team-add.module.ngfactory":[714,6],"../pages/setting-team-assign/setting-team-assign.module.ngfactory":[713,14],"../pages/setting-team-edit/setting-team-edit.module.ngfactory":[715,13],"../pages/setting-team-manage/setting-team-manage.module.ngfactory":[716,12],"../pages/setting-team-view/setting-team-view.module.ngfactory":[718,35],"../pages/setting-teams/setting-teams.module.ngfactory":[717,34],"../pages/setting/setting.module.ngfactory":[720,33],"../pages/sign-in/sign-in.module.ngfactory":[719,26],"../pages/sign-up/sign-up.module.ngfactory":[721,11],"../pages/subscription-android/subscription-android.module.ngfactory":[722,21],"../pages/subscription-ios/subscription-ios.module.ngfactory":[724,22],"../pages/terms/terms.module.ngfactory":[723,32],"../pages/user-member-add/user-member-add.module.ngfactory":[725,10],"../pages/user-member-edit/user-member-edit.module.ngfactory":[726,1],"../pages/user-members/user-members.module.ngfactory":[728,31],"../pages/user-sub-admin-add/user-sub-admin-add.module.ngfactory":[727,9],"../pages/user-sub-admin-edit/user-sub-admin-edit.module.ngfactory":[730,8],"../pages/user-sub-admins/user-sub-admins.module.ngfactory":[729,30]};l.keys=function(){return Object.keys(a)},l.id=265,e.exports=l},386:function(e,t,n){"use strict";function l(e){return r["ɵvid"](0,[(e()(),r["ɵeld"](0,0,null,null,1,"super-tab",[["class",""]],null,null,null,i.b,i.a)),r["ɵdid"](1,4440064,null,0,u.a,[s.a,d.a,p.a,c.a,r.ElementRef,r.NgZone,r.Renderer,r.ComponentFactoryResolver,m.m,g.a,r.ErrorHandler,[2,f.a],y.a,r.ChangeDetectorRef],{title:[0,"title"],root:[1,"root"],tabId:[2,"tabId"]},null)],function(e,t){e(t,1,0,t.context.$implicit.title,t.context.$implicit.pageName,t.context.$implicit.id)},null)}function a(e){return r["ɵvid"](0,[(e()(),r["ɵeld"](0,0,null,null,8,"super-tabs",[["indicatorColor","color1"],["tabsPlacement","top"],["toolbarBackground","light"],["toolbarColor","color1"]],null,[[null,"tabSelect"]],function(e,t,n){var l=!0;if("tabSelect"===t){l=!1!==e.component.onTabSelect(n)&&l}return l},h.b,h.a)),r["ɵprd"](6144,null,b.a,null,[s.a]),r["ɵdid"](2,5488640,[[1,4]],0,s.a,[[2,P.a],[2,v.a],d.a,r.ElementRef,r.Renderer2,R.a,f.a,y.a,c.a],{toolbarBackground:[0,"toolbarBackground"],toolbarColor:[1,"toolbarColor"],indicatorColor:[2,"indicatorColor"],config:[3,"config"],tabsPlacement:[4,"tabsPlacement"]},{tabSelect:"tabSelect"}),r["ɵpod"](3,{sideMenu:0}),(e()(),r["ɵted"](-1,0,["\n    "])),(e()(),r["ɵted"](-1,0,["\n    "])),(e()(),r["ɵand"](16777216,null,0,1,null,l)),r["ɵdid"](7,802816,null,0,S.NgForOf,[r.ViewContainerRef,r.TemplateRef,r.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(e()(),r["ɵted"](-1,0,["\n  "]))],function(e,t){var n=t.component;e(t,2,0,"light","color1","color1",e(t,3,0,"left"),"top");e(t,7,0,n.pages)},null)}function o(e){return r["ɵvid"](0,[r["ɵqud"](671088640,1,{superTabs:0}),(e()(),r["ɵeld"](1,0,null,null,20,"ion-header",[],null,null,null,null,null)),r["ɵdid"](2,16384,null,0,C.a,[p.a,r.ElementRef,r.Renderer,[2,v.a]],null,null),(e()(),r["ɵted"](-1,null,["\n  "])),(e()(),r["ɵeld"](4,0,null,null,16,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,w.b,w.a)),r["ɵdid"](5,49152,null,0,O.a,[d.a,[2,v.a],[2,P.a],p.a,r.ElementRef,r.Renderer],null,null),(e()(),r["ɵted"](-1,3,["\n    "])),(e()(),r["ɵeld"](7,0,null,0,8,"button",[["icon-only",""],["ion-button",""],["menuToggle",""]],[[8,"hidden",0]],[[null,"click"]],function(e,t,n){var l=!0;if("click"===t){l=!1!==r["ɵnov"](e,9).toggle()&&l}return l},N.b,N.a)),r["ɵdid"](8,1097728,[[2,4]],0,E.a,[[8,""],p.a,r.ElementRef,r.Renderer],null,null),r["ɵdid"](9,1064960,null,0,M.a,[U.a,[2,v.a],[2,E.a],[2,O.a]],{menuToggle:[0,"menuToggle"]},null),r["ɵdid"](10,16384,null,1,I.a,[p.a,r.ElementRef,r.Renderer,[2,j.a],[2,O.a]],null,null),r["ɵqud"](603979776,2,{_buttons:1}),(e()(),r["ɵted"](-1,0,["\n      "])),(e()(),r["ɵeld"](13,0,null,0,1,"ion-icon",[["class","goal-menu"],["role","img"]],[[2,"hide",null]],null,null,null,null)),r["ɵdid"](14,147456,null,0,F.a,[p.a,r.ElementRef,r.Renderer],null,null),(e()(),r["ɵted"](-1,0,["\n    "])),(e()(),r["ɵted"](-1,3,["\n    "])),(e()(),r["ɵeld"](17,0,null,3,2,"ion-title",[],null,null,null,T.b,T.a)),r["ɵdid"](18,49152,null,0,A.a,[p.a,r.ElementRef,r.Renderer,[2,j.a],[2,O.a]],null,null),(e()(),r["ɵted"](19,0,[" ",""])),(e()(),r["ɵted"](-1,3,["\n  "])),(e()(),r["ɵted"](-1,null,["\n"])),(e()(),r["ɵted"](-1,null,["\n\n\n"])),(e()(),r["ɵeld"](23,0,null,null,5,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,_.b,_.a)),r["ɵdid"](24,4374528,null,0,H.a,[p.a,c.a,y.a,r.ElementRef,r.Renderer,d.a,k.a,r.NgZone,[2,v.a],[2,P.a]],null,null),(e()(),r["ɵted"](-1,1,["\n  "])),(e()(),r["ɵand"](16777216,null,1,1,null,a)),r["ɵdid"](27,16384,null,0,S.NgIf,[r.ViewContainerRef,r.TemplateRef],{ngIf:[0,"ngIf"]},null),(e()(),r["ɵted"](-1,1,["\n"]))],function(e,t){var n=t.component;e(t,9,0,"");e(t,27,0,n.pages.length>1)},function(e,t){var n=t.component;e(t,4,0,r["ɵnov"](t,5)._hidden,r["ɵnov"](t,5)._sbPadding);e(t,7,0,r["ɵnov"](t,9).isHidden);e(t,13,0,r["ɵnov"](t,14)._hidden);e(t,19,0,n.currentpage);e(t,23,0,r["ɵnov"](t,24).statusbarPadding,r["ɵnov"](t,24)._hasRefresher)})}n.d(t,"a",function(){return G});var r=n(0),i=n(376),u=n(90),s=n(58),d=n(9),p=n(3),c=n(5),m=n(8),g=n(33),f=n(18),y=n(10),h=n(377),b=n(35),P=n(20),v=n(7),R=n(59),S=n(14),C=n(54),w=n(92),O=n(37),N=n(41),E=n(26),M=n(94),U=n(36),I=n(69),j=n(38),F=n(34),T=n(145),A=n(61),_=n(91),H=n(30),k=n(31),L=n(157),D=n(17),x=r["ɵcrt"]({encapsulation:2,styles:[],data:{}}),G=r["ɵccf"]("page-payments",L.a,function(e){return r["ɵvid"](0,[(e()(),r["ɵeld"](0,0,null,null,1,"page-payments",[],null,null,null,o,x)),r["ɵdid"](1,49152,null,0,L.a,[P.a,D.a],null,null)],null,null)},{},{},[])},387:function(e,t,n){"use strict";function l(e){return r["ɵvid"](0,[(e()(),r["ɵeld"](0,0,null,null,1,"super-tab",[["class",""]],null,null,null,i.b,i.a)),r["ɵdid"](1,4440064,null,0,u.a,[s.a,d.a,p.a,c.a,r.ElementRef,r.NgZone,r.Renderer,r.ComponentFactoryResolver,m.m,g.a,r.ErrorHandler,[2,f.a],y.a,r.ChangeDetectorRef],{title:[0,"title"],root:[1,"root"],tabId:[2,"tabId"]},null)],function(e,t){e(t,1,0,t.context.$implicit.title,t.context.$implicit.pageName,t.context.$implicit.id)},null)}function a(e){return r["ɵvid"](0,[(e()(),r["ɵeld"](0,0,null,null,8,"super-tabs",[["indicatorColor","color1"],["tabsPlacement","top"],["toolbarBackground","light"],["toolbarColor","color1"]],null,[[null,"tabSelect"]],function(e,t,n){var l=!0;if("tabSelect"===t){l=!1!==e.component.onTabSelect(n)&&l}return l},h.b,h.a)),r["ɵprd"](6144,null,b.a,null,[s.a]),r["ɵdid"](2,5488640,[[1,4]],0,s.a,[[2,P.a],[2,v.a],d.a,r.ElementRef,r.Renderer2,R.a,f.a,y.a,c.a],{toolbarBackground:[0,"toolbarBackground"],toolbarColor:[1,"toolbarColor"],indicatorColor:[2,"indicatorColor"],config:[3,"config"],tabsPlacement:[4,"tabsPlacement"]},{tabSelect:"tabSelect"}),r["ɵpod"](3,{sideMenu:0}),(e()(),r["ɵted"](-1,0,["\n    "])),(e()(),r["ɵted"](-1,0,["\n    "])),(e()(),r["ɵand"](16777216,null,0,1,null,l)),r["ɵdid"](7,802816,null,0,S.NgForOf,[r.ViewContainerRef,r.TemplateRef,r.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(e()(),r["ɵted"](-1,0,["\n  "]))],function(e,t){var n=t.component;e(t,2,0,"light","color1","color1",e(t,3,0,"left"),"top");e(t,7,0,n.pages)},null)}function o(e){return r["ɵvid"](0,[r["ɵqud"](671088640,1,{superTabs:0}),(e()(),r["ɵted"](-1,null,["\n"])),(e()(),r["ɵeld"](2,0,null,null,20,"ion-header",[],null,null,null,null,null)),r["ɵdid"](3,16384,null,0,C.a,[p.a,r.ElementRef,r.Renderer,[2,v.a]],null,null),(e()(),r["ɵted"](-1,null,["\n  "])),(e()(),r["ɵeld"](5,0,null,null,16,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,w.b,w.a)),r["ɵdid"](6,49152,null,0,O.a,[d.a,[2,v.a],[2,P.a],p.a,r.ElementRef,r.Renderer],null,null),(e()(),r["ɵted"](-1,3,["\n    "])),(e()(),r["ɵeld"](8,0,null,0,8,"button",[["icon-only",""],["ion-button",""],["menuToggle",""]],[[8,"hidden",0]],[[null,"click"]],function(e,t,n){var l=!0;if("click"===t){l=!1!==r["ɵnov"](e,10).toggle()&&l}return l},N.b,N.a)),r["ɵdid"](9,1097728,[[2,4]],0,E.a,[[8,""],p.a,r.ElementRef,r.Renderer],null,null),r["ɵdid"](10,1064960,null,0,M.a,[U.a,[2,v.a],[2,E.a],[2,O.a]],{menuToggle:[0,"menuToggle"]},null),r["ɵdid"](11,16384,null,1,I.a,[p.a,r.ElementRef,r.Renderer,[2,j.a],[2,O.a]],null,null),r["ɵqud"](603979776,2,{_buttons:1}),(e()(),r["ɵted"](-1,0,["\n      "])),(e()(),r["ɵeld"](14,0,null,0,1,"ion-icon",[["class","goal-menu"],["role","img"]],[[2,"hide",null]],null,null,null,null)),r["ɵdid"](15,147456,null,0,F.a,[p.a,r.ElementRef,r.Renderer],null,null),(e()(),r["ɵted"](-1,0,["\n    "])),(e()(),r["ɵted"](-1,3,["\n    "])),(e()(),r["ɵeld"](18,0,null,3,2,"ion-title",[],null,null,null,T.b,T.a)),r["ɵdid"](19,49152,null,0,A.a,[p.a,r.ElementRef,r.Renderer,[2,j.a],[2,O.a]],null,null),(e()(),r["ɵted"](20,0,[" ",""])),(e()(),r["ɵted"](-1,3,["\n  "])),(e()(),r["ɵted"](-1,null,["\n"])),(e()(),r["ɵted"](-1,null,["\n\n\n"])),(e()(),r["ɵeld"](24,0,null,null,5,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,_.b,_.a)),r["ɵdid"](25,4374528,null,0,H.a,[p.a,c.a,y.a,r.ElementRef,r.Renderer,d.a,k.a,r.NgZone,[2,v.a],[2,P.a]],null,null),(e()(),r["ɵted"](-1,1,["\n  "])),(e()(),r["ɵand"](16777216,null,1,1,null,a)),r["ɵdid"](28,16384,null,0,S.NgIf,[r.ViewContainerRef,r.TemplateRef],{ngIf:[0,"ngIf"]},null),(e()(),r["ɵted"](-1,1,["\n"]))],function(e,t){var n=t.component;e(t,10,0,"");e(t,28,0,n.pages.length>1)},function(e,t){var n=t.component;e(t,5,0,r["ɵnov"](t,6)._hidden,r["ɵnov"](t,6)._sbPadding);e(t,8,0,r["ɵnov"](t,10).isHidden);e(t,14,0,r["ɵnov"](t,15)._hidden);e(t,20,0,n.currentpage);e(t,24,0,r["ɵnov"](t,25).statusbarPadding,r["ɵnov"](t,25)._hasRefresher)})}n.d(t,"a",function(){return G});var r=n(0),i=n(376),u=n(90),s=n(58),d=n(9),p=n(3),c=n(5),m=n(8),g=n(33),f=n(18),y=n(10),h=n(377),b=n(35),P=n(20),v=n(7),R=n(59),S=n(14),C=n(54),w=n(92),O=n(37),N=n(41),E=n(26),M=n(94),U=n(36),I=n(69),j=n(38),F=n(34),T=n(145),A=n(61),_=n(91),H=n(30),k=n(31),L=n(230),D=n(17),x=r["ɵcrt"]({encapsulation:2,styles:[],data:{}}),G=r["ɵccf"]("page-reports",L.a,function(e){return r["ɵvid"](0,[(e()(),r["ɵeld"](0,0,null,null,1,"page-reports",[],null,null,null,o,x)),r["ɵdid"](1,49152,null,0,L.a,[P.a,D.a],null,null)],null,null)},{},{},[])},388:function(e,t,n){"use strict";function l(e){return a["ɵvid"](0,[(e()(),a["ɵeld"](0,0,null,null,15,"ion-tabs",[],null,null,null,o.b,o.a)),a["ɵprd"](6144,null,r.a,null,[i.a]),a["ɵdid"](2,4374528,null,0,i.a,[[2,u.a],[2,s.a],d.a,p.a,a.ElementRef,c.a,a.Renderer,m.a,g.a],null,null),(e()(),a["ɵted"](-1,0,["\n  "])),(e()(),a["ɵeld"](4,0,null,0,1,"ion-tab",[["role","tabpanel"],["tabTitle","Countries"]],[[1,"id",0],[1,"aria-labelledby",0]],null,null,f.b,f.a)),a["ɵdid"](5,245760,null,0,y.a,[i.a,d.a,p.a,c.a,a.ElementRef,a.NgZone,a.Renderer,a.ComponentFactoryResolver,a.ChangeDetectorRef,h.m,b.a,[2,m.a],P.a,a.ErrorHandler],{root:[0,"root"],tabTitle:[1,"tabTitle"]},null),(e()(),a["ɵted"](-1,0,["\n  "])),(e()(),a["ɵeld"](7,0,null,0,1,"ion-tab",[["role","tabpanel"],["tabTitle","Leagues"]],[[1,"id",0],[1,"aria-labelledby",0]],null,null,f.b,f.a)),a["ɵdid"](8,245760,null,0,y.a,[i.a,d.a,p.a,c.a,a.ElementRef,a.NgZone,a.Renderer,a.ComponentFactoryResolver,a.ChangeDetectorRef,h.m,b.a,[2,m.a],P.a,a.ErrorHandler],{root:[0,"root"],tabTitle:[1,"tabTitle"]},null),(e()(),a["ɵted"](-1,0,["\n  "])),(e()(),a["ɵeld"](10,0,null,0,1,"ion-tab",[["role","tabpanel"],["tabTitle","Teams"]],[[1,"id",0],[1,"aria-labelledby",0]],null,null,f.b,f.a)),a["ɵdid"](11,245760,null,0,y.a,[i.a,d.a,p.a,c.a,a.ElementRef,a.NgZone,a.Renderer,a.ComponentFactoryResolver,a.ChangeDetectorRef,h.m,b.a,[2,m.a],P.a,a.ErrorHandler],{root:[0,"root"],tabTitle:[1,"tabTitle"]},null),(e()(),a["ɵted"](-1,0,["\n  "])),(e()(),a["ɵeld"](13,0,null,0,1,"ion-tab",[["role","tabpanel"],["tabTitle","Selections"]],[[1,"id",0],[1,"aria-labelledby",0]],null,null,f.b,f.a)),a["ɵdid"](14,245760,null,0,y.a,[i.a,d.a,p.a,c.a,a.ElementRef,a.NgZone,a.Renderer,a.ComponentFactoryResolver,a.ChangeDetectorRef,h.m,b.a,[2,m.a],P.a,a.ErrorHandler],{root:[0,"root"],tabTitle:[1,"tabTitle"]},null),(e()(),a["ɵted"](-1,0,["\n"]))],function(e,t){var n=t.component;e(t,5,0,n.CountryPage,"Countries");e(t,8,0,n.LeaguePage,"Leagues");e(t,11,0,n.TeamPage,"Teams");e(t,14,0,n.SelectionPage,"Selections")},function(e,t){e(t,4,0,a["ɵnov"](t,5)._tabId,a["ɵnov"](t,5)._btnId);e(t,7,0,a["ɵnov"](t,8)._tabId,a["ɵnov"](t,8)._btnId);e(t,10,0,a["ɵnov"](t,11)._tabId,a["ɵnov"](t,11)._btnId);e(t,13,0,a["ɵnov"](t,14)._tabId,a["ɵnov"](t,14)._btnId)})}n.d(t,"a",function(){return S});var a=n(0),o=n(674),r=n(35),i=n(65),u=n(20),s=n(7),d=n(9),p=n(3),c=n(5),m=n(18),g=n(31),f=n(675),y=n(131),h=n(8),b=n(33),P=n(10),v=n(232),R=a["ɵcrt"]({encapsulation:2,styles:[],data:{}}),S=a["ɵccf"]("page-setting",v.a,function(e){return a["ɵvid"](0,[(e()(),a["ɵeld"](0,0,null,null,1,"page-setting",[],null,null,null,l,R)),a["ɵdid"](1,49152,null,0,v.a,[u.a],null,null)],null,null)},{},{},[])},389:function(e,t,n){"use strict";function l(e){return p["ɵvid"](0,[(e()(),p["ɵeld"](0,0,null,null,14,"ion-item",[["class","item item-block"],["menuClose",""]],null,[[null,"click"]],function(e,t,n){var l=!0,a=e.component;if("click"===t){l=!1!==p["ɵnov"](e,6).close()&&l}if("click"===t){l=!1!==a.openPage(e.context.$implicit.component)&&l}return l},X.b,X.a)),p["ɵdid"](1,1097728,null,3,Y.a,[W.a,Q.a,p.ElementRef,p.Renderer,[2,ee.a]],null,null),p["ɵqud"](335544320,7,{contentLabel:0}),p["ɵqud"](603979776,8,{_buttons:1}),p["ɵqud"](603979776,9,{_icons:1}),p["ɵdid"](5,16384,null,0,te.a,[],null,null),p["ɵdid"](6,16384,null,0,ne.a,[le.a],{menuClose:[0,"menuClose"]},null),(e()(),p["ɵted"](-1,2,["\n        "])),(e()(),p["ɵeld"](8,0,null,0,1,"ion-icon",[["color","light"],["item-left",""],["role","img"]],[[2,"hide",null]],null,null,null,null)),p["ɵdid"](9,147456,[[9,4]],0,ae.a,[Q.a,p.ElementRef,p.Renderer],{color:[0,"color"],name:[1,"name"]},null),(e()(),p["ɵted"](-1,2,["\n        "])),(e()(),p["ɵeld"](11,0,null,1,2,"ion-label",[["style","color: white !important;"]],null,null,null,null,null)),p["ɵdid"](12,16384,[[7,4]],0,oe.a,[Q.a,p.ElementRef,p.Renderer,[8,null],[8,null],[8,null],[8,null]],null,null),(e()(),p["ɵted"](13,null,[" "," "])),(e()(),p["ɵted"](-1,2,["\n      "]))],function(e,t){e(t,6,0,"");e(t,9,0,"light",p["ɵinlineInterpolate"](1,"",t.context.$implicit.icon,""))},function(e,t){e(t,8,0,p["ɵnov"](t,9)._hidden);e(t,13,0,t.context.$implicit.title)})}function a(e){return p["ɵvid"](0,[(e()(),p["ɵeld"](0,0,null,null,14,"ion-item",[["class","item item-block"],["menuClose",""]],null,[[null,"click"]],function(e,t,n){var l=!0,a=e.component;if("click"===t){l=!1!==p["ɵnov"](e,6).close()&&l}if("click"===t){l=!1!==a.openPage(e.context.$implicit.component)&&l}return l},X.b,X.a)),p["ɵdid"](1,1097728,null,3,Y.a,[W.a,Q.a,p.ElementRef,p.Renderer,[2,ee.a]],null,null),p["ɵqud"](335544320,10,{contentLabel:0}),p["ɵqud"](603979776,11,{_buttons:1}),p["ɵqud"](603979776,12,{_icons:1}),p["ɵdid"](5,16384,null,0,te.a,[],null,null),p["ɵdid"](6,16384,null,0,ne.a,[le.a],{menuClose:[0,"menuClose"]},null),(e()(),p["ɵted"](-1,2,["\n        "])),(e()(),p["ɵeld"](8,0,null,0,1,"ion-icon",[["item-left",""],["role","img"]],[[2,"hide",null]],null,null,null,null)),p["ɵdid"](9,147456,[[12,4]],0,ae.a,[Q.a,p.ElementRef,p.Renderer],{color:[0,"color"],name:[1,"name"]},null),(e()(),p["ɵted"](-1,2,["\n        "])),(e()(),p["ɵeld"](11,0,null,1,2,"ion-label",[["style","color: white !important;"]],null,null,null,null,null)),p["ɵdid"](12,16384,[[10,4]],0,oe.a,[Q.a,p.ElementRef,p.Renderer,[8,null],[8,null],[8,null],[8,null]],null,null),(e()(),p["ɵted"](13,null,[" "," "])),(e()(),p["ɵted"](-1,2,["\n      "]))],function(e,t){e(t,6,0,"");e(t,9,0,p["ɵinlineInterpolate"](1,"",t.context.$implicit.color,""),p["ɵinlineInterpolate"](1,"",t.context.$implicit.icon,""))},function(e,t){e(t,8,0,p["ɵnov"](t,9)._hidden);e(t,13,0,t.context.$implicit.title)})}function o(e){return p["ɵvid"](0,[(e()(),p["ɵeld"](0,0,null,null,14,"ion-item",[["class","item item-block"],["menuClose",""]],null,[[null,"click"]],function(e,t,n){var l=!0,a=e.component;if("click"===t){l=!1!==p["ɵnov"](e,6).close()&&l}if("click"===t){l=!1!==a.openPage(e.context.$implicit.component)&&l}return l},X.b,X.a)),p["ɵdid"](1,1097728,null,3,Y.a,[W.a,Q.a,p.ElementRef,p.Renderer,[2,ee.a]],null,null),p["ɵqud"](335544320,18,{contentLabel:0}),p["ɵqud"](603979776,19,{_buttons:1}),p["ɵqud"](603979776,20,{_icons:1}),p["ɵdid"](5,16384,null,0,te.a,[],null,null),p["ɵdid"](6,16384,null,0,ne.a,[le.a],{menuClose:[0,"menuClose"]},null),(e()(),p["ɵted"](-1,2,["\n        "])),(e()(),p["ɵeld"](8,0,null,0,1,"ion-icon",[["item-left",""],["role","img"]],[[2,"hide",null]],null,null,null,null)),p["ɵdid"](9,147456,[[20,4]],0,ae.a,[Q.a,p.ElementRef,p.Renderer],{color:[0,"color"],name:[1,"name"]},null),(e()(),p["ɵted"](-1,2,["\n        "])),(e()(),p["ɵeld"](11,0,null,1,2,"ion-label",[["style","color: white !important;"]],null,null,null,null,null)),p["ɵdid"](12,16384,[[18,4]],0,oe.a,[Q.a,p.ElementRef,p.Renderer,[8,null],[8,null],[8,null],[8,null]],null,null),(e()(),p["ɵted"](13,null,[" "," "])),(e()(),p["ɵted"](-1,2,["\n      "]))],function(e,t){e(t,6,0,"");e(t,9,0,p["ɵinlineInterpolate"](1,"",t.context.$implicit.color,""),p["ɵinlineInterpolate"](1,"",t.context.$implicit.icon,""))},function(e,t){e(t,8,0,p["ɵnov"](t,9)._hidden);e(t,13,0,t.context.$implicit.title)})}function r(e){return p["ɵvid"](0,[(e()(),p["ɵeld"](0,0,null,null,14,"ion-item",[["class","item item-block"],["menuClose",""]],null,[[null,"click"]],function(e,t,n){var l=!0,a=e.component;if("click"===t){l=!1!==p["ɵnov"](e,6).close()&&l}if("click"===t){l=!1!==a.openPage(e.context.$implicit.component)&&l}return l},X.b,X.a)),p["ɵdid"](1,1097728,null,3,Y.a,[W.a,Q.a,p.ElementRef,p.Renderer,[2,ee.a]],null,null),p["ɵqud"](335544320,21,{contentLabel:0}),p["ɵqud"](603979776,22,{_buttons:1}),p["ɵqud"](603979776,23,{_icons:1}),p["ɵdid"](5,16384,null,0,te.a,[],null,null),p["ɵdid"](6,16384,null,0,ne.a,[le.a],{menuClose:[0,"menuClose"]},null),(e()(),p["ɵted"](-1,2,["\n        "])),(e()(),p["ɵeld"](8,0,null,0,1,"ion-icon",[["item-left",""],["role","img"]],[[2,"hide",null]],null,null,null,null)),p["ɵdid"](9,147456,[[23,4]],0,ae.a,[Q.a,p.ElementRef,p.Renderer],{color:[0,"color"],name:[1,"name"]},null),(e()(),p["ɵted"](-1,2,["\n        "])),(e()(),p["ɵeld"](11,0,null,1,2,"ion-label",[["style","color: white !important;"]],null,null,null,null,null)),p["ɵdid"](12,16384,[[21,4]],0,oe.a,[Q.a,p.ElementRef,p.Renderer,[8,null],[8,null],[8,null],[8,null]],null,null),(e()(),p["ɵted"](13,null,[" "," "])),(e()(),p["ɵted"](-1,2,["\n      "]))],function(e,t){e(t,6,0,"");e(t,9,0,p["ɵinlineInterpolate"](1,"",t.context.$implicit.color,""),p["ɵinlineInterpolate"](1,"",t.context.$implicit.icon,""))},function(e,t){e(t,8,0,p["ɵnov"](t,9)._hidden);e(t,13,0,t.context.$implicit.title)})}function i(e){return p["ɵvid"](0,[(e()(),p["ɵeld"](0,0,null,null,14,"ion-item",[["class","item item-block"],["menuClose",""]],null,[[null,"click"]],function(e,t,n){var l=!0,a=e.component;if("click"===t){l=!1!==p["ɵnov"](e,6).close()&&l}if("click"===t){l=!1!==a.openPage(e.context.$implicit.component)&&l}return l},X.b,X.a)),p["ɵdid"](1,1097728,null,3,Y.a,[W.a,Q.a,p.ElementRef,p.Renderer,[2,ee.a]],null,null),p["ɵqud"](335544320,29,{contentLabel:0}),p["ɵqud"](603979776,30,{_buttons:1}),p["ɵqud"](603979776,31,{_icons:1}),p["ɵdid"](5,16384,null,0,te.a,[],null,null),p["ɵdid"](6,16384,null,0,ne.a,[le.a],{menuClose:[0,"menuClose"]},null),(e()(),p["ɵted"](-1,2,["\n        "])),(e()(),p["ɵeld"](8,0,null,0,1,"ion-icon",[["item-left",""],["role","img"]],[[2,"hide",null]],null,null,null,null)),p["ɵdid"](9,147456,[[31,4]],0,ae.a,[Q.a,p.ElementRef,p.Renderer],{color:[0,"color"],name:[1,"name"]},null),(e()(),p["ɵted"](-1,2,["\n        "])),(e()(),p["ɵeld"](11,0,null,1,2,"ion-label",[["style","color: white !important;"]],null,null,null,null,null)),p["ɵdid"](12,16384,[[29,4]],0,oe.a,[Q.a,p.ElementRef,p.Renderer,[8,null],[8,null],[8,null],[8,null]],null,null),(e()(),p["ɵted"](13,null,[" "," "])),(e()(),p["ɵted"](-1,2,["\n      "]))],function(e,t){e(t,6,0,"");e(t,9,0,p["ɵinlineInterpolate"](1,"",t.context.$implicit.color,""),p["ɵinlineInterpolate"](1,"",t.context.$implicit.icon,""))},function(e,t){e(t,8,0,p["ɵnov"](t,9)._hidden);e(t,13,0,t.context.$implicit.title)})}function u(e){return p["ɵvid"](0,[(e()(),p["ɵeld"](0,0,null,null,14,"ion-item",[["class","item item-block"],["menuClose",""]],null,[[null,"click"]],function(e,t,n){var l=!0,a=e.component;if("click"===t){l=!1!==p["ɵnov"](e,6).close()&&l}if("click"===t){l=!1!==a.openPage(e.context.$implicit.component)&&l}return l},X.b,X.a)),p["ɵdid"](1,1097728,null,3,Y.a,[W.a,Q.a,p.ElementRef,p.Renderer,[2,ee.a]],null,null),p["ɵqud"](335544320,32,{contentLabel:0}),p["ɵqud"](603979776,33,{_buttons:1}),p["ɵqud"](603979776,34,{_icons:1}),p["ɵdid"](5,16384,null,0,te.a,[],null,null),p["ɵdid"](6,16384,null,0,ne.a,[le.a],{menuClose:[0,"menuClose"]},null),(e()(),p["ɵted"](-1,2,["\n        "])),(e()(),p["ɵeld"](8,0,null,0,1,"ion-icon",[["item-left",""],["role","img"]],[[2,"hide",null]],null,null,null,null)),p["ɵdid"](9,147456,[[34,4]],0,ae.a,[Q.a,p.ElementRef,p.Renderer],{color:[0,"color"],name:[1,"name"]},null),(e()(),p["ɵted"](-1,2,["\n        "])),(e()(),p["ɵeld"](11,0,null,1,2,"ion-label",[["style","color: white !important;"]],null,null,null,null,null)),p["ɵdid"](12,16384,[[32,4]],0,oe.a,[Q.a,p.ElementRef,p.Renderer,[8,null],[8,null],[8,null],[8,null]],null,null),(e()(),p["ɵted"](13,null,[" "," "])),(e()(),p["ɵted"](-1,2,["\n      "]))],function(e,t){e(t,6,0,"");e(t,9,0,p["ɵinlineInterpolate"](1,"",t.context.$implicit.color,""),p["ɵinlineInterpolate"](1,"",t.context.$implicit.icon,""))},function(e,t){e(t,8,0,p["ɵnov"](t,9)._hidden);e(t,13,0,t.context.$implicit.title)})}function s(e){return p["ɵvid"](0,[p["ɵqud"](402653184,1,{nav:0}),(e()(),p["ɵeld"](1,0,null,null,59,"ion-menu",[["id","loggedInMemberPages"],["role","navigation"],["swipeEnabled","false"]],null,null,null,re.b,re.a)),p["ɵprd"](6144,null,ie.a,null,[ue.a]),p["ɵdid"](3,245760,null,2,ue.a,[le.a,p.ElementRef,Q.a,se.a,p.Renderer,de.a,pe.m,ce.a,me.a],{content:[0,"content"],id:[1,"id"],swipeEnabled:[2,"swipeEnabled"]},null),p["ɵqud"](335544320,2,{menuContent:0}),p["ɵqud"](335544320,3,{menuNav:0}),(e()(),p["ɵted"](-1,0,["\n  "])),(e()(),p["ɵeld"](7,0,null,0,32,"ion-header",[],null,null,null,null,null)),p["ɵdid"](8,16384,null,0,ge.a,[Q.a,p.ElementRef,p.Renderer,[2,fe.a]],null,null),(e()(),p["ɵted"](-1,null,["\n    "])),(e()(),p["ɵeld"](10,0,null,null,28,"ion-toolbar",[["class","toolbar"]],[[2,"statusbar-padding",null]],null,null,ye.b,ye.a)),p["ɵdid"](11,49152,null,0,he.a,[Q.a,p.ElementRef,p.Renderer],null,null),(e()(),p["ɵted"](-1,3,["\n      "])),(e()(),p["ɵeld"](13,0,null,3,24,"ion-item",[["class","item item-block"]],null,null,null,X.b,X.a)),p["ɵdid"](14,1097728,null,3,Y.a,[W.a,Q.a,p.ElementRef,p.Renderer,[2,ee.a]],null,null),p["ɵqud"](335544320,4,{contentLabel:0}),p["ɵqud"](603979776,5,{_buttons:1}),p["ɵqud"](603979776,6,{_icons:1}),p["ɵdid"](18,16384,null,0,te.a,[],null,null),(e()(),p["ɵted"](-1,2,["\n        "])),(e()(),p["ɵeld"](20,0,null,0,4,"ion-avatar",[["item-left",""]],null,null,null,null,null)),p["ɵdid"](21,16384,null,0,be.a,[],null,null),(e()(),p["ɵted"](-1,null,["\n          "])),(e()(),p["ɵeld"](23,0,null,null,0,"img",[["src","assets/imgs/appicon.png"]],null,null,null,null,null)),(e()(),p["ɵted"](-1,null,["\n        "])),(e()(),p["ɵted"](-1,2,["\n        "])),(e()(),p["ɵeld"](26,0,null,2,2,"h5",[["color","light"],["ion-text",""]],null,null,null,null,null)),p["ɵdid"](27,16384,null,0,Pe.a,[Q.a,p.ElementRef,p.Renderer],{color:[0,"color"]},null),(e()(),p["ɵted"](28,null,["",""])),(e()(),p["ɵted"](-1,2,["\n        "])),(e()(),p["ɵeld"](30,0,null,2,2,"p",[["color","light"],["ion-text",""]],null,null,null,null,null)),p["ɵdid"](31,16384,null,0,Pe.a,[Q.a,p.ElementRef,p.Renderer],{color:[0,"color"]},null),(e()(),p["ɵted"](32,null,["",""])),(e()(),p["ɵted"](-1,2,["\n        "])),(e()(),p["ɵeld"](34,0,null,2,2,"p",[["color","light"],["ion-text",""],["style","margin-top: 1em;"]],null,null,null,null,null)),p["ɵdid"](35,16384,null,0,Pe.a,[Q.a,p.ElementRef,p.Renderer],{color:[0,"color"]},null),(e()(),p["ɵted"](36,null,["",""])),(e()(),p["ɵted"](-1,2,["\n      "])),(e()(),p["ɵted"](-1,3,["\n    "])),(e()(),p["ɵted"](-1,null,["\n  "])),(e()(),p["ɵted"](-1,0,["\n\n  "])),(e()(),p["ɵeld"](41,0,null,0,18,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,ve.b,ve.a)),p["ɵdid"](42,4374528,[[2,4]],0,Re.a,[Q.a,se.a,ce.a,p.ElementRef,p.Renderer,me.a,de.a,p.NgZone,[2,fe.a],[2,Se.a]],null,null),(e()(),p["ɵted"](-1,1,["\n    "])),(e()(),p["ɵted"](-1,1,["\n    "])),(e()(),p["ɵeld"](45,0,null,1,5,"ion-list",[["class","mainMenuList"]],null,null,null,null,null)),p["ɵdid"](46,16384,null,0,Ce.a,[Q.a,p.ElementRef,p.Renderer,se.a,pe.m,ce.a],null,null),(e()(),p["ɵted"](-1,null,["\n      "])),(e()(),p["ɵand"](16777216,null,null,1,null,l)),p["ɵdid"](49,802816,null,0,we.NgForOf,[p.ViewContainerRef,p.TemplateRef,p.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(e()(),p["ɵted"](-1,null,["\n    "])),(e()(),p["ɵted"](-1,1,["\n    "])),(e()(),p["ɵted"](-1,1,["\n    "])),(e()(),p["ɵeld"](53,0,null,1,5,"ion-list",[["class","leagueList"]],null,null,null,null,null)),p["ɵdid"](54,16384,null,0,Ce.a,[Q.a,p.ElementRef,p.Renderer,se.a,pe.m,ce.a],null,null),(e()(),p["ɵted"](-1,null,["\n      "])),(e()(),p["ɵand"](16777216,null,null,1,null,a)),p["ɵdid"](57,802816,null,0,we.NgForOf,[p.ViewContainerRef,p.TemplateRef,p.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(e()(),p["ɵted"](-1,null,["\n    "])),(e()(),p["ɵted"](-1,1,["\n  "])),(e()(),p["ɵted"](-1,0,["\n\n"])),(e()(),p["ɵted"](-1,null,["\n\n"])),(e()(),p["ɵeld"](62,0,null,null,59,"ion-menu",[["id","loggedInSubAdminMenu"],["role","navigation"],["swipeEnabled","false"]],null,null,null,re.b,re.a)),p["ɵprd"](6144,null,ie.a,null,[ue.a]),p["ɵdid"](64,245760,null,2,ue.a,[le.a,p.ElementRef,Q.a,se.a,p.Renderer,de.a,pe.m,ce.a,me.a],{content:[0,"content"],id:[1,"id"],swipeEnabled:[2,"swipeEnabled"]},null),p["ɵqud"](335544320,13,{menuContent:0}),p["ɵqud"](335544320,14,{menuNav:0}),(e()(),p["ɵted"](-1,0,["\n  "])),(e()(),p["ɵeld"](68,0,null,0,32,"ion-header",[],null,null,null,null,null)),p["ɵdid"](69,16384,null,0,ge.a,[Q.a,p.ElementRef,p.Renderer,[2,fe.a]],null,null),(e()(),p["ɵted"](-1,null,["\n    "])),(e()(),p["ɵeld"](71,0,null,null,28,"ion-toolbar",[["class","toolbar"]],[[2,"statusbar-padding",null]],null,null,ye.b,ye.a)),p["ɵdid"](72,49152,null,0,he.a,[Q.a,p.ElementRef,p.Renderer],null,null),(e()(),p["ɵted"](-1,3,["\n      "])),(e()(),p["ɵeld"](74,0,null,3,24,"ion-item",[["class","item item-block"]],null,null,null,X.b,X.a)),p["ɵdid"](75,1097728,null,3,Y.a,[W.a,Q.a,p.ElementRef,p.Renderer,[2,ee.a]],null,null),p["ɵqud"](335544320,15,{contentLabel:0}),p["ɵqud"](603979776,16,{_buttons:1}),p["ɵqud"](603979776,17,{_icons:1}),p["ɵdid"](79,16384,null,0,te.a,[],null,null),(e()(),p["ɵted"](-1,2,["\n        "])),(e()(),p["ɵeld"](81,0,null,0,4,"ion-avatar",[["item-left",""]],null,null,null,null,null)),p["ɵdid"](82,16384,null,0,be.a,[],null,null),(e()(),p["ɵted"](-1,null,["\n          "])),(e()(),p["ɵeld"](84,0,null,null,0,"img",[["src","assets/imgs/appicon.png"]],null,null,null,null,null)),(e()(),p["ɵted"](-1,null,["\n        "])),(e()(),p["ɵted"](-1,2,["\n        "])),(e()(),p["ɵeld"](87,0,null,2,2,"h5",[["color","light"],["ion-text",""]],null,null,null,null,null)),p["ɵdid"](88,16384,null,0,Pe.a,[Q.a,p.ElementRef,p.Renderer],{color:[0,"color"]},null),(e()(),p["ɵted"](89,null,["",""])),(e()(),p["ɵted"](-1,2,["\n        "])),(e()(),p["ɵeld"](91,0,null,2,2,"p",[["color","light"],["ion-text",""]],null,null,null,null,null)),p["ɵdid"](92,16384,null,0,Pe.a,[Q.a,p.ElementRef,p.Renderer],{color:[0,"color"]},null),(e()(),p["ɵted"](93,null,["",""])),(e()(),p["ɵted"](-1,2,["\n        "])),(e()(),p["ɵeld"](95,0,null,2,2,"p",[["color","light"],["ion-text",""],["style","margin-top: 1em;"]],null,null,null,null,null)),p["ɵdid"](96,16384,null,0,Pe.a,[Q.a,p.ElementRef,p.Renderer],{color:[0,"color"]},null),(e()(),p["ɵted"](97,null,["",""])),(e()(),p["ɵted"](-1,2,["\n      "])),(e()(),p["ɵted"](-1,3,["\n    "])),(e()(),p["ɵted"](-1,null,["\n  "])),(e()(),p["ɵted"](-1,0,["\n\n  "])),(e()(),p["ɵeld"](102,0,null,0,18,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,ve.b,ve.a)),p["ɵdid"](103,4374528,[[13,4]],0,Re.a,[Q.a,se.a,ce.a,p.ElementRef,p.Renderer,me.a,de.a,p.NgZone,[2,fe.a],[2,Se.a]],null,null),(e()(),p["ɵted"](-1,1,["\n    "])),(e()(),p["ɵted"](-1,1,["\n    "])),(e()(),p["ɵeld"](106,0,null,1,5,"ion-list",[["class","mainMenuList"]],null,null,null,null,null)),p["ɵdid"](107,16384,null,0,Ce.a,[Q.a,p.ElementRef,p.Renderer,se.a,pe.m,ce.a],null,null),(e()(),p["ɵted"](-1,null,["\n      "])),(e()(),p["ɵand"](16777216,null,null,1,null,o)),p["ɵdid"](110,802816,null,0,we.NgForOf,[p.ViewContainerRef,p.TemplateRef,p.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(e()(),p["ɵted"](-1,null,["\n    "])),(e()(),p["ɵted"](-1,1,["\n\n    "])),(e()(),p["ɵted"](-1,1,["\n    "])),(e()(),p["ɵeld"](114,0,null,1,5,"ion-list",[["class","leagueList"]],null,null,null,null,null)),p["ɵdid"](115,16384,null,0,Ce.a,[Q.a,p.ElementRef,p.Renderer,se.a,pe.m,ce.a],null,null),(e()(),p["ɵted"](-1,null,["\n      "])),(e()(),p["ɵand"](16777216,null,null,1,null,r)),p["ɵdid"](118,802816,null,0,we.NgForOf,[p.ViewContainerRef,p.TemplateRef,p.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(e()(),p["ɵted"](-1,null,["\n    "])),(e()(),p["ɵted"](-1,1,["\n  "])),(e()(),p["ɵted"](-1,0,["\n"])),(e()(),p["ɵted"](-1,null,["\n\n"])),(e()(),p["ɵeld"](123,0,null,null,59,"ion-menu",[["id","loggedInAdminMenu"],["role","navigation"],["swipeEnabled","false"]],null,null,null,re.b,re.a)),p["ɵprd"](6144,null,ie.a,null,[ue.a]),p["ɵdid"](125,245760,null,2,ue.a,[le.a,p.ElementRef,Q.a,se.a,p.Renderer,de.a,pe.m,ce.a,me.a],{content:[0,"content"],id:[1,"id"],swipeEnabled:[2,"swipeEnabled"]},null),p["ɵqud"](335544320,24,{menuContent:0}),p["ɵqud"](335544320,25,{menuNav:0}),(e()(),p["ɵted"](-1,0,["\n  "])),(e()(),p["ɵeld"](129,0,null,0,32,"ion-header",[],null,null,null,null,null)),p["ɵdid"](130,16384,null,0,ge.a,[Q.a,p.ElementRef,p.Renderer,[2,fe.a]],null,null),(e()(),p["ɵted"](-1,null,["\n    "])),(e()(),p["ɵeld"](132,0,null,null,28,"ion-toolbar",[["class","toolbar"]],[[2,"statusbar-padding",null]],null,null,ye.b,ye.a)),p["ɵdid"](133,49152,null,0,he.a,[Q.a,p.ElementRef,p.Renderer],null,null),(e()(),p["ɵted"](-1,3,["\n      "])),(e()(),p["ɵeld"](135,0,null,3,24,"ion-item",[["class","item item-block"]],null,null,null,X.b,X.a)),p["ɵdid"](136,1097728,null,3,Y.a,[W.a,Q.a,p.ElementRef,p.Renderer,[2,ee.a]],null,null),p["ɵqud"](335544320,26,{contentLabel:0}),p["ɵqud"](603979776,27,{_buttons:1}),p["ɵqud"](603979776,28,{_icons:1}),p["ɵdid"](140,16384,null,0,te.a,[],null,null),(e()(),p["ɵted"](-1,2,["\n        "])),(e()(),p["ɵeld"](142,0,null,0,4,"ion-avatar",[["item-left",""]],null,null,null,null,null)),p["ɵdid"](143,16384,null,0,be.a,[],null,null),(e()(),p["ɵted"](-1,null,["\n          "])),(e()(),p["ɵeld"](145,0,null,null,0,"img",[["src","assets/imgs/appicon.png"]],null,null,null,null,null)),(e()(),p["ɵted"](-1,null,["\n        "])),(e()(),p["ɵted"](-1,2,["\n        "])),(e()(),p["ɵeld"](148,0,null,2,2,"h5",[["color","light"],["ion-text",""]],null,null,null,null,null)),p["ɵdid"](149,16384,null,0,Pe.a,[Q.a,p.ElementRef,p.Renderer],{color:[0,"color"]},null),(e()(),p["ɵted"](150,null,["",""])),(e()(),p["ɵted"](-1,2,["\n        "])),(e()(),p["ɵeld"](152,0,null,2,2,"p",[["color","light"],["ion-text",""]],null,null,null,null,null)),p["ɵdid"](153,16384,null,0,Pe.a,[Q.a,p.ElementRef,p.Renderer],{color:[0,"color"]},null),(e()(),p["ɵted"](154,null,["",""])),(e()(),p["ɵted"](-1,2,["\n        "])),(e()(),p["ɵeld"](156,0,null,2,2,"p",[["color","light"],["ion-text",""],["style","margin-top: 1em;"]],null,null,null,null,null)),p["ɵdid"](157,16384,null,0,Pe.a,[Q.a,p.ElementRef,p.Renderer],{color:[0,"color"]},null),(e()(),p["ɵted"](158,null,["",""])),(e()(),p["ɵted"](-1,2,["\n      "])),(e()(),p["ɵted"](-1,3,["\n    "])),(e()(),p["ɵted"](-1,null,["\n  "])),(e()(),p["ɵted"](-1,0,["\n\n  "])),(e()(),p["ɵeld"](163,0,null,0,18,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,ve.b,ve.a)),p["ɵdid"](164,4374528,[[24,4]],0,Re.a,[Q.a,se.a,ce.a,p.ElementRef,p.Renderer,me.a,de.a,p.NgZone,[2,fe.a],[2,Se.a]],null,null),(e()(),p["ɵted"](-1,1,["\n    "])),(e()(),p["ɵted"](-1,1,["\n    "])),(e()(),p["ɵeld"](167,0,null,1,5,"ion-list",[["class","mainMenuList"]],null,null,null,null,null)),p["ɵdid"](168,16384,null,0,Ce.a,[Q.a,p.ElementRef,p.Renderer,se.a,pe.m,ce.a],null,null),(e()(),p["ɵted"](-1,null,["\n      "])),(e()(),p["ɵand"](16777216,null,null,1,null,i)),p["ɵdid"](171,802816,null,0,we.NgForOf,[p.ViewContainerRef,p.TemplateRef,p.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(e()(),p["ɵted"](-1,null,["\n    "])),(e()(),p["ɵted"](-1,1,["\n\n    "])),(e()(),p["ɵted"](-1,1,["\n    "])),(e()(),p["ɵeld"](175,0,null,1,5,"ion-list",[["class","leagueList"]],null,null,null,null,null)),p["ɵdid"](176,16384,null,0,Ce.a,[Q.a,p.ElementRef,p.Renderer,se.a,pe.m,ce.a],null,null),(e()(),p["ɵted"](-1,null,["\n      "])),(e()(),p["ɵand"](16777216,null,null,1,null,u)),p["ɵdid"](179,802816,null,0,we.NgForOf,[p.ViewContainerRef,p.TemplateRef,p.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(e()(),p["ɵted"](-1,null,["\n    "])),(e()(),p["ɵted"](-1,1,["\n  "])),(e()(),p["ɵted"](-1,0,["\n"])),(e()(),p["ɵted"](-1,null,["\n\n\n"])),(e()(),p["ɵted"](-1,null,["\n"])),(e()(),p["ɵeld"](185,0,null,null,2,"ion-nav",[["swipeBackEnabled","false"]],[[2,"animateApp",null]],null,null,Oe.b,Oe.a)),p["ɵprd"](6144,null,ie.a,null,[Ne.a]),p["ɵdid"](187,4374528,[[1,4],["content",4]],0,Ne.a,[[2,fe.a],[2,Se.a],me.a,Q.a,se.a,p.ElementRef,p.NgZone,p.Renderer,p.ComponentFactoryResolver,pe.m,Ee.a,[2,Me.a],ce.a,p.ErrorHandler],{swipeBackEnabled:[0,"swipeBackEnabled"],root:[1,"root"]},null)],function(e,t){var n=t.component;e(t,3,0,p["ɵnov"](t,187),"loggedInMemberPages","false");e(t,27,0,"light");e(t,31,0,"light");e(t,35,0,"light");e(t,49,0,n.loggedInMemberPages);e(t,57,0,n.otherPages);e(t,64,0,p["ɵnov"](t,187),"loggedInSubAdminMenu","false");e(t,88,0,"light");e(t,92,0,"light");e(t,96,0,"light");e(t,110,0,n.loggedInSubAdminPages);e(t,118,0,n.otherPages);e(t,125,0,p["ɵnov"](t,187),"loggedInAdminMenu","false");e(t,149,0,"light");e(t,153,0,"light");e(t,157,0,"light");e(t,171,0,n.loggedInAdminPages);e(t,179,0,n.otherPages);e(t,187,0,"false",n.rootPage)},function(e,t){var n=t.component;e(t,10,0,p["ɵnov"](t,11)._sbPadding);e(t,28,0,n.Userfullname);e(t,32,0,n.usertype);e(t,36,0,n.version);e(t,41,0,p["ɵnov"](t,42).statusbarPadding,p["ɵnov"](t,42)._hasRefresher);e(t,71,0,p["ɵnov"](t,72)._sbPadding);e(t,89,0,n.Userfullname);e(t,93,0,n.usertype);e(t,97,0,n.version);e(t,102,0,p["ɵnov"](t,103).statusbarPadding,p["ɵnov"](t,103)._hasRefresher);e(t,132,0,p["ɵnov"](t,133)._sbPadding);e(t,150,0,n.Userfullname);e(t,154,0,n.usertype);e(t,158,0,n.version);e(t,163,0,p["ɵnov"](t,164).statusbarPadding,p["ɵnov"](t,164)._hasRefresher);e(t,185,0,1==n.animateVarible)})}Object.defineProperty(t,"__esModule",{value:!0});var d=n(43),p=n(0),c=(n(1),n(15),n(51)),m=n(187),g=function(){function e(e){this.events=e}return e.prototype.intercept=function(e,t){return t.handle(e).pipe(Object(c.catchError)(this.handleError.bind(this)))},e.prototype.handleError=function(e){return console.log(e.error.message),401!==parseInt(e.error.status)&&500!==e.error.status||this.events.publish("user:logout"),Object(m._throw)(e)},e}(),f=n(66),y=function(){function e(e){this.auth=e}return e.prototype.intercept=function(e,t){var n=this.addToken(e);return t.handle(n)},e.prototype.addToken=function(e){var t=this.auth.currentUserValue;if(t){return e.clone({setHeaders:{Authorization:"Bearer "+t.token}})}return e},e}(),h=(n(676),n(222)),b=this&&this.__awaiter||function(e,t,n,l){return new(n||(n=Promise))(function(a,o){function r(e){try{u(l.next(e))}catch(e){o(e)}}function i(e){try{u(l.throw(e))}catch(e){o(e)}}function u(e){e.done?a(e.value):new n(function(t){t(e.value)}).then(r,i)}u((l=l.apply(e,t||[])).next())})},P=this&&this.__generator||function(e,t){function n(n){return function(r){return function(n){if(l)throw new TypeError("Generator is already executing.");for(;i;)try{if(l=1,a&&(o=a[2&n[0]?"return":n[0]?"throw":"next"])&&!(o=o.call(a,n[1])).done)return o;switch(a=0,o&&(n=[0,o.value]),n[0]){case 0:case 1:o=n;break;case 4:return i.label++,{value:n[1],done:!1};case 5:i.label++,a=n[1],n=[0];continue;case 7:n=i.ops.pop(),i.trys.pop();continue;default:if(o=i.trys,!(o=o.length>0&&o[o.length-1])&&(6===n[0]||2===n[0])){i=0;continue}if(3===n[0]&&(!o||n[1]>o[0]&&n[1]<o[3])){i.label=n[1];break}if(6===n[0]&&i.label<o[1]){i.label=o[1],o=n;break}if(o&&i.label<o[2]){i.label=o[2],i.ops.push(n);break}o[2]&&i.ops.pop(),i.trys.pop();continue}n=t.call(e,i)}catch(e){n=[6,e],a=0}finally{l=o=0}if(5&n[0])throw n[1];return{value:n[0]?n[1]:void 0,done:!0}}([n,r])}}var l,a,o,r,i={label:0,sent:function(){if(1&o[0])throw o[1];return o[1]},trys:[],ops:[]};return r={next:n(0),throw:n(1),return:n(2)},"function"==typeof Symbol&&(r[Symbol.iterator]=function(){return this}),r},v=h.c.StatusBar,R=h.c.SplashScreen,S=h.c.Storage,C=function(){function e(e,t,n,l,a,o){this.platform=e,this.events=t,this.app=n,this.alertCtrl=l,this.menu=a,this.auth=o,this.version="1.0.0",this.isStatusBarLight=!0,this.loggedInAdminPages=[{icon:"football",color:"light",title:"All Games",component:"AllMatchesPage"},{icon:"person",color:"light",title:"My Profile",component:"ProfilePage"},{icon:"people",color:"light",title:"SubAdmins",component:"UserSubAdminsPage"},{icon:"people",color:"light",title:"Members",component:"UserMembersPage"},{icon:"football",color:"light",title:"Games",component:"GamesPage"},{icon:"football",color:"light",title:"Predictions",component:"PredictionsPage"},{icon:"build",color:"light",title:"Settings",component:"SettingPage"},{icon:"card",color:"light",title:"Payments",component:"PaymentsPage"},{icon:"podium",color:"light",title:"Reports",component:"ReportsPage"}],this.loggedInSubAdminPages=[{icon:"football",color:"light",title:"All Games",component:"AllMatchesPage"},{icon:"person",color:"light",title:"My Profile",component:"ProfilePage"},{icon:"football",color:"light",title:"My Predictions",component:"PredictionsPage"},{icon:"build",color:"light",title:"Settings",component:"SettingPage"}],this.loggedInMemberPages=[{icon:"football",color:"light",title:"My Games",component:"AllMatchesPage"},{icon:"person",color:"light",title:"My Profile",component:"ProfilePage"}],this.otherPages=[{icon:"help-circle",color:"light",title:"Help",component:"HelpPage"},{icon:"briefcase",color:"light",title:"Terms",component:"TermsPage"},{icon:"log-out",color:"danger",title:"Logout",component:"SignInPage"}],this.animateVarible=!1,this.HAS_LOGGED_IN="hasLoggedIn",this.initializeApp()}return e.prototype.initializeApp=function(){this.listenToEvents(),this.platformReady()},e.prototype.platformReady=function(){return b(this,void 0,void 0,function(){var e=this;return P(this,function(t){switch(t.label){case 0:return this.platform.ready().then(function(){e.changeStatusBar(),e.hideSplash(),e.androidExitAppOnBackButton()}),this.platform.resume.subscribe(function(){return b(e,void 0,void 0,function(){return P(this,function(e){return console.log("Resume event detected"),[2]})})}),[4,S.get({key:this.HAS_LOGGED_IN})];case 1:return"true"==t.sent().value?this.auth.currentUserDataValue&&(this.Userfullname=this.auth.currentUserDataValue.name,this.usertype=this.auth.currentUserDataValue.user_type,this.enableMenu(!0,this.usertype)):this.rootPage="SignInPage",[2]}})})},e.prototype.changeStatusBar=function(){v.show(),v.setStyle({style:this.isStatusBarLight?h.d.Dark:h.d.Light}),this.isStatusBarLight=!this.isStatusBarLight,v.setOverlaysWebView({overlay:!1}),v.setBackgroundColor({color:"#0f5656"})},e.prototype.hideSplash=function(){R.hide()},e.prototype.listenToEvents=function(){var e=this;this.events.subscribe("user:signup",function(){e.enableMenu(!0,"")}),this.events.subscribe("user:logout",function(){e.nav.setRoot("SignInPage"),e.enableMenu(!1,""),e.auth.logout()}),this.events.subscribe("user:login",function(t,n){e.Userfullname=n,e.usertype=t,e.enableMenu(!0,t)})},e.prototype.enableMenu=function(e,t){"Member"===t?(this.menu.enable(e,"loggedInMemberPages"),this.menu.enable(!e,"loggedInAdminMenu"),this.menu.enable(!e,"loggedInSubAdminMenu")):"Admin"===t?(this.menu.enable(e,"loggedInAdminMenu"),this.menu.enable(!e,"loggedInMemberPages"),this.menu.enable(!e,"loggedInSubAdminMenu")):"SubAdmin"===t&&(this.menu.enable(e,"loggedInSubAdminMenu"),this.menu.enable(!e,"loggedInMemberPages"),this.menu.enable(!e,"loggedInAdminMenu"))},e.prototype.openPage=function(e){this.nav.setRoot(e),this.activePage=e,this.LogOutFunction(e)},e.prototype.LogOutFunction=function(e){"SignInPage"===e&&(this.events.publish("user:logout"),this.nav.setRoot(e),this.auth.logout())},e.prototype.androidExitAppOnBackButton=function(){var e=this;this.platform.is("android")&&this.platform.registerBackButtonAction(function(){var t=e.app.getActiveNavs()[0],n=t.getActive();if(t.canGoBack())t.pop();else if("AllMatchesPage"===n.component){e.alertCtrl.create({title:"Exit Sur3Odds?",message:"Do you want to exit Sur3Odds?",buttons:[{text:"Yes",handler:function(){e.platform.exitApp()}},{text:"No",role:"cancel",handler:function(){}}]}).present()}})},e}(),w=n(57),O=n(205),N=n(142),E=n(217),M=n(126),U=n(231),I=n(229),j=n(228),F=n(221),T=(n(89),n(224)),A=function(){return function(){}}(),_=n(75),H=n(206),k=n(207),L=n(208),D=n(209),x=n(210),G=n(211),B=n(212),q=n(213),V=n(214),$=n(677),z=n(383),Z=n(388),J=n(387),K=n(386),X=n(143),Y=n(28),W=n(25),Q=n(3),ee=n(53),te=n(67),ne=n(170),le=n(36),ae=n(34),oe=n(62),re=n(678),ie=n(35),ue=n(114),se=n(5),de=n(31),pe=n(8),ce=n(10),me=n(9),ge=n(54),fe=n(7),ye=n(151),he=n(38),be=n(153),Pe=n(68),ve=n(91),Re=n(30),Se=n(20),Ce=n(60),we=n(14),Oe=n(679),Ne=n(80),Ee=n(33),Me=n(18),Ue=n(99),Ie=n(93),je=p["ɵcrt"]({encapsulation:2,styles:[],data:{}}),Fe=p["ɵccf"]("ng-component",C,function(e){return p["ɵvid"](0,[(e()(),p["ɵeld"](0,0,null,null,1,"ng-component",[],null,null,null,s,je)),p["ɵdid"](1,49152,null,0,C,[se.a,Ue.a,me.a,Ie.a,le.a,f.a],null,null)],null,null)},{},{},[]),Te=n(189),Ae=n(24),_e=n(77),He=n(141),ke=n(52),Le=n(139),De=n(202),xe=n(146),Ge=n(50),Be=n(144),qe=n(95),Ve=n(96),$e=n(194),ze=n(191),Ze=n(59),Je=n(379),Ke=n(190),Xe=n(172),Ye=n(192),We=n(380),Qe=n(226),et=n(157),tt=p["ɵcmf"](A,[_.b],function(e){return p["ɵmod"]([p["ɵmpd"](512,p.ComponentFactoryResolver,p["ɵCodegenComponentFactoryResolver"],[[8,[H.a,k.a,L.a,D.a,x.a,G.a,B.a,q.a,V.a,$.a,z.b,z.c,Z.a,J.a,K.a,Fe]],[3,p.ComponentFactoryResolver],p.NgModuleRef]),p["ɵmpd"](5120,p.LOCALE_ID,p["ɵq"],[[3,p.LOCALE_ID]]),p["ɵmpd"](4608,we.NgLocalization,we.NgLocaleLocalization,[p.LOCALE_ID,[2,we["ɵa"]]]),p["ɵmpd"](5120,p.APP_ID,p["ɵi"],[]),p["ɵmpd"](5120,p.IterableDiffers,p["ɵn"],[]),p["ɵmpd"](5120,p.KeyValueDiffers,p["ɵo"],[]),p["ɵmpd"](4608,d.c,d.q,[we.DOCUMENT]),p["ɵmpd"](6144,p.Sanitizer,null,[d.c]),p["ɵmpd"](4608,d.f,Te.a,[]),p["ɵmpd"](5120,d.d,function(e,t,n,l,a){return[new d.k(e,t),new d.o(n),new d.n(l,a)]},[we.DOCUMENT,p.NgZone,we.DOCUMENT,we.DOCUMENT,d.f]),p["ɵmpd"](4608,d.e,d.e,[d.d,p.NgZone]),p["ɵmpd"](135680,d.m,d.m,[we.DOCUMENT]),p["ɵmpd"](4608,d.l,d.l,[d.e,d.m]),p["ɵmpd"](6144,p.RendererFactory2,null,[d.l]),p["ɵmpd"](6144,d.p,null,[d.m]),p["ɵmpd"](4608,p.Testability,p.Testability,[p.NgZone]),p["ɵmpd"](4608,d.h,d.h,[we.DOCUMENT]),p["ɵmpd"](4608,d.i,d.i,[we.DOCUMENT]),p["ɵmpd"](4608,Ae["ɵi"],Ae["ɵi"],[]),p["ɵmpd"](4608,Ae.FormBuilder,Ae.FormBuilder,[]),p["ɵmpd"](5120,_e.b,_e.d,[me.a,_e.a]),p["ɵmpd"](5120,we.LocationStrategy,He.c,[we.PlatformLocation,[2,we.APP_BASE_HREF],Q.a]),p["ɵmpd"](4608,we.Location,we.Location,[we.LocationStrategy]),p["ɵmpd"](5120,Me.a,Me.b,[me.a,_e.b,we.Location,ke.b,p.ComponentFactoryResolver]),p["ɵmpd"](4608,Le.a,Le.a,[me.a,Q.a,Me.a]),p["ɵmpd"](4608,w.i,w.o,[we.DOCUMENT,p.PLATFORM_ID,w.m]),p["ɵmpd"](4608,w.p,w.p,[w.i,w.n]),p["ɵmpd"](4608,w.l,w.l,[]),p["ɵmpd"](6144,w.j,null,[w.l]),p["ɵmpd"](4608,w.h,w.h,[w.j]),p["ɵmpd"](6144,w.b,null,[w.h]),p["ɵmpd"](4608,w.f,w.k,[w.b,p.Injector]),p["ɵmpd"](4608,w.c,w.c,[w.f]),p["ɵmpd"](4608,M.a,M.a,[]),p["ɵmpd"](4608,De.a,De.a,[me.a,Q.a]),p["ɵmpd"](4608,f.a,f.a,[w.c,M.a,se.a,De.a]),p["ɵmpd"](4608,Ue.a,Ue.a,[]),p["ɵmpd"](5120,w.a,function(e,t,n){return[e,new y(t),new g(n)]},[w.p,f.a,Ue.a]),p["ɵmpd"](4608,xe.a,xe.a,[me.a,Q.a]),p["ɵmpd"](4608,Ie.a,Ie.a,[me.a,Q.a]),p["ɵmpd"](4608,W.a,W.a,[]),p["ɵmpd"](4608,Ge.a,Ge.a,[se.a]),p["ɵmpd"](4608,de.a,de.a,[Q.a,se.a,p.NgZone,ce.a]),p["ɵmpd"](4608,Be.a,Be.a,[me.a,Q.a]),p["ɵmpd"](4608,qe.a,qe.a,[me.a,Q.a,Me.a]),p["ɵmpd"](4608,Ve.a,Ve.a,[me.a,Q.a]),p["ɵmpd"](4608,$e.a,$e.a,[me.a,Q.a,Me.a]),p["ɵmpd"](4608,ze.a,ze.a,[Q.a,se.a,ce.a,me.a,pe.m]),p["ɵmpd"](4608,Ee.a,Ee.a,[se.a,Q.a]),p["ɵmpd"](4608,Ze.a,Ze.a,[]),p["ɵmpd"](4608,T.a,T.a,[]),p["ɵmpd"](4608,E.a,E.a,[w.c]),p["ɵmpd"](4608,O.a,O.a,[w.c]),p["ɵmpd"](4608,F.a,F.a,[w.c,M.a,se.a]),p["ɵmpd"](512,we.CommonModule,we.CommonModule,[]),p["ɵmpd"](512,p.ErrorHandler,Je.a,[]),p["ɵmpd"](256,Q.b,{backButtonText:"",backButtonIcon:"md-arrow-back",iconMode:"md",mode:"md",modalEnter:"modal-slide-in",modalLeave:"modal-slide-out",tabsPlacement:"top",pageTransition:"md"},[]),p["ɵmpd"](1024,Ke.a,Ke.b,[]),p["ɵmpd"](1024,se.a,se.b,[d.b,Ke.a,p.NgZone]),p["ɵmpd"](1024,Q.a,Q.c,[Q.b,se.a]),p["ɵmpd"](512,ce.a,ce.a,[se.a]),p["ɵmpd"](512,le.a,le.a,[]),p["ɵmpd"](512,me.a,me.a,[Q.a,se.a,[2,le.a]]),p["ɵmpd"](512,pe.m,pe.m,[me.a]),p["ɵmpd"](256,_e.a,{links:[{loadChildren:"../pages/all-matches/all-matches.module.ngfactory#AllMatchesPageModuleNgFactory",name:"AllMatchesPage",segment:"all-matches",priority:"low",defaultHistory:[]},{loadChildren:"../pages/free-tips/free-tips.module.ngfactory#FreeTipsPageModuleNgFactory",name:"FreeTipsPage",segment:"free-tips",priority:"low",defaultHistory:[]},{loadChildren:"../pages/game-create/game-create.module.ngfactory#GameCreatePageModuleNgFactory",name:"GameCreatePage",segment:"game-create",priority:"low",defaultHistory:[]},{loadChildren:"../pages/game-edit/game-edit.module.ngfactory#GameEditPageModuleNgFactory",name:"GameEditPage",segment:"game-edit",priority:"low",defaultHistory:[]},{loadChildren:"../pages/game-new/game-new.module.ngfactory#GameNewPageModuleNgFactory",name:"GameNewPage",segment:"game-new",priority:"low",defaultHistory:[]},{loadChildren:"../pages/games/games.module.ngfactory#GamesPageModuleNgFactory",name:"GamesPage",segment:"games",priority:"low",defaultHistory:[]},{loadChildren:"../pages/help/help.module.ngfactory#HelpPageModuleNgFactory",name:"HelpPage",segment:"help",priority:"low",defaultHistory:[]},{loadChildren:"../pages/match-comments/match-comments.module.ngfactory#MatchCommentsPageModuleNgFactory",name:"MatchCommentsPage",segment:"match-comments",priority:"low",defaultHistory:[]},{loadChildren:"../pages/match-details/match-details.module.ngfactory#MatchDetailsPageModuleNgFactory",name:"MatchDetailsPage",segment:"match-details",priority:"low",defaultHistory:[]},{loadChildren:"../pages/match-votes/match-votes.module.ngfactory#MatchVotesPageModuleNgFactory",name:"MatchVotesPage",segment:"match-votes",priority:"low",defaultHistory:[]},{loadChildren:"../pages/payment-details/payment-details.module.ngfactory#PaymentDetailsPageModuleNgFactory",name:"PaymentDetailsPage",segment:"payment-details",priority:"low",defaultHistory:[]},{loadChildren:"../pages/payment-plans/payment-plans.module.ngfactory#PaymentPlansPageModuleNgFactory",name:"PaymentPlansPage",segment:"payment-plans",priority:"low",defaultHistory:[]},{loadChildren:"../pages/payment-plantype-edit/payment-plantype-edit.module.ngfactory#PaymentPlantypeEditPageModuleNgFactory",name:"PaymentPlantypeEditPage",segment:"payment-plantype-edit",priority:"low",defaultHistory:[]},{loadChildren:"../pages/payment-sets/payment-sets.module.ngfactory#PaymentSetsPageModuleNgFactory",name:"PaymentSetsPage",segment:"payment-sets",priority:"low",defaultHistory:[]},{loadChildren:"../pages/payment-plantypes/payment-plantypes.module.ngfactory#PaymentPlantypesPageModuleNgFactory",name:"PaymentPlantypesPage",segment:"payment-plantypes",priority:"low",defaultHistory:[]},{loadChildren:"../pages/prediction-add/prediction-add.module.ngfactory#PredictionAddPageModuleNgFactory",name:"PredictionAddPage",segment:"prediction-add",priority:"low",defaultHistory:[]},{loadChildren:"../pages/prediction-edit/prediction-edit.module.ngfactory#PredictionEditPageModuleNgFactory",name:"PredictionEditPage",segment:"prediction-edit",priority:"low",defaultHistory:[]},{loadChildren:"../pages/payments/payments.module.ngfactory#PaymentsPageModuleNgFactory",name:"PaymentsPage",segment:"payments",priority:"low",defaultHistory:[]},{loadChildren:"../pages/profile/profile.module.ngfactory#ProfilePageModuleNgFactory",name:"ProfilePage",segment:"profile",priority:"low",defaultHistory:[]},{loadChildren:"../pages/predictions/predictions.module.ngfactory#PredictionsPageModuleNgFactory",name:"PredictionsPage",segment:"predictions",priority:"low",defaultHistory:[]},{loadChildren:"../pages/reports/reports.module.ngfactory#ReportsPageModuleNgFactory",name:"ReportsPage",segment:"reports",priority:"low",defaultHistory:[]},{loadChildren:"../pages/report-general/report-general.module.ngfactory#ReportGeneralPageModuleNgFactory",name:"ReportGeneralPage",segment:"report-general",priority:"low",defaultHistory:[]},{loadChildren:"../pages/report-monthly/report-monthly.module.ngfactory#ReportMonthlyPageModuleNgFactory",name:"ReportMonthlyPage",segment:"report-monthly",priority:"low",defaultHistory:[]},{loadChildren:"../pages/setting-country-add/setting-country-add.module.ngfactory#SettingCountryAddPageModuleNgFactory",name:"SettingCountryAddPage",segment:"setting-country-add",priority:"low",defaultHistory:[]},{loadChildren:"../pages/setting-country-edit/setting-country-edit.module.ngfactory#SettingCountryEditPageModuleNgFactory",name:"SettingCountryEditPage",segment:"setting-country-edit",priority:"low",defaultHistory:[]},{loadChildren:"../pages/setting-league-edit/setting-league-edit.module.ngfactory#SettingLeagueEditPageModuleNgFactory",name:"SettingLeagueEditPage",segment:"setting-league-edit",priority:"low",defaultHistory:[]},{loadChildren:"../pages/setting-country/setting-country.module.ngfactory#SettingCountryPageModuleNgFactory",name:"SettingCountryPage",segment:"setting-country",priority:"low",defaultHistory:[]},{loadChildren:"../pages/setting-league-add/setting-league-add.module.ngfactory#SettingLeagueAddPageModuleNgFactory",name:"SettingLeagueAddPage",segment:"setting-league-add",priority:"low",defaultHistory:[]},{loadChildren:"../pages/setting-leagues/setting-leagues.module.ngfactory#SettingLeaguesPageModuleNgFactory",name:"SettingLeaguesPage",segment:"setting-leagues",priority:"low",defaultHistory:[]},{loadChildren:"../pages/setting-league-view/setting-league-view.module.ngfactory#SettingLeagueViewPageModuleNgFactory",name:"SettingLeagueViewPage",segment:"setting-league-view",priority:"low",defaultHistory:[]},{loadChildren:"../pages/setting-selection-add/setting-selection-add.module.ngfactory#SettingSelectionAddPageModuleNgFactory",name:"SettingSelectionAddPage",segment:"setting-selection-add",priority:"low",defaultHistory:[]},{loadChildren:"../pages/setting-selection-edit/setting-selection-edit.module.ngfactory#SettingSelectionEditPageModuleNgFactory",name:"SettingSelectionEditPage",segment:"setting-selection-edit",priority:"low",defaultHistory:[]},{loadChildren:"../pages/setting-selections/setting-selections.module.ngfactory#SettingSelectionsPageModuleNgFactory",name:"SettingSelectionsPage",segment:"setting-selections",priority:"low",defaultHistory:[]},{loadChildren:"../pages/setting-team-assign/setting-team-assign.module.ngfactory#SettingTeamAssignPageModuleNgFactory",name:"SettingTeamAssignPage",segment:"setting-team-assign",priority:"low",defaultHistory:[]},{loadChildren:"../pages/setting-team-add/setting-team-add.module.ngfactory#SettingTeamAddPageModuleNgFactory",name:"SettingTeamAddPage",segment:"setting-team-add",priority:"low",defaultHistory:[]},{loadChildren:"../pages/setting-team-edit/setting-team-edit.module.ngfactory#SettingTeamEditPageModuleNgFactory",name:"SettingTeamEditPage",segment:"setting-team-edit",priority:"low",defaultHistory:[]},{loadChildren:"../pages/setting-team-manage/setting-team-manage.module.ngfactory#SettingTeamManagePageModuleNgFactory",name:"SettingTeamManagePage",segment:"setting-team-manage",priority:"low",defaultHistory:[]},{loadChildren:"../pages/setting-teams/setting-teams.module.ngfactory#SettingTeamsPageModuleNgFactory",name:"SettingTeamsPage",segment:"setting-teams",priority:"low",defaultHistory:[]},{loadChildren:"../pages/setting-team-view/setting-team-view.module.ngfactory#SettingTeamViewPageModuleNgFactory",name:"SettingTeamViewPage",segment:"setting-team-view",priority:"low",defaultHistory:[]},{loadChildren:"../pages/sign-in/sign-in.module.ngfactory#SignInPageModuleNgFactory",name:"SignInPage",segment:"sign-in",priority:"low",defaultHistory:[]},{loadChildren:"../pages/setting/setting.module.ngfactory#SettingPageModuleNgFactory",name:"SettingPage",segment:"setting",priority:"low",defaultHistory:[]},{loadChildren:"../pages/sign-up/sign-up.module.ngfactory#SignUpPageModuleNgFactory",name:"SignUpPage",segment:"sign-up",priority:"low",defaultHistory:[]},{loadChildren:"../pages/subscription-android/subscription-android.module.ngfactory#SubscriptionAndroidPageModuleNgFactory",name:"SubscriptionAndroidPage",segment:"subscription-android",priority:"low",defaultHistory:[]},{loadChildren:"../pages/terms/terms.module.ngfactory#TermsPageModuleNgFactory",name:"TermsPage",segment:"terms",priority:"low",defaultHistory:[]},{loadChildren:"../pages/subscription-ios/subscription-ios.module.ngfactory#SubscriptionIosPageModuleNgFactory",name:"SubscriptionIosPage",segment:"subscription-ios",priority:"low",defaultHistory:[]},{loadChildren:"../pages/user-member-add/user-member-add.module.ngfactory#UserMemberAddPageModuleNgFactory",name:"UserMemberAddPage",segment:"user-member-add",priority:"low",defaultHistory:[]},{loadChildren:"../pages/user-member-edit/user-member-edit.module.ngfactory#UserMemberEditPageModuleNgFactory",name:"UserMemberEditPage",segment:"user-member-edit",priority:"low",defaultHistory:[]},{loadChildren:"../pages/user-sub-admin-add/user-sub-admin-add.module.ngfactory#UserSubAdminAddPageModuleNgFactory",name:"UserSubAdminAddPage",segment:"user-sub-admin-add",priority:"low",defaultHistory:[]},{loadChildren:"../pages/user-members/user-members.module.ngfactory#UserMembersPageModuleNgFactory",name:"UserMembersPage",segment:"user-members",priority:"low",defaultHistory:[]},{loadChildren:"../pages/user-sub-admins/user-sub-admins.module.ngfactory#UserSubAdminsPageModuleNgFactory",name:"UserSubAdminsPage",segment:"user-sub-admins",priority:"low",defaultHistory:[]},{loadChildren:"../pages/user-sub-admin-edit/user-sub-admin-edit.module.ngfactory#UserSubAdminEditPageModuleNgFactory",name:"UserSubAdminEditPage",segment:"user-sub-admin-edit",priority:"low",defaultHistory:[]}]},[]),p["ɵmpd"](512,p.Compiler,p.Compiler,[]),p["ɵmpd"](512,Xe.a,Xe.a,[p.Compiler]),p["ɵmpd"](1024,ke.b,ke.c,[Xe.a,p.Injector]),p["ɵmpd"](1024,p.APP_INITIALIZER,function(e,t,n,l,a,o,r,i,u,s,p,c,m){return[d.s(e),Ye.a(t),Ue.c(n,l),ze.c(a,o,r,i,u),ke.d(s,p,c,m)]},[[2,p.NgProbeToken],Q.a,se.a,ce.a,Q.a,se.a,ce.a,me.a,pe.m,Q.a,_e.a,ke.b,p.NgZone]),p["ɵmpd"](512,p.ApplicationInitStatus,p.ApplicationInitStatus,[[2,p.APP_INITIALIZER]]),p["ɵmpd"](131584,p.ApplicationRef,p.ApplicationRef,[p.NgZone,p["ɵConsole"],p.Injector,p.ErrorHandler,p.ComponentFactoryResolver,p.ApplicationInitStatus]),p["ɵmpd"](512,p.ApplicationModule,p.ApplicationModule,[p.ApplicationRef]),p["ɵmpd"](512,d.a,d.a,[[3,d.a]]),p["ɵmpd"](512,Ae["ɵba"],Ae["ɵba"],[]),p["ɵmpd"](512,Ae.FormsModule,Ae.FormsModule,[]),p["ɵmpd"](512,Ae.ReactiveFormsModule,Ae.ReactiveFormsModule,[]),p["ɵmpd"](512,He.a,He.a,[]),p["ɵmpd"](512,We.a,We.a,[]),p["ɵmpd"](512,w.e,w.e,[]),p["ɵmpd"](512,w.d,w.d,[]),p["ɵmpd"](512,He.b,He.b,[]),p["ɵmpd"](512,N.SelectSearchableModule,N.SelectSearchableModule,[]),p["ɵmpd"](512,U.a,U.a,[]),p["ɵmpd"](512,Qe.a,Qe.a,[]),p["ɵmpd"](512,I.a,I.a,[]),p["ɵmpd"](512,j.a,j.a,[]),p["ɵmpd"](512,A,A,[]),p["ɵmpd"](256,we.APP_BASE_HREF,"/",[]),p["ɵmpd"](256,w.m,"XSRF-TOKEN",[]),p["ɵmpd"](256,w.n,"X-XSRF-TOKEN",[]),p["ɵmpd"](256,ke.a,et.a,[]),p["ɵmpd"](256,_.a,C,[])])});Object(p.enableProdMode)(),Object(d.j)().bootstrapModuleFactory(tt)},66:function(e,t,n){"use strict";n.d(t,"a",function(){return c});n(1);var l=n(116),a=n(57),o=(n(15),n(51)),r=(n.n(o),n(349)),i=(n.n(r),n(672)),u=(n(126),n(119)),s=(n.n(u),n(222)),d=new i.a,p=s.c.Storage,c=function(){function e(e,t,n,l){this.http=e,this.nativeHttp=t,this.platform=n,this.toastCtrl=l,this.HAS_LOGGED_IN="hasLoggedIn",this.currentUserSubject=new r.BehaviorSubject(JSON.parse(sessionStorage.getItem("currentUser"))),this.currentUser=this.currentUserSubject.asObservable(),this.currentUserDataSubject=new r.BehaviorSubject(JSON.parse(sessionStorage.getItem("userData"))),this.currentUserData=this.currentUserDataSubject.asObservable()}return Object.defineProperty(e.prototype,"currentUserValue",{get:function(){return this.currentUserSubject.value},enumerable:!0,configurable:!0}),Object.defineProperty(e.prototype,"currentUserDataValue",{get:function(){return this.currentUserDataSubject.value},enumerable:!0,configurable:!0}),e.prototype.showToast=function(e){var t=this.toastCtrl.create({message:e,showCloseButton:!0,closeButtonText:"Ok!",duration:4e3,position:"bottom",cssClass:"#3B7A57"});t.present(t)},e.prototype.CalculatePercentage=function(e){var t=.02*parseInt(e),n=parseInt(e)+t;return parseInt(e)>=2500&&(n=parseInt(e)+100),n},e.prototype.onNativeApiCall=function(e,t){this.nativeHttp.setDataSerializer("json");var n=this.nativeHttp.get(e,t,{"Content-Type":"application/json"});return Object(u.from)(n).pipe(Object(o.map)(function(e){return JSON.parse(e.data)}))},e.prototype.login=function(e,t){var n=this;if(this.platform.is("android")||this.platform.is("ios")){return this.onNativeApiCall(l.a.apiUrl+"/users/member/authenticateuser",r={email:e,password:t}).pipe(Object(o.map)(function(e){if(200===e.statusCode){sessionStorage.setItem("currentUser",JSON.stringify(e.data)),n.currentUserSubject.next(e.data);var t=d.decodeToken(e.data.token);sessionStorage.setItem("userData",JSON.stringify(t)),n.currentUserDataSubject.next(t)}return e}))}var r=(new a.g).set("email",e).set("password",t);return this.http.get(l.a.apiUrl+"/users/member/authenticateuser",{params:r}).pipe(Object(o.map)(function(e){if(200===e.statusCode){sessionStorage.setItem("currentUser",JSON.stringify(e.data)),n.currentUserSubject.next(e.data);var t=d.decodeToken(e.data.token);sessionStorage.setItem("userData",JSON.stringify(t)),n.currentUserDataSubject.next(t)}return e}))},e.prototype.getAllPlantypes=function(){return this.http.get(l.a.apiUrl+"/payments/plantype/getall").pipe(Object(o.map)(function(e){return e}))},e.prototype.findUserDetails=function(e){return this.http.get(l.a.apiUrl+"/users/user/find/"+e).pipe(Object(o.map)(function(e){return e}))},e.prototype.GetUserDeta=function(){return this.http.get(l.a.apiUrl+"/users/user/get").pipe(Object(o.map)(function(e){return e}))},e.prototype.deleteMember=function(e){return this.http.delete(l.a.apiUrl+"/users/member/delete/"+e).pipe(Object(o.map)(function(e){return e}))},e.prototype.logout=function(){sessionStorage.removeItem("currentUser"),sessionStorage.removeItem("userData"),this.currentUserSubject.next(null),this.currentUserDataSubject.next(null),p.remove({key:"hasSeenLogin"}),p.remove({key:"access_token"})},e.prototype.GetUsersByType=function(e,t,n){var r=(new a.g).set("usertypeId",e).set("pageNo",t).set("pageSize",n);return this.http.get(l.a.apiUrl+"/users/user/type/get",{params:r}).pipe(Object(o.map)(function(e){return e}))},e.prototype.SearchUsersByType=function(e,t,n,r){var i=(new a.g).set("searchValue",e).set("usertypeId",t).set("pageNo",n).set("pageSize",r);return this.http.get(l.a.apiUrl+"/users/user/type/search",{params:i}).pipe(Object(o.map)(function(e){return e}))},e.prototype.updateUser=function(e){return this.http.put(l.a.apiUrl+"/users/user/update",e).pipe(Object(o.map)(function(e){return e}))},e.prototype.createSubAdmin=function(e){return console.log(e),this.http.post(l.a.apiUrl+"/users/subadmin/create",e).pipe(Object(o.map)(function(e){return e}))},e.prototype.deleteSubAdmin=function(e){return this.http.delete(l.a.apiUrl+"/users/subadmin/delete/"+e).pipe(Object(o.map)(function(e){return e}))},e.prototype.GetMonthlyReport=function(e){var t=(new a.g).set("selectedDate",e);return this.http.get(l.a.apiUrl+"/users/report/monthly/get",{params:t}).pipe(Object(o.map)(function(e){return e}))},e.prototype.GetAppReport=function(){return this.http.get(l.a.apiUrl+"/users/report/general/get").pipe(Object(o.map)(function(e){return e}))},e.prototype.createNewUser=function(e){return this.http.post(l.a.apiUrl+"/users/member/create",e).pipe(Object(o.map)(function(e){return e}))},e}()}},[389]);
+webpackJsonp([48],{
+
+/***/ 176:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 176;
+
+/***/ }),
+
+/***/ 219:
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"../pages/all-matches/all-matches.module": [
+		731,
+		47
+	],
+	"../pages/free-tips/free-tips.module": [
+		730,
+		46
+	],
+	"../pages/game-create/game-create.module": [
+		732,
+		45
+	],
+	"../pages/game-edit/game-edit.module": [
+		738,
+		22
+	],
+	"../pages/game-new/game-new.module": [
+		733,
+		21
+	],
+	"../pages/games/games.module": [
+		734,
+		44
+	],
+	"../pages/help/help.module": [
+		736,
+		43
+	],
+	"../pages/match-comments/match-comments.module": [
+		735,
+		24
+	],
+	"../pages/match-details/match-details.module": [
+		737,
+		42
+	],
+	"../pages/match-votes/match-votes.module": [
+		739,
+		5
+	],
+	"../pages/payment-details/payment-details.module": [
+		740,
+		41
+	],
+	"../pages/payment-plans/payment-plans.module": [
+		741,
+		40
+	],
+	"../pages/payment-plantype-edit/payment-plantype-edit.module": [
+		742,
+		13
+	],
+	"../pages/payment-plantypes/payment-plantypes.module": [
+		743,
+		39
+	],
+	"../pages/payment-sets/payment-sets.module": [
+		744,
+		38
+	],
+	"../pages/payments/payments.module": [
+		319
+	],
+	"../pages/prediction-add/prediction-add.module": [
+		745,
+		12
+	],
+	"../pages/prediction-edit/prediction-edit.module": [
+		746,
+		11
+	],
+	"../pages/predictions/predictions.module": [
+		747,
+		37
+	],
+	"../pages/profile/profile.module": [
+		748,
+		0
+	],
+	"../pages/report-general/report-general.module": [
+		749,
+		36
+	],
+	"../pages/report-monthly/report-monthly.module": [
+		750,
+		35
+	],
+	"../pages/reports/reports.module": [
+		325
+	],
+	"../pages/setting-country-add/setting-country-add.module": [
+		751,
+		4
+	],
+	"../pages/setting-country-edit/setting-country-edit.module": [
+		752,
+		23
+	],
+	"../pages/setting-country/setting-country.module": [
+		753,
+		34
+	],
+	"../pages/setting-league-add/setting-league-add.module": [
+		754,
+		20
+	],
+	"../pages/setting-league-edit/setting-league-edit.module": [
+		755,
+		19
+	],
+	"../pages/setting-league-view/setting-league-view.module": [
+		756,
+		33
+	],
+	"../pages/setting-leagues/setting-leagues.module": [
+		757,
+		32
+	],
+	"../pages/setting-selection-add/setting-selection-add.module": [
+		758,
+		10
+	],
+	"../pages/setting-selection-edit/setting-selection-edit.module": [
+		759,
+		9
+	],
+	"../pages/setting-selections/setting-selections.module": [
+		760,
+		31
+	],
+	"../pages/setting-team-add/setting-team-add.module": [
+		761,
+		3
+	],
+	"../pages/setting-team-assign/setting-team-assign.module": [
+		762,
+		8
+	],
+	"../pages/setting-team-edit/setting-team-edit.module": [
+		764,
+		7
+	],
+	"../pages/setting-team-manage/setting-team-manage.module": [
+		763,
+		6
+	],
+	"../pages/setting-team-view/setting-team-view.module": [
+		765,
+		30
+	],
+	"../pages/setting-teams/setting-teams.module": [
+		766,
+		29
+	],
+	"../pages/setting/setting.module": [
+		326
+	],
+	"../pages/sign-in/sign-in.module": [
+		767,
+		28
+	],
+	"../pages/sign-up/sign-up.module": [
+		768,
+		18
+	],
+	"../pages/subscription-android/subscription-android.module": [
+		769,
+		1
+	],
+	"../pages/subscription-ios/subscription-ios.module": [
+		770,
+		17
+	],
+	"../pages/terms/terms.module": [
+		771,
+		27
+	],
+	"../pages/user-member-add/user-member-add.module": [
+		774,
+		16
+	],
+	"../pages/user-member-edit/user-member-edit.module": [
+		777,
+		2
+	],
+	"../pages/user-members/user-members.module": [
+		772,
+		26
+	],
+	"../pages/user-sub-admin-add/user-sub-admin-add.module": [
+		773,
+		15
+	],
+	"../pages/user-sub-admin-edit/user-sub-admin-edit.module": [
+		775,
+		14
+	],
+	"../pages/user-sub-admins/user-sub-admins.module": [
+		776,
+		25
+	]
+};
+function webpackAsyncContext(req) {
+	var ids = map[req];
+	if(!ids)
+		return Promise.reject(new Error("Cannot find module '" + req + "'."));
+	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
+		return __webpack_require__(ids[0]);
+	});
+};
+webpackAsyncContext.keys = function webpackAsyncContextKeys() {
+	return Object.keys(map);
+};
+webpackAsyncContext.id = 219;
+module.exports = webpackAsyncContext;
+
+/***/ }),
+
+/***/ 319:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaymentsPageModule", function() { return PaymentsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__payments__ = __webpack_require__(701);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic2_super_tabs__ = __webpack_require__(67);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var PaymentsPageModule = /** @class */ (function () {
+    function PaymentsPageModule() {
+    }
+    PaymentsPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__payments__["a" /* PaymentsPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__payments__["a" /* PaymentsPage */]),
+                __WEBPACK_IMPORTED_MODULE_3_ionic2_super_tabs__["b" /* SuperTabsModule */],
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"], __WEBPACK_IMPORTED_MODULE_0__angular_core__["NO_ERRORS_SCHEMA"]]
+        })
+    ], PaymentsPageModule);
+    return PaymentsPageModule;
+}());
+
+//# sourceMappingURL=payments.module.js.map
+
+/***/ }),
+
+/***/ 325:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReportsPageModule", function() { return ReportsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reports__ = __webpack_require__(703);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic2_super_tabs__ = __webpack_require__(67);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var ReportsPageModule = /** @class */ (function () {
+    function ReportsPageModule() {
+    }
+    ReportsPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__reports__["a" /* ReportsPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__reports__["a" /* ReportsPage */]),
+                __WEBPACK_IMPORTED_MODULE_3_ionic2_super_tabs__["b" /* SuperTabsModule */],
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"], __WEBPACK_IMPORTED_MODULE_0__angular_core__["NO_ERRORS_SCHEMA"]]
+        })
+    ], ReportsPageModule);
+    return ReportsPageModule;
+}());
+
+//# sourceMappingURL=reports.module.js.map
+
+/***/ }),
+
+/***/ 326:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingPageModule", function() { return SettingPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting__ = __webpack_require__(704);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var SettingPageModule = /** @class */ (function () {
+    function SettingPageModule() {
+    }
+    SettingPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__setting__["a" /* SettingPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting__["a" /* SettingPage */]),
+            ],
+        })
+    ], SettingPageModule);
+    return SettingPageModule;
+}());
+
+//# sourceMappingURL=setting.module.js.map
+
+/***/ }),
+
+/***/ 369:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GamesProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_operators__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_operators___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(86);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var GamesProvider = /** @class */ (function () {
+    function GamesProvider(http) {
+        this.http = http;
+    }
+    GamesProvider.prototype.getDate = function () {
+        this.today = new Date();
+        this.day = this.today.getDate();
+        this.month = this.today.getMonth() + 1;
+        this.year = this.today.getFullYear();
+        if (this.day < 10) {
+            this.day = '0' + this.day;
+        }
+        if (this.month < 10) {
+            this.month = '0' + this.month;
+        }
+        this.today = this.year + '-' + this.month + '-' + this.day;
+        return this.today;
+    };
+    //-------------------------Game -----Start----------------------------
+    GamesProvider.prototype.GetGames = function (matchDate) {
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpParams */]().set("matchDate", String(matchDate));
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/game/user/get", { params: params })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.GetAppVersion = function () {
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/users/app/getversion", {})
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.computeOldMatchDate = function (group) {
+        if (group.day_num < 10) {
+            group.day_num = '0' + group.day_num;
+        }
+        if (group.month < 10) {
+            group.month = '0' + group.month;
+        }
+        var date = group.year + '-' + group.month + '-' + group.day_num;
+        return date;
+    };
+    GamesProvider.prototype.addGame = function (game) {
+        return this.http.post(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/game/add", game).pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.updateGame = function (game) {
+        return this.http.put(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/game/update", game).pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.deleteGame = function (id) {
+        return this.http.delete(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/game/delete/" + id)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.createGame = function (predictionId, setId, statusId) {
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpParams */]()
+            .set('predictionId', predictionId)
+            .set('setId', setId)
+            .set('statusId', statusId);
+        console.log(params);
+        return this.http.post(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/game/create", params).pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    //-------------------------Game -----End----------------------------
+    //-------------------------Votes -----Start----------------------------
+    GamesProvider.prototype.GetGameVotes = function (id) {
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/vote/get_game_votes/" + id)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.createVote = function (vote) {
+        return this.http.post(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/vote/create", vote).pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    //-------------------------Votes -----End---------------------------------
+    //-------------------------Comments -----Start----------------------------
+    GamesProvider.prototype.GetGameComments = function (id) {
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/comment/get_game_comments/" + id)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.createComment = function (comments) {
+        return this.http.post(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/comment/create", comments).pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    //-------------------------Comments -----End----------------------------
+    //-------------------------Countries -----Start----------------------------
+    GamesProvider.prototype.GetCountries = function (pageNo, pageSize) {
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpParams */]()
+            .set('pageNo', pageNo)
+            .set('pageSize', pageSize);
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/country/getall", { params: params })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.Getcountries = function () {
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/country/get_all")
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.SearchCountries = function (searchValue, pageNo, pageSize) {
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpParams */]()
+            .set('searchValue', searchValue)
+            .set('pageNo', pageNo)
+            .set('pageSize', pageSize);
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/country/search", { params: params })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.createCountry = function (country) {
+        return this.http.post(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/country/create", country).pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.updateCountry = function (country) {
+        return this.http.put(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/country/update", country).pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.deleteCountry = function (id) {
+        return this.http.delete(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/country/delete/" + id)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.GetLeaguesByCountryID = function (id) {
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/country/leagues/get/" + id)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.SearchLeaguesByCountryIDAndName = function (searchValue, countryId) {
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpParams */]()
+            .set('searchValue', searchValue)
+            .set('countryId', countryId);
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/country/leagues/search", { params: params })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    //-------------------------Countries -----End----------------------------
+    //-------------------------Leagues-----Start----------------------------
+    GamesProvider.prototype.GetLeagues = function (pageNo, pageSize) {
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpParams */]()
+            .set('pageNo', pageNo)
+            .set('pageSize', pageSize);
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/league/getall", { params: params })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.SearchLeagues = function (searchValue, pageNo, pageSize) {
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpParams */]()
+            .set('searchValue', searchValue)
+            .set('pageNo', pageNo)
+            .set('pageSize', pageSize);
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/league/search", { params: params })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.deleteLeague = function (id) {
+        return this.http.delete(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/league/delete/" + id)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.updateLeague = function (league) {
+        return this.http.put(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/league/update", league).pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.createLeague = function (league) {
+        return this.http.post(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/league/create", league).pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.GetTeamsByLeagueId = function (leagueId, pageNo, pageSize) {
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpParams */]()
+            .set('leagueId', leagueId)
+            .set('pageNo', pageNo)
+            .set('pageSize', pageSize);
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/league/teams/get", { params: params })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.SearchTeamsByLeagueIdAndName = function (searchValue, leagueId, pageNo, pageSize) {
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpParams */]()
+            .set('searchValue', searchValue)
+            .set('leagueId', leagueId)
+            .set('pageNo', pageNo)
+            .set('pageSize', pageSize);
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/league/teams/search", { params: params })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.getTeamsByLeagueId = function (id) {
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/league/teams/getall/" + id)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    //-------------------------Leagues------End----------------------------
+    //-------------------------Teams------Start----------------------------
+    GamesProvider.prototype.GetTeams = function (pageNo, pageSize) {
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpParams */]()
+            .set('pageNo', pageNo)
+            .set('pageSize', pageSize);
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/team/getall", { params: params })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.SearchTeams = function (searchValue, pageNo, pageSize) {
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpParams */]()
+            .set('searchValue', searchValue)
+            .set('pageNo', pageNo)
+            .set('pageSize', pageSize);
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/team/search", { params: params })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.updateTeam = function (team) {
+        return this.http.put(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/team/update", team).pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.deleteTeam = function (id) {
+        return this.http.delete(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/team/delete/" + id)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.createTeam = function (team) {
+        return this.http.post(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/team/create", team).pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    //-------------------------Selections -----Start-------------------------
+    GamesProvider.prototype.GetSelections = function (pageNo, pageSize) {
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpParams */]()
+            .set('pageNo', pageNo)
+            .set('pageSize', pageSize);
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/selection/getall", { params: params })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.SearchSelections = function (searchValue, pageNo, pageSize) {
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpParams */]()
+            .set('searchValue', searchValue)
+            .set('pageNo', pageNo)
+            .set('pageSize', pageSize);
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/selection/search", { params: params })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.createSelection = function (selection) {
+        return this.http.post(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/selection/create", selection).pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.updateSelection = function (selection) {
+        return this.http.put(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/selection/update", selection).pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.deleteSelection = function (id) {
+        return this.http.delete(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/selection/delete/" + id)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.getSelections = function () {
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/selection/get_all")
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    //-------------------------Selections -----End-----------------------
+    //-------------------------Sets------Start----------------------------
+    GamesProvider.prototype.GetSets = function () {
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/set/getall")
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    //-------------------------Sets -----End-----------------------
+    //-------------------------Status------Start----------------------------
+    GamesProvider.prototype.GetStatus = function (statusType) {
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpParams */]()
+            .set('statusType', statusType);
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/status/type/get", { params: params })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    //-------------------------Status -----End-----------------------
+    //-------------------------Predictions------Start----------------------------
+    GamesProvider.prototype.CreatePrediction = function (prediction) {
+        return this.http.post(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/prediction/create", prediction).pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.GetPredictions = function (matchDate) {
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpParams */]().set("matchDate", String(matchDate));
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/prediction/get", { params: params })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.deletePrediction = function (id) {
+        return this.http.delete(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/prediction/delete/" + id)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider.prototype.updatePrediction = function (prediction) {
+        return this.http.put(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].apiUrl + "/games/prediction/update", prediction).pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    GamesProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */]])
+    ], GamesProvider);
+    return GamesProvider;
+}());
+
+//# sourceMappingURL=games.js.map
+
+/***/ }),
+
+/***/ 371:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NativeHttpProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_http__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operators__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operators___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__environments_environment__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_observable_from__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_observable_from___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_from__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+var NativeHttpProvider = /** @class */ (function () {
+    function NativeHttpProvider(http, nativeHttp, platform) {
+        this.http = http;
+        this.nativeHttp = nativeHttp;
+        this.platform = platform;
+    }
+    NativeHttpProvider.prototype.GetFreeGames = function (matchDate) {
+        if (this.platform.is("android") || this.platform.is("ios")) {
+            var params = {
+                matchDate: matchDate,
+                id: "1",
+            };
+            var nativeCall = this.nativeHttp.get(__WEBPACK_IMPORTED_MODULE_5__environments_environment__["a" /* environment */].apiUrl + "/games/game/free/get", params, {
+                "Content-Type": "application/json"
+            });
+            return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_from__["from"])(nativeCall).pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["map"])(function (result) {
+                return JSON.parse(result.data);
+            }));
+        }
+        else {
+            var params = new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["d" /* HttpParams */]().set("matchDate", String(matchDate)).set("id", "1");
+            return this.http.get(__WEBPACK_IMPORTED_MODULE_5__environments_environment__["a" /* environment */].apiUrl + "/games/game/free/get", { params: params })
+                .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["map"])(function (resp) {
+                return resp;
+            }));
+        }
+    };
+    NativeHttpProvider.prototype.getAllPlantypes = function () {
+        if (this.platform.is("android") || this.platform.is("ios")) {
+            var nativeCall = this.nativeHttp.get(__WEBPACK_IMPORTED_MODULE_5__environments_environment__["a" /* environment */].apiUrl + "/payments/plantype/getall", {}, {
+                "Content-Type": "application/json"
+            });
+            return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_from__["from"])(nativeCall).pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["map"])(function (result) {
+                return JSON.parse(result.data);
+            }));
+        }
+        else {
+            return this.http.get(__WEBPACK_IMPORTED_MODULE_5__environments_environment__["a" /* environment */].apiUrl + "/payments/plantype/getall")
+                .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["map"])(function (resp) {
+                return resp;
+            }));
+        }
+    };
+    NativeHttpProvider.prototype.getParameter = function (id) {
+        if (this.platform.is("android") || this.platform.is("ios")) {
+            var nativeCall = this.nativeHttp.get(__WEBPACK_IMPORTED_MODULE_5__environments_environment__["a" /* environment */].apiUrl + "/payments/parameter/get/" + id, {}, {
+                "Content-Type": "application/json"
+            });
+            return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_from__["from"])(nativeCall).pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["map"])(function (result) {
+                return JSON.parse(result.data);
+            }));
+        }
+        else {
+            return this.http.get(__WEBPACK_IMPORTED_MODULE_5__environments_environment__["a" /* environment */].apiUrl + "/payments/parameter/get/" + id)
+                .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["map"])(function (resp) {
+                return resp;
+            }));
+        }
+    };
+    NativeHttpProvider.prototype.createNewUser = function (newuser) {
+        if (this.platform.is("android") || this.platform.is("ios")) {
+            var user = {
+                id: newuser.id,
+                email: newuser.email,
+                firstname: newuser.firstname,
+                lastname: newuser.lastname,
+                referencecode: newuser.referencecode,
+                password: newuser.password,
+                phone: newuser.phone,
+                plantype: newuser.plantype,
+                platform: newuser.platform,
+                usertypes: newuser.usertypes,
+                status: newuser.status
+            };
+            this.nativeHttp.setDataSerializer('json');
+            var nativeCall = this.nativeHttp.post(__WEBPACK_IMPORTED_MODULE_5__environments_environment__["a" /* environment */].apiUrl + "/users/member/create", user, {
+                "Content-Type": "application/json"
+            });
+            return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_from__["from"])(nativeCall).pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["map"])(function (result) {
+                return JSON.parse(result.data);
+            }));
+        }
+        else {
+            var user = newuser;
+            return this.http.post(__WEBPACK_IMPORTED_MODULE_5__environments_environment__["a" /* environment */].apiUrl + "/users/member/create", user)
+                .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["map"])(function (resp) {
+                return resp;
+            }));
+        }
+    };
+    NativeHttpProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_1__ionic_native_http__["a" /* HTTP */],
+            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["Platform"]])
+    ], NativeHttpProvider);
+    return NativeHttpProvider;
+}());
+
+//# sourceMappingURL=native-http.js.map
+
+/***/ }),
+
+/***/ 372:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PaymentsProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_operators__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_operators___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__environments_environment__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var PaymentsProvider = /** @class */ (function () {
+    function PaymentsProvider(http) {
+        this.http = http;
+    }
+    PaymentsProvider.prototype.updatePlan = function (userId, plantypeId, platform, transactionObject) {
+        var params = new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["d" /* HttpParams */]()
+            .set('userId', userId)
+            .set('plantypeId', plantypeId)
+            .set('platform', platform)
+            .set('transactionObject', transactionObject);
+        return this.http.post(__WEBPACK_IMPORTED_MODULE_1__environments_environment__["a" /* environment */].apiUrl + "/payments/plan/update", params).pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    PaymentsProvider.prototype.GetPayments = function (pageNo, pageSize) {
+        var params = new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["d" /* HttpParams */]()
+            .set('pageNo', pageNo)
+            .set('pageSize', pageSize);
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_1__environments_environment__["a" /* environment */].apiUrl + "/payments/payment/get", { params: params })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    PaymentsProvider.prototype.SearchPayments = function (searchValue, pageNo, pageSize) {
+        var params = new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["d" /* HttpParams */]()
+            .set('searchValue', searchValue)
+            .set('pageNo', pageNo)
+            .set('pageSize', pageSize);
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_1__environments_environment__["a" /* environment */].apiUrl + "/payments/payment/search", { params: params })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    PaymentsProvider.prototype.deletePayment = function (id) {
+        return this.http.delete(__WEBPACK_IMPORTED_MODULE_1__environments_environment__["a" /* environment */].apiUrl + "/payments/payment/delete/" + id)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    //-----------------Plan----------Start-------------------
+    PaymentsProvider.prototype.GetPlans = function (pageNo, pageSize) {
+        var params = new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["d" /* HttpParams */]()
+            .set('pageNo', pageNo)
+            .set('pageSize', pageSize);
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_1__environments_environment__["a" /* environment */].apiUrl + "/payments/plan/get", { params: params })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    //-----------------Plantype----------Start-------------------
+    PaymentsProvider.prototype.updatePlantype = function (plantype) {
+        return this.http.put(__WEBPACK_IMPORTED_MODULE_1__environments_environment__["a" /* environment */].apiUrl + "/payments/plantype/update", plantype).pipe(Object(__WEBPACK_IMPORTED_MODULE_0_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    PaymentsProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClient */]])
+    ], PaymentsProvider);
+    return PaymentsProvider;
+}());
+
+//# sourceMappingURL=payments.js.map
+
+/***/ }),
+
+/***/ 374:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(375);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(379);
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 379:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_error_interceptor_error_interceptor__ = __webpack_require__(380);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_request_interceptor_request_interceptor__ = __webpack_require__(721);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__ = __webpack_require__(722);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(729);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_authenication_authenication__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_common_http__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_games_games__ = __webpack_require__(369);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ionic_select_searchable__ = __webpack_require__(370);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_ionic_select_searchable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_payments_payments__ = __webpack_require__(372);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_http__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_setting_setting_module__ = __webpack_require__(326);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_reports_reports_module__ = __webpack_require__(325);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_payments_payments_module__ = __webpack_require__(319);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_native_http_native_http__ = __webpack_require__(371);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_ionic2_super_tabs__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ionic_native_app_version__ = __webpack_require__(373);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var config = {
+    backButtonText: '',
+    backButtonIcon: 'md-arrow-back',
+    iconMode: 'md',
+    mode: 'md',
+    modalEnter: 'modal-slide-in',
+    modalLeave: 'modal-slide-out',
+    tabsPlacement: 'top',
+    pageTransition: 'md',
+};
+var AppModule = /** @class */ (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* Sure3Odds */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__["a" /* IonicImageViewerModule */],
+                __WEBPACK_IMPORTED_MODULE_8__angular_common_http__["c" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["IonicModule"].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* Sure3Odds */], config, {
+                    links: [
+                        { loadChildren: '../pages/free-tips/free-tips.module#FreeTipsPageModule', name: 'FreeTipsPage', segment: 'free-tips', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/all-matches/all-matches.module#AllMatchesPageModule', name: 'AllMatchesPage', segment: 'all-matches', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/game-create/game-create.module#GameCreatePageModule', name: 'GameCreatePage', segment: 'game-create', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/game-new/game-new.module#GameNewPageModule', name: 'GameNewPage', segment: 'game-new', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/games/games.module#GamesPageModule', name: 'GamesPage', segment: 'games', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/match-comments/match-comments.module#MatchCommentsPageModule', name: 'MatchCommentsPage', segment: 'match-comments', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/help/help.module#HelpPageModule', name: 'HelpPage', segment: 'help', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/match-details/match-details.module#MatchDetailsPageModule', name: 'MatchDetailsPage', segment: 'match-details', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/game-edit/game-edit.module#GameEditPageModule', name: 'GameEditPage', segment: 'game-edit', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/match-votes/match-votes.module#MatchVotesPageModule', name: 'MatchVotesPage', segment: 'match-votes', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/payment-details/payment-details.module#PaymentDetailsPageModule', name: 'PaymentDetailsPage', segment: 'payment-details', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/payment-plans/payment-plans.module#PaymentPlansPageModule', name: 'PaymentPlansPage', segment: 'payment-plans', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/payment-plantype-edit/payment-plantype-edit.module#PaymentPlantypeEditPageModule', name: 'PaymentPlantypeEditPage', segment: 'payment-plantype-edit', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/payment-plantypes/payment-plantypes.module#PaymentPlantypesPageModule', name: 'PaymentPlantypesPage', segment: 'payment-plantypes', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/payment-sets/payment-sets.module#PaymentSetsPageModule', name: 'PaymentSetsPage', segment: 'payment-sets', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/payments/payments.module#PaymentsPageModule', name: 'PaymentsPage', segment: 'payments', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/prediction-add/prediction-add.module#PredictionAddPageModule', name: 'PredictionAddPage', segment: 'prediction-add', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/prediction-edit/prediction-edit.module#PredictionEditPageModule', name: 'PredictionEditPage', segment: 'prediction-edit', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/predictions/predictions.module#PredictionsPageModule', name: 'PredictionsPage', segment: 'predictions', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/report-general/report-general.module#ReportGeneralPageModule', name: 'ReportGeneralPage', segment: 'report-general', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/report-monthly/report-monthly.module#ReportMonthlyPageModule', name: 'ReportMonthlyPage', segment: 'report-monthly', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/reports/reports.module#ReportsPageModule', name: 'ReportsPage', segment: 'reports', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/setting-country-add/setting-country-add.module#SettingCountryAddPageModule', name: 'SettingCountryAddPage', segment: 'setting-country-add', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/setting-country-edit/setting-country-edit.module#SettingCountryEditPageModule', name: 'SettingCountryEditPage', segment: 'setting-country-edit', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/setting-country/setting-country.module#SettingCountryPageModule', name: 'SettingCountryPage', segment: 'setting-country', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/setting-league-add/setting-league-add.module#SettingLeagueAddPageModule', name: 'SettingLeagueAddPage', segment: 'setting-league-add', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/setting-league-edit/setting-league-edit.module#SettingLeagueEditPageModule', name: 'SettingLeagueEditPage', segment: 'setting-league-edit', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/setting-league-view/setting-league-view.module#SettingLeagueViewPageModule', name: 'SettingLeagueViewPage', segment: 'setting-league-view', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/setting-leagues/setting-leagues.module#SettingLeaguesPageModule', name: 'SettingLeaguesPage', segment: 'setting-leagues', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/setting-selection-add/setting-selection-add.module#SettingSelectionAddPageModule', name: 'SettingSelectionAddPage', segment: 'setting-selection-add', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/setting-selection-edit/setting-selection-edit.module#SettingSelectionEditPageModule', name: 'SettingSelectionEditPage', segment: 'setting-selection-edit', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/setting-selections/setting-selections.module#SettingSelectionsPageModule', name: 'SettingSelectionsPage', segment: 'setting-selections', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/setting-team-add/setting-team-add.module#SettingTeamAddPageModule', name: 'SettingTeamAddPage', segment: 'setting-team-add', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/setting-team-assign/setting-team-assign.module#SettingTeamAssignPageModule', name: 'SettingTeamAssignPage', segment: 'setting-team-assign', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/setting-team-manage/setting-team-manage.module#SettingTeamManagePageModule', name: 'SettingTeamManagePage', segment: 'setting-team-manage', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/setting-team-edit/setting-team-edit.module#SettingTeamEditPageModule', name: 'SettingTeamEditPage', segment: 'setting-team-edit', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/setting-team-view/setting-team-view.module#SettingTeamViewPageModule', name: 'SettingTeamViewPage', segment: 'setting-team-view', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/setting-teams/setting-teams.module#SettingTeamsPageModule', name: 'SettingTeamsPage', segment: 'setting-teams', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/setting/setting.module#SettingPageModule', name: 'SettingPage', segment: 'setting', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/sign-in/sign-in.module#SignInPageModule', name: 'SignInPage', segment: 'sign-in', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/sign-up/sign-up.module#SignUpPageModule', name: 'SignUpPage', segment: 'sign-up', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/subscription-android/subscription-android.module#SubscriptionAndroidPageModule', name: 'SubscriptionAndroidPage', segment: 'subscription-android', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/subscription-ios/subscription-ios.module#SubscriptionIosPageModule', name: 'SubscriptionIosPage', segment: 'subscription-ios', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/terms/terms.module#TermsPageModule', name: 'TermsPage', segment: 'terms', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/user-members/user-members.module#UserMembersPageModule', name: 'UserMembersPage', segment: 'user-members', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/user-sub-admin-add/user-sub-admin-add.module#UserSubAdminAddPageModule', name: 'UserSubAdminAddPage', segment: 'user-sub-admin-add', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/user-member-add/user-member-add.module#UserMemberAddPageModule', name: 'UserMemberAddPage', segment: 'user-member-add', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/user-sub-admin-edit/user-sub-admin-edit.module#UserSubAdminEditPageModule', name: 'UserSubAdminEditPage', segment: 'user-sub-admin-edit', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/user-sub-admins/user-sub-admins.module#UserSubAdminsPageModule', name: 'UserSubAdminsPage', segment: 'user-sub-admins', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/user-member-edit/user-member-edit.module#UserMemberEditPageModule', name: 'UserMemberEditPage', segment: 'user-member-edit', priority: 'low', defaultHistory: [] }
+                    ]
+                }),
+                __WEBPACK_IMPORTED_MODULE_10_ionic_select_searchable__["SelectSearchableModule"],
+                __WEBPACK_IMPORTED_MODULE_13__pages_setting_setting_module__["SettingPageModule"],
+                __WEBPACK_IMPORTED_MODULE_14__pages_reports_reports_module__["ReportsPageModule"],
+                __WEBPACK_IMPORTED_MODULE_15__pages_payments_payments_module__["PaymentsPageModule"],
+                __WEBPACK_IMPORTED_MODULE_17_ionic2_super_tabs__["b" /* SuperTabsModule */].forRoot(),
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["IonicApp"]],
+            schemas: [__WEBPACK_IMPORTED_MODULE_3__angular_core__["CUSTOM_ELEMENTS_SCHEMA"], __WEBPACK_IMPORTED_MODULE_3__angular_core__["NO_ERRORS_SCHEMA"]],
+            entryComponents: [
+                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* Sure3Odds */]
+            ],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_12__ionic_native_http__["a" /* HTTP */],
+                __WEBPACK_IMPORTED_MODULE_18__ionic_native_app_version__["a" /* AppVersion */],
+                { provide: __WEBPACK_IMPORTED_MODULE_3__angular_core__["ErrorHandler"], useClass: __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["IonicErrorHandler"] },
+                __WEBPACK_IMPORTED_MODULE_7__providers_authenication_authenication__["a" /* AuthenicationProvider */], __WEBPACK_IMPORTED_MODULE_11__providers_payments_payments__["a" /* PaymentsProvider */], __WEBPACK_IMPORTED_MODULE_9__providers_games_games__["a" /* GamesProvider */], __WEBPACK_IMPORTED_MODULE_16__providers_native_http_native_http__["a" /* NativeHttpProvider */],
+                { provide: __WEBPACK_IMPORTED_MODULE_8__angular_common_http__["a" /* HTTP_INTERCEPTORS */], useClass: __WEBPACK_IMPORTED_MODULE_1__providers_request_interceptor_request_interceptor__["a" /* RequestInterceptorProvider */], multi: true },
+                { provide: __WEBPACK_IMPORTED_MODULE_8__angular_common_http__["a" /* HTTP_INTERCEPTORS */], useClass: __WEBPACK_IMPORTED_MODULE_0__providers_error_interceptor_error_interceptor__["a" /* ErrorInterceptorProvider */], multi: true },
+            ]
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ 380:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ErrorInterceptorProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_operators__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_operators___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_throw__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_observable_throw__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var ErrorInterceptorProvider = /** @class */ (function () {
+    function ErrorInterceptorProvider(events) {
+        this.events = events;
+    }
+    ErrorInterceptorProvider.prototype.intercept = function (request, next) {
+        return next.handle(request).pipe(Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["catchError"])(this.handleError.bind(this)));
+    };
+    ErrorInterceptorProvider.prototype.handleError = function (error) {
+        console.log(error.error.message);
+        if (parseInt(error.error.status) === 401 || error.error.status === 500) {
+            this.events.publish('user:logout');
+        }
+        return Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_observable_throw__["_throw"])(error);
+    };
+    ErrorInterceptorProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["Events"]])
+    ], ErrorInterceptorProvider);
+    return ErrorInterceptorProvider;
+}());
+
+//# sourceMappingURL=error-interceptor.js.map
+
+/***/ }),
+
+/***/ 701:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PaymentsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic2_super_tabs__ = __webpack_require__(67);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var PaymentsPage = /** @class */ (function () {
+    function PaymentsPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.pages = [
+            { pageName: 'PaymentDetailsPage', title: "Payments", id: "Payments" },
+            { pageName: 'PaymentPlansPage', title: "Plans", id: "Plans" },
+            { pageName: 'PaymentPlantypesPage', title: "Plan Types", id: "Plan Types" },
+            { pageName: 'PaymentSetsPage', title: "Sets", id: "Sets" },
+        ];
+        this.currentpage = "Payments";
+        this.selectedTab = 0;
+    }
+    PaymentsPage.prototype.onTabSelect = function (ev) {
+        this.selectedTab = ev.index;
+        this.currentpage = ev.id;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2_ionic2_super_tabs__["a" /* SuperTabs */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2_ionic2_super_tabs__["a" /* SuperTabs */])
+    ], PaymentsPage.prototype, "superTabs", void 0);
+    PaymentsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-payments',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payments/payments.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title> {{currentpage}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n  <super-tabs\n  tabsPlacement="top" \n  [config]="{ sideMenu: \'left\' }" \n  toolbarBackground="light" \n  toolbarColor="color1" \n  indicatorColor="color1"\n  *ngIf="pages.length > 1"\n    (tabSelect)="onTabSelect($event)">\n    <!-- <super-tab class="" *ngFor="let page of pages" [root]="page.pageName" [icon]="page.icon" [id]="page.id"></super-tab> -->\n    <super-tab class="" *ngFor="let page of pages" [title]="page.title" [root]="page.pageName" [id]="page.id"></super-tab>\n  </super-tabs>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/payments/payments.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
+    ], PaymentsPage);
+    return PaymentsPage;
+}());
+
+//# sourceMappingURL=payments.js.map
+
+/***/ }),
+
+/***/ 703:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReportsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic2_super_tabs__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ReportsPage = /** @class */ (function () {
+    function ReportsPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.pages = [
+            { pageName: 'ReportGeneralPage', title: "General Reports", id: "General Reports" },
+            { pageName: 'ReportMonthlyPage', title: "Monthly Reports", id: "Monthly Reports" }
+        ];
+        this.currentpage = "General Reports";
+        this.selectedTab = 0;
+    }
+    ReportsPage.prototype.onTabSelect = function (ev) {
+        this.selectedTab = ev.index;
+        this.currentpage = ev.id;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_0_ionic2_super_tabs__["a" /* SuperTabs */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0_ionic2_super_tabs__["a" /* SuperTabs */])
+    ], ReportsPage.prototype, "superTabs", void 0);
+    ReportsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
+            selector: 'page-reports',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/reports/reports.html"*/'\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title> {{currentpage}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n  <super-tabs\n  tabsPlacement="top" \n  [config]="{ sideMenu: \'left\' }" \n  toolbarBackground="light" \n  toolbarColor="color1" \n  indicatorColor="color1"\n  *ngIf="pages.length > 1"\n    (tabSelect)="onTabSelect($event)">\n    <!-- <super-tab class="" *ngFor="let page of pages" [root]="page.pageName" [icon]="page.icon" [id]="page.id"></super-tab> -->\n    <super-tab class="" *ngFor="let page of pages" [title]="page.title" [root]="page.pageName" [id]="page.id"></super-tab>\n  </super-tabs>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/reports/reports.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavParams"]])
+    ], ReportsPage);
+    return ReportsPage;
+}());
+
+//# sourceMappingURL=reports.js.map
+
+/***/ }),
+
+/***/ 704:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var SettingPage = /** @class */ (function () {
+    function SettingPage(navCtrl) {
+        this.navCtrl = navCtrl;
+        this.CountryPage = 'SettingCountryPage';
+        this.LeaguePage = 'SettingLeaguesPage';
+        this.TeamPage = 'SettingTeamsPage';
+        this.SelectionPage = 'SettingSelectionsPage';
+    }
+    SettingPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-setting',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting/setting.html"*/'<ion-tabs>\n  <ion-tab [root]="CountryPage"  tabTitle="Countries" ></ion-tab>\n  <ion-tab [root]="LeaguePage"  tabTitle="Leagues" ></ion-tab>\n  <ion-tab [root]="TeamPage"  tabTitle="Teams"></ion-tab>\n  <ion-tab [root]="SelectionPage"  tabTitle="Selections"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting/setting.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"]])
+    ], SettingPage);
+    return SettingPage;
+}());
+
+//# sourceMappingURL=setting.js.map
+
+/***/ }),
+
+/***/ 721:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RequestInterceptorProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__authenication_authenication__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var RequestInterceptorProvider = /** @class */ (function () {
+    function RequestInterceptorProvider(auth) {
+        this.auth = auth;
+    }
+    RequestInterceptorProvider.prototype.intercept = function (request, next) {
+        var cloneRequest = this.addToken(request);
+        return next.handle(cloneRequest);
+    };
+    // Adds the token to your headers if it exists
+    RequestInterceptorProvider.prototype.addToken = function (request) {
+        var currentUser = this.auth.currentUserValue;
+        if (currentUser) {
+            var token = currentUser.token;
+            var clone = void 0;
+            clone = request.clone({
+                setHeaders: {
+                    Authorization: "Bearer " + token
+                }
+            });
+            return clone;
+        }
+        return request;
+    };
+    RequestInterceptorProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__authenication_authenication__["a" /* AuthenicationProvider */]])
+    ], RequestInterceptorProvider);
+    return RequestInterceptorProvider;
+}());
+
+//# sourceMappingURL=request-interceptor.js.map
+
+/***/ }),
+
+/***/ 729:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Sure3Odds; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__capacitor_core__ = __webpack_require__(164);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+var StatusBar = __WEBPACK_IMPORTED_MODULE_3__capacitor_core__["c" /* Plugins */].StatusBar, SplashScreen = __WEBPACK_IMPORTED_MODULE_3__capacitor_core__["c" /* Plugins */].SplashScreen, Storage = __WEBPACK_IMPORTED_MODULE_3__capacitor_core__["c" /* Plugins */].Storage;
+;
+var Sure3Odds = /** @class */ (function () {
+    function Sure3Odds(platform, events, app, alertCtrl, menu, auth) {
+        this.platform = platform;
+        this.events = events;
+        this.app = app;
+        this.alertCtrl = alertCtrl;
+        this.menu = menu;
+        this.auth = auth;
+        this.version = "1.0.0";
+        this.isStatusBarLight = true;
+        this.loggedInAdminPages = [
+            { icon: 'football', color: 'light', title: 'All Games', component: 'AllMatchesPage' },
+            { icon: 'person', color: 'light', title: 'My Profile', component: 'ProfilePage' },
+            { icon: 'people', color: 'light', title: 'SubAdmins', component: 'UserSubAdminsPage' },
+            { icon: 'people', color: 'light', title: 'Members', component: 'UserMembersPage' },
+            { icon: 'football', color: 'light', title: 'Games', component: 'GamesPage' },
+            { icon: 'football', color: 'light', title: 'Predictions', component: 'PredictionsPage' },
+            { icon: 'build', color: 'light', title: 'Settings', component: 'SettingPage' },
+            { icon: 'card', color: 'light', title: 'Payments', component: 'PaymentsPage' },
+            { icon: 'podium', color: 'light', title: 'Reports', component: 'ReportsPage' },
+        ];
+        this.loggedInSubAdminPages = [
+            { icon: 'football', color: 'light', title: 'All Games', component: 'AllMatchesPage' },
+            { icon: 'person', color: 'light', title: 'My Profile', component: 'ProfilePage' },
+            { icon: 'football', color: 'light', title: 'My Predictions', component: 'PredictionsPage' },
+            { icon: 'build', color: 'light', title: 'Settings', component: 'SettingPage' }
+        ];
+        this.loggedInMemberPages = [
+            { icon: 'football', color: 'light', title: 'My Games', component: 'AllMatchesPage' },
+            { icon: 'person', color: 'light', title: 'My Profile', component: 'ProfilePage' }
+        ];
+        this.otherPages = [
+            { icon: 'help-circle', color: 'light', title: 'Help', component: 'HelpPage' },
+            { icon: 'briefcase', color: 'light', title: 'Terms', component: 'TermsPage' },
+            { icon: 'log-out', color: 'danger', title: 'Logout', component: 'SignInPage' }
+        ];
+        this.animateVarible = false;
+        this.HAS_LOGGED_IN = 'hasLoggedIn';
+        this.initializeApp();
+    }
+    Sure3Odds.prototype.initializeApp = function () {
+        this.listenToEvents();
+        this.platformReady();
+    };
+    Sure3Odds.prototype.platformReady = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var value;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.platform.ready().then(function () {
+                            _this.changeStatusBar();
+                            _this.hideSplash();
+                            _this.androidExitAppOnBackButton();
+                            // this.backgroundMode.enable();
+                        });
+                        this.platform.resume.subscribe(function () { return __awaiter(_this, void 0, void 0, function () {
+                            return __generator(this, function (_a) {
+                                console.log('Resume event detected');
+                                return [2 /*return*/];
+                            });
+                        }); });
+                        return [4 /*yield*/, Storage.get({ key: this.HAS_LOGGED_IN })];
+                    case 1:
+                        value = (_a.sent()).value;
+                        if (value == "true") {
+                            if (this.auth.currentUserDataValue) {
+                                this.Userfullname = this.auth.currentUserDataValue.name;
+                                this.usertype = this.auth.currentUserDataValue.user_type;
+                                this.enableMenu(true, this.usertype);
+                            }
+                        }
+                        else {
+                            this.rootPage = 'SignInPage';
+                        }
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    Sure3Odds.prototype.changeStatusBar = function () {
+        StatusBar.show();
+        StatusBar.setStyle({
+            style: this.isStatusBarLight ? __WEBPACK_IMPORTED_MODULE_3__capacitor_core__["d" /* StatusBarStyle */].Dark : __WEBPACK_IMPORTED_MODULE_3__capacitor_core__["d" /* StatusBarStyle */].Light
+        });
+        this.isStatusBarLight = !this.isStatusBarLight;
+        // Display content under transparent status bar (Android only)
+        StatusBar.setOverlaysWebView({
+            overlay: false
+        });
+        StatusBar.setBackgroundColor({
+            color: "#0f5656"
+        });
+    };
+    Sure3Odds.prototype.hideSplash = function () {
+        SplashScreen.hide();
+    };
+    Sure3Odds.prototype.listenToEvents = function () {
+        var _this = this;
+        this.events.subscribe('user:signup', function () {
+            _this.enableMenu(true, "");
+        });
+        this.events.subscribe('user:logout', function () {
+            _this.nav.setRoot('SignInPage');
+            _this.enableMenu(false, "");
+            _this.auth.logout();
+        });
+        this.events.subscribe('user:login', function (usertype, Userfullname) {
+            _this.Userfullname = Userfullname;
+            _this.usertype = usertype;
+            _this.enableMenu(true, usertype);
+        });
+    };
+    Sure3Odds.prototype.enableMenu = function (showmenu, usertype) {
+        if (usertype === "Member") {
+            this.menu.enable(showmenu, 'loggedInMemberPages');
+            this.menu.enable(!showmenu, 'loggedInAdminMenu');
+            this.menu.enable(!showmenu, 'loggedInSubAdminMenu');
+        }
+        else if (usertype === "Admin") {
+            this.menu.enable(showmenu, 'loggedInAdminMenu');
+            this.menu.enable(!showmenu, 'loggedInMemberPages');
+            this.menu.enable(!showmenu, 'loggedInSubAdminMenu');
+        }
+        else if (usertype === "SubAdmin") {
+            this.menu.enable(showmenu, 'loggedInSubAdminMenu');
+            this.menu.enable(!showmenu, 'loggedInMemberPages');
+            this.menu.enable(!showmenu, 'loggedInAdminMenu');
+        }
+    };
+    Sure3Odds.prototype.openPage = function (page) {
+        this.nav.setRoot(page);
+        this.activePage = page;
+        this.LogOutFunction(page);
+    };
+    Sure3Odds.prototype.LogOutFunction = function (page) {
+        if (page === 'SignInPage') {
+            this.events.publish('user:logout');
+            this.nav.setRoot(page);
+            this.auth.logout();
+        }
+    };
+    Sure3Odds.prototype.androidExitAppOnBackButton = function () {
+        var _this = this;
+        if (!this.platform.is('android')) {
+            return;
+        }
+        this.platform.registerBackButtonAction(function () {
+            var nav = _this.app.getActiveNavs()[0];
+            var activeView = nav.getActive();
+            if (nav.canGoBack()) {
+                nav.pop();
+            }
+            else {
+                if (activeView.component === 'AllMatchesPage') {
+                    var actionSheet = _this.alertCtrl.create({
+                        title: 'Exit Sur3Odds?',
+                        message: 'Do you want to exit Sur3Odds?',
+                        buttons: [
+                            {
+                                text: 'Yes',
+                                handler: function () {
+                                    _this.platform.exitApp(); //Exit from app
+                                }
+                            }, {
+                                text: 'No',
+                                role: 'cancel',
+                                handler: function () {
+                                }
+                            }
+                        ]
+                    });
+                    actionSheet.present();
+                }
+                else {
+                }
+            }
+        });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["Nav"]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["Nav"])
+    ], Sure3Odds.prototype, "nav", void 0);
+    Sure3Odds = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/app/app.html"*/'<ion-menu id="loggedInMemberPages" [content]="content" swipeEnabled="false">\n  <ion-header>\n    <ion-toolbar>\n      <ion-item>\n        <ion-avatar item-left>\n          <img src="assets/imgs/appicon.png">\n        </ion-avatar>\n        <h5 ion-text color="light">{{Userfullname}}</h5>\n        <p ion-text color="light">{{usertype}}</p>\n        <p ion-text color="light" style="margin-top: 1em;">{{version}}</p>\n      </ion-item>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <!-- admin list -->\n    <ion-list class="mainMenuList">\n      <ion-item menuClose *ngFor="let p of loggedInMemberPages" (click)="openPage(p.component)">\n        <ion-icon color="light" name="{{p.icon}}" item-left></ion-icon>\n        <ion-label style="color: white !important;"> {{p.title}} </ion-label>\n      </ion-item>\n    </ion-list>\n    <!-- leagues list -->\n    <ion-list class="leagueList">\n      <ion-item menuClose *ngFor="let item of otherPages" (click)="openPage(item.component)">\n        <ion-icon color="{{item.color}}" name="{{item.icon}}" item-left></ion-icon>\n        <ion-label style="color: white !important;"> {{item.title}} </ion-label>\n      </ion-item>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<ion-menu id="loggedInSubAdminMenu" [content]="content" swipeEnabled="false">\n  <ion-header>\n    <ion-toolbar>\n      <ion-item>\n        <ion-avatar item-left>\n          <img src="assets/imgs/appicon.png">\n        </ion-avatar>\n        <h5 ion-text color="light">{{Userfullname}}</h5>\n        <p ion-text color="light">{{usertype}}</p>\n        <p ion-text color="light" style="margin-top: 1em;">{{version}}</p>\n      </ion-item>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <!-- admin list -->\n    <ion-list class="mainMenuList">\n      <ion-item menuClose *ngFor="let p of loggedInSubAdminPages" (click)="openPage(p.component)">\n        <ion-icon color="{{p.color}}" name="{{p.icon}}" item-left></ion-icon>\n        <ion-label style="color: white !important;"> {{p.title}} </ion-label>\n      </ion-item>\n    </ion-list>\n\n    <!-- leagues list -->\n    <ion-list class="leagueList">\n      <ion-item menuClose *ngFor="let item of otherPages" (click)="openPage(item.component)">\n        <ion-icon color="{{item.color}}" name="{{item.icon}}" item-left></ion-icon>\n        <ion-label style="color: white !important;"> {{item.title}} </ion-label>\n      </ion-item>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n<ion-menu id="loggedInAdminMenu" [content]="content" swipeEnabled="false">\n  <ion-header>\n    <ion-toolbar>\n      <ion-item>\n        <ion-avatar item-left>\n          <img src="assets/imgs/appicon.png">\n        </ion-avatar>\n        <h5 ion-text color="light">{{Userfullname}}</h5>\n        <p ion-text color="light">{{usertype}}</p>\n        <p ion-text color="light" style="margin-top: 1em;">{{version}}</p>\n      </ion-item>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <!-- admin list -->\n    <ion-list class="mainMenuList">\n      <ion-item menuClose *ngFor="let p of loggedInAdminPages" (click)="openPage(p.component)">\n        <ion-icon color="{{p.color}}" name="{{p.icon}}" item-left></ion-icon>\n        <ion-label style="color: white !important;"> {{p.title}} </ion-label>\n      </ion-item>\n    </ion-list>\n\n    <!-- leagues list -->\n    <ion-list class="leagueList">\n      <ion-item menuClose *ngFor="let item of otherPages" (click)="openPage(item.component)">\n        <ion-icon color="{{item.color}}" name="{{item.icon}}" item-left></ion-icon>\n        <ion-label style="color: white !important;"> {{item.title}} </ion-label>\n      </ion-item>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content [class.animateApp]="animateVarible==true" swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/app/app.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["Platform"],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["Events"],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["App"],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["AlertController"],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["MenuController"],
+            __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */]])
+    ], Sure3Odds);
+    return Sure3Odds;
+}());
+
+//# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 86:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
+// This file can be replaced during build by using the `fileReplacements` array.
+// `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
+// The list of file replacements can be found in `angular.json`.
+var environment = {
+    production: true,
+    apiUrl: "http://178.62.124.12:8080/sure3odds"
+    // apiUrl :"http://localhost:8081/sure3odds"
+    // apiUrl :"http://86172152000d.ngrok.io/sure3odds"
+};
+/*
+ * For easier debugging in development mode, you can import the following file
+ * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
+ *
+ * This import should be commented out in production mode because it will have a negative impact
+ * on performance if an error is thrown.
+ */
+// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+//# sourceMappingURL=environment.js.map
+
+/***/ }),
+
+/***/ 92:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthenicationProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__environments_environment__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operators__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operators___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs__ = __webpack_require__(305);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__auth0_angular_jwt__ = __webpack_require__(681);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_http__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_observable_from__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_observable_from___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_rxjs_observable_from__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__capacitor_core__ = __webpack_require__(164);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+var helper = new __WEBPACK_IMPORTED_MODULE_6__auth0_angular_jwt__["a" /* JwtHelperService */]();
+
+
+var TOKEN_KEY = 'access_token';
+
+var Storage = __WEBPACK_IMPORTED_MODULE_9__capacitor_core__["c" /* Plugins */].Storage;
+var AuthenicationProvider = /** @class */ (function () {
+    function AuthenicationProvider(http, nativeHttp, platform, toastCtrl) {
+        this.http = http;
+        this.nativeHttp = nativeHttp;
+        this.platform = platform;
+        this.toastCtrl = toastCtrl;
+        this.HAS_LOGGED_IN = 'hasLoggedIn';
+        this.currentUserSubject = new __WEBPACK_IMPORTED_MODULE_5_rxjs__["BehaviorSubject"](JSON.parse(sessionStorage.getItem('currentUser')));
+        this.currentUser = this.currentUserSubject.asObservable();
+        this.currentUserDataSubject = new __WEBPACK_IMPORTED_MODULE_5_rxjs__["BehaviorSubject"](JSON.parse(sessionStorage.getItem('userData')));
+        this.currentUserData = this.currentUserDataSubject.asObservable();
+    }
+    Object.defineProperty(AuthenicationProvider.prototype, "currentUserValue", {
+        get: function () {
+            return this.currentUserSubject.value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AuthenicationProvider.prototype, "currentUserDataValue", {
+        get: function () {
+            return this.currentUserDataSubject.value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    AuthenicationProvider.prototype.showToast = function (message) {
+        var toast = this.toastCtrl.create({
+            message: message,
+            showCloseButton: true,
+            closeButtonText: 'Ok!',
+            duration: 4000,
+            position: 'bottom',
+            cssClass: '#3B7A57',
+        });
+        toast.present(toast);
+    };
+    AuthenicationProvider.prototype.CalculatePercentage = function (userAmt) {
+        var addedPerc = (parseInt(userAmt) * 0.02);
+        var newAmt = parseInt(userAmt) + addedPerc;
+        if (parseInt(userAmt) >= 2500) {
+            newAmt = parseInt(userAmt) + 100;
+        }
+        return newAmt;
+    };
+    AuthenicationProvider.prototype.onNativeApiCall = function (url, data) {
+        this.nativeHttp.setDataSerializer('json');
+        var nativeCall = this.nativeHttp.get(url, data, {
+            "Content-Type": "application/json"
+        });
+        return Object(__WEBPACK_IMPORTED_MODULE_8_rxjs_observable_from__["from"])(nativeCall).pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["map"])(function (result) {
+            return JSON.parse(result.data);
+        }));
+    };
+    AuthenicationProvider.prototype.login = function (email, password) {
+        var _this = this;
+        if (this.platform.is("android") || this.platform.is("ios")) {
+            var params = {
+                email: email,
+                password: password,
+            };
+            return this.onNativeApiCall(__WEBPACK_IMPORTED_MODULE_0__environments_environment__["a" /* environment */].apiUrl + "/users/member/authenticateuser", params).pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["map"])(function (res) {
+                if (res.statusCode === 200) {
+                    sessionStorage.setItem('currentUser', JSON.stringify(res.data));
+                    _this.currentUserSubject.next(res.data);
+                    var decoded = helper.decodeToken(res.data.token);
+                    sessionStorage.setItem('userData', JSON.stringify(decoded));
+                    _this.currentUserDataSubject.next(decoded);
+                }
+                return res;
+            }));
+        }
+        else {
+            var params = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpParams */]()
+                .set('email', email)
+                .set('password', password);
+            return this.http.get(__WEBPACK_IMPORTED_MODULE_0__environments_environment__["a" /* environment */].apiUrl + "/users/member/authenticateuser", { params: params })
+                .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["map"])(function (res) {
+                if (res.statusCode === 200) {
+                    sessionStorage.setItem('currentUser', JSON.stringify(res.data));
+                    _this.currentUserSubject.next(res.data);
+                    var decoded = helper.decodeToken(res.data.token);
+                    sessionStorage.setItem('userData', JSON.stringify(decoded));
+                    _this.currentUserDataSubject.next(decoded);
+                }
+                return res;
+            }));
+        }
+    };
+    AuthenicationProvider.prototype.findUserDetails = function (id) {
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_0__environments_environment__["a" /* environment */].apiUrl + "/users/user/find/" + id)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    AuthenicationProvider.prototype.GetUserDeta = function () {
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_0__environments_environment__["a" /* environment */].apiUrl + "/users/user/get")
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    AuthenicationProvider.prototype.deleteMember = function (id) {
+        return this.http.delete(__WEBPACK_IMPORTED_MODULE_0__environments_environment__["a" /* environment */].apiUrl + "/users/member/delete/" + id)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    AuthenicationProvider.prototype.logout = function () {
+        sessionStorage.removeItem('currentUser');
+        sessionStorage.removeItem('userData');
+        this.currentUserSubject.next(null);
+        this.currentUserDataSubject.next(null);
+        Storage.remove({ key: 'hasSeenLogin' });
+        Storage.remove({ key: TOKEN_KEY });
+    };
+    AuthenicationProvider.prototype.GetUsersByType = function (usertypeId, pageNo, pageSize) {
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpParams */]()
+            .set('usertypeId', usertypeId)
+            .set('pageNo', pageNo)
+            .set('pageSize', pageSize);
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_0__environments_environment__["a" /* environment */].apiUrl + "/users/user/type/get", { params: params })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    AuthenicationProvider.prototype.SearchUsersByType = function (searchValue, usertypeId, pageNo, pageSize) {
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpParams */]()
+            .set('searchValue', searchValue)
+            .set('usertypeId', usertypeId)
+            .set('pageNo', pageNo)
+            .set('pageSize', pageSize);
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_0__environments_environment__["a" /* environment */].apiUrl + "/users/user/type/search", { params: params })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    AuthenicationProvider.prototype.updateUser = function (user) {
+        return this.http.put(__WEBPACK_IMPORTED_MODULE_0__environments_environment__["a" /* environment */].apiUrl + "/users/user/update", user).pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    //-----------------------SubAdmin-------Start-------------------------
+    AuthenicationProvider.prototype.createSubAdmin = function (user) {
+        console.log(user);
+        return this.http.post(__WEBPACK_IMPORTED_MODULE_0__environments_environment__["a" /* environment */].apiUrl + "/users/subadmin/create", user)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    AuthenicationProvider.prototype.deleteSubAdmin = function (id) {
+        return this.http.delete(__WEBPACK_IMPORTED_MODULE_0__environments_environment__["a" /* environment */].apiUrl + "/users/subadmin/delete/" + id)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    AuthenicationProvider.prototype.GetMonthlyReport = function (selectedDate) {
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpParams */]()
+            .set('selectedDate', selectedDate);
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_0__environments_environment__["a" /* environment */].apiUrl + "/users/report/monthly/get", { params: params })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    AuthenicationProvider.prototype.GetAppReport = function () {
+        return this.http.get(__WEBPACK_IMPORTED_MODULE_0__environments_environment__["a" /* environment */].apiUrl + "/users/report/general/get")
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    AuthenicationProvider.prototype.createNewUser = function (user) {
+        return this.http.post(__WEBPACK_IMPORTED_MODULE_0__environments_environment__["a" /* environment */].apiUrl + "/users/member/add", user)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["map"])(function (resp) {
+            return resp;
+        }));
+    };
+    AuthenicationProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_7__ionic_native_http__["a" /* HTTP */],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["Platform"],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ToastController"]])
+    ], AuthenicationProvider);
+    return AuthenicationProvider;
+}());
+
+//# sourceMappingURL=authenication.js.map
+
+/***/ })
+
+},[374]);
+//# sourceMappingURL=main.js.map

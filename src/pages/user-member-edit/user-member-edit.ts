@@ -1,3 +1,4 @@
+import { NativeHttpProvider } from './../../providers/native-http/native-http';
 import { PaymentsProvider } from './../../providers/payments/payments';
 import { GamesProvider } from './../../providers/games/games';
 import { NewUsers } from './../../interfaces/NewUser';
@@ -26,6 +27,7 @@ export class UserMemberEditPage {
     private loadingCtrl: LoadingController,
     private paymentsProvider: PaymentsProvider,
     private alertCtrl: AlertController,
+    private nativeHttp: NativeHttpProvider,
     private authProvider: AuthenicationProvider,
     public navParams: NavParams) {
     this.selecteduser = this.navParams.get("user");
@@ -62,7 +64,7 @@ export class UserMemberEditPage {
 
 
   getPlantypes() {
-    this.authProvider.getAllPlantypes().subscribe(result => {
+    this.nativeHttp.getAllPlantypes().subscribe(result => {
       this.plantypes = result.data;
     })
   }

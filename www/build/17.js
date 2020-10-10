@@ -1,1 +1,109 @@
-webpackJsonp([17],{705:function(l,n,e){"use strict";function u(l){return t["ɵvid"](0,[(l()(),t["ɵeld"](0,0,null,null,11,"ion-header",[],null,null,null,null,null)),t["ɵdid"](1,16384,null,0,b.a,[y.a,t.ElementRef,t.Renderer,[2,R.a]],null,null),(l()(),t["ɵted"](-1,null,["\n  "])),(l()(),t["ɵeld"](3,0,null,null,7,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,N.b,N.a)),t["ɵdid"](4,49152,null,0,M.a,[I.a,[2,R.a],[2,_.a],y.a,t.ElementRef,t.Renderer],null,null),(l()(),t["ɵted"](-1,3,["\n    "])),(l()(),t["ɵeld"](6,0,null,3,2,"ion-title",[],null,null,null,x.b,x.a)),t["ɵdid"](7,49152,null,0,P.a,[y.a,t.ElementRef,t.Renderer,[2,w.a],[2,M.a]],null,null),(l()(),t["ɵted"](-1,0,["Edit League"])),(l()(),t["ɵted"](-1,3,["\n    "])),(l()(),t["ɵted"](-1,3,["\n  "])),(l()(),t["ɵted"](-1,null,["\n"])),(l()(),t["ɵted"](-1,null,["\n\n\n"])),(l()(),t["ɵeld"](13,0,null,null,74,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,E.b,E.a)),t["ɵdid"](14,4374528,null,0,k.a,[y.a,T.a,D.a,t.ElementRef,t.Renderer,I.a,S.a,t.NgZone,[2,R.a],[2,_.a]],null,null),(l()(),t["ɵted"](-1,1,["\n  "])),(l()(),t["ɵeld"](16,0,null,1,6,"div",[["class","imgs"],["style","margin-top: 5em; "]],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n     "])),(l()(),t["ɵeld"](18,0,null,null,3,"div",[["class","imgProfile"]],null,null,null,null,null)),t["ɵdid"](19,278528,null,0,F.NgStyle,[t.KeyValueDiffers,t.ElementRef,t.Renderer2],{ngStyle:[0,"ngStyle"]},null),t["ɵpod"](20,{"background-image":0}),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵted"](-1,null,["\n  "])),(l()(),t["ɵted"](-1,1,["\n  "])),(l()(),t["ɵeld"](24,0,null,1,62,"div",[["class","ion-margin"]],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵeld"](26,0,null,null,59,"div",[["class","otherForm"]],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](28,0,null,null,52,"ion-list",[],null,null,null,null,null)),t["ɵdid"](29,16384,null,0,L.a,[y.a,t.ElementRef,t.Renderer,T.a,V.m,D.a],null,null),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](31,0,null,null,22,"ion-item",[["class","item item-block"]],null,null,null,q.b,q.a)),t["ɵdid"](32,1097728,null,3,K.a,[B.a,y.a,t.ElementRef,t.Renderer,[2,O.a]],null,null),t["ɵqud"](335544320,1,{contentLabel:0}),t["ɵqud"](603979776,2,{_buttons:1}),t["ɵqud"](603979776,3,{_icons:1}),t["ɵdid"](36,16384,null,0,U.a,[],null,null),(l()(),t["ɵted"](-1,2,["\n          "])),(l()(),t["ɵeld"](38,0,null,1,2,"ion-label",[["stacked",""]],null,null,null,null,null)),t["ɵdid"](39,16384,[[1,4]],0,A.a,[y.a,t.ElementRef,t.Renderer,[8,null],[8,""],[8,null],[8,null]],null,null),(l()(),t["ɵted"](-1,null,["Country Name"])),(l()(),t["ɵted"](-1,2,["\n          "])),(l()(),t["ɵeld"](42,0,null,3,4,"ion-input",[["disabled",""],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,e){var u=!0;if("ngModelChange"===n){u=!1!==(l.component.league.country.name=e)&&u}return u},z.b,z.a)),t["ɵdid"](43,671744,null,0,j.NgModel,[[8,null],[8,null],[8,null],[8,null]],{isDisabled:[0,"isDisabled"],model:[1,"model"]},{update:"ngModelChange"}),t["ɵprd"](2048,null,j.NgControl,null,[j.NgModel]),t["ɵdid"](45,16384,null,0,j.NgControlStatus,[j.NgControl],null,null),t["ɵdid"](46,5423104,null,0,J.a,[y.a,T.a,B.a,I.a,t.ElementRef,t.Renderer,[2,k.a],[2,K.a],[2,j.NgControl],D.a],{disabled:[0,"disabled"],type:[1,"type"]},null),(l()(),t["ɵted"](-1,2,["\n          "])),(l()(),t["ɵeld"](48,0,null,3,4,"ion-input",[["hidden",""],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,e){var u=!0;if("ngModelChange"===n){u=!1!==(l.component.league.country.id=e)&&u}return u},z.b,z.a)),t["ɵdid"](49,671744,null,0,j.NgModel,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),t["ɵprd"](2048,null,j.NgControl,null,[j.NgModel]),t["ɵdid"](51,16384,null,0,j.NgControlStatus,[j.NgControl],null,null),t["ɵdid"](52,5423104,null,0,J.a,[y.a,T.a,B.a,I.a,t.ElementRef,t.Renderer,[2,k.a],[2,K.a],[2,j.NgControl],D.a],{type:[0,"type"]},null),(l()(),t["ɵted"](-1,2,["\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](56,0,null,null,22,"ion-item",[["class","item item-block"]],null,null,null,q.b,q.a)),t["ɵdid"](57,1097728,null,3,K.a,[B.a,y.a,t.ElementRef,t.Renderer,[2,O.a]],null,null),t["ɵqud"](335544320,4,{contentLabel:0}),t["ɵqud"](603979776,5,{_buttons:1}),t["ɵqud"](603979776,6,{_icons:1}),t["ɵdid"](61,16384,null,0,U.a,[],null,null),(l()(),t["ɵted"](-1,2,["\n          "])),(l()(),t["ɵeld"](63,0,null,1,2,"ion-label",[["stacked",""]],null,null,null,null,null)),t["ɵdid"](64,16384,[[4,4]],0,A.a,[y.a,t.ElementRef,t.Renderer,[8,null],[8,""],[8,null],[8,null]],null,null),(l()(),t["ɵted"](-1,null,["League Name"])),(l()(),t["ɵted"](-1,2,["\n          "])),(l()(),t["ɵeld"](67,0,null,3,4,"ion-input",[["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,e){var u=!0;if("ngModelChange"===n){u=!1!==(l.component.league.name=e)&&u}return u},z.b,z.a)),t["ɵdid"](68,671744,null,0,j.NgModel,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),t["ɵprd"](2048,null,j.NgControl,null,[j.NgModel]),t["ɵdid"](70,16384,null,0,j.NgControlStatus,[j.NgControl],null,null),t["ɵdid"](71,5423104,null,0,J.a,[y.a,T.a,B.a,I.a,t.ElementRef,t.Renderer,[2,k.a],[2,K.a],[2,j.NgControl],D.a],{type:[0,"type"]},null),(l()(),t["ɵted"](-1,2,["\n          "])),(l()(),t["ɵeld"](73,0,null,3,4,"ion-input",[["hidden",""],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,e){var u=!0;if("ngModelChange"===n){u=!1!==(l.component.league.id=e)&&u}return u},z.b,z.a)),t["ɵdid"](74,671744,null,0,j.NgModel,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),t["ɵprd"](2048,null,j.NgControl,null,[j.NgModel]),t["ɵdid"](76,16384,null,0,j.NgControlStatus,[j.NgControl],null,null),t["ɵdid"](77,5423104,null,0,J.a,[y.a,T.a,B.a,I.a,t.ElementRef,t.Renderer,[2,k.a],[2,K.a],[2,j.NgControl],D.a],{type:[0,"type"]},null),(l()(),t["ɵted"](-1,2,["\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](82,0,null,null,2,"button",[["block",""],["color","color2"],["ion-button",""]],null,[[null,"click"]],function(l,n,e){var u=!0,t=l.component;if("click"===n){u=!1!==t.onSubmit(t.league)&&u}return u},Z.b,Z.a)),t["ɵdid"](83,1097728,null,0,G.a,[[8,""],y.a,t.ElementRef,t.Renderer],{color:[0,"color"],block:[1,"block"]},null),(l()(),t["ɵted"](-1,0,["Submit"])),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵted"](-1,null,["\n  "])),(l()(),t["ɵted"](-1,1,["\n"]))],function(l,n){var e=n.component;l(n,19,0,l(n,20,0,"url("+e.league.imageurl+")"));l(n,43,0,"",e.league.country.name);l(n,46,0,"","text");l(n,49,0,e.league.country.id);l(n,52,0,"text");l(n,68,0,e.league.name);l(n,71,0,"text");l(n,74,0,e.league.id);l(n,77,0,"text");l(n,83,0,"color2","")},function(l,n){l(n,3,0,t["ɵnov"](n,4)._hidden,t["ɵnov"](n,4)._sbPadding);l(n,13,0,t["ɵnov"](n,14).statusbarPadding,t["ɵnov"](n,14)._hasRefresher);l(n,42,0,t["ɵnov"](n,45).ngClassUntouched,t["ɵnov"](n,45).ngClassTouched,t["ɵnov"](n,45).ngClassPristine,t["ɵnov"](n,45).ngClassDirty,t["ɵnov"](n,45).ngClassValid,t["ɵnov"](n,45).ngClassInvalid,t["ɵnov"](n,45).ngClassPending);l(n,48,0,t["ɵnov"](n,51).ngClassUntouched,t["ɵnov"](n,51).ngClassTouched,t["ɵnov"](n,51).ngClassPristine,t["ɵnov"](n,51).ngClassDirty,t["ɵnov"](n,51).ngClassValid,t["ɵnov"](n,51).ngClassInvalid,t["ɵnov"](n,51).ngClassPending);l(n,67,0,t["ɵnov"](n,70).ngClassUntouched,t["ɵnov"](n,70).ngClassTouched,t["ɵnov"](n,70).ngClassPristine,t["ɵnov"](n,70).ngClassDirty,t["ɵnov"](n,70).ngClassValid,t["ɵnov"](n,70).ngClassInvalid,t["ɵnov"](n,70).ngClassPending);l(n,73,0,t["ɵnov"](n,76).ngClassUntouched,t["ɵnov"](n,76).ngClassTouched,t["ɵnov"](n,76).ngClassPristine,t["ɵnov"](n,76).ngClassDirty,t["ɵnov"](n,76).ngClassValid,t["ɵnov"](n,76).ngClassInvalid,t["ɵnov"](n,76).ngClassPending)})}Object.defineProperty(n,"__esModule",{value:!0});var t=e(0),a=(e(1),e(15),e(66)),o=e(205),d=e(742),i=function(){function l(l,n,e,u,t,a,o){this.navCtrl=l,this.gameProvider=n,this.alertCtrl=e,this.loadingCtrl=u,this.actionSheetCtrl=t,this.authProvider=a,this.navParams=o,this.league=new d.a("","","",{id:"",name:"",imageurl:""}),this.leagues=this.navParams.get("league"),this.leagues&&(this.league=this.leagues,this.league.imageurl=this.leagues.imageurl?this.leagues.imageurl:"assets/imgs/appicon.png")}return l.prototype.onDelete=function(){var l=this,n=this.loadingCtrl.create({content:"Please wait..."});this.alertCtrl.create({title:"Delete League",message:"Do you want to delete <b>"+this.leagues.name+"?</b><br/><br/>All the teams under <b>"+this.leagues.name+"</b> would be deleted.</b><br/><br/>This is action is irreversible.",buttons:[{text:"Cancel",handler:function(){}},{text:"Proceed",handler:function(){n.present(),l.gameProvider.deleteLeague(l.leagues.id).subscribe(function(e){n.dismiss().catch(function(){}),200===e.statusCode?l.navCtrl.pop():l.authProvider.showToast(e.description)},function(e){n.dismiss().catch(function(){}),l.authProvider.showToast(e.error.error)})}}]}).present()},l.prototype.onSubmit=function(l){var n=this;if(l.name){var e=this.loadingCtrl.create({content:"Please wait..."});e.present(),this.gameProvider.updateLeague(l).subscribe(function(l){e.dismiss().catch(function(){}),200===l.statusCode?n.navCtrl.pop():n.authProvider.showToast(l.description)},function(l){e.dismiss().catch(function(){}),n.authProvider.showToast(l.error.error)})}else this.authProvider.showToast("Name of league input field is empty")},l}(),r=function(){return function(){}}(),s=e(206),g=e(207),c=e(208),m=e(209),p=e(210),f=e(211),v=e(212),h=e(213),C=e(214),b=e(54),y=e(3),R=e(7),N=e(92),M=e(37),I=e(9),_=e(20),x=e(145),P=e(61),w=e(38),E=e(91),k=e(30),T=e(5),D=e(10),S=e(31),F=e(14),L=e(60),V=e(8),q=e(143),K=e(28),B=e(25),O=e(53),U=e(67),A=e(62),z=e(731),j=e(24),J=e(215),Z=e(41),G=e(26),H=e(93),Q=e(144),W=e(146),X=e(17),Y=t["ɵcrt"]({encapsulation:2,styles:[],data:{}}),$=t["ɵccf"]("page-setting-league-edit",i,function(l){return t["ɵvid"](0,[(l()(),t["ɵeld"](0,0,null,null,1,"page-setting-league-edit",[],null,null,null,u,Y)),t["ɵdid"](1,49152,null,0,i,[_.a,o.a,H.a,Q.a,W.a,a.a,X.a],null,null)],null,null)},{},{},[]),ll=e(141),nl=e(52);e.d(n,"SettingLeagueEditPageModuleNgFactory",function(){return el});var el=t["ɵcmf"](r,[],function(l){return t["ɵmod"]([t["ɵmpd"](512,t.ComponentFactoryResolver,t["ɵCodegenComponentFactoryResolver"],[[8,[s.a,g.a,c.a,m.a,p.a,f.a,v.a,h.a,C.a,$]],[3,t.ComponentFactoryResolver],t.NgModuleRef]),t["ɵmpd"](4608,F.NgLocalization,F.NgLocaleLocalization,[t.LOCALE_ID,[2,F["ɵa"]]]),t["ɵmpd"](4608,j["ɵi"],j["ɵi"],[]),t["ɵmpd"](4608,j.FormBuilder,j.FormBuilder,[]),t["ɵmpd"](512,F.CommonModule,F.CommonModule,[]),t["ɵmpd"](512,j["ɵba"],j["ɵba"],[]),t["ɵmpd"](512,j.FormsModule,j.FormsModule,[]),t["ɵmpd"](512,j.ReactiveFormsModule,j.ReactiveFormsModule,[]),t["ɵmpd"](512,ll.a,ll.a,[]),t["ɵmpd"](512,ll.b,ll.b,[]),t["ɵmpd"](512,r,r,[]),t["ɵmpd"](256,nl.a,i,[])])})},731:function(l,n,e){"use strict";function u(l){return i["ɵvid"](0,[(l()(),i["ɵeld"](0,0,[[1,0],["textInput",1]],null,1,"input",[["class","text-input"],["dir","auto"]],[[8,"type",0],[1,"aria-labelledby",0],[1,"min",0],[1,"max",0],[1,"step",0],[1,"autocomplete",0],[1,"autocorrect",0],[8,"placeholder",0],[8,"disabled",0],[8,"readOnly",0]],[[null,"input"],[null,"blur"],[null,"focus"],[null,"keydown"]],function(l,n,e){var u=!0,t=l.component;if("input"===n){u=!1!==t.onInput(e)&&u}if("blur"===n){u=!1!==t.onBlur(e)&&u}if("focus"===n){u=!1!==t.onFocus(e)&&u}if("keydown"===n){u=!1!==t.onKeydown(e)&&u}return u},null,null)),i["ɵdid"](1,278528,null,0,r.NgClass,[i.IterableDiffers,i.KeyValueDiffers,i.ElementRef,i.Renderer2],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null)],function(l,n){l(n,1,0,"text-input","text-input-"+n.component._mode)},function(l,n){var e=n.component;l(n,0,0,e._type,e._labelId,e.min,e.max,e.step,e.autocomplete,e.autocorrect,e.placeholder,e._disabled,e._readonly)})}function t(l){return i["ɵvid"](0,[(l()(),i["ɵeld"](0,0,[[1,0],["textInput",1]],null,1,"textarea",[["class","text-input"]],[[1,"aria-labelledby",0],[1,"autocomplete",0],[1,"autocorrect",0],[8,"placeholder",0],[8,"disabled",0],[8,"readOnly",0]],[[null,"input"],[null,"blur"],[null,"focus"],[null,"keydown"]],function(l,n,e){var u=!0,t=l.component;if("input"===n){u=!1!==t.onInput(e)&&u}if("blur"===n){u=!1!==t.onBlur(e)&&u}if("focus"===n){u=!1!==t.onFocus(e)&&u}if("keydown"===n){u=!1!==t.onKeydown(e)&&u}return u},null,null)),i["ɵdid"](1,278528,null,0,r.NgClass,[i.IterableDiffers,i.KeyValueDiffers,i.ElementRef,i.Renderer2],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null)],function(l,n){l(n,1,0,"text-input","text-input-"+n.component._mode)},function(l,n){var e=n.component;l(n,0,0,e._labelId,e.autocomplete,e.autocorrect,e.placeholder,e._disabled,e._readonly)})}function a(l){return i["ɵvid"](0,[(l()(),i["ɵeld"](0,0,null,null,1,"button",[["class","text-input-clear-icon"],["clear",""],["ion-button",""],["tabindex","-1"],["type","button"]],null,[[null,"click"],[null,"mousedown"]],function(l,n,e){var u=!0,t=l.component;if("click"===n){u=!1!==t.clearTextInput(e)&&u}if("mousedown"===n){u=!1!==t.clearTextInput(e)&&u}return u},s.b,s.a)),i["ɵdid"](1,1097728,null,0,g.a,[[8,""],c.a,i.ElementRef,i.Renderer],{clear:[0,"clear"]},null)],function(l,n){l(n,1,0,"")},null)}function o(l){return i["ɵvid"](0,[(l()(),i["ɵeld"](0,0,null,null,0,"div",[["class","input-cover"]],null,[[null,"touchstart"],[null,"touchend"],[null,"mousedown"],[null,"mouseup"]],function(l,n,e){var u=!0,t=l.component;if("touchstart"===n){u=!1!==t._pointerStart(e)&&u}if("touchend"===n){u=!1!==t._pointerEnd(e)&&u}if("mousedown"===n){u=!1!==t._pointerStart(e)&&u}if("mouseup"===n){u=!1!==t._pointerEnd(e)&&u}return u},null,null))],null,null)}function d(l){return i["ɵvid"](2,[i["ɵqud"](671088640,1,{_native:0}),(l()(),i["ɵand"](16777216,null,null,1,null,u)),i["ɵdid"](2,16384,null,0,r.NgIf,[i.ViewContainerRef,i.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),i["ɵand"](16777216,null,null,1,null,t)),i["ɵdid"](4,16384,null,0,r.NgIf,[i.ViewContainerRef,i.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),i["ɵand"](16777216,null,null,1,null,a)),i["ɵdid"](6,16384,null,0,r.NgIf,[i.ViewContainerRef,i.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),i["ɵand"](16777216,null,null,1,null,o)),i["ɵdid"](8,16384,null,0,r.NgIf,[i.ViewContainerRef,i.TemplateRef],{ngIf:[0,"ngIf"]},null)],function(l,n){var e=n.component;l(n,2,0,!e._isTextarea);l(n,4,0,e._isTextarea);l(n,6,0,e._clearInput);l(n,8,0,e._useAssist)},null)}e.d(n,"a",function(){return m}),n.b=d;var i=e(0),r=e(14),s=e(41),g=e(26),c=e(3),m=(e(5),e(25),e(10),i["ɵcrt"]({encapsulation:2,styles:[],data:{}}))},742:function(l,n,e){"use strict";e.d(n,"a",function(){return u});var u=function(){return function(l,n,e,u){this.name=l,this.id=n,this.imageurl=e,this.country=u}}()}});
+webpackJsonp([17],{
+
+/***/ 770:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SubscriptionIosPageModule", function() { return SubscriptionIosPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__subscription_ios__ = __webpack_require__(831);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var SubscriptionIosPageModule = /** @class */ (function () {
+    function SubscriptionIosPageModule() {
+    }
+    SubscriptionIosPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__subscription_ios__["a" /* SubscriptionIosPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__subscription_ios__["a" /* SubscriptionIosPage */]),
+            ],
+        })
+    ], SubscriptionIosPageModule);
+    return SubscriptionIosPageModule;
+}());
+
+//# sourceMappingURL=subscription-ios.module.js.map
+
+/***/ }),
+
+/***/ 778:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewUsers; });
+var NewUsers = /** @class */ (function () {
+    function NewUsers(id, email, firstname, lastname, referencecode, password, phone, plantype, platform, usertypes, status) {
+        this.id = id;
+        this.email = email;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.referencecode = referencecode;
+        this.password = password;
+        this.phone = phone;
+        this.plantype = plantype;
+        this.platform = platform;
+        this.usertypes = usertypes;
+        this.status = status;
+    }
+    return NewUsers;
+}());
+
+//# sourceMappingURL=NewUser.js.map
+
+/***/ }),
+
+/***/ 831:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SubscriptionIosPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_NewUser__ = __webpack_require__(778);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var SubscriptionIosPage = /** @class */ (function () {
+    function SubscriptionIosPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.newuser = new __WEBPACK_IMPORTED_MODULE_0__interfaces_NewUser__["a" /* NewUsers */]("", "", "", "", "", "", "", { id: "" }, "", { id: "", name: "" }, { id: "", name: "" });
+        this.newuser = this.navParams.get("newuser");
+        this.sub_option = this.navParams.get("sub_option");
+    }
+    SubscriptionIosPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
+            selector: 'page-subscription-ios',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/subscription-ios/subscription-ios.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Subscription</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/subscription-ios/subscription-ios.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavParams"]])
+    ], SubscriptionIosPage);
+    return SubscriptionIosPage;
+}());
+
+//# sourceMappingURL=subscription-ios.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=17.js.map

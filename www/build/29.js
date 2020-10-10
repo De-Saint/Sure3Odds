@@ -1,1 +1,293 @@
-webpackJsonp([29],{687:function(l,n,u){"use strict";function e(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,0,"img",[["style","border-radius: 50px;"]],[[8,"src",4]],null,null,null,null))],null,function(l,n){var u=n.component;l(n,0,0,c["ɵinlineInterpolate"](1,"",null==u.match.hometeam?null:u.match.hometeam.imageurl,""))})}function t(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,0,"img",[["src","assets/imgs/appicon.png"],["style","border-radius: 50px;"]],null,null,null,null,null))],null,null)}function o(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,0,"img",[["style","border-radius: 50px;"]],[[8,"src",4]],null,null,null,null))],null,function(l,n){var u=n.component;l(n,0,0,c["ɵinlineInterpolate"](1,"",null==u.match.awayteam?null:u.match.awayteam.imageurl,""))})}function a(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,0,"img",[["src","assets/imgs/appicon.png"],["style","border-radius: 50px;"]],null,null,null,null,null))],null,null)}function d(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,40,"ion-item",[["class","item item-block"]],null,null,null,E.b,E.a)),c["ɵdid"](1,278528,null,0,N.NgClass,[c.IterableDiffers,c.KeyValueDiffers,c.ElementRef,c.Renderer2],{ngClass:[0,"ngClass"]},null),c["ɵpod"](2,{team2:0}),c["ɵdid"](3,1097728,[["chatList",4]],3,T.a,[k.a,P.a,c.ElementRef,c.Renderer,[2,V.a]],null,null),c["ɵqud"](335544320,13,{contentLabel:0}),c["ɵqud"](603979776,14,{_buttons:1}),c["ɵqud"](603979776,15,{_icons:1}),c["ɵdid"](7,16384,null,0,q.a,[],null,null),(l()(),c["ɵted"](-1,2,["\n      "])),(l()(),c["ɵeld"](9,0,null,2,30,"ion-grid",[["class","grid"]],null,null,null,null,null)),c["ɵdid"](10,16384,null,0,L.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n        "])),(l()(),c["ɵeld"](12,0,null,null,26,"ion-row",[["class","row"]],null,null,null,null,null)),c["ɵdid"](13,16384,null,0,M.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵeld"](15,0,null,null,8,"ion-col",[["class","col"],["col-auto",""]],null,null,null,null,null)),c["ɵdid"](16,16384,null,0,F.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n            "])),(l()(),c["ɵeld"](18,0,null,null,4,"p",[["color","color1"],["ion-text",""]],null,null,null,null,null)),c["ɵdid"](19,16384,null,0,O.a,[P.a,c.ElementRef,c.Renderer],{color:[0,"color"]},null),(l()(),c["ɵted"](20,null,["","' "])),(l()(),c["ɵeld"](21,0,null,null,1,"b",[],null,null,null,null,null)),(l()(),c["ɵted"](22,null,["",""])),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵeld"](25,0,null,null,4,"ion-col",[["class","col"],["col-auto",""]],null,null,null,null,null)),c["ɵdid"](26,16384,null,0,F.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n            "])),(l()(),c["ɵeld"](28,0,null,null,0,"img",[["src","assets/imgs/appicon.png"]],null,null,null,null,null)),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵeld"](31,0,null,null,6,"ion-col",[["class","col"],["col",""]],null,null,null,null,null)),c["ɵdid"](32,16384,null,0,F.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n            "])),(l()(),c["ɵeld"](34,0,null,null,2,"p",[["color","dark"],["ion-text",""]],null,null,null,null,null)),c["ɵdid"](35,16384,null,0,O.a,[P.a,c.ElementRef,c.Renderer],{color:[0,"color"]},null),(l()(),c["ɵted"](36,null,["",""])),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵted"](-1,null,["\n        "])),(l()(),c["ɵted"](-1,null,["\n      "])),(l()(),c["ɵted"](-1,2,["\n    "]))],function(l,n){l(n,1,0,l(n,2,0,n.context.$implicit.user.id==n.component.jti));l(n,19,0,"color1");l(n,35,0,"dark")},function(l,n){l(n,20,0,n.context.$implicit.time);l(n,22,0,n.context.$implicit.user.uniqueid);l(n,36,0,n.context.$implicit.comments)})}function i(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,11,"div",[["color","color2"],["text-center",""]],null,null,null,null,null)),(l()(),c["ɵted"](-1,null,["\n    What do you think about "])),(l()(),c["ɵeld"](2,0,null,null,0,"br",[],null,null,null,null,null)),(l()(),c["ɵted"](-1,null,[" "])),(l()(),c["ɵeld"](4,0,null,null,0,"br",[],null,null,null,null,null)),(l()(),c["ɵted"](-1,null,[" "])),(l()(),c["ɵeld"](6,0,null,null,1,"strong",[],null,null,null,null,null)),(l()(),c["ɵted"](7,null,["",""])),(l()(),c["ɵted"](-1,null,[" Vs  "])),(l()(),c["ɵeld"](9,0,null,null,1,"strong",[],null,null,null,null,null)),(l()(),c["ɵted"](10,null,["",""])),(l()(),c["ɵted"](-1,null,["?\n  "]))],null,function(l,n){var u=n.component;l(n,7,0,null==u.match.hometeam?null:u.match.hometeam.name);l(n,10,0,null==u.match.awayteam?null:u.match.awayteam.name)})}function r(l){return c["ɵvid"](0,[c["ɵqud"](402653184,1,{contentArea:0}),c["ɵqud"](402653184,2,{chatList:0}),(l()(),c["ɵeld"](2,0,null,null,121,"ion-header",[],null,null,null,null,null)),c["ɵdid"](3,16384,null,0,D.a,[P.a,c.ElementRef,c.Renderer,[2,G.a]],null,null),(l()(),c["ɵted"](-1,null,["\n  "])),(l()(),c["ɵeld"](5,0,null,null,16,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,S.b,S.a)),c["ɵdid"](6,49152,null,0,B.a,[K.a,[2,G.a],[2,j.a],P.a,c.ElementRef,c.Renderer],null,null),(l()(),c["ɵted"](-1,3,["\n    "])),(l()(),c["ɵeld"](8,0,null,0,8,"button",[["icon-only",""],["ion-button",""],["menuToggle",""]],[[8,"hidden",0]],[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==c["ɵnov"](l,10).toggle()&&e}return e},A.b,A.a)),c["ɵdid"](9,1097728,[[3,4]],0,$.a,[[8,""],P.a,c.ElementRef,c.Renderer],null,null),c["ɵdid"](10,1064960,null,0,W.a,[z.a,[2,G.a],[2,$.a],[2,B.a]],{menuToggle:[0,"menuToggle"]},null),c["ɵdid"](11,16384,null,1,U.a,[P.a,c.ElementRef,c.Renderer,[2,H.a],[2,B.a]],null,null),c["ɵqud"](603979776,3,{_buttons:1}),(l()(),c["ɵted"](-1,0,["\n      "])),(l()(),c["ɵeld"](14,0,null,0,1,"ion-icon",[["class","goal-menu"],["role","img"]],[[2,"hide",null]],null,null,null,null)),c["ɵdid"](15,147456,null,0,J.a,[P.a,c.ElementRef,c.Renderer],null,null),(l()(),c["ɵted"](-1,0,["\n    "])),(l()(),c["ɵted"](-1,3,["\n    "])),(l()(),c["ɵeld"](18,0,null,3,2,"ion-title",[],null,null,null,Z.b,Z.a)),c["ɵdid"](19,49152,null,0,Q.a,[P.a,c.ElementRef,c.Renderer,[2,H.a],[2,B.a]],null,null),(l()(),c["ɵted"](-1,0,["Comments"])),(l()(),c["ɵted"](-1,3,["\n\n  "])),(l()(),c["ɵted"](-1,null,["\n  "])),(l()(),c["ɵeld"](23,0,null,null,99,"ion-toolbar",[["class","matchResultBar toolbar"]],[[2,"statusbar-padding",null]],null,null,X.b,X.a)),c["ɵdid"](24,49152,null,0,H.a,[P.a,c.ElementRef,c.Renderer],null,null),(l()(),c["ɵted"](-1,3,["\n    "])),(l()(),c["ɵted"](-1,3,["\n    "])),(l()(),c["ɵeld"](27,0,null,3,94,"ion-item",[["class","matchResult item item-block"]],null,null,null,E.b,E.a)),c["ɵdid"](28,1097728,null,3,T.a,[k.a,P.a,c.ElementRef,c.Renderer,[2,V.a]],null,null),c["ɵqud"](335544320,4,{contentLabel:0}),c["ɵqud"](603979776,5,{_buttons:1}),c["ɵqud"](603979776,6,{_icons:1}),c["ɵdid"](32,16384,null,0,q.a,[],null,null),(l()(),c["ɵted"](-1,2,["\n      "])),(l()(),c["ɵeld"](34,0,null,2,86,"ion-grid",[["class","grid"]],null,null,null,null,null)),c["ɵdid"](35,16384,null,0,L.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n        "])),(l()(),c["ɵeld"](37,0,null,null,70,"ion-row",[["class","row"]],null,null,null,null,null)),c["ɵdid"](38,16384,null,0,M.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵeld"](41,0,null,null,19,"ion-col",[["class","col"],["col",""]],null,null,null,null,null)),c["ɵdid"](42,16384,null,0,F.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n            "])),(l()(),c["ɵeld"](44,0,null,null,15,"ion-item",[["class","item item-block"]],null,null,null,E.b,E.a)),c["ɵdid"](45,1097728,null,3,T.a,[k.a,P.a,c.ElementRef,c.Renderer,[2,V.a]],null,null),c["ɵqud"](335544320,7,{contentLabel:0}),c["ɵqud"](603979776,8,{_buttons:1}),c["ɵqud"](603979776,9,{_icons:1}),c["ɵdid"](49,16384,null,0,q.a,[],null,null),(l()(),c["ɵted"](-1,2,["\n              "])),(l()(),c["ɵand"](16777216,null,2,1,null,e)),c["ɵdid"](52,16384,null,0,N.NgIf,[c.ViewContainerRef,c.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),c["ɵted"](-1,2,["\n              "])),(l()(),c["ɵand"](16777216,null,2,1,null,t)),c["ɵdid"](55,16384,null,0,N.NgIf,[c.ViewContainerRef,c.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),c["ɵted"](-1,2,["\n              "])),(l()(),c["ɵeld"](57,0,null,2,1,"p",[],null,null,null,null,null)),(l()(),c["ɵted"](58,null,["",""])),(l()(),c["ɵted"](-1,2,["\n            "])),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵeld"](63,0,null,null,21,"ion-col",[["class","col"],["col-auto",""]],null,null,null,null,null)),c["ɵdid"](64,16384,null,0,F.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n            "])),(l()(),c["ɵeld"](66,0,null,null,13,"div",[["class","result"]],null,null,null,null,null)),(l()(),c["ɵted"](-1,null,["\n              "])),(l()(),c["ɵeld"](68,0,null,null,2,"span",[["color","color1"],["ion-text",""]],null,null,null,null,null)),c["ɵdid"](69,16384,null,0,O.a,[P.a,c.ElementRef,c.Renderer],{color:[0,"color"]},null),(l()(),c["ɵted"](70,null,["",""])),(l()(),c["ɵted"](-1,null,["\n              "])),(l()(),c["ɵeld"](72,0,null,null,2,"span",[["color","color1"],["ion-text",""],["style","padding: 0.3em;"]],null,null,null,null,null)),c["ɵdid"](73,16384,null,0,O.a,[P.a,c.ElementRef,c.Renderer],{color:[0,"color"]},null),(l()(),c["ɵted"](-1,null,["-"])),(l()(),c["ɵted"](-1,null,["\n              "])),(l()(),c["ɵeld"](76,0,null,null,2,"span",[["color","color1"],["ion-text",""]],null,null,null,null,null)),c["ɵdid"](77,16384,null,0,O.a,[P.a,c.ElementRef,c.Renderer],{color:[0,"color"]},null),(l()(),c["ɵted"](78,null,["",""])),(l()(),c["ɵted"](-1,null,["\n            "])),(l()(),c["ɵted"](-1,null,["\n            "])),(l()(),c["ɵeld"](81,0,null,null,2,"p",[["color","light"],["ion-text",""],["text-center",""]],null,null,null,null,null)),c["ɵdid"](82,16384,null,0,O.a,[P.a,c.ElementRef,c.Renderer],{color:[0,"color"]},null),(l()(),c["ɵted"](83,null,["",""])),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵeld"](87,0,null,null,19,"ion-col",[["class","col"],["col",""]],null,null,null,null,null)),c["ɵdid"](88,16384,null,0,F.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n            "])),(l()(),c["ɵeld"](90,0,null,null,15,"ion-item",[["class","item item-block"]],null,null,null,E.b,E.a)),c["ɵdid"](91,1097728,null,3,T.a,[k.a,P.a,c.ElementRef,c.Renderer,[2,V.a]],null,null),c["ɵqud"](335544320,10,{contentLabel:0}),c["ɵqud"](603979776,11,{_buttons:1}),c["ɵqud"](603979776,12,{_icons:1}),c["ɵdid"](95,16384,null,0,q.a,[],null,null),(l()(),c["ɵted"](-1,2,["\n              "])),(l()(),c["ɵand"](16777216,null,2,1,null,o)),c["ɵdid"](98,16384,null,0,N.NgIf,[c.ViewContainerRef,c.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),c["ɵted"](-1,2,["\n              "])),(l()(),c["ɵand"](16777216,null,2,1,null,a)),c["ɵdid"](101,16384,null,0,N.NgIf,[c.ViewContainerRef,c.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),c["ɵted"](-1,2,["\n              "])),(l()(),c["ɵeld"](103,0,null,2,1,"p",[],null,null,null,null,null)),(l()(),c["ɵted"](104,null,["",""])),(l()(),c["ɵted"](-1,2,["\n            "])),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵted"](-1,null,["\n        "])),(l()(),c["ɵted"](-1,null,["\n        "])),(l()(),c["ɵeld"](109,0,null,null,10,"ion-row",[["class","row"]],null,null,null,null,null)),c["ɵdid"](110,16384,null,0,M.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵeld"](112,0,null,null,6,"ion-col",[["class","col"],["col-center",""]],null,null,null,null,null)),c["ɵdid"](113,16384,null,0,F.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n            "])),(l()(),c["ɵeld"](115,0,null,null,2,"p",[["color","secondary"],["ion-text",""],["style","text-align: center;"]],null,null,null,null,null)),c["ɵdid"](116,16384,null,0,O.a,[P.a,c.ElementRef,c.Renderer],{color:[0,"color"]},null),(l()(),c["ɵted"](117,null,[""," - ",""])),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵted"](-1,null,["\n        "])),(l()(),c["ɵted"](-1,null,["\n      "])),(l()(),c["ɵted"](-1,2,["\n\n    "])),(l()(),c["ɵted"](-1,3,["\n  "])),(l()(),c["ɵted"](-1,null,["\n"])),(l()(),c["ɵted"](-1,null,["\n\n"])),(l()(),c["ɵeld"](125,0,null,null,12,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,Y.b,Y.a)),c["ɵdid"](126,4374528,[[1,4]],0,ll.a,[P.a,nl.a,ul.a,c.ElementRef,c.Renderer,K.a,el.a,c.NgZone,[2,G.a],[2,j.a]],null,null),(l()(),c["ɵted"](-1,1,["\n  "])),(l()(),c["ɵeld"](128,0,[[2,0]],1,5,"ion-list",[["class","timeLine_list"]],null,null,null,null,null)),c["ɵdid"](129,16384,null,0,tl.a,[P.a,c.ElementRef,c.Renderer,nl.a,ol.m,ul.a],null,null),(l()(),c["ɵted"](-1,null,["\n    "])),(l()(),c["ɵand"](16777216,null,null,1,null,d)),c["ɵdid"](132,802816,null,0,N.NgForOf,[c.ViewContainerRef,c.TemplateRef,c.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),c["ɵted"](-1,null,["\n  "])),(l()(),c["ɵted"](-1,1,["\n  "])),(l()(),c["ɵand"](16777216,null,1,1,null,i)),c["ɵdid"](136,16384,null,0,N.NgIf,[c.ViewContainerRef,c.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),c["ɵted"](-1,1,["\n"])),(l()(),c["ɵted"](-1,null,["\n"])),(l()(),c["ɵeld"](139,0,null,null,35,"ion-footer",[],null,null,null,null,null)),c["ɵdid"](140,16384,null,0,al.a,[P.a,c.ElementRef,c.Renderer,[2,G.a]],null,null),(l()(),c["ɵted"](-1,null,["\n  "])),(l()(),c["ɵeld"](142,0,null,null,31,"ion-toolbar",[["class","toolbar"]],[[2,"statusbar-padding",null]],null,null,X.b,X.a)),c["ɵdid"](143,49152,null,0,H.a,[P.a,c.ElementRef,c.Renderer],null,null),(l()(),c["ɵted"](-1,3,["\n    "])),(l()(),c["ɵeld"](145,0,null,3,27,"ion-grid",[["class","white bordertop lightborder grid"]],null,null,null,null,null)),c["ɵdid"](146,16384,null,0,L.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n      "])),(l()(),c["ɵeld"](148,0,null,null,23,"ion-row",[["class","row"],["wrap",""]],null,null,null,null,null)),c["ɵdid"](149,16384,null,0,M.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n        "])),(l()(),c["ɵeld"](151,0,null,null,8,"ion-col",[["class","center col"],["col-10",""]],null,null,null,null,null)),c["ɵdid"](152,16384,null,0,F.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵeld"](154,0,null,null,4,"ion-input",[["class",""],["placeholder","Type your comment"],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,u){var e=!0;if("ngModelChange"===n){e=!1!==(l.component.comment.comments=u)&&e}return e},dl.b,dl.a)),c["ɵdid"](155,671744,null,0,il.NgModel,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),c["ɵprd"](2048,null,il.NgControl,null,[il.NgModel]),c["ɵdid"](157,16384,null,0,il.NgControlStatus,[il.NgControl],null,null),c["ɵdid"](158,5423104,null,0,rl.a,[P.a,nl.a,k.a,K.a,c.ElementRef,c.Renderer,[2,ll.a],[2,T.a],[2,il.NgControl],ul.a],{type:[0,"type"],placeholder:[1,"placeholder"]},null),(l()(),c["ɵted"](-1,null,["\n        "])),(l()(),c["ɵted"](-1,null,["\n        "])),(l()(),c["ɵeld"](161,0,null,null,9,"ion-col",[["class","center  col"],["col-2",""]],null,null,null,null,null)),c["ɵdid"](162,16384,null,0,F.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵeld"](164,0,null,null,5,"button",[["class","round paddingleft half-paddingright"],["color","primary"],["icon-left",""],["ion-button",""],["round",""]],null,[[null,"click"]],function(l,n,u){var e=!0,t=l.component;if("click"===n){e=!1!==t.onCreateComment(t.comment,t.match)&&e}return e},A.b,A.a)),c["ɵdid"](165,1097728,null,0,$.a,[[8,""],P.a,c.ElementRef,c.Renderer],{color:[0,"color"],round:[1,"round"]},null),(l()(),c["ɵted"](-1,0,["\n            "])),(l()(),c["ɵeld"](167,0,null,0,1,"ion-icon",[["name","send"],["role","img"]],[[2,"hide",null]],null,null,null,null)),c["ɵdid"](168,147456,null,0,J.a,[P.a,c.ElementRef,c.Renderer],{name:[0,"name"]},null),(l()(),c["ɵted"](-1,0,["\n          "])),(l()(),c["ɵted"](-1,null,["\n        "])),(l()(),c["ɵted"](-1,null,["\n      "])),(l()(),c["ɵted"](-1,null,["\n    "])),(l()(),c["ɵted"](-1,3,["\n  "])),(l()(),c["ɵted"](-1,null,["\n"])),(l()(),c["ɵted"](-1,null,["\n"]))],function(l,n){var u=n.component;l(n,10,0,"");l(n,52,0,null==u.match.hometeam?null:u.match.hometeam.imageurl);l(n,55,0,!(null!=u.match.hometeam&&u.match.hometeam.imageurl));l(n,69,0,"color1");l(n,73,0,"color1");l(n,77,0,"color1");l(n,82,0,"light");l(n,98,0,null==u.match.awayteam?null:u.match.awayteam.imageurl);l(n,101,0,!(null!=u.match.awayteam&&u.match.awayteam.imageurl));l(n,116,0,"secondary");l(n,132,0,u.comments);l(n,136,0,"none"===u.error);l(n,155,0,u.comment.comments);l(n,158,0,"text","Type your comment");l(n,165,0,"primary","");l(n,168,0,"send")},function(l,n){var u=n.component;l(n,5,0,c["ɵnov"](n,6)._hidden,c["ɵnov"](n,6)._sbPadding);l(n,8,0,c["ɵnov"](n,10).isHidden);l(n,14,0,c["ɵnov"](n,15)._hidden);l(n,23,0,c["ɵnov"](n,24)._sbPadding);l(n,58,0,null==u.match.hometeam?null:u.match.hometeam.name);l(n,70,0,null==u.match?null:u.match.hometeamscore);l(n,78,0,null==u.match?null:u.match.awayteamscore);l(n,83,0,null==u.match.status?null:u.match.status.name);l(n,104,0,null==u.match.awayteam?null:u.match.awayteam.name);l(n,117,0,null==u.match.country?null:u.match.country.name,null==u.match.league?null:u.match.league.name);l(n,125,0,c["ɵnov"](n,126).statusbarPadding,c["ɵnov"](n,126)._hasRefresher);l(n,142,0,c["ɵnov"](n,143)._sbPadding);l(n,154,0,c["ɵnov"](n,157).ngClassUntouched,c["ɵnov"](n,157).ngClassTouched,c["ɵnov"](n,157).ngClassPristine,c["ɵnov"](n,157).ngClassDirty,c["ɵnov"](n,157).ngClassValid,c["ɵnov"](n,157).ngClassInvalid,c["ɵnov"](n,157).ngClassPending);l(n,167,0,c["ɵnov"](n,168)._hidden)})}Object.defineProperty(n,"__esModule",{value:!0});var c=u(0),s=(u(1),u(15),u(2)),m=u(205),f=u(66),p=function(){return function(l,n,u,e,t,o){this.comments=l,this.date=n,this.time=u,this.game=e,this.id=t,this.user=o}}(),g=function(){function l(l,n,u,e,t){this.navCtrl=l,this.authProvider=n,this.gameProvider=u,this.loadingCtrl=e,this.navParams=t,this.comment=new p("","","",{id:""},"",{id:""}),this.img2="assets/imgs/appicon.png",this.match=this.navParams.get("match")}return l.prototype.ionViewDidLoad=function(){var l=this;this.mutationObserver=new MutationObserver(function(n){l.contentArea.scrollToBottom()}),this.mutationObserver.observe(this.chatList.nativeElement,{childList:!0})},l.prototype.ionViewDidLeave=function(){this.placesSub.unsubscribe(),s.Observable.interval.bind(this.placesSub.unsubscribe())},l.prototype.ionViewWillLeave=function(){this.placesSub.unsubscribe(),s.Observable.interval.bind(this.placesSub.unsubscribe())},l.prototype.ionViewWillEnter=function(){var l=this;this.placesSub=s.Observable.interval(1e4).subscribe(function(n){l.GetGameComments("")});var n=this.loadingCtrl.create({content:"Please wait..."});n.present(),this.GetGameComments(n),this.jti=this.authProvider.currentUserDataValue.jti},l.prototype.GetGameComments=function(l){var n=this;this.gameProvider.GetGameComments(this.match.id).subscribe(function(u){n.comments=u.data,n.error="",l&&l.dismiss().catch(function(){})},function(u){n.comments=[],n.error="none",l&&l.dismiss().catch(function(){})})},l.prototype.onCreateComment=function(l,n){var u=this,e=this.loadingCtrl.create({content:"Please wait..."});this.comment.comments?(this.comment.game.id=n.id,e.present(),this.gameProvider.createComment(this.comment).subscribe(function(l){200===l.statusCode?(u.GetGameComments(e),u.comment.comments=""):u.authProvider.showToast(l.description)},function(l){e.dismiss().catch(function(){}),u.authProvider.showToast(l.error.error)})):this.authProvider.showToast("Comment input field is empty")},l}(),h=function(){return function(){}}(),b=u(206),v=u(207),R=u(208),y=u(209),C=u(210),w=u(211),I=u(212),_=u(213),x=u(214),E=u(143),N=u(14),T=u(28),k=u(25),P=u(3),V=u(53),q=u(67),L=u(218),M=u(149),F=u(148),O=u(68),D=u(54),G=u(7),S=u(92),B=u(37),K=u(9),j=u(20),A=u(41),$=u(26),W=u(94),z=u(36),U=u(69),H=u(38),J=u(34),Z=u(145),Q=u(61),X=u(151),Y=u(91),ll=u(30),nl=u(5),ul=u(10),el=u(31),tl=u(60),ol=u(8),al=u(152),dl=u(731),il=u(24),rl=u(215),cl=u(144),sl=u(17),ml=c["ɵcrt"]({encapsulation:2,styles:[],data:{}}),fl=c["ɵccf"]("page-match-comments",g,function(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,1,"page-match-comments",[],null,null,null,r,ml)),c["ɵdid"](1,49152,null,0,g,[j.a,f.a,m.a,cl.a,sl.a],null,null)],null,null)},{},{},[]),pl=u(141),gl=u(52);u.d(n,"MatchCommentsPageModuleNgFactory",function(){return hl});var hl=c["ɵcmf"](h,[],function(l){return c["ɵmod"]([c["ɵmpd"](512,c.ComponentFactoryResolver,c["ɵCodegenComponentFactoryResolver"],[[8,[b.a,v.a,R.a,y.a,C.a,w.a,I.a,_.a,x.a,fl]],[3,c.ComponentFactoryResolver],c.NgModuleRef]),c["ɵmpd"](4608,N.NgLocalization,N.NgLocaleLocalization,[c.LOCALE_ID,[2,N["ɵa"]]]),c["ɵmpd"](4608,il["ɵi"],il["ɵi"],[]),c["ɵmpd"](4608,il.FormBuilder,il.FormBuilder,[]),c["ɵmpd"](512,N.CommonModule,N.CommonModule,[]),c["ɵmpd"](512,il["ɵba"],il["ɵba"],[]),c["ɵmpd"](512,il.FormsModule,il.FormsModule,[]),c["ɵmpd"](512,il.ReactiveFormsModule,il.ReactiveFormsModule,[]),c["ɵmpd"](512,pl.a,pl.a,[]),c["ɵmpd"](512,pl.b,pl.b,[]),c["ɵmpd"](512,h,h,[]),c["ɵmpd"](256,gl.a,g,[])])})},731:function(l,n,u){"use strict";function e(l){return i["ɵvid"](0,[(l()(),i["ɵeld"](0,0,[[1,0],["textInput",1]],null,1,"input",[["class","text-input"],["dir","auto"]],[[8,"type",0],[1,"aria-labelledby",0],[1,"min",0],[1,"max",0],[1,"step",0],[1,"autocomplete",0],[1,"autocorrect",0],[8,"placeholder",0],[8,"disabled",0],[8,"readOnly",0]],[[null,"input"],[null,"blur"],[null,"focus"],[null,"keydown"]],function(l,n,u){var e=!0,t=l.component;if("input"===n){e=!1!==t.onInput(u)&&e}if("blur"===n){e=!1!==t.onBlur(u)&&e}if("focus"===n){e=!1!==t.onFocus(u)&&e}if("keydown"===n){e=!1!==t.onKeydown(u)&&e}return e},null,null)),i["ɵdid"](1,278528,null,0,r.NgClass,[i.IterableDiffers,i.KeyValueDiffers,i.ElementRef,i.Renderer2],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null)],function(l,n){l(n,1,0,"text-input","text-input-"+n.component._mode)},function(l,n){var u=n.component;l(n,0,0,u._type,u._labelId,u.min,u.max,u.step,u.autocomplete,u.autocorrect,u.placeholder,u._disabled,u._readonly)})}function t(l){return i["ɵvid"](0,[(l()(),i["ɵeld"](0,0,[[1,0],["textInput",1]],null,1,"textarea",[["class","text-input"]],[[1,"aria-labelledby",0],[1,"autocomplete",0],[1,"autocorrect",0],[8,"placeholder",0],[8,"disabled",0],[8,"readOnly",0]],[[null,"input"],[null,"blur"],[null,"focus"],[null,"keydown"]],function(l,n,u){var e=!0,t=l.component;if("input"===n){e=!1!==t.onInput(u)&&e}if("blur"===n){e=!1!==t.onBlur(u)&&e}if("focus"===n){e=!1!==t.onFocus(u)&&e}if("keydown"===n){e=!1!==t.onKeydown(u)&&e}return e},null,null)),i["ɵdid"](1,278528,null,0,r.NgClass,[i.IterableDiffers,i.KeyValueDiffers,i.ElementRef,i.Renderer2],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null)],function(l,n){l(n,1,0,"text-input","text-input-"+n.component._mode)},function(l,n){var u=n.component;l(n,0,0,u._labelId,u.autocomplete,u.autocorrect,u.placeholder,u._disabled,u._readonly)})}function o(l){return i["ɵvid"](0,[(l()(),i["ɵeld"](0,0,null,null,1,"button",[["class","text-input-clear-icon"],["clear",""],["ion-button",""],["tabindex","-1"],["type","button"]],null,[[null,"click"],[null,"mousedown"]],function(l,n,u){var e=!0,t=l.component;if("click"===n){e=!1!==t.clearTextInput(u)&&e}if("mousedown"===n){e=!1!==t.clearTextInput(u)&&e}return e},c.b,c.a)),i["ɵdid"](1,1097728,null,0,s.a,[[8,""],m.a,i.ElementRef,i.Renderer],{clear:[0,"clear"]},null)],function(l,n){l(n,1,0,"")},null)}function a(l){return i["ɵvid"](0,[(l()(),i["ɵeld"](0,0,null,null,0,"div",[["class","input-cover"]],null,[[null,"touchstart"],[null,"touchend"],[null,"mousedown"],[null,"mouseup"]],function(l,n,u){var e=!0,t=l.component;if("touchstart"===n){e=!1!==t._pointerStart(u)&&e}if("touchend"===n){e=!1!==t._pointerEnd(u)&&e}if("mousedown"===n){e=!1!==t._pointerStart(u)&&e}if("mouseup"===n){e=!1!==t._pointerEnd(u)&&e}return e},null,null))],null,null)}function d(l){return i["ɵvid"](2,[i["ɵqud"](671088640,1,{_native:0}),(l()(),i["ɵand"](16777216,null,null,1,null,e)),i["ɵdid"](2,16384,null,0,r.NgIf,[i.ViewContainerRef,i.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),i["ɵand"](16777216,null,null,1,null,t)),i["ɵdid"](4,16384,null,0,r.NgIf,[i.ViewContainerRef,i.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),i["ɵand"](16777216,null,null,1,null,o)),i["ɵdid"](6,16384,null,0,r.NgIf,[i.ViewContainerRef,i.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),i["ɵand"](16777216,null,null,1,null,a)),i["ɵdid"](8,16384,null,0,r.NgIf,[i.ViewContainerRef,i.TemplateRef],{ngIf:[0,"ngIf"]},null)],function(l,n){var u=n.component;l(n,2,0,!u._isTextarea);l(n,4,0,u._isTextarea);l(n,6,0,u._clearInput);l(n,8,0,u._useAssist)},null)}u.d(n,"a",function(){return f}),n.b=d;var i=u(0),r=u(14),c=u(41),s=u(26),m=u(3),f=(u(5),u(25),u(10),i["ɵcrt"]({encapsulation:2,styles:[],data:{}}))}});
+webpackJsonp([29],{
+
+/***/ 766:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingTeamsPageModule", function() { return SettingTeamsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_teams__ = __webpack_require__(827);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var SettingTeamsPageModule = /** @class */ (function () {
+    function SettingTeamsPageModule() {
+    }
+    SettingTeamsPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__setting_teams__["a" /* SettingTeamsPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_teams__["a" /* SettingTeamsPage */]),
+            ],
+        })
+    ], SettingTeamsPageModule);
+    return SettingTeamsPageModule;
+}());
+
+//# sourceMappingURL=setting-teams.module.js.map
+
+/***/ }),
+
+/***/ 827:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingTeamsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_games_games__ = __webpack_require__(369);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var SettingTeamsPage = /** @class */ (function () {
+    function SettingTeamsPage(authProvider, gamesProvider, loadingCtrl, actionSheetCtrl, alertCtrl, navCtrl, navParams) {
+        this.authProvider = authProvider;
+        this.gamesProvider = gamesProvider;
+        this.loadingCtrl = loadingCtrl;
+        this.actionSheetCtrl = actionSheetCtrl;
+        this.alertCtrl = alertCtrl;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.currentPage = 1;
+        this.totalPage = 0;
+        this.perPage = 0;
+        this.totalData = 0;
+    }
+    SettingTeamsPage.prototype.ionViewWillEnter = function () {
+        this.GetTeams();
+    };
+    SettingTeamsPage.prototype.GetTeams = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        loading.present();
+        this.gamesProvider.GetTeams(0, 50)
+            .subscribe(function (resp) {
+            loading.dismiss().catch(function () { });
+            if (resp.statusCode === 200) {
+                _this.teams = resp.data.content;
+                _this.originalteams = _this.teams;
+                _this.currentPage = resp.data.number;
+                _this.totalPage = resp.data.totalPages;
+                _this.totalData = resp.data.totalElements;
+                _this.perPage = resp.data.size;
+                _this.noteams = 'teams';
+            }
+            else {
+                _this.authProvider.showToast(resp.description);
+            }
+        }, function (error) {
+            _this.error = 'none';
+            loading.dismiss().catch(function () { });
+            _this.authProvider.showToast(error.error.description);
+        });
+    };
+    SettingTeamsPage.prototype.onSearch = function () {
+        var _this = this;
+        var searchvalue = this.searchTerm;
+        if (searchvalue.trim() === '') {
+            this.teams = this.originalteams;
+        }
+        else {
+            if (searchvalue.length >= 3) {
+                var loading_1 = this.loadingCtrl.create({
+                    content: "Please wait..."
+                });
+                loading_1.present();
+                this.gamesProvider.SearchTeams(searchvalue, 0, 200)
+                    .subscribe(function (resp) {
+                    loading_1.dismiss().catch(function () { });
+                    if (resp.statusCode === 200) {
+                        _this.teams = resp.data.content;
+                        _this.currentPage = resp.data.number;
+                        _this.totalPage = resp.data.totalPages;
+                        _this.totalData = resp.data.totalElements;
+                        _this.perPage = resp.data.size;
+                    }
+                    else {
+                        _this.authProvider.showToast(resp.description);
+                    }
+                }, function (error) {
+                    _this.error = 'none';
+                    loading_1.dismiss().catch(function () { });
+                    _this.authProvider.showToast(error.error.description);
+                });
+            }
+        }
+    };
+    SettingTeamsPage.prototype.onClear = function (ev) {
+        this.searchTerm = "";
+        this.teams = this.originalteams;
+    };
+    SettingTeamsPage.prototype.onCancel = function (ev) {
+        this.searchTerm = "";
+        this.teams = this.originalteams;
+    };
+    SettingTeamsPage.prototype.scrollInfinite = function (event) {
+        var _this = this;
+        this.currentPage += 1;
+        setTimeout(function () {
+            _this.gamesProvider.GetTeams(_this.currentPage, _this.perPage)
+                .subscribe(function (resp) {
+                if (resp.statusCode === 200) {
+                    _this.currentPage = resp.data.number;
+                    _this.totalPage = resp.data.totalPages;
+                    _this.totalData = resp.data.totalElements;
+                    _this.perPage = resp.data.size;
+                    _this.noteams = 'teams';
+                    for (var i = 0; i < resp.data.content.length; i++) {
+                        _this.teams.push(resp.data.content[i]);
+                    }
+                }
+                else {
+                    _this.authProvider.showToast(resp.description);
+                }
+                event.complete();
+            }, function (error) {
+                _this.noteams = 'none';
+                event.complete();
+            });
+        }, 1000);
+    };
+    SettingTeamsPage.prototype.onGotoTop = function () {
+        this.content.scrollToTop();
+    };
+    SettingTeamsPage.prototype.onTeamOption = function (team) {
+        var _this = this;
+        var actionSheet = this.actionSheetCtrl.create({
+            title: 'Team Options',
+            buttons: [
+                {
+                    text: 'View / Edit',
+                    handler: function () { _this.navCtrl.push('SettingTeamEditPage', { team: team }); }
+                }, {
+                    text: 'Promote / Relegate',
+                    handler: function () { _this.onPromoteDemote(team); }
+                }, {
+                    text: 'Delete From League',
+                    handler: function () { _this.onDeleteTeam(team); }
+                }, {
+                    text: 'Add To League',
+                    handler: function () { _this.onAssignTeam(team); }
+                }, {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () { }
+                }
+            ]
+        });
+        actionSheet.present();
+    };
+    SettingTeamsPage.prototype.onDeleteTeam = function (team) {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        var confirm = this.alertCtrl.create({
+            title: 'Delete Team',
+            message: "Do you want to delete <b>" + team.name + "</b> <br/>from <br/><b>" + team.league.name + "</b> league? <br/><br/>This action is irreversible.",
+            buttons: [
+                {
+                    text: 'Cancel',
+                    handler: function () {
+                    }
+                },
+                {
+                    text: 'Proceed',
+                    handler: function () {
+                        loading.present();
+                        _this.gamesProvider.deleteTeam(team.id).subscribe(function (res) {
+                            loading.dismiss().catch(function () { });
+                            if (res.statusCode === 200) {
+                                _this.navCtrl.pop();
+                            }
+                            else {
+                                _this.authProvider.showToast(res.description);
+                            }
+                        }, function (error) {
+                            loading.dismiss().catch(function () { });
+                            _this.authProvider.showToast(error.error.error);
+                        });
+                    }
+                }
+            ]
+        });
+        confirm.present();
+    };
+    SettingTeamsPage.prototype.onAssignTeam = function (team) {
+        var _this = this;
+        this.alertCtrl.create({
+            title: "Assign To Another League",
+            message: "Would assign/add <b>" + team.name + "</br> to another league in the selected country.<br/><br/>You would select a country and the league within the selected country to assign <b>" + team.name + " to</b>.",
+            enableBackdropDismiss: !1,
+            buttons: [{
+                    text: "Cancel",
+                    handler: function () {
+                    }
+                }, {
+                    text: "Continue",
+                    handler: function () { _this.navCtrl.push('SettingTeamAssignPage', { team: team, 'option': 'Promote' }); }
+                }]
+        }).present();
+    };
+    SettingTeamsPage.prototype.onPromoteDemote = function (team) {
+        var _this = this;
+        this.alertCtrl.create({
+            title: "Promote/Relegate Team",
+            message: "Would remove <b>" + team.name + "</b> from the current league - <b>" + team.league.name + "</b>.<br/><br/>Then you would select another league within the same country - <b>" + team.country.name + "</b> to assign <b>" + team.name + " to</b>.",
+            enableBackdropDismiss: !1,
+            buttons: [{
+                    text: "Cancel",
+                    handler: function () {
+                    }
+                }, {
+                    text: "Continue",
+                    handler: function () { _this.navCtrl.push('SettingTeamManagePage', { team: team }); }
+                }]
+        }).present();
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["Content"]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["Content"])
+    ], SettingTeamsPage.prototype, "content", void 0);
+    SettingTeamsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
+            selector: 'page-setting-teams',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-teams/setting-teams.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Manage Teams</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only navPush="SettingTeamAddPage">\n        <ion-icon name="add-circle"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-searchbar [(ngModel)]="searchTerm" (ionCancel)="onCancel($event)" [showCancelButton]="true"\n  (ionClear)="onClear($event)" (ionInput)="onSearch()">\n</ion-searchbar>\n<div class="leagueStats">\n  <ion-list *ngFor="let team of teams">\n    <ion-item class="thumbnailItem" (click)="onTeamOption(team)">\n      <ion-thumbnail item-left>\n        <img src="{{team.imageurl}}" *ngIf="team.imageurl" />\n        <img src="/assets/imgs/appicon.png" *ngIf="!team.imageurl" />\n      </ion-thumbnail>\n      <!-- team Name -->\n      <h5 ion-text padding-left margin-left color="dark">{{team.name}}</h5>\n      <!-- note -->\n      <p ion-text padding-left margin-left color="dark">{{team.league.name}}</p>\n      <!-- goals or rating Number -->\n      <span ion-text color="color1" class="" item-right>{{team.country.name}}</span>\n    </ion-item>\n  </ion-list>\n</div>\n\n<div class="" *ngIf="error">\n  <p ion-text text-center color="color2">No result found!</p>\n</div>\n<div text-center margin-top margin-bottonm *ngIf="noteams === \'none\'" (click)="onGotoTop()">\n  <button ion-button small color="color2">Back to Top</button>\n</div>\n<ion-infinite-scroll (ionInfinite)="scrollInfinite($event)" *ngIf="currentPage < totalPage">\n  <ion-infinite-scroll-content  loadingSpinner="bubbles"\n  loadingText="Loading page {{currentPage}} of {{totalPage}}"></ion-infinite-scroll-content>\n</ion-infinite-scroll>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-teams/setting-teams.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_games_games__["a" /* GamesProvider */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["LoadingController"],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["ActionSheetController"],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["AlertController"],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavParams"]])
+    ], SettingTeamsPage);
+    return SettingTeamsPage;
+}());
+
+//# sourceMappingURL=setting-teams.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=29.js.map

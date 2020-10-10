@@ -1,1 +1,176 @@
-webpackJsonp([6],{714:function(l,e,n){"use strict";function t(l){return a["ɵvid"](0,[a["ɵqud"](402653184,1,{selectComponent:0}),(l()(),a["ɵeld"](1,0,null,null,10,"ion-header",[],null,null,null,null,null)),a["ɵdid"](2,16384,null,0,y.a,[T.a,a.ElementRef,a.Renderer,[2,S.a]],null,null),(l()(),a["ɵted"](-1,null,["\n  "])),(l()(),a["ɵeld"](4,0,null,null,6,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,E.b,E.a)),a["ɵdid"](5,49152,null,0,P.a,[I.a,[2,S.a],[2,N.a],T.a,a.ElementRef,a.Renderer],null,null),(l()(),a["ɵted"](-1,3,["\n    "])),(l()(),a["ɵeld"](7,0,null,3,2,"ion-title",[],null,null,null,O.b,O.a)),a["ɵdid"](8,49152,null,0,x.a,[T.a,a.ElementRef,a.Renderer,[2,A.a],[2,P.a]],null,null),(l()(),a["ɵted"](-1,0,["Add Team"])),(l()(),a["ɵted"](-1,3,["\n  "])),(l()(),a["ɵted"](-1,null,["\n"])),(l()(),a["ɵted"](-1,null,["\n\n\n"])),(l()(),a["ɵeld"](13,0,null,null,111,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,M.b,M.a)),a["ɵdid"](14,4374528,null,0,q.a,[T.a,w.a,k.a,a.ElementRef,a.Renderer,I.a,F.a,a.NgZone,[2,S.a],[2,N.a]],null,null),(l()(),a["ɵted"](-1,1,["\n  "])),(l()(),a["ɵeld"](16,0,null,1,15,"div",[["class","imgs"]],null,null,null,null,null)),(l()(),a["ɵted"](-1,null,["\n    "])),(l()(),a["ɵeld"](18,0,null,null,12,"div",[["class","imgProfile"]],null,null,null,null,null)),a["ɵdid"](19,278528,null,0,V.NgStyle,[a.KeyValueDiffers,a.ElementRef,a.Renderer2],{ngStyle:[0,"ngStyle"]},null),a["ɵpod"](20,{"background-image":0}),(l()(),a["ɵted"](-1,null,["\n      "])),(l()(),a["ɵeld"](22,0,null,null,7,"button",[["class","profileCamera"],["icon-only",""],["ion-button",""]],null,[[null,"click"]],function(l,e,n){var t=!0;if("click"===e){t=!1!==l.component.selectImage()&&t}return t},D.b,D.a)),a["ɵdid"](23,278528,null,0,V.NgClass,[a.IterableDiffers,a.KeyValueDiffers,a.ElementRef,a.Renderer2],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),a["ɵpod"](24,{show:0}),a["ɵdid"](25,1097728,null,0,L.a,[[8,""],T.a,a.ElementRef,a.Renderer],null,null),(l()(),a["ɵted"](-1,0,["\n        "])),(l()(),a["ɵeld"](27,0,null,0,1,"ion-icon",[["name","md-camera"],["role","img"]],[[2,"hide",null]],null,null,null,null)),a["ɵdid"](28,147456,null,0,B.a,[T.a,a.ElementRef,a.Renderer],{name:[0,"name"]},null),(l()(),a["ɵted"](-1,0,["\n      "])),(l()(),a["ɵted"](-1,null,["\n    "])),(l()(),a["ɵted"](-1,null,["\n  "])),(l()(),a["ɵted"](-1,1,["\n  "])),(l()(),a["ɵeld"](33,0,null,1,90,"div",[["class","otherForm"]],null,null,null,null,null)),(l()(),a["ɵted"](-1,null,["\n    "])),(l()(),a["ɵeld"](35,0,null,null,83,"ion-list",[],null,null,null,null,null)),a["ɵdid"](36,16384,null,0,j.a,[T.a,a.ElementRef,a.Renderer,w.a,G.m,k.a],null,null),(l()(),a["ɵted"](-1,null,["\n      "])),(l()(),a["ɵeld"](38,0,null,null,29,"ion-item",[["class","item item-block"]],null,null,null,U.b,U.a)),a["ɵdid"](39,1097728,null,3,W.a,[K.a,T.a,a.ElementRef,a.Renderer,[2,H.a]],null,null),a["ɵqud"](335544320,2,{contentLabel:0}),a["ɵqud"](603979776,3,{_buttons:1}),a["ɵqud"](603979776,4,{_icons:1}),a["ɵdid"](43,16384,null,0,J.a,[],null,null),(l()(),a["ɵted"](-1,2,["\n        "])),(l()(),a["ɵeld"](45,0,null,1,2,"ion-label",[],null,null,null,null,null)),a["ɵdid"](46,16384,[[2,4]],0,Y.a,[T.a,a.ElementRef,a.Renderer,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),a["ɵted"](-1,null,["\n          Select Country\n        "])),(l()(),a["ɵted"](-1,2,["\n        "])),(l()(),a["ɵeld"](49,0,null,3,17,"select-searchable",[["clearButtonText","Clear Selected"],["confirmButtonText","Proceed"],["item-content",""],["itemTextField","name"],["itemValueField","id"]],[[2,"select-searchable",null],[2,"select-searchable-ios",null],[2,"select-searchable-md",null],[2,"select-searchable-is-multiple",null],[2,"select-searchable-has-value",null],[2,"select-searchable-has-placeholder",null],[2,"select-searchable-is-enabled",null],[2,"select-searchable-can-clear",null],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"onChange"],[null,"click"]],function(l,e,n){var t=!0,u=l.component;if("click"===e){t=!1!==a["ɵnov"](l,50)._click(n)&&t}if("ngModelChange"===e){t=!1!==(u.team.country=n)&&t}if("onChange"===e){t=!1!==u.onSelectCountry(n)&&t}return t},_.d,_.a)),a["ɵdid"](50,507904,null,11,r.SelectSearchableComponent,[z.a,K.a,w.a,[2,W.a],a.IterableDiffers,a.ElementRef],{items:[0,"items"],itemValueField:[1,"itemValueField"],itemTextField:[2,"itemTextField"],canSearch:[3,"canSearch"],canClear:[4,"canClear"],clearButtonText:[5,"clearButtonText"]},{onChange:"onChange"}),a["ɵqud"](335544320,5,{valueTemplate:0}),a["ɵqud"](335544320,6,{itemTemplate:0}),a["ɵqud"](335544320,7,{itemRightTemplate:0}),a["ɵqud"](335544320,8,{titleTemplate:0}),a["ɵqud"](335544320,9,{placeholderTemplate:0}),a["ɵqud"](335544320,10,{messageTemplate:0}),a["ɵqud"](335544320,11,{groupTemplate:0}),a["ɵqud"](335544320,12,{groupRightTemplate:0}),a["ɵqud"](335544320,13,{closeButtonTemplate:0}),a["ɵqud"](335544320,14,{searchFailTemplate:0}),a["ɵqud"](335544320,15,{addItemTemplate:0}),a["ɵprd"](1024,null,Z.NG_VALUE_ACCESSOR,function(l){return[l]},[r.SelectSearchableComponent]),a["ɵdid"](63,671744,null,0,Z.NgModel,[[8,null],[8,null],[8,null],[2,Z.NG_VALUE_ACCESSOR]],{model:[0,"model"]},{update:"ngModelChange"}),a["ɵprd"](2048,null,Z.NgControl,null,[Z.NgModel]),a["ɵdid"](65,16384,null,0,Z.NgControlStatus,[Z.NgControl],null,null),(l()(),a["ɵted"](-1,null,["\n\n        "])),(l()(),a["ɵted"](-1,2,["\n      "])),(l()(),a["ɵted"](-1,null,["\n\n       "])),(l()(),a["ɵeld"](69,0,null,null,29,"ion-item",[["class","item item-block"]],null,null,null,U.b,U.a)),a["ɵdid"](70,1097728,null,3,W.a,[K.a,T.a,a.ElementRef,a.Renderer,[2,H.a]],null,null),a["ɵqud"](335544320,16,{contentLabel:0}),a["ɵqud"](603979776,17,{_buttons:1}),a["ɵqud"](603979776,18,{_icons:1}),a["ɵdid"](74,16384,null,0,J.a,[],null,null),(l()(),a["ɵted"](-1,2,["\n        "])),(l()(),a["ɵeld"](76,0,null,1,2,"ion-label",[],null,null,null,null,null)),a["ɵdid"](77,16384,[[16,4]],0,Y.a,[T.a,a.ElementRef,a.Renderer,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),a["ɵted"](-1,null,["\n          Select League\n        "])),(l()(),a["ɵted"](-1,2,["\n        "])),(l()(),a["ɵeld"](80,0,null,3,17,"select-searchable",[["clearButtonText","Clear Selected"],["confirmButtonText","Proceed"],["item-content",""],["itemTextField","name"],["itemValueField","id"]],[[2,"select-searchable",null],[2,"select-searchable-ios",null],[2,"select-searchable-md",null],[2,"select-searchable-is-multiple",null],[2,"select-searchable-has-value",null],[2,"select-searchable-has-placeholder",null],[2,"select-searchable-is-enabled",null],[2,"select-searchable-can-clear",null],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"onChange"],[null,"click"]],function(l,e,n){var t=!0,u=l.component;if("click"===e){t=!1!==a["ɵnov"](l,81)._click(n)&&t}if("ngModelChange"===e){t=!1!==(u.team.league=n)&&t}if("onChange"===e){t=!1!==u.onSelectLeague(n)&&t}return t},_.d,_.a)),a["ɵdid"](81,507904,null,11,r.SelectSearchableComponent,[z.a,K.a,w.a,[2,W.a],a.IterableDiffers,a.ElementRef],{items:[0,"items"],itemValueField:[1,"itemValueField"],itemTextField:[2,"itemTextField"],canSearch:[3,"canSearch"],canClear:[4,"canClear"],clearButtonText:[5,"clearButtonText"]},{onChange:"onChange"}),a["ɵqud"](335544320,19,{valueTemplate:0}),a["ɵqud"](335544320,20,{itemTemplate:0}),a["ɵqud"](335544320,21,{itemRightTemplate:0}),a["ɵqud"](335544320,22,{titleTemplate:0}),a["ɵqud"](335544320,23,{placeholderTemplate:0}),a["ɵqud"](335544320,24,{messageTemplate:0}),a["ɵqud"](335544320,25,{groupTemplate:0}),a["ɵqud"](335544320,26,{groupRightTemplate:0}),a["ɵqud"](335544320,27,{closeButtonTemplate:0}),a["ɵqud"](335544320,28,{searchFailTemplate:0}),a["ɵqud"](335544320,29,{addItemTemplate:0}),a["ɵprd"](1024,null,Z.NG_VALUE_ACCESSOR,function(l){return[l]},[r.SelectSearchableComponent]),a["ɵdid"](94,671744,null,0,Z.NgModel,[[8,null],[8,null],[8,null],[2,Z.NG_VALUE_ACCESSOR]],{model:[0,"model"]},{update:"ngModelChange"}),a["ɵprd"](2048,null,Z.NgControl,null,[Z.NgModel]),a["ɵdid"](96,16384,null,0,Z.NgControlStatus,[Z.NgControl],null,null),(l()(),a["ɵted"](-1,null,["\n\n        "])),(l()(),a["ɵted"](-1,2,["\n      "])),(l()(),a["ɵted"](-1,null,[" \n      "])),(l()(),a["ɵeld"](100,0,null,null,16,"ion-item",[["class","item item-block"]],null,null,null,U.b,U.a)),a["ɵdid"](101,1097728,null,3,W.a,[K.a,T.a,a.ElementRef,a.Renderer,[2,H.a]],null,null),a["ɵqud"](335544320,30,{contentLabel:0}),a["ɵqud"](603979776,31,{_buttons:1}),a["ɵqud"](603979776,32,{_icons:1}),a["ɵdid"](105,16384,null,0,J.a,[],null,null),(l()(),a["ɵted"](-1,2,["\n        "])),(l()(),a["ɵeld"](107,0,null,1,2,"ion-label",[["stacked",""]],null,null,null,null,null)),a["ɵdid"](108,16384,[[30,4]],0,Y.a,[T.a,a.ElementRef,a.Renderer,[8,null],[8,""],[8,null],[8,null]],null,null),(l()(),a["ɵted"](-1,null,["Name"])),(l()(),a["ɵted"](-1,2,["\n        "])),(l()(),a["ɵeld"](111,0,null,3,4,"ion-input",[["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,e,n){var t=!0;if("ngModelChange"===e){t=!1!==(l.component.team.name=n)&&t}return t},Q.b,Q.a)),a["ɵdid"](112,671744,null,0,Z.NgModel,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),a["ɵprd"](2048,null,Z.NgControl,null,[Z.NgModel]),a["ɵdid"](114,16384,null,0,Z.NgControlStatus,[Z.NgControl],null,null),a["ɵdid"](115,5423104,null,0,X.a,[T.a,w.a,K.a,I.a,a.ElementRef,a.Renderer,[2,q.a],[2,W.a],[2,Z.NgControl],k.a],{type:[0,"type"]},null),(l()(),a["ɵted"](-1,2,["\n      "])),(l()(),a["ɵted"](-1,null,["\n      "])),(l()(),a["ɵted"](-1,null,["\n    "])),(l()(),a["ɵted"](-1,null,["\n    "])),(l()(),a["ɵeld"](120,0,null,null,2,"button",[["block",""],["color","color2"],["ion-button",""]],null,[[null,"click"]],function(l,e,n){var t=!0,a=l.component;if("click"===e){t=!1!==a.onSubmit(a.team)&&t}return t},D.b,D.a)),a["ɵdid"](121,1097728,null,0,L.a,[[8,""],T.a,a.ElementRef,a.Renderer],{color:[0,"color"],block:[1,"block"]},null),(l()(),a["ɵted"](-1,0,["Submit"])),(l()(),a["ɵted"](-1,null,["\n  "])),(l()(),a["ɵted"](-1,1,["\n"])),(l()(),a["ɵted"](-1,null,["\n"]))],function(l,e){var n=e.component;l(e,19,0,l(e,20,0,"url("+n.img1+")"));l(e,23,0,"profileCamera",l(e,24,0,0==n.flag));l(e,28,0,"md-camera");l(e,50,0,n.countries,"id","name",!0,!0,"Clear Selected");l(e,63,0,n.team.country);l(e,81,0,n.leagues,"id","name",!0,!0,"Clear Selected");l(e,94,0,n.team.league);l(e,112,0,n.team.name);l(e,115,0,"text");l(e,121,0,"color2","")},function(l,e){l(e,4,0,a["ɵnov"](e,5)._hidden,a["ɵnov"](e,5)._sbPadding);l(e,13,0,a["ɵnov"](e,14).statusbarPadding,a["ɵnov"](e,14)._hasRefresher);l(e,27,0,a["ɵnov"](e,28)._hidden);l(e,49,1,[a["ɵnov"](e,50)._cssClass,a["ɵnov"](e,50)._isIos,a["ɵnov"](e,50)._isMD,a["ɵnov"](e,50)._isMultipleCssClass,a["ɵnov"](e,50)._hasValueCssClass,a["ɵnov"](e,50)._hasPlaceholderCssClass,a["ɵnov"](e,50).isEnabled,a["ɵnov"](e,50).canClear,a["ɵnov"](e,65).ngClassUntouched,a["ɵnov"](e,65).ngClassTouched,a["ɵnov"](e,65).ngClassPristine,a["ɵnov"](e,65).ngClassDirty,a["ɵnov"](e,65).ngClassValid,a["ɵnov"](e,65).ngClassInvalid,a["ɵnov"](e,65).ngClassPending]);l(e,80,1,[a["ɵnov"](e,81)._cssClass,a["ɵnov"](e,81)._isIos,a["ɵnov"](e,81)._isMD,a["ɵnov"](e,81)._isMultipleCssClass,a["ɵnov"](e,81)._hasValueCssClass,a["ɵnov"](e,81)._hasPlaceholderCssClass,a["ɵnov"](e,81).isEnabled,a["ɵnov"](e,81).canClear,a["ɵnov"](e,96).ngClassUntouched,a["ɵnov"](e,96).ngClassTouched,a["ɵnov"](e,96).ngClassPristine,a["ɵnov"](e,96).ngClassDirty,a["ɵnov"](e,96).ngClassValid,a["ɵnov"](e,96).ngClassInvalid,a["ɵnov"](e,96).ngClassPending]);l(e,111,0,a["ɵnov"](e,114).ngClassUntouched,a["ɵnov"](e,114).ngClassTouched,a["ɵnov"](e,114).ngClassPristine,a["ɵnov"](e,114).ngClassDirty,a["ɵnov"](e,114).ngClassValid,a["ɵnov"](e,114).ngClassInvalid,a["ɵnov"](e,114).ngClassPending)})}Object.defineProperty(e,"__esModule",{value:!0});var a=n(0),u=(n(1),n(15),n(737)),o=n(66),i=n(205),d=n(734),r=n(142),s=function(){function l(l,e,n,t,a,u,o){this.gamesProvider=l,this.authProvider=e,this.loadingCtrl=n,this.actionSheetCtrl=t,this.camera=a,this.navCtrl=u,this.navParams=o,this.team=new d.a("","","",{id:"",name:"",imageurl:""},{id:"",name:"",imageurl:""}),this.img1="assets/imgs/appicon.png",this.flag=!0}return l.prototype.ionViewWillEnter=function(){this.Getcountries()},l.prototype.ionViewDidLoad=function(){this.flag=0==this.flag},l.prototype.Getcountries=function(){var l=this,e=this.loadingCtrl.create({content:"Please wait..."});e.present(),this.gamesProvider.Getcountries().subscribe(function(n){e.dismiss().catch(function(){}),200===n.statusCode?l.countries=n.data:l.authProvider.showToast(n.description)},function(n){e.dismiss().catch(function(){}),l.authProvider.showToast(n.error.description)})},l.prototype.onSelectCountry=function(l){var e=this,n=this.loadingCtrl.create({content:"Please wait..."});this.team.league=null,n.present(),this.gamesProvider.GetLeaguesByCountryID(l.value.id).subscribe(function(l){n.dismiss().catch(function(){}),200===l.statusCode?e.leagues=l.data:e.authProvider.showToast(l.description)},function(l){n.dismiss().catch(function(){}),e.authProvider.showToast(l.error.error)})},l.prototype.onSelectLeague=function(l){},l.prototype.onSubmit=function(l){var e=this;if(l.name){l.imageurl=void 0!=l.imageurl?this.img1:this.img;var n=this.loadingCtrl.create({content:"Please wait..."});n.present(),this.gamesProvider.createTeam(l).subscribe(function(l){n.dismiss().catch(function(){}),200===l.statusCode?e.navCtrl.pop():e.authProvider.showToast(l.description)},function(l){n.dismiss().catch(function(){}),e.authProvider.showToast(l.error.error)})}else this.authProvider.showToast("Name input field is empty")},l.prototype.selectImage=function(){var l=this;this.actionSheetCtrl.create({title:"Add Team Logo",buttons:[{text:"Gallery",handler:function(){l.get_camera("Gallery")}},{text:"Camera",handler:function(){l.get_camera("Camera")}},{text:"Cancel",role:"cancel",handler:function(){}}]}).present()},l.prototype.get_camera=function(l){var e=this,n={quality:100,destinationType:this.camera.DestinationType.DATA_URL,encodingType:this.camera.EncodingType.JPEG,mediaType:this.camera.MediaType.PICTURE,allowEdit:!0,targetWidth:512,targetHeight:512,correctOrientation:!0};n.sourceType="Gallery"==l?this.camera.PictureSourceType.PHOTOLIBRARY:this.camera.PictureSourceType.CAMERA,this.camera.getPicture(n).then(function(l){e.img="data:image/jpeg;base64,"+l},function(l){}),void 0!=this.img&&(this.img1=this.img)},l}(),c=function(){return function(){}}(),m=n(206),p=n(207),g=n(208),f=n(209),h=n(210),C=n(211),v=n(212),b=n(213),R=n(214),_=n(383),y=n(54),T=n(3),S=n(7),E=n(92),P=n(37),I=n(9),N=n(20),O=n(145),x=n(61),A=n(38),M=n(91),q=n(30),w=n(5),k=n(10),F=n(31),V=n(14),D=n(41),L=n(26),B=n(34),j=n(60),G=n(8),U=n(143),W=n(28),K=n(25),H=n(53),J=n(67),Y=n(62),z=n(95),Z=n(24),Q=n(731),X=n(215),$=n(144),ll=n(146),el=n(17),nl=a["ɵcrt"]({encapsulation:2,styles:[],data:{}}),tl=a["ɵccf"]("page-setting-team-add",s,function(l){return a["ɵvid"](0,[(l()(),a["ɵeld"](0,0,null,null,1,"page-setting-team-add",[],null,null,null,t,nl)),a["ɵdid"](1,49152,null,0,s,[i.a,o.a,$.a,ll.a,u.a,N.a,el.a],null,null)],null,null)},{},{},[]),al=n(141),ul=n(52);n.d(e,"SettingTeamAddPageModuleNgFactory",function(){return ol});var ol=a["ɵcmf"](c,[],function(l){return a["ɵmod"]([a["ɵmpd"](512,a.ComponentFactoryResolver,a["ɵCodegenComponentFactoryResolver"],[[8,[m.a,p.a,g.a,f.a,h.a,C.a,v.a,b.a,R.a,_.b,_.c,tl]],[3,a.ComponentFactoryResolver],a.NgModuleRef]),a["ɵmpd"](4608,V.NgLocalization,V.NgLocaleLocalization,[a.LOCALE_ID,[2,V["ɵa"]]]),a["ɵmpd"](4608,Z["ɵi"],Z["ɵi"],[]),a["ɵmpd"](4608,Z.FormBuilder,Z.FormBuilder,[]),a["ɵmpd"](512,V.CommonModule,V.CommonModule,[]),a["ɵmpd"](512,Z["ɵba"],Z["ɵba"],[]),a["ɵmpd"](512,Z.FormsModule,Z.FormsModule,[]),a["ɵmpd"](512,Z.ReactiveFormsModule,Z.ReactiveFormsModule,[]),a["ɵmpd"](512,al.a,al.a,[]),a["ɵmpd"](512,al.b,al.b,[]),a["ɵmpd"](512,r.SelectSearchableModule,r.SelectSearchableModule,[]),a["ɵmpd"](512,c,c,[]),a["ɵmpd"](256,ul.a,s,[])])})},731:function(l,e,n){"use strict";function t(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,[[1,0],["textInput",1]],null,1,"input",[["class","text-input"],["dir","auto"]],[[8,"type",0],[1,"aria-labelledby",0],[1,"min",0],[1,"max",0],[1,"step",0],[1,"autocomplete",0],[1,"autocorrect",0],[8,"placeholder",0],[8,"disabled",0],[8,"readOnly",0]],[[null,"input"],[null,"blur"],[null,"focus"],[null,"keydown"]],function(l,e,n){var t=!0,a=l.component;if("input"===e){t=!1!==a.onInput(n)&&t}if("blur"===e){t=!1!==a.onBlur(n)&&t}if("focus"===e){t=!1!==a.onFocus(n)&&t}if("keydown"===e){t=!1!==a.onKeydown(n)&&t}return t},null,null)),d["ɵdid"](1,278528,null,0,r.NgClass,[d.IterableDiffers,d.KeyValueDiffers,d.ElementRef,d.Renderer2],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null)],function(l,e){l(e,1,0,"text-input","text-input-"+e.component._mode)},function(l,e){var n=e.component;l(e,0,0,n._type,n._labelId,n.min,n.max,n.step,n.autocomplete,n.autocorrect,n.placeholder,n._disabled,n._readonly)})}function a(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,[[1,0],["textInput",1]],null,1,"textarea",[["class","text-input"]],[[1,"aria-labelledby",0],[1,"autocomplete",0],[1,"autocorrect",0],[8,"placeholder",0],[8,"disabled",0],[8,"readOnly",0]],[[null,"input"],[null,"blur"],[null,"focus"],[null,"keydown"]],function(l,e,n){var t=!0,a=l.component;if("input"===e){t=!1!==a.onInput(n)&&t}if("blur"===e){t=!1!==a.onBlur(n)&&t}if("focus"===e){t=!1!==a.onFocus(n)&&t}if("keydown"===e){t=!1!==a.onKeydown(n)&&t}return t},null,null)),d["ɵdid"](1,278528,null,0,r.NgClass,[d.IterableDiffers,d.KeyValueDiffers,d.ElementRef,d.Renderer2],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null)],function(l,e){l(e,1,0,"text-input","text-input-"+e.component._mode)},function(l,e){var n=e.component;l(e,0,0,n._labelId,n.autocomplete,n.autocorrect,n.placeholder,n._disabled,n._readonly)})}function u(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,null,null,1,"button",[["class","text-input-clear-icon"],["clear",""],["ion-button",""],["tabindex","-1"],["type","button"]],null,[[null,"click"],[null,"mousedown"]],function(l,e,n){var t=!0,a=l.component;if("click"===e){t=!1!==a.clearTextInput(n)&&t}if("mousedown"===e){t=!1!==a.clearTextInput(n)&&t}return t},s.b,s.a)),d["ɵdid"](1,1097728,null,0,c.a,[[8,""],m.a,d.ElementRef,d.Renderer],{clear:[0,"clear"]},null)],function(l,e){l(e,1,0,"")},null)}function o(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,null,null,0,"div",[["class","input-cover"]],null,[[null,"touchstart"],[null,"touchend"],[null,"mousedown"],[null,"mouseup"]],function(l,e,n){var t=!0,a=l.component;if("touchstart"===e){t=!1!==a._pointerStart(n)&&t}if("touchend"===e){t=!1!==a._pointerEnd(n)&&t}if("mousedown"===e){t=!1!==a._pointerStart(n)&&t}if("mouseup"===e){t=!1!==a._pointerEnd(n)&&t}return t},null,null))],null,null)}function i(l){return d["ɵvid"](2,[d["ɵqud"](671088640,1,{_native:0}),(l()(),d["ɵand"](16777216,null,null,1,null,t)),d["ɵdid"](2,16384,null,0,r.NgIf,[d.ViewContainerRef,d.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),d["ɵand"](16777216,null,null,1,null,a)),d["ɵdid"](4,16384,null,0,r.NgIf,[d.ViewContainerRef,d.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),d["ɵand"](16777216,null,null,1,null,u)),d["ɵdid"](6,16384,null,0,r.NgIf,[d.ViewContainerRef,d.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),d["ɵand"](16777216,null,null,1,null,o)),d["ɵdid"](8,16384,null,0,r.NgIf,[d.ViewContainerRef,d.TemplateRef],{ngIf:[0,"ngIf"]},null)],function(l,e){var n=e.component;l(e,2,0,!n._isTextarea);l(e,4,0,n._isTextarea);l(e,6,0,n._clearInput);l(e,8,0,n._useAssist)},null)}n.d(e,"a",function(){return p}),e.b=i;var d=n(0),r=n(14),s=n(41),c=n(26),m=n(3),p=(n(5),n(25),n(10),d["ɵcrt"]({encapsulation:2,styles:[],data:{}}))},734:function(l,e,n){"use strict";n.d(e,"a",function(){return t});var t=function(){return function(l,e,n,t,a){this.name=l,this.id=e,this.imageurl=n,this.country=t,this.league=a}}()},737:function(l,e,n){"use strict";n.d(e,"a",function(){return u});var t=n(1),a=n(223),u=function(l){function e(){var e=null!==l&&l.apply(this,arguments)||this;return e.DestinationType={DATA_URL:0,FILE_URI:1,NATIVE_URI:2},e.EncodingType={JPEG:0,PNG:1},e.MediaType={PICTURE:0,VIDEO:1,ALLMEDIA:2},e.PictureSourceType={PHOTOLIBRARY:0,CAMERA:1,SAVEDPHOTOALBUM:2},e.PopoverArrowDirection={ARROW_UP:1,ARROW_DOWN:2,ARROW_LEFT:4,ARROW_RIGHT:8,ARROW_ANY:15},e.Direction={BACK:0,FRONT:1},e}return Object(t.__extends)(e,l),e.prototype.getPicture=function(l){},e.prototype.cleanup=function(){},Object(t.__decorate)([Object(a.a)({callbackOrder:"reverse"}),Object(t.__metadata)("design:type",Function),Object(t.__metadata)("design:paramtypes",[Object]),Object(t.__metadata)("design:returntype",Promise)],e.prototype,"getPicture",null),Object(t.__decorate)([Object(a.a)({platforms:["iOS"]}),Object(t.__metadata)("design:type",Function),Object(t.__metadata)("design:paramtypes",[]),Object(t.__metadata)("design:returntype",Promise)],e.prototype,"cleanup",null),e=Object(t.__decorate)([Object(a.c)({pluginName:"Camera",plugin:"cordova-plugin-camera",pluginRef:"navigator.camera",repo:"https://github.com/apache/cordova-plugin-camera",platforms:["Android","Browser","iOS","Windows"]})],e)}(a.b)}});
+webpackJsonp([6],{
+
+/***/ 763:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingTeamManagePageModule", function() { return SettingTeamManagePageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_team_manage__ = __webpack_require__(824);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__ = __webpack_require__(370);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var SettingTeamManagePageModule = /** @class */ (function () {
+    function SettingTeamManagePageModule() {
+    }
+    SettingTeamManagePageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__setting_team_manage__["a" /* SettingTeamManagePage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_team_manage__["a" /* SettingTeamManagePage */]),
+                __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__["SelectSearchableModule"]
+            ],
+        })
+    ], SettingTeamManagePageModule);
+    return SettingTeamManagePageModule;
+}());
+
+//# sourceMappingURL=setting-team-manage.module.js.map
+
+/***/ }),
+
+/***/ 779:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Teams; });
+var Teams = /** @class */ (function () {
+    function Teams(name, id, imageurl, country, league) {
+        this.name = name;
+        this.id = id;
+        this.imageurl = imageurl;
+        this.country = country;
+        this.league = league;
+    }
+    return Teams;
+}());
+
+//# sourceMappingURL=Teams.js.map
+
+/***/ }),
+
+/***/ 824:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingTeamManagePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_games_games__ = __webpack_require__(369);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_select_searchable__ = __webpack_require__(370);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ionic_select_searchable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__interfaces_Teams__ = __webpack_require__(779);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var SettingTeamManagePage = /** @class */ (function () {
+    function SettingTeamManagePage(navCtrl, loadingCtrl, authProvider, gamesProvider, navParams) {
+        this.navCtrl = navCtrl;
+        this.loadingCtrl = loadingCtrl;
+        this.authProvider = authProvider;
+        this.gamesProvider = gamesProvider;
+        this.navParams = navParams;
+        this.team = new __WEBPACK_IMPORTED_MODULE_3__interfaces_Teams__["a" /* Teams */]("", "", "", { id: "", name: "", imageurl: "" }, { id: "", name: "", imageurl: "" });
+        this.selectedteam = this.navParams.get("team");
+        if (this.selectedteam) {
+            this.team = this.selectedteam;
+        }
+    }
+    SettingTeamManagePage.prototype.ionViewWillEnter = function () {
+        this.GetLeaguesByCountryID();
+    };
+    SettingTeamManagePage.prototype.GetLeaguesByCountryID = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        if (this.team) {
+            loading.present();
+            this.gamesProvider.GetLeaguesByCountryID(this.team.country.id)
+                .subscribe(function (resp) {
+                loading.dismiss().catch(function () { });
+                if (resp.statusCode === 200) {
+                    _this.leagues = resp.data;
+                }
+                else {
+                    _this.authProvider.showToast(resp.description);
+                }
+            }, function (error) {
+                loading.dismiss().catch(function () { });
+                _this.authProvider.showToast(error.error.error);
+            });
+        }
+    };
+    SettingTeamManagePage.prototype.onSelectLeague = function (event) {
+    };
+    SettingTeamManagePage.prototype.onSubmit = function (team) {
+        var _this = this;
+        if (team.name) {
+            var loading_1 = this.loadingCtrl.create({
+                content: "Please wait..."
+            });
+            loading_1.present();
+            this.gamesProvider.updateTeam(team).subscribe(function (res) {
+                loading_1.dismiss().catch(function () { });
+                if (res.statusCode === 200) {
+                    _this.navCtrl.pop();
+                }
+                else {
+                    _this.authProvider.showToast(res.description);
+                }
+            }, function (error) {
+                loading_1.dismiss().catch(function () { });
+                _this.authProvider.showToast(error.error.error);
+            });
+        }
+        else {
+            this.authProvider.showToast("Name input field is empty");
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["ViewChild"])('myselect'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2_ionic_select_searchable__["SelectSearchableComponent"])
+    ], SettingTeamManagePage.prototype, "selectComponent", void 0);
+    SettingTeamManagePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
+            selector: 'page-setting-team-manage',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-team-manage/setting-team-manage.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Assign {{selectedteam.name}} To: </ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="otherForm">\n    <ion-list>\n       <ion-item>\n        <ion-label>\n          Select League\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="team.league" (onChange)="onSelectLeague($event)" [items]="leagues"\n          itemValueField="id"\n          [canClear]="true"\n          clearButtonText="Clear Selected"\n          confirmButtonText="Proceed"\n          itemTextField="name" \n          [canSearch]="true">\n\n        </select-searchable>\n      </ion-item> \n      <ion-item>\n        <ion-label stacked>Name</ion-label>\n        <ion-input type="text" readonly [(ngModel)]="team.name"></ion-input>\n      </ion-item>\n      <!-- ==================================== -->\n    </ion-list>\n    <button ion-button block color="color2" (click)="onSubmit(team)">Submit</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-team-manage/setting-team-manage.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavController"],
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["LoadingController"], __WEBPACK_IMPORTED_MODULE_0__providers_authenication_authenication__["a" /* AuthenicationProvider */],
+            __WEBPACK_IMPORTED_MODULE_1__providers_games_games__["a" /* GamesProvider */], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavParams"]])
+    ], SettingTeamManagePage);
+    return SettingTeamManagePage;
+}());
+
+//# sourceMappingURL=setting-team-manage.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=6.js.map
