@@ -39,7 +39,7 @@ export class SignInPage {
           }
         }, error => {
           loading.dismiss().catch(() => { });
-          // this.auth.showToast(error.error.message);
+          this.auth.showToast(error.error.message);
         });
 
     }

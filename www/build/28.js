@@ -89,7 +89,7 @@ var SignInPage = /** @class */ (function () {
                 }
             }, function (error) {
                 loading_1.dismiss().catch(function () { });
-                // this.auth.showToast(error.error.message);
+                _this.auth.showToast(error.error.message);
             });
         }
     };
