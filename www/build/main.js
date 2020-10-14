@@ -70,11 +70,11 @@ var map = {
 		40
 	],
 	"../pages/payment-plantype-edit/payment-plantype-edit.module": [
-		743,
+		742,
 		13
 	],
 	"../pages/payment-plantypes/payment-plantypes.module": [
-		742,
+		743,
 		39
 	],
 	"../pages/payment-sets/payment-sets.module": [
@@ -93,15 +93,15 @@ var map = {
 		11
 	],
 	"../pages/predictions/predictions.module": [
-		747,
+		749,
 		37
 	],
 	"../pages/profile/profile.module": [
-		748,
+		747,
 		0
 	],
 	"../pages/report-general/report-general.module": [
-		749,
+		748,
 		36
 	],
 	"../pages/report-monthly/report-monthly.module": [
@@ -112,39 +112,39 @@ var map = {
 		325
 	],
 	"../pages/setting-country-add/setting-country-add.module": [
-		752,
+		751,
 		4
 	],
 	"../pages/setting-country-edit/setting-country-edit.module": [
-		751,
+		752,
 		23
 	],
 	"../pages/setting-country/setting-country.module": [
-		755,
+		753,
 		34
 	],
 	"../pages/setting-league-add/setting-league-add.module": [
-		753,
+		754,
 		20
 	],
 	"../pages/setting-league-edit/setting-league-edit.module": [
-		756,
+		755,
 		19
 	],
 	"../pages/setting-league-view/setting-league-view.module": [
-		754,
+		757,
 		33
 	],
 	"../pages/setting-leagues/setting-leagues.module": [
-		757,
+		756,
 		32
 	],
 	"../pages/setting-selection-add/setting-selection-add.module": [
-		759,
+		758,
 		10
 	],
 	"../pages/setting-selection-edit/setting-selection-edit.module": [
-		758,
+		759,
 		9
 	],
 	"../pages/setting-selections/setting-selections.module": [
@@ -183,11 +183,11 @@ var map = {
 		28
 	],
 	"../pages/sign-up/sign-up.module": [
-		769,
+		768,
 		18
 	],
 	"../pages/subscription-android/subscription-android.module": [
-		768,
+		769,
 		1
 	],
 	"../pages/subscription-ios/subscription-ios.module": [
@@ -195,11 +195,11 @@ var map = {
 		17
 	],
 	"../pages/terms/terms.module": [
-		771,
+		772,
 		27
 	],
 	"../pages/user-member-add/user-member-add.module": [
-		772,
+		771,
 		16
 	],
 	"../pages/user-member-edit/user-member-edit.module": [
@@ -211,11 +211,11 @@ var map = {
 		26
 	],
 	"../pages/user-sub-admin-add/user-sub-admin-add.module": [
-		775,
+		776,
 		15
 	],
 	"../pages/user-sub-admin-edit/user-sub-admin-edit.module": [
-		776,
+		775,
 		14
 	],
 	"../pages/user-sub-admins/user-sub-admins.module": [
@@ -1053,26 +1053,26 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/match-votes/match-votes.module#MatchVotesPageModule', name: 'MatchVotesPage', segment: 'match-votes', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/payment-details/payment-details.module#PaymentDetailsPageModule', name: 'PaymentDetailsPage', segment: 'payment-details', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/payment-plans/payment-plans.module#PaymentPlansPageModule', name: 'PaymentPlansPage', segment: 'payment-plans', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/payment-plantypes/payment-plantypes.module#PaymentPlantypesPageModule', name: 'PaymentPlantypesPage', segment: 'payment-plantypes', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/payment-plantype-edit/payment-plantype-edit.module#PaymentPlantypeEditPageModule', name: 'PaymentPlantypeEditPage', segment: 'payment-plantype-edit', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/payment-plantypes/payment-plantypes.module#PaymentPlantypesPageModule', name: 'PaymentPlantypesPage', segment: 'payment-plantypes', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/payment-sets/payment-sets.module#PaymentSetsPageModule', name: 'PaymentSetsPage', segment: 'payment-sets', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/payments/payments.module#PaymentsPageModule', name: 'PaymentsPage', segment: 'payments', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/prediction-add/prediction-add.module#PredictionAddPageModule', name: 'PredictionAddPage', segment: 'prediction-add', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/prediction-edit/prediction-edit.module#PredictionEditPageModule', name: 'PredictionEditPage', segment: 'prediction-edit', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/predictions/predictions.module#PredictionsPageModule', name: 'PredictionsPage', segment: 'predictions', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/report-general/report-general.module#ReportGeneralPageModule', name: 'ReportGeneralPage', segment: 'report-general', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/predictions/predictions.module#PredictionsPageModule', name: 'PredictionsPage', segment: 'predictions', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/report-monthly/report-monthly.module#ReportMonthlyPageModule', name: 'ReportMonthlyPage', segment: 'report-monthly', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/reports/reports.module#ReportsPageModule', name: 'ReportsPage', segment: 'reports', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/setting-country-edit/setting-country-edit.module#SettingCountryEditPageModule', name: 'SettingCountryEditPage', segment: 'setting-country-edit', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/setting-country-add/setting-country-add.module#SettingCountryAddPageModule', name: 'SettingCountryAddPage', segment: 'setting-country-add', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/setting-league-add/setting-league-add.module#SettingLeagueAddPageModule', name: 'SettingLeagueAddPage', segment: 'setting-league-add', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/setting-league-view/setting-league-view.module#SettingLeagueViewPageModule', name: 'SettingLeagueViewPage', segment: 'setting-league-view', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/setting-country-edit/setting-country-edit.module#SettingCountryEditPageModule', name: 'SettingCountryEditPage', segment: 'setting-country-edit', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/setting-country/setting-country.module#SettingCountryPageModule', name: 'SettingCountryPage', segment: 'setting-country', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/setting-league-add/setting-league-add.module#SettingLeagueAddPageModule', name: 'SettingLeagueAddPage', segment: 'setting-league-add', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/setting-league-edit/setting-league-edit.module#SettingLeagueEditPageModule', name: 'SettingLeagueEditPage', segment: 'setting-league-edit', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/setting-leagues/setting-leagues.module#SettingLeaguesPageModule', name: 'SettingLeaguesPage', segment: 'setting-leagues', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/setting-selection-edit/setting-selection-edit.module#SettingSelectionEditPageModule', name: 'SettingSelectionEditPage', segment: 'setting-selection-edit', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/setting-league-view/setting-league-view.module#SettingLeagueViewPageModule', name: 'SettingLeagueViewPage', segment: 'setting-league-view', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/setting-selection-add/setting-selection-add.module#SettingSelectionAddPageModule', name: 'SettingSelectionAddPage', segment: 'setting-selection-add', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/setting-selection-edit/setting-selection-edit.module#SettingSelectionEditPageModule', name: 'SettingSelectionEditPage', segment: 'setting-selection-edit', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/setting-selections/setting-selections.module#SettingSelectionsPageModule', name: 'SettingSelectionsPage', segment: 'setting-selections', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/setting-team-add/setting-team-add.module#SettingTeamAddPageModule', name: 'SettingTeamAddPage', segment: 'setting-team-add', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/setting-team-assign/setting-team-assign.module#SettingTeamAssignPageModule', name: 'SettingTeamAssignPage', segment: 'setting-team-assign', priority: 'low', defaultHistory: [] },
@@ -1082,15 +1082,15 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/setting-teams/setting-teams.module#SettingTeamsPageModule', name: 'SettingTeamsPage', segment: 'setting-teams', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/setting/setting.module#SettingPageModule', name: 'SettingPage', segment: 'setting', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sign-in/sign-in.module#SignInPageModule', name: 'SignInPage', segment: 'sign-in', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/subscription-android/subscription-android.module#SubscriptionAndroidPageModule', name: 'SubscriptionAndroidPage', segment: 'subscription-android', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sign-up/sign-up.module#SignUpPageModule', name: 'SignUpPage', segment: 'sign-up', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/subscription-android/subscription-android.module#SubscriptionAndroidPageModule', name: 'SubscriptionAndroidPage', segment: 'subscription-android', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/subscription-ios/subscription-ios.module#SubscriptionIosPageModule', name: 'SubscriptionIosPage', segment: 'subscription-ios', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/terms/terms.module#TermsPageModule', name: 'TermsPage', segment: 'terms', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/user-member-add/user-member-add.module#UserMemberAddPageModule', name: 'UserMemberAddPage', segment: 'user-member-add', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/terms/terms.module#TermsPageModule', name: 'TermsPage', segment: 'terms', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/user-member-edit/user-member-edit.module#UserMemberEditPageModule', name: 'UserMemberEditPage', segment: 'user-member-edit', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/user-members/user-members.module#UserMembersPageModule', name: 'UserMembersPage', segment: 'user-members', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/user-sub-admin-add/user-sub-admin-add.module#UserSubAdminAddPageModule', name: 'UserSubAdminAddPage', segment: 'user-sub-admin-add', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/user-sub-admin-edit/user-sub-admin-edit.module#UserSubAdminEditPageModule', name: 'UserSubAdminEditPage', segment: 'user-sub-admin-edit', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/user-sub-admin-add/user-sub-admin-add.module#UserSubAdminAddPageModule', name: 'UserSubAdminAddPage', segment: 'user-sub-admin-add', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/user-sub-admins/user-sub-admins.module#UserSubAdminsPageModule', name: 'UserSubAdminsPage', segment: 'user-sub-admins', priority: 'low', defaultHistory: [] }
                     ]
                 }),

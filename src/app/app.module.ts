@@ -17,6 +17,8 @@ import { PaymentsPageModule } from '../pages/payments/payments.module';
 import { NativeHttpProvider } from '../providers/native-http/native-http';
 import { SuperTabsModule } from 'ionic2-super-tabs';
 import { AppVersion } from '@ionic-native/app-version';
+import { InAppPurchase2 } from '@ionic-native/in-app-purchase-2';
+
 
 var config = {
   backButtonText: '',
@@ -50,6 +52,7 @@ var config = {
   providers: [
     HTTP,
     AppVersion,
+    InAppPurchase2,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     AuthenicationProvider, PaymentsProvider, GamesProvider, NativeHttpProvider,
     { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptorProvider, multi: true },

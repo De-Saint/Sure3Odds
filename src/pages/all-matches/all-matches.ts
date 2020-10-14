@@ -198,7 +198,7 @@ export class AllMatchesPage implements OnInit {
       if (this.platform.is("ios")) {
         this.openInAppStore('itms-apps://itunes.apple.com/app/1504720335');
       } else if (this.platform.is("android")) {
-        this.openInAppStore("https://play.google.com/store/apps/details?id=com.whatsapp").then(response => {
+        this.openInAppStore("https://play.google.com/store/apps/details?id=com.sure3odds.sureapp").then(response => {
           console.log(response);
         }).catch(error => {
           console.log(error);
