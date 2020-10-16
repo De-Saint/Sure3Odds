@@ -6,5 +6,18 @@
 
 
 <ion-content padding>
-
+  <ion-list>
+    <ion-item button *ngFor="let p of products" (click)="purchase()" details="false">
+      <ion-label class="ion-text-wrap">
+        {{p.title}}
+        <p>{{p.description}}</p>
+      </ion-label>
+      <ion-buttons slot="end">
+        {{p.price}} {{p.currency}}
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+  <ion-buttons expand="full" (click)="restore()">
+    Restore
+  </ion-buttons>
 </ion-content>

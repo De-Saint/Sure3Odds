@@ -136,9 +136,9 @@ export class UserMembersPage {
         {
           text: 'View / Edit',
           handler: () => { this.navCtrl.push('UserMemberEditPage', { user }) }
-        // }, {
-        //   text: 'Delete',
-        //   handler: () => { this.onDeleteMember(user) }
+        }, {
+          text: 'Delete',
+          handler: () => { this.onDeleteMember(user) }
         }, {
           text: 'Cancel',
           role: 'cancel',
@@ -156,7 +156,7 @@ export class UserMembersPage {
     });
     let confirm = this.alertCtrl.create({
       title: 'Delete Member',
-      message: "Do you want to delete <b>" + user.lastname + "</b>? <br/><br/>All the plans, payments, comments and votes would also be deleted.<br/><br/>You can consider disabling " + user.lastname+" instead by changing the status. <br/><br/>This action is irreversible.",
+      message: "Do you want to delete <b>" + user.lastname + "</b>? <br/><br/>All the plan, payments, comments and votes would also be deleted.<br/><br/>You can consider disabling " + user.lastname + " instead by changing the status. <br/><br/>This action is irreversible.",
       buttons: [
         {
           text: 'Cancel',
@@ -168,7 +168,7 @@ export class UserMembersPage {
           text: 'Proceed',
           handler: () => {
             loading.present();
-            this.authProvider.deleteSubAdmin(user.id).subscribe(res => {
+            this.authProvider.deleteMember(user.id).subscribe(res => {
               loading.dismiss().catch(() => { });
               if (res.statusCode === 200) {
                 this.GetUsers();

@@ -1,5 +1,6 @@
 import { AuthenicationProvider } from './../providers/authenication/authenication';
 import { Component, ViewChild } from '@angular/core';
+import { AppVersion } from '@ionic-native/app-version';
 import { Nav, Platform, Events, MenuController, AlertController, App } from 'ionic-angular';
 import {
   Plugins,
@@ -25,9 +26,8 @@ export class Sure3Odds {
   Userfullname: any;
   usertype: any;
   activePage: any;
-  app_version: string;
   rootPage: any;
-  version = "1.0.0";
+  version: string;
   isStatusBarLight = true
 
   loggedInAdminPages: PageInterface[] = [
@@ -66,6 +66,7 @@ export class Sure3Odds {
     public platform: Platform,
     public events: Events,
     private app: App,
+    private appVersion: AppVersion,
     private alertCtrl: AlertController,
     public menu: MenuController,
     public auth: AuthenicationProvider,
@@ -85,10 +86,11 @@ export class Sure3Odds {
       this.changeStatusBar();
       this.hideSplash();
       this.androidExitAppOnBackButton();
-      // this.backgroundMode.enable();
-    });
-    this.platform.resume.subscribe(async () => {
-      console.log('Resume event detected');
+      this.appVersion.getVersionNumber()
+        .then((version) => {
+          this.version = version;
+        }).catch(() => {
+        });
     });
     const { value } = await Storage.get({ key: this.HAS_LOGGED_IN });
     if (value == "true") {

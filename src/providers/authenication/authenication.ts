@@ -178,7 +178,6 @@ export class AuthenicationProvider {
 
   //-----------------------SubAdmin-------Start-------------------------
   createSubAdmin(user): Observable<ResponseType> {
-    console.log(user);
     return this.http.post<ResponseType>(`${environment.apiUrl}/users/subadmin/create`, user)
       .pipe(map(resp => {
         return resp;

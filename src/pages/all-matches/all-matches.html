@@ -59,9 +59,11 @@
             </ion-item>
           </ion-col>
           <ion-col col-auto>
+            <span ion-text color="color2" *ngIf="match.status.name !== 'Lost'"  style="margin-top: 0.3em !important; font-size: smaller !important;"><b> {{match.status.name}}</b></span>
+            <span ion-text color="danger" *ngIf="match.status.name === 'Lost'"  style="margin-top: 0.3em !important; font-size: smaller !important;"><b> {{match.status.name}}</b></span>
             <span ion-text color="color1">{{match.matchtime}}</span>
-            <p ion-text color="color2" ><b>{{match.odds}}</b></p>
-            <p ion-text color="color2" ><b>{{match.selections.name}}</b></p>
+            <p ion-text><b>{{match.odds}}</b></p>
+            <p ion-text color="color1" style="margin-bottom: 0.3em !important;" ><b>{{match.selections.name}}</b></p>
           </ion-col>
           <ion-col col>
             <ion-item >

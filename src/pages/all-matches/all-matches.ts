@@ -111,6 +111,7 @@ export class AllMatchesPage implements OnInit {
         if (resp.statusCode === 200) {
           this.gamelist = resp.data;
         }
+        console.log(this.gamelist);
       }, error => {
         loading.dismiss().catch(() => { });
         this.authProvider.showToast(error.error.description);
