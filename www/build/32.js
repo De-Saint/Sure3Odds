@@ -1,1 +1,223 @@
-webpackJsonp([32],{725:function(l,n,e){"use strict";function u(l){return t["ɵvid"](0,[(l()(),t["ɵeld"](0,0,null,null,21,"ion-header",[],null,null,null,null,null)),t["ɵdid"](1,16384,null,0,b.a,[g.a,t.ElementRef,t.Renderer,[2,y.a]],null,null),(l()(),t["ɵted"](-1,null,["\n  "])),(l()(),t["ɵted"](-1,null,["\n  "])),(l()(),t["ɵeld"](4,0,null,null,16,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,v.b,v.a)),t["ɵdid"](5,49152,null,0,w.a,[O.a,[2,y.a],[2,S.a],g.a,t.ElementRef,t.Renderer],null,null),(l()(),t["ɵted"](-1,3,["\n    "])),(l()(),t["ɵeld"](7,0,null,0,8,"button",[["icon-only",""],["ion-button",""],["menuToggle",""]],[[8,"hidden",0]],[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==t["ɵnov"](l,9).toggle()&&u}return u},A.b,A.a)),t["ɵdid"](8,1097728,[[1,4]],0,M.a,[[8,""],g.a,t.ElementRef,t.Renderer],null,null),t["ɵdid"](9,1064960,null,0,k.a,[R.a,[2,y.a],[2,M.a],[2,w.a]],{menuToggle:[0,"menuToggle"]},null),t["ɵdid"](10,16384,null,1,T.a,[g.a,t.ElementRef,t.Renderer,[2,P.a],[2,w.a]],null,null),t["ɵqud"](603979776,1,{_buttons:1}),(l()(),t["ɵted"](-1,0,["\n      "])),(l()(),t["ɵeld"](13,0,null,0,1,"ion-icon",[["class","goal-menu"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t["ɵdid"](14,147456,null,0,x.a,[g.a,t.ElementRef,t.Renderer],null,null),(l()(),t["ɵted"](-1,0,["\n    "])),(l()(),t["ɵted"](-1,3,["\n    "])),(l()(),t["ɵeld"](17,0,null,3,2,"ion-title",[],null,null,null,F.b,F.a)),t["ɵdid"](18,49152,null,0,C.a,[g.a,t.ElementRef,t.Renderer,[2,P.a],[2,w.a]],null,null),(l()(),t["ɵted"](-1,0,["Terms"])),(l()(),t["ɵted"](-1,3,["\n\n  "])),(l()(),t["ɵted"](-1,null,["\n"])),(l()(),t["ɵted"](-1,null,["\n\n\n"])),(l()(),t["ɵeld"](23,0,null,null,170,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,B.b,B.a)),t["ɵdid"](24,4374528,null,0,E.a,[g.a,W.a,_.a,t.ElementRef,t.Renderer,O.a,I.a,t.NgZone,[2,y.a],[2,S.a]],null,null),(l()(),t["ɵted"](-1,1,["\n  "])),(l()(),t["ɵeld"](26,0,null,1,166,"ion-card-content",[],null,null,null,null,null)),t["ɵdid"](27,16384,null,0,q.a,[g.a,t.ElementRef,t.Renderer],null,null),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵeld"](29,0,null,null,34,"div",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](31,0,null,null,1,"h3",[["class","text-center"]],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["Introduction"])),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](34,0,null,null,28,"ol",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](36,0,null,null,13,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n          By viewing or using Predictions and Betting tips on Sure3Odds Mobile App or any of our affiliate sites, pages,\n          accounts\n          and/or signing up on the Mobile App, you agree to be bound by and to comply with our\n          "])),(l()(),t["ɵeld"](38,0,null,null,10,"ul",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n            "])),(l()(),t["ɵeld"](40,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n              Terms and Conditions;\n            "])),(l()(),t["ɵted"](-1,null,["\n            "])),(l()(),t["ɵeld"](43,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n              Privacy Policy;\n            "])),(l()(),t["ɵted"](-1,null,["\n            "])),(l()(),t["ɵeld"](46,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n              Rules applicable to our betting or gaming products.\n            "])),(l()(),t["ɵted"](-1,null,["\n          "])),(l()(),t["ɵted"](-1,null,["\n          Please read the Terms carefully and if you do not accept the Terms, do not use the Mobile App. The Terms shall\n          apply to all\n          Sure3Odds.com sites and affiliate accounts (Sure3Odds Blog,; Sure3Odds.com/blog, Sure3Odds Forum;\n          Sure3Odds.com/forum,\n          Sure3Odds Facebook and twitter accounts respectively; www.facebook.com/Sure3Odds and twitter.com/Sure3Odds).\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](51,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n          There would be the need to change the Terms and our conditions from time to time for a number of reasons\n          (including complying\n          with applicable laws and regulations, and regulatory requirements as well as we deem fit in order to satisfy\n          our users). As changes would be made, you are therefore advised to review the Terms on a regular basis. All\n          major\n          updates on the Terms and conditions and their dates of effect would be posted on the site. Should you have any\n          issues or should any change made be unacceptable, please you are thereby advised to close your account with us\n          and desist to play by our Odds and predictions. However signing up to Sure3Odds as well as playing by our\n          Odds indicate an agreement with our Terms and Conditions and our policies.\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](54,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,['\n          Please note that references used such as "you", "your" or the "user" refers to any person using this Mobile\n          App or the services\n          of Sure3Odds.com and/or any of our affiliate sites as well as all signed up persons while “we” “our” and\n          “Sure3Odds Mobile App”\n          refers to Sure3Odds and its management.\n        '])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](57,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n          Please beware that right and access to Sure3Odds Mobile App as well as all our affiliates (Sure3Odds.com,\n          Sure3Odds.com/blog,\n          Sure3Odds.com/forum, www.facebook.com/Sure3Odds, twitter.com/Sure3Odds) may be illegal in certain countries.\n          You are therefore responsible for determining whether your access and use of the Mobile App is not prohibited\n          and\n          is compliant with applicable laws, regulations and abiding policies in your jurisdiction.\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](60,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n          Sure3Odds is committed to providing excellent user service. By providing excellent service we ensure that we\n          give a reasonable\n          guarantee on our predictions and ensure that risks are reduced to their lowest minimum. As part of our\n          commitment,\n          Sure3Odds is committed to supporting responsible gambling. We advise that all users are 18+. Although\n          Sure3Odds\n          will use its reasonable endeavours to enforce its responsible gambling policies. We refuse to accept any\n          responsibility\n          or liability if any user uses the Sure3Odds Mobile App and its affiliate site with the intention of\n          deliberately avoiding\n          the relevant measures, laws, policies and regulations in place.\n        "])),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵeld"](65,0,null,null,58,"div",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](67,0,null,null,1,"h3",[["class","text-center"]],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["Your Sure3Odds Account"])),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](70,0,null,null,52,"ol",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](72,0,null,null,22,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n          Application\n          "])),(l()(),t["ɵeld"](74,0,null,null,19,"ol",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n            "])),(l()(),t["ɵeld"](76,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n              All users must be over 18+ years to sign up with Sure3Odds Mobile App. Sure3Odds reserves the right to ask\n              for proof of age from any\n              user and suspend their account until satisfactory documentation is provided. Sure3Odds takes its\n              responsibilities\n              in respect of under age and responsible gambling very seriously.\n            "])),(l()(),t["ɵted"](-1,null,["\n            "])),(l()(),t["ɵeld"](79,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n              Please note that Sure3Odds does not request for users information on\n              the verifications of accounts. NOTE: We only make requests for such information to confirm subscription\n              payments\n              on our Basic and Premium plan packages\n            "])),(l()(),t["ɵted"](-1,null,["\n            "])),(l()(),t["ɵeld"](82,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n              By accepting the Terms and signing up to use the Mobile App and Predictions you hereby agree that we shall\n              be entitled to conduct\n              identification, credit and verification checks periodically that are required by applicable laws and\n              regulations\n              and relevant regulatory authorities for use of the Mobile App and our Services generally. Also by signing\n              up\n              you agree to provide all such information as we require in connection with such verification checks. We\n              shall\n              be entitled to suspend or restrict accounts of users in any manner that we may deem in our absolute\n              discretion\n              to be appropriate, until the relevant checks are completed to our satisfaction.\n            "])),(l()(),t["ɵted"](-1,null,["\n\n            "])),(l()(),t["ɵeld"](85,0,null,null,4,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n              Users may open only one account. "])),(l()(),t["ɵeld"](87,0,null,null,1,"strong",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["Information accessed by you on the Mobile App (including results,\n                predictions, and odds) is\n                for your personal use only and the distribution or commercial exploitation of such information is\n                strictly\n                prohibited."])),(l()(),t["ɵted"](-1,null,[" Should we identify any user with more than one account or users reposting and\n              sharing exclusive\n              information explicitly, we reserve the right to treat any such accounts as one joint account or expressly\n              delete such accounts where necessary.\n            "])),(l()(),t["ɵted"](-1,null,["\n            "])),(l()(),t["ɵeld"](91,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n              Users are advised to keep accounts up to date to ensure that continue to receive emails, notifications and\n              also make themselves\n              eligible to partake in promos.\n            "])),(l()(),t["ɵted"](-1,null,["\n          "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](96,0,null,null,16,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n          Account Details\n          "])),(l()(),t["ɵeld"](98,0,null,null,13,"ol",[["class","neg-marginleft"]],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n            "])),(l()(),t["ɵeld"](100,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n              Sure3Odds allows all its users to choose their own email and password combination. Users must keep this\n              information confidential\n              as you are responsible for all activities on the account.\n            "])),(l()(),t["ɵted"](-1,null,["\n            "])),(l()(),t["ɵeld"](103,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n              Once an account has been upgraded to a plan, subscription begins( whether or not you make use of odds\n              provided, Do not have\n              access to your account, forgot password).\n            "])),(l()(),t["ɵted"](-1,null,["\n            "])),(l()(),t["ɵeld"](106,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,['\n              If, at any time, you feel a third party is aware of your email and/or password you should change it\n              immediately. Making use of the "forgot my password" option.\n            '])),(l()(),t["ɵted"](-1,null,["\n            "])),(l()(),t["ɵeld"](109,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n              Your Current Subscription status will always be displayed on the dashboard of users accounts.\n            "])),(l()(),t["ɵted"](-1,null,["\n          "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](114,0,null,null,7,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n          Personal Details\n          "])),(l()(),t["ɵeld"](116,0,null,null,4,"ol",[["class","neg-marginleft"]],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n            "])),(l()(),t["ɵeld"](118,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n              By signing up, users have entrusted us with their emails and subscription details, we are therefore\n              obligated to protect\n              the information of our users.\n            "])),(l()(),t["ɵted"](-1,null,["\n          "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵeld"](125,0,null,null,22,"div",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](127,0,null,null,1,"h3",[["class","text-center"]],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["Predictions And Odds"])),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](130,0,null,null,16,"ol",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](132,0,null,null,13,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n          Odds and Accumulations\n          "])),(l()(),t["ɵeld"](134,0,null,null,10,"ol",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n            "])),(l()(),t["ɵeld"](136,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n              We provide predictions at its best and guarantee our clients a reasonable guarantee on our predictions\n              by ensuring we reduce\n              risks to their lowest possible minimum.\n            "])),(l()(),t["ɵted"](-1,null,["\n            "])),(l()(),t["ɵeld"](139,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n              We are therefore not responsible for failing outcomes of matches as all predictions and match analysis\n              end before the match\n              is played and final outcomes are decided on the pitch. Information on the Mobile App should not be\n              relied upon\n              absolutely when placing bets and making odds. Bets are ultimately made at users own risk and discretion.\n            "])),(l()(),t["ɵted"](-1,null,["\n            "])),(l()(),t["ɵeld"](142,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n              We are also not responsible for users’ individual discretional accumulations as we provide accumulations\n              in our daily predictions,\n              Sure3Odds VIP and Sure3Odds VVIP categories and take the Risk.\n            "])),(l()(),t["ɵted"](-1,null,["\n          "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵeld"](149,0,null,null,13,"div",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](151,0,null,null,1,"h3",[["class","text-center"]],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["Our Liability"])),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](154,0,null,null,7,"ol",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](156,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n          Sure3Odds does not accept any liability for any damages, liabilities or losses which are deemed or alleged\n          to have arisen\n          out of or in connection with services, odds and predictions on the Mobile App or its affiliates\n\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](159,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n          While Sure3Odds endeavours to ensure that the information on the Mobile App is correct, Sure3Odds does not\n          warrant the accuracy\n          or completeness of the information and material on the Mobile App. The Mobile App may contain typographical\n          errors\n          or other inaccuracies, or information that is out of date. Sure3Odds is under no obligation to update such\n          material.\n          The information and material on the Mobile App is provided “as is”, without any conditions, warranties or\n          other\n          terms of any kind. Accordingly, to the maximum extent permitted by law, Sure3Odds provides you with the\n          Mobile App\n          on the basis that Sure3Odds excludes all representations, express or implied warranties, conditions and\n          other\n          terms which but for these terms and conditions might have effect in relation to the Mobile App.\n        "])),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵeld"](164,0,null,null,19,"div",[["class",""]],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](166,0,null,null,1,"h3",[["class","text-center"]],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["Others"])),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](169,0,null,null,13,"ol",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](171,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n          Sure3Odds actively monitors traffic to and from the Mobile App. Sure3Odds reserves the right in its sole\n          discretion to block\n          access where evidence indicative of automated, robotic or programmed activities are found.\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](174,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n          Sure3Odds reserves the right to restrict access to all or certain parts of the Mobile App at its discretion.\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](177,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n          Sure3Odds may alter or amend the products offered via the Mobile App at any time and for any reason.\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](180,0,null,null,1,"li",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n          From time to time, all or part of the Mobile App may be unavailable for use by you because of our\n          maintenance of the Mobile App\n          and alteration or amendment of any of the Mobile App categories. We will ensure that proper notice is given\n          prior\n          to the unavailability of such parts.\n        "])),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵted"](-1,null,["\n\n    "])),(l()(),t["ɵeld"](185,0,null,null,6,"div",[["class",""]],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n      Signed "])),(l()(),t["ɵeld"](187,0,null,null,0,"br",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](189,0,null,null,1,"strong",[],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["Sure3Odds Management"])),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵted"](-1,null,["\n  "])),(l()(),t["ɵted"](-1,1,["\n"])),(l()(),t["ɵted"](-1,null,["\n"]))],function(l,n){l(n,9,0,"")},function(l,n){l(n,4,0,t["ɵnov"](n,5)._hidden,t["ɵnov"](n,5)._sbPadding);l(n,7,0,t["ɵnov"](n,9).isHidden);l(n,13,0,t["ɵnov"](n,14)._hidden);l(n,23,0,t["ɵnov"](n,24).statusbarPadding,t["ɵnov"](n,24)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var t=e(0),o=(e(1),e(15),function(){return function(l,n){this.navCtrl=l,this.navParams=n}}()),i=function(){return function(){}}(),d=e(208),a=e(209),r=e(210),s=e(211),c=e(212),p=e(213),m=e(214),h=e(215),f=e(216),b=e(54),g=e(3),y=e(7),v=e(92),w=e(37),O=e(9),S=e(20),A=e(41),M=e(26),k=e(94),R=e(36),T=e(69),P=e(38),x=e(34),F=e(146),C=e(61),B=e(91),E=e(30),W=e(5),_=e(10),I=e(31),q=e(228),L=e(17),N=t["ɵcrt"]({encapsulation:2,styles:[],data:{}}),j=t["ɵccf"]("page-terms",o,function(l){return t["ɵvid"](0,[(l()(),t["ɵeld"](0,0,null,null,1,"page-terms",[],null,null,null,u,N)),t["ɵdid"](1,49152,null,0,o,[S.a,L.a],null,null)],null,null)},{},{},[]),D=e(14),U=e(24),V=e(142),Y=e(52);e.d(n,"TermsPageModuleNgFactory",function(){return z});var z=t["ɵcmf"](i,[],function(l){return t["ɵmod"]([t["ɵmpd"](512,t.ComponentFactoryResolver,t["ɵCodegenComponentFactoryResolver"],[[8,[d.a,a.a,r.a,s.a,c.a,p.a,m.a,h.a,f.a,j]],[3,t.ComponentFactoryResolver],t.NgModuleRef]),t["ɵmpd"](4608,D.NgLocalization,D.NgLocaleLocalization,[t.LOCALE_ID,[2,D["ɵa"]]]),t["ɵmpd"](4608,U["ɵi"],U["ɵi"],[]),t["ɵmpd"](4608,U.FormBuilder,U.FormBuilder,[]),t["ɵmpd"](512,D.CommonModule,D.CommonModule,[]),t["ɵmpd"](512,U["ɵba"],U["ɵba"],[]),t["ɵmpd"](512,U.FormsModule,U.FormsModule,[]),t["ɵmpd"](512,U.ReactiveFormsModule,U.ReactiveFormsModule,[]),t["ɵmpd"](512,V.a,V.a,[]),t["ɵmpd"](512,V.b,V.b,[]),t["ɵmpd"](512,i,i,[]),t["ɵmpd"](256,Y.a,o,[])])})}});
+webpackJsonp([32],{
+
+/***/ 757:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingLeaguesPageModule", function() { return SettingLeaguesPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__setting_leagues__ = __webpack_require__(818);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var SettingLeaguesPageModule = /** @class */ (function () {
+    function SettingLeaguesPageModule() {
+    }
+    SettingLeaguesPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__setting_leagues__["a" /* SettingLeaguesPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__setting_leagues__["a" /* SettingLeaguesPage */]),
+            ],
+        })
+    ], SettingLeaguesPageModule);
+    return SettingLeaguesPageModule;
+}());
+
+//# sourceMappingURL=setting-leagues.module.js.map
+
+/***/ }),
+
+/***/ 818:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingLeaguesPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_games_games__ = __webpack_require__(370);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var SettingLeaguesPage = /** @class */ (function () {
+    function SettingLeaguesPage(navCtrl, authProvider, gamesProvider, loadingCtrl, actionSheetCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.authProvider = authProvider;
+        this.gamesProvider = gamesProvider;
+        this.loadingCtrl = loadingCtrl;
+        this.actionSheetCtrl = actionSheetCtrl;
+        this.navParams = navParams;
+        this.currentPage = 1;
+        this.totalPage = 0;
+        this.perPage = 0;
+        this.totalData = 0;
+    }
+    SettingLeaguesPage.prototype.ionViewWillEnter = function () {
+        this.GetLeagues();
+    };
+    SettingLeaguesPage.prototype.GetLeagues = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        loading.present();
+        this.gamesProvider.GetLeagues(0, 50)
+            .subscribe(function (resp) {
+            loading.dismiss().catch(function () { });
+            if (resp.statusCode === 200) {
+                _this.leagues = resp.data.content;
+                _this.originalleagues = _this.leagues;
+                _this.currentPage = resp.data.number;
+                _this.totalPage = resp.data.totalPages;
+                _this.totalData = resp.data.totalElements;
+                _this.perPage = resp.data.size;
+                _this.noleagues = 'leagues';
+            }
+            else {
+                _this.authProvider.showToast(resp.description);
+            }
+            _this.error = '';
+        }, function (error) {
+            _this.error = 'none';
+            loading.dismiss().catch(function () { });
+            _this.leagues = [];
+            _this.authProvider.showToast(error.error.description);
+        });
+    };
+    SettingLeaguesPage.prototype.onSearch = function () {
+        var _this = this;
+        var searchvalue = this.searchTerm;
+        if (searchvalue.trim() === '') {
+            this.leagues = this.originalleagues;
+        }
+        else {
+            if (searchvalue.length >= 3) {
+                var loading_1 = this.loadingCtrl.create({
+                    content: "Please wait..."
+                });
+                loading_1.present();
+                this.gamesProvider.SearchLeagues(searchvalue, 0, 50)
+                    .subscribe(function (resp) {
+                    loading_1.dismiss().catch(function () { });
+                    if (resp.statusCode === 200) {
+                        _this.leagues = resp.data.content;
+                        _this.currentPage = resp.data.number;
+                        _this.totalPage = resp.data.totalPages;
+                        _this.totalData = resp.data.totalElements;
+                        _this.perPage = resp.data.size;
+                    }
+                    else {
+                        _this.authProvider.showToast(resp.description);
+                    }
+                    _this.error = '';
+                }, function (error) {
+                    _this.error = 'none';
+                    _this.leagues = [];
+                    loading_1.dismiss().catch(function () { });
+                    _this.authProvider.showToast(error.error.error);
+                });
+            }
+        }
+    };
+    SettingLeaguesPage.prototype.onClear = function (ev) {
+        this.searchTerm = "";
+        this.leagues = this.originalleagues;
+    };
+    SettingLeaguesPage.prototype.onCancel = function (ev) {
+        this.searchTerm = "";
+        this.leagues = this.originalleagues;
+    };
+    SettingLeaguesPage.prototype.scrollInfinite = function (event) {
+        var _this = this;
+        this.currentPage += 1;
+        setTimeout(function () {
+            _this.gamesProvider.GetLeagues(_this.currentPage, _this.perPage)
+                .subscribe(function (resp) {
+                if (resp.statusCode === 200) {
+                    _this.currentPage = resp.data.number;
+                    _this.totalPage = resp.data.totalPages;
+                    _this.totalData = resp.data.totalElements;
+                    _this.perPage = resp.data.size;
+                    _this.noleagues = 'league';
+                    for (var i = 0; i < resp.data.content.length; i++) {
+                        _this.leagues.push(resp.data.content[i]);
+                    }
+                }
+                else {
+                    _this.authProvider.showToast(resp.description);
+                }
+                event.complete();
+            }, function (error) {
+                _this.noleagues = 'none';
+                event.complete();
+            });
+        }, 1000);
+    };
+    SettingLeaguesPage.prototype.onGotoTop = function () {
+        this.content.scrollToTop();
+    };
+    SettingLeaguesPage.prototype.onLeagueOption = function (league) {
+        var _this = this;
+        var actionSheet = this.actionSheetCtrl.create({
+            title: 'League Options',
+            buttons: [
+                {
+                    text: 'View / Edit',
+                    handler: function () { _this.navCtrl.push('SettingLeagueEditPage', { league: league }); }
+                }, {
+                    text: 'View Teams',
+                    handler: function () { _this.navCtrl.push('SettingTeamViewPage', { league: league }); }
+                }, {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () { }
+                }
+            ]
+        });
+        actionSheet.present();
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["Content"]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["Content"])
+    ], SettingLeaguesPage.prototype, "content", void 0);
+    SettingLeaguesPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
+            selector: 'page-setting-leagues',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-leagues/setting-leagues.html"*/'<ion-header> \n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Leagues</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only navPush="SettingLeagueAddPage">\n        <ion-icon name="add-circle"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-searchbar [(ngModel)]="searchTerm" (ionCancel)="onCancel($event)" [showCancelButton]="true"\n    (ionClear)="onClear($event)" (ionInput)="onSearch()">\n  </ion-searchbar>\n  <div class="leagueStats">\n    <ion-list *ngFor="let league of leagues">\n      <ion-item class="thumbnailItem" (click)="onLeagueOption(league)">\n        <ion-thumbnail item-left>\n          <img src="{{league.imageurl}}" *ngIf="league.imageurl" />\n          <img src="assets/imgs/appicon.png" *ngIf="!league.imageurl" />\n        </ion-thumbnail>\n        <h5 ion-text padding-left margin-left color="dark">{{league.name}}</h5>\n        <span ion-text color="color1" class="" small item-right>{{league.country.name}}</span>\n      </ion-item>\n    </ion-list>\n  </div>\n\n  <div class="" *ngIf="error">\n    <p ion-text text-center color="color2">No result found!</p>\n  </div>\n  <div text-center margin-top margin-bottonm *ngIf="noleagues === \'none\'" (click)="onGotoTop()">\n    <button ion-button small color="color2">Back to Top</button>\n  </div>\n  <ion-infinite-scroll (ionInfinite)="scrollInfinite($event)" *ngIf="currentPage < totalPage">\n    <ion-infinite-scroll-content  loadingSpinner="bubbles"\n    loadingText="Loading page {{currentPage}} of {{totalPage}}"></ion-infinite-scroll-content>\n  </ion-infinite-scroll>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/setting-leagues/setting-leagues.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"],
+            __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */],
+            __WEBPACK_IMPORTED_MODULE_0__providers_games_games__["a" /* GamesProvider */],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["LoadingController"],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ActionSheetController"],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"]])
+    ], SettingLeaguesPage);
+    return SettingLeaguesPage;
+}());
+
+//# sourceMappingURL=setting-leagues.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=32.js.map

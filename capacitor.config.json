@@ -1,6 +1,6 @@
 {
-  "appId": "com.sure3odds.sureapp",
-  "appName": "Sure3Odds",
+  "appId": "com.fyngram.fynapp",
+  "appName": "FynGram",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

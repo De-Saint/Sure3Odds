@@ -1,1 +1,234 @@
-webpackJsonp([44],{694:function(l,n,e){"use strict";function t(l){return a["ɵvid"](0,[(l()(),a["ɵeld"](0,0,null,null,20,"ion-list",[],null,[[null,"click"]],function(l,n,e){var t=!0;if("click"===n){t=!1!==l.component.onPlantypeOptions(l.context.$implicit)&&t}return t},null,null)),a["ɵdid"](1,16384,null,0,b.a,[C.a,a.ElementRef,a.Renderer,P.a,F.m,N.a],null,null),(l()(),a["ɵted"](-1,null,["\n      "])),(l()(),a["ɵeld"](3,0,null,null,16,"ion-item",[["class","thumbnailItem item item-block"]],null,null,null,E.b,E.a)),a["ɵdid"](4,1097728,null,3,x.a,[M.a,C.a,a.ElementRef,a.Renderer,[2,O.a]],null,null),a["ɵqud"](335544320,1,{contentLabel:0}),a["ɵqud"](603979776,2,{_buttons:1}),a["ɵqud"](603979776,3,{_icons:1}),a["ɵdid"](8,16384,null,0,L.a,[],null,null),(l()(),a["ɵted"](-1,2,["\n        "])),(l()(),a["ɵeld"](10,0,null,2,2,"h5",[["color","dark"],["ion-text",""],["style","padding-left: 0.8em; padding-top: 0.5em; padding-bottom: 0.5em;     height: auto"]],null,null,null,null,null)),a["ɵdid"](11,16384,null,0,w.a,[C.a,a.ElementRef,a.Renderer],{color:[0,"color"]},null),(l()(),a["ɵted"](12,null,["",""])),(l()(),a["ɵted"](-1,2,["\n        "])),(l()(),a["ɵeld"](14,0,null,4,4,"p",[["color","color1"],["ion-text",""],["item-right",""],["margin-right",""],["padding-right",""]],null,null,null,null,null)),a["ɵdid"](15,16384,null,0,w.a,[C.a,a.ElementRef,a.Renderer],{color:[0,"color"]},null),(l()(),a["ɵeld"](16,0,null,null,2,"b",[],null,null,null,null,null)),(l()(),a["ɵted"](17,null,["",""])),a["ɵppd"](18,3),(l()(),a["ɵted"](-1,2,["\n      "])),(l()(),a["ɵted"](-1,null,["\n    "]))],function(l,n){l(n,11,0,"dark");l(n,15,0,"color1")},function(l,n){l(n,12,0,n.context.$implicit.name);l(n,17,0,a["ɵunv"](n,17,0,l(n,18,0,a["ɵnov"](n.parent,0),n.context.$implicit.amount,"NGN","1.2-2")))})}function u(l){return a["ɵvid"](0,[(l()(),a["ɵeld"](0,0,null,null,5,"div",[["class",""]],null,null,null,null,null)),(l()(),a["ɵted"](-1,null,["\n    "])),(l()(),a["ɵeld"](2,0,null,null,2,"p",[["color","color2"],["ion-text",""],["text-center",""]],null,null,null,null,null)),a["ɵdid"](3,16384,null,0,w.a,[C.a,a.ElementRef,a.Renderer],{color:[0,"color"]},null),(l()(),a["ɵted"](-1,null,["No result found!"])),(l()(),a["ɵted"](-1,null,["\n  "]))],function(l,n){l(n,3,0,"color2")},null)}function o(l){return a["ɵvid"](0,[a["ɵpid"](0,I.CurrencyPipe,[a.LOCALE_ID]),(l()(),a["ɵted"](-1,null,["\n"])),(l()(),a["ɵeld"](2,0,null,null,11,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,_.b,_.a)),a["ɵdid"](3,4374528,null,0,k.a,[C.a,P.a,N.a,a.ElementRef,a.Renderer,T.a,V.a,a.NgZone,[2,q.a],[2,A.a]],null,null),(l()(),a["ɵted"](-1,1,["\n  "])),(l()(),a["ɵeld"](5,0,null,1,4,"div",[["class","leagueStats"]],null,null,null,null,null)),(l()(),a["ɵted"](-1,null,["\n    "])),(l()(),a["ɵand"](16777216,null,null,1,null,t)),a["ɵdid"](8,802816,null,0,I.NgForOf,[a.ViewContainerRef,a.TemplateRef,a.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),a["ɵted"](-1,null,["\n\n  "])),(l()(),a["ɵted"](-1,1,["\n\n  "])),(l()(),a["ɵand"](16777216,null,1,1,null,u)),a["ɵdid"](12,16384,null,0,I.NgIf,[a.ViewContainerRef,a.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),a["ɵted"](-1,1,["\n"]))],function(l,n){var e=n.component;l(n,8,0,e.plantypes);l(n,12,0,e.error)},function(l,n){l(n,2,0,a["ɵnov"](n,3).statusbarPadding,a["ɵnov"](n,3)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var a=e(0),i=(e(1),e(15),e(220)),r=e(66),d=function(){function l(l,n,e,t,u,o){this.navCtrl=l,this.auth=n,this.nativeHttp=e,this.loadingCtrl=t,this.actionSheetCtrl=u,this.navParams=o,this.rootNavCtrl=this.navParams.get("rootNavCtrl")}return l.prototype.ionViewWillEnter=function(){this.GetPlantypes()},l.prototype.GetPlantypes=function(){var l=this,n=this.loadingCtrl.create({content:"Please wait..."});n.present(),this.nativeHttp.getAllPlantypes().subscribe(function(e){n.dismiss().catch(function(){}),l.plantypes=e.data},function(e){n.dismiss().catch(function(){}),l.auth.showToast(e.error.message)})},l.prototype.onPlantypeOptions=function(l){var n=this;this.actionSheetCtrl.create({title:"Plan Type Options",buttons:[{text:"View / Edit",handler:function(){n.rootNavCtrl.push("PaymentPlantypeEditPage",{plantype:l})}},{text:"Cancel",role:"cancel",handler:function(){}}]}).present()},l}(),c=function(){return function(){}}(),s=e(208),p=e(209),m=e(210),f=e(211),h=e(212),g=e(213),v=e(214),y=e(215),R=e(216),b=e(60),C=e(3),P=e(5),F=e(8),N=e(10),E=e(144),x=e(28),M=e(25),O=e(53),L=e(67),w=e(68),I=e(14),_=e(91),k=e(30),T=e(9),V=e(31),q=e(7),A=e(20),D=e(145),G=e(147),S=e(17),$=a["ɵcrt"]({encapsulation:2,styles:[],data:{}}),z=a["ɵccf"]("page-payment-plantypes",d,function(l){return a["ɵvid"](0,[(l()(),a["ɵeld"](0,0,null,null,1,"page-payment-plantypes",[],null,null,null,o,$)),a["ɵdid"](1,49152,null,0,d,[A.a,r.a,i.a,D.a,G.a,S.a],null,null)],null,null)},{},{},[]),B=e(24),H=e(142),j=e(52);e.d(n,"PaymentPlantypesPageModuleNgFactory",function(){return J});var J=a["ɵcmf"](c,[],function(l){return a["ɵmod"]([a["ɵmpd"](512,a.ComponentFactoryResolver,a["ɵCodegenComponentFactoryResolver"],[[8,[s.a,p.a,m.a,f.a,h.a,g.a,v.a,y.a,R.a,z]],[3,a.ComponentFactoryResolver],a.NgModuleRef]),a["ɵmpd"](4608,I.NgLocalization,I.NgLocaleLocalization,[a.LOCALE_ID,[2,I["ɵa"]]]),a["ɵmpd"](4608,B["ɵi"],B["ɵi"],[]),a["ɵmpd"](4608,B.FormBuilder,B.FormBuilder,[]),a["ɵmpd"](512,I.CommonModule,I.CommonModule,[]),a["ɵmpd"](512,B["ɵba"],B["ɵba"],[]),a["ɵmpd"](512,B.FormsModule,B.FormsModule,[]),a["ɵmpd"](512,B.ReactiveFormsModule,B.ReactiveFormsModule,[]),a["ɵmpd"](512,H.a,H.a,[]),a["ɵmpd"](512,H.b,H.b,[]),a["ɵmpd"](512,c,c,[]),a["ɵmpd"](256,j.a,d,[])])})}});
+webpackJsonp([44],{
+
+/***/ 736:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GamesPageModule", function() { return GamesPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__games__ = __webpack_require__(794);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var GamesPageModule = /** @class */ (function () {
+    function GamesPageModule() {
+    }
+    GamesPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__games__["a" /* GamesPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__games__["a" /* GamesPage */]),
+            ],
+        })
+    ], GamesPageModule);
+    return GamesPageModule;
+}());
+
+//# sourceMappingURL=games.module.js.map
+
+/***/ }),
+
+/***/ 794:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GamesPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_games_games__ = __webpack_require__(370);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var GamesPage = /** @class */ (function () {
+    function GamesPage(navCtrl, authProvider, gamesProvider, alertCtrl, loadingCtrl, actionSheetCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.authProvider = authProvider;
+        this.gamesProvider = gamesProvider;
+        this.alertCtrl = alertCtrl;
+        this.loadingCtrl = loadingCtrl;
+        this.actionSheetCtrl = actionSheetCtrl;
+        this.navParams = navParams;
+        // calender Function
+        this.monthNames = ["January", "February", "March", "April", "May", "June", "July",
+            "August", "September", "October", "November", "December"];
+        this.days_name = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        this.days = [];
+        this.myDate = new Date();
+        this.year = this.myDate.getFullYear();
+        this.month_num = this.myDate.getMonth();
+        this.month_name = this.monthNames[this.month_num];
+        this.getDaysInMonth(this.month_num, this.year);
+        this.currentDate = this.myDate;
+    }
+    GamesPage.prototype.ionViewWillEnter = function () {
+        var currentdate = this.gamesProvider.getDate();
+        this.GetGames(currentdate);
+        var date = this.myDate.getDate();
+        var today = date - 1;
+        this.isGroupShown(today);
+        this.shownGroup = today;
+    };
+    GamesPage.prototype.getDaysInMonth = function (month, year) {
+        // Since no month has fewer than 28 days
+        var date = new Date(year, month);
+        while (date.getMonth() === month) {
+            var a = new Date(date);
+            var day_num = a.getDate();
+            this.days.push({ name: this.days_name[a.getDay()], day_num: day_num, month: month + 1, year: year });
+            date.setDate(date.getDate() + 1);
+        }
+    };
+    // increase and decrease month function
+    GamesPage.prototype.change_month = function (type) {
+        this.shownGroup = null;
+        if (type == 'increase') {
+            this.month_num = this.month_num + 1;
+            if (this.month_num >= 12) {
+                this.month_num = 0;
+                this.year = this.year + 1;
+            }
+        }
+        else if (type == 'decrease') {
+            this.month_num = this.month_num - 1;
+            if (this.month_num < 0) {
+                this.month_num = 11;
+                this.year = this.year - 1;
+            }
+        }
+        this.month_name = this.monthNames[this.month_num];
+        this.days = [];
+        this.getDaysInMonth(this.month_num, this.year);
+    };
+    GamesPage.prototype.toggleGroup = function (group) {
+        this.shownGroup = group;
+    };
+    GamesPage.prototype.isGroupShown = function (group) {
+        return this.shownGroup === group;
+    };
+    GamesPage.prototype.onClick = function (day) {
+        this.shownGroup = null;
+        var date = this.gamesProvider.computeOldMatchDate(day);
+        this.GetGames(date);
+        this.month_name = this.monthNames[this.month_num];
+        this.days = [];
+        this.getDaysInMonth(this.month_num, this.year);
+    };
+    GamesPage.prototype.GetGames = function (currentdate) {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        loading.present();
+        this.gamesProvider.GetGames(currentdate)
+            .subscribe(function (resp) {
+            loading.dismiss().catch(function () { });
+            if (resp.statusCode === 200) {
+                _this.gamelist = resp.data;
+            }
+            else {
+                _this.authProvider.showToast(resp.description);
+            }
+        }, function (error) {
+            loading.dismiss().catch(function () { });
+            _this.authProvider.showToast(error.error.error);
+        });
+    };
+    GamesPage.prototype.onGameOption = function (game) {
+        var _this = this;
+        var actionSheet = this.actionSheetCtrl.create({
+            title: 'Game Options',
+            buttons: [
+                {
+                    text: 'View / Edit',
+                    handler: function () { _this.navCtrl.push('GameEditPage', { game: game }); }
+                }, {
+                    text: 'Delete',
+                    handler: function () { _this.onDeleteGame(game); }
+                }, {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () { }
+                }
+            ]
+        });
+        actionSheet.present();
+    };
+    GamesPage.prototype.onDeleteGame = function (game) {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        var confirm = this.alertCtrl.create({
+            title: 'Delete Game',
+            message: 'Do you want to delete this game?</b><br/><br/>All the votes and comments on this game would also be deleted.</b><br/><br/>This is action is irreversible.',
+            buttons: [
+                {
+                    text: 'Cancel',
+                    handler: function () {
+                    }
+                },
+                {
+                    text: 'Proceed',
+                    handler: function () {
+                        loading.present();
+                        _this.gamesProvider.deleteGame(game.id).subscribe(function (res) {
+                            loading.dismiss().catch(function () { });
+                            if (res.statusCode === 200) {
+                                var currentdate = _this.gamesProvider.getDate();
+                                _this.GetGames(currentdate);
+                            }
+                            else {
+                                _this.authProvider.showToast(res.description);
+                            }
+                        }, function (error) {
+                            loading.dismiss().catch(function () { });
+                            _this.authProvider.showToast(error.error.error);
+                        });
+                    }
+                }
+            ]
+        });
+        confirm.present();
+    };
+    GamesPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
+            selector: 'page-games',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/games/games.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Games</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only navPush="GameNewPage">\n        <ion-icon name="add-circle"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n  <ion-toolbar class="calendarToolbar">\n    <ion-grid class="calendar">\n      <ion-row>\n        <ion-col col-auto>\n          <ion-icon name="ios-arrow-back" color="light" (click)="change_month(\'decrease\')"></ion-icon>\n        </ion-col>\n        <ion-col col>\n          <p>\n            <span>{{month_name}}</span>,\n            <span>{{year}}</span>\n          </p>\n        </ion-col>\n        <ion-col col-auto>\n          <ion-icon name="ios-arrow-forward" color="light" (click)="change_month(\'increase\')"></ion-icon>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n    <div class="daysScroll">\n      <ion-scroll scrollX="true" scrollY="false">\n        <div class="day" *ngFor="let day of days ; let i=index" (click)="toggleGroup(i)"\n          [ngClass]="{\'active\': isGroupShown(i)}">\n          <p>{{day.name}}</p>\n          <button ion-button clear (click)="onClick(day)">{{day.day_num}} </button>\n        </div>\n      </ion-scroll>\n    </div>\n\n    <p ion-text text-center no-margin color="light"><b>{{currentDate |  date:\'mediumDate\'}}</b></p>\n  </ion-toolbar>\n</ion-header>\n\n\n<ion-content padding>\n  <!-- matches list  Sure3Odds.com  -->\n  <div class="gamelist">\n    <ion-list class="" *ngFor="let game of gamelist">\n      <ion-list-header>\n        <ion-row>\n          <ion-col col-4>\n            <ion-icon name="football" color="color1" item-left></ion-icon>\n            <span ion-text padding-bottom>{{game.title}}</span>\n          </ion-col>\n          <ion-col col-4 text-center>\n            <p ion-text padding-top color="color2">sure3odds.com</p>\n          </ion-col>\n          <ion-col col-4 text-right>\n            <span ion-text color="color1">Total odds : {{game.odds ? game.odds : \'0.0\'}}</span>\n          </ion-col>\n        </ion-row>\n      </ion-list-header>\n      <!-- match item  -->\n      <div class="" *ngIf="game.items">\n        <ion-item class="matchItem" *ngFor="let match of game.items">\n          <ion-grid>\n            <ion-row (click)="onGameOption(match)">\n              <ion-col col>\n                <ion-item>\n                  <img src="{{match.hometeam.imageurl}}" item-right *ngIf="match.hometeam.imageurl" />\n                  <img src="assets/imgs/appicon.png" item-right *ngIf="!match.hometeam.imageurl" />\n                  <p text-right>{{match.hometeam.name}}</p>\n                </ion-item>\n              </ion-col>\n              <ion-col col-auto>\n                <span ion-text color="color1">{{match.matchtime}}</span>\n                <p ion-text color="color2"><b>{{match.odds}}</b></p>\n                <p ion-text color="color2"><b>{{match.selections.name}}</b></p>\n              </ion-col>\n              <ion-col col>\n                <ion-item>\n                  <img src="{{match.awayteam.imageurl}}" item-left *ngIf="match.awayteam.imageurl" />\n                  <img src="assets/imgs/appicon.png" item-left *ngIf="!match.awayteam.imageurl" />\n                  <p text-left>{{match.awayteam.name}}</p>\n                </ion-item>\n              </ion-col>\n            </ion-row>\n          </ion-grid>\n        </ion-item>\n      </div>\n      <div class="" *ngIf="game.msg">\n        <p ion-text text-center color="color2">{{game.msg}}</p>\n      </div>\n\n    </ion-list>\n  </div>\n\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/games/games.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"],
+            __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */],
+            __WEBPACK_IMPORTED_MODULE_0__providers_games_games__["a" /* GamesProvider */],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["AlertController"],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["LoadingController"],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ActionSheetController"],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"]])
+    ], GamesPage);
+    return GamesPage;
+}());
+
+//# sourceMappingURL=games.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=44.js.map

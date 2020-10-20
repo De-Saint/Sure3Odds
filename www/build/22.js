@@ -1,1 +1,323 @@
-webpackJsonp([22],{724:function(n,l,e){"use strict";function t(n){return i["ɵvid"](0,[(n()(),i["ɵeld"](0,0,null,null,18,"ion-item",[["button",""],["class","item item-block"],["details","false"]],null,[[null,"click"]],function(n,l,e){var t=!0;if("click"===l){t=!1!==n.component.purchase()&&t}return t},y.b,y.a)),i["ɵdid"](1,1097728,null,3,C.a,[E.a,F.a,i.ElementRef,i.Renderer,[2,_.a]],null,null),i["ɵqud"](335544320,1,{contentLabel:0}),i["ɵqud"](603979776,2,{_buttons:1}),i["ɵqud"](603979776,3,{_icons:1}),i["ɵdid"](5,16384,null,0,w.a,[],null,null),(n()(),i["ɵted"](-1,2,["\n      "])),(n()(),i["ɵeld"](7,0,null,1,5,"ion-label",[["class","ion-text-wrap"]],null,null,null,null,null)),i["ɵdid"](8,16384,[[1,4]],0,M.a,[F.a,i.ElementRef,i.Renderer,[8,null],[8,null],[8,null],[8,null]],null,null),(n()(),i["ɵted"](9,null,["\n        ","\n        "])),(n()(),i["ɵeld"](10,0,null,null,1,"p",[],null,null,null,null,null)),(n()(),i["ɵted"](11,null,["",""])),(n()(),i["ɵted"](-1,null,["\n      "])),(n()(),i["ɵted"](-1,2,["\n      "])),(n()(),i["ɵeld"](14,0,null,2,3,"ion-buttons",[["slot","end"]],null,null,null,null,null)),i["ɵdid"](15,16384,null,1,L.a,[F.a,i.ElementRef,i.Renderer,[2,P.a],[2,N.a]],null,null),i["ɵqud"](603979776,4,{_buttons:1}),(n()(),i["ɵted"](17,null,["\n        "," ","\n      "])),(n()(),i["ɵted"](-1,2,["\n    "]))],null,function(n,l){n(l,9,0,l.context.$implicit.title);n(l,11,0,l.context.$implicit.description);n(l,17,0,l.context.$implicit.price,l.context.$implicit.currency)})}function u(n){return i["ɵvid"](0,[(n()(),i["ɵeld"](0,0,null,null,10,"ion-header",[],null,null,null,null,null)),i["ɵdid"](1,16384,null,0,O.a,[F.a,i.ElementRef,i.Renderer,[2,k.a]],null,null),(n()(),i["ɵted"](-1,null,["\n  "])),(n()(),i["ɵeld"](3,0,null,null,6,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,x.b,x.a)),i["ɵdid"](4,49152,null,0,N.a,[q.a,[2,k.a],[2,B.a],F.a,i.ElementRef,i.Renderer],null,null),(n()(),i["ɵted"](-1,3,["\n    "])),(n()(),i["ɵeld"](6,0,null,3,2,"ion-title",[],null,null,null,D.b,D.a)),i["ɵdid"](7,49152,null,0,S.a,[F.a,i.ElementRef,i.Renderer,[2,P.a],[2,N.a]],null,null),(n()(),i["ɵted"](-1,0,["Subscription"])),(n()(),i["ɵted"](-1,3,["\n  "])),(n()(),i["ɵted"](-1,null,["\n"])),(n()(),i["ɵted"](-1,null,["\n\n\n"])),(n()(),i["ɵeld"](12,0,null,null,14,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,$.b,$.a)),i["ɵdid"](13,4374528,null,0,A.a,[F.a,I.a,U.a,i.ElementRef,i.Renderer,q.a,z.a,i.NgZone,[2,k.a],[2,B.a]],null,null),(n()(),i["ɵted"](-1,1,["\n  "])),(n()(),i["ɵeld"](15,0,null,1,5,"ion-list",[],null,null,null,null,null)),i["ɵdid"](16,16384,null,0,T.a,[F.a,i.ElementRef,i.Renderer,I.a,j.m,U.a],null,null),(n()(),i["ɵted"](-1,null,["\n    "])),(n()(),i["ɵand"](16777216,null,null,1,null,t)),i["ɵdid"](19,802816,null,0,G.NgForOf,[i.ViewContainerRef,i.TemplateRef,i.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(n()(),i["ɵted"](-1,null,["\n  "])),(n()(),i["ɵted"](-1,1,["\n  "])),(n()(),i["ɵeld"](22,0,null,1,3,"ion-buttons",[["expand","full"]],null,[[null,"click"]],function(n,l,e){var t=!0;if("click"===l){t=!1!==n.component.restore()&&t}return t},null,null)),i["ɵdid"](23,16384,null,1,L.a,[F.a,i.ElementRef,i.Renderer,[2,P.a],[2,N.a]],null,null),i["ɵqud"](603979776,5,{_buttons:1}),(n()(),i["ɵted"](-1,null,["\n    Restore\n  "])),(n()(),i["ɵted"](-1,1,["\n"]))],function(n,l){n(l,19,0,l.component.products)},function(n,l){n(l,3,0,i["ɵnov"](l,4)._hidden,i["ɵnov"](l,4)._sbPadding);n(l,12,0,i["ɵnov"](l,13).statusbarPadding,i["ɵnov"](l,13)._hasRefresher)})}Object.defineProperty(l,"__esModule",{value:!0});var i=e(0),r=(e(1),e(15),e(66)),o=e(733),a=e(227),s=function(){function n(n,l,e,t,u,i){var r=this;this.navCtrl=n,this.platform=l,this.navParams=e,this.store=t,this.auth=u,this.ref=i,this.newuser=new o.a("","","","","","","",{id:""},"",{id:"",name:""},{id:"",name:""}),this.newuser=this.navParams.get("newuser"),this.sub_option=this.navParams.get("sub_option"),this.platform.ready().then(function(){r.store.verbosity=r.store.DEBUG}),this.registerProducts(),this.setupListeners(),this.store.ready(function(){r.products=r.store.products,r.ref.detectChanges()})}return n.prototype.registerProducts=function(){this.store.register({id:"surevvip",alias:"full version",type:this.store.CONSUMABLE}),this.store.register({id:"surevip",alias:"full version",type:this.store.CONSUMABLE}),this.store.refresh()},n.prototype.setupListeners=function(){var n=this;this.store.when("product").approved(function(l){return n.ref.detectChanges(),l.verify()}),this.store.when("product").verified(function(n){n.finish()})},n.prototype.purchase=function(n){var l=this;this.store.order(n).error(function(n){l.auth.showToast("error failed to purchase: "+n+" ")}).then(function(n){})},n.prototype.restore=function(){this.store.refresh()},n}(),d=function(){return function(){}}(),c=e(208),p=e(209),f=e(210),h=e(211),m=e(212),v=e(213),b=e(214),R=e(215),g=e(216),y=e(144),C=e(28),E=e(25),F=e(3),_=e(53),w=e(67),M=e(62),L=e(69),P=e(38),N=e(37),O=e(54),k=e(7),x=e(92),q=e(9),B=e(20),D=e(146),S=e(61),$=e(91),A=e(30),I=e(5),U=e(10),z=e(31),T=e(60),j=e(8),G=e(14),J=e(17),V=i["ɵcrt"]({encapsulation:2,styles:[],data:{}}),Z=i["ɵccf"]("page-subscription-ios",s,function(n){return i["ɵvid"](0,[(n()(),i["ɵeld"](0,0,null,null,1,"page-subscription-ios",[],null,null,null,u,V)),i["ɵdid"](1,49152,null,0,s,[B.a,I.a,J.a,a.a,r.a,i.ChangeDetectorRef],null,null)],null,null)},{},{},[]),H=e(24),K=e(142),Q=e(52);e.d(l,"SubscriptionIosPageModuleNgFactory",function(){return W});var W=i["ɵcmf"](d,[],function(n){return i["ɵmod"]([i["ɵmpd"](512,i.ComponentFactoryResolver,i["ɵCodegenComponentFactoryResolver"],[[8,[c.a,p.a,f.a,h.a,m.a,v.a,b.a,R.a,g.a,Z]],[3,i.ComponentFactoryResolver],i.NgModuleRef]),i["ɵmpd"](4608,G.NgLocalization,G.NgLocaleLocalization,[i.LOCALE_ID,[2,G["ɵa"]]]),i["ɵmpd"](4608,H["ɵi"],H["ɵi"],[]),i["ɵmpd"](4608,H.FormBuilder,H.FormBuilder,[]),i["ɵmpd"](512,G.CommonModule,G.CommonModule,[]),i["ɵmpd"](512,H["ɵba"],H["ɵba"],[]),i["ɵmpd"](512,H.FormsModule,H.FormsModule,[]),i["ɵmpd"](512,H.ReactiveFormsModule,H.ReactiveFormsModule,[]),i["ɵmpd"](512,K.a,K.a,[]),i["ɵmpd"](512,K.b,K.b,[]),i["ɵmpd"](512,d,d,[]),i["ɵmpd"](256,Q.a,s,[])])})},733:function(n,l,e){"use strict";e.d(l,"a",function(){return t});var t=function(){return function(n,l,e,t,u,i,r,o,a,s,d){this.id=n,this.email=l,this.firstname=e,this.lastname=t,this.referencecode=u,this.password=i,this.phone=r,this.plantype=o,this.platform=a,this.usertypes=s,this.status=d}}()}});
+webpackJsonp([22],{
+
+/***/ 734:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GameEditPageModule", function() { return GameEditPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__game_edit__ = __webpack_require__(792);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__ = __webpack_require__(371);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var GameEditPageModule = /** @class */ (function () {
+    function GameEditPageModule() {
+    }
+    GameEditPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__game_edit__["a" /* GameEditPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__game_edit__["a" /* GameEditPage */]),
+                __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__["SelectSearchableModule"]
+            ],
+        })
+    ], GameEditPageModule);
+    return GameEditPageModule;
+}());
+
+//# sourceMappingURL=game-edit.module.js.map
+
+/***/ }),
+
+/***/ 781:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Games; });
+var Games = /** @class */ (function () {
+    function Games(awayteam, country, hometeam, league, matchdate, selections, matchtime, sets, odds, id, status, hometeamscore, awayteamscore) {
+        this.awayteam = awayteam;
+        this.country = country;
+        this.hometeam = hometeam;
+        this.league = league;
+        this.matchdate = matchdate;
+        this.selections = selections;
+        this.matchtime = matchtime;
+        this.sets = sets;
+        this.odds = odds;
+        this.id = id;
+        this.status = status;
+        this.hometeamscore = hometeamscore;
+        this.awayteamscore = awayteamscore;
+    }
+    return Games;
+}());
+
+//# sourceMappingURL=Games.js.map
+
+/***/ }),
+
+/***/ 792:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GameEditPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_Games__ = __webpack_require__(781);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_games_games__ = __webpack_require__(370);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__ = __webpack_require__(371);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var GameEditPage = /** @class */ (function () {
+    function GameEditPage(gamesProvider, authProvider, loadingCtrl, navCtrl, navParams) {
+        this.gamesProvider = gamesProvider;
+        this.authProvider = authProvider;
+        this.loadingCtrl = loadingCtrl;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.game = new __WEBPACK_IMPORTED_MODULE_0__interfaces_Games__["a" /* Games */]({ id: "" }, { id: "" }, { id: "" }, { id: "" }, "", { id: "" }, "", { id: "" }, "", "", { id: "" }, 0, 0);
+        this.selectedgame = this.navParams.get("game");
+        if (this.selectedgame) {
+            this.game = this.selectedgame;
+        }
+    }
+    GameEditPage.prototype.ionViewWillEnter = function () {
+        this.Getcountries();
+        this.GetSelections();
+        this.GetSets();
+        this.GetStatus();
+    };
+    GameEditPage.prototype.Getcountries = function () {
+        var _this = this;
+        this.gamesProvider.Getcountries()
+            .subscribe(function (resp) {
+            if (resp.statusCode === 200) {
+                _this.countries = resp.data;
+            }
+            else {
+                _this.authProvider.showToast(resp.description);
+            }
+        }, function (error) {
+            _this.authProvider.showToast(error.error.error);
+        });
+    };
+    GameEditPage.prototype.onSelectSelection = function (event) {
+    };
+    GameEditPage.prototype.onSelectSets = function (event) {
+    };
+    GameEditPage.prototype.onSelectHTeam = function (event) {
+    };
+    GameEditPage.prototype.onSelectATeam = function (event) {
+    };
+    GameEditPage.prototype.onSelectStatus = function (event) {
+    };
+    GameEditPage.prototype.onSelectCountry = function (event) {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        this.game.league = null;
+        if (event.value.id) {
+            loading.present();
+            this.gamesProvider.GetLeaguesByCountryID(event.value.id)
+                .subscribe(function (resp) {
+                loading.dismiss().catch(function () { });
+                if (resp.statusCode === 200) {
+                    _this.leagues = resp.data;
+                }
+                else {
+                    _this.authProvider.showToast(resp.description);
+                }
+            }, function (error) {
+                loading.dismiss().catch(function () { });
+                _this.authProvider.showToast(error.error.error);
+            });
+        }
+    };
+    GameEditPage.prototype.onSelectLeague = function (event) {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        this.game.awayteam = null;
+        this.game.hometeam = null;
+        if (event.value.id) {
+            loading.present();
+            this.gamesProvider.getTeamsByLeagueId(event.value.id)
+                .subscribe(function (resp) {
+                loading.dismiss().catch(function () { });
+                if (resp.statusCode === 200) {
+                    _this.hometeams = resp.data;
+                    _this.awayteams = resp.data;
+                }
+                else {
+                    _this.authProvider.showToast(resp.description);
+                }
+            }, function (error) {
+                loading.dismiss().catch(function () { });
+                _this.authProvider.showToast(error.error.error);
+            });
+        }
+    };
+    GameEditPage.prototype.onSubmit = function (game) {
+        var _this = this;
+        if (game.sets) {
+            if (game.country) {
+                if (game.league) {
+                    if (game.selections) {
+                        if (game.hometeam && game.awayteam) {
+                            if (game.odds) {
+                                if (game.matchdate && game.matchtime) {
+                                    if (game.hometeam !== game.awayteam) {
+                                        if (game.hometeamscore || game.hometeamscore == 0) {
+                                            if (game.awayteamscore || game.awayteamscore == 0) {
+                                                var loading_1 = this.loadingCtrl.create({
+                                                    content: "Please wait..."
+                                                });
+                                                loading_1.present();
+                                                this.gamesProvider.updateGame(game).subscribe(function (res) {
+                                                    loading_1.dismiss().catch(function () { });
+                                                    if (res.statusCode === 200) {
+                                                        _this.navCtrl.pop();
+                                                    }
+                                                    else {
+                                                        _this.authProvider.showToast(res.description);
+                                                    }
+                                                }, function (error) {
+                                                    loading_1.dismiss().catch(function () { });
+                                                    _this.authProvider.showToast(error.error.error);
+                                                });
+                                            }
+                                            else {
+                                                this.authProvider.showToast("Away Team score input field is empty or incorrect");
+                                            }
+                                        }
+                                        else {
+                                            this.authProvider.showToast("Home score input field is empty or incorrect");
+                                        }
+                                    }
+                                    else {
+                                        this.authProvider.showToast("Home and Away Team cannot be same.");
+                                    }
+                                }
+                                else {
+                                    this.authProvider.showToast("Please, select either the Match Date or Time");
+                                }
+                            }
+                            else {
+                                this.authProvider.showToast("Odds input field is empty");
+                            }
+                        }
+                        else {
+                            this.authProvider.showToast("Please, select either Away or Home Team");
+                        }
+                    }
+                    else {
+                        this.authProvider.showToast("Please, select a Prediction");
+                    }
+                }
+                else {
+                    this.authProvider.showToast("Please, select a League");
+                }
+            }
+            else {
+                this.authProvider.showToast("Please, select a Country");
+            }
+        }
+        else {
+            this.authProvider.showToast("Please, select a Set ");
+        }
+    };
+    GameEditPage.prototype.GetSelections = function () {
+        var _this = this;
+        this.gamesProvider.getSelections()
+            .subscribe(function (resp) {
+            if (resp.statusCode === 200) {
+                _this.selections = resp.data;
+            }
+            else {
+                _this.authProvider.showToast(resp.description);
+            }
+        }, function (error) {
+            _this.authProvider.showToast(error.error.error);
+        });
+    };
+    GameEditPage.prototype.GetSets = function () {
+        var _this = this;
+        this.gamesProvider.GetSets()
+            .subscribe(function (resp) {
+            if (resp.statusCode === 200) {
+                _this.sets = resp.data;
+            }
+            else {
+                _this.authProvider.showToast(resp.description);
+            }
+        }, function (error) {
+            _this.authProvider.showToast(error.error.error);
+        });
+    };
+    GameEditPage.prototype.GetStatus = function () {
+        var _this = this;
+        this.gamesProvider.GetStatus("Game")
+            .subscribe(function (resp) {
+            if (resp.statusCode === 200) {
+                _this.statuses = resp.data;
+            }
+            else {
+                _this.authProvider.showToast(resp.description);
+            }
+        }, function (error) {
+            _this.authProvider.showToast(error.error.error);
+        });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["ViewChild"])('myselect'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__["SelectSearchableComponent"])
+    ], GameEditPage.prototype, "selectComponent", void 0);
+    GameEditPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
+            selector: 'page-game-edit',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/game-edit/game-edit.html"*/'<ion-header>\n \n  <ion-navbar>\n    <ion-title>Edit Game</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="otherForm"> \n    <ion-list>\n      <ion-item>\n        <ion-label>\n          Select The Set\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.sets" (onChange)="onSelectSets($event)" [items]="sets"\n          itemValueField="id" [canClear]="true" clearButtonText="Clear Selected" confirmButtonText="Proceed"\n          itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n      <hr ion-text margin-top margin-bottom>\n\n      <ion-item>\n        <ion-label>\n          Select The Country\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.country" (onChange)="onSelectCountry($event)"\n          [items]="countries" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n\n      <ion-item>\n        <ion-label>\n          Select The League\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.league" (onChange)="onSelectLeague($event)"\n          [items]="leagues" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n\n      <ion-item>\n        <ion-label>\n          Select The Home Team\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.hometeam" (onChange)="onSelectHTeam($event)"\n          [items]="hometeams" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n\n      <ion-item>\n        <ion-label>\n          Select The Away Team\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.awayteam" (onChange)="onSelectATeam($event)"\n          [items]="awayteams" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n\n      <hr margin-top margin-bottom>\n      <ion-item>\n        <ion-label>\n          Pick The Selection\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.selections" (onChange)="onSelectSelection($event)"\n          [items]="selections" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n\n      <hr margin-top margin-bottom>\n      <ion-item>\n        <ion-label>\n          Match Date\n        </ion-label>\n        <ion-datetime [(ngModel)]="game.matchdate" required displayFormat="YYYY-MM-DD" min="2017" max="2050-12-31">\n        </ion-datetime>\n      </ion-item>\n      <ion-item>\n        <ion-label>\n          Match Time\n        </ion-label>\n        <ion-datetime displayFormat="h:mm A" required [(ngModel)]="game.matchtime"></ion-datetime>\n      </ion-item>\n\n      <hr margin-top margin-bottom>\n      <ion-item>\n        <ion-label stacked>Odds</ion-label>\n        <ion-input type="text" required [(ngModel)]="game.odds"></ion-input>\n      </ion-item>\n\n      <hr margin-top margin-bottom>\n      <ion-item>\n        <ion-label stacked>Home Time Score</ion-label>\n        <ion-input type="number" required [(ngModel)]="game.hometeamscore"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label stacked>Away Team Score</ion-label>\n        <ion-input type="number" required [(ngModel)]="game.awayteamscore"></ion-input>\n      </ion-item>\n      \n      <hr margin-top margin-bottom>\n      <ion-item>\n        <ion-label>\n          Select The Status\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="game.status" (onChange)="onSelectStatus($event)"\n          [items]="statuses" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n    </ion-list>\n    <button ion-button block color="color2" (click)="onSubmit(game)">Submit</button>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/game-edit/game-edit.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_games_games__["a" /* GamesProvider */],
+            __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */],
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["LoadingController"],
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavParams"]])
+    ], GameEditPage);
+    return GameEditPage;
+}());
+
+//# sourceMappingURL=game-edit.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=22.js.map

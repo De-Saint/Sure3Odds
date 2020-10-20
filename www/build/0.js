@@ -1,1 +1,963 @@
-webpackJsonp([0],{700:function(l,n,e){"use strict";function u(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,null,null,3,"p",[["color","danger"],["ion-text",""]],null,null,null,null,null)),d["ɵdid"](1,16384,null,0,w.a,[E.a,d.ElementRef,d.Renderer],{color:[0,"color"]},null),(l()(),d["ɵeld"](2,0,null,null,1,"b",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["Expired"]))],function(l,n){l(n,1,0,"danger")},null)}function t(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,null,null,3,"p",[["color","secondary"],["ion-text",""]],null,null,null,null,null)),d["ɵdid"](1,16384,null,0,w.a,[E.a,d.ElementRef,d.Renderer],{color:[0,"color"]},null),(l()(),d["ɵeld"](2,0,null,null,1,"b",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["Running"]))],function(l,n){l(n,1,0,"secondary")},null)}function a(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,null,null,112,"ion-list",[],null,null,null,null,null)),d["ɵdid"](1,16384,null,0,N.a,[E.a,d.ElementRef,d.Renderer,_.a,P.m,I.a],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](3,0,null,null,0,"hr",[["class","margin-top margin-bottom"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](5,0,null,null,10,"ion-list-header",[["class","item"]],null,null,null,x.b,x.a)),d["ɵdid"](6,1097728,null,3,M.a,[q.a,E.a,d.ElementRef,d.Renderer,[2,D.a]],null,null),d["ɵqud"](335544320,23,{contentLabel:0}),d["ɵqud"](603979776,24,{_buttons:1}),d["ɵqud"](603979776,25,{_icons:1}),d["ɵdid"](10,16384,null,0,A.a,[E.a,d.Renderer,d.ElementRef,[8,null]],null,null),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](12,0,null,2,2,"h2",[["color","color2"],["ion-text",""],["text-center",""]],null,null,null,null,null)),d["ɵdid"](13,16384,null,0,w.a,[E.a,d.ElementRef,d.Renderer],{color:[0,"color"]},null),(l()(),d["ɵted"](-1,null,["My Subscription Details"])),(l()(),d["ɵted"](-1,2,["\n      "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](17,0,null,null,16,"ion-item",[["class","item item-block"],["margin-top",""]],null,null,null,x.b,x.a)),d["ɵdid"](18,1097728,null,3,M.a,[q.a,E.a,d.ElementRef,d.Renderer,[2,D.a]],null,null),d["ɵqud"](335544320,26,{contentLabel:0}),d["ɵqud"](603979776,27,{_buttons:1}),d["ɵqud"](603979776,28,{_icons:1}),d["ɵdid"](22,16384,null,0,S.a,[],null,null),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](24,0,null,2,3,"h5",[["color","dark"],["ion-text",""]],null,null,null,null,null)),d["ɵdid"](25,16384,null,0,w.a,[E.a,d.ElementRef,d.Renderer],{color:[0,"color"]},null),(l()(),d["ɵeld"](26,0,null,null,1,"b",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["Current Plan Name"])),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](29,0,null,2,3,"p",[["color","color1"],["ion-text",""]],null,null,null,null,null)),d["ɵdid"](30,16384,null,0,w.a,[E.a,d.ElementRef,d.Renderer],{color:[0,"color"]},null),(l()(),d["ɵeld"](31,0,null,null,1,"b",[],null,null,null,null,null)),(l()(),d["ɵted"](32,null,["",""])),(l()(),d["ɵted"](-1,2,["\n      "])),(l()(),d["ɵted"](-1,null,["\n\n\n      "])),(l()(),d["ɵeld"](35,0,null,null,16,"ion-item",[["class","halfItem item item-block"],["float-left",""]],null,null,null,x.b,x.a)),d["ɵdid"](36,1097728,null,3,M.a,[q.a,E.a,d.ElementRef,d.Renderer,[2,D.a]],null,null),d["ɵqud"](335544320,29,{contentLabel:0}),d["ɵqud"](603979776,30,{_buttons:1}),d["ɵqud"](603979776,31,{_icons:1}),d["ɵdid"](40,16384,null,0,S.a,[],null,null),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](42,0,null,2,3,"h5",[["color","dark"],["ion-text",""]],null,null,null,null,null)),d["ɵdid"](43,16384,null,0,w.a,[E.a,d.ElementRef,d.Renderer],{color:[0,"color"]},null),(l()(),d["ɵeld"](44,0,null,null,1,"b",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["Start Date"])),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](47,0,null,2,3,"p",[["color","color1"],["ion-text",""]],null,null,null,null,null)),d["ɵdid"](48,16384,null,0,w.a,[E.a,d.ElementRef,d.Renderer],{color:[0,"color"]},null),(l()(),d["ɵeld"](49,0,null,null,1,"b",[],null,null,null,null,null)),(l()(),d["ɵted"](50,null,["",""])),(l()(),d["ɵted"](-1,2,["\n      "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](53,0,null,null,16,"ion-item",[["class","halfItem item item-block"],["float-left",""]],null,null,null,x.b,x.a)),d["ɵdid"](54,1097728,null,3,M.a,[q.a,E.a,d.ElementRef,d.Renderer,[2,D.a]],null,null),d["ɵqud"](335544320,32,{contentLabel:0}),d["ɵqud"](603979776,33,{_buttons:1}),d["ɵqud"](603979776,34,{_icons:1}),d["ɵdid"](58,16384,null,0,S.a,[],null,null),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](60,0,null,2,3,"h5",[["color","dark"],["ion-text",""]],null,null,null,null,null)),d["ɵdid"](61,16384,null,0,w.a,[E.a,d.ElementRef,d.Renderer],{color:[0,"color"]},null),(l()(),d["ɵeld"](62,0,null,null,1,"b",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["End/Due Date"])),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](65,0,null,2,3,"p",[["color","color1"],["ion-text",""]],null,null,null,null,null)),d["ɵdid"](66,16384,null,0,w.a,[E.a,d.ElementRef,d.Renderer],{color:[0,"color"]},null),(l()(),d["ɵeld"](67,0,null,null,1,"b",[],null,null,null,null,null)),(l()(),d["ɵted"](68,null,["",""])),(l()(),d["ɵted"](-1,2,["\n      "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](71,0,null,null,17,"ion-item",[["class","halfItem item item-block"],["float-left",""]],null,null,null,x.b,x.a)),d["ɵdid"](72,1097728,null,3,M.a,[q.a,E.a,d.ElementRef,d.Renderer,[2,D.a]],null,null),d["ɵqud"](335544320,35,{contentLabel:0}),d["ɵqud"](603979776,36,{_buttons:1}),d["ɵqud"](603979776,37,{_icons:1}),d["ɵdid"](76,16384,null,0,S.a,[],null,null),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](78,0,null,2,3,"h5",[["color","dark"],["ion-text",""]],null,null,null,null,null)),d["ɵdid"](79,16384,null,0,w.a,[E.a,d.ElementRef,d.Renderer],{color:[0,"color"]},null),(l()(),d["ɵeld"](80,0,null,null,1,"b",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["Amount"])),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](83,0,null,2,4,"p",[["color","color1"],["ion-text",""]],null,null,null,null,null)),d["ɵdid"](84,16384,null,0,w.a,[E.a,d.ElementRef,d.Renderer],{color:[0,"color"]},null),(l()(),d["ɵeld"](85,0,null,null,2,"b",[],null,null,null,null,null)),(l()(),d["ɵted"](86,null,["",""])),d["ɵppd"](87,3),(l()(),d["ɵted"](-1,2,["\n      "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](90,0,null,null,17,"ion-item",[["class","halfItem item item-block"],["float-left",""]],null,null,null,x.b,x.a)),d["ɵdid"](91,1097728,null,3,M.a,[q.a,E.a,d.ElementRef,d.Renderer,[2,D.a]],null,null),d["ɵqud"](335544320,38,{contentLabel:0}),d["ɵqud"](603979776,39,{_buttons:1}),d["ɵqud"](603979776,40,{_icons:1}),d["ɵdid"](95,16384,null,0,S.a,[],null,null),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](97,0,null,2,3,"h5",[["color","dark"],["ion-text",""]],null,null,null,null,null)),d["ɵdid"](98,16384,null,0,w.a,[E.a,d.ElementRef,d.Renderer],{color:[0,"color"]},null),(l()(),d["ɵeld"](99,0,null,null,1,"b",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["Status"])),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵand"](16777216,null,2,1,null,u)),d["ɵdid"](103,16384,null,0,T.NgIf,[d.ViewContainerRef,d.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵand"](16777216,null,2,1,null,t)),d["ɵdid"](106,16384,null,0,T.NgIf,[d.ViewContainerRef,d.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),d["ɵted"](-1,2,["\n      "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](109,0,null,null,2,"button",[["block",""],["color","color2"],["ion-button",""],["type","submit"]],null,[[null,"click"]],function(l,n,e){var u=!0,t=l.component;if("click"===n){u=!1!==t.renewAccount(t.userplan)&&u}return u},L.b,L.a)),d["ɵdid"](110,1097728,null,0,U.a,[[8,""],E.a,d.ElementRef,d.Renderer],{color:[0,"color"],block:[1,"block"]},null),(l()(),d["ɵted"](-1,0,["Renew\n        Subscription"])),(l()(),d["ɵted"](-1,null,["\n        \n    "]))],function(l,n){var e=n.component;l(n,13,0,"color2");l(n,25,0,"dark");l(n,30,0,"color1");l(n,43,0,"dark");l(n,48,0,"color1");l(n,61,0,"dark");l(n,66,0,"color1");l(n,79,0,"dark");l(n,84,0,"color1");l(n,98,0,"dark");l(n,103,0,"Inactive"===e.newuser.status.name);l(n,106,0,"Active"===e.newuser.status.name);l(n,110,0,"color2","")},function(l,n){var e=n.component;l(n,32,0,e.userplan.plantype.name);l(n,50,0,e.userplan.startDate);l(n,68,0,e.userplan.endDate);l(n,86,0,d["ɵunv"](n,86,0,l(n,87,0,d["ɵnov"](n.parent,0),e.userplan.plantype.amount,"NGN","1.2-2")))})}function o(l){return d["ɵvid"](0,[d["ɵpid"](0,T.CurrencyPipe,[d.LOCALE_ID]),(l()(),d["ɵeld"](1,0,null,null,20,"ion-header",[],null,null,null,null,null)),d["ɵdid"](2,16384,null,0,V.a,[E.a,d.ElementRef,d.Renderer,[2,F.a]],null,null),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵeld"](4,0,null,null,16,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,K.b,K.a)),d["ɵdid"](5,49152,null,0,G.a,[O.a,[2,F.a],[2,Y.a],E.a,d.ElementRef,d.Renderer],null,null),(l()(),d["ɵted"](-1,3,["\n    "])),(l()(),d["ɵeld"](7,0,null,0,8,"button",[["icon-only",""],["ion-button",""],["menuToggle",""]],[[8,"hidden",0]],[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==d["ɵnov"](l,9).toggle()&&u}return u},L.b,L.a)),d["ɵdid"](8,1097728,[[1,4]],0,U.a,[[8,""],E.a,d.ElementRef,d.Renderer],null,null),d["ɵdid"](9,1064960,null,0,j.a,[B.a,[2,F.a],[2,U.a],[2,G.a]],{menuToggle:[0,"menuToggle"]},null),d["ɵdid"](10,16384,null,1,z.a,[E.a,d.ElementRef,d.Renderer,[2,H.a],[2,G.a]],null,null),d["ɵqud"](603979776,1,{_buttons:1}),(l()(),d["ɵted"](-1,0,["\n      "])),(l()(),d["ɵeld"](13,0,null,0,1,"ion-icon",[["class","goal-menu"],["role","img"]],[[2,"hide",null]],null,null,null,null)),d["ɵdid"](14,147456,null,0,J.a,[E.a,d.ElementRef,d.Renderer],null,null),(l()(),d["ɵted"](-1,0,["\n    "])),(l()(),d["ɵted"](-1,3,["\n    "])),(l()(),d["ɵeld"](17,0,null,3,2,"ion-title",[],null,null,null,W.b,W.a)),d["ɵdid"](18,49152,null,0,Z.a,[E.a,d.ElementRef,d.Renderer,[2,H.a],[2,G.a]],null,null),(l()(),d["ɵted"](-1,0,["Profile"])),(l()(),d["ɵted"](-1,3,["\n\n  "])),(l()(),d["ɵted"](-1,null,["\n"])),(l()(),d["ɵted"](-1,null,["\n\n"])),(l()(),d["ɵeld"](23,0,null,null,181,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,$.b,$.a)),d["ɵdid"](24,4374528,null,0,Q.a,[E.a,_.a,I.a,d.ElementRef,d.Renderer,O.a,X.a,d.NgZone,[2,F.a],[2,Y.a]],null,null),(l()(),d["ɵted"](-1,1,["\n  "])),(l()(),d["ɵeld"](26,0,null,1,26,"div",[["class","imgs"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](28,0,null,null,7,"button",[["class","coverCamera"],["icon-only",""],["ion-button",""]],null,null,null,L.b,L.a)),d["ɵdid"](29,278528,null,0,T.NgClass,[d.IterableDiffers,d.KeyValueDiffers,d.ElementRef,d.Renderer2],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),d["ɵpod"](30,{show:0}),d["ɵdid"](31,1097728,null,0,U.a,[[8,""],E.a,d.ElementRef,d.Renderer],null,null),(l()(),d["ɵted"](-1,0,["\n      "])),(l()(),d["ɵeld"](33,0,null,0,1,"ion-icon",[["name","md-camera"],["role","img"]],[[2,"hide",null]],null,null,null,null)),d["ɵdid"](34,147456,null,0,J.a,[E.a,d.ElementRef,d.Renderer],{name:[0,"name"]},null),(l()(),d["ɵted"](-1,0,["\n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](37,0,null,null,0,"img",[],[[8,"src",4]],null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](39,0,null,null,12,"div",[["class","imgProfile"]],null,null,null,null,null)),d["ɵdid"](40,278528,null,0,T.NgStyle,[d.KeyValueDiffers,d.ElementRef,d.Renderer2],{ngStyle:[0,"ngStyle"]},null),d["ɵpod"](41,{"background-image":0}),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](43,0,null,null,7,"button",[["class","profileCamera"],["icon-only",""],["ion-button",""]],null,null,null,L.b,L.a)),d["ɵdid"](44,278528,null,0,T.NgClass,[d.IterableDiffers,d.KeyValueDiffers,d.ElementRef,d.Renderer2],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),d["ɵpod"](45,{show:0}),d["ɵdid"](46,1097728,null,0,U.a,[[8,""],E.a,d.ElementRef,d.Renderer],null,null),(l()(),d["ɵted"](-1,0,["\n        "])),(l()(),d["ɵeld"](48,0,null,0,1,"ion-icon",[["name","md-camera"],["role","img"]],[[2,"hide",null]],null,null,null,null)),d["ɵdid"](49,147456,null,0,J.a,[E.a,d.ElementRef,d.Renderer],{name:[0,"name"]},null),(l()(),d["ɵted"](-1,0,["\n      "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵted"](-1,1,["\n\n  "])),(l()(),d["ɵted"](-1,1,["\n  "])),(l()(),d["ɵeld"](55,0,null,1,9,"div",[["class","nameAndMail"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](57,0,null,null,2,"h5",[["color","dark"],["ion-text",""]],null,null,null,null,null)),d["ɵdid"](58,16384,null,0,w.a,[E.a,d.ElementRef,d.Renderer],{color:[0,"color"]},null),(l()(),d["ɵted"](59,null,[""," ",""])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](61,0,null,null,2,"p",[["color","dark"],["ion-text",""]],null,null,null,null,null)),d["ɵdid"](62,16384,null,0,w.a,[E.a,d.ElementRef,d.Renderer],{color:[0,"color"]},null),(l()(),d["ɵted"](63,null,["",""])),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵted"](-1,1,["\n\n  "])),(l()(),d["ɵted"](-1,1,["\n  "])),(l()(),d["ɵeld"](67,0,null,1,136,"div",[["class","otherForm"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](69,0,null,null,130,"ion-list",[],null,null,null,null,null)),d["ɵdid"](70,16384,null,0,N.a,[E.a,d.ElementRef,d.Renderer,_.a,P.m,I.a],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](72,0,null,null,10,"ion-list-header",[["class","item"]],null,null,null,x.b,x.a)),d["ɵdid"](73,1097728,null,3,M.a,[q.a,E.a,d.ElementRef,d.Renderer,[2,D.a]],null,null),d["ɵqud"](335544320,2,{contentLabel:0}),d["ɵqud"](603979776,3,{_buttons:1}),d["ɵqud"](603979776,4,{_icons:1}),d["ɵdid"](77,16384,null,0,A.a,[E.a,d.Renderer,d.ElementRef,[8,null]],null,null),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](79,0,null,2,2,"h2",[["color","color2"],["ion-text",""],["text-center",""]],null,null,null,null,null)),d["ɵdid"](80,16384,null,0,w.a,[E.a,d.ElementRef,d.Renderer],{color:[0,"color"]},null),(l()(),d["ɵted"](-1,null,["My Details"])),(l()(),d["ɵted"](-1,2,["\n      "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](84,0,null,null,17,"ion-item",[["class","halfItem item item-block"],["float-left",""]],null,null,null,x.b,x.a)),d["ɵdid"](85,1097728,null,3,M.a,[q.a,E.a,d.ElementRef,d.Renderer,[2,D.a]],null,null),d["ɵqud"](335544320,5,{contentLabel:0}),d["ɵqud"](603979776,6,{_buttons:1}),d["ɵqud"](603979776,7,{_icons:1}),d["ɵdid"](89,16384,null,0,S.a,[],null,null),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](91,0,null,1,2,"ion-label",[["stacked",""]],null,null,null,null,null)),d["ɵdid"](92,16384,[[5,4]],0,ll.a,[E.a,d.ElementRef,d.Renderer,[8,null],[8,""],[8,null],[8,null]],null,null),(l()(),d["ɵted"](-1,null,["\n          First Name\n        "])),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](95,0,null,3,5,"ion-input",[["id","firstname"],["name","firstname"],["placeholder","First Name"],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,e){var u=!0;if("ngModelChange"===n){u=!1!==(l.component.newuser.firstname=e)&&u}return u},nl.b,nl.a)),d["ɵdid"](96,671744,null,0,el.NgModel,[[8,null],[8,null],[8,null],[8,null]],{name:[0,"name"],model:[1,"model"]},{update:"ngModelChange"}),d["ɵprd"](2048,null,el.NgControl,null,[el.NgModel]),d["ɵdid"](98,16384,null,0,el.NgControlStatus,[el.NgControl],null,null),d["ɵdid"](99,5423104,null,0,ul.a,[E.a,_.a,q.a,O.a,d.ElementRef,d.Renderer,[2,Q.a],[2,M.a],[2,el.NgControl],I.a],{type:[0,"type"],placeholder:[1,"placeholder"]},null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,2,["\n      "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](103,0,null,null,17,"ion-item",[["class","halfItem item item-block"],["float-left",""]],null,null,null,x.b,x.a)),d["ɵdid"](104,1097728,null,3,M.a,[q.a,E.a,d.ElementRef,d.Renderer,[2,D.a]],null,null),d["ɵqud"](335544320,8,{contentLabel:0}),d["ɵqud"](603979776,9,{_buttons:1}),d["ɵqud"](603979776,10,{_icons:1}),d["ɵdid"](108,16384,null,0,S.a,[],null,null),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](110,0,null,1,2,"ion-label",[["stacked",""]],null,null,null,null,null)),d["ɵdid"](111,16384,[[8,4]],0,ll.a,[E.a,d.ElementRef,d.Renderer,[8,null],[8,""],[8,null],[8,null]],null,null),(l()(),d["ɵted"](-1,null,["\n          Last Name\n        "])),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](114,0,null,3,5,"ion-input",[["id","lastname"],["name","lastname"],["placeholder","Last Name"],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,e){var u=!0;if("ngModelChange"===n){u=!1!==(l.component.newuser.lastname=e)&&u}return u},nl.b,nl.a)),d["ɵdid"](115,671744,null,0,el.NgModel,[[8,null],[8,null],[8,null],[8,null]],{name:[0,"name"],model:[1,"model"]},{update:"ngModelChange"}),d["ɵprd"](2048,null,el.NgControl,null,[el.NgModel]),d["ɵdid"](117,16384,null,0,el.NgControlStatus,[el.NgControl],null,null),d["ɵdid"](118,5423104,null,0,ul.a,[E.a,_.a,q.a,O.a,d.ElementRef,d.Renderer,[2,Q.a],[2,M.a],[2,el.NgControl],I.a],{type:[0,"type"],placeholder:[1,"placeholder"]},null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,2,["\n      "])),(l()(),d["ɵted"](-1,null,["\n\n      "])),(l()(),d["ɵeld"](122,0,null,null,16,"ion-item",[["class","item item-block"]],null,null,null,x.b,x.a)),d["ɵdid"](123,1097728,null,3,M.a,[q.a,E.a,d.ElementRef,d.Renderer,[2,D.a]],null,null),d["ɵqud"](335544320,11,{contentLabel:0}),d["ɵqud"](603979776,12,{_buttons:1}),d["ɵqud"](603979776,13,{_icons:1}),d["ɵdid"](127,16384,null,0,S.a,[],null,null),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](129,0,null,1,2,"ion-label",[["stacked",""]],null,null,null,null,null)),d["ɵdid"](130,16384,[[11,4]],0,ll.a,[E.a,d.ElementRef,d.Renderer,[8,null],[8,""],[8,null],[8,null]],null,null),(l()(),d["ɵted"](-1,null,["\n           Email\n        "])),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](133,0,null,3,4,"ion-input",[["id","email"],["name","email"],["placeholder","E-mail"],["type","email"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,e){var u=!0;if("ngModelChange"===n){u=!1!==(l.component.newuser.email=e)&&u}return u},nl.b,nl.a)),d["ɵdid"](134,671744,null,0,el.NgModel,[[8,null],[8,null],[8,null],[8,null]],{name:[0,"name"],model:[1,"model"]},{update:"ngModelChange"}),d["ɵprd"](2048,null,el.NgControl,null,[el.NgModel]),d["ɵdid"](136,16384,null,0,el.NgControlStatus,[el.NgControl],null,null),d["ɵdid"](137,5423104,null,0,ul.a,[E.a,_.a,q.a,O.a,d.ElementRef,d.Renderer,[2,Q.a],[2,M.a],[2,el.NgControl],I.a],{type:[0,"type"],placeholder:[1,"placeholder"]},null),(l()(),d["ɵted"](-1,2,["\n      "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](140,0,null,null,16,"ion-item",[["class","item item-block"]],null,null,null,x.b,x.a)),d["ɵdid"](141,1097728,null,3,M.a,[q.a,E.a,d.ElementRef,d.Renderer,[2,D.a]],null,null),d["ɵqud"](335544320,14,{contentLabel:0}),d["ɵqud"](603979776,15,{_buttons:1}),d["ɵqud"](603979776,16,{_icons:1}),d["ɵdid"](145,16384,null,0,S.a,[],null,null),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](147,0,null,1,2,"ion-label",[["stacked",""]],null,null,null,null,null)),d["ɵdid"](148,16384,[[14,4]],0,ll.a,[E.a,d.ElementRef,d.Renderer,[8,null],[8,""],[8,null],[8,null]],null,null),(l()(),d["ɵted"](-1,null,["\n           Phone\n        "])),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](151,0,null,3,4,"ion-input",[["id","phone"],["name","phone"],["placeholder","Phone"],["type","tel"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,e){var u=!0;if("ngModelChange"===n){u=!1!==(l.component.newuser.phone=e)&&u}return u},nl.b,nl.a)),d["ɵdid"](152,671744,null,0,el.NgModel,[[8,null],[8,null],[8,null],[8,null]],{name:[0,"name"],model:[1,"model"]},{update:"ngModelChange"}),d["ɵprd"](2048,null,el.NgControl,null,[el.NgModel]),d["ɵdid"](154,16384,null,0,el.NgControlStatus,[el.NgControl],null,null),d["ɵdid"](155,5423104,null,0,ul.a,[E.a,_.a,q.a,O.a,d.ElementRef,d.Renderer,[2,Q.a],[2,M.a],[2,el.NgControl],I.a],{type:[0,"type"],placeholder:[1,"placeholder"]},null),(l()(),d["ɵted"](-1,2,["\n      "])),(l()(),d["ɵted"](-1,null,["\n\n      "])),(l()(),d["ɵeld"](158,0,null,null,17,"ion-item",[["class","halfItem item item-block"],["float-left",""]],null,null,null,x.b,x.a)),d["ɵdid"](159,1097728,null,3,M.a,[q.a,E.a,d.ElementRef,d.Renderer,[2,D.a]],null,null),d["ɵqud"](335544320,17,{contentLabel:0}),d["ɵqud"](603979776,18,{_buttons:1}),d["ɵqud"](603979776,19,{_icons:1}),d["ɵdid"](163,16384,null,0,S.a,[],null,null),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](165,0,null,1,2,"ion-label",[["stacked",""]],null,null,null,null,null)),d["ɵdid"](166,16384,[[17,4]],0,ll.a,[E.a,d.ElementRef,d.Renderer,[8,null],[8,""],[8,null],[8,null]],null,null),(l()(),d["ɵted"](-1,null,["\n          Current Membership\n        "])),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](169,0,null,3,5,"ion-input",[["disabled",""],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,e){var u=!0;if("ngModelChange"===n){u=!1!==(l.component.newuser.usertypes.name=e)&&u}return u},nl.b,nl.a)),d["ɵdid"](170,671744,null,0,el.NgModel,[[8,null],[8,null],[8,null],[8,null]],{isDisabled:[0,"isDisabled"],model:[1,"model"]},{update:"ngModelChange"}),d["ɵprd"](2048,null,el.NgControl,null,[el.NgModel]),d["ɵdid"](172,16384,null,0,el.NgControlStatus,[el.NgControl],null,null),d["ɵdid"](173,5423104,null,0,ul.a,[E.a,_.a,q.a,O.a,d.ElementRef,d.Renderer,[2,Q.a],[2,M.a],[2,el.NgControl],I.a],{disabled:[0,"disabled"],type:[1,"type"]},null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,2,["\n      "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](177,0,null,null,17,"ion-item",[["class","halfItem item item-block"],["float-left",""]],null,null,null,x.b,x.a)),d["ɵdid"](178,1097728,null,3,M.a,[q.a,E.a,d.ElementRef,d.Renderer,[2,D.a]],null,null),d["ɵqud"](335544320,20,{contentLabel:0}),d["ɵqud"](603979776,21,{_buttons:1}),d["ɵqud"](603979776,22,{_icons:1}),d["ɵdid"](182,16384,null,0,S.a,[],null,null),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](184,0,null,1,2,"ion-label",[["stacked",""]],null,null,null,null,null)),d["ɵdid"](185,16384,[[20,4]],0,ll.a,[E.a,d.ElementRef,d.Renderer,[8,null],[8,""],[8,null],[8,null]],null,null),(l()(),d["ɵted"](-1,null,["\n          Current Status\n        "])),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](188,0,null,3,5,"ion-input",[["disabled",""],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,e){var u=!0;if("ngModelChange"===n){u=!1!==(l.component.newuser.status.name=e)&&u}return u},nl.b,nl.a)),d["ɵdid"](189,671744,null,0,el.NgModel,[[8,null],[8,null],[8,null],[8,null]],{isDisabled:[0,"isDisabled"],model:[1,"model"]},{update:"ngModelChange"}),d["ɵprd"](2048,null,el.NgControl,null,[el.NgModel]),d["ɵdid"](191,16384,null,0,el.NgControlStatus,[el.NgControl],null,null),d["ɵdid"](192,5423104,null,0,ul.a,[E.a,_.a,q.a,O.a,d.ElementRef,d.Renderer,[2,Q.a],[2,M.a],[2,el.NgControl],I.a],{disabled:[0,"disabled"],type:[1,"type"]},null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,2,["\n      "])),(l()(),d["ɵted"](-1,null,["\n\n      "])),(l()(),d["ɵeld"](196,0,null,null,2,"button",[["block",""],["color","color2"],["ion-button",""],["margin-bottom",""],["type","submit"]],null,[[null,"click"]],function(l,n,e){var u=!0,t=l.component;if("click"===n){u=!1!==t.updateAccount(t.newuser)&&u}return u},L.b,L.a)),d["ɵdid"](197,1097728,null,0,U.a,[[8,""],E.a,d.ElementRef,d.Renderer],{color:[0,"color"],block:[1,"block"]},null),(l()(),d["ɵted"](-1,0,["Update\n        Account\n      "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵand"](16777216,null,null,1,null,a)),d["ɵdid"](202,16384,null,0,T.NgIf,[d.ViewContainerRef,d.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵted"](-1,1,["\n"]))],function(l,n){var e=n.component;l(n,9,0,"");l(n,29,0,"coverCamera",l(n,30,0,0==e.flag));l(n,34,0,"md-camera");l(n,40,0,l(n,41,0,"url("+e.img2+")"));l(n,44,0,"profileCamera",l(n,45,0,0==e.flag));l(n,49,0,"md-camera");l(n,58,0,"dark");l(n,62,0,"dark");l(n,80,0,"color2");l(n,96,0,"firstname",e.newuser.firstname);l(n,99,0,"text","First Name");l(n,115,0,"lastname",e.newuser.lastname);l(n,118,0,"text","Last Name");l(n,134,0,"email",e.newuser.email);l(n,137,0,"email","E-mail");l(n,152,0,"phone",e.newuser.phone);l(n,155,0,"tel","Phone");l(n,170,0,"",e.newuser.usertypes.name);l(n,173,0,"","text");l(n,189,0,"",e.newuser.status.name);l(n,192,0,"","text");l(n,197,0,"color2","");l(n,202,0,e.userplan)},function(l,n){var e=n.component;l(n,4,0,d["ɵnov"](n,5)._hidden,d["ɵnov"](n,5)._sbPadding);l(n,7,0,d["ɵnov"](n,9).isHidden);l(n,13,0,d["ɵnov"](n,14)._hidden);l(n,23,0,d["ɵnov"](n,24).statusbarPadding,d["ɵnov"](n,24)._hasRefresher);l(n,33,0,d["ɵnov"](n,34)._hidden);l(n,37,0,d["ɵinlineInterpolate"](1,"",e.img1,""));l(n,48,0,d["ɵnov"](n,49)._hidden);l(n,59,0,e.newuser.firstname,e.newuser.lastname);l(n,63,0,null==e.newuser?null:e.newuser.email);l(n,95,0,d["ɵnov"](n,98).ngClassUntouched,d["ɵnov"](n,98).ngClassTouched,d["ɵnov"](n,98).ngClassPristine,d["ɵnov"](n,98).ngClassDirty,d["ɵnov"](n,98).ngClassValid,d["ɵnov"](n,98).ngClassInvalid,d["ɵnov"](n,98).ngClassPending);l(n,114,0,d["ɵnov"](n,117).ngClassUntouched,d["ɵnov"](n,117).ngClassTouched,d["ɵnov"](n,117).ngClassPristine,d["ɵnov"](n,117).ngClassDirty,d["ɵnov"](n,117).ngClassValid,d["ɵnov"](n,117).ngClassInvalid,d["ɵnov"](n,117).ngClassPending);l(n,133,0,d["ɵnov"](n,136).ngClassUntouched,d["ɵnov"](n,136).ngClassTouched,d["ɵnov"](n,136).ngClassPristine,d["ɵnov"](n,136).ngClassDirty,d["ɵnov"](n,136).ngClassValid,d["ɵnov"](n,136).ngClassInvalid,d["ɵnov"](n,136).ngClassPending);l(n,151,0,d["ɵnov"](n,154).ngClassUntouched,d["ɵnov"](n,154).ngClassTouched,d["ɵnov"](n,154).ngClassPristine,d["ɵnov"](n,154).ngClassDirty,d["ɵnov"](n,154).ngClassValid,d["ɵnov"](n,154).ngClassInvalid,d["ɵnov"](n,154).ngClassPending);l(n,169,0,d["ɵnov"](n,172).ngClassUntouched,d["ɵnov"](n,172).ngClassTouched,d["ɵnov"](n,172).ngClassPristine,d["ɵnov"](n,172).ngClassDirty,d["ɵnov"](n,172).ngClassValid,d["ɵnov"](n,172).ngClassInvalid,d["ɵnov"](n,172).ngClassPending);l(n,188,0,d["ɵnov"](n,191).ngClassUntouched,d["ɵnov"](n,191).ngClassTouched,d["ɵnov"](n,191).ngClassPristine,d["ɵnov"](n,191).ngClassDirty,d["ɵnov"](n,191).ngClassValid,d["ɵnov"](n,191).ngClassInvalid,d["ɵnov"](n,191).ngClassPending)})}Object.defineProperty(n,"__esModule",{value:!0});var d=e(0),i=(e(1),e(15),e(741)),r=e(733),s=e(66),c=function(){function l(l,n,e,u,t,a){this.navCtrl=l,this.alertCtrl=n,this.authProvider=e,this.loadingCtrl=u,this.pltform=t,this.actionSheetCtrl=a,this.flag=!0,this.img1="assets/imgs/profileCover.png",this.img2="/assets/imgs/appicon.png",this.newuser=new r.a("","","","","","","",{id:""},"",{id:"",name:""},{id:"",name:""}),this.userplan=new i.a("",{id:"",name:"",amount:""},"",""),this.channels=["card"],this.random_id=Math.floor(Date.now()/1e3)}return l.prototype.ionViewWillEnter=function(){this.GetUserDeta()},l.prototype.GetUserDeta=function(){var l=this,n=this.loadingCtrl.create({content:"Please wait..."});n.present(),this.authProvider.GetUserDeta().subscribe(function(e){n.dismiss().catch(function(){}),200==e.statusCode?(l.userplan=e.data.planData,l.newuser=e.data.userData):l.authProvider.showToast(e.description)},function(e){n.dismiss().catch(function(){}),l.authProvider.showToast(e.error.description)})},l.prototype.updateAccount=function(l){var n=this;if(l){var e=this.loadingCtrl.create({content:"Please wait..."});e.present(),this.authProvider.updateUser(l).subscribe(function(l){e.dismiss().catch(function(){}),200===l.statusCode?n.GetUserDeta():n.authProvider.showToast(l.description)},function(l){e.dismiss().catch(function(){}),n.authProvider.showToast(l.error.error)})}else this.authProvider.showToast("Please, check something is wrong.")},l.prototype.renewAccount=function(l){var n=this;this.alertCtrl.create({title:"Update Plan",message:"You are about to update <b> your subscription plan</b> <br/> to "+l.plantype.name+". <br/><br/>If <b>"+l.plantype.name+"</b> is not the plan you want to update to, you can change it on the subscription screen. <br/><br/>This action is irreversible.",buttons:[{text:"Cancel",handler:function(){}},{text:"Proceed",handler:function(){n.newuser.plantype=n.userplan.plantype,n.pltform.is("ios")?n.onIOSSubscription():n.pltform.is("android")&&n.onAndroidSubscription()}}]}).present()},l.prototype.onIOSSubscription=function(){this.navCtrl.push("SubscriptionIosPage",{newuser:this.newuser,sub_option:"renewal"})},l.prototype.onAndroidSubscription=function(){this.navCtrl.push("SubscriptionAndroidPage",{newuser:this.newuser,sub_option:"renewal"})},l}(),m=e(736),p=function(){return function(){}}(),f=e(208),g=e(209),h=e(210),b=e(211),v=e(212),R=e(213),C=e(214),y=e(215),k=e(216),w=e(68),E=e(3),N=e(60),_=e(5),P=e(8),I=e(10),x=e(144),M=e(28),q=e(25),D=e(53),A=e(151),S=e(67),T=e(14),L=e(41),U=e(26),V=e(54),F=e(7),K=e(92),G=e(37),O=e(9),Y=e(20),j=e(94),B=e(36),z=e(69),H=e(38),J=e(34),W=e(146),Z=e(61),$=e(91),Q=e(30),X=e(31),ll=e(62),nl=e(732),el=e(24),ul=e(217),tl=e(93),al=e(145),ol=e(147),dl=d["ɵcrt"]({encapsulation:2,styles:[],data:{}}),il=d["ɵccf"]("page-profile",c,function(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,null,null,1,"page-profile",[],null,null,null,o,dl)),d["ɵdid"](1,49152,null,0,c,[Y.a,tl.a,s.a,al.a,_.a,ol.a],null,null)],null,null)},{},{},[]),rl=e(142),sl=e(52);e.d(n,"ProfilePageModuleNgFactory",function(){return cl});var cl=d["ɵcmf"](p,[],function(l){return d["ɵmod"]([d["ɵmpd"](512,d.ComponentFactoryResolver,d["ɵCodegenComponentFactoryResolver"],[[8,[f.a,g.a,h.a,b.a,v.a,R.a,C.a,y.a,k.a,il]],[3,d.ComponentFactoryResolver],d.NgModuleRef]),d["ɵmpd"](4608,T.NgLocalization,T.NgLocaleLocalization,[d.LOCALE_ID,[2,T["ɵa"]]]),d["ɵmpd"](4608,el["ɵi"],el["ɵi"],[]),d["ɵmpd"](4608,el.FormBuilder,el.FormBuilder,[]),d["ɵmpd"](512,T.CommonModule,T.CommonModule,[]),d["ɵmpd"](512,el["ɵba"],el["ɵba"],[]),d["ɵmpd"](512,el.FormsModule,el.FormsModule,[]),d["ɵmpd"](512,el.ReactiveFormsModule,el.ReactiveFormsModule,[]),d["ɵmpd"](512,rl.a,rl.a,[]),d["ɵmpd"](512,rl.b,rl.b,[]),d["ɵmpd"](512,m.b,m.b,[]),d["ɵmpd"](512,p,p,[]),d["ɵmpd"](256,sl.a,c,[])])})},732:function(l,n,e){"use strict";function u(l){return i["ɵvid"](0,[(l()(),i["ɵeld"](0,0,[[1,0],["textInput",1]],null,1,"input",[["class","text-input"],["dir","auto"]],[[8,"type",0],[1,"aria-labelledby",0],[1,"min",0],[1,"max",0],[1,"step",0],[1,"autocomplete",0],[1,"autocorrect",0],[8,"placeholder",0],[8,"disabled",0],[8,"readOnly",0]],[[null,"input"],[null,"blur"],[null,"focus"],[null,"keydown"]],function(l,n,e){var u=!0,t=l.component;if("input"===n){u=!1!==t.onInput(e)&&u}if("blur"===n){u=!1!==t.onBlur(e)&&u}if("focus"===n){u=!1!==t.onFocus(e)&&u}if("keydown"===n){u=!1!==t.onKeydown(e)&&u}return u},null,null)),i["ɵdid"](1,278528,null,0,r.NgClass,[i.IterableDiffers,i.KeyValueDiffers,i.ElementRef,i.Renderer2],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null)],function(l,n){l(n,1,0,"text-input","text-input-"+n.component._mode)},function(l,n){var e=n.component;l(n,0,0,e._type,e._labelId,e.min,e.max,e.step,e.autocomplete,e.autocorrect,e.placeholder,e._disabled,e._readonly)})}function t(l){return i["ɵvid"](0,[(l()(),i["ɵeld"](0,0,[[1,0],["textInput",1]],null,1,"textarea",[["class","text-input"]],[[1,"aria-labelledby",0],[1,"autocomplete",0],[1,"autocorrect",0],[8,"placeholder",0],[8,"disabled",0],[8,"readOnly",0]],[[null,"input"],[null,"blur"],[null,"focus"],[null,"keydown"]],function(l,n,e){var u=!0,t=l.component;if("input"===n){u=!1!==t.onInput(e)&&u}if("blur"===n){u=!1!==t.onBlur(e)&&u}if("focus"===n){u=!1!==t.onFocus(e)&&u}if("keydown"===n){u=!1!==t.onKeydown(e)&&u}return u},null,null)),i["ɵdid"](1,278528,null,0,r.NgClass,[i.IterableDiffers,i.KeyValueDiffers,i.ElementRef,i.Renderer2],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null)],function(l,n){l(n,1,0,"text-input","text-input-"+n.component._mode)},function(l,n){var e=n.component;l(n,0,0,e._labelId,e.autocomplete,e.autocorrect,e.placeholder,e._disabled,e._readonly)})}function a(l){return i["ɵvid"](0,[(l()(),i["ɵeld"](0,0,null,null,1,"button",[["class","text-input-clear-icon"],["clear",""],["ion-button",""],["tabindex","-1"],["type","button"]],null,[[null,"click"],[null,"mousedown"]],function(l,n,e){var u=!0,t=l.component;if("click"===n){u=!1!==t.clearTextInput(e)&&u}if("mousedown"===n){u=!1!==t.clearTextInput(e)&&u}return u},s.b,s.a)),i["ɵdid"](1,1097728,null,0,c.a,[[8,""],m.a,i.ElementRef,i.Renderer],{clear:[0,"clear"]},null)],function(l,n){l(n,1,0,"")},null)}function o(l){return i["ɵvid"](0,[(l()(),i["ɵeld"](0,0,null,null,0,"div",[["class","input-cover"]],null,[[null,"touchstart"],[null,"touchend"],[null,"mousedown"],[null,"mouseup"]],function(l,n,e){var u=!0,t=l.component;if("touchstart"===n){u=!1!==t._pointerStart(e)&&u}if("touchend"===n){u=!1!==t._pointerEnd(e)&&u}if("mousedown"===n){u=!1!==t._pointerStart(e)&&u}if("mouseup"===n){u=!1!==t._pointerEnd(e)&&u}return u},null,null))],null,null)}function d(l){return i["ɵvid"](2,[i["ɵqud"](671088640,1,{_native:0}),(l()(),i["ɵand"](16777216,null,null,1,null,u)),i["ɵdid"](2,16384,null,0,r.NgIf,[i.ViewContainerRef,i.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),i["ɵand"](16777216,null,null,1,null,t)),i["ɵdid"](4,16384,null,0,r.NgIf,[i.ViewContainerRef,i.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),i["ɵand"](16777216,null,null,1,null,a)),i["ɵdid"](6,16384,null,0,r.NgIf,[i.ViewContainerRef,i.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),i["ɵand"](16777216,null,null,1,null,o)),i["ɵdid"](8,16384,null,0,r.NgIf,[i.ViewContainerRef,i.TemplateRef],{ngIf:[0,"ngIf"]},null)],function(l,n){var e=n.component;l(n,2,0,!e._isTextarea);l(n,4,0,e._isTextarea);l(n,6,0,e._clearInput);l(n,8,0,e._useAssist)},null)}e.d(n,"a",function(){return p}),n.b=d;var i=e(0),r=e(14),s=e(41),c=e(26),m=e(3),p=(e(5),e(25),e(10),i["ɵcrt"]({encapsulation:2,styles:[],data:{}}))},733:function(l,n,e){"use strict";e.d(n,"a",function(){return u});var u=function(){return function(l,n,e,u,t,a,o,d,i,r,s){this.id=l,this.email=n,this.firstname=e,this.lastname=u,this.referencecode=t,this.password=a,this.phone=o,this.plantype=d,this.platform=i,this.usertypes=r,this.status=s}}()},736:function(l,n,e){"use strict";e.d(n,"a",function(){return a}),e.d(n,"b",function(){return o});var u=e(1),t=e(0);var a=function(){function l(){this.close=new t.EventEmitter,this.callback=new t.EventEmitter,this.isPaying=!1,this.setUp()}return l.prototype.pay=function(){if(this.setUp(),this.checkInput()){window.PaystackPop.setup(this.paystackOptions).openIframe(),this.isPaying=!0}},l.prototype.checkInput=function(){return this.key?this.email?this.amount?this.ref?!!this.callback.observers.length||console.error("ANGULAR-PAYSTACK: Insert a callback output like so (callback)='PaymentComplete($event)' to check payment status"):console.error("ANGULAR-PAYSTACK: Paystack ref cannot be empty"):console.error("ANGULAR-PAYSTACK: Paystack amount cannot be empty"):console.error("ANGULAR-PAYSTACK: Paystack email cannot be empty"):console.error("ANGULAR-PAYSTACK: Paystack key cannot be empty")},l.prototype.setUp=function(){var l=this;this.paystackOptions={key:this.key,email:this.email,amount:this.amount,ref:this.ref,metadata:this.metadata||{},currency:this.currency||"NGN",plan:this.plan||"",quantity:this.quantity||"",subaccount:this.subaccount||"",channels:this.channels,transaction_charge:this.transaction_charge||0,bearer:this.bearer||"",callback:function(n){l.isPaying=!1,l.callback.emit(n)},onClose:function(){l.isPaying=!1,l.close.emit()}}},l.prototype.loadScript=function(){return new Promise(function(l){if(window.PaystackPop&&"function"==typeof window.PaystackPop.setup)l();else{var n=window.document.createElement("script");window.document.head.appendChild(n);var e=function(){n.removeEventListener("load",e),l()};n.addEventListener("load",e),n.setAttribute("src","https://js.paystack.co/v1/inline.js")}})},l.prototype.buttonClick=function(){return Object(u.__awaiter)(this,void 0,void 0,function(){return Object(u.__generator)(this,function(l){switch(l.label){case 0:return this.isPaying?[2]:[4,this.loadScript()];case 1:return l.sent(),this.pay(),[2]}})})},l}();var o=function(){return function(){}}()},741:function(l,n,e){"use strict";e.d(n,"a",function(){return u});var u=function(){return function(l,n,e,u){this.id=l,this.plantype=n,this.startDate=e,this.endDate=u}}()}});
+webpackJsonp([0],{
+
+/***/ 748:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfilePageModule", function() { return ProfilePageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile__ = __webpack_require__(809);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular4_paystack__ = __webpack_require__(784);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var ProfilePageModule = /** @class */ (function () {
+    function ProfilePageModule() {
+    }
+    ProfilePageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__profile__["a" /* ProfilePage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__profile__["a" /* ProfilePage */]),
+                __WEBPACK_IMPORTED_MODULE_3_angular4_paystack__["a" /* Angular4PaystackModule */]
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"], __WEBPACK_IMPORTED_MODULE_0__angular_core__["NO_ERRORS_SCHEMA"]]
+        })
+    ], ProfilePageModule);
+    return ProfilePageModule;
+}());
+
+//# sourceMappingURL=profile.module.js.map
+
+/***/ }),
+
+/***/ 779:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewUsers; });
+var NewUsers = /** @class */ (function () {
+    function NewUsers(id, email, firstname, lastname, referencecode, password, phone, plantype, platform, usertypes, status) {
+        this.id = id;
+        this.email = email;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.referencecode = referencecode;
+        this.password = password;
+        this.phone = phone;
+        this.plantype = plantype;
+        this.platform = platform;
+        this.usertypes = usertypes;
+        this.status = status;
+    }
+    return NewUsers;
+}());
+
+//# sourceMappingURL=NewUser.js.map
+
+/***/ }),
+
+/***/ 783:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Plans; });
+var Plans = /** @class */ (function () {
+    function Plans(id, plantype, startDate, endDate) {
+        this.id = id;
+        this.plantype = plantype;
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
+    return Plans;
+}());
+
+//# sourceMappingURL=Plans.js.map
+
+/***/ }),
+
+/***/ 784:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export Angular4PaystackComponent */
+/* unused harmony export Angular4PaystackDirective */
+/* unused harmony export Angular4PaystackEmbed */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Angular4PaystackModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(45);
+
+
+
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * @record
+ */
+function MyWindow() { }
+if (false) {
+    /** @type {?} */
+    MyWindow.prototype.PaystackPop;
+}
+var Angular4PaystackComponent = /** @class */ (function () {
+    function Angular4PaystackComponent() {
+        this.paymentInit = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
+        this.close = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
+        this.callback = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
+        this.isPaying = false;
+    }
+    /**
+     * @return {?}
+     */
+    Angular4PaystackComponent.prototype.pay = /**
+     * @return {?}
+     */
+    function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            var payment;
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __generator */])(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!this.checkInput()) {
+                            return [2 /*return*/];
+                        }
+                        return [4 /*yield*/, this.loadScript()];
+                    case 1:
+                        _a.sent();
+                        this.setUp();
+                        if (this.isPaying) {
+                            return [2 /*return*/];
+                        }
+                        if (this.paymentInit.observers.length) {
+                            this.paymentInit.emit();
+                        }
+                        payment = window.PaystackPop.setup(this.paystackOptions);
+                        payment.openIframe();
+                        this.isPaying = true;
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackComponent.prototype.checkInput = /**
+     * @return {?}
+     */
+    function () {
+        if (!this.key) {
+            return console.error('ANGULAR-PAYSTACK: Paystack key cannot be empty');
+        }
+        if (!this.email) {
+            return console.error('ANGULAR-PAYSTACK: Paystack email cannot be empty');
+        }
+        if (!this.amount) {
+            return console.error('ANGULAR-PAYSTACK: Paystack amount cannot be empty');
+        }
+        if (!this.ref) {
+            return console.error('ANGULAR-PAYSTACK: Paystack ref cannot be empty');
+        }
+        if (!this.callback.observers.length) {
+            return console.error("ANGULAR-PAYSTACK: Insert a callback output like so (callback)='PaymentComplete($event)' to check payment status");
+        }
+        return true;
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackComponent.prototype.setUp = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        this.paystackOptions = {
+            key: this.key,
+            email: this.email,
+            amount: this.amount,
+            ref: this.ref,
+            metadata: this.metadata || {},
+            currency: this.currency || 'NGN',
+            plan: this.plan || '',
+            channels: this.channels,
+            quantity: this.quantity || '',
+            subaccount: this.subaccount || '',
+            transaction_charge: this.transaction_charge || 0,
+            bearer: this.bearer || '',
+            callback: (/**
+             * @param {?} res
+             * @return {?}
+             */
+            function (res) {
+                _this.isPaying = false;
+                _this.callback.emit(res);
+            }),
+            onClose: (/**
+             * @return {?}
+             */
+            function () {
+                _this.isPaying = false;
+                _this.close.emit();
+            }),
+        };
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackComponent.prototype.loadScript = /**
+     * @return {?}
+     */
+    function () {
+        return new Promise((/**
+         * @param {?} resolve
+         * @return {?}
+         */
+        function (resolve) {
+            if (window.PaystackPop && typeof window.PaystackPop.setup === 'function') {
+                resolve();
+                return;
+            }
+            /** @type {?} */
+            var script = window.document.createElement('script');
+            window.document.head.appendChild(script);
+            /** @type {?} */
+            var onLoadFunc = (/**
+             * @return {?}
+             */
+            function () {
+                script.removeEventListener('load', onLoadFunc);
+                resolve();
+            });
+            script.addEventListener('load', onLoadFunc);
+            script.setAttribute('src', 'https://js.paystack.co/v1/inline.js');
+        }));
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackComponent.prototype.ngOnChanges = /**
+     * @return {?}
+     */
+    function () {
+        this.setUp();
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackComponent.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+        if (this.text) {
+            console.error('Paystack Text input is deprecated. Add text into textnode like so <angular4-paystack>Pay With Paystack</angular4-paystack>');
+        }
+    };
+    Angular4PaystackComponent.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"], args: [{
+                    selector: 'angular4-paystack',
+                    template: "<button [ngClass]=\"class\" [ngStyle]=\"style\" (click)=\"pay()\">{{text}}<ng-content></ng-content></button>"
+                }] }
+    ];
+    /** @nocollapse */
+    Angular4PaystackComponent.ctorParameters = function () { return []; };
+    Angular4PaystackComponent.propDecorators = {
+        text: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        key: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        email: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        amount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        metadata: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        ref: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        currency: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        plan: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        quantity: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        channels: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        subaccount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        transaction_charge: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        bearer: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        class: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        style: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        paymentInit: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] }],
+        close: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] }],
+        callback: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] }]
+    };
+    return Angular4PaystackComponent;
+}());
+if (false) {
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.text;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.key;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.email;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.amount;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.metadata;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.ref;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.currency;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.plan;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.quantity;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.channels;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.subaccount;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.transaction_charge;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.bearer;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.class;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.style;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.paymentInit;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.close;
+    /** @type {?} */
+    Angular4PaystackComponent.prototype.callback;
+    /**
+     * @type {?}
+     * @private
+     */
+    Angular4PaystackComponent.prototype.paystackOptions;
+    /**
+     * @type {?}
+     * @private
+     */
+    Angular4PaystackComponent.prototype.isPaying;
+}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * @record
+ */
+function MyWindow$1() { }
+if (false) {
+    /** @type {?} */
+    MyWindow$1.prototype.PaystackPop;
+}
+var Angular4PaystackDirective = /** @class */ (function () {
+    function Angular4PaystackDirective() {
+        this.close = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
+        this.callback = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
+        this.isPaying = false;
+        this.setUp();
+    }
+    /**
+     * @return {?}
+     */
+    Angular4PaystackDirective.prototype.pay = /**
+     * @return {?}
+     */
+    function () {
+        this.setUp();
+        if (!this.checkInput()) {
+            return;
+        }
+        /** @type {?} */
+        var payment = window.PaystackPop.setup(this.paystackOptions);
+        payment.openIframe();
+        this.isPaying = true;
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackDirective.prototype.checkInput = /**
+     * @return {?}
+     */
+    function () {
+        if (!this.key) {
+            return console.error('ANGULAR-PAYSTACK: Paystack key cannot be empty');
+        }
+        if (!this.email) {
+            return console.error('ANGULAR-PAYSTACK: Paystack email cannot be empty');
+        }
+        if (!this.amount) {
+            return console.error('ANGULAR-PAYSTACK: Paystack amount cannot be empty');
+        }
+        if (!this.ref) {
+            return console.error('ANGULAR-PAYSTACK: Paystack ref cannot be empty');
+        }
+        if (!this.callback.observers.length) {
+            return console.error("ANGULAR-PAYSTACK: Insert a callback output like so (callback)='PaymentComplete($event)' to check payment status");
+        }
+        return true;
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackDirective.prototype.setUp = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        this.paystackOptions = {
+            key: this.key,
+            email: this.email,
+            amount: this.amount,
+            ref: this.ref,
+            metadata: this.metadata || {},
+            currency: this.currency || 'NGN',
+            plan: this.plan || '',
+            quantity: this.quantity || '',
+            subaccount: this.subaccount || '',
+            channels: this.channels,
+            transaction_charge: this.transaction_charge || 0,
+            bearer: this.bearer || '',
+            callback: (/**
+             * @param {?} res
+             * @return {?}
+             */
+            function (res) {
+                _this.isPaying = false;
+                _this.callback.emit(res);
+            }),
+            onClose: (/**
+             * @return {?}
+             */
+            function () {
+                _this.isPaying = false;
+                _this.close.emit();
+            })
+        };
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackDirective.prototype.loadScript = /**
+     * @return {?}
+     */
+    function () {
+        return new Promise((/**
+         * @param {?} resolve
+         * @return {?}
+         */
+        function (resolve) {
+            if (window.PaystackPop && typeof window.PaystackPop.setup === 'function') {
+                resolve();
+                return;
+            }
+            /** @type {?} */
+            var script = window.document.createElement('script');
+            window.document.head.appendChild(script);
+            /** @type {?} */
+            var onLoadFunc = (/**
+             * @return {?}
+             */
+            function () {
+                script.removeEventListener('load', onLoadFunc);
+                resolve();
+            });
+            script.addEventListener('load', onLoadFunc);
+            script.setAttribute('src', 'https://js.paystack.co/v1/inline.js');
+        }));
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackDirective.prototype.buttonClick = /**
+     * @return {?}
+     */
+    function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __generator */])(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (this.isPaying) {
+                            return [2 /*return*/];
+                        }
+                        return [4 /*yield*/, this.loadScript()];
+                    case 1:
+                        _a.sent();
+                        this.pay();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    Angular4PaystackDirective.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Directive"], args: [{
+                    selector: '[angular4-paystack]',
+                },] }
+    ];
+    /** @nocollapse */
+    Angular4PaystackDirective.ctorParameters = function () { return []; };
+    Angular4PaystackDirective.propDecorators = {
+        text: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        key: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        email: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        amount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        metadata: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        ref: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        currency: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        plan: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        quantity: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        subaccount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        channels: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        transaction_charge: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        bearer: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        class: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        style: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        close: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] }],
+        callback: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] }],
+        buttonClick: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["HostListener"], args: ['click',] }]
+    };
+    return Angular4PaystackDirective;
+}());
+if (false) {
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.text;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.key;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.email;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.amount;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.metadata;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.ref;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.currency;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.plan;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.quantity;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.subaccount;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.channels;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.transaction_charge;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.bearer;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.class;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.style;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.close;
+    /** @type {?} */
+    Angular4PaystackDirective.prototype.callback;
+    /**
+     * @type {?}
+     * @private
+     */
+    Angular4PaystackDirective.prototype.paystackOptions;
+    /**
+     * @type {?}
+     * @private
+     */
+    Angular4PaystackDirective.prototype.isPaying;
+}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * @record
+ */
+function MyWindow$2() { }
+if (false) {
+    /** @type {?} */
+    MyWindow$2.prototype.PaystackPop;
+}
+var Angular4PaystackEmbed = /** @class */ (function () {
+    function Angular4PaystackEmbed() {
+        this.paymentInit = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
+        this.close = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
+        this.callback = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
+    }
+    /**
+     * @return {?}
+     */
+    Angular4PaystackEmbed.prototype.pay = /**
+     * @return {?}
+     */
+    function () {
+        if (!this.checkInput()) {
+            return;
+        }
+        this.setUp();
+        if (this.paymentInit.observers.length) {
+            this.paymentInit.emit();
+        }
+        window.PaystackPop.setup(this.paystackOptions);
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackEmbed.prototype.checkInput = /**
+     * @return {?}
+     */
+    function () {
+        if (!this.key) {
+            return console.error('ANGULAR-PAYSTACK: Paystack key cannot be empty');
+        }
+        if (!this.email) {
+            return console.error('ANGULAR-PAYSTACK: Paystack email cannot be empty');
+        }
+        if (!this.amount) {
+            return console.error('ANGULAR-PAYSTACK: Paystack amount cannot be empty');
+        }
+        if (!this.ref) {
+            return console.error('ANGULAR-PAYSTACK: Paystack ref cannot be empty');
+        }
+        if (!this.callback.observers.length) {
+            return console.error("\n        ANGULAR-PAYSTACK: Insert a callback output like so (callback)='PaymentComplete($event)' to check payment status\n      ");
+        }
+        return true;
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackEmbed.prototype.setUp = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        this.paystackOptions = {
+            container: 'paystackEmbedContainer',
+            key: this.key,
+            email: this.email,
+            amount: this.amount,
+            ref: this.ref,
+            metadata: this.metadata || {},
+            currency: this.currency || 'NGN',
+            plan: this.plan || '',
+            quantity: this.quantity || '',
+            subaccount: this.subaccount || '',
+            channels: this.channels,
+            transaction_charge: this.transaction_charge || 0,
+            bearer: this.bearer || '',
+            callback: (/**
+             * @param {?} res
+             * @return {?}
+             */
+            function (res) { return _this.callback.emit(res); }),
+            onClose: (/**
+             * @return {?}
+             */
+            function () { return _this.close && _this.close.emit(); }),
+        };
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackEmbed.prototype.loadScript = /**
+     * @return {?}
+     */
+    function () {
+        return new Promise((/**
+         * @param {?} resolve
+         * @return {?}
+         */
+        function (resolve) {
+            if (window.PaystackPop && typeof window.PaystackPop.setup === 'function') {
+                resolve();
+                return;
+            }
+            /** @type {?} */
+            var script = window.document.createElement('script');
+            window.document.head.appendChild(script);
+            /** @type {?} */
+            var onLoadFunc = (/**
+             * @return {?}
+             */
+            function () {
+                script.removeEventListener('load', onLoadFunc);
+                resolve();
+            });
+            script.addEventListener('load', onLoadFunc);
+            script.setAttribute('src', 'https://js.paystack.co/v1/inline.js');
+        }));
+    };
+    /**
+     * @return {?}
+     */
+    Angular4PaystackEmbed.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __awaiter */])(this, void 0, void 0, function () {
+            return Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __generator */])(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.loadScript()];
+                    case 1:
+                        _a.sent();
+                        if (this.text) {
+                            console.error('ANGULAR-PAYSTACK: Paystack Text input is deprecated. Use this instead <angular4-paystack>Pay With Paystack</angular4-paystack>');
+                        }
+                        this.pay();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    Angular4PaystackEmbed.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"], args: [{
+                    selector: 'angular4-paystack-embed',
+                    changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ChangeDetectionStrategy"].OnPush,
+                    template: "<div id=\"paystackEmbedContainer\"></div>"
+                }] }
+    ];
+    /** @nocollapse */
+    Angular4PaystackEmbed.ctorParameters = function () { return []; };
+    Angular4PaystackEmbed.propDecorators = {
+        text: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        key: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        email: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        amount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        metadata: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        channels: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        ref: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        currency: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        plan: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        quantity: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        subaccount: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        transaction_charge: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        bearer: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] }],
+        paymentInit: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] }],
+        close: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] }],
+        callback: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"] }]
+    };
+    return Angular4PaystackEmbed;
+}());
+if (false) {
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.text;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.key;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.email;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.amount;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.metadata;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.channels;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.ref;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.currency;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.plan;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.quantity;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.subaccount;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.transaction_charge;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.bearer;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.paymentInit;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.close;
+    /** @type {?} */
+    Angular4PaystackEmbed.prototype.callback;
+    /**
+     * @type {?}
+     * @private
+     */
+    Angular4PaystackEmbed.prototype.paystackOptions;
+}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+var Angular4PaystackModule = /** @class */ (function () {
+    function Angular4PaystackModule() {
+    }
+    Angular4PaystackModule.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"], args: [{
+                    imports: [__WEBPACK_IMPORTED_MODULE_2__angular_common__["CommonModule"]],
+                    exports: [Angular4PaystackComponent, Angular4PaystackDirective, Angular4PaystackEmbed],
+                    declarations: [Angular4PaystackComponent, Angular4PaystackDirective, Angular4PaystackEmbed],
+                    providers: [],
+                },] }
+    ];
+    return Angular4PaystackModule;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+
+//# sourceMappingURL=angular4-paystack.js.map
+
+
+/***/ }),
+
+/***/ 809:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_Plans__ = __webpack_require__(783);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interfaces_NewUser__ = __webpack_require__(779);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_authenication_authenication__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var ProfilePage = /** @class */ (function () {
+    function ProfilePage(navCtrl, alertCtrl, authProvider, loadingCtrl, pltform, actionSheetCtrl) {
+        this.navCtrl = navCtrl;
+        this.alertCtrl = alertCtrl;
+        this.authProvider = authProvider;
+        this.loadingCtrl = loadingCtrl;
+        this.pltform = pltform;
+        this.actionSheetCtrl = actionSheetCtrl;
+        this.flag = true;
+        this.img1 = "assets/imgs/profileCover.png";
+        this.img2 = "/assets/imgs/appicon.png";
+        this.newuser = new __WEBPACK_IMPORTED_MODULE_1__interfaces_NewUser__["a" /* NewUsers */]("", "", "", "", "", "", "", { id: "" }, "", { id: "", name: "" }, { id: "", name: "" });
+        this.userplan = new __WEBPACK_IMPORTED_MODULE_0__interfaces_Plans__["a" /* Plans */]("", { id: "", name: "", amount: "" }, "", "");
+        this.channels = ['card']; //Paystack Payment Methods
+        this.random_id = Math.floor(Date.now() / 1000); //Line to generate reference number
+    }
+    ProfilePage.prototype.ionViewWillEnter = function () {
+        this.GetUserDeta();
+    };
+    ProfilePage.prototype.GetUserDeta = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        loading.present();
+        this.authProvider.GetUserDeta()
+            .subscribe(function (result) {
+            loading.dismiss().catch(function () { });
+            if (result.statusCode == 200) {
+                _this.userplan = result.data.planData;
+                _this.newuser = result.data.userData;
+            }
+            else {
+                _this.authProvider.showToast(result.description);
+            }
+        }, function (error) {
+            loading.dismiss().catch(function () { });
+            _this.authProvider.showToast(error.error.description);
+        });
+    };
+    ProfilePage.prototype.updateAccount = function (user) {
+        var _this = this;
+        if (user) {
+            var loading_1 = this.loadingCtrl.create({
+                content: "Please wait..."
+            });
+            loading_1.present();
+            this.authProvider.updateUser(user).subscribe(function (res) {
+                loading_1.dismiss().catch(function () { });
+                if (res.statusCode === 200) {
+                    _this.GetUserDeta();
+                }
+                else {
+                    _this.authProvider.showToast(res.description);
+                }
+            }, function (error) {
+                loading_1.dismiss().catch(function () { });
+                _this.authProvider.showToast(error.error.error);
+            });
+        }
+        else {
+            this.authProvider.showToast("Please, check something is wrong.");
+        }
+    };
+    ProfilePage.prototype.renewAccount = function (plan) {
+        var _this = this;
+        var confirm = this.alertCtrl.create({
+            title: 'Update Plan',
+            message: "You are about to update <b> your subscription plan</b> <br/> to " + plan.plantype.name + ". <br/><br/>If <b>" + plan.plantype.name + "</b> is not the plan you want to update to, you can change it on the subscription screen. <br/><br/>This action is irreversible.",
+            buttons: [
+                {
+                    text: 'Cancel',
+                    handler: function () {
+                    }
+                },
+                {
+                    text: 'Proceed',
+                    handler: function () {
+                        _this.newuser.plantype = _this.userplan.plantype;
+                        if (_this.pltform.is("ios")) {
+                            _this.onIOSSubscription();
+                        }
+                        else if (_this.pltform.is("android")) {
+                            _this.onAndroidSubscription();
+                        }
+                    }
+                }
+            ]
+        });
+        confirm.present();
+    };
+    ProfilePage.prototype.onIOSSubscription = function () {
+        this.navCtrl.push('SubscriptionIosPage', { newuser: this.newuser, sub_option: "renewal" });
+    };
+    ProfilePage.prototype.onAndroidSubscription = function () {
+        this.navCtrl.push('SubscriptionAndroidPage', { newuser: this.newuser, sub_option: "renewal" });
+    };
+    ProfilePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-profile',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/profile/profile.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Profile</ion-title>\n\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <div class="imgs">\n    <button ion-button icon-only class="coverCamera" [ngClass]="{\'show\':flag==false}">\n      <ion-icon name="md-camera"></ion-icon>\n    </button>\n    <img src="{{img1}}" />\n    <div class="imgProfile" [ngStyle]="{\'background-image\':\'url(\' + img2 + \')\'}">\n      <button ion-button icon-only class="profileCamera" [ngClass]="{\'show\':flag==false}">\n        <ion-icon name="md-camera"></ion-icon>\n      </button>\n    </div>\n  </div>\n\n  <!-- name and email -->\n  <div class="nameAndMail">\n    <h5 ion-text color="dark">{{newuser.firstname}} {{newuser.lastname}}</h5>\n    <p ion-text color="dark">{{newuser?.email}}</p>\n  </div>\n\n  <!-- other information -->\n  <div class="otherForm">\n    <ion-list>\n      <ion-list-header>\n        <h2 ion-text text-center color="color2">My Details</h2>\n      </ion-list-header>\n      <ion-item class="halfItem" float-left>\n        <ion-label stacked>\n          First Name\n        </ion-label>\n        <ion-input type="text" [(ngModel)]="newuser.firstname" name="firstname" id="firstname" placeholder="First Name">\n        </ion-input>\n      </ion-item>\n      <ion-item class="halfItem" float-left>\n        <ion-label stacked>\n          Last Name\n        </ion-label>\n        <ion-input type="text" [(ngModel)]="newuser.lastname" name="lastname" id="lastname" placeholder="Last Name">\n        </ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-label stacked>\n           Email\n        </ion-label>\n        <ion-input type="email" [(ngModel)]="newuser.email" name="email" id="email" placeholder="E-mail"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label stacked>\n           Phone\n        </ion-label>\n        <ion-input type="tel" [(ngModel)]="newuser.phone" name="phone" id="phone" placeholder="Phone"></ion-input>\n      </ion-item>\n\n      <ion-item class="halfItem" float-left>\n        <ion-label stacked>\n          Current Membership\n        </ion-label>\n        <ion-input type="text" [(ngModel)]="newuser.usertypes.name" disabled>\n        </ion-input>\n      </ion-item>\n      <ion-item class="halfItem" float-left>\n        <ion-label stacked>\n          Current Status\n        </ion-label>\n        <ion-input type="text" [(ngModel)]="newuser.status.name" disabled>\n        </ion-input>\n      </ion-item>\n\n      <button ion-button block margin-bottom type="submit" color="color2" (click)="updateAccount(newuser)">Update\n        Account\n      </button>\n    </ion-list>\n    <ion-list *ngIf="userplan">\n      <hr class="margin-top margin-bottom">\n      <ion-list-header>\n        <h2 ion-text text-center color="color2">My Subscription Details</h2>\n      </ion-list-header>\n      <ion-item margin-top>\n        <h5 ion-text color="dark"><b>Current Plan Name</b></h5>\n        <p ion-text color="color1"><b>{{userplan.plantype.name}}</b></p>\n      </ion-item>\n\n\n      <ion-item class="halfItem" float-left>\n        <h5 ion-text color="dark"><b>Start Date</b></h5>\n        <p ion-text color="color1"><b>{{userplan.startDate}}</b></p>\n      </ion-item>\n      <ion-item class="halfItem" float-left>\n        <h5 ion-text color="dark"><b>End/Due Date</b></h5>\n        <p ion-text color="color1"><b>{{userplan.endDate}}</b></p>\n      </ion-item>\n      <ion-item class="halfItem" float-left>\n        <h5 ion-text color="dark"><b>Amount</b></h5>\n        <p ion-text color="color1"><b>{{userplan.plantype.amount  | currency: \'NGN\': \'1.2-2\'}}</b></p>\n      </ion-item>\n      <ion-item class="halfItem" float-left>\n        <h5 ion-text color="dark"><b>Status</b></h5>\n        <p ion-text color="danger" *ngIf="newuser.status.name === \'Inactive\'"><b>Expired</b></p>\n        <p ion-text color="secondary" *ngIf="newuser.status.name === \'Active\'"><b>Running</b></p>\n      </ion-item>\n      <button ion-button block type="submit" color="color2" (click)="renewAccount(userplan)">Renew\n        Subscription</button>\n        \n    </ion-list>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/profile/profile.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["AlertController"],
+            __WEBPACK_IMPORTED_MODULE_2__providers_authenication_authenication__["a" /* AuthenicationProvider */],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["LoadingController"],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["Platform"],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ActionSheetController"]])
+    ], ProfilePage);
+    return ProfilePage;
+}());
+
+//# sourceMappingURL=profile.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=0.js.map

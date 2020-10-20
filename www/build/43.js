@@ -1,1 +1,84 @@
-webpackJsonp([43],{695:function(l,n,e){"use strict";function t(l){return a["ɵvid"](0,[(l()(),a["ɵeld"](0,0,null,null,19,"ion-list",[],null,[[null,"click"]],function(l,n,e){var t=!0;if("click"===n){t=!1!==l.component.onSetOptions(l.context.$implicit)&&t}return t},null,null)),a["ɵdid"](1,16384,null,0,y.a,[C.a,a.ElementRef,a.Renderer,F.a,M.m,E.a],null,null),(l()(),a["ɵted"](-1,null,["\n      "])),(l()(),a["ɵeld"](3,0,null,null,15,"ion-item",[["class","thumbnailItem item item-block"]],null,null,null,N.b,N.a)),a["ɵdid"](4,1097728,null,3,P.a,[w.a,C.a,a.ElementRef,a.Renderer,[2,x.a]],null,null),a["ɵqud"](335544320,1,{contentLabel:0}),a["ɵqud"](603979776,2,{_buttons:1}),a["ɵqud"](603979776,3,{_icons:1}),a["ɵdid"](8,16384,null,0,O.a,[],null,null),(l()(),a["ɵted"](-1,2,["\n        "])),(l()(),a["ɵeld"](10,0,null,2,2,"h5",[["color","dark"],["ion-text",""],["style","padding-left: 0.8em; padding-top: 0.5em; padding-bottom: 0.5em;     height: auto"]],null,null,null,null,null)),a["ɵdid"](11,16384,null,0,S.a,[C.a,a.ElementRef,a.Renderer],{color:[0,"color"]},null),(l()(),a["ɵted"](12,null,["",""])),(l()(),a["ɵted"](-1,2,["\n        "])),(l()(),a["ɵeld"](14,0,null,4,3,"p",[["color","color1"],["ion-text",""],["item-right",""],["margin-right",""],["padding-right",""]],null,null,null,null,null)),a["ɵdid"](15,16384,null,0,S.a,[C.a,a.ElementRef,a.Renderer],{color:[0,"color"]},null),(l()(),a["ɵeld"](16,0,null,null,1,"b",[],null,null,null,null,null)),(l()(),a["ɵted"](17,null,["",""])),(l()(),a["ɵted"](-1,2,["\n      "])),(l()(),a["ɵted"](-1,null,["\n    "]))],function(l,n){l(n,11,0,"dark");l(n,15,0,"color1")},function(l,n){l(n,12,0,n.context.$implicit.name);l(n,17,0,n.context.$implicit.value)})}function u(l){return a["ɵvid"](0,[(l()(),a["ɵeld"](0,0,null,null,5,"div",[["class",""]],null,null,null,null,null)),(l()(),a["ɵted"](-1,null,["\n    "])),(l()(),a["ɵeld"](2,0,null,null,2,"p",[["color","color2"],["ion-text",""],["text-center",""]],null,null,null,null,null)),a["ɵdid"](3,16384,null,0,S.a,[C.a,a.ElementRef,a.Renderer],{color:[0,"color"]},null),(l()(),a["ɵted"](-1,null,["No result found!"])),(l()(),a["ɵted"](-1,null,["\n  "]))],function(l,n){l(n,3,0,"color2")},null)}function o(l){return a["ɵvid"](0,[(l()(),a["ɵeld"](0,0,null,null,11,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,k.b,k.a)),a["ɵdid"](1,4374528,null,0,I.a,[C.a,F.a,E.a,a.ElementRef,a.Renderer,L.a,_.a,a.NgZone,[2,T.a],[2,q.a]],null,null),(l()(),a["ɵted"](-1,1,["\n  "])),(l()(),a["ɵeld"](3,0,null,1,4,"div",[["class","leagueStats"]],null,null,null,null,null)),(l()(),a["ɵted"](-1,null,["\n    "])),(l()(),a["ɵand"](16777216,null,null,1,null,t)),a["ɵdid"](6,802816,null,0,G.NgForOf,[a.ViewContainerRef,a.TemplateRef,a.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),a["ɵted"](-1,null,["\n\n  "])),(l()(),a["ɵted"](-1,1,["\n\n  "])),(l()(),a["ɵand"](16777216,null,1,1,null,u)),a["ɵdid"](10,16384,null,0,G.NgIf,[a.ViewContainerRef,a.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),a["ɵted"](-1,1,["\n"])),(l()(),a["ɵted"](-1,null,["\n"]))],function(l,n){var e=n.component;l(n,6,0,e.sets);l(n,10,0,e.error)},function(l,n){l(n,0,0,a["ɵnov"](n,1).statusbarPadding,a["ɵnov"](n,1)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var a=e(0),i=(e(1),e(15),e(66)),d=e(207),r=function(){function l(l,n,e,t,u){this.navCtrl=l,this.gamesProvider=n,this.loadingCtrl=e,this.auth=t,this.navParams=u}return l.prototype.ionViewWillEnter=function(){this.GetSets()},l.prototype.GetSets=function(){var l=this,n=this.loadingCtrl.create({content:"Please wait..."});n.present(),this.gamesProvider.GetSets().subscribe(function(e){n.dismiss().catch(function(){}),200===e.statusCode?l.sets=e.data:l.auth.showToast(e.description)},function(e){n.dismiss().catch(function(){}),l.auth.showToast(e.error.description)})},l.prototype.onSetOptions=function(l){},l}(),c=function(){return function(){}}(),s=e(208),m=e(209),f=e(210),p=e(211),g=e(212),h=e(213),v=e(214),R=e(215),b=e(216),y=e(60),C=e(3),F=e(5),M=e(8),E=e(10),N=e(144),P=e(28),w=e(25),x=e(53),O=e(67),S=e(68),k=e(91),I=e(30),L=e(9),_=e(31),T=e(7),q=e(20),G=e(14),V=e(145),$=e(17),z=a["ɵcrt"]({encapsulation:2,styles:[],data:{}}),B=a["ɵccf"]("page-payment-sets",r,function(l){return a["ɵvid"](0,[(l()(),a["ɵeld"](0,0,null,null,1,"page-payment-sets",[],null,null,null,o,z)),a["ɵdid"](1,49152,null,0,r,[q.a,d.a,V.a,i.a,$.a],null,null)],null,null)},{},{},[]),D=e(24),j=e(142),A=e(52);e.d(n,"PaymentSetsPageModuleNgFactory",function(){return J});var J=a["ɵcmf"](c,[],function(l){return a["ɵmod"]([a["ɵmpd"](512,a.ComponentFactoryResolver,a["ɵCodegenComponentFactoryResolver"],[[8,[s.a,m.a,f.a,p.a,g.a,h.a,v.a,R.a,b.a,B]],[3,a.ComponentFactoryResolver],a.NgModuleRef]),a["ɵmpd"](4608,G.NgLocalization,G.NgLocaleLocalization,[a.LOCALE_ID,[2,G["ɵa"]]]),a["ɵmpd"](4608,D["ɵi"],D["ɵi"],[]),a["ɵmpd"](4608,D.FormBuilder,D.FormBuilder,[]),a["ɵmpd"](512,G.CommonModule,G.CommonModule,[]),a["ɵmpd"](512,D["ɵba"],D["ɵba"],[]),a["ɵmpd"](512,D.FormsModule,D.FormsModule,[]),a["ɵmpd"](512,D.ReactiveFormsModule,D.ReactiveFormsModule,[]),a["ɵmpd"](512,j.a,j.a,[]),a["ɵmpd"](512,j.b,j.b,[]),a["ɵmpd"](512,c,c,[]),a["ɵmpd"](256,A.a,r,[])])})}});
+webpackJsonp([43],{
+
+/***/ 737:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HelpPageModule", function() { return HelpPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__help__ = __webpack_require__(795);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var HelpPageModule = /** @class */ (function () {
+    function HelpPageModule() {
+    }
+    HelpPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__help__["a" /* HelpPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__help__["a" /* HelpPage */]),
+            ],
+        })
+    ], HelpPageModule);
+    return HelpPageModule;
+}());
+
+//# sourceMappingURL=help.module.js.map
+
+/***/ }),
+
+/***/ 795:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HelpPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the HelpPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var HelpPage = /** @class */ (function () {
+    function HelpPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    HelpPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-help',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/help/help.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle icon-only>\n      <ion-icon class="goal-menu"></ion-icon>\n    </button>\n    <ion-title>Help</ion-title>\n   \n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-item-group>\n    <ion-item-divider color="primary" class=""><b>Support</b></ion-item-divider>\n    <ion-item>\n      <ion-icon color="primary" name="call" item-left></ion-icon>\n      <ion-label color="primary">Call</ion-label>\n      <p item-right ion-text color="primary"><b>08188888320</b></p>\n    </ion-item>\n    <ion-item>\n      <ion-icon name="mail" color="primary" item-left></ion-icon>\n      <ion-label color="primary">Email</ion-label>\n      <p item-right ion-text color="primary"><b>support@sure3odds.com</b></p>\n    </ion-item>\n  </ion-item-group>\n  <ion-item-group>\n    <ion-item-divider color="primary"><b>Manual Payment</b></ion-item-divider>\n    <ion-item>\n      <ion-label color="primary">Account Name</ion-label>\n      <p item-right ion-text color="primary"><b>Sure3Odds Enterprise</b></p>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary">Account Number</ion-label>\n      <p item-right ion-text color="primary"><b>0105601820</b></p>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary">Bank Name</ion-label>\n      <p item-right ion-text color="primary"><b>Diamond Bank</b></p>\n    </ion-item>\n  </ion-item-group>\n  <ion-item-group>\n    <ion-item-divider color="primary"><b>Contact</b></ion-item-divider>\n    <ion-item>\n      <ion-icon color="primary" name="logo-facebook" item-left></ion-icon>\n      <ion-label color="primary">facebook/sure3oddsNigeria</ion-label>\n    </ion-item>\n    <ion-item >\n      <ion-icon color="primary" name="globe" color="primary" item-left></ion-icon>\n      <ion-label color="primary">www.sure3odds.com</ion-label>\n    </ion-item>\n  \n  </ion-item-group>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/help/help.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
+    ], HelpPage);
+    return HelpPage;
+}());
+
+//# sourceMappingURL=help.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=43.js.map

@@ -83,14 +83,14 @@ export class Sure3Odds {
 
   async platformReady() {
     this.platform.ready().then(() => {
-      this.changeStatusBar();
-      this.hideSplash();
+      // this.changeStatusBar();
+      // this.hideSplash();
+      // this.appVersion.getVersionNumber()
+      // .then((version) => {
+      //   this.version = version;
+      // }).catch(() => {
+      // });
       this.androidExitAppOnBackButton();
-      this.appVersion.getVersionNumber()
-        .then((version) => {
-          this.version = version;
-        }).catch(() => {
-        });
     });
     const { value } = await Storage.get({ key: this.HAS_LOGGED_IN });
     if (value == "true") {

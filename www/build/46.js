@@ -1,1 +1,225 @@
-webpackJsonp([46],{691:function(l,n,e){"use strict";function t(l){return r["ɵvid"](0,[(l()(),r["ɵeld"](0,0,null,null,55,"ion-item",[["class","thumbnailItem item item-block"]],null,null,null,R.b,R.a)),r["ɵdid"](1,1097728,null,3,I.a,[T.a,w.a,r.ElementRef,r.Renderer,[2,x.a]],null,null),r["ɵqud"](335544320,2,{contentLabel:0}),r["ɵqud"](603979776,3,{_buttons:1}),r["ɵqud"](603979776,4,{_icons:1}),r["ɵdid"](5,16384,null,0,E.a,[],null,null),(l()(),r["ɵted"](-1,2,["\n        "])),(l()(),r["ɵeld"](7,0,null,0,5,"ion-thumbnail",[["item-left",""]],null,null,null,null,null)),r["ɵdid"](8,16384,null,0,N.a,[],null,null),(l()(),r["ɵted"](-1,null,["\n          "])),(l()(),r["ɵted"](-1,null,["\n          "])),(l()(),r["ɵeld"](11,0,null,null,0,"img",[["src","assets/imgs/appicon.png"]],null,null,null,null,null)),(l()(),r["ɵted"](-1,null,["\n        "])),(l()(),r["ɵted"](-1,2,["\n        "])),(l()(),r["ɵeld"](14,0,null,2,28,"ion-grid",[["class","grid"],["no-padding",""]],null,null,null,null,null)),r["ɵdid"](15,16384,null,0,M.a,[],null,null),(l()(),r["ɵted"](-1,null,["\n          "])),(l()(),r["ɵeld"](17,0,null,null,24,"ion-row",[["class","row"]],null,null,null,null,null)),r["ɵdid"](18,16384,null,0,F.a,[],null,null),(l()(),r["ɵted"](-1,null,["\n            "])),(l()(),r["ɵeld"](20,0,null,null,12,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),r["ɵdid"](21,16384,null,0,D.a,[],null,null),(l()(),r["ɵted"](-1,null,["\n              "])),(l()(),r["ɵted"](-1,null,["\n              "])),(l()(),r["ɵeld"](24,0,null,null,2,"h5",[["color","dark"],["ion-text",""]],null,null,null,null,null)),r["ɵdid"](25,16384,null,0,_.a,[w.a,r.ElementRef,r.Renderer],{color:[0,"color"]},null),(l()(),r["ɵted"](26,null,[""," "," "])),(l()(),r["ɵted"](-1,null,["\n              "])),(l()(),r["ɵted"](-1,null,["\n              "])),(l()(),r["ɵeld"](29,0,null,null,2,"p",[["color","color1"],["ion-text",""]],null,null,null,null,null)),r["ɵdid"](30,16384,null,0,_.a,[w.a,r.ElementRef,r.Renderer],{color:[0,"color"]},null),(l()(),r["ɵted"](31,null,["",""])),(l()(),r["ɵted"](-1,null,["\n            "])),(l()(),r["ɵted"](-1,null,["\n            "])),(l()(),r["ɵeld"](34,0,null,null,6,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),r["ɵdid"](35,16384,null,0,D.a,[],null,null),(l()(),r["ɵted"](-1,null,["\n              "])),(l()(),r["ɵeld"](37,0,null,null,2,"p",[["color","dark"],["ion-text",""]],null,null,null,null,null)),r["ɵdid"](38,16384,null,0,_.a,[w.a,r.ElementRef,r.Renderer],{color:[0,"color"]},null),(l()(),r["ɵted"](39,null,["",""])),(l()(),r["ɵted"](-1,null,["\n            "])),(l()(),r["ɵted"](-1,null,["\n          "])),(l()(),r["ɵted"](-1,null,["\n        "])),(l()(),r["ɵted"](-1,2,["\n        "])),(l()(),r["ɵeld"](44,0,null,4,10,"div",[["class","matchResult"],["item-right",""]],null,null,null,null,null)),(l()(),r["ɵted"](-1,null,["\n            "])),(l()(),r["ɵeld"](46,0,null,null,2,"span",[["color","color1"],["ion-text",""]],null,null,null,null,null)),r["ɵdid"](47,16384,null,0,_.a,[w.a,r.ElementRef,r.Renderer],{color:[0,"color"]},null),(l()(),r["ɵted"](48,null,["",""])),(l()(),r["ɵted"](-1,null,["\n          "])),(l()(),r["ɵeld"](50,0,null,null,3,"p",[["color","color2"],["ion-text",""]],null,null,null,null,null)),r["ɵdid"](51,16384,null,0,_.a,[w.a,r.ElementRef,r.Renderer],{color:[0,"color"]},null),(l()(),r["ɵeld"](52,0,null,null,1,"b",[],null,null,null,null,null)),(l()(),r["ɵted"](53,null,["",""])),(l()(),r["ɵted"](-1,null,["\n        "])),(l()(),r["ɵted"](-1,2,["\n      "]))],function(l,n){l(n,25,0,"dark");l(n,30,0,"color1");l(n,38,0,"dark");l(n,47,0,"color1");l(n,51,0,"color2")},function(l,n){l(n,26,0,n.context.$implicit.user.lastname,n.context.$implicit.user.firstname);l(n,31,0,n.context.$implicit.plantype.name);l(n,39,0,n.context.$implicit.paymentdate);l(n,48,0,n.context.$implicit.platform);l(n,53,0,n.context.$implicit.paymenttype)})}function o(l){return r["ɵvid"](0,[(l()(),r["ɵeld"](0,0,null,null,5,"div",[["class",""]],null,null,null,null,null)),(l()(),r["ɵted"](-1,null,["\n    "])),(l()(),r["ɵeld"](2,0,null,null,2,"p",[["color","color2"],["ion-text",""],["text-center",""]],null,null,null,null,null)),r["ɵdid"](3,16384,null,0,_.a,[w.a,r.ElementRef,r.Renderer],{color:[0,"color"]},null),(l()(),r["ɵted"](-1,null,["No result found!"])),(l()(),r["ɵted"](-1,null,["\n  "]))],function(l,n){l(n,3,0,"color2")},null)}function u(l){return r["ɵvid"](0,[(l()(),r["ɵeld"](0,0,null,null,5,"div",[["margin-bottonm",""],["margin-top",""],["text-center",""]],null,[[null,"click"]],function(l,n,e){var t=!0;if("click"===n){t=!1!==l.component.onGotoTop()&&t}return t},null,null)),(l()(),r["ɵted"](-1,null,["\n    "])),(l()(),r["ɵeld"](2,0,null,null,2,"button",[["color","color2"],["ion-button",""],["small",""]],null,null,null,k.b,k.a)),r["ɵdid"](3,1097728,null,0,S.a,[[8,""],w.a,r.ElementRef,r.Renderer],{color:[0,"color"],small:[1,"small"]},null),(l()(),r["ɵted"](-1,0,["Back to Top"])),(l()(),r["ɵted"](-1,null,["\n  "]))],function(l,n){l(n,3,0,"color2","")},null)}function a(l){return r["ɵvid"](0,[(l()(),r["ɵeld"](0,0,null,null,6,"ion-infinite-scroll",[],null,[[null,"ionInfinite"]],function(l,n,e){var t=!0;if("ionInfinite"===n){t=!1!==l.component.scrollInfinite(e)&&t}return t},null,null)),r["ɵdid"](1,1196032,null,0,L.a,[O.a,r.NgZone,r.ElementRef,B.a],null,{ionInfinite:"ionInfinite"}),(l()(),r["ɵted"](-1,null,["\n    "])),(l()(),r["ɵeld"](3,0,null,null,2,"ion-infinite-scroll-content",[["loadingSpinner","bubbles"]],[[1,"state",0]],null,null,G.b,G.a)),r["ɵdid"](4,114688,null,0,V.a,[L.a,w.a],{loadingSpinner:[0,"loadingSpinner"],loadingText:[1,"loadingText"]},null),(l()(),r["ɵted"](-1,null,["\n    "])),(l()(),r["ɵted"](-1,null,["\n  "]))],function(l,n){var e=n.component;l(n,4,0,"bubbles",r["ɵinlineInterpolate"](2,"Loading page ",e.currentPage," of ",e.totalPage,""))},function(l,n){l(n,3,0,r["ɵnov"](n,4).inf.state)})}function i(l){return r["ɵvid"](0,[r["ɵqud"](402653184,1,{content:0}),(l()(),r["ɵted"](-1,null,["\n"])),(l()(),r["ɵeld"](2,0,null,null,28,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,$.b,$.a)),r["ɵdid"](3,4374528,[[1,4]],0,O.a,[w.a,z.a,B.a,r.ElementRef,r.Renderer,q.a,A.a,r.NgZone,[2,Z.a],[2,j.a]],null,null),(l()(),r["ɵted"](-1,1,["\n  "])),(l()(),r["ɵeld"](5,0,null,1,5,"ion-searchbar",[],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null],[2,"searchbar-animated",null],[2,"searchbar-has-value",null],[2,"searchbar-active",null],[2,"searchbar-show-cancel",null],[2,"searchbar-left-aligned",null],[2,"searchbar-has-focus",null]],[[null,"ngModelChange"],[null,"ionCancel"],[null,"ionClear"],[null,"ionInput"]],function(l,n,e){var t=!0,o=l.component;if("ngModelChange"===n){t=!1!==(o.searchTerm=e)&&t}if("ionCancel"===n){t=!1!==o.onCancel(e)&&t}if("ionClear"===n){t=!1!==o.onClear(e)&&t}if("ionInput"===n){t=!1!==o.onSearch()&&t}return t},J.b,J.a)),r["ɵdid"](6,671744,null,0,U.NgModel,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),r["ɵprd"](2048,null,U.NgControl,null,[U.NgModel]),r["ɵdid"](8,16384,null,0,U.NgControlStatus,[U.NgControl],null,null),r["ɵdid"](9,1294336,null,0,W.a,[w.a,z.a,r.ElementRef,r.Renderer,[2,U.NgControl]],{showCancelButton:[0,"showCancelButton"]},{ionInput:"ionInput",ionCancel:"ionCancel",ionClear:"ionClear"}),(l()(),r["ɵted"](-1,null,["\n"])),(l()(),r["ɵted"](-1,1,["\n  "])),(l()(),r["ɵeld"](12,0,null,1,8,"div",[["class","teamMatchs"]],null,null,null,null,null)),(l()(),r["ɵted"](-1,null,["\n    "])),(l()(),r["ɵeld"](14,0,null,null,5,"ion-list",[],null,null,null,null,null)),r["ɵdid"](15,16384,null,0,H.a,[w.a,r.ElementRef,r.Renderer,z.a,K.m,B.a],null,null),(l()(),r["ɵted"](-1,null,["\n      "])),(l()(),r["ɵand"](16777216,null,null,1,null,t)),r["ɵdid"](18,802816,null,0,Q.NgForOf,[r.ViewContainerRef,r.TemplateRef,r.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),r["ɵted"](-1,null,["\n    "])),(l()(),r["ɵted"](-1,null,["\n  "])),(l()(),r["ɵted"](-1,1,["\n  "])),(l()(),r["ɵand"](16777216,null,1,1,null,o)),r["ɵdid"](23,16384,null,0,Q.NgIf,[r.ViewContainerRef,r.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),r["ɵted"](-1,1,["\n  "])),(l()(),r["ɵand"](16777216,null,1,1,null,u)),r["ɵdid"](26,16384,null,0,Q.NgIf,[r.ViewContainerRef,r.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),r["ɵted"](-1,1,["\n  "])),(l()(),r["ɵand"](16777216,null,1,1,null,a)),r["ɵdid"](29,16384,null,0,Q.NgIf,[r.ViewContainerRef,r.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),r["ɵted"](-1,1,["\n"])),(l()(),r["ɵted"](-1,null,["\n"]))],function(l,n){var e=n.component;l(n,6,0,e.searchTerm);l(n,9,0,!0);l(n,18,0,e.payments);l(n,23,0,e.error);l(n,26,0,"none"===e.nopayments);l(n,29,0,e.currentPage<e.totalPage)},function(l,n){l(n,2,0,r["ɵnov"](n,3).statusbarPadding,r["ɵnov"](n,3)._hasRefresher);l(n,5,1,[r["ɵnov"](n,8).ngClassUntouched,r["ɵnov"](n,8).ngClassTouched,r["ɵnov"](n,8).ngClassPristine,r["ɵnov"](n,8).ngClassDirty,r["ɵnov"](n,8).ngClassValid,r["ɵnov"](n,8).ngClassInvalid,r["ɵnov"](n,8).ngClassPending,r["ɵnov"](n,9)._animated,r["ɵnov"](n,9)._value,r["ɵnov"](n,9)._isActive,r["ɵnov"](n,9)._showCancelButton,r["ɵnov"](n,9)._shouldAlignLeft,r["ɵnov"](n,9)._isFocus])})}Object.defineProperty(n,"__esModule",{value:!0});var r=e(0),d=(e(1),e(15),e(66)),s=e(221),c=function(){function l(l,n,e,t,o,u,a){this.navCtrl=l,this.authProvider=n,this.actionSheetCtrl=e,this.loadingCtrl=t,this.alertCtrl=o,this.paymentsProvider=u,this.navParams=a,this.currentPage=1,this.totalPage=0,this.perPage=0,this.totalData=0}return l.prototype.ionViewWillEnter=function(){this.GetPayments()},l.prototype.GetPayments=function(){var l=this,n=this.loadingCtrl.create({content:"Please wait..."});n.present(),this.paymentsProvider.GetPayments(0,10).subscribe(function(e){n.dismiss().catch(function(){}),200===e.statusCode?(l.payments=e.data.content,l.currentPage=e.data.number,l.totalPage=e.data.totalPages,l.totalData=e.data.totalElements,l.perPage=e.data.size,l.originalpayments=l.payments,l.nopayments=""):l.authProvider.showToast(e.description),l.error=""},function(e){l.error="none",l.payments=null,n.dismiss().catch(function(){}),l.authProvider.showToast(e.error.error)})},l.prototype.onSearch=function(){var l=this,n=this.searchTerm;if(""===n.trim())this.payments=this.originalpayments;else if(n.length>=3){var e=this.loadingCtrl.create({content:"Please wait..."});e.present(),this.paymentsProvider.SearchPayments(n,0,20).subscribe(function(n){e.dismiss().catch(function(){}),200===n.statusCode?(l.payments=n.data.content,l.currentPage=n.data.number,l.totalPage=n.data.totalPages,l.totalData=n.data.totalElements,l.perPage=n.data.size):l.authProvider.showToast(n.description),l.error=""},function(n){e.dismiss().catch(function(){}),l.error="none",l.payments=null})}},l.prototype.onClear=function(l){this.searchTerm="",this.payments=this.originalpayments,this.error=""},l.prototype.onCancel=function(l){this.searchTerm="",this.payments=this.originalpayments,this.error=""},l.prototype.scrollInfinite=function(l){var n=this;this.currentPage+=1,setTimeout(function(){n.paymentsProvider.GetPayments(n.currentPage,n.perPage).subscribe(function(e){if(200===e.statusCode){n.currentPage=e.data.number,n.totalPage=e.data.totalPages,n.totalData=e.data.totalElements,n.perPage=e.data.size,n.nopayments="";for(var t=0;t<e.data.content.length;t++)n.payments.push(e.data.content[t])}else n.authProvider.showToast(e.description);l.complete()},function(e){n.nopayments="none",l.complete()})},1e3)},l.prototype.onGotoTop=function(){this.content.scrollToTop()},l.prototype.onPaymentOptions=function(l){var n=this;this.actionSheetCtrl.create({title:"Payment Options",buttons:[{text:"Delete",handler:function(){n.onDeletePayment(l)}},{text:"Cancel",role:"cancel",handler:function(){}}]}).present()},l.prototype.onDeletePayment=function(l){var n=this,e=this.loadingCtrl.create({content:"Please wait..."});this.alertCtrl.create({title:"Delete Payment",message:"Do you want to delete this payment record?</b><br/><br/>It would delete the payment history of<b> "+l.user.lastname+" "+l.user.firstname+".</b><br/><br/>This is action is irreversible.",buttons:[{text:"Cancel",handler:function(){}},{text:"Proceed",handler:function(){e.present(),n.paymentsProvider.deletePayment(l.id).subscribe(function(l){e.dismiss().catch(function(){}),200===l.statusCode?n.navCtrl.pop():n.authProvider.showToast(l.description)},function(l){e.dismiss().catch(function(){}),n.authProvider.showToast(l.error.error)})}}]}).present()},l}(),m=function(){return function(){}}(),p=e(208),f=e(209),h=e(210),g=e(211),v=e(212),y=e(213),b=e(214),C=e(215),P=e(216),R=e(144),I=e(28),T=e(25),w=e(3),x=e(53),E=e(67),N=e(222),M=e(219),F=e(150),D=e(149),_=e(68),k=e(41),S=e(26),L=e(70),O=e(30),B=e(10),G=e(386),V=e(97),$=e(91),z=e(5),q=e(9),A=e(31),Z=e(7),j=e(20),J=e(385),U=e(24),W=e(98),H=e(60),K=e(8),Q=e(14),X=e(147),Y=e(145),ll=e(93),nl=e(17),el=r["ɵcrt"]({encapsulation:2,styles:[],data:{}}),tl=r["ɵccf"]("page-payment-details",c,function(l){return r["ɵvid"](0,[(l()(),r["ɵeld"](0,0,null,null,1,"page-payment-details",[],null,null,null,i,el)),r["ɵdid"](1,49152,null,0,c,[j.a,d.a,X.a,Y.a,ll.a,s.a,nl.a],null,null)],null,null)},{},{},[]),ol=e(142),ul=e(52);e.d(n,"PaymentDetailsPageModuleNgFactory",function(){return al});var al=r["ɵcmf"](m,[],function(l){return r["ɵmod"]([r["ɵmpd"](512,r.ComponentFactoryResolver,r["ɵCodegenComponentFactoryResolver"],[[8,[p.a,f.a,h.a,g.a,v.a,y.a,b.a,C.a,P.a,tl]],[3,r.ComponentFactoryResolver],r.NgModuleRef]),r["ɵmpd"](4608,Q.NgLocalization,Q.NgLocaleLocalization,[r.LOCALE_ID,[2,Q["ɵa"]]]),r["ɵmpd"](4608,U["ɵi"],U["ɵi"],[]),r["ɵmpd"](4608,U.FormBuilder,U.FormBuilder,[]),r["ɵmpd"](512,Q.CommonModule,Q.CommonModule,[]),r["ɵmpd"](512,U["ɵba"],U["ɵba"],[]),r["ɵmpd"](512,U.FormsModule,U.FormsModule,[]),r["ɵmpd"](512,U.ReactiveFormsModule,U.ReactiveFormsModule,[]),r["ɵmpd"](512,ol.a,ol.a,[]),r["ɵmpd"](512,ol.b,ol.b,[]),r["ɵmpd"](512,m,m,[]),r["ɵmpd"](256,ul.a,c,[])])})}});
+webpackJsonp([46],{
+
+/***/ 732:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FreeTipsPageModule", function() { return FreeTipsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__free_tips__ = __webpack_require__(790);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var FreeTipsPageModule = /** @class */ (function () {
+    function FreeTipsPageModule() {
+    }
+    FreeTipsPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__free_tips__["a" /* FreeTipsPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__free_tips__["a" /* FreeTipsPage */]),
+            ],
+        })
+    ], FreeTipsPageModule);
+    return FreeTipsPageModule;
+}());
+
+//# sourceMappingURL=free-tips.module.js.map
+
+/***/ }),
+
+/***/ 790:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FreeTipsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_native_http_native_http__ = __webpack_require__(372);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_games_games__ = __webpack_require__(370);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_authenication_authenication__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var FreeTipsPage = /** @class */ (function () {
+    function FreeTipsPage(navCtrl, authProvider, alertCtrl, platform, nativeHttp, loadingCtrl, gamesProvider) {
+        this.navCtrl = navCtrl;
+        this.authProvider = authProvider;
+        this.alertCtrl = alertCtrl;
+        this.platform = platform;
+        this.nativeHttp = nativeHttp;
+        this.loadingCtrl = loadingCtrl;
+        this.gamesProvider = gamesProvider;
+        // calender Function
+        this.monthNames = ["January", "February", "March", "April", "May", "June", "July",
+            "August", "September", "October", "November", "December"];
+        this.days_name = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        this.days = [];
+        this.myDate = new Date();
+        this.year = this.myDate.getFullYear();
+        this.month_num = this.myDate.getMonth();
+        this.month_name = this.monthNames[this.month_num];
+        this.getDaysInMonth(this.month_num, this.year);
+        this.currentDate = this.myDate;
+    }
+    FreeTipsPage.prototype.ionViewWillEnter = function () {
+        var currentdate = this.gamesProvider.getDate();
+        this.GetFreeGames(currentdate);
+        var date = this.myDate.getDate();
+        var today = date - 1;
+        this.isGroupShown(today);
+        this.shownGroup = today;
+    };
+    // ionViewWillEnter(){
+    //   this.platform.ready().then(() => {
+    //   var admobid = {
+    //     banner: 'ca-app-pub-5986351309197564/7004464032',
+    //     interstitial: 'ca-app-pub-5986351309197564/6096058111',
+    //     reward: 'ca-app-pub-5986351309197564/7025996408'
+    //   };
+    //  const bannerOptions: AdOptions = {
+    //     adId: admobid.banner,
+    //     adSize: AdSize.BANNER,
+    //     position: AdPosition.BOTTOM_CENTER
+    //   };
+    // const bannerConfig: AdMobFreeBannerConfig = {
+    //   id: admobid.banner,
+    //   autoShow: true
+    // };
+    // AdMob.showBanner()
+    // this.admobFree.banner.config(bannerConfig);
+    // this.ShowSure3Banner();
+    // const interstitialConfig: AdMobFreeInterstitialConfig = {
+    //   id: admobid.interstitial,
+    //   autoShow: true
+    // }
+    // this.admobFree.interstitial.config(interstitialConfig);
+    // this.ShowSure3Inter();
+    // const rewardVidConfig: AdMobFreeRewardVideoConfig = {
+    //   id: admobid.reward,
+    //   autoShow: true
+    // }
+    // this.admobFree.rewardVideo.config(rewardVidConfig);
+    // this.ShowSure3Reward();
+    //   });
+    // }
+    FreeTipsPage.prototype.getDaysInMonth = function (month, year) {
+        // Since no month has fewer than 28 days
+        var date = new Date(year, month);
+        while (date.getMonth() === month) {
+            var a = new Date(date);
+            var day_num = a.getDate();
+            this.days.push({ name: this.days_name[a.getDay()], day_num: day_num, month: month + 1, year: year });
+            date.setDate(date.getDate() + 1);
+        }
+    };
+    // increase and decrease month function
+    FreeTipsPage.prototype.change_month = function (type) {
+        this.shownGroup = null;
+        if (type == 'increase') {
+            this.month_num = this.month_num + 1;
+            if (this.month_num >= 12) {
+                this.month_num = 0;
+                this.year = this.year + 1;
+            }
+        }
+        else if (type == 'decrease') {
+            this.month_num = this.month_num - 1;
+            if (this.month_num < 0) {
+                this.month_num = 11;
+                this.year = this.year - 1;
+            }
+        }
+        this.month_name = this.monthNames[this.month_num];
+        this.days = [];
+        this.getDaysInMonth(this.month_num, this.year);
+    };
+    FreeTipsPage.prototype.toggleGroup = function (group) {
+        this.shownGroup = group;
+    };
+    FreeTipsPage.prototype.isGroupShown = function (group) {
+        return this.shownGroup === group;
+    };
+    FreeTipsPage.prototype.onClick = function (day) {
+        this.shownGroup = null;
+        var date = this.gamesProvider.computeOldMatchDate(day);
+        this.GetFreeGames(date);
+        this.month_name = this.monthNames[this.month_num];
+        this.days = [];
+        this.getDaysInMonth(this.month_num, this.year);
+    };
+    FreeTipsPage.prototype.GetFreeGames = function (currentdate) {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        loading.present();
+        this.nativeHttp.GetFreeGames(currentdate)
+            .subscribe(function (resp) {
+            loading.dismiss().catch(function () { });
+            if (resp.statusCode === 200) {
+                _this.gamelist = resp.data;
+            }
+        }, function (error) {
+            loading.dismiss().catch(function () { });
+            _this.authProvider.showToast(error.error.description);
+        });
+    };
+    FreeTipsPage.prototype.GotoMatchDetails = function (page) {
+        this.navCtrl.push(page);
+    };
+    FreeTipsPage.prototype.onView = function (id) {
+        if (id !== 1) {
+            this.showAlert("Subscribe", "Subscribe to VIP or VVIP Plan today, to gain access to more features like posting your predictions, commenting on matches and interacting with other users, advert free and many more predictions.");
+        }
+    };
+    FreeTipsPage.prototype.showAlert = function (title, message) {
+        var alert = this.alertCtrl.create({
+            title: title,
+            subTitle: message,
+            buttons: ['Ok']
+        });
+        alert.present();
+    };
+    FreeTipsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-free-tips',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/free-tips/free-tips.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Free Tips</ion-title>\n  </ion-navbar>\n\n  <ion-toolbar class="calendarToolbar">\n    <ion-grid class="calendar">\n      <ion-row>\n        <ion-col col-auto>\n          <ion-icon name="ios-arrow-back" color="light" (click)="change_month(\'decrease\')"></ion-icon>\n        </ion-col>\n        <ion-col col>\n          <p>\n            <span>{{month_name}}</span>,\n            <span>{{year}}</span>\n          </p>\n        </ion-col>\n        <ion-col col-auto>\n          <ion-icon name="ios-arrow-forward" color="light" (click)="change_month(\'increase\')"></ion-icon>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n    <div class="daysScroll">\n      <ion-scroll scrollX="true" scrollY="false" >\n        <div class="day" *ngFor="let day of days ; let i=index" (click)="toggleGroup(i)" [ngClass]="{\'active\': isGroupShown(i)}" >\n          <p>{{day.name}}</p>\n          <button ion-button clear (click)="onClick(day)">{{day.day_num}} </button>\n        </div>\n      </ion-scroll>\n    </div>\n\n    <p ion-text text-center no-margin color="light"><b>{{currentDate |  date:\'mediumDate\'}}</b></p>\n  </ion-toolbar>\n</ion-header>\n<ion-content>\n\n   <!-- matches list -->\n   <ion-list margin-top *ngFor="let game of gamelist">\n    <ion-list-header>\n      {{game.title}}\n      <ion-icon name="football" color="color1" item-left></ion-icon>\n    </ion-list-header>\n    <!-- match item  -->\n    <div class="" *ngIf="game.items">\n      <ion-item class="matchItem" *ngFor="let match of game.items">\n      <ion-grid>\n        <ion-row  (click)="onView(match.sets.id)">\n          <ion-col col>\n            <ion-item >\n              <img src="{{match.hometeam.imageurl}}" item-right  *ngIf="match.hometeam.imageurl"/>\n              <img src="assets/imgs/appicon.png"  item-right  *ngIf="!match.hometeam.imageurl"/>\n              <p text-right>{{match.hometeam.name}}</p>\n            </ion-item>\n          </ion-col>\n          <ion-col col-auto>\n            <span ion-text color="color1">{{match.matchtime}}</span>\n            <p ion-text color="color2"  *ngIf="match.sets.id === 1"><b>{{match.odds}}</b></p>\n            <p ion-text color="color2" *ngIf="match.sets.id === 1" ><b>{{match.selections.name}}</b></p>\n            <p ion-text color="color2" *ngIf="match.sets.id !== 1" ><b>View</b></p>\n          </ion-col>\n          <ion-col col>\n            <ion-item >\n              <img src="{{match.awayteam.imageurl}}" item-left *ngIf="match.awayteam.imageurl"/>\n              <img src="assets/imgs/appicon.png" item-left *ngIf="!match.awayteam.imageurl"/>\n              <p text-left>{{match.awayteam.name}}</p>\n            </ion-item>\n          </ion-col>\n        </ion-row>\n       </ion-grid>\n     </ion-item>\n    </div>\n    <div class="" *ngIf="game.msg">\n     <p ion-text text-center color="color2">{{game.msg}}</p>\n    </div>\n\n  </ion-list>\n   <!-- matches list -->\n\n</ion-content>\n<ion-footer>\n<ion-toolbar>\n  <ion-grid class="white bordertop lightborder">\n    <ion-row wrap>\n      <ion-col col-12 class="center">\n        <div class="" margin-top ion-text text-center>\n          Subscribe to VIP or VVIP Plan today, to gain access to more features like posting your predictions, commenting and interacting with other users, advert\n             free and many more predictions.\n         </div>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/free-tips/free-tips.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"],
+            __WEBPACK_IMPORTED_MODULE_2__providers_authenication_authenication__["a" /* AuthenicationProvider */],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["AlertController"],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["Platform"],
+            __WEBPACK_IMPORTED_MODULE_0__providers_native_http_native_http__["a" /* NativeHttpProvider */],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["LoadingController"],
+            __WEBPACK_IMPORTED_MODULE_1__providers_games_games__["a" /* GamesProvider */]])
+    ], FreeTipsPage);
+    return FreeTipsPage;
+}());
+
+//# sourceMappingURL=free-tips.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=46.js.map

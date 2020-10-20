@@ -1,1 +1,168 @@
-webpackJsonp([45],{692:function(l,n,e){"use strict";function t(l){return r["ɵvid"](0,[(l()(),r["ɵeld"](0,0,null,null,59,"ion-item",[["class","thumbnailItem item item-block"]],null,null,null,C.b,C.a)),r["ɵdid"](1,1097728,null,3,x.a,[I.a,T.a,r.ElementRef,r.Renderer,[2,E.a]],null,null),r["ɵqud"](335544320,2,{contentLabel:0}),r["ɵqud"](603979776,3,{_buttons:1}),r["ɵqud"](603979776,4,{_icons:1}),r["ɵdid"](5,16384,null,0,w.a,[],null,null),(l()(),r["ɵted"](-1,2,["\n        "])),(l()(),r["ɵeld"](7,0,null,0,5,"ion-thumbnail",[["item-left",""]],null,null,null,null,null)),r["ɵdid"](8,16384,null,0,D.a,[],null,null),(l()(),r["ɵted"](-1,null,["\n          "])),(l()(),r["ɵted"](-1,null,["\n          "])),(l()(),r["ɵeld"](11,0,null,null,0,"img",[["src","assets/imgs/appicon.png"]],null,null,null,null,null)),(l()(),r["ɵted"](-1,null,["\n        "])),(l()(),r["ɵted"](-1,2,["\n        "])),(l()(),r["ɵeld"](14,0,null,2,32,"ion-grid",[["class","grid"],["no-padding",""]],null,null,null,null,null)),r["ɵdid"](15,16384,null,0,F.a,[],null,null),(l()(),r["ɵted"](-1,null,["\n          "])),(l()(),r["ɵeld"](17,0,null,null,28,"ion-row",[["class","row"]],null,null,null,null,null)),r["ɵdid"](18,16384,null,0,N.a,[],null,null),(l()(),r["ɵted"](-1,null,["\n            "])),(l()(),r["ɵeld"](20,0,null,null,12,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),r["ɵdid"](21,16384,null,0,M.a,[],null,null),(l()(),r["ɵted"](-1,null,["\n              "])),(l()(),r["ɵted"](-1,null,["\n              "])),(l()(),r["ɵeld"](24,0,null,null,2,"h5",[["color","dark"],["ion-text",""]],null,null,null,null,null)),r["ɵdid"](25,16384,null,0,k.a,[T.a,r.ElementRef,r.Renderer],{color:[0,"color"]},null),(l()(),r["ɵted"](26,null,[""," "," "])),(l()(),r["ɵted"](-1,null,["\n              "])),(l()(),r["ɵted"](-1,null,["\n              "])),(l()(),r["ɵeld"](29,0,null,null,2,"p",[["color","color1"],["ion-text",""]],null,null,null,null,null)),r["ɵdid"](30,16384,null,0,k.a,[T.a,r.ElementRef,r.Renderer],{color:[0,"color"]},null),(l()(),r["ɵted"](31,null,["",""])),(l()(),r["ɵted"](-1,null,["\n            "])),(l()(),r["ɵted"](-1,null,["\n            "])),(l()(),r["ɵeld"](34,0,null,null,10,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),r["ɵdid"](35,16384,null,0,M.a,[],null,null),(l()(),r["ɵted"](-1,null,["\n              "])),(l()(),r["ɵeld"](37,0,null,null,2,"span",[["ion-text",""],["style","font-size: small !important;"]],null,null,null,null,null)),r["ɵdid"](38,16384,null,0,k.a,[T.a,r.ElementRef,r.Renderer],null,null),(l()(),r["ɵted"](-1,null,["Start Date"])),(l()(),r["ɵted"](-1,null,["\n              "])),(l()(),r["ɵeld"](41,0,null,null,2,"p",[["color","color1"],["ion-text",""]],null,null,null,null,null)),r["ɵdid"](42,16384,null,0,k.a,[T.a,r.ElementRef,r.Renderer],{color:[0,"color"]},null),(l()(),r["ɵted"](43,null,["",""])),(l()(),r["ɵted"](-1,null,["\n            "])),(l()(),r["ɵted"](-1,null,["\n          "])),(l()(),r["ɵted"](-1,null,["\n        "])),(l()(),r["ɵted"](-1,2,["\n        "])),(l()(),r["ɵeld"](48,0,null,4,10,"div",[["class",""],["item-right",""],["style","margin-bottom: 0.3em !important;"]],null,null,null,null,null)),(l()(),r["ɵted"](-1,null,["\n          "])),(l()(),r["ɵeld"](50,0,null,null,2,"span",[["ion-text",""],["style","font-size: small !important;"]],null,null,null,null,null)),r["ɵdid"](51,16384,null,0,k.a,[T.a,r.ElementRef,r.Renderer],null,null),(l()(),r["ɵted"](-1,null,["End Date"])),(l()(),r["ɵted"](-1,null,["\n          "])),(l()(),r["ɵeld"](54,0,null,null,3,"p",[["color","color2"],["ion-text",""]],null,null,null,null,null)),r["ɵdid"](55,16384,null,0,k.a,[T.a,r.ElementRef,r.Renderer],{color:[0,"color"]},null),(l()(),r["ɵeld"](56,0,null,null,1,"b",[],null,null,null,null,null)),(l()(),r["ɵted"](57,null,["",""])),(l()(),r["ɵted"](-1,null,["\n        "])),(l()(),r["ɵted"](-1,2,["\n      "]))],function(l,n){l(n,25,0,"dark");l(n,30,0,"color1");l(n,42,0,"color1");l(n,55,0,"color2")},function(l,n){l(n,26,0,n.context.$implicit.user.lastname,n.context.$implicit.user.firstname);l(n,31,0,n.context.$implicit.plantype.name);l(n,43,0,n.context.$implicit.startDate);l(n,57,0,n.context.$implicit.endDate)})}function u(l){return r["ɵvid"](0,[(l()(),r["ɵeld"](0,0,null,null,5,"div",[["class",""]],null,null,null,null,null)),(l()(),r["ɵted"](-1,null,["\n    "])),(l()(),r["ɵeld"](2,0,null,null,2,"p",[["color","color2"],["ion-text",""],["text-center",""]],null,null,null,null,null)),r["ɵdid"](3,16384,null,0,k.a,[T.a,r.ElementRef,r.Renderer],{color:[0,"color"]},null),(l()(),r["ɵted"](-1,null,["No result found!"])),(l()(),r["ɵted"](-1,null,["\n  "]))],function(l,n){l(n,3,0,"color2")},null)}function o(l){return r["ɵvid"](0,[(l()(),r["ɵeld"](0,0,null,null,5,"div",[["margin-bottonm",""],["margin-top",""],["text-center",""]],null,[[null,"click"]],function(l,n,e){var t=!0;if("click"===n){t=!1!==l.component.onGotoTop()&&t}return t},null,null)),(l()(),r["ɵted"](-1,null,["\n    "])),(l()(),r["ɵeld"](2,0,null,null,2,"button",[["color","color2"],["ion-button",""],["small",""]],null,null,null,L.b,L.a)),r["ɵdid"](3,1097728,null,0,O.a,[[8,""],T.a,r.ElementRef,r.Renderer],{color:[0,"color"],small:[1,"small"]},null),(l()(),r["ɵted"](-1,0,["Back to Top"])),(l()(),r["ɵted"](-1,null,["\n  "]))],function(l,n){l(n,3,0,"color2","")},null)}function a(l){return r["ɵvid"](0,[(l()(),r["ɵeld"](0,0,null,null,6,"ion-infinite-scroll",[],null,[[null,"ionInfinite"]],function(l,n,e){var t=!0;if("ionInfinite"===n){t=!1!==l.component.scrollInfinite(e)&&t}return t},null,null)),r["ɵdid"](1,1196032,null,0,z.a,[G.a,r.NgZone,r.ElementRef,S.a],null,{ionInfinite:"ionInfinite"}),(l()(),r["ɵted"](-1,null,["\n    "])),(l()(),r["ɵeld"](3,0,null,null,2,"ion-infinite-scroll-content",[["loadingSpinner","bubbles"]],[[1,"state",0]],null,null,_.b,_.a)),r["ɵdid"](4,114688,null,0,V.a,[z.a,T.a],{loadingSpinner:[0,"loadingSpinner"],loadingText:[1,"loadingText"]},null),(l()(),r["ɵted"](-1,null,["\n    "])),(l()(),r["ɵted"](-1,null,["\n  "]))],function(l,n){var e=n.component;l(n,4,0,"bubbles",r["ɵinlineInterpolate"](2,"Loading page ",e.currentPage," of ",e.totalPage,""))},function(l,n){l(n,3,0,r["ɵnov"](n,4).inf.state)})}function i(l){return r["ɵvid"](0,[r["ɵqud"](402653184,1,{content:0}),(l()(),r["ɵeld"](1,0,null,null,21,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,$.b,$.a)),r["ɵdid"](2,4374528,[[1,4]],0,G.a,[T.a,q.a,S.a,r.ElementRef,r.Renderer,B.a,Z.a,r.NgZone,[2,j.a],[2,A.a]],null,null),(l()(),r["ɵted"](-1,1,["\n  "])),(l()(),r["ɵeld"](4,0,null,1,8,"div",[["class","teamMatchs"]],null,null,null,null,null)),(l()(),r["ɵted"](-1,null,["\n    "])),(l()(),r["ɵeld"](6,0,null,null,5,"ion-list",[],null,null,null,null,null)),r["ɵdid"](7,16384,null,0,J.a,[T.a,r.ElementRef,r.Renderer,q.a,W.m,S.a],null,null),(l()(),r["ɵted"](-1,null,["\n      "])),(l()(),r["ɵand"](16777216,null,null,1,null,t)),r["ɵdid"](10,802816,null,0,H.NgForOf,[r.ViewContainerRef,r.TemplateRef,r.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),r["ɵted"](-1,null,["\n    "])),(l()(),r["ɵted"](-1,null,["\n  "])),(l()(),r["ɵted"](-1,1,["\n  "])),(l()(),r["ɵand"](16777216,null,1,1,null,u)),r["ɵdid"](15,16384,null,0,H.NgIf,[r.ViewContainerRef,r.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),r["ɵted"](-1,1,["\n  "])),(l()(),r["ɵand"](16777216,null,1,1,null,o)),r["ɵdid"](18,16384,null,0,H.NgIf,[r.ViewContainerRef,r.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),r["ɵted"](-1,1,["\n  "])),(l()(),r["ɵand"](16777216,null,1,1,null,a)),r["ɵdid"](21,16384,null,0,H.NgIf,[r.ViewContainerRef,r.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),r["ɵted"](-1,1,["\n"]))],function(l,n){var e=n.component;l(n,10,0,e.plans);l(n,15,0,e.error);l(n,18,0,"none"===e.noplans);l(n,21,0,e.currentPage<e.totalPage)},function(l,n){l(n,1,0,r["ɵnov"](n,2).statusbarPadding,r["ɵnov"](n,2)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var r=e(0),d=(e(1),e(15),e(221)),s=e(66),c=function(){function l(l,n,e,t,u,o,a){this.navCtrl=l,this.authProvider=n,this.actionSheetCtrl=e,this.loadingCtrl=t,this.alertCtrl=u,this.paymentsProvider=o,this.navParams=a,this.currentPage=1,this.totalPage=0,this.perPage=0,this.totalData=0}return l.prototype.ionViewWillEnter=function(){this.GetPlans()},l.prototype.GetPlans=function(){var l=this,n=this.loadingCtrl.create({content:"Please wait..."});n.present(),this.paymentsProvider.GetPlans(0,10).subscribe(function(e){n.dismiss().catch(function(){}),200===e.statusCode?(l.plans=e.data.content,l.currentPage=e.data.number,l.totalPage=e.data.totalPages,l.totalData=e.data.totalElements,l.perPage=e.data.size,l.originalplans=l.plans,l.noplans=""):l.authProvider.showToast(e.description),l.error=""},function(e){l.error="none",l.plans=null,n.dismiss().catch(function(){}),l.authProvider.showToast(e.error.descriptions)})},l.prototype.scrollInfinite=function(l){var n=this;this.currentPage+=1,setTimeout(function(){n.paymentsProvider.GetPlans(n.currentPage,n.perPage).subscribe(function(e){if(200===e.statusCode){n.currentPage=e.data.number,n.totalPage=e.data.totalPages,n.totalData=e.data.totalElements,n.perPage=e.data.size,n.noplans="";for(var t=0;t<e.data.content.length;t++)n.plans.push(e.data.content[t])}else n.authProvider.showToast(e.description);l.complete()},function(e){n.noplans="none",l.complete()})},1e3)},l.prototype.onGotoTop=function(){this.content.scrollToTop()},l.prototype.onDeleteOptions=function(l){var n=this;this.actionSheetCtrl.create({title:"Plan Options",buttons:[{text:"Delete",handler:function(){n.onDeletePlan(l)}},{text:"Cancel",role:"cancel",handler:function(){}}]}).present()},l.prototype.onDeletePlan=function(l){var n=this,e=this.loadingCtrl.create({content:"Please wait..."});this.alertCtrl.create({title:"Delete Plan",message:"Do you want to delete this payment record?</b><br/><br/>This is action is irreversible.",buttons:[{text:"Cancel",handler:function(){}},{text:"Proceed",handler:function(){e.present(),n.paymentsProvider.deletePayment(l.id).subscribe(function(l){e.dismiss().catch(function(){}),200===l.statusCode?n.navCtrl.pop():n.authProvider.showToast(l.description)},function(l){e.dismiss().catch(function(){}),n.authProvider.showToast(l.error.error)})}}]}).present()},l}(),p=function(){return function(){}}(),f=e(208),m=e(209),g=e(210),h=e(211),P=e(212),v=e(213),b=e(214),R=e(215),y=e(216),C=e(144),x=e(28),I=e(25),T=e(3),E=e(53),w=e(67),D=e(222),F=e(219),N=e(150),M=e(149),k=e(68),L=e(41),O=e(26),z=e(70),G=e(30),S=e(10),_=e(386),V=e(97),$=e(91),q=e(5),B=e(9),Z=e(31),j=e(7),A=e(20),J=e(60),W=e(8),H=e(14),K=e(147),Q=e(145),U=e(93),X=e(17),Y=r["ɵcrt"]({encapsulation:2,styles:[],data:{}}),ll=r["ɵccf"]("page-payment-plans",c,function(l){return r["ɵvid"](0,[(l()(),r["ɵeld"](0,0,null,null,1,"page-payment-plans",[],null,null,null,i,Y)),r["ɵdid"](1,49152,null,0,c,[A.a,s.a,K.a,Q.a,U.a,d.a,X.a],null,null)],null,null)},{},{},[]),nl=e(24),el=e(142),tl=e(52);e.d(n,"PaymentPlansPageModuleNgFactory",function(){return ul});var ul=r["ɵcmf"](p,[],function(l){return r["ɵmod"]([r["ɵmpd"](512,r.ComponentFactoryResolver,r["ɵCodegenComponentFactoryResolver"],[[8,[f.a,m.a,g.a,h.a,P.a,v.a,b.a,R.a,y.a,ll]],[3,r.ComponentFactoryResolver],r.NgModuleRef]),r["ɵmpd"](4608,H.NgLocalization,H.NgLocaleLocalization,[r.LOCALE_ID,[2,H["ɵa"]]]),r["ɵmpd"](4608,nl["ɵi"],nl["ɵi"],[]),r["ɵmpd"](4608,nl.FormBuilder,nl.FormBuilder,[]),r["ɵmpd"](512,H.CommonModule,H.CommonModule,[]),r["ɵmpd"](512,nl["ɵba"],nl["ɵba"],[]),r["ɵmpd"](512,nl.FormsModule,nl.FormsModule,[]),r["ɵmpd"](512,nl.ReactiveFormsModule,nl.ReactiveFormsModule,[]),r["ɵmpd"](512,el.a,el.a,[]),r["ɵmpd"](512,el.b,el.b,[]),r["ɵmpd"](512,p,p,[]),r["ɵmpd"](256,tl.a,c,[])])})}});
+webpackJsonp([45],{
+
+/***/ 733:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GameCreatePageModule", function() { return GameCreatePageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__game_create__ = __webpack_require__(791);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__ = __webpack_require__(371);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var GameCreatePageModule = /** @class */ (function () {
+    function GameCreatePageModule() {
+    }
+    GameCreatePageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__game_create__["a" /* GameCreatePage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__game_create__["a" /* GameCreatePage */]),
+                __WEBPACK_IMPORTED_MODULE_3_ionic_select_searchable__["SelectSearchableModule"]
+            ],
+        })
+    ], GameCreatePageModule);
+    return GameCreatePageModule;
+}());
+
+//# sourceMappingURL=game-create.module.js.map
+
+/***/ }),
+
+/***/ 791:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GameCreatePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_select_searchable__ = __webpack_require__(371);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ionic_select_searchable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_games_games__ = __webpack_require__(370);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var GameCreatePage = /** @class */ (function () {
+    function GameCreatePage(gamesProvider, authProvider, loadingCtrl, navCtrl, navParams) {
+        this.gamesProvider = gamesProvider;
+        this.authProvider = authProvider;
+        this.loadingCtrl = loadingCtrl;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.selectedprediction = this.navParams.get("prediction");
+        if (this.selectedprediction) {
+            this.prediction = this.selectedprediction;
+        }
+    }
+    GameCreatePage.prototype.ionViewWillEnter = function () {
+        this.GetSets();
+        this.GetStatus();
+    };
+    GameCreatePage.prototype.onSelectSets = function (event) {
+    };
+    GameCreatePage.prototype.onSelectStatus = function (event) {
+    };
+    GameCreatePage.prototype.GetSets = function () {
+        var _this = this;
+        this.gamesProvider.GetSets()
+            .subscribe(function (resp) {
+            if (resp.statusCode === 200) {
+                _this.sets = resp.data;
+            }
+            else {
+                _this.authProvider.showToast(resp.description);
+            }
+        }, function (error) {
+            _this.authProvider.showToast(error.error.error);
+        });
+    };
+    GameCreatePage.prototype.GetStatus = function () {
+        var _this = this;
+        this.gamesProvider.GetStatus("Prediction")
+            .subscribe(function (resp) {
+            if (resp.statusCode === 200) {
+                _this.statuses = resp.data;
+            }
+            else {
+                _this.authProvider.showToast(resp.description);
+            }
+        }, function (error) {
+            _this.authProvider.showToast(error.error.error);
+        });
+    };
+    GameCreatePage.prototype.onSubmit = function (prediction) {
+        var _this = this;
+        if (prediction.sets) {
+            if (prediction.status) {
+                var loading_1 = this.loadingCtrl.create({
+                    content: "Please wait..."
+                });
+                loading_1.present();
+                this.gamesProvider.createGame(prediction.id, prediction.sets.id, prediction.status.id).subscribe(function (res) {
+                    loading_1.dismiss().catch(function () { });
+                    if (res.statusCode === 200) {
+                        _this.navCtrl.pop();
+                    }
+                    else {
+                        _this.authProvider.showToast(res.description);
+                    }
+                }, function (error) {
+                    loading_1.dismiss().catch(function () { });
+                    _this.authProvider.showToast(error.error.error);
+                });
+            }
+            else {
+                this.authProvider.showToast("Please, select a Set");
+            }
+        }
+        else {
+            this.authProvider.showToast("Please, select a Set");
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["ViewChild"])('myselect'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0_ionic_select_searchable__["SelectSearchableComponent"])
+    ], GameCreatePage.prototype, "selectComponent", void 0);
+    GameCreatePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-game-create',template:/*ion-inline-start:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/game-create/game-create.html"*/'<ion-header>\n \n  <ion-navbar>\n    <ion-title>Approve Prediction</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="otherForm">\n    <ion-list>\n      <ion-item>\n        <ion-label>\n          Select The Set\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="prediction.sets" (onChange)="onSelectSets($event)" [items]="sets"\n          itemValueField="id" [canClear]="true" clearButtonText="Clear Selected" confirmButtonText="Proceed"\n          itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n      <hr ion-text margin-top margin-bottom>\n\n      <ion-item>\n        <ion-label>\n          Select The Status\n        </ion-label>\n        <select-searchable item-content [(ngModel)]="prediction.status" (onChange)="onSelectStatus($event)"\n          [items]="statuses" itemValueField="id" [canClear]="true" clearButtonText="Clear Selected"\n          confirmButtonText="Proceed" itemTextField="name" [canSearch]="true">\n        </select-searchable>\n      </ion-item>\n    </ion-list>\n    <button ion-button block color="color2" (click)="onSubmit(prediction)">Submit</button>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/mac/Dropbox/GIDPSoftware/MacBook/Mobile/Sure3Odds/src/pages/game-create/game-create.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_games_games__["a" /* GamesProvider */],
+            __WEBPACK_IMPORTED_MODULE_1__providers_authenication_authenication__["a" /* AuthenicationProvider */],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["LoadingController"],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"]])
+    ], GameCreatePage);
+    return GameCreatePage;
+}());
+
+//# sourceMappingURL=game-create.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=45.js.map
